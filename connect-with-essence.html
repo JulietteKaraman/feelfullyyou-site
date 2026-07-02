@@ -107,6 +107,8 @@
   .pillar h3{font-family:var(--display);font-weight:700;font-size:1rem;color:var(--ink);margin-bottom:10px}
   .pillar p{font-size:14px;color:var(--brown);line-height:1.75}
   @media(max-width:660px){.pillar-grid{grid-template-columns:1fr}}
+  .method-grid-top{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+  @media(max-width:660px){.method-grid-top{grid-template-columns:1fr}}
 
   /* HOSTS */
   .host-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:44px}
@@ -301,8 +303,8 @@
           <span style="font-family:var(--display);font-weight:700;font-size:0.75rem;color:var(--gold-deep);line-height:1;text-align:center">10<br>00</span>
         </div>
         <div style="padding-top:12px">
-          <div style="font-weight:700;font-size:0.95rem;color:var(--ink);margin-bottom:4px">Arrival</div>
-          <p style="color:var(--muted);font-size:0.9rem;line-height:1.6">Slow arrival. Tea, coffee, settling in. Music already playing. The day begins quietly.</p>
+          <div style="font-weight:700;font-size:0.95rem;color:var(--ink);margin-bottom:4px">Arrival &amp; Wake the Body</div>
+          <p style="color:var(--muted);font-size:0.9rem;line-height:1.6">We start moving. The body wakes up before the mind has a chance to overthink the day. Tea, coffee — and then we begin.</p>
         </div>
       </div>
 
@@ -354,31 +356,46 @@
   </div>
 </section>
 
-<!-- METHOD — three pillars -->
-<section class="section cream-2">
+<!-- METHOD — split visual blocks -->
+<section class="section cream-2" style="padding-bottom:0">
   <div class="wrap">
     <p class="eyebrow reveal">How the day works</p>
-    <h2 class="reveal">Body. Emotion. Soul.</h2>
-    <div class="pillar-grid">
-      <div class="pillar reveal">
-        <div class="num">01</div>
-        <h3>The Body</h3>
-        <p>We begin by reconnecting you with your body. Through movement, awareness, and real-time insight. An energising session to shake off stagnant energy and come back into yourself in a way that feels freeing, not forced.</p>
-        <p style="margin-top:12px">You'll begin to see how your body responds to stress and daily rhythms, and move from guessing to knowing.</p>
+  </div>
+</section>
+
+<!-- BLOCK A: Body + Emotion -->
+<section style="background:var(--cream-2);padding:0 0 80px">
+  <div style="max-width:var(--max);margin:0 auto;padding:0 24px">
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-bottom:2px" class="method-grid-top">
+
+      <div class="reveal" style="background:var(--teal);padding:48px 40px">
+        <div style="font-family:var(--display);font-size:5rem;font-weight:700;color:var(--gold);line-height:1;margin-bottom:20px">01</div>
+        <h3 style="font-family:var(--display);font-size:2rem;font-weight:700;color:#fff;margin-bottom:16px;letter-spacing:-.01em">The Body</h3>
+        <p style="color:rgba(255,255,255,0.75);font-size:0.95rem;line-height:1.7">We begin moving. <strong style="color:#fff">Waking the body up</strong> before the mind can overthink. Movement, awareness, real-time insight into how you've been holding yourself.</p>
+        <p style="color:rgba(255,255,255,0.75);font-size:0.95rem;line-height:1.7;margin-top:14px">You move from guessing to <strong style="color:var(--gold-pale)">knowing</strong> — what your body has been carrying and what it's ready to put down.</p>
       </div>
-      <div class="pillar reveal">
-        <div class="num">02</div>
-        <h3>Emotion &amp; Release</h3>
-        <p>With the body more regulated, we move into your internal world. Through breathwork, spinal attunement, and energy-based practices, we gently unwind what has been held — the emotional holding patterns, the old beliefs, the identity you took on when survival required it.</p>
-        <p style="margin-top:12px">This is where things shift. Not because you tried harder. Because you finally stopped.</p>
+
+      <div class="reveal" style="background:var(--ink);padding:48px 40px">
+        <div style="font-family:var(--display);font-size:5rem;font-weight:700;color:var(--gold);line-height:1;margin-bottom:20px">02</div>
+        <h3 style="font-family:var(--display);font-size:2rem;font-weight:700;color:#fff;margin-bottom:16px;letter-spacing:-.01em">Emotion &amp; Release</h3>
+        <p style="color:rgba(255,255,255,0.75);font-size:0.95rem;line-height:1.7">With the body more regulated, we move into your <strong style="color:#fff">internal world</strong>. Breathwork, spinal attunement, energy-based practices — unwinding what has been held.</p>
+        <p style="color:rgba(255,255,255,0.75);font-size:0.95rem;line-height:1.7;margin-top:14px">The emotional holding patterns. The old beliefs. The identity you took on when survival required it. <strong style="color:var(--gold-pale)">This is where things shift.</strong></p>
       </div>
-      <div class="pillar reveal">
-        <div class="num">03</div>
-        <h3>The Soul</h3>
-        <p>Once the body is steadier and the mind has softened, something deeper becomes accessible. Natasha connects you with your Akashic Records to reveal old patterns you have been carrying for lifetimes, guiding you back to what you already know.</p>
-        <p style="margin-top:12px">This is remembrance, not escape. You leave more anchored in who you are.</p>
+
+    </div>
+
+    <!-- BLOCK B: Soul — full width, different visual -->
+    <div class="reveal" style="background:var(--cream);border:1.5px solid var(--gold);padding:56px 48px;display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:start">
+      <div style="font-family:var(--display);font-size:7rem;font-weight:700;color:var(--gold);line-height:1;opacity:.35">03</div>
+      <div>
+        <p style="font-family:var(--display);font-size:0.8rem;font-weight:700;letter-spacing:.25em;color:var(--gold-deep);text-transform:uppercase;margin-bottom:10px">The Soul</p>
+        <h3 style="font-family:var(--display);font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1.15;margin-bottom:20px">Once the body stills,<br><em>something deeper surfaces.</em></h3>
+        <p style="font-size:0.95rem;line-height:1.8;color:var(--muted);max-width:58ch">Natasha connects you with your Akashic Records — revealing old patterns carried across lifetimes, guiding you back to <strong style="color:var(--ink)">what you already know.</strong></p>
+        <p style="font-size:0.95rem;line-height:1.8;color:var(--muted);margin-top:14px;max-width:58ch">This is <strong style="color:var(--teal)">remembrance</strong>, not escape. You leave more anchored in who you are.</p>
       </div>
     </div>
+
   </div>
 </section>
 
