@@ -191,7 +191,7 @@
 
   @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}.reveal{opacity:1;transform:none}}
   /* More dropdown */
-  .more-wrap{position:relative}
+  .more-wrap{position:relative;display:inline-flex;align-items:center}
   .more-wrap > button{background:none;border:none;cursor:pointer;font-size:14px;color:var(--cream);font-weight:500;font-family:var(--body);display:flex;align-items:center;gap:5px;padding:0;transition:color .2s}
   .more-wrap > button:hover{color:var(--gold-pale)}
   .more-wrap > button svg{transition:transform .2s}
@@ -223,9 +223,7 @@
   <nav>
     <a href="/">Home</a>
     <div class="more-wrap" id="workWrap">
-      <button onclick="document.getElementById('workWrap').classList.toggle('open')" aria-expanded="false">
-        Work With Me <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg>
-      </button>
+      <a href="/work-with-me" style="font-size:14px;color:var(--cream);font-weight:500;transition:color .2s;text-decoration:none">Work With Me</a><button onclick="document.getElementById('workWrap').classList.toggle('open')" aria-label="Sub-pages" style="background:none;border:none;cursor:pointer;color:var(--cream);padding:0 0 0 5px;display:inline-flex;align-items:center;transition:color .2s"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg></button>
       <div class="dropdown">
         <a href="/for-her">For Her</a>
         <a href="/for-him">For Him</a>
