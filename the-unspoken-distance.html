@@ -137,6 +137,10 @@
 
   /* CREDIBILITY */
   .why{padding:80px 0;border-top:1px solid var(--line);background:var(--paper)}
+  .why-grid{display:grid;grid-template-columns:340px 1fr;gap:64px;align-items:start}
+  .why-photo{position:sticky;top:84px}
+  .why-photo img{width:100%;border-radius:4px;object-fit:cover;aspect-ratio:3/4;display:block;box-shadow:0 20px 60px -20px rgba(0,0,0,.25)}
+  .why-photo .caption{margin-top:14px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;text-align:center}
   .why .eyebrow{margin-bottom:16px}
   .why h2{max-width:22ch}
   .why p{max-width:60ch;margin-bottom:18px;color:var(--brown);font-size:var(--t-md);line-height:1.6}
@@ -146,6 +150,7 @@
   .press img{height:26px;width:auto;max-width:110px;object-fit:contain;filter:brightness(0) opacity(.4);transition:filter .25s}
   .press img:hover{filter:brightness(0) opacity(.7)}
   .why .last{font-family:var(--display);font-weight:600;font-size:clamp(19px,2.6vw,24px);color:var(--ink);max-width:36ch;line-height:1.22;letter-spacing:-.015em}
+  @media(max-width:860px){.why-grid{grid-template-columns:1fr}.why-photo{position:static}.why-photo img{aspect-ratio:4/3;max-height:340px}}
 
   /* WHAT CHANGES */
   .changes{padding:80px 0;border-top:1px solid var(--line);background:var(--cream-2)}
@@ -376,27 +381,39 @@
 
 <!-- CREDIBILITY -->
 <section class="why">
-  <div class="narrow">
-    <div class="eyebrow reveal">WHY JULIETTE</div>
-    <h2 class="reveal">I have been the woman on the other side of it.</h2>
-    <p class="reveal">Before I was the practitioner in that room, I was the woman on the other side of it.</p>
-    <p class="reveal">I know what it feels like when a man is trying and it still is not landing. I know what she cannot tell you and what she does not have language for yet. I followed my own wound into every room it needed to understand: EMDR, somatic experiencing, hypnotherapy, orgasmic meditation and tantra, BDSM, spinal attunement. I did not collect these modalities. I needed them. Every single one.</p>
-    <p class="reveal">I have spent 15 years in the room with men at exactly this impasse.</p>
-    <div class="modalities reveal">
-      <span>EMDR</span><span>Somatic experiencing</span><span>Hypnotherapy</span><span>OM &amp; tantra</span><span>BDSM</span><span>Spinal attunement</span>
+  <div class="wrap">
+    <div class="why-grid">
+
+      <div class="why-photo reveal">
+        <img src="/about-hero.jpg" alt="Juliette Karaman">
+        <p class="caption">Juliette Karaman</p>
+      </div>
+
+      <div class="why-text">
+        <div class="eyebrow reveal">WHY JULIETTE</div>
+        <h2 class="reveal">I have been the woman on the other side of it.</h2>
+        <p class="reveal">Before I was the practitioner in that room, I was the woman in exactly that silence. I know what it feels like when a man is present and trying, and she still does not feel held. I know what she cannot tell you. I know what she does not yet have language for.</p>
+        <p class="reveal">I followed my own wound into every room it needed to understand: EMDR, somatic experiencing, hypnotherapy, orgasmic meditation and tantra, BDSM, spinal attunement. I did not collect those modalities. I needed them. Every single one.</p>
+        <p class="reveal">For 15 years I have worked specifically with couples and men at exactly this impasse. The man doing everything he knows how to do, and the distance still growing. That is the gap I work in.</p>
+        <p class="reveal">I have worked with over 650 couples. I have sat with hundreds of men in the specific confusion of trying harder and still not landing. I know what shifts it. That is what this guide is built from.</p>
+        <div class="modalities reveal">
+          <span>EMDR</span><span>Somatic experiencing</span><span>Hypnotherapy</span><span>OM &amp; tantra</span><span>BDSM</span><span>Spinal attunement</span>
+        </div>
+        <div class="press reveal">
+          <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/672266601f25a7590d252591.png" alt="Forbes">
+          <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/6722666046dc7a0bb395dcb1.png" alt="The Times">
+          <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/672266609ccb72e4c5428c52.png" alt="Marie Claire">
+          <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/6722666030643409dd828ee6.png" alt="ITV">
+          <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/672266637253cd083c119486.png" alt="The Telegraph">
+          <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/672266609ccb72239f428c53.png" alt="Newsweek">
+          <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/672266627253cd865b119485.png" alt="TED">
+          <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/67226660e141300c3c4236e2.png" alt="Mindvalley">
+          <span class="pod">The Scrumptious Woman, top 2.5% globally</span>
+        </div>
+        <p class="last reveal">I can translate what she cannot yet say. Specifically, practically, in a way that changes what happens in the room tonight.</p>
+      </div>
+
     </div>
-    <div class="press reveal">
-      <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/672266601f25a7590d252591.png" alt="Forbes">
-      <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/6722666046dc7a0bb395dcb1.png" alt="The Times">
-      <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/672266609ccb72e4c5428c52.png" alt="Marie Claire">
-      <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/6722666030643409dd828ee6.png" alt="ITV">
-      <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/672266637253cd083c119486.png" alt="The Telegraph">
-      <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/672266609ccb72239f428c53.png" alt="Newsweek">
-      <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/672266627253cd865b119485.png" alt="TED">
-      <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/67226660e141300c3c4236e2.png" alt="Mindvalley">
-      <span class="pod">The Scrumptious Woman, top 2.5% globally</span>
-    </div>
-    <p class="last reveal">I can translate what she cannot yet say. Specifically, practically, in a way that changes what happens in the room tonight.</p>
   </div>
 </section>
 
