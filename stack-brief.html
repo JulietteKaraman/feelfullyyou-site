@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tech Stack Brief. Feel Fully You</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fefcfa;
+    --ink:#1c1714;
+    --brown:#5d4a33;
+    --gold:#a88538;
+    --gold-deep:#99680c;
+    --gold-pale:#ddc98e;
+    --teal:#0d3535;
+    --blue:#d8dfe1;
+    --teal-mid:#0f4040;
+    --line:#e3dccf;
+    --line-dark:#1d3a39;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--cream);color:var(--brown);font-family:'Inter',sans-serif;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  .topbar{position:fixed;top:0;left:0;right:0;z-index:9999;background:var(--teal);padding:0 28px;height:64px;display:flex;align-items:center;justify-content:space-between}
+  .topbar .brand{font-family:var(--display);font-weight:700;font-size:16px;letter-spacing:.02em;color:var(--cream)}
+  .topbar .brand b{color:var(--gold-pale)}
+  .topbar nav{display:flex;gap:26px;align-items:center}
+  .topbar nav a{font-size:14px;color:var(--cream);font-weight:500;transition:color .2s}
+  .topbar nav a:hover{color:var(--gold-pale)}
+  .topbar nav a.btn{background:var(--gold);color:#fff;padding:10px 20px;border-radius:2px;font-weight:600}
+  .topbar nav a.btn:hover{background:var(--gold-deep)}
+  @media(max-width:860px){.topbar nav > a:not(.btn){display:none}}
+  .container{max-width:780px;margin:0 auto;padding:56px 32px}
+  h1{font-family:'Poppins',sans-serif;font-size:clamp(1.8rem,4vw,2.4rem);color:var(--ink);line-height:1.06;letter-spacing:-.022em;margin-bottom:10px}
+  .subtitle{font-size:15px;color:var(--gold-deep);letter-spacing:.04em;text-transform:uppercase;font-weight:600;margin-bottom:32px}
+  .intro{font-size:17px;color:var(--brown);line-height:1.7;margin-bottom:48px;padding-bottom:40px;border-bottom:1px solid var(--line)}
+
+  /* TOOL CARDS */
+  .tools{display:flex;flex-direction:column;gap:0}
+  .tool{display:grid;grid-template-columns:200px 1fr 120px;gap:0;border-bottom:1px solid var(--line);padding:28px 0;align-items:start}
+  .tool-name{font-family:'Poppins',sans-serif;font-weight:700;font-size:17px;color:var(--ink);padding-right:24px}
+  .tool-name .tag{display:inline-block;font-family:'Inter',sans-serif;font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);background:#e4efef;border-radius:2px;padding:3px 8px;margin-top:6px}
+  .tool-body{}
+  .tool-body .job{font-weight:600;color:var(--ink);margin-bottom:6px}
+  .tool-body p{font-size:15px;color:var(--brown);line-height:1.6}
+  .tool-body .action{margin-top:10px;font-size:14px;color:var(--gold-deep);font-weight:600}
+  .tool-cost{text-align:right;font-family:'Poppins',sans-serif;font-weight:700;font-size:16px;color:var(--ink)}
+  .tool-cost .note{display:block;font-family:'Inter',sans-serif;font-weight:400;font-size:12px;color:var(--brown);margin-top:4px}
+
+  /* CANCEL */
+  .cancel-section{margin-top:48px;padding:32px;background:#fff8f0;border:1px solid #e8c99a;border-radius:4px}
+  .cancel-section h2{font-family:'Poppins',sans-serif;font-size:18px;color:#b45309;margin-bottom:16px;letter-spacing:-.01em}
+  .cancel-list{list-style:none;display:flex;flex-direction:column;gap:10px}
+  .cancel-list li{font-size:15px;color:var(--brown);display:flex;align-items:baseline;gap:10px}
+  .cancel-list li::before{content:"✕";font-size:12px;color:#b45309;font-weight:700;flex-shrink:0}
+  .cancel-list .saving{font-weight:600;color:#b45309}
+
+  /* FLOW */
+  .flow-section{margin-top:40px;padding:32px;background:var(--teal);border-radius:4px}
+  .flow-section h2{font-family:'Poppins',sans-serif;font-size:18px;color:#fff;margin-bottom:20px;letter-spacing:-.01em}
+  .flow-steps{display:flex;flex-direction:column;gap:14px}
+  .flow-step{display:flex;align-items:baseline;gap:14px}
+  .flow-step .num{font-family:'Poppins',sans-serif;font-weight:700;font-size:13px;color:var(--gold-pale);flex-shrink:0;width:20px}
+  .flow-step p{font-size:15px;color:#c9c2b4;line-height:1.55}
+  .flow-step p strong{color:#fff}
+
+  /* NEXT ACTIONS */
+  .next-section{margin-top:40px}
+  .next-section h2{font-family:'Poppins',sans-serif;font-size:18px;color:var(--ink);margin-bottom:20px;letter-spacing:-.01em}
+  .next-list{list-style:none;display:flex;flex-direction:column;gap:12px;counter-reset:steps}
+  .next-list li{display:flex;gap:14px;align-items:baseline;font-size:15px;color:var(--brown);counter-increment:steps}
+  .next-list li::before{content:counter(steps);font-family:'Poppins',sans-serif;font-weight:700;font-size:13px;color:var(--cream);background:var(--teal);border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:11px}
+  .next-list li strong{color:var(--ink)}
+  .next-list li.kiera strong{color:var(--gold-deep)}
+
+  /* TOTAL */
+  .total{margin-top:40px;padding:24px 32px;background:#f6f4f1;border:1px solid var(--line);border-radius:4px;display:flex;justify-content:space-between;align-items:center}
+  .total .label{font-family:'Poppins',sans-serif;font-size:17px;color:var(--ink);font-weight:700}
+  .total .amount{font-family:'Poppins',sans-serif;font-size:28px;color:var(--teal);font-weight:700}
+  .total .sub{font-size:13px;color:var(--brown);margin-top:4px}
+
+  footer{background:var(--gold);padding:28px 32px;margin-top:56px;text-align:center;border-top:1px solid var(--line-dark)}
+  footer span{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--cream);opacity:.6}
+
+  @media(max-width:680px){
+    .tool{grid-template-columns:1fr;gap:8px}
+    .tool-cost{text-align:left}
+    .total{flex-direction:column;gap:8px;text-align:center}
+    .container{padding:40px 20px}
+  }
+
+  /* MOBILE NAV */
+  .ham{display:none;background:none;border:none;cursor:pointer;padding:6px;color:var(--cream)}
+  .ham svg{display:block}
+  .mobile-nav{display:none;position:fixed;top:64px;left:0;right:0;background:var(--teal);z-index:9998;padding:16px 0;border-top:1px solid rgba(255,255,255,.1);flex-direction:column}
+  .mobile-nav a{display:block;padding:13px 28px;font-size:15px;color:var(--cream);font-weight:500;font-family:var(--body);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.07)}
+  .mobile-nav a:last-child{border-bottom:none}
+  .mobile-nav a.btn{margin:14px 28px 6px;display:block;background:var(--gold);color:#fff;padding:12px 20px;border-radius:2px;font-weight:600;text-align:center;border:none}
+  .mobile-nav.open{display:flex}
+  @media(max-width:860px){.ham{display:block}.topbar .more-wrap{display:none}.topbar nav > .btn{display:none}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span>FEEL FULLY YOU · <b>TECH STACK BRIEF</b> · FOR JULIETTE + KIERA</span>
+<button class="ham" id="hamBtn" aria-label="Open menu" aria-expanded="false">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button></div>
+
+<div class="container">
+
+  <p class="subtitle">How everything works. June 2026</p>
+  <h1>Four tools. That is all we need.</h1>
+  <p class="intro">We spent a full day getting to simplicity. Here it is. Every page is already built and beautiful. Every tool below does exactly one job. Nothing overlaps. Nothing is complicated.</p>
+
+  <!-- TOOLS -->
+  <div class="tools">
+
+    <div class="tool">
+      <div class="tool-name">
+        Netlify
+        <div class="tag">Website</div>
+      </div>
+      <div class="tool-body">
+        <p class="job">Hosts every page. Free.</p>
+        <p>All the beautiful sales pages we built live here, 10 Touch Rituals, 31 Touch Points, Touch Point membership, Women's, Men's, Couples intensives, landing pages, all of them. feelfullyyou.com points to Netlify. Anyone who clicks a link from Instagram lands on a real, working, stunning page.</p>
+        <p class="action">Kiera action: upload all HTML files → update feelfullyyou.com DNS to point to Netlify (two fields, 5 minutes).</p>
+      </div>
+      <div class="tool-cost">Free<span class="note">Domain renewal ~£12/yr, already owned</span></div>
+    </div>
+
+    <div class="tool">
+      <div class="tool-name">
+        Stripe
+        <div class="tag">Checkout</div>
+      </div>
+      <div class="tool-body">
+        <p class="job">Takes all the money.</p>
+        <p>Every buy button on every Netlify page links to a Stripe payment link. Someone clicks "Get the 10 Rituals · £7", pays in Stripe, done. Stripe sends them a receipt. Stripe then tells Kit to send the welcome email sequence. No middle layer. No cart. No shop. Just a payment link.</p>
+        <p class="action">Juliette action: create payment links in Stripe for £7 / £27 / £97 per month. Takes 10 minutes.</p>
+      </div>
+      <div class="tool-cost">2.9% + 30p<span class="note">Per transaction only. No monthly fee.</span></div>
+    </div>
+
+    <div class="tool">
+      <div class="tool-name">
+        Kit
+        <div class="tag">Email</div>
+      </div>
+      <div class="tool-body">
+        <p class="job">Sends every email. Already paid for.</p>
+        <p>When someone buys through Stripe, Kit automatically sends them a welcome sequence. The Insider Touch newsletter goes from Kit. All broadcast emails go from Kit. Kit connects to Stripe via a simple integration, when a payment lands, Kit fires the right sequence for that product.</p>
+        <p class="action">Kiera action: set up three automations in Kit, one triggered by each Stripe product (£7, £27, £97). Migrate the 2,700 contacts from Ivorey into Kit.</p>
+      </div>
+      <div class="tool-cost">$75/mo<span class="note">Already paying. Rising to ~$100.</span></div>
+    </div>
+
+    <div class="tool">
+      <div class="tool-name">
+        ManyChat
+        <div class="tag">Instagram</div>
+      </div>
+      <div class="tool-body">
+        <p class="job">Turns Instagram comments and DMs into buyers.</p>
+        <p>Someone comments DECK on a reel. ManyChat DMs them the link to the cards page. Someone comments DISTANCE. ManyChat sends the link to the Distance page. Every keyword goes directly to the right Netlify page. No quiz needed. No extra steps. Direct.</p>
+        <p class="action">Kiera action: update all ManyChat keyword flows so they link to the new Netlify page URLs instead of Ivorey links.</p>
+      </div>
+      <div class="tool-cost">$25/mo<span class="note">Already paying.</span></div>
+    </div>
+
+    <div class="tool">
+      <div class="tool-name">
+        Whop
+        <div class="tag">The Room</div>
+      </div>
+      <div class="tool-body">
+        <p class="job">Hosts The Room membership, when it launches.</p>
+        <p>Once The Room is ready, Whop gates the content, drops in recordings and PDFs, connects to Telegram for the community, and lets Juliette revoke access with one click. Not needed until launch.</p>
+        <p class="action">Set up when The Room launches. Not urgent.</p>
+      </div>
+      <div class="tool-cost">$29/mo<span class="note">When The Room launches.</span></div>
+    </div>
+
+    <div class="tool">
+      <div class="tool-name">
+        Jotform
+        <div class="tag">Booking</div>
+      </div>
+      <div class="tool-body">
+        <p class="job">Handles all booking and applications.</p>
+        <p>Apply to work with Juliette form, intensive enquiries, setter call bookings, all go through Jotform. Already owned (lifetime). Already live at the apply form URL. Kiera needs to update the offers and pricing fields.</p>
+        <p class="action">Kiera action: update prices and offer descriptions in existing Jotform.</p>
+      </div>
+      <div class="tool-cost">£0<span class="note">Lifetime licence. Already owned.</span></div>
+    </div>
+
+  </div>
+
+  <!-- TOTAL -->
+  <div class="total">
+    <div>
+      <div class="label">Total monthly cost</div>
+      <div class="sub">Whop only when The Room launches. Kit rising to ~$100 soon.</div>
+    </div>
+    <div>
+      <div class="amount">~£119/mo</div>
+      <div class="sub" style="text-align:right">Plus 2.9% per sale (Stripe)</div>
+    </div>
+  </div>
+
+  <!-- CANCEL -->
+  <div class="cancel-section">
+    <h2>Cancel these, today</h2>
+    <ul class="cancel-list">
+      <li><strong>Ivorey / GHL</strong>, $1,000/year. Does not accept HTML. Funnels broken. Kit replaces all email. <span class="saving">Saves ~£800/year.</span></li>
+      <li><strong>Lovable</strong>. Touch Point page was hosted there. Now on Netlify. Cancel once Netlify is live. <span class="saving">Saves whatever Lovable costs.</span></li>
+      <li><strong>Perspective</strong>. Signed up tonight. The pages look nothing like the HTML we built. Cancel immediately. <span class="saving">Saves £149/month.</span></li>
+    </ul>
+  </div>
+
+  <!-- HOW IT FLOWS -->
+  <div class="flow-section">
+    <h2>How a purchase actually works, end to end</h2>
+    <div class="flow-steps">
+      <div class="flow-step"><div class="num">1</div><p>Juliette posts a reel. Caption says <strong>Comment RITUALS below.</strong></p></div>
+      <div class="flow-step"><div class="num">2</div><p>Someone comments. <strong>ManyChat instantly DMs them</strong> a link to the 10 Touch Rituals page on Netlify.</p></div>
+      <div class="flow-step"><div class="num">3</div><p>They land on the beautiful teal and gold page. They read. They click <strong>Get the 10 Rituals · £7.</strong></p></div>
+      <div class="flow-step"><div class="num">4</div><p><strong>Stripe takes the payment.</strong> Receipt goes automatically. They get their product.</p></div>
+      <div class="flow-step"><div class="num">5</div><p><strong>Kit fires a welcome sequence</strong>, a warm email from Juliette, then the upsell to 31 Touch Points, then Touch Point membership. Automated. Juliette does nothing.</p></div>
+    </div>
+  </div>
+
+  <!-- NEXT ACTIONS -->
+  <div class="next-section">
+    <h2>What needs to happen this week</h2>
+    <ul class="next-list">
+      <li><strong>Juliette, 10 minutes in Stripe:</strong> Create three payment links. £7 for 10 Rituals, £27 for 31 Touch Points, £97/month for Touch Point membership. Share links with Kiera.</li>
+      <li class="kiera"><strong>Kiera, drop Stripe links into HTML files:</strong> Three files in ~/Downloads, 10-touch-rituals.html, 31-daily-touch-points.html, touch-point.html. Find href="#" on the buy buttons and replace with Stripe links.</li>
+      <li class="kiera"><strong>Kiera, deploy to Netlify:</strong> Go to netlify.com/drop. Drag all HTML files from ~/Downloads. Pages go live instantly with netlify.app URLs.</li>
+      <li class="kiera"><strong>Kiera, point feelfullyyou.com to Netlify:</strong> In domain registrar, update DNS. Netlify provides the two values. Takes 5 minutes, propagates in under an hour.</li>
+      <li class="kiera"><strong>Kiera, update ManyChat:</strong> Every keyword flow that currently links to an Ivorey URL needs updating to the new Netlify URL.</li>
+      <li class="kiera"><strong>Kiera, migrate contacts to Kit:</strong> Export 2,700 contacts from Ivorey. Import into Kit. Set up three automation sequences (one per product purchase from Stripe).</li>
+      <li><strong>Juliette, cancel Ivorey, Lovable, Perspective.</strong> Three separate cancellations. Do this once Netlify is confirmed live.</li>
+    </ul>
+  </div>
+
+</div>
+
+<footer style="background:#a88538;color:#fff;padding:22px 32px;font-size:13px">
+  <div style="max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+    <div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:0.95rem;color:#fff;letter-spacing:-.01em">Feel Fully You</div>
+    <div style="font-size:12px;color:rgba(255,255,255,.85);display:flex;gap:16px;align-items:center"><a href="mailto:support@feelfullyyou.com" style="color:#fff;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(255,255,255,.5)">support@feelfullyyou.com</a><a href="https://feelfullyyou.com/terms" style="color:rgba(255,255,255,.75);text-decoration:none" target="_blank" rel="noopener">Terms</a></div>
+    <div style="display:flex;gap:14px;align-items:center">
+      <a href="https://www.instagram.com/juliettekaraman/" aria-label="Instagram" style="color:rgba(255,255,255,.85);display:flex;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+      <a href="https://www.facebook.com/juliette.karamanvanschaardenburg" aria-label="Facebook" style="color:rgba(255,255,255,.85);display:flex;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+      <a href="https://www.linkedin.com/in/juliette-karaman-van-schaardenburg-89399913b" aria-label="LinkedIn" style="color:rgba(255,255,255,.85);display:flex;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+      <a href="https://www.tiktok.com/@juliettekaraman" aria-label="TikTok" style="color:rgba(255,255,255,.85);display:flex;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+      <a href="https://substack.com/@juliettekaraman" aria-label="Substack" style="color:rgba(255,255,255,.85);display:flex;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 17.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.getElementById('hamBtn');
+  var nav=document.getElementById('mobileNav');
+  if(btn&&nav){btn.addEventListener('click',function(){nav.classList.toggle('open');btn.setAttribute('aria-expanded',nav.classList.contains('open'))});}
+})();
+</script>
+</body>
+</html>

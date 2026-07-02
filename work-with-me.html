@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Work With Me · Feel Fully You</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fefcfa;--cream-2:#f6f4f1;--paper:#fdfbf8;
+    --ink:#1c1714;--brown:#5d4a33;
+    --gold:#a88538;--gold-deep:#99680c;--gold-soft:#b4a074;--gold-pale:#ddc98e;
+    --teal:#0d3535;
+    --blue:#d8dfe1;--teal-deep:#061a1a;
+    --line:#e3dccf;--line-dark:#1d3a39;
+    --max:1100px;
+    --display:'Poppins',system-ui,sans-serif;
+    --body:'Inter',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--brown);font-family:var(--body);font-size:1.0625rem;line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  ::selection{background:var(--gold);color:#fff}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+
+  .topbar{position:fixed;top:0;left:0;right:0;z-index:9999;background:var(--teal);padding:0 28px;height:64px;display:flex;align-items:center;justify-content:space-between}
+  .topbar .brand{font-family:var(--display);font-weight:700;font-size:16px;letter-spacing:.02em;color:var(--cream)}
+  .topbar .brand b{color:var(--gold-pale)}
+  .topbar nav{display:flex;gap:26px;align-items:center}
+  .topbar nav a{font-size:14px;color:var(--cream);font-weight:500;transition:color .2s}
+  .topbar nav a:hover{color:var(--gold-pale)}
+  .topbar nav a.btn{background:var(--gold);color:#fff;padding:10px 20px;border-radius:2px;font-weight:600}
+  .topbar nav a.btn:hover{background:var(--gold-deep)}
+  @media(max-width:860px){.topbar nav > a:not(.btn){display:none}}
+
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  /* HERO */
+  .hero{background:var(--cream);border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;min-height:560px;margin-top:64px}
+  .hero-text{padding:60px 60px 60px 60px;display:flex;flex-direction:column;justify-content:center}
+  .hero-photo{overflow:hidden}
+  .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center 15%;display:block}
+  .hero .eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:20px}
+  .hero h1{font-family:var(--display);font-weight:800;font-size:clamp(2rem,4.5vw,3.4rem);color:var(--ink);letter-spacing:-.03em;line-height:1.06;max-width:18ch;margin-bottom:20px}
+  .hero .sub{font-style:italic;color:var(--brown);font-size:clamp(.95rem,1.8vw,1.1rem);max-width:44ch;line-height:1.65}
+  @media(max-width:700px){
+    .hero{grid-template-columns:1fr;min-height:auto}
+    .hero-photo{height:380px}
+    .hero-photo img{object-position:center 25%}
+    .hero-text{padding:48px 28px}
+  }
+
+  /* AUDIENCE SECTION */
+  .audience{padding:80px 28px;border-bottom:1px solid var(--line)}
+  .audience.her{background:#ddeaf0}
+  .audience.couples{background:var(--gold)}
+  .audience.him{background:#ffffff}
+
+  .audience-head{max-width:var(--max);margin:0 auto 48px;display:flex;align-items:baseline;gap:20px}
+  .audience-head .label{font-family:var(--display);font-weight:800;font-size:clamp(1.8rem,4vw,2.8rem);color:var(--ink);letter-spacing:-.03em;line-height:1}
+  .audience-head .line{flex:1;height:1px;background:var(--line)}
+  /* FOR BOTH — light ochre background */
+  .audience.couples .audience-head .label{color:#fff}
+  .audience.couples .audience-head .line{background:rgba(255,255,255,.35)}
+  .audience.couples .card{background:var(--paper);border-color:var(--line)}
+  .audience.couples .card .cat{color:var(--teal)}
+  .audience.couples .card h3{color:var(--ink)}
+  .audience.couples .card .price{color:var(--gold-deep)}
+  .audience.couples .card p{color:var(--brown)}
+  .audience.couples .card .btn{background:var(--teal);color:#fff}
+  .audience.couples .card .btn:hover{background:var(--teal-deep)}
+  .audience.couples .card.featured{background:var(--teal);border-color:var(--teal)}
+  .audience.couples .card.featured .cat{color:var(--gold-pale)}
+  .audience.couples .card.featured h3{color:#fff}
+  .audience.couples .card.featured .price{color:var(--gold-pale)}
+  .audience.couples .card.featured p{color:#c8c0b4}
+  .audience.couples .card.featured .btn{background:var(--gold);color:#fff}
+  /* FOR HIM — white background */
+  .audience.him .audience-head .label{color:var(--ink)}
+  .audience.him .audience-head .line{background:var(--line)}
+  .audience.him .card{background:var(--paper);border-color:var(--line)}
+  .audience.him .card .cat{color:var(--teal)}
+  .audience.him .card h3{color:var(--ink)}
+  .audience.him .card .price{color:var(--gold-deep)}
+  .audience.him .card p{color:var(--brown)}
+  .audience.him .card .btn{background:var(--teal);color:#fff}
+  .audience.him .card .btn:hover{background:var(--teal-deep)}
+  .audience.him .card.featured{background:var(--ink);border-color:var(--ink)}
+  .audience.him .card.featured .cat{color:var(--gold-pale)}
+  .audience.him .card.featured h3{color:#fff}
+  .audience.him .card.featured .price{color:var(--gold-pale)}
+  .audience.him .card.featured p{color:#c8c0b4}
+  .audience.him .card.featured .btn{background:var(--gold);color:#fff}
+
+  .card-grid{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:28px 26px;display:flex;flex-direction:column}
+  .card .cat{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--teal);font-weight:600;margin-bottom:12px}
+  .card h3{font-family:var(--display);font-size:1.15rem;font-weight:700;color:var(--ink);letter-spacing:-.015em;line-height:1.18;margin-bottom:8px}
+  .card .price{color:var(--gold-deep);font-weight:600;font-size:14px;margin-bottom:12px}
+  .card p{color:var(--brown);font-size:14.5px;line-height:1.6;flex:1;max-width:none}
+  .card .btn{margin-top:20px;align-self:flex-start;display:inline-block;background:var(--teal);color:#fff;font-family:var(--body);font-weight:600;font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding:10px 18px;border-radius:2px;transition:background .2s,transform .2s}
+  .card .btn:hover{background:var(--teal-deep);transform:translateY(-1px)}
+  .card.featured{background:var(--teal);border-color:var(--teal)}
+  .card.featured .cat{color:var(--gold-pale)}
+  .card.featured h3{color:#fff}
+  .card.featured .price{color:var(--gold-pale)}
+  .card.featured p{color:#c8c0b4}
+  .card.featured .btn{background:var(--gold);color:#fff}
+  .card.featured .btn:hover{background:var(--gold-deep)}
+
+  /* AUDIT STRIP */
+  .audit{background:var(--teal);padding:60px 28px;text-align:center}
+  .audit h2{font-family:var(--display);font-weight:800;font-size:clamp(1.6rem,3.5vw,2.4rem);color:#fff;letter-spacing:-.025em;line-height:1.08;margin-bottom:12px}
+  .audit p{color:rgba(255,255,255,.75);font-size:1rem;max-width:48ch;margin:0 auto 28px;line-height:1.6}
+  .audit a{display:inline-block;background:var(--gold);color:#fff;font-family:var(--body);font-weight:700;font-size:0.9rem;padding:14px 32px;border-radius:2px;letter-spacing:.02em;transition:transform .2s,background .2s}
+  .audit a:hover{background:var(--gold-deep);transform:translateY(-2px)}
+
+  /* CREDIBILITY */
+  .cred{padding:64px 28px;background:var(--paper);border-top:1px solid var(--line);text-align:center}
+  .cred .cred-tag{font-family:'Poppins',sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:8px}
+  .cred .cred-stat{font-family:'Playfair Display',serif;font-size:clamp(14px,2vw,17px);color:var(--brown);margin-bottom:32px;font-style:italic}
+  .cred .logos{display:flex;flex-wrap:wrap;gap:20px 32px;align-items:center;justify-content:center;margin-bottom:24px}
+  .cred .logos img{height:22px;width:auto;max-width:100px;object-fit:contain;filter:brightness(0) opacity(.35);transition:filter .25s}
+  .cred .logos img:hover{filter:brightness(0) opacity(.65)}
+  .cred .pod{font-family:'Poppins',sans-serif;font-size:12px;letter-spacing:.08em;color:var(--brown);opacity:.6;margin-top:8px}
+
+  footer{padding:32px;background:var(--gold);color:rgba(255,255,255,.85);font-size:13px;text-align:center}
+  footer a{color:#fff}
+
+  @media(max-width:900px){.card-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:580px){
+    .card-grid{grid-template-columns:1fr}
+      .audience-head{margin-bottom:32px}
+  }
+  @media(prefers-reduced-motion:reduce){*{transition:none!important}.reveal{opacity:1;transform:none}}
+  /* More dropdown */
+  .more-wrap{position:relative}
+  .more-wrap > button{background:none;border:none;cursor:pointer;font-size:14px;color:var(--cream);font-weight:500;font-family:var(--body);display:flex;align-items:center;gap:5px;padding:0;transition:color .2s}
+  .more-wrap > button:hover{color:var(--gold-pale)}
+  .more-wrap > button svg{transition:transform .2s}
+  .more-wrap.open > button svg{transform:rotate(180deg)}
+  .dropdown{position:absolute;top:calc(100% + 10px);right:0;background:var(--teal-deep);border:1px solid var(--line-dark);border-radius:3px;min-width:180px;padding:6px 0;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .18s,transform .18s;z-index:9999}
+  .more-wrap.open .dropdown{opacity:1;pointer-events:all;transform:none}
+  @media(max-width:860px){.dropdown{position:fixed;top:56px;right:16px}}
+  .dropdown a{display:block;padding:10px 18px;font-size:13px;color:var(--cream);font-weight:500;transition:background .15s,color .15s}
+  .dropdown a:hover{background:var(--teal);color:var(--gold-pale)}
+
+  /* MOBILE NAV */
+  .ham{display:none;background:none;border:none;cursor:pointer;padding:6px;color:var(--cream)}
+  .ham svg{display:block}
+  .mobile-nav{display:none;position:fixed;top:64px;left:0;right:0;background:var(--teal);z-index:9998;padding:16px 0;border-top:1px solid rgba(255,255,255,.1);flex-direction:column}
+  .mobile-nav a{display:block;padding:13px 28px;font-size:15px;color:var(--cream);font-weight:500;font-family:var(--body);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.07)}
+  .mobile-nav a:last-child{border-bottom:none}
+  .mobile-nav a.btn{margin:14px 28px 6px;display:block;background:var(--gold);color:#fff;padding:12px 20px;border-radius:2px;font-weight:600;text-align:center;border:none}
+  .mobile-nav.open{display:flex}
+  @media(max-width:860px){.ham{display:block}.topbar .more-wrap{display:none}.topbar nav > .btn{display:none}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand">Feel&nbsp;Fully&nbsp;<b>You</b>
+  <button class="ham" id="hamBtn" aria-label="Open menu" aria-expanded="false">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+</div>
+  <nav>
+    <a href="/">Home</a>
+    <div class="more-wrap" id="workWrap">
+      <button onclick="document.getElementById('workWrap').classList.toggle('open')" aria-expanded="false">
+        Work With Me <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg>
+      </button>
+      <div class="dropdown">
+        <a href="/for-her">For Her</a>
+        <a href="/for-him">For Him</a>
+        <a href="/for-both">For Both</a>
+        <a href="/the-room">The Room</a>
+      </div>
+    </div>
+    <a href="/cards">The Cards</a>
+    <a href="/shop">Shop</a>
+    <div class="more-wrap" id="moreWrap">
+      <button onclick="document.getElementById('moreWrap').classList.toggle('open')" aria-expanded="false">
+        More <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg>
+      </button>
+      <div class="dropdown">
+        <a href="/free-resources">Free Resources</a>
+        <a href="/grief-duality-process">Grief Process</a>
+        <a href="/media-and-pr">Media &amp; PR</a>
+        <a href="/contact">Contact</a>
+      </div>
+    </div>
+    <a href="/work-with-me" class="btn">Start here</a>
+  </nav>
+</div>
+
+
+<nav class="mobile-nav" id="mobileNav">
+  <a href="/">Home</a>
+  <a href="/for-her">For Her</a>
+  <a href="/for-him">For Him</a>
+  <a href="/for-both">For Both</a>
+  <a href="/the-room">The Room</a>
+  <a href="/cards">The Cards</a>
+  <a href="/shop">Shop</a>
+  <a href="/about">About Juliette</a>
+  <a href="/free-resources">Free Resources</a>
+  <a href="/grief-duality-process">Grief Process</a>
+  <a href="/media-and-pr">Media &amp; PR</a>
+  <a href="/contact">Contact</a>
+  <a href="/work-with-me" class="btn">Start here</a>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-text">
+    <div class="eyebrow reveal">All programmes</div>
+    <h1 class="reveal">Choose where you want to begin.</h1>
+    <p class="sub reveal">Whether you are coming alone, as a couple, or bringing someone you love, there is a way in that is sized for where you are right now.</p>
+  </div>
+  <div class="hero-photo">
+    <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/6a16ee11f58810f313975ace.jpeg" alt="Juliette Karaman">
+  </div>
+</header>
+
+<!-- FOR HER -->
+<section class="audience her">
+  <div class="audience-head reveal">
+    <div class="label">For Her</div>
+    <div class="line"></div>
+  </div>
+  <div class="card-grid">
+
+    <div class="card reveal">
+      <div class="cat">Free · Live Event</div>
+      <h3>BE TOUCHED — Free Masterclass</h3>
+      <div class="price">Free</div>
+      <p>What it means to be truly touched. Not just physically, but in the places that have been waiting. 28 June, 7pm UK / 2pm EST.</p>
+      <a href="https://feelfullyyou.com/be-touched" class="btn">Reserve your spot →</a>
+    </div>
+
+    <div class="card reveal">
+      <div class="cat">1:1 · In-person or Online</div>
+      <h3>Women's Intensive</h3>
+      <div class="price">£4,000 in-person &nbsp;·&nbsp; £2,000 online</div>
+      <p>One day. Just you and Juliette. Body-led, non-sexual touch, sacred space. For the woman who has done the work and still feels something is missing.</p>
+      <a href="/womens-intensive" class="btn">Book →</a>
+    </div>
+
+    <div class="card reveal">
+      <div class="cat">1:1 · Six Weeks</div>
+      <h3>Women's Six-Week Intensive</h3>
+      <div class="price">£4,497</div>
+      <p>Six weeks, one to one. The body catching up with everything you already know. Deep, layered, real.</p>
+      <a href="/womens-six-week-intensive" class="btn">Book →</a>
+    </div>
+
+    <div class="card reveal featured">
+      <div class="cat">Group · 8 Weeks</div>
+      <h3>The Room</h3>
+      <div class="price">Details on application</div>
+      <p>Eight weeks inside a group of women learning to be touched: in their bodies, their relationships, their lives.</p>
+      <a href="/the-room" class="btn">Find out more →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOR COUPLES -->
+<section class="audience couples">
+  <div class="audience-head reveal">
+    <div class="label">For Both</div>
+    <div class="line"></div>
+  </div>
+  <div class="card-grid">
+
+    <div class="card reveal">
+      <div class="cat">Digital · Start tonight</div>
+      <h3>10 Touch Rituals</h3>
+      <div class="price">£7</div>
+      <p>Ten non-sexual touch practices. A few minutes each. The simplest way to begin reaching each other again.</p>
+      <a href="/10-touch-rituals" class="btn">Get →</a>
+    </div>
+
+    <div class="card reveal">
+      <div class="cat">Digital · 31 Days</div>
+      <h3>31 Daily Touch Points</h3>
+      <div class="price">£27</div>
+      <p>A full month of daily practices that make the rituals stick. One day at a time, together.</p>
+      <a href="/31-daily-touch-points" class="btn">Start →</a>
+    </div>
+
+    <div class="card reveal">
+      <div class="cat">App · 300 Cards</div>
+      <h3>Intimacy &amp; Communication Cards</h3>
+      <div class="price">From £15</div>
+      <p>300 cards to reach each other again. Read one aloud. Use the three-answer mechanic. Go deeper than you have in years.</p>
+      <a href="/cards" class="btn">Explore →</a>
+    </div>
+
+    <div class="card reveal">
+      <div class="cat">1:1 · In-person or Online</div>
+      <h3>Couples Intensive</h3>
+      <div class="price">£6,000 in-person &nbsp;·&nbsp; £3,333 online</div>
+      <p>One day. Both of you and Juliette. Individual and shared body work. For the couple who loves each other but can't seem to reach each other.</p>
+      <a href="/couples-intensive" class="btn">Book →</a>
+    </div>
+
+    <div class="card reveal featured">
+      <div class="cat">Private · Application only</div>
+      <h3>The Beginning</h3>
+      <div class="price">By application</div>
+      <p>The most immersive container Juliette offers. For the couple who is ready to completely rewrite the pattern. Details on application.</p>
+      <a href="https://form.jotform.com/261584568346368" class="btn" target="_blank">Apply →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOR HIM -->
+<section class="audience him">
+  <div class="audience-head reveal">
+    <div class="label">For Him</div>
+    <div class="line"></div>
+  </div>
+  <div class="card-grid">
+
+    <div class="card reveal">
+      <div class="cat">Digital Guide</div>
+      <h3>The Unspoken Distance</h3>
+      <div class="price">£97</div>
+      <p>Nine parts. What the distance is made of, why it keeps showing up, and what to do about it. For the man who knows something is off but doesn't know what.</p>
+      <a href="/the-unspoken-distance" class="btn">Get the guide →</a>
+    </div>
+
+    <div class="card reveal featured">
+      <div class="cat">Membership · Monthly</div>
+      <h3>Touch Point</h3>
+      <div class="price">£97/month</div>
+      <p>Private Telegram group. Weekly coaching audio. Monthly live session. For the man who wants ongoing access, not a one-off.</p>
+      <a href="/touch-point" class="btn">Join →</a>
+    </div>
+
+    <div class="card reveal">
+      <div class="cat">1:1 · In-person or Online</div>
+      <h3>Men's Intensive</h3>
+      <div class="price">£4,000 in-person &nbsp;·&nbsp; £2,000 online</div>
+      <p>One day. Just you and Juliette. Somatic, presence-based, fully confidential. For the man who is done talking about it.</p>
+      <a href="/mens-intensive" class="btn">Book →</a>
+    </div>
+
+    <div class="card reveal">
+      <div class="cat">1:1 · Six Weeks</div>
+      <h3>Men's Six-Week Intensive</h3>
+      <div class="price">£4,497</div>
+      <p>Six weeks, one to one. Becoming the man whose presence is felt before he has said a word.</p>
+      <a href="/mens-six-week-intensive" class="btn">Book →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- AUDIT CTA -->
+<div class="audit">
+  <h2 class="reveal">Not sure where to start?</h2>
+  <p class="reveal">A Touch Audit is a conversation. You tell Juliette where you are. She tells you what she sees. No pressure, no pitch.</p>
+  <a href="https://form.jotform.com/261584568346368" target="_blank" rel="noopener" class="reveal">Apply for a Touch Audit →</a>
+</div>
+
+<!-- CREDIBILITY -->
+<section class="cred">
+  <p class="cred-tag reveal">15 years of this work</p>
+  <p class="cred-stat reveal">As seen and heard in</p>
+  <div class="logos reveal">
+    <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/672266601f25a7590d252591.png" alt="Forbes">
+    <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/6722666046dc7a0bb395dcb1.png" alt="The Times">
+    <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/672266609ccb72e4c5428c52.png" alt="Marie Claire">
+    <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/6722666030643409dd828ee6.png" alt="ITV">
+    <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/672266637253cd083c119486.png" alt="The Telegraph">
+    <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/672266609ccb72239f428c53.png" alt="Newsweek">
+    <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/672266600ab7e4e765e90e7f.png" alt="NBC">
+    <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/67226660306434f9c2828ee5.png" alt="ABC">
+    <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/672266627253cd865b119485.png" alt="TED">
+    <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/67226660e141300c3c4236e2.png" alt="Mindvalley">
+  </div>
+  <p class="pod reveal">Podcast top 2.5% globally</p>
+</section>
+
+<footer>
+  <div style="margin-bottom:10px;font-family:'Poppins',sans-serif;font-weight:700;color:var(--gold-pale);letter-spacing:-.01em">Feel Fully You</div>
+  <div><a href="mailto:support@feelfullyyou.com">support@feelfullyyou.com</a></div>
+</footer>
+
+<script>
+  const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -4% 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+<script>
+(function(){
+  var btn=document.getElementById('hamBtn');
+  var nav=document.getElementById('mobileNav');
+  if(btn&&nav){btn.addEventListener('click',function(){nav.classList.toggle('open');btn.setAttribute('aria-expanded',nav.classList.contains('open'))});}
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CONNECT With Essence · A Day Retreat · Feel Fully You</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fefcfa;--cream-2:#f6f4f1;--paper:#fdfbf8;
+    --blue-light:#ddeaf0;
+    --ink:#1c1714;--brown:#5d4a33;--muted:#8a7560;
+    --gold:#a88538;--gold-deep:#99680c;--gold-soft:#b4a074;--gold-pale:#ddc98e;
+    --teal:#0d3535;
+    --blue:#d8dfe1;--teal-deep:#061a1a;
+    --line:#e3dccf;--max:860px;
+    --display:'Poppins',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--brown);font-family:var(--body);font-size:1rem;line-height:1.78;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  ::selection{background:var(--gold);color:#fff}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+
+  /* NAV */
+  .topbar{position:fixed;top:0;left:0;right:0;z-index:9999;background:var(--teal);padding:0 28px;height:64px;display:flex;align-items:center;justify-content:space-between}
+  .topbar .brand{font-family:var(--display);font-weight:700;font-size:16px;letter-spacing:.02em;color:var(--cream)}
+  .topbar .brand b{color:var(--gold-pale)}
+  .topbar nav{display:flex;gap:26px;align-items:center}
+  .topbar nav a{font-size:14px;color:var(--cream);font-weight:500;transition:color .2s}
+  .topbar nav a:hover{color:var(--gold-pale)}
+  .topbar nav a.btn{background:var(--gold);color:#fff;padding:10px 20px;border-radius:2px;font-weight:600}
+  .topbar nav a.btn:hover{background:var(--gold-deep)}
+  @media(max-width:860px){.topbar nav > a:not(.btn){display:none}}
+  .more-wrap{position:relative}
+  .more-wrap>button{background:none;border:none;cursor:pointer;font-size:14px;color:var(--cream);font-weight:500;font-family:var(--body);display:flex;align-items:center;gap:5px;padding:0;transition:color .2s}
+  .more-wrap>button:hover{color:var(--gold-pale)}
+  .more-wrap>button svg{transition:transform .2s}
+  .more-wrap.open>button svg{transform:rotate(180deg)}
+  .dropdown{position:absolute;top:calc(100% + 10px);right:0;background:var(--teal-deep);border:1px solid rgba(255,255,255,.1);border-radius:3px;min-width:180px;padding:6px 0;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .18s,transform .18s;z-index:9999}
+  .more-wrap.open .dropdown{opacity:1;pointer-events:all;transform:none}
+  @media(max-width:860px){.dropdown{position:fixed;top:56px;right:16px}}
+  .dropdown a{display:block;padding:10px 18px;font-size:13px;color:var(--cream);font-weight:500;transition:background .15s}
+  .dropdown a:hover{background:var(--teal);color:var(--gold-pale)}
+
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .85s cubic-bezier(.2,.7,.2,1),transform .85s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  /* SHARED */
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 40px}
+  .eyebrow{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-deep);font-weight:700;margin-bottom:12px}
+  h2{font-family:var(--display);font-weight:800;font-size:clamp(1.7rem,3.5vw,2.4rem);color:var(--ink);letter-spacing:-.025em;line-height:1.1;margin-bottom:18px}
+  p.lead{font-size:1rem;color:var(--brown);line-height:1.8;max-width:56ch}
+  p.lead+p.lead{margin-top:14px}
+  @media(max-width:600px){.wrap{padding:0 24px}}
+
+  /* HERO */
+  .hero{margin-top:56px}
+  .hero img{width:100%;height:auto;display:block}
+
+  /* PAGE TITLE */
+  .page-title{background:var(--cream);padding:44px 40px 32px;border-bottom:1px solid var(--line)}
+  .page-title h1{font-family:var(--display);font-weight:800;font-size:clamp(2.2rem,5vw,3.6rem);color:var(--ink);letter-spacing:-.03em;line-height:1.04;max-width:var(--max);margin:0 auto}
+  .page-title .meta{max-width:var(--max);margin:14px auto 0;font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;gap:16px 28px}
+  .page-title .meta strong{color:var(--ink);font-weight:600}
+  @media(max-width:600px){.page-title{padding:32px 24px 24px}}
+
+  /* PHOTO — full width, height capped */
+  .photo{width:100%}
+  .photo img{width:100%;height:auto;max-height:500px;object-fit:cover;object-position:center;display:block}
+  /* Smaller photos — centered column, no cropping */
+  .photo.small{display:flex;justify-content:center;background:var(--cream-2)}
+  .photo.small img{width:auto;max-width:420px;height:auto}
+  /* Three-of-us photo — slightly constrained */
+  .photo.medium{display:flex;justify-content:center}
+  .photo.medium img{width:auto;max-width:800px;height:auto}
+
+  /* PHOTO CREDIT */
+  .photo-credit{background:var(--cream-2);text-align:center;padding:11px 24px;font-size:11px;color:var(--muted);font-style:italic;border-bottom:1px solid var(--line)}
+
+  /* PHOTO PAIR */
+  .photo-pair{display:grid;grid-template-columns:1fr 1fr;gap:3px}
+  .photo-pair img{width:100%;height:auto;display:block}
+  @media(max-width:600px){.photo-pair{grid-template-columns:1fr}}
+
+  /* SECTIONS */
+  .section{padding:72px 40px;border-bottom:1px solid var(--line)}
+  .section.cream{background:var(--cream)}
+  .section.cream-2{background:var(--cream-2)}
+  .section.blue{background:var(--blue-light)}
+  @media(max-width:600px){.section{padding:52px 24px}}
+
+  /* BELIEF */
+  .belief{background:var(--cream);padding:72px 40px;border-bottom:1px solid var(--line);text-align:center}
+  .belief blockquote{font-family:var(--display);font-style:italic;font-weight:500;font-size:clamp(1.25rem,2.8vw,1.85rem);color:var(--ink);max-width:30ch;margin:0 auto 16px;line-height:1.42;letter-spacing:-.01em}
+  .belief blockquote em{color:var(--gold-deep);font-style:normal}
+  .belief .sub{font-size:1rem;color:var(--brown);max-width:44ch;margin:0 auto;line-height:1.75;font-style:italic}
+  @media(max-width:600px){.belief{padding:52px 24px}}
+
+  /* PILLARS */
+  .pillar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:40px;border:1px solid var(--line)}
+  .pillar{background:var(--cream);padding:32px 26px}
+  .pillar .num{font-family:var(--display);font-size:1.8rem;font-weight:800;color:var(--gold-pale);line-height:1;margin-bottom:12px;letter-spacing:-.04em}
+  .pillar h3{font-family:var(--display);font-weight:700;font-size:1rem;color:var(--ink);margin-bottom:10px}
+  .pillar p{font-size:14px;color:var(--brown);line-height:1.75}
+  @media(max-width:660px){.pillar-grid{grid-template-columns:1fr}}
+
+  /* HOSTS */
+  .host-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:44px}
+  .host{text-align:center}
+  .host img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;object-position:center top;display:block;margin-bottom:20px}
+  .host .hname{font-family:var(--display);font-weight:700;font-size:1.05rem;color:var(--ink);margin-bottom:4px}
+  .host .hrole{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);font-weight:700;margin-bottom:12px}
+  .host p{color:var(--brown);font-size:14px;line-height:1.75;font-style:italic}
+  @media(max-width:660px){.host-grid{grid-template-columns:1fr;gap:36px}}
+
+  /* LIST */
+  .nice-list{list-style:none;display:flex;flex-direction:column;gap:10px;margin-top:10px}
+  .nice-list li{display:flex;align-items:flex-start;gap:12px;font-size:15px;color:var(--brown);line-height:1.58}
+  .nice-list li::before{content:'—';color:var(--gold-soft);font-weight:700;flex-shrink:0;margin-top:2px}
+
+  /* FOR YOU IF */
+  .for-you-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:32px}
+  .for-you-item{background:var(--cream);border:1px solid var(--line);padding:20px 22px;font-size:14.5px;color:var(--brown);line-height:1.65;font-style:italic}
+  @media(max-width:600px){.for-you-grid{grid-template-columns:1fr}}
+
+  /* TESTIMONIALS */
+  .testi-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:40px}
+  .testi{background:var(--cream);border:1px solid var(--line);padding:26px}
+  .testi .testi-head{font-family:var(--display);font-weight:700;font-size:.95rem;color:var(--ink);margin-bottom:8px}
+  .testi blockquote{font-style:italic;color:var(--brown);font-size:14.5px;line-height:1.75;margin-bottom:10px}
+  .testi .name{font-size:11px;font-weight:700;color:var(--gold-deep);letter-spacing:.1em;text-transform:uppercase}
+  @media(max-width:600px){.testi-grid{grid-template-columns:1fr}}
+
+  /* PHOTOSHOOT */
+  .photoshoot-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-top:8px}
+  .photoshoot-grid img{width:100%;height:auto;display:block}
+  .photoshoot .price{font-family:var(--display);font-weight:800;font-size:2.4rem;color:var(--gold-deep);margin:20px 0 4px;letter-spacing:-.03em}
+  .photoshoot .price-note{font-size:13px;color:var(--muted)}
+  @media(max-width:700px){.photoshoot-grid{grid-template-columns:1fr}}
+
+  /* BOOK — light blue */
+  .book{background:var(--blue-light);padding:88px 40px;text-align:center;border-top:1px solid var(--line)}
+  .book .eyebrow{color:var(--gold-deep)}
+  .book h2{color:var(--ink);max-width:22ch;margin:0 auto 10px}
+  .book .sub{color:var(--brown);font-size:.95rem;max-width:42ch;margin:0 auto 32px;line-height:1.72;font-style:italic}
+  .book .price-main{font-family:var(--display);font-weight:800;font-size:3.6rem;color:var(--ink);letter-spacing:-.04em;line-height:1}
+  .book .price-rise{font-size:14px;color:var(--gold-deep);font-weight:600;margin:8px 0 6px}
+  .book .price-note{font-size:13px;color:var(--muted);margin-bottom:28px}
+  .book a.cta{display:inline-block;background:var(--ink);color:#fff;font-family:var(--body);font-weight:700;font-size:1rem;padding:16px 44px;border-radius:2px;letter-spacing:.01em;transition:opacity .2s,transform .2s;margin-bottom:12px}
+  .book a.cta:hover{opacity:.82;transform:translateY(-2px)}
+  .book .spots{font-size:12px;color:var(--gold-deep);letter-spacing:.06em;text-transform:uppercase;font-weight:600}
+  @media(max-width:600px){.book{padding:60px 24px}}
+
+  footer{padding:32px 40px;background:var(--gold);text-align:center;font-size:13px;color:rgba(255,255,255,.85)}
+  footer .fname{font-family:var(--display);font-weight:700;font-size:15px;color:#fff;margin-bottom:6px}
+  footer a{color:rgba(255,255,255,.8)}
+
+  @media(prefers-reduced-motion:reduce){*{transition:none!important}.reveal{opacity:1;transform:none}}
+
+  /* MOBILE NAV */
+  .ham{display:none;background:none;border:none;cursor:pointer;padding:6px;color:var(--cream)}
+  .ham svg{display:block}
+  .mobile-nav{display:none;position:fixed;top:64px;left:0;right:0;background:var(--teal);z-index:9998;padding:16px 0;border-top:1px solid rgba(255,255,255,.1);flex-direction:column}
+  .mobile-nav a{display:block;padding:13px 28px;font-size:15px;color:var(--cream);font-weight:500;font-family:var(--body);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.07)}
+  .mobile-nav a:last-child{border-bottom:none}
+  .mobile-nav a.btn{margin:14px 28px 6px;display:block;background:var(--gold);color:#fff;padding:12px 20px;border-radius:2px;font-weight:600;text-align:center;border:none}
+  .mobile-nav.open{display:flex}
+  @media(max-width:860px){.ham{display:block}.topbar .more-wrap{display:none}.topbar nav > .btn{display:none}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<div class="topbar">
+  <a href="/" class="brand">Feel Fully <b>You</b>
+  <button class="ham" id="hamBtn" aria-label="Open menu" aria-expanded="false">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+</a>
+  <nav>
+    <a href="/">Home</a>
+    <div class="more-wrap" id="workWrap">
+      <button onclick="document.getElementById('workWrap').classList.toggle('open')" aria-expanded="false">
+        Work With Me <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg>
+      </button>
+      <div class="dropdown">
+        <a href="/for-her">For Her</a>
+        <a href="/for-him">For Him</a>
+        <a href="/for-both">For Both</a>
+        <a href="/the-room">The Room</a>
+      </div>
+    </div>
+    <a href="/cards">The Cards</a>
+    <a href="/shop">Shop</a>
+    <div class="more-wrap" id="moreWrap">
+      <button onclick="document.getElementById('moreWrap').classList.toggle('open')" aria-expanded="false">
+        More <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg>
+      </button>
+      <div class="dropdown">
+        <a href="/free-resources">Free Resources</a>
+        <a href="/grief-duality-process">Grief Process</a>
+        <a href="/media-and-pr">Media &amp; PR</a>
+        <a href="/contact">Contact</a>
+      </div>
+    </div>
+    <a href="#book" class="btn">Reserve your spot</a>
+  </nav>
+</div>
+
+
+<nav class="mobile-nav" id="mobileNav">
+  <a href="/">Home</a>
+  <a href="/for-her">For Her</a>
+  <a href="/for-him">For Him</a>
+  <a href="/for-both">For Both</a>
+  <a href="/the-room">The Room</a>
+  <a href="/cards">The Cards</a>
+  <a href="/shop">Shop</a>
+  <a href="/about">About Juliette</a>
+  <a href="/free-resources">Free Resources</a>
+  <a href="/grief-duality-process">Grief Process</a>
+  <a href="/media-and-pr">Media &amp; PR</a>
+  <a href="/contact">Contact</a>
+  <a href="/work-with-me" class="btn">Start here</a>
+</nav>
+
+<!-- HERO PHOTO -->
+<div class="hero">
+  <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/69385f66169a42bef0f020f3.png" alt="CONNECT With Essence retreat">
+</div>
+
+<!-- PAGE TITLE + DETAILS -->
+<div class="page-title">
+  <div class="wrap">
+    <p class="eyebrow reveal">One day · Central London · 25 September 2026</p>
+    <h1 class="reveal">CONNECT With Essence</h1>
+    <div class="meta reveal">
+      <span><strong>25 September 2026</strong> · 10:30am – 4:30pm</span>
+      <span>Private venue · Central London</span>
+      <span><strong>£247</strong></span>
+      <span><strong>5 spots</strong> remaining</span>
+    </div>
+  </div>
+</div>
+
+<!-- BELIEF -->
+<section class="belief">
+  <blockquote class="reveal">"You've read the books. Done the therapy. Know the language. Your body is still <em>bracing.</em>"</blockquote>
+  <p class="sub reveal">A one-day return to feeling. Three practitioners. Set in a beautiful private venue in Central London: a day to step out of the noise of everyday life and into something far more grounded, clear, and powerful.</p>
+</section>
+
+<!-- PHOTO 1 -->
+<div class="photo">
+  <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/69cbb2bd5ffd12a03c49ae69.jpg" alt="Essence retreat day">
+</div>
+<div class="photo-credit">Photos by the fabulous <strong>Justine Stoddart</strong></div>
+
+<!-- PAIN / RECALIBRATION -->
+<section class="section cream">
+  <div class="wrap">
+    <p class="eyebrow reveal">This isn't just a retreat</p>
+    <h2 class="reveal">It's a recalibration.</h2>
+    <p class="lead reveal">Most women are trying to think their way into feeling better. And they're very good at it. They can name what's off, explain it clearly, hold space for everyone else's version of it, and still come home to a body that hasn't quite landed.</p>
+    <p class="lead reveal">At some point you took on an identity. The capable one. The strong one. The one who holds it all together. It served you. It may still serve you. But a new beginning asks a different question: what do you need to put down?</p>
+    <p class="reveal" style="font-family:var(--display);font-size:clamp(1.2rem,2.5vw,1.7rem);font-weight:700;color:var(--gold-deep);line-height:1.35;max-width:28ch;margin-top:8px">Essence is where that starts. Not with more thinking. With the body.</p>
+  </div>
+</section>
+
+<!-- PHOTO 2 -->
+<div class="photo">
+  <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/6938676805e1fa6f8cbd28a9.jpg" alt="Essence group" style="object-position:top">
+</div>
+
+<!-- NEW BEGINNINGS -->
+<section class="section blue" style="text-align:center">
+  <div class="wrap">
+    <p class="eyebrow reveal" style="font-size:13px;font-weight:800;letter-spacing:.3em"><strong>NEW BEGINNINGS</strong></p>
+    <p class="reveal" style="font-size:1rem;color:var(--muted);font-style:italic;margin-bottom:24px">This is the last Essence event we'll be hosting 🫶</p>
+    <p class="lead reveal" style="margin:0 auto;max-width:52ch">Because Natasha, Juliette and Liz are in the motion of stepping into our own new beginnings, we will be exploring where we hold ourselves back from making bold steps forward, intentionally releasing any energy or beliefs that are keeping us tethered, and opening ourselves to exciting possibilities, opportunities and beginnings.</p>
+    <p class="lead reveal" style="margin:24px auto 0;max-width:52ch;font-style:italic">As we continue to grow and evolve. ❤️</p>
+  </div>
+</section>
+
+<!-- METHOD — three pillars -->
+<section class="section cream-2">
+  <div class="wrap">
+    <p class="eyebrow reveal">How the day works</p>
+    <h2 class="reveal">Body. Mind. Soul.</h2>
+    <div class="pillar-grid">
+      <div class="pillar reveal">
+        <div class="num">01</div>
+        <h3>The Body</h3>
+        <p>We begin by reconnecting you with your body. Through movement, awareness, and real-time insight. An energising session to shake off stagnant energy and come back into yourself in a way that feels freeing, not forced.</p>
+        <p style="margin-top:12px">You'll begin to see how your body responds to food, stress, and daily rhythms, and move from guessing to knowing.</p>
+      </div>
+      <div class="pillar reveal">
+        <div class="num">02</div>
+        <h3>Mind &amp; Emotions</h3>
+        <p>With the body more regulated, we move into your internal world. Through breathwork, spinal attunement, and energy-based practices, we gently unwind what has been held, softening emotional holding patterns and restoring flow.</p>
+        <p style="margin-top:12px">This isn't about forcing anything. It's about creating the conditions where things can shift naturally. Where your body feels safer. Where your mind becomes quieter.</p>
+      </div>
+      <div class="pillar reveal">
+        <div class="num">03</div>
+        <h3>The Soul</h3>
+        <p>Once the body is steadier and the mind has softened, something deeper becomes accessible. Natasha connects you with your Akashic Records to reveal old patterns you have been carrying, guiding you to access the energy of your soul so wisdom is available whenever you need it.</p>
+        <p style="margin-top:12px">This is remembrance, not escape. You leave more anchored in who you are.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO 3 -->
+<div class="photo medium">
+  <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/698b3ac067d74933794cb60f.jpg" alt="The three hosts">
+</div>
+
+<!-- HOSTS -->
+<section class="section cream">
+  <div class="wrap">
+    <p class="eyebrow reveal" style="text-align:center">Your guides for the day</p>
+    <h2 class="reveal" style="text-align:center">Three practitioners. One intention.</h2>
+    <p class="lead reveal" style="margin:0 auto;text-align:center;max-width:52ch">Led by Liz, Juliette, and Natasha, Essence brings together science, embodiment, and deeper self-connection, in a way that feels grounded, intelligent, and genuinely transformative.</p>
+    <div class="host-grid">
+      <div class="host reveal">
+        <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/67fe49228a36784aecd0d10d.jpeg" alt="Juliette Karaman">
+        <div class="hname">Juliette Karaman</div>
+        <div class="hrole">Embody Emotional Intelligence &amp; Sensuality</div>
+        <p>Juliette guides you through touch into the places your body still holds emotion. Somatic release, self-touch, frequency attunement and deep presence. A sensual return: where your body is honoured, your truth remembered, and your womanhood felt.</p>
+      </div>
+      <div class="host reveal">
+        <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/6800f86e51be4a3f2c1190bc.jpeg" alt="Liz">
+        <div class="hname">Liz</div>
+        <div class="hrole">Reveal Your Hormonal Success Keys</div>
+        <p>Liz reconnects you with the essence of your health and hormones, revealing how to be in conversation with your body and attune to your hormonal success keys. Your leadership more embodied.</p>
+      </div>
+      <div class="host reveal">
+        <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/6800f8502ba5825ecd6d5980.jpeg" alt="Natasha">
+        <div class="hname">Natasha</div>
+        <div class="hrole">Activate Soul Wisdom</div>
+        <p>Natasha connects you with your Akashic Records to reveal old patterns you have been carrying for lifetimes. This is remembrance, not escape. Your awareness deepens. You leave more anchored in who you are.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO 4 -->
+<div class="photo small">
+  <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/698b3ac07f6dcf4644bfc50f.jpg" alt="Essence retreat">
+</div>
+
+<!-- THIS IS FOR YOU IF -->
+<section class="section blue">
+  <div class="wrap">
+    <p class="eyebrow reveal">This is for you if…</p>
+    <div class="for-you-grid">
+      <div class="for-you-item reveal">You're functioning. Well, even. There is a quiet knowing that you are nowhere near the woman you used to be inside yourself.</div>
+      <div class="for-you-item reveal">You've been the capable one for so long that softness now feels like a skill you've misplaced.</div>
+      <div class="for-you-item reveal">You can tell something is off. You can't fully articulate what. You don't need to.</div>
+      <div class="for-you-item reveal">You cried at something small last week and couldn't explain it. It wasn't sadness. It felt like something asking to come back online.</div>
+      <div class="for-you-item reveal">You don't want another workshop where you take notes. You want a day where your body gets to stop working.</div>
+      <div class="for-you-item reveal">You want to feel like yourself again.</div>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO 5 -->
+<div class="photo small">
+  <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/698b3ac08682154c3b526751.jpg" alt="Essence retreat day">
+</div>
+
+<!-- WHAT'S INCLUDED -->
+<section class="section cream-2">
+  <div class="wrap">
+    <p class="eyebrow reveal">What's included</p>
+    <h2 class="reveal">A full day. Three practitioners. Ottolenghi-style lunch.</h2>
+    <ul class="nice-list reveal">
+      <li>A beautiful private venue in Central London</li>
+      <li>A relaxed, intimate group setting</li>
+      <li>An incredible Ottolenghi-style buffet lunch</li>
+      <li>Movement, breathwork, somatic and soul sessions</li>
+      <li>Space to pause, reflect, and reset</li>
+    </ul>
+  </div>
+</section>
+
+<!-- FOOD PHOTOS — pair, only here -->
+<div class="photo-pair">
+  <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/693160841d466e4fb0971f53.png" alt="Ottolenghi lunch">
+  <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/693160846a99eb6dcc881721.png" alt="Retreat food">
+</div>
+
+<!-- LEAVE WITH -->
+<section class="section cream">
+  <div class="wrap">
+    <p class="eyebrow reveal">Leave with</p>
+    <h2 class="reveal">Something part of you has been quietly asking for.</h2>
+    <ul class="nice-list reveal">
+      <li>A completely different understanding of your body</li>
+      <li>Clear insight into your energy patterns</li>
+      <li>A sense of calm, clarity, and reconnection</li>
+    </ul>
+    <p class="lead reveal" style="margin-top:32px;font-style:italic;font-family:var(--display);font-size:1.1rem;color:var(--ink)">Some part of you has been quietly asking for a day like this for a long time.</p>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section blue">
+  <div class="wrap">
+    <p class="eyebrow reveal" style="text-align:center">From women who were in the room</p>
+    <h2 class="reveal" style="text-align:center">What they said afterwards.</h2>
+    <div class="testi-grid">
+      <div class="testi reveal">
+        <div class="testi-head">Just Amazing!</div>
+        <blockquote>"I cannot thank you 3 ladies enough for creating a SAFE community of inspirational women! Thank you, thank you, thank you!"</blockquote>
+        <div class="name">Remi</div>
+      </div>
+      <div class="testi reveal">
+        <div class="testi-head">What a beautiful event!</div>
+        <blockquote>"Beautiful surroundings, food and women. I absolutely loved the energy!"</blockquote>
+        <div class="name">Jacqui</div>
+      </div>
+      <div class="testi reveal">
+        <div class="testi-head">What a beautiful gathering of goddesses!</div>
+        <blockquote>"So much to share, to talk about and to listen to. A sharing of soul energy. What can't we achieve when we come together!"</blockquote>
+        <div class="name">Emily</div>
+      </div>
+      <div class="testi reveal">
+        <div class="testi-head">I have been going through some challenging times</div>
+        <blockquote>"I needed to feel there is more to me and to life being amongst the beautiful QUEENS. I am leaving feeling uplifted and grateful for the reminder of the power I have within."</blockquote>
+        <div class="name">Monika</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO 6 -->
+<div class="photo">
+  <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/681884a9ff154949172c12fb.jpeg" alt="Essence retreat">
+</div>
+
+<!-- PHOTOSHOOT ADD-ON -->
+<section class="section photoshoot cream-2">
+  <div class="wrap">
+    <p class="eyebrow reveal">Optional add-on</p>
+    <h2 class="reveal">Leave with photos that actually look like you.</h2>
+    <div class="photoshoot-grid">
+      <div>
+        <p class="lead reveal">While you are here, in this light, in this space, in this version of yourself, you can book a private mini shoot with the fabulous Justine Stoddart. Ten minutes. Ten fully edited images. No awkward posing. Just you, as you are, on a day when you finally arrived back to yourself.</p>
+        <div class="price reveal">£97</div>
+        <p class="price-note reveal">10-minute portrait session · 10 edited images · incredible value</p>
+      </div>
+      <div class="reveal">
+        <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/698b3ac067d74933794cb60f.jpg" alt="Retreat photography by Justine Stoddart">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOK -->
+<section class="book" id="book">
+  <div class="wrap">
+    <p class="eyebrow reveal">Reserve your place</p>
+    <h2 class="reveal">This is the last Essence event.</h2>
+    <p class="sub reveal">25 September 2026 · 10:30am–4:30pm<br>Private venue, Central London · 5 spots remaining<br>The list closes at the end of July.</p>
+    <div class="reveal">
+      <div class="price-main">£247</div>
+      
+      <div class="price-note">Full day · three practitioners · Ottolenghi lunch</div>
+    </div>
+    <br>
+    <a href="https://buy.stripe.com/bJe7sKayf3GM71H7iR0co0F" class="cta reveal" target="_blank" rel="noopener">Reserve Your Spot →</a>
+    <div class="spots reveal">5 spots remaining</div>
+  </div>
+</section>
+
+<footer>
+  <div class="fname">Feel Fully You</div>
+  <div>Photography by <strong style="color:#fff">Justine Stoddart</strong> · <a href="mailto:support@feelfullyyou.com">support@feelfullyyou.com</a></div>
+</footer>
+
+<script>
+  const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.08});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  document.addEventListener('click',e=>{if(!e.target.closest('#moreWrap'))document.getElementById('moreWrap')?.classList.remove('open')});
+</script>
+<script>
+(function(){
+  var btn=document.getElementById('hamBtn');
+  var nav=document.getElementById('mobileNav');
+  if(btn&&nav){btn.addEventListener('click',function(){nav.classList.toggle('open');btn.setAttribute('aria-expanded',nav.classList.contains('open'))});}
+})();
+</script>
+</body>
+</html>

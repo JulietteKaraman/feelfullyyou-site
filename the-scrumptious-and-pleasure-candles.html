@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Scrumptious &amp; Pleasure Candles · Feel Fully You</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,600;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fefcfa;--cream-2:#f6f4f1;--paper:#fdfbf8;
+    --ink:#1c1714;--brown:#5d4a33;
+    --gold:#a88538;--gold-deep:#99680c;--gold-soft:#b4a074;--gold-pale:#ddc98e;
+    --teal:#0d3535;
+    --blue:#d8dfe1;--teal-deep:#061a1a;
+    --line:#e3dccf;--max:1140px;
+    --display:'Poppins',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;
+    --t-xs:0.78rem;--t-sm:0.94rem;--t-base:1.0625rem;--t-md:1.2rem;--t-2xl:2.75rem;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--brown);font-family:var(--body);font-size:var(--t-base);line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  p{max-width:62ch}
+
+  .topbar{position:fixed;top:0;left:0;right:0;z-index:9999;background:var(--teal);padding:0 28px;height:64px;display:flex;align-items:center;justify-content:space-between}
+  .topbar .brand{font-family:var(--display);font-weight:700;font-size:16px;letter-spacing:.02em;color:var(--cream)}
+  .topbar .brand b{color:var(--gold-pale)}
+  .topbar nav{display:flex;gap:26px;align-items:center}
+  .topbar nav a{font-size:14px;color:var(--cream);font-weight:500;transition:color .2s}
+  .topbar nav a:hover{color:var(--gold-pale)}
+  .topbar nav a.btn{background:var(--gold);color:#fff;padding:10px 20px;border-radius:2px;font-weight:600}
+  .topbar nav a.btn:hover{background:var(--gold-deep)}
+  @media(max-width:860px){.topbar nav > a:not(.btn){display:none}}
+  .topbar .logo{font-family:var(--display);font-weight:700;font-size:1.15rem;color:var(--cream);letter-spacing:-.02em}
+  .topbar .logo span{color:var(--gold-pale)}
+
+  .btn{display:inline-block;cursor:pointer;font-family:var(--body);font-weight:600;font-size:var(--t-sm);letter-spacing:.01em;padding:14px 30px;border-radius:2px;background:var(--gold);color:#fff;border:none;transition:background .2s,transform .2s}
+  .btn:hover{background:var(--gold-deep);transform:translateY(-1px)}
+  .btn.dark{background:var(--teal);color:#fff}
+  .btn.dark:hover{background:var(--teal-deep)}
+  .eyebrow{font-size:var(--t-xs);letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);font-weight:600}
+
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .55s ease,transform .55s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  /* hero */
+  .hero{padding-top:64px;background:var(--teal-deep);padding:80px 28px 72px;text-align:center}
+  .hero .eyebrow{color:var(--gold-pale);margin-bottom:16px}
+  .hero h1{font-family:var(--display);font-weight:700;font-size:clamp(2.2rem,5vw,3.4rem);color:#fff;letter-spacing:-.025em;line-height:1.06;margin-bottom:20px}
+  .hero h1 em{font-style:italic;color:var(--gold-pale)}
+  .hero .tagline{color:#c8c0b4;font-size:var(--t-md);font-style:italic;margin:0 auto}
+
+  /* candle split sections */
+  .candle{display:grid;grid-template-columns:1fr 1fr;min-height:520px;border-top:1px solid var(--line)}
+  .candle.reverse .candle-photo{order:2}
+  .candle.reverse .candle-copy{order:1}
+  .candle-photo{background:var(--cream-2);display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .candle-photo img{width:100%;height:100%;object-fit:cover}
+  .candle-photo .ph{color:var(--gold-soft);font-size:var(--t-xs);letter-spacing:.12em;text-transform:uppercase;opacity:.5;text-align:center;padding:40px}
+  .candle-copy{padding:72px 56px;display:flex;flex-direction:column;justify-content:center}
+  .candle-copy .name{font-family:var(--display);font-weight:800;font-size:clamp(2rem,3.5vw,3rem);color:var(--ink);letter-spacing:-.025em;line-height:1;margin-bottom:6px}
+  .candle-copy .descriptor{font-family:var(--display);font-style:italic;font-weight:600;font-size:1.15rem;color:var(--gold-deep);margin-bottom:24px;letter-spacing:-.01em}
+  .candle-copy p{color:var(--brown);line-height:1.72;margin-bottom:14px}
+  .candle-copy .price{font-family:var(--display);font-weight:700;font-size:1.6rem;color:var(--ink);margin:24px 0 6px}
+  .candle-copy .price-note{font-size:var(--t-sm);color:var(--gold-soft);margin-bottom:24px}
+  .candle-copy .order-btn{align-self:flex-start}
+
+  /* order section */
+  .order-section{background:var(--teal);padding:80px 28px}
+  .order-inner{max-width:720px;margin:0 auto}
+  .order-inner .eyebrow{color:var(--gold-pale);margin-bottom:12px}
+  .order-inner h2{font-family:var(--display);font-weight:700;font-size:clamp(1.8rem,3.5vw,2.4rem);color:#fff;letter-spacing:-.022em;margin-bottom:10px}
+  .order-inner .sub{color:#c8c0b4;margin-bottom:40px;font-style:italic}
+
+  /* candle selector */
+  .candle-select{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:32px}
+  .candle-opt{border:1.5px solid rgba(221,201,142,.3);border-radius:4px;padding:20px 22px;cursor:pointer;transition:border-color .2s,background .2s}
+  .candle-opt:hover{border-color:var(--gold-pale)}
+  .candle-opt input[type=checkbox]{display:none}
+  .candle-opt.checked{border-color:var(--gold-pale);background:rgba(221,201,142,.08)}
+  .candle-opt .opt-name{font-family:var(--display);font-weight:700;color:#fff;font-size:1.05rem;margin-bottom:2px}
+  .candle-opt .opt-desc{font-size:var(--t-sm);color:#c8c0b4}
+  .candle-opt .opt-price{font-weight:700;color:var(--gold-pale);margin-top:8px}
+
+  /* form */
+  .order-form{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .order-form .full{grid-column:1/-1}
+  .order-form label{display:block;font-size:var(--t-xs);letter-spacing:.1em;text-transform:uppercase;color:var(--gold-pale);margin-bottom:6px;font-weight:600}
+  .order-form input,.order-form select{width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(221,201,142,.25);border-radius:2px;padding:13px 16px;color:#fff;font-family:var(--body);font-size:var(--t-sm);outline:none;transition:border-color .2s}
+  .order-form input::placeholder{color:rgba(255,255,255,.3)}
+  .order-form input:focus,.order-form select:focus{border-color:var(--gold-pale)}
+  .order-form select{color:#fff;background:rgba(255,255,255,.06);-webkit-appearance:none}
+  .order-form select option{background:var(--teal-deep);color:#fff}
+
+  .order-total{margin:28px 0;padding:20px 24px;background:rgba(221,201,142,.08);border:1px solid rgba(221,201,142,.2);border-radius:4px}
+  .order-total .total-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;color:#c8c0b4;font-size:var(--t-sm)}
+  .order-total .total-row:last-child{margin-bottom:0;font-weight:700;font-size:1.05rem;color:#fff;padding-top:10px;border-top:1px solid rgba(221,201,142,.2)}
+
+  .terms-row{display:flex;align-items:flex-start;gap:10px;margin-bottom:24px;font-size:var(--t-sm);color:#c8c0b4}
+  .terms-row input[type=checkbox]{margin-top:3px;accent-color:var(--gold)}
+
+  .submit-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .submit-btn{background:var(--gold);color:#fff;border:none;padding:16px 40px;font-family:var(--body);font-weight:700;font-size:1rem;border-radius:2px;cursor:pointer;letter-spacing:.01em;transition:background .2s}
+  .submit-btn:hover{background:var(--gold-deep)}
+  .secure-note{font-size:var(--t-xs);color:rgba(200,192,180,.6);letter-spacing:.05em}
+
+  /* shipping note */
+  .shipping-banner{background:rgba(168,133,56,.12);border-left:3px solid var(--gold);padding:14px 20px;margin-bottom:28px;border-radius:0 2px 2px 0}
+  .shipping-banner p{font-size:var(--t-sm);color:var(--gold-pale);max-width:none}
+
+  footer{background:var(--gold);color:rgba(255,255,255,.85);text-align:center;padding:40px 28px;font-size:var(--t-sm)}
+  footer a{color:var(--gold-pale)}
+
+  @media(max-width:820px){
+    .candle,.candle.reverse{grid-template-columns:1fr}
+    .candle-photo{min-height:280px;order:-1}
+    .candle.reverse .candle-photo{order:-1}
+    .candle-copy{padding:44px 28px}
+    .order-form{grid-template-columns:1fr}
+    .candle-select{grid-template-columns:1fr}
+  }
+  /* More dropdown */
+  .more-wrap{position:relative}
+  .more-wrap > button{background:none;border:none;cursor:pointer;font-size:14px;color:var(--cream);font-weight:500;font-family:var(--body);display:flex;align-items:center;gap:5px;padding:0;transition:color .2s}
+  .more-wrap > button:hover{color:var(--gold-pale)}
+  .more-wrap > button svg{transition:transform .2s}
+  .more-wrap.open > button svg{transform:rotate(180deg)}
+  .dropdown{position:absolute;top:calc(100% + 10px);right:0;background:var(--teal-deep);border:1px solid var(--line-dark);border-radius:3px;min-width:180px;padding:6px 0;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .18s,transform .18s;z-index:9999}
+  .more-wrap.open .dropdown{opacity:1;pointer-events:all;transform:none}
+  @media(max-width:860px){.dropdown{position:fixed;top:56px;right:16px}}
+  .dropdown a{display:block;padding:10px 18px;font-size:13px;color:var(--cream);font-weight:500;transition:background .15s,color .15s}
+  .dropdown a:hover{background:var(--teal);color:var(--gold-pale)}
+
+  /* MOBILE NAV */
+  .ham{display:none;background:none;border:none;cursor:pointer;padding:6px;color:var(--cream)}
+  .ham svg{display:block}
+  .mobile-nav{display:none;position:fixed;top:64px;left:0;right:0;background:var(--teal);z-index:9998;padding:16px 0;border-top:1px solid rgba(255,255,255,.1);flex-direction:column}
+  .mobile-nav a{display:block;padding:13px 28px;font-size:15px;color:var(--cream);font-weight:500;font-family:var(--body);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.07)}
+  .mobile-nav a:last-child{border-bottom:none}
+  .mobile-nav a.btn{margin:14px 28px 6px;display:block;background:var(--gold);color:#fff;padding:12px 20px;border-radius:2px;font-weight:600;text-align:center;border:none}
+  .mobile-nav.open{display:flex}
+  @media(max-width:860px){.ham{display:block}.topbar .more-wrap{display:none}.topbar nav > .btn{display:none}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="/" class="logo">Feel Fully <span>You</span></a>
+  <nav>
+    <a href="/">Home</a>
+    <div class="more-wrap" id="workWrap">
+      <button onclick="document.getElementById('workWrap').classList.toggle('open')" aria-expanded="false">
+        Work With Me <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg>
+      </button>
+      <div class="dropdown">
+        <a href="/for-her">For Her</a>
+        <a href="/for-him">For Him</a>
+        <a href="/for-both">For Both</a>
+        <a href="/the-room">The Room</a>
+      </div>
+    </div>
+    <a href="/cards">The Cards</a>
+    <a href="/shop">Shop</a>
+    <div class="more-wrap" id="moreWrap">
+      <button onclick="document.getElementById('moreWrap').classList.toggle('open')" aria-expanded="false">
+        More <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg>
+      </button>
+      <div class="dropdown">
+        <a href="/free-resources">Free Resources</a>
+        <a href="/grief-duality-process">Grief Process</a>
+        <a href="/media-and-pr">Media &amp; PR</a>
+        <a href="/contact">Contact</a>
+      </div>
+    </div>
+    <a href="/work-with-me" class="btn">Start here</a>
+  </nav>
+</div>
+
+<nav class="mobile-nav" id="mobileNav">
+  <a href="/">Home</a>
+  <a href="/for-her">For Her</a>
+  <a href="/for-him">For Him</a>
+  <a href="/for-both">For Both</a>
+  <a href="/the-room">The Room</a>
+  <a href="/cards">The Cards</a>
+  <a href="/shop">Shop</a>
+  <a href="/about">About Juliette</a>
+  <a href="/free-resources">Free Resources</a>
+  <a href="/grief-duality-process">Grief Process</a>
+  <a href="/media-and-pr">Media &amp; PR</a>
+  <a href="/contact">Contact</a>
+  <a href="/work-with-me" class="btn">Start here</a>
+</nav>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="eyebrow reveal">The Scrumptious &amp; Pleasure Candles</div>
+  <h1 class="reveal">Light. Inhale. <em>Surrender.</em></h1>
+  <p class="tagline reveal">Two scents. One experience. Designed to bring your body back.</p>
+</section>
+
+<!-- SCRUMPTIOUS CANDLE -->
+<div class="candle reveal">
+  <div class="candle-photo">
+    <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/68a863767dc6b0c7506f1075.png" alt="Scrumptious candle">
+  </div>
+  <div class="candle-copy">
+    <div class="eyebrow" style="margin-bottom:10px">Candle No. 1</div>
+    <div class="name">Scrumptious</div>
+    <div class="descriptor">Sensual. Seductive. Alive.</div>
+    <p>Dark oud and rich Tuscan leather embrace you, while spiced incense, Damascus rose, and ripe raspberries add warmth and depth.</p>
+    <p>A hint of pepper ignites every sense. This isn't just a scent, it's an experience.</p>
+    <div class="price">£35</div>
+    <div class="price-note">Shipping added at checkout · UK &amp; International</div>
+    <a href="https://feelfullyyou.com/the-scrumptious--and-pleasure-candles" class="btn order-btn" target="_blank" rel="noopener">Order now</a>
+  </div>
+</div>
+
+<!-- PLEASURE CANDLE -->
+<div class="candle reverse reveal">
+  <div class="candle-photo">
+    <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/68a863767dc6b08bfd6f1076.png" alt="Pleasure candle">
+  </div>
+  <div class="candle-copy">
+    <div class="eyebrow" style="margin-bottom:10px">Candle No. 2</div>
+    <div class="name">Pleasure</div>
+    <div class="descriptor">Lush. Velvety. Addictive.</div>
+    <p>Juicy blackcurrants and figs meet zesty lemon and bergamot, unfolding into a floral heart of rose and spiced carnation.</p>
+    <p>Anchored in sandalwood, oakmoss, and warm amber, it lingers, soft, sensual, and utterly irresistible.</p>
+    <div class="price">£35</div>
+    <div class="price-note">Shipping added at checkout · UK &amp; International</div>
+    <a href="https://feelfullyyou.com/the-scrumptious--and-pleasure-candles" class="btn order-btn" target="_blank" rel="noopener">Order now</a>
+  </div>
+</div>
+
+<footer style="background:#a88538;color:#fff;padding:22px 32px;font-size:13px">
+  <div style="max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+    <div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:0.95rem;color:#fff;letter-spacing:-.01em">Feel Fully You</div>
+    <div style="font-size:12px;color:rgba(255,255,255,.85);display:flex;gap:16px;align-items:center"><a href="mailto:support@feelfullyyou.com" style="color:#fff;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(255,255,255,.5)">support@feelfullyyou.com</a><a href="https://feelfullyyou.com/terms" style="color:rgba(255,255,255,.75);text-decoration:none" target="_blank" rel="noopener">Terms</a></div>
+    <div style="display:flex;gap:14px;align-items:center">
+      <a href="https://www.instagram.com/juliettekaraman/" aria-label="Instagram" style="color:rgba(255,255,255,.85);display:flex;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+      <a href="https://www.facebook.com/juliette.karamanvanschaardenburg" aria-label="Facebook" style="color:rgba(255,255,255,.85);display:flex;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+      <a href="https://www.linkedin.com/in/juliette-karaman-van-schaardenburg-89399913b" aria-label="LinkedIn" style="color:rgba(255,255,255,.85);display:flex;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+      <a href="https://www.tiktok.com/@juliettekaraman" aria-label="TikTok" style="color:rgba(255,255,255,.85);display:flex;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+      <a href="https://substack.com/@juliettekaraman" aria-label="Substack" style="color:rgba(255,255,255,.85);display:flex;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 17.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function unused(){
+  const totalEl = document.getElementById('orderTotal');
+  const summaryEl = document.getElementById('itemSummary');
+  const amtEl = document.getElementById('orderTotalAmt');
+  if(selected.length === 0){
+    totalEl.style.display = 'none';
+    return;
+  }
+  let total = 0;
+  let names = [];
+  selected.forEach(opt=>{
+    total += parseInt(opt.dataset.price);
+    names.push(opt.dataset.name + ' (×1)');
+  });
+  totalEl.style.display = 'block';
+  summaryEl.textContent = names.join(', ');
+  amtEl.textContent = '£' + total + '.00';
+}
+
+// Form submit, routes to Ivorey/payment
+function submitOrder(e){
+  e.preventDefault();
+  const selected = document.querySelectorAll('.candle-opt.checked');
+  if(selected.length === 0){
+    alert('Please select at least one candle.');
+    return;
+  }
+  // TODO: Add Stripe payment link(s) for candles here
+  // Single candle → individual Stripe link
+  // Both candles → bundle Stripe link
+  // For now, redirect to the Ivorey shop page
+  window.location.href = 'https://feelfullyyou.com/the-scrumptious--and-pleasure-candles';
+}
+
+// Reveal
+const io = new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+<script>
+(function(){
+  var btn=document.getElementById('hamBtn');
+  var nav=document.getElementById('mobileNav');
+  if(btn&&nav){btn.addEventListener('click',function(){nav.classList.toggle('open');btn.setAttribute('aria-expanded',nav.classList.contains('open'))});}
+})();
+</script>
+</body>
+</html>

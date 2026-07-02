@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feel Fully You. Site Handoff</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--cream:#fefcfa;--cream-2:#f6f4f1;--ink:#1c1714;--brown:#5d4a33;--gold:#a88538;--gold-deep:#99680c;--gold-pale:#ddc98e;--teal:#0d3535;
+    --blue:#d8dfe1;--line:#e3dccf;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--cream-2);color:var(--brown);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;padding:48px 28px 80px}
+  .wrap{max-width:1000px;margin:0 auto}
+  h1{font-family:'Poppins',sans-serif;font-size:2rem;color:var(--ink);margin-bottom:6px;letter-spacing:-.02em}
+  .meta{font-size:13px;color:var(--brown);margin-bottom:36px}
+  h2{font-family:'Poppins',sans-serif;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep);margin:40px 0 12px;padding-bottom:8px;border-bottom:2px solid var(--line)}
+  table{width:100%;border-collapse:collapse;margin-bottom:8px}
+  thead tr{background:var(--teal);color:#fff}
+  thead th{font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:10px 14px;text-align:left;font-weight:600}
+  tbody tr{border-bottom:1px solid var(--line);background:#fff}
+  tbody tr:nth-child(even){background:#fdfbf8}
+  tbody tr:hover{background:#fefcf0}
+  td{padding:12px 14px;vertical-align:top;font-size:13.5px}
+  td.name{font-weight:600;color:var(--ink);white-space:nowrap}
+  td.file a{color:var(--gold-deep);text-decoration:none;font-family:monospace;font-size:12.5px}
+  td.file a:hover{text-decoration:underline}
+  td.notes{color:var(--brown);font-size:13px;line-height:1.5}
+  .badge{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:2px;letter-spacing:.04em;white-space:nowrap}
+  .ready{background:#e8f5e9;color:#2e7d32}
+  .needs{background:#fff3e0;color:#e65100}
+  .stripe{background:#fce4ec;color:#c62828}
+  .group{background:#f0f4f0 !important;border-top:2px solid var(--teal) !important}
+  .group td{font-family:'Poppins',sans-serif;font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);padding:8px 14px}
+  /* deploy box */
+  .deploy{background:#0d3535;color:#fefcfa;border-radius:8px;padding:28px 32px;margin-bottom:40px}
+  .deploy h2{color:#ddc98e;border-color:#1d3a39;margin-top:0;font-size:12px}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:8px}
+  .cols h3{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#ddc98e;margin-bottom:10px;font-family:'Inter',sans-serif;font-weight:700}
+  .cols ol{padding-left:18px;display:flex;flex-direction:column;gap:7px;font-size:13px;color:#d7d0c4}
+  .cols ol li strong{color:#fff}
+  .deploy .note{font-size:12.5px;color:#9aa6a4;margin-top:20px;padding-top:16px;border-top:1px solid #1d3a39}
+  @media(max-width:640px){.cols{grid-template-columns:1fr}}
+
+  /* MOBILE NAV */
+  .ham{display:none;background:none;border:none;cursor:pointer;padding:6px;color:var(--cream)}
+  .ham svg{display:block}
+  .mobile-nav{display:none;position:fixed;top:64px;left:0;right:0;background:var(--teal);z-index:9998;padding:16px 0;border-top:1px solid rgba(255,255,255,.1);flex-direction:column}
+  .mobile-nav a{display:block;padding:13px 28px;font-size:15px;color:var(--cream);font-weight:500;font-family:var(--body);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.07)}
+  .mobile-nav a:last-child{border-bottom:none}
+  .mobile-nav a.btn{margin:14px 28px 6px;display:block;background:var(--gold);color:#fff;padding:12px 20px;border-radius:2px;font-weight:600;text-align:center;border:none}
+  .mobile-nav.open{display:flex}
+  @media(max-width:860px){.ham{display:block}.topbar .more-wrap{display:none}.topbar nav > .btn{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>Feel Fully You. Full Site Handoff</h1>
+<p class="meta">For Noor &amp; JJ &nbsp;·&nbsp; 27 June 2026 &nbsp;·&nbsp; All files live in the <strong>feelfullyyou-site</strong> folder on Juliette's desktop</p>
+
+<div class="deploy">
+  <h2>How to Deploy</h2>
+  <div class="cols">
+    <div>
+      <h3>Option A. Netlify drag &amp; drop (easiest)</h3>
+      <ol>
+        <li>Go to <strong>netlify.com</strong> and log in</li>
+        <li>Click <strong>Add new site → Deploy manually</strong></li>
+        <li>Drag the entire <strong>feelfullyyou-site</strong> folder onto the page</li>
+        <li>Netlify gives you a live URL in seconds</li>
+        <li>Go to <strong>Site settings → Custom domains</strong> to connect feelfullyyou.com</li>
+      </ol>
+    </div>
+    <div>
+      <h3>Option B. GitHub + Netlify (for ongoing edits)</h3>
+      <ol>
+        <li>Create a new repo at <strong>github.com</strong> called <strong>feelfullyyou-site</strong></li>
+        <li>Upload the entire <strong>feelfullyyou-site</strong> folder into it</li>
+        <li>In Netlify: <strong>Add new site → Import from Git</strong></li>
+        <li>Connect the GitHub repo. Publish directory = <strong>/</strong> (root)</li>
+        <li>Every push to GitHub auto-deploys the live site</li>
+      </ol>
+    </div>
+  </div>
+  <p class="note">Plain HTML files, no build step, no framework, no terminal needed. Just drag, drop, done.</p>
+</div>
+
+<h2>Every Page on the Site</h2>
+<table>
+  <thead>
+    <tr><th style="width:22%">Page</th><th style="width:20%">File</th><th>What it is / does</th><th style="width:12%">Status</th></tr>
+  </thead>
+  <tbody>
+
+    <!-- AUDIENCE ENTRY -->
+    <tr class="group"><td colspan="4">Audience Entry Pages</td></tr>
+    <tr>
+      <td class="name">Home</td>
+      <td class="file"><a href="/" target="_blank">index.html</a></td>
+      <td class="notes">Full-bleed hero. Routes to For Her / For Him / For Both. Cards section. About Juliette.</td>
+      <td><span class="badge ready">READY</span></td>
+    </tr>
+    <tr>
+      <td class="name">For Her</td>
+      <td class="file"><a href="/for-her" target="_blank">for-her.html</a></td>
+      <td class="notes">Women's entry page → Women's Intensive + 6-Week VIP</td>
+      <td><span class="badge ready">READY</span></td>
+    </tr>
+    <tr>
+      <td class="name">For Him</td>
+      <td class="file"><a href="/for-him" target="_blank">for-him.html</a></td>
+      <td class="notes">Men's entry page → Unspoken Distance, Touch Point, Men's Intensive</td>
+      <td><span class="badge ready">READY</span></td>
+    </tr>
+    <tr>
+      <td class="name">For Both</td>
+      <td class="file"><a href="/for-both" target="_blank">for-both.html</a></td>
+      <td class="notes">Couples entry page → 10 Touch Rituals, 31 Touch Points, Couples Intensive, The Beginning</td>
+      <td><span class="badge ready">READY</span></td>
+    </tr>
+    <tr>
+      <td class="name">Work With Me</td>
+      <td class="file"><a href="/work-with-me" target="_blank">work-with-me.html</a></td>
+      <td class="notes">Full offer directory, all programmes in one grid. <strong>Check prices against current offer ladder before publishing.</strong></td>
+      <td><span class="badge needs">CHECK PRICES</span></td>
+    </tr>
+
+    <!-- HIGH-TICKET PROGRAMMES -->
+    <tr class="group"><td colspan="4">High-Ticket Programmes</td></tr>
+    <tr>
+      <td class="name">The Beginning</td>
+      <td class="file"><a href="/the-beginning" target="_blank">the-beginning.html</a></td>
+      <td class="notes">£8,997 · 8-week couples programme. Pay now link live + clarity call booking live.</td>
+      <td><span class="badge ready">READY</span></td>
+    </tr>
+    <tr>
+      <td class="name">Couples Intensive</td>
+      <td class="file"><a href="/couples-intensive" target="_blank">couples-intensive.html</a></td>
+      <td class="notes">£6,000 in-person / £3,333 online · VIP day for couples. Booking via Ivorey calendar.</td>
+      <td><span class="badge ready">READY</span></td>
+    </tr>
+    <tr>
+      <td class="name">Women's Intensive</td>
+      <td class="file"><a href="/womens-intensive" target="_blank">womens-intensive.html</a></td>
+      <td class="notes">£6,000 in-person / £3,333 online · VIP day for women. Booking via Ivorey calendar.</td>
+      <td><span class="badge ready">READY</span></td>
+    </tr>
+    <tr>
+      <td class="name">Women's 6-Week VIP</td>
+      <td class="file"><a href="/womens-six-week-intensive" target="_blank">womens-six-week-intensive.html</a></td>
+      <td class="notes">£4,497 · Six weeks 1:1. Booking via Ivorey calendar.</td>
+      <td><span class="badge ready">READY</span></td>
+    </tr>
+    <tr>
+      <td class="name">Men's Intensive</td>
+      <td class="file"><a href="/mens-intensive" target="_blank">mens-intensive.html</a></td>
+      <td class="notes">£6,000 in-person / £3,333 online · VIP day for men. Booking via Ivorey calendar.</td>
+      <td><span class="badge ready">READY</span></td>
+    </tr>
+    <tr>
+      <td class="name">Men's 6-Week Intensive</td>
+      <td class="file"><a href="/mens-six-week-intensive" target="_blank">mens-six-week-intensive.html</a></td>
+      <td class="notes">£3,497 · Six weeks 1:1. Booking via Ivorey calendar.</td>
+      <td><span class="badge ready">READY</span></td>
+    </tr>
+
+    <!-- CARDS -->
+    <tr class="group"><td colspan="4">Intimacy &amp; Communication Cards</td></tr>
+    <tr>
+      <td class="name">Cards. Sales Page</td>
+      <td class="file"><a href="/cards" target="_blank">cards.html</a></td>
+      <td class="notes">Full sales page on Gar's spine. Digital → shop.feelfullyyou.com/app/checkout · Physical → shop.feelfullyyou.com/cards-2 · Free taster → couplecards.netlify.app/free</td>
+      <td><span class="badge ready">READY</span></td>
+    </tr>
+
+    <!-- DIGITAL PRODUCTS -->
+    <tr class="group"><td colspan="4">Digital Products</td></tr>
+    <tr>
+      <td class="name">Touch Point Membership</td>
+      <td class="file"><a href="/touch-point" target="_blank">touch-point.html</a></td>
+      <td class="notes">£97/month · Telegram group + monthly call. Stripe link live. Redirect → touch-point-thankyou.html</td>
+      <td><span class="badge ready">READY</span></td>
+    </tr>
+    <tr>
+      <td class="name">The Unspoken Distance</td>
+      <td class="file"><a href="/the-unspoken-distance" target="_blank">the-unspoken-distance.html</a></td>
+      <td class="notes">£97 · Men's 9-part guide. Stripe link live.</td>
+      <td><span class="badge ready">READY</span></td>
+    </tr>
+    <tr>
+      <td class="name">10 Touch Rituals</td>
+      <td class="file"><a href="10-touch-rituals.html" target="_blank">10-touch-rituals.html</a></td>
+      <td class="notes">£7 · After purchase → trip-wire.html (31 Touch Points upsell)</td>
+      <td><span class="badge ready">READY</span></td>
+    </tr>
+    <tr>
+      <td class="name">31 Daily Touch Points</td>
+      <td class="file"><a href="31-daily-touch-points.html" target="_blank">31-daily-touch-points.html</a></td>
+      <td class="notes">£27 · Stripe link live. Redirect → thankyou-31touchpoints.html</td>
+      <td><span class="badge ready">READY</span></td>
+    </tr>
+    <tr>
+      <td class="name">The Sacred No</td>
+      <td class="file"><a href="sacred-no.html" target="_blank">sacred-no.html</a></td>
+      <td class="notes">£55 · Needs Stripe payment link added to the buy button</td>
+      <td><span class="badge stripe">STRIPE NEEDED</span></td>
+    </tr>
+    <tr>
+      <td class="name">7 Days of Scrumptiousness</td>
+      <td class="file"><a href="7-days-scrumptiousness.html" target="_blank">7-days-scrumptiousness.html</a></td>
+      <td class="notes">£33 · Needs Stripe payment link added to the buy button</td>
+      <td><span class="badge stripe">STRIPE NEEDED</span></td>
+    </tr>
+    <tr>
+      <td class="name">Communication Reboot Kit</td>
+      <td class="file"><a href="communication-reboot-kit.html" target="_blank">communication-reboot-kit.html</a></td>
+      <td class="notes">£37 · Needs Stripe payment link added to the buy button</td>
+      <td><span class="badge stripe">STRIPE NEEDED</span></td>
+    </tr>
+    <tr>
+      <td class="name">Romantic Relationship Repair Kit</td>
+      <td class="file"><a href="romantic-relationship-repair-kit.html" target="_blank">romantic-relationship-repair-kit.html</a></td>
+      <td class="notes">£27 · Needs Stripe payment link added to the buy button</td>
+      <td><span class="badge stripe">STRIPE NEEDED</span></td>
+    </tr>
+
+    <!-- FREE OPT-INS -->
+    <tr class="group"><td colspan="4">Free Opt-In Pages</td></tr>
+    <tr>
+      <td class="name">Between Touches</td>
+      <td class="file"><a href="between-touches.html" target="_blank">between-touches.html</a></td>
+      <td class="notes">Free guide for women/couples. Kiera: embed Ivorey form, tag "women", redirect → thankyou-between-touches.html</td>
+      <td><span class="badge needs">KIERA</span></td>
+    </tr>
+    <tr>
+      <td class="name">When She Goes Quiet</td>
+      <td class="file"><a href="when-she-goes-quiet.html" target="_blank">when-she-goes-quiet.html</a></td>
+      <td class="notes">Free guide for men. Kiera: embed Ivorey form, tag "men", redirect → thankyou-when-she-goes-quiet.html</td>
+      <td><span class="badge needs">KIERA</span></td>
+    </tr>
+
+    <!-- TRIPWIRE -->
+    <tr class="group"><td colspan="4">Tripwire</td></tr>
+    <tr>
+      <td class="name">Tripwire, 31 Touch Points upsell</td>
+      <td class="file"><a href="trip-wire.html" target="_blank">trip-wire.html</a></td>
+      <td class="notes">Shows after £7 purchase. YES → Stripe £19 → thankyou-both.html · NO → thankyou-10rituals.html</td>
+      <td><span class="badge ready">READY</span></td>
+    </tr>
+
+    <!-- THANK YOU PAGES -->
+    <tr class="group"><td colspan="4">Thank You Pages</td></tr>
+    <tr>
+      <td class="name">Thank You, 10 Touch Rituals</td>
+      <td class="file"><a href="thankyou-10rituals.html" target="_blank">thankyou-10rituals.html</a></td>
+      <td class="notes">After £7 purchase + said NO to upsell</td>
+      <td><span class="badge ready">READY</span></td>
+    </tr>
+    <tr>
+      <td class="name">Thank You. Both products</td>
+      <td class="file"><a href="thankyou-both.html" target="_blank">thankyou-both.html</a></td>
+      <td class="notes">After £7 + £19 tripwire. Kiera: set Stripe £19 redirect here.</td>
+      <td><span class="badge ready">READY</span></td>
+    </tr>
+    <tr>
+      <td class="name">Thank You, 31 Touch Points</td>
+      <td class="file"><a href="thankyou-31touchpoints.html" target="_blank">thankyou-31touchpoints.html</a></td>
+      <td class="notes">After £27 standalone. Kiera: set Stripe redirect here.</td>
+      <td><span class="badge ready">READY</span></td>
+    </tr>
+    <tr>
+      <td class="name">Thank You. Touch Point</td>
+      <td class="file"><a href="touch-point-thankyou.html" target="_blank">touch-point-thankyou.html</a></td>
+      <td class="notes">After £97/mo. Kiera: set Stripe redirect here.</td>
+      <td><span class="badge ready">READY</span></td>
+    </tr>
+    <tr>
+      <td class="name">Thank You. Between Touches</td>
+      <td class="file"><a href="thankyou-between-touches.html" target="_blank">thankyou-between-touches.html</a></td>
+      <td class="notes">After Between Touches opt-in. Has upsell. YES button needs Stripe link for Communication Reboot Kit.</td>
+      <td><span class="badge stripe">STRIPE NEEDED</span></td>
+    </tr>
+    <tr>
+      <td class="name">Thank You. Between Touches (no upsell)</td>
+      <td class="file"><a href="thankyou-between-touches-only.html" target="_blank">thankyou-between-touches-only.html</a></td>
+      <td class="notes">After Between Touches opt-in, said NO to upsell</td>
+      <td><span class="badge ready">READY</span></td>
+    </tr>
+    <tr>
+      <td class="name">Thank You. When She Goes Quiet</td>
+      <td class="file"><a href="thankyou-when-she-goes-quiet.html" target="_blank">thankyou-when-she-goes-quiet.html</a></td>
+      <td class="notes">After When She Goes Quiet opt-in. Has upsell. YES button needs Stripe link.</td>
+      <td><span class="badge stripe">STRIPE NEEDED</span></td>
+    </tr>
+    <tr>
+      <td class="name">Thank You. When She Goes Quiet (no upsell)</td>
+      <td class="file"><a href="/thankyou-when-she-goes-quiet-only" target="_blank">thankyou-when-she-goes-quiet-only.html</a></td>
+      <td class="notes">After When She Goes Quiet opt-in, said NO to upsell</td>
+      <td><span class="badge ready">READY</span></td>
+    </tr>
+
+    <!-- KIERA TASKS -->
+    <tr class="group"><td colspan="4">Kiera. ManyChat Keywords to Update</td></tr>
+    <tr>
+      <td class="name">DECK keyword</td>
+      <td class="file">ManyChat</td>
+      <td class="notes">Point to → /cards</td>
+      <td><span class="badge needs">KIERA</span></td>
+    </tr>
+    <tr>
+      <td class="name">DISTANCE keyword</td>
+      <td class="file">ManyChat</td>
+      <td class="notes">Point to → /the-unspoken-distance</td>
+      <td><span class="badge needs">KIERA</span></td>
+    </tr>
+    <tr>
+      <td class="name">BEGINNING keyword</td>
+      <td class="file">ManyChat</td>
+      <td class="notes">Point to → /the-beginning</td>
+      <td><span class="badge needs">KIERA</span></td>
+    </tr>
+    <tr>
+      <td class="name">INTENSIVE keyword</td>
+      <td class="file">ManyChat</td>
+      <td class="notes">Women → /womens-intensive · Men → /mens-intensive · Couples → /couples-intensive</td>
+      <td><span class="badge needs">KIERA</span></td>
+    </tr>
+    <tr>
+      <td class="name">ONE TOUCH keyword</td>
+      <td class="file">ManyChat</td>
+      <td class="notes">Point to → /between-touches</td>
+      <td><span class="badge needs">KIERA</span></td>
+    </tr>
+
+  </tbody>
+</table>
+
+<p style="font-size:13px;color:#b4a074;margin-top:40px;text-align:center">Feel Fully You &nbsp;·&nbsp; Juliette Karaman &nbsp;·&nbsp; hello@feelfullyyou.com</p>
+
+</div>
+<script>
+(function(){
+  var btn=document.getElementById('hamBtn');
+  var nav=document.getElementById('mobileNav');
+  if(btn&&nav){btn.addEventListener('click',function(){nav.classList.toggle('open');btn.setAttribute('aria-expanded',nav.classList.contains('open'))});}
+})();
+</script>
+</body>
+</html>

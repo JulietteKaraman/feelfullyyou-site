@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Room™. Juliette Karaman</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fefcfa;
+    --cream-2:#f6f4f1;
+    --paper:#fdfbf8;
+    --ink:#1c1714;
+    --brown:#5d4a33;
+    --gold:#a88538;
+    --gold-deep:#99680c;
+    --gold-soft:#b4a074;
+    --gold-pale:#ddc98e;
+    --teal:#0d3535;
+    --blue:#d8dfe1;
+    --teal-deep:#061a1a;
+    --black:#000000;
+    --line:#e3dccf;
+    --line-dark:#1d3a39;
+    --max:1140px;
+    --display:'Poppins',system-ui,sans-serif;
+    --body:'Inter',system-ui,sans-serif;
+    --t-xs:0.78rem;
+    --t-sm:0.94rem;
+    --t-base:1.0625rem;
+    --t-md:1.2rem;
+    --t-lg:1.5rem;
+    --t-xl:2.05rem;
+    --t-2xl:2.75rem;
+    --t-3xl:3.6rem;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--brown);font-family:var(--body);font-size:var(--t-base);font-weight:400;line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden;letter-spacing:-.003em}
+  ::selection{background:var(--gold);color:#fff}
+  a{color:inherit}
+  img{max-width:100%;display:block}
+  p{max-width:62ch}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+  .narrow{max-width:720px;margin:0 auto;padding:0 28px}
+  section{position:relative}
+  .eyebrow{font-family:var(--body);font-size:var(--t-xs);letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);font-weight:600}
+  h1,h2,h3{font-family:var(--display);font-weight:700;color:var(--ink)}
+  h1,h2{line-height:1.06;letter-spacing:-.022em}
+  h2{font-size:clamp(2rem,4.8vw,var(--t-2xl));margin-bottom:26px}
+  h2 .gold{color:var(--gold-deep)}
+  h3{font-size:var(--t-lg);line-height:1.18;letter-spacing:-.015em;font-weight:600}
+  em{font-style:italic}
+  strong{font-weight:700;color:var(--ink)}
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  /* TOPBAR */
+  .topbar{position:fixed;top:0;left:0;right:0;z-index:9999;background:var(--teal);padding:0 28px;height:64px;display:flex;align-items:center;justify-content:space-between}
+  .topbar .brand{font-family:var(--display);font-weight:700;font-size:16px;letter-spacing:.02em;color:var(--cream)}
+  .topbar .brand b{color:var(--gold-pale)}
+  .topbar nav{display:flex;gap:26px;align-items:center}
+  .topbar nav a{font-size:14px;color:var(--cream);font-weight:500;transition:color .2s}
+  .topbar nav a:hover{color:var(--gold-pale)}
+  .topbar nav a.btn{background:var(--gold);color:#fff;padding:10px 20px;border-radius:2px;font-weight:600}
+  .topbar nav a.btn:hover{background:var(--gold-deep)}
+  @media(max-width:860px){.topbar nav > a:not(.btn){display:none}}
+  .btn{display:inline-block;text-decoration:none;cursor:pointer;border:none;font-family:var(--body);font-weight:600;font-size:var(--t-sm);letter-spacing:.01em;padding:13px 26px;border-radius:2px;background:var(--gold);color:#fff;transition:transform .25s,background .25s;white-space:nowrap}
+  .btn:hover{background:var(--gold-deep);transform:translateY(-1px)}
+  .btn.ghost{background:transparent;border:1px solid var(--gold);color:var(--gold-deep)}
+  .btn.ghost:hover{background:var(--gold);color:#fff}
+
+  /* HERO */
+  .hero{position:relative;overflow:hidden;padding-top:64px}
+  .hero-img{width:100%;height:auto;display:block}
+  .hero-overlay{display:none}
+  .hero-content{display:none}
+  .hero-eyebrow{display:none}
+  .hero-title{display:none}
+  .hero-sub{display:none}
+  .hero-cta{display:none}
+  .hero-intro{padding:52px 28px 56px;background:var(--teal);text-align:center}
+  .hero-intro p{font-family:var(--display);font-size:clamp(17px,2.2vw,22px);font-style:italic;font-weight:500;color:var(--cream);max-width:580px;margin:0 auto 36px;line-height:1.5;opacity:.9}
+  .hero-intro .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+  /* THESIS */
+  .thesis{padding:92px 0;border-top:1px solid var(--line)}
+  .thesis h2{max-width:20ch}
+  .thesis p{max-width:60ch;margin-bottom:18px;color:var(--brown);font-size:var(--t-md);line-height:1.6}
+  .thesis .pivot{font-weight:600;color:var(--gold-deep);font-size:clamp(19px,2.6vw,24px);margin:6px 0}
+  .thesis .closer{font-family:var(--display);font-weight:700;font-size:clamp(22px,3.4vw,32px);color:var(--ink);max-width:28ch;margin-top:30px;line-height:1.18;letter-spacing:-.02em}
+
+  /* PHOTO BREAK */
+  .photo-break{width:100%;overflow:hidden;line-height:0}
+  .photo-break img{width:100%;height:auto;display:block}
+  .photo-break-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(7,7,7,.35),rgba(7,7,7,.55))}
+  .photo-break-text{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px}
+  .photo-break-text blockquote{font-family:var(--display);font-size:clamp(24px,4vw,44px);font-weight:700;color:#fff;max-width:22ch;line-height:1.18;letter-spacing:-.02em}
+  .photo-break-text blockquote em{color:var(--gold-pale);font-style:italic}
+
+  /* RECOGNITION — three women */
+  .recog{padding:0;border-top:1px solid var(--line)}
+  .recog .copy{padding:84px 28px;max-width:760px;margin:0 auto}
+  .recog .copy .eyebrow{margin-bottom:22px}
+  .recog h2{margin-bottom:32px;max-width:24ch}
+  .three-women{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin:40px 0}
+  .woman-card{background:var(--paper);padding:32px 28px}
+  .woman-card .num{font-family:var(--display);font-size:38px;font-weight:700;color:var(--gold-soft);line-height:1;margin-bottom:14px}
+  .woman-card h3{font-size:18px;margin-bottom:12px;color:var(--ink)}
+  .woman-card p{font-size:15.5px;color:var(--brown);margin:0;max-width:none}
+  .recog .thread{font-family:var(--display);font-weight:600;font-size:clamp(20px,2.8vw,26px);color:var(--ink);max-width:38ch;margin-top:36px;line-height:1.22;letter-spacing:-.015em}
+
+  /* METHOD */
+  .works{padding:92px 0;background:var(--cream-2);border-top:1px solid var(--line)}
+  .works h2{max-width:22ch}
+  .nots{display:flex;gap:10px;flex-wrap:wrap;margin:6px 0 30px}
+  .nots span{font-size:13px;letter-spacing:.02em;border:1px solid var(--line);background:var(--paper);border-radius:2px;padding:9px 15px;color:var(--gold-deep);font-weight:500}
+  .works p{max-width:60ch;margin-bottom:18px;color:var(--brown)}
+  .works .key{font-family:var(--display);font-weight:700;font-size:clamp(21px,3vw,28px);color:var(--ink);max-width:32ch;margin-top:8px;line-height:1.2;letter-spacing:-.02em}
+  .four-pillars{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:36px}
+  .pillar{background:var(--paper);padding:28px 26px;border-left:3px solid var(--gold)}
+  .pillar h3{font-size:17px;margin-bottom:8px;text-transform:uppercase;letter-spacing:.04em;color:var(--gold-deep)}
+  .pillar p{font-size:15.5px;color:var(--brown);margin:0;max-width:none}
+
+  /* WHY ME — matches touch-point exactly */
+  .why{padding:0;border-top:1px solid var(--line);background:var(--paper)}
+  .why .split{display:grid;grid-template-columns:.85fr 1.15fr;align-items:stretch}
+  .why .photo{background-size:cover;background-position:center top;min-height:560px}
+  .why .copy{padding:88px 56px}
+  .why .eyebrow{margin-bottom:16px}
+  .why h2{font-size:clamp(32px,5vw,52px);margin-bottom:4px}
+  .why h2 em{font-family:var(--display);font-weight:700;font-style:normal;color:var(--gold-deep)}
+  .why .pleasure{font-family:var(--display);font-weight:600;font-size:clamp(17px,2.2vw,22px);color:var(--gold-deep);letter-spacing:-.01em;margin-bottom:28px;display:block}
+  .why .intro{font-size:var(--t-md);max-width:60ch;margin:20px 0;color:var(--brown);line-height:1.6}
+  .modalities{display:flex;flex-wrap:wrap;gap:8px;margin:30px 0}
+  .modalities span{font-family:var(--body);font-weight:500;font-size:15px;color:var(--gold-deep);border:1px solid var(--gold-soft);border-radius:99px;padding:7px 16px;background:var(--cream);letter-spacing:.01em}
+  .why .needed{font-family:var(--display);font-weight:600;font-size:clamp(19px,2.6vw,24px);color:var(--ink);margin:6px 0 32px;max-width:30ch;line-height:1.22;letter-spacing:-.015em}
+  .gen-block{border-left:2px solid var(--gold);padding:4px 0 4px 26px;margin:24px 0;max-width:58ch}
+  .gen-block p{margin-bottom:12px;color:var(--brown);font-size:17px}
+  .press{display:flex;gap:20px 36px;flex-wrap:wrap;align-items:center;justify-content:flex-start;margin:36px 0;padding:24px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .press img{height:26px;width:auto;max-width:110px;object-fit:contain;filter:brightness(0) opacity(.4);transition:filter .25s}
+  .press img:hover{filter:brightness(0) opacity(.7)}
+  .why .last{font-size:18px;max-width:60ch;color:var(--brown)}
+
+  /* TESTIMONIAL CARDS */
+  @import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap');
+  .tcard-section{padding:92px 0;background:#c8d8dc;border-top:1px solid rgba(13,53,53,.12)}
+  .tcard-section .narrow{display:flex;flex-direction:column;align-items:center}
+  .tcard-section .head{text-align:center;margin-bottom:48px}
+  .tcard-section .head .eyebrow{margin-bottom:10px}
+  .tcard-section .head h2{color:var(--teal)}
+  .tcards-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;width:100%;max-width:860px}
+  .tcard{background:#fff;display:flex;flex-direction:column;box-shadow:0 14px 44px rgba(13,53,53,.2);width:100%;min-height:322px;border:1px solid #c9a55a;overflow:hidden}
+  .tcard svg{display:block;width:100%;max-width:210px;height:68px;margin:0 auto}
+  .tcard-band{background:#111;padding:13px 16px;text-align:center}
+  .tcard-band span{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#A88538;font-weight:500;line-height:1.5}
+  .tcard-body{padding:18px 18px 14px;text-align:center;flex:1;display:flex;align-items:center;justify-content:center}
+  .tcard-body p{font-family:'Jost',sans-serif;font-size:12px;font-style:italic;font-weight:400;color:var(--ink);line-height:1.7;margin:0}
+  @media(max-width:860px){.tcards-grid{grid-template-columns:1fr;max-width:220px}}
+  @media(max-width:640px){.screenshots-grid{grid-template-columns:repeat(2,1fr)!important}}
+
+  /* ARC */
+  .spine{padding:92px 0;border-top:1px solid var(--line);background:#b4a074}
+  .spine .quotebox{border-left:3px solid rgba(254,252,250,.6);padding:6px 0 6px 26px;font-family:var(--display);font-weight:700;font-size:clamp(22px,3.2vw,30px);color:#fff;max-width:32ch;margin:8px 0 26px;line-height:1.18;letter-spacing:-.02em}
+  .spine .lede{max-width:60ch;color:rgba(254,252,250,.85);margin-bottom:14px}
+  .spine .eyebrow{color:rgba(254,252,250,.65)}
+  .spine h2{color:#fff}
+  .spine .node .day{color:rgba(254,252,250,.65)}
+  .spine .node h3{color:#fff}
+  .spine .node p{color:rgba(254,252,250,.85)}
+  .spine .timeline::before{background:rgba(254,252,250,.25)}
+  .spine .node::before{background:rgba(254,252,250,.3);border-color:rgba(254,252,250,.5)}
+  .spine .node.in::before{background:#fff;border-color:#fff}
+  .inc-head{margin:54px 0 42px;display:flex;flex-direction:column;gap:12px}
+  .timeline{position:relative;margin-left:8px;padding-left:42px}
+  .timeline::before{content:"";position:absolute;left:0;top:6px;bottom:6px;width:2px;background:var(--line)}
+  .node{position:relative;padding:0 0 36px}
+  .node::before{content:"";position:absolute;left:-42px;top:4px;width:13px;height:13px;border-radius:50%;background:var(--cream);border:2px solid var(--gold-soft);transition:border-color .4s,background .4s,box-shadow .4s;transform:translateX(-5px)}
+  .node.in::before{border-color:var(--gold);background:var(--gold);box-shadow:0 0 0 5px rgba(168,133,56,.14)}
+  .node .day{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);font-weight:600}
+  .node h3{margin:7px 0 8px;font-size:21px}
+  .node p{color:var(--brown);font-size:16px;max-width:56ch}
+
+  /* INCLUDES */
+  .includes{padding:80px 0;background:var(--teal)}
+  .includes .eyebrow{color:var(--gold-pale)}
+  .includes h2{color:var(--cream)}
+  .includes-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px}
+  .inc-item{background:var(--cream);padding:28px 24px;border-left:3px solid var(--gold);box-shadow:0 8px 28px rgba(0,0,0,.18);border-radius:2px}
+  .inc-item .label{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:10px}
+  .inc-item h3{font-size:17px;margin-bottom:8px;color:var(--ink)}
+  .inc-item p{font-size:15px;color:var(--brown);margin:0;max-width:none}
+
+  /* OUTCOMES */
+  .changes{padding:92px 0;border-top:1px solid var(--line);background:var(--cream)}
+  .change-row{display:grid;grid-template-columns:34px 1fr;gap:20px;align-items:start;padding:24px 0;border-bottom:1px solid var(--line)}
+  .change-row:last-of-type{border-bottom:none}
+  .change-row .ix{color:var(--gold);padding-top:4px;font-size:18px}
+  .change-row p{font-size:clamp(17px,2.1vw,20px);line-height:1.5;color:var(--ink)}
+
+  /* FOR / NOT FOR */
+  .fit{padding:92px 0;border-top:1px solid var(--line);background:var(--cream-2)}
+  .fit-head{text-align:center;margin-bottom:8px}
+  .fit-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:24px}
+  .fit-col{background:var(--paper);padding:36px 32px}
+  .fit-col h3{margin-bottom:22px}
+  .fit-col.no h3{color:var(--gold-soft)}
+  .fit-col ul{list-style:none}
+  .fit-col li{padding:13px 0 13px 28px;position:relative;font-size:16px;line-height:1.5;border-bottom:1px solid var(--line)}
+  .fit-col li:last-child{border-bottom:none}
+  .fit-col.yes li::before{content:"";position:absolute;left:0;top:18px;width:14px;height:2px;background:var(--gold)}
+  .fit-col.no li{color:var(--gold-soft)}
+  .fit-col.no li::before{content:"";position:absolute;left:2px;top:16px;width:9px;height:9px;border:1px solid var(--gold-soft);border-radius:50%}
+
+  /* WHY THE ROOM */
+  .why-room{padding:100px 0;background:var(--teal);color:var(--cream);text-align:center}
+  .why-room .eyebrow{color:var(--gold-pale);margin-bottom:20px}
+  .why-room h2{color:#fff;max-width:28ch;margin:0 auto 36px}
+  .why-room .wr-body{max-width:56ch;margin:0 auto;text-align:left}
+  .why-room .wr-body p{color:rgba(254,252,250,.8);font-size:17px;line-height:1.7;margin-bottom:18px}
+  .why-room .wr-rooms{display:flex;gap:10px 28px;flex-wrap:wrap;justify-content:center;margin:36px 0;padding:30px 0;border-top:1px solid rgba(254,252,250,.12);border-bottom:1px solid rgba(254,252,250,.12)}
+  .why-room .wr-rooms span{font-family:var(--display);font-weight:700;font-size:clamp(16px,2.2vw,22px);color:var(--gold-pale);letter-spacing:-.01em}
+  .why-room .wr-statement{font-family:var(--display);font-weight:700;font-size:clamp(24px,4vw,42px);color:#fff;line-height:1.18;letter-spacing:-.02em;max-width:24ch;margin:28px auto 36px;text-align:center}
+  .why-room .wr-close{max-width:52ch;margin:0 auto;text-align:center;font-size:17px;color:rgba(254,252,250,.8);line-height:1.7}
+  .why-room .wr-close strong{color:#fff}
+  .why-room .wr-gold{font-family:var(--display);font-style:italic;font-weight:700;color:#e8c96a;font-size:1.15em;letter-spacing:-.01em}
+  .why-room .wr-blueprint{font-family:var(--display);font-style:italic;font-weight:700;color:#fff;font-size:1.15em;letter-spacing:-.01em}
+  .why-room .wr-big{display:block;font-family:var(--display);font-style:italic;font-size:clamp(22px,3vw,30px);color:#e8c96a;font-weight:700;line-height:1.3;margin-top:24px;letter-spacing:-.01em}
+
+  /* GUARANTEE */
+  .guarantee{padding:92px 0;border-top:1px solid var(--line);background:var(--paper);text-align:center}
+  .gbox{border:1px solid var(--gold-soft);padding:52px;max-width:620px;margin:0 auto;background:var(--cream)}
+  .gbox h2{font-size:clamp(22px,3vw,30px);margin-bottom:20px}
+  .gbox p{font-size:16px;color:var(--brown);max-width:52ch;margin:0 auto 16px}
+
+  /* PRICING */
+  .founding{padding:100px 0;text-align:center;border-top:1px solid var(--line-dark);background:var(--teal);color:var(--cream)}
+  .founding .eyebrow{color:var(--gold-pale)}
+  .founding h2{color:var(--cream)}
+  .founding .price-big{font-family:var(--display);font-weight:700;font-size:clamp(54px,11vw,104px);line-height:1;margin:22px 0 6px;color:#fff;letter-spacing:-.03em}
+  .founding .price-big sub{font-size:.26em;color:var(--gold-pale);vertical-align:baseline;font-weight:400}
+  .founding .sub-price{color:#c9c2b4;margin-bottom:40px}
+  .pay-options{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:32px 0}
+  .pay-options .btn{font-size:14px;padding:14px 28px}
+  .pay-options .btn.ghost{border-color:var(--gold-pale);color:var(--gold-pale)}
+  .pay-options .btn.ghost:hover{background:var(--gold);border-color:var(--gold);color:#fff}
+  .klarna{font-size:14px;color:rgba(254,252,250,.45);font-style:italic;margin-top:10px}
+  .signoff{margin-top:36px;font-family:var(--display);font-weight:600;font-size:20px;color:var(--gold-pale)}
+
+  /* VIP */
+  .vip{padding:92px 0;border-top:1px solid var(--line);background:var(--paper)}
+  .vip-box{border:1px solid var(--gold-soft);padding:52px;max-width:680px;margin:0 auto;text-align:center}
+  .vip-badge{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);border:1px solid var(--gold-soft);display:inline-block;padding:5px 14px;margin-bottom:24px}
+  .vip-box h2{margin-bottom:8px}
+  .vip-price{font-family:var(--display);font-weight:700;font-size:52px;color:var(--gold-deep);line-height:1;margin:16px 0 8px}
+  .vip-list{list-style:none;text-align:left;margin:24px 0 32px}
+  .vip-list li{padding:10px 0 10px 28px;border-bottom:1px solid var(--line);font-size:16px;position:relative;color:var(--brown)}
+  .vip-list li::before{content:"→";position:absolute;left:0;color:var(--gold)}
+  .vip-cap{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-soft);margin-top:16px}
+
+  /* FINAL CTA */
+  .cta-final{padding:100px 32px;background:var(--teal);text-align:center}
+  .cta-final h2{color:var(--cream);margin-bottom:18px}
+  .cta-final p{color:rgba(254,252,250,.7);max-width:50ch;margin:0 auto 36px}
+  .cta-final .note{font-size:14px;color:rgba(254,252,250,.35);margin-top:16px;font-style:italic}
+
+  footer{padding:46px 0 58px;background:var(--gold);color:rgba(255,255,255,.85)}
+  footer .brand{font-family:var(--body);letter-spacing:.34em;text-transform:uppercase;font-size:15px;color:var(--cream);margin-bottom:18px;display:block}
+  footer .brand b{color:var(--gold-pale)}
+  footer .fine{font-size:13px;max-width:72ch;line-height:1.7;color:#8a9694}
+
+  .sticky-buy{position:fixed;left:0;right:0;bottom:0;z-index:55;transform:translateY(120%);transition:transform .5s cubic-bezier(.2,.7,.2,1);background:var(--teal);border-top:1px solid var(--line-dark);display:flex;align-items:center;justify-content:space-between;gap:16px;padding:13px 28px}
+  .sticky-buy.show{transform:none}
+  .sticky-buy .nm{font-family:var(--body);font-size:15px;letter-spacing:.18em;text-transform:uppercase;color:var(--cream)}
+  .sticky-buy .pr{font-size:13px;color:var(--gold-pale);font-weight:600}
+
+  @media(max-width:940px){
+    .why .split{grid-template-columns:1fr}
+    .why .photo{min-height:640px;order:-1;background-position:center top}
+    .why .copy{padding:60px 28px}
+    .three-women{grid-template-columns:1fr}
+    .includes-grid{grid-template-columns:1fr 1fr}
+    .four-pillars{grid-template-columns:1fr}
+  }
+  @media(max-width:640px){
+    .fit-grid{grid-template-columns:1fr}
+    .includes-grid{grid-template-columns:1fr}
+    .pay-options{flex-direction:column;align-items:center}
+    .gbox,.vip-box{padding:36px 24px}
+    .hero-img{width:100%;height:auto;display:block}
+    .photo-break img{width:100%}
+  }
+  @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}.reveal{opacity:1;transform:none}}
+  /* More dropdown */
+  .more-wrap{position:relative}
+  .more-wrap > button{background:none;border:none;cursor:pointer;font-size:14px;color:var(--cream);font-weight:500;font-family:var(--body);display:flex;align-items:center;gap:5px;padding:0;transition:color .2s}
+  .more-wrap > button:hover{color:var(--gold-pale)}
+  .more-wrap > button svg{transition:transform .2s}
+  .more-wrap.open > button svg{transform:rotate(180deg)}
+  .dropdown{position:absolute;top:calc(100% + 10px);right:0;background:var(--teal-deep);border:1px solid var(--line-dark);border-radius:3px;min-width:180px;padding:6px 0;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .18s,transform .18s;z-index:9999}
+  .more-wrap.open .dropdown{opacity:1;pointer-events:all;transform:none}
+  @media(max-width:860px){.dropdown{position:fixed;top:56px;right:16px}}
+  .dropdown a{display:block;padding:10px 18px;font-size:13px;color:var(--cream);font-weight:500;transition:background .15s,color .15s}
+  .dropdown a:hover{background:var(--teal);color:var(--gold-pale)}
+
+  /* MOBILE NAV */
+  .ham{display:none;background:none;border:none;cursor:pointer;padding:6px;color:var(--cream)}
+  .ham svg{display:block}
+  .mobile-nav{display:none;position:fixed;top:64px;left:0;right:0;background:var(--teal);z-index:9998;padding:16px 0;border-top:1px solid rgba(255,255,255,.1);flex-direction:column}
+  .mobile-nav a{display:block;padding:13px 28px;font-size:15px;color:var(--cream);font-weight:500;font-family:var(--body);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.07)}
+  .mobile-nav a:last-child{border-bottom:none}
+  .mobile-nav a.btn{margin:14px 28px 6px;display:block;background:var(--gold);color:#fff;padding:12px 20px;border-radius:2px;font-weight:600;text-align:center;border:none}
+  .mobile-nav.open{display:flex}
+  @media(max-width:860px){.ham{display:block}.topbar .more-wrap{display:none}.topbar nav > .btn{display:none}}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="brand">Feel&nbsp;Fully&nbsp;<b>You</b>
+  <button class="ham" id="hamBtn" aria-label="Open menu" aria-expanded="false">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+</div>
+  <nav>
+    <a href="/">Home</a>
+    <div class="more-wrap" id="workWrap">
+      <button onclick="document.getElementById('workWrap').classList.toggle('open')" aria-expanded="false">
+        Work With Me <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg>
+      </button>
+      <div class="dropdown">
+        <a href="/for-her">For Her</a>
+        <a href="/for-him">For Him</a>
+        <a href="/for-both">For Both</a>
+        <a href="/the-room">The Room</a>
+      </div>
+    </div>
+    <a href="/cards">The Cards</a>
+    <a href="/shop">Shop</a>
+    <div class="more-wrap" id="moreWrap">
+      <button onclick="document.getElementById('moreWrap').classList.toggle('open')" aria-expanded="false">
+        More <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg>
+      </button>
+      <div class="dropdown">
+        <a href="/free-resources">Free Resources</a>
+        <a href="/grief-duality-process">Grief Process</a>
+        <a href="/media-and-pr">Media &amp; PR</a>
+        <a href="/contact">Contact</a>
+      </div>
+    </div>
+    <a href="/work-with-me" class="btn">Start here</a>
+  </nav>
+</div>
+
+
+
+<nav class="mobile-nav" id="mobileNav">
+  <a href="/">Home</a>
+  <a href="/for-her">For Her</a>
+  <a href="/for-him">For Him</a>
+  <a href="/for-both">For Both</a>
+  <a href="/the-room">The Room</a>
+  <a href="/cards">The Cards</a>
+  <a href="/shop">Shop</a>
+  <a href="/about">About Juliette</a>
+  <a href="/free-resources">Free Resources</a>
+  <a href="/grief-duality-process">Grief Process</a>
+  <a href="/media-and-pr">Media &amp; PR</a>
+  <a href="/contact">Contact</a>
+  <a href="/work-with-me" class="btn">Start here</a>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <img class="hero-img" src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/6a3e9bb95aefbd076b96d5ce.png" alt="The Room. Juliette Karaman">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">with Juliette Karaman</p>
+    <h1 class="hero-title">THE ROOM™</h1>
+    <p class="hero-sub">An 8-week programme for the woman whose body has gone quiet, and who is ready to do something specific about it.</p>
+    <div class="hero-cta">
+      <a href="#book" class="btn">Book a Call</a>
+      <a href="#what" class="btn ghost" style="border-color:rgba(254,252,250,.5);color:var(--cream)">What's inside</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO INTRO BAND -->
+<div class="hero-intro">
+  <p>An 8-week programme for the woman whose body has gone quiet, and who is ready to do something specific about it.</p>
+  <div class="cta-row">
+    <a href="#book" class="btn">Book a Call</a>
+    <a href="#what" class="btn ghost" style="border-color:rgba(254,252,250,.4);color:var(--cream)">What's inside</a>
+  </div>
+</div>
+
+<!-- BELIEF -->
+<section class="thesis">
+  <div class="narrow">
+    <h2 class="reveal">Intimacy is built. Not summoned.</h2>
+    <p class="reveal">Your body did not go quiet because something is wrong with you. It went quiet because nobody built a structure safe enough for it to stay open.</p>
+    <p class="pivot reveal">Safety is not a feeling. It is a structure.</p>
+    <p class="reveal">When the structure is missing, when touch carries too much wanting, when the nervous system learned to brace before desire could arrive, the body does what it was taught to do. It closes.</p>
+    <p class="reveal">Patterns do not change through insight. <span style="color:var(--gold)">They change through structure, practiced in the body, in the right order, until it is simply who you are.</span></p>
+    <p class="closer reveal">The Room is built on that. Eight weeks. In order. In the body.</p>
+  </div>
+</section>
+
+<!-- THREE WOMEN -->
+<section class="recog">
+  <div class="copy">
+    <div class="eyebrow reveal">You are in the right place if</div>
+    <h2 class="reveal">Three different situations. One thing underneath.</h2>
+    <div class="three-women">
+      <div class="woman-card reveal">
+        <div class="num">01</div>
+        <h3>You are in a relationship, and the touch has gone quiet.</h3>
+        <p>You still love him. You want to want. Your body has just stopped meeting you there, with no explanation and no language for why. The love is present. The distance is real.</p>
+      </div>
+      <div class="woman-card reveal">
+        <div class="num">02</div>
+        <h3>You are not in a relationship, and sex never quite lands the way you want it.</h3>
+        <p>You go through it. You are good at it. You leave feeling further from yourself, not closer. You want more, but more of what, exactly, has always been hard to name.</p>
+      </div>
+      <div class="woman-card reveal">
+        <div class="num">03</div>
+        <h3>You are ready to start again, and something in you is braced before it has even begun.</h3>
+        <p>You want to open. You want to reach. You know the old pattern will run if you do not do something different first. You want to do this differently this time.</p>
+      </div>
+    </div>
+    <p class="thread reveal">Three different situations. The same thing underneath: a body that learned to protect itself instead of feel.</p>
+  </div>
+</section>
+
+<!-- WHY THE ROOM -->
+<section class="why-room">
+  <div class="narrow">
+    <div class="eyebrow reveal">Why it's called The Room</div>
+    <h2 class="reveal">Every great mentor says the same thing. Get in the room.</h2>
+    <div class="wr-body">
+      <p class="reveal">They are right. It is not enough.</p>
+      <p class="reveal">You can get in the room and still freeze. You can sit at that table, perform beautifully, say the right things, and go home empty. Proximity does not rewire a nervous system. Access does not change what happens in your body when the moment comes.</p>
+      <p class="reveal">The Room gives you something different.</p>
+    </div>
+    <p class="wr-statement reveal">Your own blueprint. Your own signal. The thing you carry with you into every room for the rest of your life.</p>
+    <div class="wr-rooms reveal">
+      <span>The Bedroom</span>
+      <span>The Boardroom</span>
+      <span>The Drawing Room</span>
+      <span>The Sitting Room</span>
+    </div>
+    <p class="wr-close reveal">When you know your <strong class="wr-gold">Touch Language</strong>, when you know your <em class="wr-blueprint">Pleasure Language</em>, when your nervous system has learned what it means to stay open rather than brace, you stop performing and start inhabiting. You already know what to do. Your body knows.<span class="wr-big">You just needed the structure to get there.</span><br><br><strong>Fifteen years of this work, compressed into eight weeks. A shortcut, yes. <span style="color:#e8c96a">One that leads somewhere you have never been before.</span></strong></p>
+  </div>
+</section>
+
+<!-- PHOTO BREAK 1. THE ROOM image -->
+<div class="photo-break"><img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/6a3e9bb95aefbd076b96d5ce.png" alt="The Room — Juliette Karaman"></div>
+
+<!-- METHOD -->
+<section class="works">
+  <div class="narrow">
+    <h2 class="reveal">Why nothing has worked, and <span class="gold">why this does.</span></h2>
+    <div class="nots reveal">
+      <span>Therapy works on understanding.</span><span>Books work on information.</span><span>Neither works on the body.</span>
+    </div>
+    <p class="reveal">The body is where this lives. The body is where we work.</p>
+    <p class="key reveal">The Room goes in the order the body actually heals.</p>
+    <div class="four-pillars">
+      <div class="pillar reveal">
+        <h3>Yourself first</h3>
+        <p>Before you can receive touch from anyone else, your own hand has to land in your own body. Most programmes skip this entirely.</p>
+      </div>
+      <div class="pillar reveal">
+        <h3>Safety before sensation</h3>
+        <p>A guarded body does not open because the moment is romantic. It opens inside a structure. We build that structure before we ask anything of you.</p>
+      </div>
+      <div class="pillar reveal">
+        <h3>Words after body</h3>
+        <p>You learn to say what you want only after your body has learned to feel it. In the right order, the words actually land.</p>
+      </div>
+      <div class="pillar reveal">
+        <h3>Him last</h3>
+        <p>The reach toward him comes at week seven. Because everything before it determines whether it lands.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO I AM -->
+<section class="why">
+  <div class="split">
+    <div class="photo reveal" style="background-image:url('https://images.leadconnectorhq.com/image/f_webp/q_85/r_1200/u_https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/6a26a7defc95b24549c0479e.png')"></div>
+    <div class="copy">
+      <div class="eyebrow reveal">Who is in the room with you</div>
+      <h2 class="reveal">I'm <em>Juliette</em>.</h2>
+      <span class="pleasure reveal">Pleasure through safety.</span>
+      <p class="intro reveal">I was that woman. Hot and alive at the beginning. Then the kids came, something quieted, and we became roommates who loved each other.</p>
+      <p class="intro reveal">What broke me open was not the distance. It was not knowing what was wrong.</p>
+      <div class="gen-block reveal">
+        <p>The body carries things the mind has never named. Things that happened so early there are no words for them. Things that were never ours to carry in the first place, and yet we did. The way our mothers did. The way their mothers did.</p>
+        <p>In a room recently, a woman said: my mother, me, same pattern. It stopped with her. Because she did the work.</p>
+      </div>
+      <p class="intro reveal">That is why I am so passionate about this. The work does not just free you. It stops something from moving forward into the next generation.</p>
+      <div class="modalities reveal">
+        <span>EMDR</span><span>Somatic experiencing</span><span>Hypnotherapy</span><span>Tantra</span><span>BDSM</span><span>Spinal attunement</span>
+      </div>
+      <p class="needed reveal">I followed my own wound into every room it needed to understand. Not to collect modalities. Because I needed every single one.</p>
+      <p class="intro reveal">I began as a SENCO, teaching children on the autism spectrum to feel safe in their own skin, before they had words for any of it. That taught me more about the nervous system than anything that came after.</p>
+      <div class="press reveal">
+        <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/672266601f25a7590d252591.png" alt="Forbes">
+        <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/6722666046dc7a0bb395dcb1.png" alt="The Times">
+        <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/6722666030643409dd828ee6.png" alt="ITV">
+        <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/672266637253cd083c119486.png" alt="The Telegraph">
+        <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/672266609ccb72239f428c53.png" alt="Newsweek">
+        <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/672266609ccb72e4c5428c52.png" alt="Marie Claire">
+        <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/672266627253cd865b119485.png" alt="TED">
+        <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/67226660e141300c3c4236e2.png" alt="Mindvalley">
+      </div>
+      <p class="last reveal">Fifteen years. Thousands of women. The woman whose body went quiet after children. The woman who performs because the real thing feels too far. The woman who loves him completely and cannot explain the distance. <strong>I know what it costs to stay quiet. I know what it takes to come back.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- ITV VIDEO -->
+<div style="background:var(--paper);padding:52px 24px;border-top:1px solid var(--line)">
+  <div class="narrow" style="max-width:720px">
+    <p style="font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:16px;text-align:center">As seen on ITV · with Ferne McCann</p>
+    <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:2px">
+      <iframe src="https://www.youtube.com/embed/G8t_IDKMBrQ" title="Juliette Karaman on ITV with Ferne McCann" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%"></iframe>
+    </div>
+  </div>
+</div>
+
+<!-- 8-WEEK ARC -->
+<section class="spine" id="what">
+  <div class="narrow">
+    <div class="eyebrow reveal" style="margin-bottom:18px">Eight weeks in the room</div>
+    <div class="quotebox reveal">Women only. You start the day you join. One module per week, dripped in so your nervous system can actually absorb it. Everything yours for life when the eight weeks close.</div>
+    <div class="inc-head reveal">
+      <h2 style="margin:0">The order the body actually heals.</h2>
+    </div>
+    <div class="timeline">
+      <div class="node reveal"><div class="day">Week 0</div><h3>The Thaw</h3><p>One Touch, a 7-day self-touch primer that is your doorway in. Trauma questionnaire. Pleasure type assessment. You begin before the programme begins.</p></div>
+      <div class="node reveal"><div class="day">Week 1</div><h3>Stop Watching Him</h3><p>Learning to track your own body signals. Establishing Touch Base®, your kinesthetic anchor. The half-second. The body as compass.</p></div>
+      <div class="node reveal"><div class="day">Week 2</div><h3>Why You Brace</h3><p>Understanding your safety mechanisms. Mastering Touch Base® for anxiety regulation. Building your personalised touch toolkit.</p></div>
+      <div class="node reveal"><div class="day">Week 3</div><h3>Your Own Hands First</h3><p>Structured self-touch sessions starting at three minutes. Your own hand, received by you, before anyone else's can land.</p></div>
+      <div class="node reveal"><div class="day">Week 4</div><h3>The Mirror, Undone</h3><p>Body image. Dressing. Mirror work. Your pleasure type, deep, with customised instructions for your specific way of receiving.</p></div>
+      <div class="node reveal"><div class="day">Week 5</div><h3>How You Like to Be Touched</h3><p>Mapping your Touch Languages®. Building your touch toolkit. Your yes, your no, your not-yet.</p></div>
+      <div class="node reveal"><div class="day">Week 6</div><h3>Say the Thing</h3><p>Structured communication. The Dyad. The Intimacy and Communication Cards. Saying what you want and being met, not managed.</p></div>
+      <div class="node reveal"><div class="day">Week 7</div><h3>Reach for Him</h3><p>Structured touch dates. Progressing sessions. The reach toward him, built on everything that came before it.</p></div>
+      <div class="node reveal"><div class="day">Week 8</div><h3>The Body You Live In Now</h3><p>Integration. Building to 45-minute sessions. The weekly rhythm you keep, without me in the room.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S INCLUDED -->
+<section class="includes">
+  <div class="wrap">
+    <div class="narrow" style="margin-bottom:0"><div class="eyebrow reveal" style="margin-bottom:12px">Everything inside The Room</div><h2 class="reveal">What you get from day one.</h2></div>
+    <div class="includes-grid">
+      <div class="inc-item reveal"><div class="label">Foundation</div><h3>One Touch™</h3><p>7-day self-touch primer. Unlocked the moment you join, your doorway in before module one.</p></div>
+      <div class="inc-item reveal"><div class="label">Core</div><h3>8 Modules</h3><p>Dripped in one per week so you are not overwhelmed. Yours for life after the programme closes.</p></div>
+      <div class="inc-item reveal"><div class="label">Practice</div><h3>Touch Base™ Anchor</h3><p>Your portable daily practice for regulation. The thing you take everywhere.</p></div>
+      <div class="inc-item reveal"><div class="label">Tools</div><h3>Intimacy &amp; Communication Cards</h3><p>Digital access to the full deck, used throughout the programme for structured conversation.</p></div>
+      <div class="inc-item reveal"><div class="label">Community</div><h3>WhatsApp Group</h3><p>Women only. Active for your eight weeks. Daily guidance, questions answered, the same work held in real time. Juliette's private support rate is £222 a day.</p></div>
+      <div class="inc-item reveal"><div class="label">Live access</div><h3>Weekly Embodiment Sessions with Juliette</h3><p>Sundays at 8pm UK on Zoom. Eight weeks. We do not just answer questions — we move what comes up through the body in real time. Recorded, so if you cannot make it live, you do not miss it.</p></div>
+      <div class="inc-item reveal"><div class="label">Accountability</div><h3>Knowledge Checks</h3><p>Short check-ins after each section to keep you moving, and to qualify the completion guarantee.</p></div>
+      <div class="inc-item reveal"><div class="label">Juliette's IP</div><h3>Touch Languages™, Pleasure Language &amp; Love Language</h3><p>You have been speaking the wrong language. To him, and to yourself. Touch Languages™ are Juliette's own framework. Alongside your Pleasure Language and your Love Language, they give you a complete picture of everything that has not been working. The bracing. The distance. The reaching that never quite lands. Nobody else has this.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TOUCH MENU BONUS -->
+<!-- OUTCOMES -->
+<section class="changes">
+  <div class="narrow">
+    <div class="eyebrow reveal" style="margin-bottom:18px">Where you land at week eight</div>
+    <h2 class="reveal">This is what your body knows how to do now. Not as a technique. As a way of living.</h2>
+    <div class="change-row reveal"><span class="ix">, </span><p>Your own touch lands. Not going through the motions. Actually lands. You feel the difference.</p></div>
+    <div class="change-row reveal"><span class="ix">, </span><p>You know what you want. Where. How much pressure. When to slow down. You are not waiting for him to guess anymore.</p></div>
+    <div class="change-row reveal"><span class="ix">, </span><p>You can guide his hands. In the moment, out loud, without it killing the mood. Because you fully have the language and you know how to use it.</p></div>
+    <div class="change-row reveal"><span class="ix">, </span><p>You are open enough to stay. Not just arrive at intimacy. Stay for the whole thing. That is the part that makes it mind-blowing.</p></div>
+    <div class="change-row reveal"><span class="ix">, </span><p>Sensation that used to slip past you now floods through. Your body is porous to it. You do not have to chase it.</p></div>
+    <div class="change-row reveal"><span class="ix">, </span><p>This is not a skill you have to remember. Your nervous system learned it. Your body asks for it. It is just how you live now.</p></div>
+    <div class="change-row reveal"><span class="ix">, </span><p>When the old pattern surfaces, and it will, you know its name, you know what it needs, and you know what to do. You are not back to square one.</p></div>
+    <div class="change-row reveal"><span class="ix">, </span><p>Eight weeks of structured practice. Yours for life. <strong style="font-size:1.15em">Not a programme you completed. A body you now inhabit.</strong></p></div>
+  </div>
+</section>
+
+<!-- FOR / NOT FOR -->
+<section class="fit">
+  <div class="wrap">
+    <div class="fit-head"><div class="eyebrow reveal">Be honest with yourself</div></div>
+    <div class="fit-grid">
+      <div class="fit-col yes reveal">
+        <h3>This is for you if</h3>
+        <ul>
+          <li>You are in a relationship where love is present, even if touch is not.</li>
+          <li>You are between relationships and can feel the old pattern coming back.</li>
+          <li>You want sex but it never quite lands the way you actually want it, and you are exhausted by the performance of it.</li>
+          <li>You are ready to open again, and you want to do it differently this time.</li>
+          <li>You have tried therapy, courses, retreats. You are done with theory.</li>
+          <li>You are willing to show up, do the practices, ask for help.</li>
+        </ul>
+      </div>
+      <div class="fit-col no reveal">
+        <h3>This is not for you if</h3>
+        <ul>
+          <li>You want to understand the pattern but are not ready to feel it move.</li>
+          <li>You are looking for a reason to leave the relationship rather than find your way back into your body.</li>
+          <li>You want a quick technique rather than eight weeks of real work.</li>
+          <li>You will not show up, to the calls, the practices, the group.</li>
+          <li>You believe this is his pattern to fix, not yours to change.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCREENSHOT PROOF -->
+<section style="padding:72px 0;background:#c8d8dc;border-top:1px solid rgba(13,53,53,.12)">
+  <div class="narrow">
+    <!-- 2 screenshots -->
+    <div class="screenshots-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;align-items:start;max-width:900px;margin:0 auto">
+      <div class="reveal" style="box-shadow:0 14px 44px rgba(13,53,53,.18);border-radius:4px;overflow:hidden"><img src="/testimonial-kate.jpeg" alt="" style="width:100%;display:block"></div>
+      <div class="reveal" style="box-shadow:0 14px 44px rgba(13,53,53,.18);border-radius:4px;overflow:hidden"><img src="/jennytestimonialtulum.jpg" alt="" style="width:100%;display:block"></div>
+      <div class="reveal" style="box-shadow:0 14px 44px rgba(13,53,53,.18);border-radius:4px;overflow:hidden"><img src="/testimonial-sueann.jpeg" alt="" style="width:100%;display:block"></div>
+      <div class="reveal" style="box-shadow:0 14px 44px rgba(13,53,53,.18);border-radius:4px;overflow:hidden"><img src="/testimonial-pleasure.jpeg" alt="" style="width:100%;display:block"></div>
+      <div class="reveal" style="box-shadow:0 14px 44px rgba(13,53,53,.18);border-radius:4px;overflow:hidden"><img src="/testimonial-karen.jpeg" alt="" style="width:100%;display:block"></div>
+      <div class="reveal" style="box-shadow:0 14px 44px rgba(13,53,53,.18);border-radius:4px;overflow:hidden"><img src="/testimonial-sophie.png" alt="" style="width:100%;display:block"></div>
+      <div class="reveal" style="box-shadow:0 14px 44px rgba(13,53,53,.18);border-radius:4px;overflow:hidden"><img src="/testimonial-ally.jpeg" alt="" style="width:100%;display:block"></div>
+      <div class="reveal" style="box-shadow:0 14px 44px rgba(13,53,53,.18);border-radius:4px;overflow:hidden"><img src="/testimonial-attune.jpeg" alt="" style="width:100%;display:block"></div>
+      <div class="reveal" style="box-shadow:0 14px 44px rgba(13,53,53,.18);border-radius:4px;overflow:hidden"><img src="/testimonial-celebration.jpeg" alt="" style="width:100%;display:block"></div>
+      <div class="reveal" style="box-shadow:0 14px 44px rgba(13,53,53,.18);border-radius:4px;overflow:hidden"><img src="/testimonial-lucy.jpeg" alt="" style="width:100%;display:block"></div>
+      <div class="reveal" style="box-shadow:0 14px 44px rgba(13,53,53,.18);border-radius:4px;overflow:hidden"><img src="/testimonial-wa5.jpeg" alt="" style="width:100%;display:block"></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF BRIDGE -->
+<section style="padding:80px 0;background:var(--cream-2);border-top:1px solid var(--line)">
+  <div class="narrow" style="text-align:center">
+    <div class="eyebrow reveal" style="margin-bottom:28px">From the women who did the work</div>
+    <div class="reveal" style="max-width:320px;margin:0 auto">
+      <div style="position:relative;padding-bottom:177.78%;height:0;border-radius:12px;overflow:hidden;box-shadow:0 12px 48px rgba(13,53,53,.25)">
+        <iframe src="https://www.youtube.com/embed/HkDU9Y8goyc" title="Jenny — why The Room changed everything" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border:none"></iframe>
+      </div>
+    </div>
+    <p class="reveal" style="margin-top:36px;font-size:22px;color:var(--brown);max-width:46ch;margin-left:auto;margin-right:auto;line-height:1.6">Eight weeks. <strong style="color:var(--ink)">A body you actually live in for the rest of your life.</strong> You have tried the other things. <strong style="color:var(--ink)">This is the thing that works.</strong></p>
+  </div>
+</section>
+
+<!-- GUARANTEE -->
+<section class="guarantee">
+  <div class="narrow">
+    <div class="eyebrow reveal" style="margin-bottom:24px;text-align:center">The guarantee</div>
+    <div class="gbox reveal">
+      <h2>60-Day Completion Guarantee</h2>
+      <p>Complete all eight modules. Pass the knowledge checks. Participate on the calls. If by the end of week eight your body still has not started to shift, touch still not landing, still bracing, you get an additional 30 days in The Room with me, including the calls, at no extra cost.</p>
+      <br>
+      <p><em>This guarantee exists because I know what this work does when you meet it. Do the work. The body responds. I have never seen it not.</em></p>
+    </div>
+  </div>
+</section>
+
+
+<!-- VALUE STACK -->
+<section style="padding:92px 0;border-top:1px solid var(--line);background:var(--cream)">
+  <div class="narrow">
+    <div class="eyebrow reveal" style="margin-bottom:18px">What you are actually getting</div>
+    <h2 class="reveal" style="margin-bottom:40px">The full value of The Room.</h2>
+    <div style="border:1px solid var(--line);border-radius:4px;overflow:hidden">
+      <div class="reveal" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 24px;border-bottom:1px solid var(--line)">
+        <div><span style="font-family:var(--display);font-weight:600;font-size:16px;color:var(--ink)">One Touch™</span> <span style="font-size:14px;color:var(--brown)">— 7-day self-touch primer</span></div>
+        <span style="font-family:var(--display);font-weight:700;font-size:15px;color:var(--gold-deep);white-space:nowrap">£97</span>
+      </div>
+      <div class="reveal" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 24px;border-bottom:1px solid var(--line)">
+        <div><span style="font-family:var(--display);font-weight:600;font-size:16px;color:var(--ink)">8 Modules</span> <span style="font-size:14px;color:var(--brown)">— yours for life</span></div>
+        <span style="font-family:var(--display);font-weight:700;font-size:15px;color:var(--gold-deep);white-space:nowrap">£1,997</span>
+      </div>
+      <div class="reveal" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 24px;border-bottom:1px solid var(--line)">
+        <div><span style="font-family:var(--display);font-weight:600;font-size:16px;color:var(--ink)">Touch Base™ + tracker</span> <span style="font-size:14px;color:var(--brown)">— your daily regulation anchor</span></div>
+        <span style="font-family:var(--display);font-weight:700;font-size:15px;color:var(--gold-deep);white-space:nowrap">£37</span>
+      </div>
+      <div class="reveal" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 24px;border-bottom:1px solid var(--line)">
+        <div><span style="font-family:var(--display);font-weight:600;font-size:16px;color:var(--ink)">Intimacy &amp; Communication Cards</span> <span style="font-size:14px;color:var(--brown)">— full digital set</span></div>
+        <span style="font-family:var(--display);font-weight:700;font-size:15px;color:var(--gold-deep);white-space:nowrap">£55</span>
+      </div>
+      <div class="reveal" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 24px;border-bottom:1px solid var(--line);background:rgba(168,133,56,.04)">
+        <div><span style="font-family:var(--display);font-weight:600;font-size:16px;color:var(--ink)">The Touch Menu</span> <span style="font-size:14px;color:var(--brown)">— 40+ types of touch, solo &amp; partnered</span></div>
+        <span style="font-family:var(--display);font-weight:700;font-size:15px;color:var(--gold-deep);white-space:nowrap">£795</span>
+      </div>
+      <div class="reveal" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 24px;border-bottom:1px solid var(--line)">
+        <div><span style="font-family:var(--display);font-weight:600;font-size:16px;color:var(--ink)">Touch Languages™ deck</span> <span style="font-size:14px;color:var(--brown)">— Juliette's own framework</span></div>
+        <span style="font-family:var(--display);font-weight:700;font-size:15px;color:var(--gold-deep);white-space:nowrap">£35</span>
+      </div>
+      <div class="reveal" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 24px;border-bottom:1px solid var(--line)">
+        <div><span style="font-family:var(--display);font-weight:600;font-size:16px;color:var(--ink)">Pleasure Language &amp; Love Language</span> <span style="font-size:14px;color:var(--brown)">— deep dive into what lights you up, with music tracks curated to enhance your pleasure language</span></div>
+        <span style="font-family:var(--display);font-weight:700;font-size:15px;color:var(--gold-deep);white-space:nowrap">£197</span>
+      </div>
+      <div class="reveal" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 24px;border-bottom:1px solid var(--line)">
+        <div><span style="font-family:var(--display);font-weight:600;font-size:16px;color:var(--ink)">8 weekly live sessions with Juliette</span> <span style="font-size:14px;color:var(--brown)">— Sundays 8pm UK</span></div>
+        <span style="font-family:var(--display);font-weight:700;font-size:15px;color:var(--gold-deep);white-space:nowrap">£1,976</span>
+      </div>
+      <div class="reveal" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 24px;border-bottom:1px solid var(--line)">
+        <div><span style="font-family:var(--display);font-weight:600;font-size:16px;color:var(--ink)">8 weeks WhatsApp group support</span> <span style="font-size:14px;color:var(--brown)">— daily guidance and coaching through the work</span></div>
+        <span style="font-family:var(--display);font-weight:700;font-size:15px;color:var(--gold-deep);white-space:nowrap">£1,776</span>
+      </div>
+      <div class="reveal" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 24px;background:var(--teal)">
+        <span style="font-family:var(--display);font-weight:700;font-size:17px;color:var(--cream);letter-spacing:-.01em">Total value</span>
+        <span style="font-family:var(--display);font-weight:700;font-size:22px;color:var(--gold-pale)">£6,965</span>
+      </div>
+    </div>
+    <p class="reveal" style="margin-top:20px;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-deep);font-weight:600">+ Additional bonuses to be announced</p>
+    <p class="reveal" style="margin-top:16px;font-family:var(--display);font-weight:600;font-size:clamp(20px,2.8vw,26px);color:var(--ink);letter-spacing:-.015em;line-height:1.25;max-width:36ch">You pay £3,000. Everything above is yours.</p>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="founding" id="pricing">
+  <div class="narrow">
+    <div class="eyebrow reveal">The investment</div>
+    <h2 class="reveal">The Room™</h2>
+    <div class="price-big reveal">£3,000</div>
+    <p class="sub-price reveal">Paid in full, or spread across 2 or 3 monthly payments.</p>
+    <div class="pay-options reveal">
+      <a href="https://links.ivorey.io/payment-link/6a295f3a03b17c94f57158c5" class="btn">Pay in Full · £3,000</a>
+      <a href="https://links.ivorey.io/payment-link/6a295f7c03b17c94f57158c7" class="btn ghost">2 Payments · £1,500</a>
+      <a href="https://links.ivorey.io/payment-link/6a295fa203b17c94f57158c8" class="btn ghost">3 Payments · £1,000</a>
+    </div>
+    <p class="klarna reveal">Klarna available at checkout for further flexibility.</p>
+  </div>
+</section>
+
+<!-- VIP -->
+<section class="vip">
+  <div class="narrow">
+    <div class="vip-box reveal">
+      <span class="vip-badge">For those who want me closer</span>
+      <h2>The Room: Held</h2>
+      <p style="color:var(--brown);margin-bottom:16px">Everything in The Room, plus four private sessions with Juliette across the eight weeks, and a half-day VIP that changes everything.</p>
+      <ul class="vip-list">
+        <li>Four private 1:1 sessions with Juliette across the eight weeks</li>
+        <li>Half-Day Body Mapping VIP with Juliette. You leave with a personalised map of where turn-on and pleasure actually lives in your body. Or we release the stuck trauma that has been sitting there instead. After working with hundreds of women, this is the only way to do it with any real depth.</li>
+        <li>The physical world posted to your door. Cards, candles, journal.</li>
+      </ul>
+      <div class="vip-price">£5,000</div>
+      <p style="font-size:15px;color:var(--brown);margin-bottom:24px">Paid in full or 2–3 monthly payments. Klarna available.</p>
+      <p style="font-family:var(--display);font-style:italic;font-size:17px;color:var(--brown);margin:24px 0 4px;max-width:38ch;margin-left:auto;margin-right:auto;line-height:1.6">"I feel so held, supported and loved."</p>
+      <p style="font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:32px">Sophie G.</p>
+      <div style="background:var(--cream-2);border:1px solid var(--line);padding:22px 24px;margin-bottom:28px;text-align:left">
+        <p style="font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:10px">The value</p>
+        <p style="font-size:15px;color:var(--brown);line-height:1.65;margin:0">The Room and Juliette's private intensive combined for £5,000 instead of £7,497. A saving of £2,497.</p>
+      </div>
+      <a href="#book" class="btn">Ask About The Room: Held</a>
+      <p class="vip-cap">Only 3 spots per month.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="tcard-section">
+  <div class="narrow">
+    <div class="head">
+      <div class="eyebrow reveal">What women say</div>
+      <h2 class="reveal">From the women who did the work.</h2>
+    </div>
+    <div class="tcards-grid">
+
+      <div class="tcard reveal">
+        <svg viewBox="0 0 260 70" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><polyline points="102,3 130,45 158,3" stroke="#A88538" stroke-width="1.5" fill="none"/><polyline points="112,3 130,30 148,3" stroke="#c9a55a" stroke-width="0.9" fill="none" opacity=".55"/></svg>
+        <div class="tcard-band"><span>Christine · London</span></div>
+        <div class="tcard-body"><p>"I came in feeling like I'd forgotten how to feel. I left remembering that feeling it all is my strength."</p></div>
+        <svg viewBox="0 0 260 70" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><polyline points="102,67 130,25 158,67" stroke="#A88538" stroke-width="1.5" fill="none"/><polyline points="112,67 130,40 148,67" stroke="#c9a55a" stroke-width="0.9" fill="none" opacity=".55"/></svg>
+      </div>
+
+      <div class="tcard reveal">
+        <svg viewBox="0 0 260 70" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><polyline points="102,3 130,45 158,3" stroke="#A88538" stroke-width="1.5" fill="none"/><polyline points="112,3 130,30 148,3" stroke="#c9a55a" stroke-width="0.9" fill="none" opacity=".55"/></svg>
+        <div class="tcard-band"><span>Dimple</span></div>
+        <div class="tcard-body"><p>"He tenderly and very respectfully made love to me for 2 hours. And I make it mean nothing other than the beauty of what it is."</p></div>
+        <svg viewBox="0 0 260 70" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><polyline points="102,67 130,25 158,67" stroke="#A88538" stroke-width="1.5" fill="none"/><polyline points="112,67 130,40 148,67" stroke="#c9a55a" stroke-width="0.9" fill="none" opacity=".55"/></svg>
+      </div>
+
+      <div class="tcard reveal">
+        <svg viewBox="0 0 260 70" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><polyline points="102,3 130,45 158,3" stroke="#A88538" stroke-width="1.5" fill="none"/><polyline points="112,3 130,30 148,3" stroke="#c9a55a" stroke-width="0.9" fill="none" opacity=".55"/></svg>
+        <div class="tcard-band"><span style="font-size:8.5px;letter-spacing:.1em">Gina · Lawyer, New York</span></div>
+        <div class="tcard-body"><p>"This didn't just save my marriage. It changed how I mother, lead, and speak. A return to self."</p></div>
+        <svg viewBox="0 0 260 70" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><polyline points="102,67 130,25 158,67" stroke="#A88538" stroke-width="1.5" fill="none"/><polyline points="112,67 130,40 148,67" stroke="#c9a55a" stroke-width="0.9" fill="none" opacity=".55"/></svg>
+      </div>
+
+      <div class="tcard reveal">
+        <svg viewBox="0 0 260 70" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><polyline points="102,3 130,45 158,3" stroke="#A88538" stroke-width="1.5" fill="none"/><polyline points="112,3 130,30 148,3" stroke="#c9a55a" stroke-width="0.9" fill="none" opacity=".55"/></svg>
+        <div class="tcard-band"><span style="font-size:8.5px;letter-spacing:.1em">Linda Davies · Author &amp; Coach</span></div>
+        <div class="tcard-body"><p>"You've created a magical alchemy. Through profound challenge, you offer deep healing."</p></div>
+        <svg viewBox="0 0 260 70" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><polyline points="102,67 130,25 158,67" stroke="#A88538" stroke-width="1.5" fill="none"/><polyline points="112,67 130,40 148,67" stroke="#c9a55a" stroke-width="0.9" fill="none" opacity=".55"/></svg>
+      </div>
+
+      <div class="tcard reveal">
+        <svg viewBox="0 0 260 70" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><polyline points="102,3 130,45 158,3" stroke="#A88538" stroke-width="1.5" fill="none"/><polyline points="112,3 130,30 148,3" stroke="#c9a55a" stroke-width="0.9" fill="none" opacity=".55"/></svg>
+        <div class="tcard-band"><span>Anna Shapiro</span></div>
+        <div class="tcard-body"><p>"I felt deeply held. This wasn't just a gift. It was a reconnection we'll carry long beyond that night."</p></div>
+        <svg viewBox="0 0 260 70" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><polyline points="102,67 130,25 158,67" stroke="#A88538" stroke-width="1.5" fill="none"/><polyline points="112,67 130,40 148,67" stroke="#c9a55a" stroke-width="0.9" fill="none" opacity=".55"/></svg>
+      </div>
+
+      <div class="tcard reveal">
+        <svg viewBox="0 0 260 70" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><polyline points="102,3 130,45 158,3" stroke="#A88538" stroke-width="1.5" fill="none"/><polyline points="112,3 130,30 148,3" stroke="#c9a55a" stroke-width="0.9" fill="none" opacity=".55"/></svg>
+        <div class="tcard-band"><span>Deidre A.</span></div>
+        <div class="tcard-body"><p>"I have had the most magical 24 hours. He really really held me so kindly and strongly last night when I had a crazy scary moment. Thank you so much."</p></div>
+        <svg viewBox="0 0 260 70" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><polyline points="102,67 130,25 158,67" stroke="#A88538" stroke-width="1.5" fill="none"/><polyline points="112,67 130,40 148,67" stroke="#c9a55a" stroke-width="0.9" fill="none" opacity=".55"/></svg>
+      </div>
+
+      <div class="tcard reveal">
+        <svg viewBox="0 0 260 70" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><polyline points="102,3 130,45 158,3" stroke="#A88538" stroke-width="1.5" fill="none"/><polyline points="112,3 130,30 148,3" stroke="#c9a55a" stroke-width="0.9" fill="none" opacity=".55"/></svg>
+        <div class="tcard-band"><span>The Room member</span></div>
+        <div class="tcard-body"><p>"Well that was fantastic. Just had the most beautiful self pleasure practice and a delicious orgasm. Thanks for unlocking that joy and scrumptiousness for me."</p></div>
+        <svg viewBox="0 0 260 70" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><polyline points="102,67 130,25 158,67" stroke="#A88538" stroke-width="1.5" fill="none"/><polyline points="112,67 130,40 148,67" stroke="#c9a55a" stroke-width="0.9" fill="none" opacity=".55"/></svg>
+      </div>
+
+      <div class="tcard reveal">
+        <svg viewBox="0 0 260 70" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><polyline points="102,3 130,45 158,3" stroke="#A88538" stroke-width="1.5" fill="none"/><polyline points="112,3 130,30 148,3" stroke="#c9a55a" stroke-width="0.9" fill="none" opacity=".55"/></svg>
+        <div class="tcard-band"><span style="font-size:8.5px;letter-spacing:.1em">Sue-Ann MacCara</span></div>
+        <div class="tcard-body"><p>"Yes you're an energetic match to millions, and anyone who is touched by you is blessed beyond measure. You go, you Scrumptious-Mighty-Woman-You!"</p></div>
+        <svg viewBox="0 0 260 70" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><polyline points="102,67 130,25 158,67" stroke="#A88538" stroke-width="1.5" fill="none"/><polyline points="112,67 130,40 148,67" stroke="#c9a55a" stroke-width="0.9" fill="none" opacity=".55"/></svg>
+      </div>
+
+      <div class="tcard reveal">
+        <svg viewBox="0 0 260 70" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><polyline points="102,3 130,45 158,3" stroke="#A88538" stroke-width="1.5" fill="none"/><polyline points="112,3 130,30 148,3" stroke="#c9a55a" stroke-width="0.9" fill="none" opacity=".55"/></svg>
+        <div class="tcard-band"><span>Sophie Griffith</span></div>
+        <div class="tcard-body"><p>"This is such an incredible group and I feel so held, supported and loved. Thank you for being you."</p></div>
+        <svg viewBox="0 0 260 70" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><polyline points="102,67 130,25 158,67" stroke="#A88538" stroke-width="1.5" fill="none"/><polyline points="112,67 130,40 148,67" stroke="#c9a55a" stroke-width="0.9" fill="none" opacity=".55"/></svg>
+      </div>
+
+      <div class="tcard reveal">
+        <svg viewBox="0 0 260 70" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><polyline points="102,3 130,45 158,3" stroke="#A88538" stroke-width="1.5" fill="none"/><polyline points="112,3 130,30 148,3" stroke="#c9a55a" stroke-width="0.9" fill="none" opacity=".55"/></svg>
+        <div class="tcard-band"><span>Sophie Griffith</span></div>
+        <div class="tcard-body"><p>"I just watched the video and had a very strong response in my being. Such a solid container that was held. I have been going through a tough time and this was perfect timing to watch and receive."</p></div>
+        <svg viewBox="0 0 260 70" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><polyline points="102,67 130,25 158,67" stroke="#A88538" stroke-width="1.5" fill="none"/><polyline points="112,67 130,40 148,67" stroke="#c9a55a" stroke-width="0.9" fill="none" opacity=".55"/></svg>
+      </div>
+
+
+      <div class="tcard reveal">
+        <svg viewBox="0 0 260 70" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><polyline points="102,3 130,45 158,3" stroke="#A88538" stroke-width="1.5" fill="none"/><polyline points="112,3 130,30 148,3" stroke="#c9a55a" stroke-width="0.9" fill="none" opacity=".55"/></svg>
+        <div class="tcard-band"><span style="font-size:8.5px;letter-spacing:.1em">Karen McMullen</span></div>
+        <div class="tcard-body"><p>"A powerful healer with such incredible stories and life experiences. Gentle and loving and yet so powerful in how she offers feedback and guidance. I loved learning from her and receiving her gifts."</p></div>
+        <svg viewBox="0 0 260 70" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><polyline points="102,67 130,25 158,67" stroke="#A88538" stroke-width="1.5" fill="none"/><polyline points="112,67 130,40 148,67" stroke="#c9a55a" stroke-width="0.9" fill="none" opacity=".55"/></svg>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="cta-final" id="book">
+  <div class="narrow" style="text-align:center">
+    <h2>The next step is a conversation.</h2>
+    <p>There is no buy button here. You book a call with my team. They show you the inside of The Room. If it is not right for you, they will tell you, they do that. Book only if you are ready to commit to eight weeks of real work.</p>
+    <a href="https://form.jotform.com/261584568346368" target="_blank" class="btn" style="font-size:16px;padding:17px 44px">Book Your Call</a>
+    <p class="note" style="font-size:17px;font-weight:600;color:var(--cream);margin-top:14px">Women only. Evergreen. You start the day you join.</p>
+  </div>
+</section>
+
+<footer style="background:#a88538;color:#fff;padding:22px 32px;font-size:13px">
+  <div style="max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+    <div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:0.95rem;color:#fff;letter-spacing:-.01em">Feel Fully You</div>
+    <div style="font-size:12px;color:rgba(255,255,255,.85);display:flex;gap:16px;align-items:center"><a href="mailto:support@feelfullyyou.com" style="color:#fff;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(255,255,255,.5)">support@feelfullyyou.com</a><a href="https://feelfullyyou.com/terms" style="color:rgba(255,255,255,.75);text-decoration:none" target="_blank" rel="noopener">Terms</a></div>
+    <div style="display:flex;gap:14px;align-items:center">
+      <a href="https://www.instagram.com/juliettekaraman/" aria-label="Instagram" style="color:rgba(255,255,255,.85);display:flex;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+      <a href="https://www.facebook.com/juliette.karamanvanschaardenburg" aria-label="Facebook" style="color:rgba(255,255,255,.85);display:flex;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+      <a href="https://www.linkedin.com/in/juliette-karaman-van-schaardenburg-89399913b" aria-label="LinkedIn" style="color:rgba(255,255,255,.85);display:flex;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+      <a href="https://www.tiktok.com/@juliettekaraman" aria-label="TikTok" style="color:rgba(255,255,255,.85);display:flex;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+      <a href="https://substack.com/@juliettekaraman" aria-label="Substack" style="color:rgba(255,255,255,.85);display:flex;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 17.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-buy" id="stickybuy">
+  <div style="display:flex;align-items:baseline;gap:14px">
+    <span class="nm">THE ROOM™</span>
+    <span class="pr">from £1,000/mo</span>
+  </div>
+  <a href="#book" class="btn">Book a Call</a>
+</div>
+
+<script>
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.16,rootMargin:'0px 0px -6% 0px'});
+  document.querySelectorAll('.reveal,.node').forEach(el=>io.observe(el));
+
+  const sticky=document.getElementById('stickybuy');
+  const hero=document.querySelector('.hero');
+  const heroObs=new IntersectionObserver(([e])=>{sticky.classList.toggle('show',!e.isIntersecting)},{threshold:0});
+  heroObs.observe(hero);
+</script>
+<script>
+(function(){
+  var btn=document.getElementById('hamBtn');
+  var nav=document.getElementById('mobileNav');
+  if(btn&&nav){btn.addEventListener('click',function(){nav.classList.toggle('open');btn.setAttribute('aria-expanded',nav.classList.contains('open'))});}
+})();
+</script>
+</body>
+</html>

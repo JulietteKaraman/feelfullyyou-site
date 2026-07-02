@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Media &amp; PR · Feel Fully You</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,600;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fefcfa;--cream-2:#f6f4f1;--paper:#fdfbf8;
+    --ink:#1c1714;--brown:#5d4a33;
+    --gold:#a88538;--gold-deep:#99680c;--gold-soft:#b4a074;--gold-pale:#ddc98e;
+    --teal:#0d3535;
+    --blue:#d8dfe1;--teal-deep:#061a1a;--line-dark:#1d3a39;
+    --line:#e3dccf;--max:1140px;
+    --display:'Poppins',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;
+    --t-xs:0.78rem;--t-sm:0.94rem;--t-base:1.0625rem;--t-md:1.2rem;--t-lg:1.5rem;--t-2xl:2.75rem;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--brown);font-family:var(--body);font-size:var(--t-base);line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  p{max-width:62ch}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+
+  .topbar{position:fixed;top:0;left:0;right:0;z-index:9999;background:var(--teal);padding:0 28px;height:64px;display:flex;align-items:center;justify-content:space-between}
+  .topbar .brand{font-family:var(--display);font-weight:700;font-size:16px;letter-spacing:.02em;color:var(--cream)}
+  .topbar .brand b{color:var(--gold-pale)}
+  .topbar nav{display:flex;gap:26px;align-items:center}
+  .topbar nav a{font-size:14px;color:var(--cream);font-weight:500;transition:color .2s}
+  .topbar nav a:hover{color:var(--gold-pale)}
+  .topbar nav a.btn{background:var(--gold);color:#fff;padding:10px 20px;border-radius:2px;font-weight:600}
+  .topbar nav a.btn:hover{background:var(--gold-deep)}
+  @media(max-width:860px){.topbar nav > a:not(.btn){display:none}}
+  .topbar .logo{font-family:var(--display);font-weight:700;font-size:1.15rem;color:var(--cream);letter-spacing:-.02em}
+  .topbar .logo span{color:var(--gold-pale)}
+  .btn{display:inline-block;cursor:pointer;font-family:var(--body);font-weight:600;font-size:var(--t-sm);letter-spacing:.01em;padding:13px 28px;border-radius:2px;background:var(--gold);color:#fff;border:none;transition:background .2s,transform .2s}
+  .btn:hover{background:var(--gold-deep);transform:translateY(-1px)}
+  .btn.outline{background:transparent;border:1.5px solid var(--gold);color:var(--gold-deep)}
+  .btn.outline:hover{background:var(--gold);color:#fff}
+  .btn.dark{background:var(--teal);color:#fff}
+  .btn.dark:hover{background:var(--teal-deep)}
+  .eyebrow{font-size:var(--t-xs);letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);font-weight:600}
+
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .55s ease,transform .55s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  /* hero */
+  .hero{position:relative;height:80vh;min-height:520px;overflow:hidden;margin-top:64px}
+  .hero img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+  .hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(7,7,7,.1) 0%,rgba(7,7,7,.15) 40%,rgba(7,7,7,.65) 75%,rgba(7,7,7,.88) 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:64px 48px}
+  .hero-overlay .eyebrow{color:var(--gold-pale);margin-bottom:14px}
+  .hero-overlay h1{font-family:var(--display);font-weight:700;font-size:clamp(2rem,4.5vw,3.4rem);color:#fff;letter-spacing:-.025em;line-height:1.06;max-width:22ch;margin-bottom:18px}
+  .hero-overlay h1 em{font-style:italic;color:var(--gold-pale)}
+  .hero-overlay p{color:#d8d0c4;font-size:var(--t-md);max-width:52ch}
+
+  /* press logos */
+  .press{background:var(--teal);padding:52px 28px}
+  .press .eyebrow{color:var(--gold-pale);text-align:center;margin-bottom:28px}
+  .press-logos{display:flex;flex-wrap:wrap;gap:32px 48px;align-items:center;justify-content:center;max-width:880px;margin:0 auto}
+  .press-logos img{height:18px;width:auto;max-width:80px;filter:brightness(0) invert(1);opacity:.72;transition:opacity .2s}
+  .press-logos img:hover{opacity:1}
+
+  /* split sections */
+  .split{display:grid;grid-template-columns:.9fr 1.1fr;align-items:stretch;border-top:1px solid var(--line)}
+  .split.flip{grid-template-columns:1.1fr .9fr}
+  .split.flip .split-photo{order:2}
+  .split.flip .split-copy{order:1}
+  .split-photo{overflow:hidden;min-height:480px}
+  .split-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+  .split-copy{padding:72px 56px;display:flex;flex-direction:column;justify-content:center;background:var(--paper)}
+  .split-copy .eyebrow{margin-bottom:14px}
+  .split-copy h2{font-family:var(--display);font-weight:700;font-size:clamp(1.6rem,3vw,2.2rem);color:var(--ink);letter-spacing:-.022em;line-height:1.1;margin-bottom:20px}
+  .split-copy h2 em{font-style:italic;color:var(--gold-deep)}
+  .split-copy p{color:var(--brown);line-height:1.72;margin-bottom:14px}
+  .split-copy blockquote{font-family:var(--display);font-style:italic;font-weight:600;font-size:1.08rem;color:var(--ink);border-left:3px solid var(--gold);padding-left:18px;margin:20px 0 28px;line-height:1.45}
+  .split-copy .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+
+  /* bio box */
+  .bio-box{background:var(--cream-2);border-top:1px solid var(--line);padding:72px 28px}
+  .bio-inner{max-width:820px;margin:0 auto}
+  .bio-inner .eyebrow{margin-bottom:14px}
+  .bio-inner h2{font-family:var(--display);font-weight:700;font-size:clamp(1.5rem,3vw,2rem);color:var(--ink);letter-spacing:-.02em;margin-bottom:24px}
+  .bio-inner p{color:var(--brown);line-height:1.78;margin-bottom:16px;font-size:var(--t-base)}
+  .bio-inner .download-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+
+  /* credentials strip */
+  .creds{background:var(--teal);padding:56px 28px;text-align:center}
+  .creds .eyebrow{color:var(--gold-pale);margin-bottom:24px}
+  .creds-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;max-width:900px;margin:0 auto}
+  .cred{padding:28px 20px;border-right:1px solid rgba(255,255,255,.1)}
+  .cred:last-child{border-right:none}
+  .cred .num{font-family:var(--display);font-weight:700;font-size:2.2rem;color:var(--gold-pale);letter-spacing:-.02em;line-height:1}
+  .cred .label{font-size:var(--t-sm);color:#c8c0b4;margin-top:6px}
+
+  /* speaking topics */
+  .topics{background:var(--cream);border-top:1px solid var(--line);padding:72px 28px}
+  .topics-inner{max-width:var(--max);margin:0 auto}
+  .topics-head{margin-bottom:48px}
+  .topics-head .eyebrow{margin-bottom:12px}
+  .topics-head h2{font-family:var(--display);font-weight:700;font-size:clamp(1.6rem,3vw,2.2rem);color:var(--ink);letter-spacing:-.022em}
+  .topics-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .topic{background:var(--paper);border:1px solid var(--line);border-top:3px solid var(--gold);padding:28px 26px}
+  .topic h3{font-family:var(--display);font-weight:700;font-size:1.05rem;color:var(--ink);margin-bottom:10px;letter-spacing:-.01em}
+  .topic p{font-size:var(--t-sm);color:var(--brown);line-height:1.6;max-width:none}
+
+  /* contact */
+  .contact{background:var(--teal-deep);padding:72px 28px;text-align:center}
+  .contact .eyebrow{color:var(--gold-pale);margin-bottom:14px}
+  .contact h2{font-family:var(--display);font-weight:700;font-size:clamp(1.8rem,3.5vw,2.6rem);color:#fff;letter-spacing:-.022em;margin-bottom:16px}
+  .contact p{color:#c8c0b4;margin:0 auto 32px;font-size:var(--t-md)}
+  .contact .email{font-family:var(--display);font-weight:600;font-size:1.2rem;color:var(--gold-pale);display:block;margin-bottom:32px}
+
+
+  @media(max-width:860px){
+    .hero{height:55vh;min-height:360px}
+    .hero img{object-position:center 20%}
+    .hero-overlay{padding:28px 24px}
+  }
+  @media(max-width:860px){
+    .split,.split.flip{grid-template-columns:1fr}
+    .split-photo{min-height:300px;order:-1}
+    .split.flip .split-photo{order:-1}
+    .split-copy{padding:44px 28px}
+    .creds-grid{grid-template-columns:repeat(2,1fr)}
+    .cred{border-right:none;border-bottom:1px solid rgba(255,255,255,.1)}
+    .topics-grid{grid-template-columns:1fr}
+    .hero-overlay{padding:40px 28px}
+  }
+  /* More dropdown */
+  .more-wrap{position:relative}
+  .more-wrap > button{background:none;border:none;cursor:pointer;font-size:14px;color:var(--cream);font-weight:500;font-family:var(--body);display:flex;align-items:center;gap:5px;padding:0;transition:color .2s}
+  .more-wrap > button:hover{color:var(--gold-pale)}
+  .more-wrap > button svg{transition:transform .2s}
+  .more-wrap.open > button svg{transform:rotate(180deg)}
+  .dropdown{position:absolute;top:calc(100% + 10px);right:0;background:var(--teal-deep);border:1px solid var(--line-dark);border-radius:3px;min-width:180px;padding:6px 0;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .18s,transform .18s;z-index:9999}
+  .more-wrap.open .dropdown{opacity:1;pointer-events:all;transform:none}
+  @media(max-width:860px){.dropdown{position:fixed;top:56px;right:16px}}
+  .dropdown a{display:block;padding:10px 18px;font-size:13px;color:var(--cream);font-weight:500;transition:background .15s,color .15s}
+  .dropdown a:hover{background:var(--teal);color:var(--gold-pale)}
+
+  /* MOBILE NAV */
+  .ham{display:none;background:none;border:none;cursor:pointer;padding:6px;color:var(--cream)}
+  .ham svg{display:block}
+  .mobile-nav{display:none;position:fixed;top:64px;left:0;right:0;background:var(--teal);z-index:9998;padding:16px 0;border-top:1px solid rgba(255,255,255,.1);flex-direction:column}
+  .mobile-nav a{display:block;padding:13px 28px;font-size:15px;color:var(--cream);font-weight:500;font-family:var(--body);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.07)}
+  .mobile-nav a:last-child{border-bottom:none}
+  .mobile-nav a.btn{margin:14px 28px 6px;display:block;background:var(--gold);color:#fff;padding:12px 20px;border-radius:2px;font-weight:600;text-align:center;border:none}
+  .mobile-nav.open{display:flex}
+  @media(max-width:860px){.ham{display:block}.topbar .more-wrap{display:none}.topbar nav > .btn{display:none}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="/" class="logo">Feel Fully <span>You</span></a>
+  <nav>
+    <a href="/">Home</a>
+    <div class="more-wrap" id="workWrap">
+      <button onclick="document.getElementById('workWrap').classList.toggle('open')" aria-expanded="false">
+        Work With Me <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg>
+      </button>
+      <div class="dropdown">
+        <a href="/for-her">For Her</a>
+        <a href="/for-him">For Him</a>
+        <a href="/for-both">For Both</a>
+        <a href="/the-room">The Room</a>
+      </div>
+    </div>
+    <a href="/cards">The Cards</a>
+    <a href="/shop">Shop</a>
+    <div class="more-wrap" id="moreWrap">
+      <button onclick="document.getElementById('moreWrap').classList.toggle('open')" aria-expanded="false">
+        More <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg>
+      </button>
+      <div class="dropdown">
+        <a href="/free-resources">Free Resources</a>
+        <a href="/grief-duality-process">Grief Process</a>
+        <a href="/media-and-pr">Media &amp; PR</a>
+        <a href="/contact">Contact</a>
+      </div>
+    </div>
+    <a href="/work-with-me" class="btn">Start here</a>
+  </nav>
+</div>
+
+
+<nav class="mobile-nav" id="mobileNav">
+  <a href="/">Home</a>
+  <a href="/for-her">For Her</a>
+  <a href="/for-him">For Him</a>
+  <a href="/for-both">For Both</a>
+  <a href="/the-room">The Room</a>
+  <a href="/cards">The Cards</a>
+  <a href="/shop">Shop</a>
+  <a href="/about">About Juliette</a>
+  <a href="/free-resources">Free Resources</a>
+  <a href="/grief-duality-process">Grief Process</a>
+  <a href="/media-and-pr">Media &amp; PR</a>
+  <a href="/contact">Contact</a>
+  <a href="/work-with-me" class="btn">Start here</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/66e824bf63db5c7f51435699.jpeg" alt="Juliette Karaman. Media">
+  <div class="hero-overlay">
+    <p class="reveal" style="font-family:var(--display);font-style:italic;font-weight:600;font-size:clamp(1rem,2vw,1.3rem);color:var(--gold-pale);margin-bottom:16px;letter-spacing:.01em">Touch That Lands. Power That Restores. Truth That Awakens.</p>
+    <h1 class="reveal">Juliette Karaman-<br>van Schaardenburg</h1>
+  </div>
+</section>
+
+<!-- PRESS LOGOS -->
+<section class="press">
+  <div class="eyebrow reveal">As Seen In</div>
+  <div class="press-logos reveal">
+    <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/672266601f25a7590d252591.png" alt="Forbes">
+    <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/6722666046dc7a0bb395dcb1.png" alt="The Times">
+    <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/672266637253cd083c119486.png" alt="The Telegraph">
+    <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/672266609ccb72239f428c53.png" alt="Newsweek">
+    <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/672266600ab7e4e765e90e7f.png" alt="NBC">
+    <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/67226660306434f9c2828ee5.png" alt="ABC">
+    <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/672266627253cd865b119485.png" alt="TED">
+    <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/67226660e141300c3c4236e2.png" alt="Mindvalley">
+    <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/672266609ccb72e4c5428c52.png" alt="Marie Claire">
+    <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/6722666030643409dd828ee6.png" alt="ITV">
+  </div>
+</section>
+
+<!-- CREDENTIALS -->
+<section class="creds">
+  <div class="eyebrow reveal">By the numbers</div>
+  <div class="creds-grid reveal">
+    <div class="cred"><div class="num">27</div><div class="label">Years of practice</div></div>
+    <div class="cred"><div class="num">650+</div><div class="label">Couples worked with</div></div>
+    <div class="cred"><div class="num">20+</div><div class="label">Countries reached</div></div>
+    <div class="cred"><div class="num">Top 2.5%</div><div class="label">Podcast globally</div></div>
+  </div>
+</section>
+
+<!-- MEET THE FOUNDER -->
+<div class="split">
+  <div class="split-photo">
+    <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/681ba624fb8c4616f0414201.jpeg" alt="Juliette Karaman. Founder &amp; CEO">
+  </div>
+  <div class="split-copy">
+    <div class="eyebrow reveal">Meet the Founder &amp; CEO</div>
+    <h2 class="reveal">Juliette Karaman-<em>van Schaardenburg</em></h2>
+    <p class="reveal" style="font-size:var(--t-sm);color:var(--gold-deep);font-weight:600;letter-spacing:.04em;margin-bottom:20px">Speaker | Mentor | Self-Relationship Expert | Podcast Host</p>
+    <p class="reveal">Juliette Karaman is a global voice in intimacy, self-leadership, and somatic reclamation.</p>
+    <p class="reveal">With over 27 years of experience, she supports high-achieving leaders, couples, and visionaries to reignite intimacy, rebuild self-trust, and reconnect with desire, not through effort, but through embodied safety.</p>
+    <p class="reveal">At the heart of her work is Touch Base®, her signature methodology that combines hypnotherapy, EMDR, trauma integration, energetic attunement, and sensual reawakening. Through this somatic framework, clients dissolve shame, release held emotion, and rewire their relationship to power, pleasure, and presence.</p>
+    <p class="reveal">Juliette is the creator of the Rapid Release Rewire &amp; Restore Method® and the host of The Scrumptious Woman® podcast (Top 2.5% worldwide). Her work ranges from private mentorship to luxury retreats, from whispered voice notes to packed keynote rooms.</p>
+    <p class="reveal">Known for her outrageous laugh and unfiltered presence, Juliette bridges the worlds of deep healing and delicious aliveness, helping clients and audiences alike remember who they were before the world told them who to be.</p>
+  </div>
+</div>
+
+<!-- SPEAKING TOPICS -->
+<section class="topics" style="background:var(--teal-deep);padding:80px 28px">
+  <div class="topics-inner" style="max-width:900px;margin:0 auto">
+    <div class="topics-head reveal" style="margin-bottom:48px">
+      <div class="eyebrow" style="color:var(--gold-pale)">Keynote // Topics</div>
+      <h2 style="color:#fff;font-family:var(--display);font-weight:700;font-size:clamp(1.8rem,3.5vw,2.6rem);letter-spacing:-.025em;line-height:1.1;margin-bottom:14px">What Juliette speaks on.</h2>
+      <p style="color:#c8c0b4;max-width:62ch">Juliette brings honesty, depth, and aliveness to every stage she graces. Her sessions are experiential, trauma-informed, and infused with lived wisdom, leaving audiences transformed, not just inspired.</p>
+    </div>
+    <div style="display:flex;flex-direction:column">
+      <div class="topic reveal" style="background:transparent;border:none;border-top:1px solid rgba(255,255,255,.1);border-radius:0;padding:32px 0">
+        <div style="font-size:var(--t-xs);letter-spacing:.2em;color:var(--gold-pale);font-weight:700;margin-bottom:10px">01</div>
+        <h3 style="color:#fff;font-size:1.1rem;margin-bottom:10px">Touch Base®: The Missing Link to Intimacy, Safety &amp; Self-Trust</h3>
+        <p style="font-style:italic;color:#a09890;margin-bottom:10px;max-width:none">True intimacy doesn't start with desire, it begins with safety.</p>
+        <p style="color:#c8c0b4;max-width:64ch">Discover how the Touch Base® method rewires relational patterns and restores embodied trust. A keynote that demystifies emotional intimacy and gives audiences a felt sense of how connection actually lands.</p>
+      </div>
+      <div class="topic reveal" style="background:transparent;border:none;border-top:1px solid rgba(255,255,255,.1);border-radius:0;padding:32px 0">
+        <div style="font-size:var(--t-xs);letter-spacing:.2em;color:var(--gold-pale);font-weight:700;margin-bottom:10px">02</div>
+        <h3 style="color:#fff;font-size:1.1rem;margin-bottom:10px">When She Pulls Away: Unspoken Trauma &amp; the Path to True Safety</h3>
+        <p style="font-style:italic;color:#a09890;margin-bottom:10px;max-width:none">Why intimacy strains when trauma is unspoken, and how to meet it with presence, not pressure.</p>
+        <p style="color:#c8c0b4;max-width:64ch">Ideal for couples, therapists, and anyone longing to deepen connection, this talk offers powerful reframes and tools to meet disconnection with attunement.</p>
+      </div>
+      <div class="topic reveal" style="background:transparent;border:none;border-top:1px solid rgba(255,255,255,.1);border-radius:0;padding:32px 0">
+        <div style="font-size:var(--t-xs);letter-spacing:.2em;color:var(--gold-pale);font-weight:700;margin-bottom:10px">03</div>
+        <h3 style="color:#fff;font-size:1.1rem;margin-bottom:10px">Healing Shame Through Sensual Empowerment</h3>
+        <p style="font-style:italic;color:#a09890;margin-bottom:10px;max-width:none">For the woman who's done the work, but still doesn't feel free in her body.</p>
+        <p style="color:#c8c0b4;max-width:64ch">This keynote invites participants into a radically new relationship with their body, where pleasure isn't performance, but permission. Juliette shares real-world tools to unwind shame, awaken sensation, and reclaim your erotic wholeness.</p>
+      </div>
+      <div class="topic reveal" style="background:transparent;border:none;border-top:1px solid rgba(255,255,255,.1);border-radius:0;padding:32px 0">
+        <div style="font-size:var(--t-xs);letter-spacing:.2em;color:var(--gold-pale);font-weight:700;margin-bottom:10px">04</div>
+        <h3 style="color:#fff;font-size:1.1rem;margin-bottom:10px">Life After Loss: How Grief Becomes the Gateway to Joy</h3>
+        <p style="font-style:italic;color:#a09890;margin-bottom:10px;max-width:none">Divorce, death, rupture, this is not the end.</p>
+        <p style="color:#c8c0b4;max-width:64ch">With deep compassion and lived experience, Juliette guides audiences through how grief, identity shifts, and life transitions can be portals to embodiment, joy, and radical self-trust.</p>
+      </div>
+      <div class="topic reveal" style="background:transparent;border:none;border-top:1px solid rgba(255,255,255,.1);border-bottom:1px solid rgba(255,255,255,.1);border-radius:0;padding:32px 0">
+        <div style="font-size:var(--t-xs);letter-spacing:.2em;color:var(--gold-pale);font-weight:700;margin-bottom:10px">05</div>
+        <h3 style="color:#fff;font-size:1.1rem;margin-bottom:10px">She Wants to Want You: Why Women Micromanage Intimacy &amp; How to Shift It</h3>
+        <p style="font-style:italic;color:#a09890;margin-bottom:10px;max-width:none">For the woman who longs to receive but can't stop controlling.</p>
+        <p style="color:#c8c0b4;max-width:64ch">This talk explores how over-functioning kills desire, and how to move from micromanaging into surrender. For women, couples, and anyone ready to reclaim intimacy that feels alive.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUSTED BY -->
+<section style="background:var(--cream-2);padding:64px 28px;text-align:center;border-bottom:1px solid var(--line)">
+  <div class="eyebrow reveal" style="margin-bottom:14px">Credibility</div>
+  <h2 class="reveal" style="font-family:var(--display);font-weight:700;font-size:clamp(1.5rem,3vw,2rem);color:var(--ink);letter-spacing:-.022em;max-width:36ch;margin:0 auto 14px">Trusted by Visionaries &amp; Industry Leaders</h2>
+  <p class="reveal" style="max-width:56ch;margin:0 auto">Juliette works with high-profile individuals, therapists, entrepreneurs, and changemakers across the globe, offering profound transformation with unmatched discretion.</p>
+</section>
+
+<!-- BOOK JULIETTE -->
+<div class="split flip" style="background:var(--teal)">
+  <div class="split-photo">
+    <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/67a47ab0d78c087f99a5d4d4.jpeg" alt="Book Juliette">
+  </div>
+  <div class="split-copy" style="background:var(--teal)">
+    <div class="eyebrow reveal" style="color:var(--gold-pale)">Bookings</div>
+    <h2 class="reveal" style="color:#fff">Book Juliette</h2>
+    <p class="reveal" style="color:#c8c0b4">Whether for your next podcast, panel, summit, retreat, or private mastermind, Juliette brings a blend of sacred truth, playful storytelling, and embodied transmission that leaves people forever changed.</p>
+    <p class="reveal" style="color:#ddd8d0;font-weight:600;margin-top:20px;margin-bottom:8px">Her clients leave with:</p>
+    <ul class="reveal" style="list-style:none;margin-bottom:28px;display:flex;flex-direction:column;gap:10px">
+      <li style="color:#ddd8d0;font-size:var(--t-sm);padding-left:20px;position:relative"><span style="position:absolute;left:0;color:var(--gold-pale)">, </span>Deep emotional safety in their bodies</li>
+      <li style="color:#ddd8d0;font-size:var(--t-sm);padding-left:20px;position:relative"><span style="position:absolute;left:0;color:var(--gold-pale)">, </span>Intimacy that flows instead of fractures</li>
+      <li style="color:#ddd8d0;font-size:var(--t-sm);padding-left:20px;position:relative"><span style="position:absolute;left:0;color:var(--gold-pale)">, </span>A felt sense of personal power and erotic intelligence</li>
+    </ul>
+    <div style="display:flex;flex-wrap:wrap;gap:12px" class="reveal">
+      <a href="mailto:support@feelfullyyou.com?subject=Media%20Kit%20Request" class="btn" style="background:transparent;border:1.5px solid rgba(221,201,142,.5);color:var(--gold-pale)">Request Media Kit</a>
+      <a href="mailto:support@feelfullyyou.com?subject=Speaking%20Enquiry" class="btn">Book her to Speak</a>
+    </div>
+    <div style="margin-top:14px;display:flex;gap:12px;flex-wrap:wrap" class="reveal">
+      <a href="https://open.spotify.com/show/50jFN83FxoNm0UXiryqkJW?si=68e13037ba3b4ea0" target="_blank" class="btn" style="background:transparent;border:1.5px solid rgba(221,201,142,.5);color:var(--gold-pale)">Listen to Podcast</a>
+      <a href="https://substack.com/@juliettekaraman" target="_blank" class="btn" style="background:transparent;border:1.5px solid rgba(221,201,142,.5);color:var(--gold-pale)">Read on Substack</a>
+    </div>
+  </div>
+</div>
+
+<footer style="background:#a88538;color:#fff;padding:22px 32px;font-size:13px">
+  <div style="max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+    <div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:0.95rem;color:#fff;letter-spacing:-.01em">Feel Fully You</div>
+    <div style="font-size:12px;color:rgba(255,255,255,.85);display:flex;gap:16px;align-items:center"><a href="mailto:support@feelfullyyou.com" style="color:#fff;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(255,255,255,.5)">support@feelfullyyou.com</a><a href="https://feelfullyyou.com/terms" style="color:rgba(255,255,255,.75);text-decoration:none" target="_blank" rel="noopener">Terms</a></div>
+    <div style="display:flex;gap:14px;align-items:center">
+      <a href="https://www.instagram.com/juliettekaraman/" aria-label="Instagram" style="color:rgba(255,255,255,.85);display:flex;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+      <a href="https://www.facebook.com/juliette.karamanvanschaardenburg" aria-label="Facebook" style="color:rgba(255,255,255,.85);display:flex;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+      <a href="https://www.linkedin.com/in/juliette-karaman-van-schaardenburg-89399913b" aria-label="LinkedIn" style="color:rgba(255,255,255,.85);display:flex;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+      <a href="https://www.tiktok.com/@juliettekaraman" aria-label="TikTok" style="color:rgba(255,255,255,.85);display:flex;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+      <a href="https://substack.com/@juliettekaraman" aria-label="Substack" style="color:rgba(255,255,255,.85);display:flex;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 17.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const io = new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+<script>
+(function(){
+  var btn=document.getElementById('hamBtn');
+  var nav=document.getElementById('mobileNav');
+  if(btn&&nav){btn.addEventListener('click',function(){nav.classList.toggle('open');btn.setAttribute('aria-expanded',nav.classList.contains('open'))});}
+})();
+</script>
+</body>
+</html>

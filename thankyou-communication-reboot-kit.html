@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Communication Reboot Kit · Feel Fully You</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:ital,wght@0,400;0,600;0,700;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fefcfa;
+    --ink:#1c1714;
+    --brown:#5d4a33;
+    --gold:#a88538;
+    --gold-deep:#99680c;
+    --gold-soft:#b4a074;
+    --gold-pale:#ddc98e;
+    --teal:#0d3535;
+    --teal-deep:#061a1a;
+    --line:#e3dccf;
+    --display:'Poppins',system-ui,sans-serif;
+    --body:'Inter',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--cream);color:var(--brown);font-family:var(--body);font-size:17px;line-height:1.75;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+
+  .topbar{position:fixed;top:0;left:0;right:0;z-index:9999;background:var(--teal);padding:0 28px;height:64px;display:flex;align-items:center;justify-content:space-between}
+  .topbar .brand{font-family:var(--display);font-weight:700;font-size:16px;letter-spacing:.02em;color:var(--cream)}
+  .topbar .brand b{color:var(--gold-pale)}
+
+  /* HERO */
+  .hero{padding:100px 28px 56px;text-align:center;max-width:640px;margin:0 auto}
+  .check{width:64px;height:64px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;margin:0 auto 28px}
+  .check svg{width:28px;height:28px;stroke:#fff;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+  .eyebrow{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:16px}
+  h1{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,4.5vw,2.8rem);color:var(--ink);line-height:1.06;letter-spacing:-.022em;margin-bottom:20px}
+  .hero-sub{font-size:18px;color:var(--brown);max-width:46ch;margin:0 auto;line-height:1.65}
+
+  /* GUIDE CARD */
+  .guide-wrap{max-width:580px;margin:48px auto 0;padding:0 28px}
+  .guide-card{background:var(--teal);border-radius:4px;padding:36px 32px}
+  .guide-card .label{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-pale);font-weight:600;margin-bottom:14px}
+  .guide-card h2{font-family:var(--display);font-weight:700;font-size:1.5rem;color:#fff;margin-bottom:10px;letter-spacing:-.01em}
+  .guide-card p{font-size:15px;color:rgba(255,255,255,.75);line-height:1.6;margin-bottom:28px;max-width:52ch}
+  .btn-download{display:inline-block;background:var(--gold);color:#fff;font-family:var(--body);font-weight:700;font-size:16px;padding:16px 40px;border-radius:2px;letter-spacing:.01em;transition:background .2s,transform .2s}
+  .btn-download:hover{background:var(--gold-deep);transform:translateY(-2px)}
+
+  /* WHAT'S INSIDE */
+  .inside{max-width:580px;margin:56px auto 0;padding:0 28px}
+  .inside-label{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:20px}
+  .module{padding:18px 0;border-bottom:1px solid var(--line);display:flex;gap:16px;align-items:flex-start}
+  .module:last-child{border-bottom:none}
+  .module-dot{min-width:8px;height:8px;border-radius:50%;background:var(--gold);margin-top:7px}
+  .module-text h3{font-family:var(--display);font-weight:600;font-size:16px;color:var(--ink);margin-bottom:4px}
+  .module-text p{font-size:15px;color:var(--brown);line-height:1.6}
+
+  /* SIGNOFF */
+  .signoff{text-align:center;padding:56px 28px 40px;max-width:520px;margin:0 auto}
+  .signoff p{font-size:17px;color:var(--brown);margin-bottom:8px;line-height:1.7}
+  .signoff .name{font-family:var(--display);font-weight:600;font-size:20px;color:var(--gold-deep);margin-top:14px}
+
+  /* NEXT STEPS */
+  .next{max-width:580px;margin:0 auto 72px;padding:0 28px}
+  .next-label{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:20px;text-align:center}
+  .next-row{display:flex;align-items:center;justify-content:space-between;border:1px solid var(--line);border-radius:3px;padding:20px 22px;margin-bottom:12px;background:#fff;transition:border-color .2s}
+  .next-row:hover{border-color:var(--gold-soft)}
+  .next-row-text h3{font-family:var(--display);font-weight:600;font-size:16px;color:var(--ink);margin-bottom:3px}
+  .next-row-text p{font-size:14px;color:var(--gold-soft)}
+  .next-arr{color:var(--gold);font-size:18px;margin-left:16px}
+
+  footer{background:var(--gold);color:#fff;padding:22px 32px;font-size:13px}
+  footer .inner{max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  footer .brand{font-family:var(--display);font-weight:700;font-size:.95rem;color:#fff}
+  footer a{color:rgba(255,255,255,.75);text-decoration:none}
+
+  /* MOBILE NAV */
+  .ham{display:none;background:none;border:none;cursor:pointer;padding:6px;color:var(--cream)}
+  .ham svg{display:block}
+  .mobile-nav{display:none;position:fixed;top:64px;left:0;right:0;background:var(--teal);z-index:9998;padding:16px 0;border-top:1px solid rgba(255,255,255,.1);flex-direction:column}
+  .mobile-nav a{display:block;padding:13px 28px;font-size:15px;color:var(--cream);font-weight:500;font-family:var(--body);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.07)}
+  .mobile-nav a:last-child{border-bottom:none}
+  .mobile-nav a.btn{margin:14px 28px 6px;display:block;background:var(--gold);color:#fff;padding:12px 20px;border-radius:2px;font-weight:600;text-align:center;border:none}
+  .mobile-nav.open{display:flex}
+  @media(max-width:860px){.ham{display:block}.topbar nav > .btn{display:none}}
+
+  @media(max-width:600px){
+    .hero{padding:80px 20px 40px}
+    .guide-wrap,.inside,.next,.signoff{padding-left:20px;padding-right:20px}
+    .guide-card{padding:28px 20px}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand">Feel Fully <b>You</b>
+  <button class="ham" id="hamBtn" aria-label="Open menu" aria-expanded="false">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+</div>
+</div>
+
+<nav class="mobile-nav" id="mobileNav">
+  <a href="/">Home</a>
+  <a href="/work-with-me" class="btn">Start here</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="check">
+    <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+  </div>
+  <div class="eyebrow">Payment confirmed</div>
+  <h1>Your Communication Reboot Kit is ready.</h1>
+  <p class="hero-sub">Everything is below. Open it now and start with the first section — you don't need to read it all at once.</p>
+</div>
+
+<!-- GUIDE CARD -->
+<div class="guide-wrap">
+  <div class="guide-card">
+    <div class="label">Communication Reboot Kit</div>
+    <h2>The complete guide</h2>
+    <p>The practices, prompts, and frameworks for couples who have stopped being able to reach each other. Structured, body-based, and designed to be used together.</p>
+    <a href="https://docs.google.com/document/d/1Jrt7ch8D7kyuCgYr5uIqBHEnO6ZcHQyLyZ_bwaWUL50/copy" class="btn-download" target="_blank" rel="noopener">Open your kit →</a>
+  </div>
+</div>
+
+<!-- WHAT'S INSIDE -->
+<div class="inside">
+  <div class="inside-label">What's in the kit</div>
+  <div class="module">
+    <div class="module-dot"></div>
+    <div class="module-text">
+      <h3>Why communication breaks down</h3>
+      <p>The nervous system patterns that make couples talk past each other — and why trying harder makes it worse.</p>
+    </div>
+  </div>
+  <div class="module">
+    <div class="module-dot"></div>
+    <div class="module-text">
+      <h3>The three conversations underneath the argument</h3>
+      <p>Most couples are having the wrong conversation. This names the real one.</p>
+    </div>
+  </div>
+  <div class="module">
+    <div class="module-dot"></div>
+    <div class="module-text">
+      <h3>Prompts that open rather than close</h3>
+      <p>Specific language for moments when everything you say lands wrong.</p>
+    </div>
+  </div>
+  <div class="module">
+    <div class="module-dot"></div>
+    <div class="module-text">
+      <h3>The body-first approach</h3>
+      <p>How to regulate before you speak — so the words actually land.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SIGNOFF -->
+<div class="signoff">
+  <p>This is the beginning. Come back to it when conversations feel stuck. The answers are already between you — this just helps you find them.</p>
+  <p style="margin-top:14px">Any questions, email <a href="mailto:support@feelfullyyou.com" style="color:var(--gold-deep)">support@feelfullyyou.com</a></p>
+  <div class="name">Warmly, Juliette</div>
+</div>
+
+<!-- NEXT STEPS -->
+<div class="next">
+  <div class="next-label">If you want to go further</div>
+  <a href="/the-unspoken-distance" class="next-row">
+    <div class="next-row-text">
+      <h3>The Unspoken Distance</h3>
+      <p>For men who want to understand how to reach her — £97</p>
+    </div>
+    <span class="next-arr">→</span>
+  </a>
+  <a href="/cards" class="next-row">
+    <div class="next-row-text">
+      <h3>Intimacy &amp; Communication Cards</h3>
+      <p>Prompts that open the conversation — from £15</p>
+    </div>
+    <span class="next-arr">→</span>
+  </a>
+  <a href="/work-with-me" class="next-row">
+    <div class="next-row-text">
+      <h3>Work with Juliette</h3>
+      <p>Couples intensive, Women's intensive, or The Room</p>
+    </div>
+    <span class="next-arr">→</span>
+  </a>
+</div>
+
+<footer>
+  <div class="inner">
+    <div class="brand">Feel Fully You</div>
+    <div style="font-size:12px;display:flex;gap:16px">
+      <a href="mailto:support@feelfullyyou.com" style="color:#fff;text-decoration:underline;text-underline-offset:3px">support@feelfullyyou.com</a>
+      <a href="/terms">Terms</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var btn=document.getElementById('hamBtn');
+  var nav=document.getElementById('mobileNav');
+  if(btn&&nav){btn.addEventListener('click',function(){var o=nav.classList.toggle('open');btn.setAttribute('aria-expanded',o)})}
+</script>
+</body>
+</html>

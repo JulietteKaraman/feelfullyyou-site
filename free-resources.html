@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Resources. Feel Fully You · Juliette Karaman</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fefcfa; --cream-2:#f6f4f1; --paper:#fdfbf8;
+    --ink:#1c1714; --brown:#5d4a33;
+    --gold:#a88538; --gold-deep:#99680c; --gold-soft:#b4a074; --gold-pale:#ddc98e;
+    --teal:#0d3535;
+    --blue:#d8dfe1; --teal-deep:#061a1a; --black:#000;
+    --line:#e3dccf; --line-dark:#1d3a39; --max:1140px;
+    --display:'Poppins',system-ui,sans-serif; --body:'Inter',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--brown);font-family:var(--body);font-size:1.0625rem;line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  /* nav */
+  .topbar{position:fixed;top:0;left:0;right:0;z-index:9999;background:var(--teal);padding:0 28px;height:64px;display:flex;align-items:center;justify-content:space-between}
+  .topbar .brand{font-family:var(--display);font-weight:700;font-size:16px;letter-spacing:.02em;color:var(--cream)}
+  .topbar .brand b{color:var(--gold-pale)}
+  .topbar nav{display:flex;gap:26px;align-items:center}
+  .topbar nav a{font-size:14px;color:var(--cream);font-weight:500;transition:color .2s}
+  .topbar nav a:hover{color:var(--gold-pale)}
+  .topbar nav a.btn{background:var(--gold);color:#fff;padding:10px 20px;border-radius:2px;font-weight:600}
+  .topbar nav a.btn:hover{background:var(--gold-deep)}
+  @media(max-width:860px){.topbar nav > a:not(.btn){display:none}}
+  .topbar nav a:hover,.topbar nav a.active{color:var(--gold-pale)}
+  @media(max-width:860px){.topbar nav a:not(.cta-nav){display:none}}
+  .cta-nav{background:var(--gold);color:#fff!important;padding:8px 18px;border-radius:2px;font-weight:600;font-size:13px!important}
+
+  /* hero */
+  .hero{padding-top:64px;padding:130px 28px 72px;background:var(--teal-deep);text-align:center}
+  .hero .eyebrow{font-size:0.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-pale);font-weight:600;margin-bottom:14px}
+  .hero h1{font-family:var(--display);font-size:clamp(2rem,5vw,3.2rem);font-weight:800;color:#fff;letter-spacing:-.025em;line-height:1.06;margin-bottom:16px}
+  .hero p{font-size:1.1rem;color:rgba(255,255,255,.72);max-width:52ch;margin:0 auto;line-height:1.7}
+
+  /* grid */
+  .resources{padding:80px 28px 96px;max-width:var(--max);margin:0 auto}
+  .resources-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;margin-top:56px}
+  @media(max-width:900px){.resources-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:580px){.resources-grid{grid-template-columns:1fr}}
+
+  .card{background:#fff;border:1px solid var(--line);border-radius:4px;overflow:hidden;display:flex;flex-direction:column}
+  .card-img{aspect-ratio:4/3;overflow:hidden}
+  .card-img img{width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .6s ease}
+  .card:hover .card-img img{transform:scale(1.04)}
+  .card-body{padding:28px 28px 32px;flex:1;display:flex;flex-direction:column}
+  .card-tag{font-size:0.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:10px}
+  .card-body h3{font-family:var(--display);font-weight:700;font-size:1.25rem;color:var(--ink);line-height:1.15;letter-spacing:-.015em;margin-bottom:10px}
+  .card-body p{font-size:0.94rem;color:var(--brown);line-height:1.68;flex:1;margin-bottom:24px}
+  .card-cta{display:inline-block;border:1.5px solid var(--teal);color:var(--teal);font-family:var(--body);font-weight:600;font-size:0.85rem;padding:11px 22px;border-radius:2px;letter-spacing:.04em;text-transform:uppercase;transition:background .2s,color .2s;align-self:flex-start}
+  .card-cta:hover{background:var(--teal);color:#fff}
+
+  /* between touches — no photo fallback */
+  .card.no-photo .card-img{background:var(--teal-deep);display:flex;align-items:center;justify-content:center}
+  .card.no-photo .card-img-placeholder{color:var(--gold-pale);font-size:2.5rem;opacity:.4;font-family:var(--display);font-weight:700;text-align:center}
+  /* More dropdown */
+  .more-wrap{position:relative}
+  .more-wrap > button{background:none;border:none;cursor:pointer;font-size:14px;color:var(--cream);font-weight:500;font-family:var(--body);display:flex;align-items:center;gap:5px;padding:0;transition:color .2s}
+  .more-wrap > button:hover{color:var(--gold-pale)}
+  .more-wrap > button svg{transition:transform .2s}
+  .more-wrap.open > button svg{transform:rotate(180deg)}
+  .dropdown{position:absolute;top:calc(100% + 10px);right:0;background:var(--teal-deep);border:1px solid var(--line-dark);border-radius:3px;min-width:180px;padding:6px 0;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .18s,transform .18s;z-index:9999}
+  .more-wrap.open .dropdown{opacity:1;pointer-events:all;transform:none}
+  @media(max-width:860px){.dropdown{position:fixed;top:56px;right:16px}}
+  .dropdown a{display:block;padding:10px 18px;font-size:13px;color:var(--cream);font-weight:500;transition:background .15s,color .15s}
+  .dropdown a:hover{background:var(--teal);color:var(--gold-pale)}
+
+  /* MOBILE NAV */
+  .ham{display:none;background:none;border:none;cursor:pointer;padding:6px;color:var(--cream)}
+  .ham svg{display:block}
+  .mobile-nav{display:none;position:fixed;top:64px;left:0;right:0;background:var(--teal);z-index:9998;padding:16px 0;border-top:1px solid rgba(255,255,255,.1);flex-direction:column}
+  .mobile-nav a{display:block;padding:13px 28px;font-size:15px;color:var(--cream);font-weight:500;font-family:var(--body);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.07)}
+  .mobile-nav a:last-child{border-bottom:none}
+  .mobile-nav a.btn{margin:14px 28px 6px;display:block;background:var(--gold);color:#fff;padding:12px 20px;border-radius:2px;font-weight:600;text-align:center;border:none}
+  .mobile-nav.open{display:flex}
+  @media(max-width:860px){.ham{display:block}.topbar .more-wrap{display:none}.topbar nav > .btn{display:none}}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <a href="/" class="brand">Feel Fully You</a>
+  <button class="ham" id="hamBtn" aria-label="Open menu" aria-expanded="false">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+  <nav>
+    <a href="/">Home</a>
+    <div class="more-wrap" id="workWrap">
+      <button onclick="document.getElementById('workWrap').classList.toggle('open')" aria-expanded="false">
+        Work With Me <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg>
+      </button>
+      <div class="dropdown">
+        <a href="/for-her">For Her</a>
+        <a href="/for-him">For Him</a>
+        <a href="/for-both">For Both</a>
+        <a href="/the-room">The Room</a>
+      </div>
+    </div>
+    <a href="/cards">The Cards</a>
+    <a href="/shop">Shop</a>
+    <div class="more-wrap" id="moreWrap">
+      <button onclick="document.getElementById('moreWrap').classList.toggle('open')" aria-expanded="false">
+        More <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg>
+      </button>
+      <div class="dropdown">
+        <a href="/free-resources">Free Resources</a>
+        <a href="/grief-duality-process">Grief Process</a>
+        <a href="/media-and-pr">Media &amp; PR</a>
+        <a href="/contact">Contact</a>
+      </div>
+    </div>
+    <a href="/work-with-me" class="btn">Start here</a>
+  </nav>
+</header>
+<nav class="mobile-nav" id="mobileNav">
+  <a href="/">Home</a>
+  <a href="/for-her">For Her</a>
+  <a href="/for-him">For Him</a>
+  <a href="/for-both">For Both</a>
+  <a href="/the-room">The Room</a>
+  <a href="/cards">The Cards</a>
+  <a href="/shop">Shop</a>
+  <a href="/about">About Juliette</a>
+  <a href="/free-resources">Free Resources</a>
+  <a href="/grief-duality-process">Grief Process</a>
+  <a href="/media-and-pr">Media &amp; PR</a>
+  <a href="/contact">Contact</a>
+  <a href="/work-with-me" class="btn">Start here</a>
+</nav>
+
+<section class="hero">
+  <div class="eyebrow reveal">Free gifts for you</div>
+  <h1 class="reveal">Start here.</h1>
+  <p class="reveal">Practical tools, guides, and practices, all free, all body-based. Take what calls to you.</p>
+</section>
+
+<section class="resources">
+  <div class="resources-grid">
+
+    <!-- Touch Base Anchor -->
+    <div class="card reveal">
+      <div class="card-img">
+        <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/69626d6ec7683bbedc56e6b9.png" alt="Touch Base Anchor">
+      </div>
+      <div class="card-body">
+        <div class="card-tag">Free practice</div>
+        <h3>Touch Base Anchor</h3>
+        <p>Press your thumb to your forefinger. Feel every ridge, slowly. Remember you are safe. Two minutes that bring you home to yourself, anywhere, any time.</p>
+        <a href="/touch-base-anchor" class="card-cta">Get the guide</a>
+      </div>
+    </div>
+
+    <!-- Pick a Card -->
+    <div class="card reveal">
+      <div class="card-img">
+        <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/69c19e4c55ffd241d2bbed6f.png" alt="Pick a Card, free taster deck">
+      </div>
+      <div class="card-body">
+        <div class="card-tag">Free taster</div>
+        <h3>Pick a Card</h3>
+        <p>Ten cards from the Intimacy and Communication deck. Pull one, read it aloud, and let the question land. A taster of what's possible when you slow down and really listen.</p>
+        <a href="https://couplecards.netlify.app/free" class="card-cta" target="_blank" rel="noopener">Pull a card</a>
+      </div>
+    </div>
+
+    <!-- When She Goes Quiet -->
+    <div class="card reveal">
+      <div class="card-img">
+        <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/6a2149ffda24932f120889a5.png" alt="When She Goes Quiet, free guide">
+      </div>
+      <div class="card-body">
+        <div class="card-tag">Free guide</div>
+        <h3>When She Goes Quiet</h3>
+        <p>For the man who wants to reach her but doesn't know how. A short, honest guide on what her silence is really saying, and what to do instead of pushing harder.</p>
+        <a href="/when-she-goes-quiet" class="card-cta">Read the guide</a>
+      </div>
+    </div>
+
+    <!-- Between Touches -->
+    <div class="card reveal">
+      <div class="card-img">
+        <img src="/between-touches-cover.png" alt="Between Touches, free guide">
+      </div>
+      <div class="card-body">
+        <div class="card-tag">Free guide</div>
+        <h3>Between Touches</h3>
+        <p>What happens in the space between moments of connection? This guide helps you stay present, with yourself, with your partner, even when life gets loud and close contact feels far away.</p>
+        <a href="/between-touches" class="card-cta">Get the guide</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer style="background:#a88538;color:#fff;padding:22px 32px;font-size:13px">
+  <div style="max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+    <div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:0.95rem;color:#fff;letter-spacing:-.01em">Feel Fully You</div>
+    <div style="font-size:12px;color:rgba(255,255,255,.85);display:flex;gap:16px;align-items:center">
+      <a href="mailto:support@feelfullyyou.com" style="color:#fff;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(255,255,255,.5)">support@feelfullyyou.com</a>
+      <a href="https://feelfullyyou.com/terms" style="color:rgba(255,255,255,.75);text-decoration:none" target="_blank" rel="noopener">Terms</a>
+    </div>
+    <div style="display:flex;gap:14px;align-items:center">
+      <a href="https://www.instagram.com/juliettekaraman/" target="_blank" rel="noopener" style="color:#fff;display:flex;align-items:center" aria-label="Instagram">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      </a>
+      <a href="https://www.facebook.com/juliette.karamanvanschaardenburg" target="_blank" rel="noopener" style="color:#fff;display:flex;align-items:center" aria-label="Facebook">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/juliette-karaman-van-schaardenburg-89399913b" target="_blank" rel="noopener" style="color:#fff;display:flex;align-items:center" aria-label="LinkedIn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      </a>
+      <a href="https://www.tiktok.com/@juliettekaraman" target="_blank" rel="noopener" style="color:#fff;display:flex;align-items:center" aria-label="TikTok">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.79a4.85 4.85 0 0 1-1.01-.1z"/></svg>
+      </a>
+      <a href="https://substack.com/@juliettekaraman" target="_blank" rel="noopener" style="color:#fff;display:flex;align-items:center" aria-label="Substack">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target); } });
+}, {threshold:0.12});
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+<script>
+(function(){
+  var btn=document.getElementById('hamBtn');
+  var nav=document.getElementById('mobileNav');
+  if(btn&&nav){btn.addEventListener('click',function(){nav.classList.toggle('open');btn.setAttribute('aria-expanded',nav.classList.contains('open'))});}
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Touch Point: The private membership for men</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    /* Juliette's real palette, pulled from her live page */
+    --cream:#fefcfa;
+    --cream-2:#f6f4f1;
+    --paper:#fdfbf8;
+    --ink:#1c1714;          /* near-black brown for body */
+    --brown:#5d4a33;        /* warm brown body text on cream */
+    --gold:#a88538;
+    --gold-deep:#99680c;
+    --gold-soft:#b4a074;
+    --gold-pale:#ddc98e;
+    --teal:#0d3535;         /* deep teal-green bar */
+    --blue:#d8dfe1;         /* light blue-grey for testimonial cards */
+    --teal-deep:#061a1a;
+    --black:#000000;
+    --line:#e3dccf;
+    --line-dark:#1d3a39;
+    --max:1140px;
+    /* type system — fonts */
+    --display:'Poppins',system-ui,sans-serif;
+    --body:'Inter',system-ui,sans-serif;
+    /* modular scale, ratio ~1.25 (major third) */
+    --t-xs:0.78rem;     /* 12.5px — eyebrows / captions */
+    --t-sm:0.94rem;     /* 15px — small text */
+    --t-base:1.0625rem; /* 17px — body */
+    --t-md:1.2rem;      /* 19px — lead paragraphs */
+    --t-lg:1.5rem;      /* 24px — h3 */
+    --t-xl:2.05rem;     /* 33px — h2 small */
+    --t-2xl:2.75rem;    /* 44px — h2 */
+    --t-3xl:3.6rem;     /* 58px — display */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--cream);color:var(--brown);
+    font-family:var(--body);font-size:var(--t-base);font-weight:400;line-height:1.62;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden;
+    letter-spacing:-0.003em;
+  }
+  ::selection{background:var(--gold);color:#fff}
+  a{color:inherit}
+  img{max-width:100%;display:block}
+  p{max-width:62ch}
+
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+  .narrow{max-width:720px;margin:0 auto;padding:0 28px}
+  section{position:relative}
+
+  .eyebrow{font-family:var(--body);font-size:var(--t-xs);letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);font-weight:600}
+  h1,h2,h3{font-family:var(--display);font-weight:700;color:var(--ink)}
+  h1,h2{line-height:1.06;letter-spacing:-.022em}
+  h2{font-size:clamp(2rem,4.8vw,var(--t-2xl));margin-bottom:26px}
+  h2 .gold{color:var(--gold-deep)}
+  h3{font-size:var(--t-lg);line-height:1.18;letter-spacing:-.015em;font-weight:600}
+  .serif{font-family:var(--display)}
+  em{font-style:italic}
+  strong{font-weight:700;color:var(--ink)}
+
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  /* top teal bar (matches her site chrome) */
+  .topbar{position:fixed;top:0;left:0;right:0;z-index:9999;background:var(--teal);padding:0 28px;height:64px;display:flex;align-items:center;justify-content:space-between}
+  .topbar .brand{font-family:var(--display);font-weight:700;font-size:16px;letter-spacing:.02em;color:var(--cream)}
+  .topbar .brand b{color:var(--gold-pale)}
+  .topbar nav{display:flex;gap:26px;align-items:center}
+  .topbar nav a{font-size:14px;color:var(--cream);font-weight:500;transition:color .2s}
+  .topbar nav a:hover{color:var(--gold-pale)}
+  .topbar nav a.btn{background:var(--gold);color:#fff;padding:10px 20px;border-radius:2px;font-weight:600}
+  .topbar nav a.btn:hover{background:var(--gold-deep)}
+  @media(max-width:860px){.topbar nav > a:not(.btn){display:none}}
+  .btn{display:inline-block;text-decoration:none;cursor:pointer;border:none;font-family:var(--body);font-weight:600;font-size:var(--t-sm);letter-spacing:.01em;padding:13px 26px;border-radius:2px;background:var(--gold);color:#fff;transition:transform .25s,background .25s;white-space:nowrap}
+  .btn:hover{background:var(--gold-deep);transform:translateY(-1px)}
+  .btn.ghost{background:transparent;border:1px solid var(--gold);color:var(--gold-deep)}
+  .btn.ghost:hover{background:var(--gold);color:#fff}
+
+  /* HERO — her black logo card + tagline, on cream */
+  .hero{padding-top:64px;padding:118px 0 70px;background:var(--cream)}
+  .hero .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center}
+  .hero .logo-card{border-radius:4px;overflow:hidden;background:var(--black);box-shadow:0 30px 70px -30px rgba(0,0,0,.5)}
+  .hero .logo-card img{width:100%}
+  .hero .tag{font-family:var(--display);font-weight:600;font-size:clamp(1.4rem,2.6vw,2rem);letter-spacing:-.02em;line-height:1.22;color:var(--ink)}
+  .hero .price-line{margin-top:30px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+  .hero .price-line .p{font-family:var(--display);font-weight:700;font-size:1.7rem;color:var(--ink);letter-spacing:-.01em}
+  .hero .price-line .p span{font-weight:400;font-size:.6em;color:var(--gold-deep)}
+  .hero .price-line .tag2{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep);border:1px solid var(--gold-soft);padding:6px 12px;border-radius:2px}
+  .hero-cta{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
+
+  /* THESIS — love doesn't have to turn into war */
+  .thesis{padding:92px 0;border-top:1px solid var(--line)}
+  .thesis h2{max-width:18ch}
+  .thesis p{max-width:60ch;margin-bottom:18px;color:var(--brown);font-size:var(--t-md);line-height:1.6}
+  .thesis .pivot{font-weight:600;color:var(--gold-deep);font-size:clamp(19px,2.6vw,24px);margin:6px 0}
+  .thesis .safety{font-weight:600;color:var(--ink);font-size:clamp(18px,2.4vw,22px)}
+  .thesis .closer{font-family:var(--display);font-weight:700;font-size:clamp(22px,3.4vw,32px);color:var(--ink);max-width:26ch;margin-top:30px;line-height:1.18;letter-spacing:-.02em}
+  .thesis .closer b{color:var(--gold-deep);font-style:normal;font-family:var(--body);font-weight:600}
+
+  /* SOMETHING ISN'T LANDING — with her image */
+  .recog{padding:0;border-top:1px solid var(--line)}
+  .recog .split{display:grid;grid-template-columns:1fr 1fr;align-items:stretch}
+  .recog .photo{background-size:cover;background-position:center;min-height:520px}
+  .recog .copy{padding:84px 56px;max-width:640px}
+  .recog .copy .eyebrow{margin-bottom:22px}
+  .maybe-list{border-left:2px solid var(--gold-soft)}
+  .maybe{padding:16px 0 16px 24px;position:relative;color:var(--brown);font-size:18px;line-height:1.5}
+  .maybe::before{content:"";position:absolute;left:-2px;top:50%;width:2px;height:0;background:var(--gold);transition:height .6s ease;transform:translateY(-50%)}
+  .maybe.in::before{height:64%}
+  .recog .note{margin-top:32px;font-size:18px;color:var(--brown)}
+  .recog .qline{font-family:var(--display);font-weight:600;font-size:clamp(21px,3vw,27px);color:var(--ink);margin-top:26px;line-height:1.22;letter-spacing:-.015em}
+  .recog .qline b{color:var(--gold-deep);font-style:normal;font-family:var(--body);font-weight:600}
+  .recog .resolve{margin-top:22px;color:var(--brown)}
+
+  /* WHY THIS WORKS */
+  .works{padding:92px 0;background:var(--cream-2);border-top:1px solid var(--line)}
+  .works h2{max-width:22ch}
+  .nots{display:flex;gap:10px;flex-wrap:wrap;margin:6px 0 30px}
+  .nots span{font-size:13px;letter-spacing:.02em;border:1px solid var(--line);background:var(--paper);border-radius:2px;padding:9px 15px;color:var(--gold-deep);font-weight:500}
+  .works .rooms{display:flex;flex-wrap:wrap;gap:0 10px;margin:22px 0}
+  .works .rooms span{font-family:var(--body);font-style:italic;font-weight:500;font-size:18px;color:var(--gold-deep)}
+  .works .rooms span::after{content:"·";color:var(--gold-soft);margin-left:10px}
+  .works .rooms span:last-child::after{content:""}
+  .works p{max-width:60ch;margin-bottom:18px;color:var(--brown)}
+  .works .key{font-family:var(--display);font-weight:700;font-size:clamp(21px,3vw,28px);color:var(--ink);max-width:30ch;margin-top:8px;line-height:1.2;letter-spacing:-.02em}
+
+  /* WHY ME — Juliette, her image */
+  .why{padding:0;border-top:1px solid var(--line);background:var(--paper)}
+  .why .split{display:grid;grid-template-columns:.85fr 1.15fr;align-items:stretch}
+  .why .photo{background-size:contain;background-position:center center;background-repeat:no-repeat;min-height:560px}
+  .why .copy{padding:88px 56px}
+  .why .eyebrow{margin-bottom:16px}
+  .why h2{font-size:clamp(32px,5vw,52px)}
+  .why h2 em{font-family:var(--display);font-weight:700;font-style:normal;color:var(--gold-deep)}
+  .why .intro{font-size:var(--t-md);max-width:60ch;margin:20px 0;color:var(--brown);line-height:1.6}
+  .modalities{display:flex;flex-wrap:wrap;gap:8px;margin:30px 0}
+  .modalities span{font-family:var(--body);font-weight:500;font-size:15px;color:var(--gold-deep);border:1px solid var(--gold-soft);border-radius:99px;padding:7px 16px;background:var(--cream);letter-spacing:.01em}
+  .why .needed{font-family:var(--display);font-weight:600;font-size:clamp(19px,2.6vw,24px);color:var(--ink);margin:6px 0 38px;max-width:30ch;line-height:1.22;letter-spacing:-.015em}
+  .karim{border-left:2px solid var(--gold);padding:4px 0 4px 26px;margin:30px 0;max-width:60ch}
+  .karim p{margin-bottom:14px;color:var(--brown)}
+  .karim .ask{font-family:var(--body);font-style:italic;font-weight:500;color:var(--gold-deep)}
+  .press{display:flex;gap:24px;flex-wrap:wrap;align-items:center;margin:36px 0;padding:24px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .press span{font-family:var(--display);font-size:19px;color:var(--gold-soft)}
+  .press .pod{font-style:italic;color:var(--gold-deep)}
+  .why .last{font-size:18px;max-width:60ch;color:var(--brown)}
+
+  /* WHAT IT IS + INCLUDED spine */
+  .spine{padding:92px 0;border-top:1px solid var(--line);background:var(--cream)}
+  .spine .quotebox{border-left:3px solid var(--gold);padding:6px 0 6px 26px;font-family:var(--display);font-weight:700;font-size:clamp(22px,3.2vw,30px);color:var(--ink);max-width:30ch;margin:8px 0 26px;line-height:1.18;letter-spacing:-.02em}
+  .spine .lede{max-width:60ch;color:var(--brown);margin-bottom:14px}
+  .inc-head{margin:54px 0 42px;display:flex;flex-direction:column;gap:12px}
+  .timeline{position:relative;margin-left:8px;padding-left:42px}
+  .timeline::before{content:"";position:absolute;left:0;top:6px;bottom:6px;width:2px;background:var(--line)}
+  .progress-line{position:absolute;left:0;top:6px;width:2px;background:var(--gold);height:0;transition:height .15s linear}
+  .node{position:relative;padding:0 0 36px}
+  .node::before{content:"";position:absolute;left:-42px;top:4px;width:13px;height:13px;border-radius:50%;background:var(--cream);border:2px solid var(--gold-soft);transition:border-color .4s,background .4s,box-shadow .4s;transform:translateX(-5px)}
+  .node.in::before{border-color:var(--gold);background:var(--gold);box-shadow:0 0 0 5px rgba(168,133,56,.14)}
+  .node .day{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);font-weight:600}
+  .node h3{margin:7px 0 8px;font-size:22px}
+  .node p{color:var(--brown);font-size:16px;max-width:56ch}
+  .node .dur{display:inline-block;margin-top:10px;font-size:11.5px;letter-spacing:.04em;color:var(--gold-deep);border:1px solid var(--line);padding:4px 11px;border-radius:2px;font-weight:500}
+  .node.live::before{width:15px;height:15px;background:var(--gold-deep);border-color:var(--gold-deep)}
+  .node.live{background:linear-gradient(90deg,rgba(168,133,56,.09),transparent 70%);margin-left:-42px;padding-left:42px;border-radius:0 4px 4px 0}
+  .pinned{margin-top:22px;border:1px solid var(--line);border-radius:4px;overflow:hidden;background:var(--paper)}
+  .pinned .ph{padding:16px 22px;background:var(--cream-2);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep);border-bottom:1px solid var(--line);font-weight:600}
+  .guide{padding:18px 22px;border-bottom:1px solid var(--line)}
+  .guide:last-child{border-bottom:none}
+  .guide .t{font-family:var(--display);font-weight:600;font-size:19px;color:var(--ink);margin-bottom:5px;letter-spacing:-.01em}
+  .guide p{color:var(--brown);font-size:15.5px;margin:0}
+
+  /* WHAT CHANGES */
+  .changes{padding:92px 0;border-top:1px solid var(--line);background:var(--cream-2)}
+  .change-row{display:grid;grid-template-columns:34px 1fr;gap:20px;align-items:start;padding:24px 0;border-bottom:1px solid var(--line)}
+  .change-row:last-of-type{border-bottom:none}
+  .change-row .ix{color:var(--gold);padding-top:4px;font-size:18px}
+  .change-row p{font-size:clamp(17px,2.1vw,20px);line-height:1.5;color:var(--ink)}
+  .change-row p em{font-style:italic;color:var(--gold-deep)}
+
+  /* FOR / NOT FOR */
+  .fit{padding:92px 0;border-top:1px solid var(--line);background:var(--cream)}
+  .fit-head{text-align:center;margin-bottom:8px}
+  .fit-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:24px}
+  .fit-col{background:var(--paper);padding:36px 32px}
+  .fit-col h3{margin-bottom:22px}
+  .fit-col.no h3{color:var(--gold-soft)}
+  .fit-col ul{list-style:none}
+  .fit-col li{padding:13px 0 13px 28px;position:relative;font-size:16px;line-height:1.5;border-bottom:1px solid var(--line)}
+  .fit-col li:last-child{border-bottom:none}
+  .fit-col.yes li::before{content:"";position:absolute;left:0;top:18px;width:14px;height:2px;background:var(--gold)}
+  .fit-col.no li{color:var(--gold-soft)}
+  .fit-col.no li::before{content:"";position:absolute;left:2px;top:16px;width:9px;height:9px;border:1px solid var(--gold-soft);border-radius:50%}
+  .fit .span{margin-top:38px;font-family:var(--display);font-weight:600;font-size:clamp(19px,2.6vw,24px);color:var(--ink);max-width:42ch;line-height:1.24;letter-spacing:-.015em;text-align:center;margin-left:auto;margin-right:auto}
+
+  /* FOUNDING — teal panel for contrast, gold accents */
+  .founding{padding:100px 0;text-align:center;border-top:1px solid var(--line-dark);background:var(--teal);color:var(--cream)}
+  .founding .eyebrow{color:var(--gold-pale)}
+  .founding h2{color:var(--cream)}
+  .founding .price-big{font-family:var(--display);font-weight:700;font-size:clamp(54px,11vw,104px);line-height:1;margin:22px 0 6px;color:#fff;letter-spacing:-.03em}
+  .founding .price-big sub{font-size:.26em;color:var(--gold-pale);vertical-align:baseline;font-weight:400}
+  .founding .after{color:#c9c2b4}
+  .seats{max-width:520px;margin:28px auto 0}
+  .seats .meter{height:8px;border-radius:99px;background:rgba(255,255,255,.12);overflow:hidden;border:1px solid var(--line-dark)}
+  .seats .meter i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--gold-pale));transition:width 1.4s cubic-bezier(.2,.7,.2,1)}
+  .seats .lbl{display:flex;justify-content:space-between;margin-top:10px;font-size:12px;letter-spacing:.06em;color:var(--gold-pale)}
+  .arrives{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-dark);border:1px solid var(--line-dark);max-width:580px;margin:44px auto 0}
+  .arrives div{background:var(--teal);padding:22px 16px;font-size:14px;color:#c9c2b4}
+  .arrives div b{display:block;color:#fff;font-family:var(--display);font-weight:600;font-size:16px;margin-bottom:4px}
+  .founding .btn{margin-top:44px;font-size:16px;padding:16px 42px}
+  .signoff{margin-top:30px;font-family:var(--display);font-weight:600;font-size:20px;color:var(--gold-pale)}
+
+  footer{padding:46px 0 58px;background:var(--gold);color:rgba(255,255,255,.85)}
+  footer .brand{font-family:var(--body);letter-spacing:.34em;text-transform:uppercase;font-size:15px;color:var(--cream);margin-bottom:18px;display:block}
+  footer .brand b{color:var(--gold-pale)}
+  footer .fine{font-size:13px;max-width:72ch;line-height:1.7;color:#8a9694}
+
+  /* sticky buy */
+  .sticky-buy{position:fixed;left:0;right:0;bottom:0;z-index:55;transform:translateY(120%);transition:transform .5s cubic-bezier(.2,.7,.2,1);background:var(--teal);border-top:1px solid var(--line-dark);display:flex;align-items:center;justify-content:space-between;gap:16px;padding:13px 28px}
+  .sticky-buy.show{transform:none}
+  .sticky-buy .info{display:flex;align-items:baseline;gap:14px;min-width:0}
+  .sticky-buy .info .nm{font-family:var(--body);font-size:15px;letter-spacing:.18em;text-transform:uppercase;color:var(--cream)}
+  .sticky-buy .info .pr{font-size:13px;color:var(--gold-pale);font-weight:600}
+  .sticky-buy .info .sub{font-size:12px;color:#9aa6a4}
+
+  @media(max-width:880px){
+    .hero .grid{grid-template-columns:1fr;gap:34px}
+    .recog .split,.why .split{grid-template-columns:1fr}
+    .recog .photo,.why .photo{min-height:340px;order:-1}
+    .recog .copy,.why .copy{padding:60px 28px}
+  }
+  @media(max-width:720px){
+    .fit-grid{grid-template-columns:1fr}
+    .arrives{grid-template-columns:1fr}
+    .sticky-buy .info .sub{display:none}
+    }
+  @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}.reveal{opacity:1;transform:none}}
+  /* More dropdown */
+  .more-wrap{position:relative}
+  .more-wrap > button{background:none;border:none;cursor:pointer;font-size:14px;color:var(--cream);font-weight:500;font-family:var(--body);display:flex;align-items:center;gap:5px;padding:0;transition:color .2s}
+  .more-wrap > button:hover{color:var(--gold-pale)}
+  .more-wrap > button svg{transition:transform .2s}
+  .more-wrap.open > button svg{transform:rotate(180deg)}
+  .dropdown{position:absolute;top:calc(100% + 10px);right:0;background:var(--teal-deep);border:1px solid var(--line-dark);border-radius:3px;min-width:180px;padding:6px 0;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .18s,transform .18s;z-index:9999}
+  .more-wrap.open .dropdown{opacity:1;pointer-events:all;transform:none}
+  @media(max-width:860px){.dropdown{position:fixed;top:56px;right:16px}}
+  .dropdown a{display:block;padding:10px 18px;font-size:13px;color:var(--cream);font-weight:500;transition:background .15s,color .15s}
+  .dropdown a:hover{background:var(--teal);color:var(--gold-pale)}
+
+  /* MOBILE NAV */
+  .ham{display:none;background:none;border:none;cursor:pointer;padding:6px;color:var(--cream)}
+  .ham svg{display:block}
+  .mobile-nav{display:none;position:fixed;top:64px;left:0;right:0;background:var(--teal);z-index:9998;padding:16px 0;border-top:1px solid rgba(255,255,255,.1);flex-direction:column}
+  .mobile-nav a{display:block;padding:13px 28px;font-size:15px;color:var(--cream);font-weight:500;font-family:var(--body);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.07)}
+  .mobile-nav a:last-child{border-bottom:none}
+  .mobile-nav a.btn{margin:14px 28px 6px;display:block;background:var(--gold);color:#fff;padding:12px 20px;border-radius:2px;font-weight:600;text-align:center;border:none}
+  .mobile-nav.open{display:flex}
+  @media(max-width:860px){.ham{display:block}.topbar .more-wrap{display:none}.topbar nav > .btn{display:none}}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="brand">Feel&nbsp;Fully&nbsp;<b>You</b>
+  <button class="ham" id="hamBtn" aria-label="Open menu" aria-expanded="false">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+</div>
+  <nav>
+    <a href="/">Home</a>
+    <div class="more-wrap" id="workWrap">
+      <button onclick="document.getElementById('workWrap').classList.toggle('open')" aria-expanded="false">
+        Work With Me <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg>
+      </button>
+      <div class="dropdown">
+        <a href="/for-her">For Her</a>
+        <a href="/for-him">For Him</a>
+        <a href="/for-both">For Both</a>
+        <a href="/the-room">The Room</a>
+      </div>
+    </div>
+    <a href="/cards">The Cards</a>
+    <a href="/shop">Shop</a>
+    <div class="more-wrap" id="moreWrap">
+      <button onclick="document.getElementById('moreWrap').classList.toggle('open')" aria-expanded="false">
+        More <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg>
+      </button>
+      <div class="dropdown">
+        <a href="/free-resources">Free Resources</a>
+        <a href="/grief-duality-process">Grief Process</a>
+        <a href="/media-and-pr">Media &amp; PR</a>
+        <a href="/contact">Contact</a>
+      </div>
+    </div>
+    <a href="/work-with-me" class="btn">Start here</a>
+  </nav>
+</div>
+
+
+
+
+<nav class="mobile-nav" id="mobileNav">
+  <a href="/">Home</a>
+  <a href="/for-her">For Her</a>
+  <a href="/for-him">For Him</a>
+  <a href="/for-both">For Both</a>
+  <a href="/the-room">The Room</a>
+  <a href="/cards">The Cards</a>
+  <a href="/shop">Shop</a>
+  <a href="/about">About Juliette</a>
+  <a href="/free-resources">Free Resources</a>
+  <a href="/grief-duality-process">Grief Process</a>
+  <a href="/media-and-pr">Media &amp; PR</a>
+  <a href="/contact">Contact</a>
+  <a href="/work-with-me" class="btn">Start here</a>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div class="grid">
+      <div class="logo-card reveal">
+        <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_900/u_https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/6a2fee79bc11d12c0bbafe45.jpg" alt="Touch Point">
+      </div>
+      <div>
+        <p class="tag reveal">The private membership for men who want to understand women, and themselves in relation to them.</p>
+        <div class="price-line reveal">
+          <span class="p">£97<span>/month</span></span>
+          <span class="tag2">Founding 20 · locked for life</span>
+        </div>
+        <div class="hero-cta reveal">
+          <a href="#join" class="btn">Join Touch Point</a>
+          <a href="#what" class="btn ghost">What this actually is</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- THESIS -->
+<section class="thesis">
+  <div class="narrow">
+    <h2 class="reveal">Love doesn't have to turn into war.</h2>
+    <p class="reveal">The distance between you and her isn't a character flaw. It isn't proof that you've failed, or that she's the problem, or that you've left it too late.</p>
+    <p class="pivot reveal">Something underneath isn't holding.</p>
+    <p class="reveal">And no amount of trying harder at the same thing will change it.</p>
+    <p class="safety reveal">Because safety isn't a feeling. It's a structure.</p>
+    <p class="reveal">When it's missing, she feels it before either of you can name it. When it's there, she feels that too, before you've said a word.</p>
+    <p class="closer reveal">Rebuild the structure, and what she feels when you walk into the room changes. <b>That belief is what Touch Point is built on.</b></p>
+  </div>
+</section>
+
+<!-- SOMETHING ISN'T LANDING -->
+<section class="recog">
+  <div class="split">
+    <div class="photo reveal" style="background-image:url('/juliettekingsx-forher.jpg');background-size:cover;background-position:center top"></div>
+    <div class="copy">
+      <div class="eyebrow reveal">You already know something isn't landing</div>
+      <div class="maybe-list">
+        <div class="maybe reveal">Maybe she's gone quiet and you don't know why.</div>
+        <div class="maybe reveal">Maybe you're physically there, but she doesn't seem to feel you.</div>
+        <div class="maybe reveal">Maybe the relationship is ending, and you want to make sure your children don't grow up thinking love turns into war.</div>
+        <div class="maybe reveal">Maybe you love a woman you haven't fully reached yet, and you don't know what you're doing wrong.</div>
+      </div>
+      <p class="note reveal">You are not a passive man. You are trying. But trying harder at the same thing won't change what she feels when you walk into the room.</p>
+      <p class="qline reveal">What connects every one of these is the same question: <b>why isn't what I'm doing landing?</b></p>
+      <p class="resolve reveal">It isn't landing because the work isn't in the words or the effort. It's in what your body carries into the room, and that's a thing you can actually change.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHY THIS WORKS -->
+<section class="works">
+  <div class="narrow">
+    <h2 class="reveal">Why this works when <span class="gold">trying harder</span> doesn't.</h2>
+    <div class="nots reveal">
+      <span>Not therapy.</span><span>Not a course you'll never finish.</span><span>Not content to consume.</span>
+    </div>
+    <p class="reveal">It's practical, specific, and built from the room where this actually changes:</p>
+    <div class="rooms reveal"><span>the bedroom</span><span>the therapy room</span><span>the lawyer's office</span><span>the kitchen at Christmas</span></div>
+    <p class="reveal">The work is the same whether she's still there or she's left, whether you're ending something or trying to save it, whether the distance is physical or something you can't yet name.</p>
+    <p class="key reveal">Becoming the man whose presence is felt before he has said a word.</p>
+    <p class="reveal" style="margin-top:18px">You do that in your own body, through structured practice, embodiment, and understanding what's running underneath, rather than waiting for her to change or reaching for another technique to run.</p>
+  </div>
+</section>
+
+<!-- WHY ME -->
+<section class="why">
+  <div class="split">
+    <div class="photo reveal" style="background-image:url('https://images.leadconnectorhq.com/image/f_webp/q_85/r_1200/u_https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/6a26a7defc95b24549c0479e.png')"></div>
+    <div class="copy">
+      <div class="eyebrow reveal">Why me</div>
+      <h2 class="reveal">I'm <em>Juliette</em>.</h2>
+      <p class="intro reveal">I've spent over two decades in the room with men and couples at exactly this impasse, men who are trying, who love the women in their lives, who can't understand why trying isn't enough.</p>
+      <p class="intro reveal">But before I was the practitioner in that room, I was the woman on the other side of it. I know what it feels like to stiffen when the man you love reaches for you. To pull away and have no language for why. To perform desire because the real thing felt too far to access.</p>
+      <p class="intro reveal">It took me decades to understand what I was braced against, what I needed and had never been given, and what structure would have changed everything. So I followed my own wound into every room it needed to understand.</p>
+      <div class="modalities reveal">
+        <span>EMDR</span><span>Somatic experiencing</span><span>Hypnotherapy</span><span>OM &amp; tantra</span><span>BDSM</span><span>Spinal attunement</span>
+      </div>
+      <p class="needed reveal">I did not collect these modalities. I needed them. Every single one.</p>
+
+      <div class="eyebrow reveal" style="margin-bottom:14px">And I know what it feels like to end a marriage without going to war</div>
+      <div class="karim reveal">
+        <p>When my relationship with Karim ended, we sat down together, before any lawyers, and decided everything: how our children would spend time with each of us, what happened to the houses, the money, the life we'd built. By the time we reached the lawyers, there was nothing left to fight over. Our children never had to choose.</p>
+        <p>Fifteen years later, Karim and I spend Christmas together. Birthdays together. We're each other's close friends, just no longer married. Every time we're at a table together, someone pulls me aside and asks: <span class="ask">how did you do that?</span></p>
+      </div>
+      <p class="needed reveal" style="max-width:36ch">Structure. Not the absence of pain, a container strong enough to hold it without destroying everything else.</p>
+
+      <div class="press reveal">
+        <img src="/press/forbes.png" alt="Forbes" style="height:18px;filter:brightness(0) opacity(.4)">
+        <img src="/press/times.png" alt="The Times" style="height:18px;filter:brightness(0) opacity(.4)">
+        <img src="/press/marieclaire.png" alt="Marie Claire" style="height:18px;filter:brightness(0) opacity(.4)">
+        <img src="/press/itv.png" alt="ITV" style="height:18px;filter:brightness(0) opacity(.4)">
+        <span class="pod">The Scrumptious Woman, top 2.5% globally</span>
+      </div>
+
+      <p class="last reveal"><strong>I have been where you are, in all of it, and I came out with my family intact, my children whole, and the man I was married to still one of my closest people.</strong> I know what she can't yet tell you. I know what the ending doesn't have to look like. And I can translate both, in a way that changes what happens in the room tonight.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT IT IS + INCLUDED -->
+<section class="spine" id="what">
+  <div class="narrow">
+    <div class="eyebrow reveal" style="margin-bottom:18px">What Touch Point actually is</div>
+    <div class="quotebox reveal">For £97 a month, weekly access to someone whose private clients pay over £4,000 for six weeks of intensive work.</div>
+    <div class="nots reveal" style="margin-bottom:26px">
+      <span>Not a course.</span><span>Not a portal.</span><span>Not content you'll never finish.</span>
+    </div>
+    <p class="lede reveal">Every week I'm in the Telegram group, coaching, teaching, riffing on what's actually showing up for the men inside. You bring your real situation. I translate what's happening. You leave with something specific to do differently.</p>
+
+    <div class="inc-head reveal">
+      <div class="eyebrow">What's included</div>
+      <h2 style="margin:0">A weekly rhythm you can feel. One spine running through the month.</h2>
+    </div>
+
+    <div class="timeline" id="timeline">
+      <div class="progress-line" id="progress"></div>
+      <div class="node reveal"><div class="day">The container</div><h3>A private Telegram group</h3><p>No name required, no profile photo, anonymous if you want it. What happens in the group stays in the group.</p></div>
+      <div class="node reveal"><div class="day">Monday</div><h3>Coaching audio</h3><p>One pattern, one thing I'm watching shift right now, specific, not general, plus a structured practice for the week.</p><span class="dur">5–10 min</span></div>
+      <div class="node reveal"><div class="day">Tuesday</div><h3>Question submission opens</h3><p>Submit your real situation anonymously: what's happening, what you've tried, what you don't understand.</p></div>
+      <div class="node reveal"><div class="day">Wednesday · midnight</div><h3>Submissions close</h3><p>The week's questions are gathered, the material for Friday.</p></div>
+      <div class="node reveal"><div class="day">Thursday</div><h3>Guided practice audio</h3><p>Follow along wherever you have ten minutes alone. This is the practice that changes what your body carries into the room with her.</p><span class="dur">5–10 min · guided</span></div>
+      <div class="node reveal"><div class="day">Friday</div><h3>Juliette riffs</h3><p>I take everything that came in and teach from the patterns running through all of it. Every man hears his situation inside someone else's question. Nobody feels singled out, nobody feels alone in it.</p><span class="dur">15–20 min</span></div>
+      <div class="node live reveal"><div class="day">Last Wednesday · 8pm UK</div><h3>30-min live embodiment session</h3><p>Where it lands in the body: grounding, cross-lateral movement, EMDR-informed body work, and I explain the why behind each one. Cameras optional; those with cameras on get direct feedback.</p><span class="dur">live · monthly</span></div>
+    </div>
+
+    <div class="pinned reveal">
+      <div class="ph">Pinned from day one — yours the moment you join</div>
+      <div class="guide" style="display:flex;justify-content:space-between;align-items:start;gap:16px">
+        <div><div class="t">The Unspoken Distance, nine parts</div><p>What the distance is made of, and what keeps it in place.</p></div>
+        <span style="font-family:var(--display);font-weight:700;font-size:15px;color:var(--gold-deep);white-space:nowrap">£97</span>
+      </div>
+      <div class="guide"><div class="t">When She Has Gone Quiet</div><p>For the specific silence that feels like rejection but isn't.</p></div>
+      <div class="guide" style="display:flex;justify-content:space-between;align-items:start;gap:16px">
+        <div><div class="t">The 10 Touch Rituals</div><p>The practices that stopped 800,000 scrolls through one video and sent hundreds of men into my DMs with one word: <strong>TOUCH</strong>.</p></div>
+        <span style="font-family:var(--display);font-weight:700;font-size:15px;color:var(--gold-deep);white-space:nowrap">£7</span>
+      </div>
+      <div style="padding:16px 22px;background:var(--cream-2);border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center">
+        <span style="font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--brown);font-weight:500">Immediate value on day one</span>
+        <span style="font-family:var(--display);font-weight:700;font-size:17px;color:var(--gold-deep)">£104</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT CHANGES -->
+<section class="changes">
+  <div class="narrow">
+    <div class="eyebrow reveal" style="margin-bottom:18px">What changes when you're inside</div>
+    <div class="change-row reveal"><span class="ix">–</span><p>She reaches back for you, not because you asked, but because something in you stopped asking.</p></div>
+    <div class="change-row reveal"><span class="ix">–</span><p>She comes up behind you in the kitchen, unprompted, mid-afternoon, for no reason except that her body wanted to.</p></div>
+    <div class="change-row reveal"><span class="ix">–</span><p>A text in the middle of the day: <em>"I've been thinking about you."</em></p></div>
+    <div class="change-row reveal"><span class="ix">–</span><p>You walk into the bedroom with the same spine you have in the boardroom. You stop dreading initiating, because you've stopped needing a particular response from her to feel like enough.</p></div>
+    <div class="change-row reveal"><span class="ix">–</span><p>And if the relationship is ending: you stop making her the enemy. Your children feel it. She feels it. You feel it too.</p></div>
+    <p class="reveal" style="margin-top:42px;font-size:clamp(17px,2vw,20px);color:var(--ink);font-family:var(--display);font-weight:600;letter-spacing:-.015em;line-height:1.3;max-width:38ch">None of this changes overnight. But with consistency — and the genuine want to change — it does.</p>
+  </div>
+</section>
+
+<!-- FOR / NOT FOR -->
+<section class="fit">
+  <div class="wrap">
+    <div class="fit-head"><div class="eyebrow reveal">Be honest about which man you are</div></div>
+    <div class="fit-grid">
+      <div class="fit-col yes reveal">
+        <h3>Who this is for</h3>
+        <ul>
+          <li>The man whose partner has gone quiet and he can't close the distance no matter what he tries.</li>
+          <li>The man who is present but not felt.</li>
+          <li>The man in a separation or divorce who refuses to let his children watch love become war.</li>
+          <li>The man who loves a woman he hasn't fully reached, unsure whether to reach or pull back.</li>
+          <li>The man who is anxious, who chases, who disappears, who keeps ending up in the same place.</li>
+        </ul>
+      </div>
+      <div class="fit-col no reveal">
+        <h3>Who this is not for</h3>
+        <ul>
+          <li>The man who believes she's the avoidant one, and this is her problem to fix.</li>
+          <li>The man who wants a technique to run rather than a practice to embody.</li>
+          <li>The man who'll submit a question on Tuesday and not listen on Friday.</li>
+          <li>The man who reads about presence but won't feel what presence actually costs him.</li>
+          <li>The man who wants to understand women without being changed by what he learns.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="span reveal">This is for the man who leads in every other area of his life and is ready to bring that same standard into this one, done guessing, willing to do something different in his own body rather than wait for her to change.</p>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section style="background:#fff;padding:80px 0 72px">
+  <div class="wrap">
+    <div class="eyebrow reveal" style="text-align:center;margin-bottom:48px">What men say</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px">
+      <div class="reveal" style="background:#d8dfe1;border-left:4px solid var(--gold);padding:36px 32px">
+        <div style="font-family:var(--display);font-size:5rem;line-height:0.5;color:var(--gold);margin-bottom:24px">"</div>
+        <p style="font-family:var(--display);font-size:1.12rem;line-height:1.65;color:var(--ink);margin:0 0 24px;font-style:italic">I cannot describe the gratitude I feel for her generosity. I highly recommend working with her.</p>
+        <p style="font-size:0.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin:0">Ryan T &nbsp;·&nbsp; Coach</p>
+      </div>
+      <div class="reveal" style="background:#d8dfe1;border-left:4px solid var(--gold);padding:36px 32px">
+        <div style="font-family:var(--display);font-size:5rem;line-height:0.5;color:var(--gold);margin-bottom:24px">"</div>
+        <p style="font-family:var(--display);font-size:1.12rem;line-height:1.65;color:var(--ink);margin:0 0 24px;font-style:italic">Change — as always — is not linear, but exponential (with the right catalyst).</p>
+        <p style="font-size:0.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin:0">Rupert W &nbsp;·&nbsp; Finance Director, UK</p>
+      </div>
+      <div class="reveal" style="background:#d8dfe1;border-left:4px solid var(--gold);padding:36px 32px">
+        <div style="font-family:var(--display);font-size:5rem;line-height:0.5;color:var(--gold);margin-bottom:24px">"</div>
+        <p style="font-family:var(--display);font-size:1.12rem;line-height:1.65;color:var(--ink);margin:0 0 24px;font-style:italic">I came believing I was in control. I left with a level of clarity I didn't realise I was missing.</p>
+        <p style="font-size:0.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin:0">Rodrick &nbsp;·&nbsp; Investor & Strategist, UK</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="padding:92px 0;border-top:1px solid var(--line);background:var(--cream)">
+  <div class="narrow">
+    <div class="eyebrow reveal" style="margin-bottom:36px">Questions</div>
+    <div style="display:flex;flex-direction:column;gap:0;border-top:1px solid var(--line)">
+
+      <div class="reveal" style="padding:28px 0;border-bottom:1px solid var(--line)">
+        <h3 style="font-size:18px;font-weight:600;color:var(--ink);margin-bottom:10px">Is there a minimum commitment?</h3>
+        <p style="color:var(--brown);font-size:16px;max-width:60ch">Three months is recommended. That's how long it takes for the work to show up in the room rather than just in your head. After three months, you're free to stay or leave — no questions, no friction.</p>
+      </div>
+
+      <div class="reveal" style="padding:28px 0;border-bottom:1px solid var(--line)">
+        <h3 style="font-size:18px;font-weight:600;color:var(--ink);margin-bottom:10px">Is there a cancellation fee?</h3>
+        <p style="color:var(--brown);font-size:16px;max-width:60ch">None. Cancel with 2 days notice after your first three months by emailing <a href="mailto:support@feelfullyyou.com" style="color:var(--gold-deep);text-decoration:underline;text-underline-offset:3px">support@feelfullyyou.com</a>. That's it.</p>
+      </div>
+
+      <div class="reveal" style="padding:28px 0;border-bottom:1px solid var(--line)">
+        <h3 style="font-size:18px;font-weight:600;color:var(--ink);margin-bottom:10px">Is this therapy?</h3>
+        <p style="color:var(--brown);font-size:16px;max-width:60ch">No. I'm not your therapist and this isn't a therapeutic relationship. It's coaching, embodiment work, and translation — helping you understand what's running underneath, and giving you something specific to do about it.</p>
+      </div>
+
+      <div class="reveal" style="padding:28px 0;border-bottom:1px solid var(--line)">
+        <h3 style="font-size:18px;font-weight:600;color:var(--ink);margin-bottom:10px">Will other men know who I am?</h3>
+        <p style="color:var(--brown);font-size:16px;max-width:60ch">Not unless you choose to share it. No name required, no profile photo. Anonymous submissions, anonymous group presence if you want it. What happens in the group stays there.</p>
+      </div>
+
+      <div class="reveal" style="padding:28px 0;border-bottom:1px solid var(--line)">
+        <h3 style="font-size:18px;font-weight:600;color:var(--ink);margin-bottom:10px">How much time does this take?</h3>
+        <p style="color:var(--brown);font-size:16px;max-width:60ch">Roughly 30–45 minutes a week if you engage with everything. The Monday audio, the Thursday guided practice, and Friday's riff. The live session is once a month.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDING -->
+<section class="founding" id="join">
+  <div class="narrow">
+    <div class="eyebrow reveal">Founding members</div>
+    <h2 class="reveal">Founding 20. Locked in for life.</h2>
+    <div class="price-big reveal">£97<sub>/month</sub></div>
+    <p class="after reveal">After the first 20 men, the price increases permanently.</p>
+    <p class="reveal" style="margin-top:10px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-pale)">Recommended 3-month minimum</p>
+
+    <div class="seats reveal">
+      <div class="meter"><i id="meter"></i></div>
+      <div class="lbl"><span id="seatcount">, founding spots claimed</span><span>20 total</span></div>
+    </div>
+
+    <div class="arrives">
+      <div class="reveal"><b>Telegram invite</b>Arrives the moment you join.</div>
+      <div class="reveal"><b>Question link</b>Your anonymous link, ready.</div>
+      <div class="reveal"><b>Pinned guides</b>Waiting for you on day one.</div>
+    </div>
+
+    <a href="https://buy.stripe.com/00w28q21J9164Tz5aJ0co0B" class="btn reveal">Join Touch Point · £97/month</a>
+  </div>
+</section>
+
+<footer style="background:#a88538;color:#fff;padding:22px 32px;font-size:13px">
+  <div style="max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+    <div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:0.95rem;color:#fff;letter-spacing:-.01em">Feel Fully You</div>
+    <div style="font-size:12px;color:rgba(255,255,255,.85);display:flex;gap:16px;align-items:center"><a href="mailto:support@feelfullyyou.com" style="color:#fff;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(255,255,255,.5)">support@feelfullyyou.com</a><a href="https://feelfullyyou.com/terms" style="color:rgba(255,255,255,.75);text-decoration:none" target="_blank" rel="noopener">Terms</a></div>
+    <div style="display:flex;gap:14px;align-items:center">
+      <a href="https://www.instagram.com/juliettekaraman/" aria-label="Instagram" style="color:rgba(255,255,255,.85);display:flex;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+      <a href="https://www.facebook.com/juliette.karamanvanschaardenburg" aria-label="Facebook" style="color:rgba(255,255,255,.85);display:flex;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+      <a href="https://www.linkedin.com/in/juliette-karaman-van-schaardenburg-89399913b" aria-label="LinkedIn" style="color:rgba(255,255,255,.85);display:flex;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+      <a href="https://www.tiktok.com/@juliettekaraman" aria-label="TikTok" style="color:rgba(255,255,255,.85);display:flex;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+      <a href="https://substack.com/@juliettekaraman" aria-label="Substack" style="color:rgba(255,255,255,.85);display:flex;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 17.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-buy" id="stickybuy">
+  <div class="info">
+    <span class="nm">TOUCH POINT</span>
+    <span class="pr">£97/mo</span>
+    <span class="sub">Founding 20 · locked for life</span>
+  </div>
+  <a href="#join" class="btn">Join now</a>
+</div>
+
+<script>
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.16,rootMargin:'0px 0px -6% 0px'});
+  document.querySelectorAll('.reveal, .maybe, .node').forEach(el=>io.observe(el));
+
+  const sticky=document.getElementById('stickybuy');
+  const hero=document.querySelector('.hero');
+  const join=document.getElementById('join');
+  function onScroll(){
+    const y=window.scrollY;
+    const heroBottom=hero.offsetHeight-80;
+    sticky.classList.toggle('show', y>heroBottom && (y+window.innerHeight)<join.offsetTop);
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  const timeline=document.getElementById('timeline');
+  const progress=document.getElementById('progress');
+  function fillProgress(){
+    if(!timeline)return;
+    const rect=timeline.getBoundingClientRect();
+    let v=window.innerHeight*0.5-rect.top;
+    progress.style.height=Math.max(0,Math.min(rect.height,v))+'px';
+  }
+  window.addEventListener('scroll',fillProgress,{passive:true});
+  window.addEventListener('resize',fillProgress);fillProgress();
+
+  const claimed=0,total=20;
+  const meter=document.getElementById('meter'),seatCount=document.getElementById('seatcount');
+  const mObs=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){meter.style.width=(claimed/total*100)+'%';seatCount.textContent=claimed+' founding spots claimed';mObs.disconnect();}})},{threshold:.4});
+  if(meter)mObs.observe(meter.closest('.seats'));
+</script>
+<script>
+(function(){
+  var btn=document.getElementById('hamBtn');
+  var nav=document.getElementById('mobileNav');
+  if(btn&&nav){btn.addEventListener('click',function(){nav.classList.toggle('open');btn.setAttribute('aria-expanded',nav.classList.contains('open'))});}
+})();
+</script>
+</body>
+</html>

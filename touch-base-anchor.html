@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Touch Base Anchor · Feel Fully You</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fefcfa;--ink:#1c1714;--brown:#5d4a33;
+    --gold:#a88538;--gold-deep:#99680c;--gold-pale:#ddc98e;--gold-soft:#b4a074;
+    --teal:#0d3535;
+    --blue:#d8dfe1;--teal-deep:#061a1a;--line:#e3dccf;--line-dark:#1d3a39;
+    --display:'Poppins',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--cream);color:var(--brown);font-family:var(--body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+
+  .topbar{position:fixed;top:0;left:0;right:0;z-index:9999;background:var(--teal);padding:0 28px;height:64px;display:flex;align-items:center;justify-content:space-between}
+  .topbar .brand{font-family:var(--display);font-weight:700;font-size:16px;letter-spacing:.02em;color:var(--cream)}
+  .topbar .brand b{color:var(--gold-pale)}
+  .topbar nav{display:flex;gap:26px;align-items:center}
+  .topbar nav a{font-size:14px;color:var(--cream);font-weight:500;transition:color .2s}
+  .topbar nav a:hover{color:var(--gold-pale)}
+  .topbar nav a.btn{background:var(--gold);color:#fff;padding:10px 20px;border-radius:2px;font-weight:600}
+  @media(max-width:860px){.topbar nav > a:not(.btn){display:none}}
+
+  .hero{padding-top:64px;padding:80px 28px 48px;text-align:center;max-width:680px;margin:0 auto}
+  .eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:16px}
+  h1{font-family:var(--display);font-weight:700;font-size:clamp(2.2rem,5.5vw,3.4rem);color:var(--ink);line-height:1.06;letter-spacing:-.022em;margin-bottom:20px}
+  .hero-sub{font-size:19px;color:var(--brown);max-width:50ch;margin:0 auto;line-height:1.65}
+
+  .divider{width:48px;height:2px;background:var(--gold-pale);margin:40px auto}
+
+  .body-copy{max-width:560px;margin:0 auto 48px;padding:0 28px;font-size:18px;color:var(--brown);line-height:1.75}
+  .body-copy p{margin-bottom:20px}
+  .body-copy strong{color:var(--ink);font-weight:600}
+
+  .form-wrap{max-width:480px;margin:0 auto 80px;padding:0 28px}
+  .form-label{font-family:var(--display);font-weight:600;font-size:16px;color:var(--ink);text-align:center;margin-bottom:24px;display:block}
+  .form-wrap form{display:flex;flex-direction:column;gap:12px;margin-bottom:16px}
+  .form-wrap input{width:100%;padding:14px 18px;border:1.5px solid var(--line);border-radius:2px;font-family:var(--body);font-size:16px;color:var(--ink);background:#fff;outline:none;transition:border-color .2s}
+  .form-wrap input:focus{border-color:var(--gold)}
+  .form-wrap input::placeholder{color:var(--gold-soft)}
+  .form-wrap button.btn{width:100%;padding:16px 48px;font-size:17px;border:none;cursor:pointer}
+  .privacy{text-align:center;font-size:13px;color:var(--gold-soft);margin-top:16px}
+
+  .btn{display:inline-block;background:var(--gold);color:#fff;font-family:var(--body);font-weight:700;font-size:17px;padding:18px 48px;border-radius:2px;letter-spacing:.01em;transition:background .2s,transform .2s}
+  .btn:hover{background:var(--gold-deep);transform:translateY(-2px)}
+
+  .signature{text-align:center;padding:0 28px 80px;max-width:520px;margin:0 auto}
+  .signature p{font-size:17px;color:var(--brown);margin-bottom:8px;line-height:1.6}
+  .signature .name{font-family:var(--display);font-weight:600;font-size:20px;color:var(--gold-deep);margin-top:12px}
+
+  footer{background:#a88538;color:#fff;padding:22px 32px;font-size:13px}
+  footer .inner{max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  footer .brand{font-family:var(--display);font-weight:700;font-size:.95rem;color:#fff;letter-spacing:-.01em}
+  footer .links{font-size:12px;color:rgba(255,255,255,.85);display:flex;gap:16px;align-items:center}
+  footer .links a{color:rgba(255,255,255,.75)}
+  footer .links a.email{color:#fff;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(255,255,255,.5)}
+
+  @media(max-width:600px){
+    .hero{padding:56px 20px 40px}
+    .body-copy,.form-wrap{padding:0 20px}
+    h1{font-size:2.1rem}
+  }
+
+  /* MOBILE NAV */
+  .ham{display:none;background:none;border:none;cursor:pointer;padding:6px;color:var(--cream)}
+  .ham svg{display:block}
+  .mobile-nav{display:none;position:fixed;top:64px;left:0;right:0;background:var(--teal);z-index:9998;padding:16px 0;border-top:1px solid rgba(255,255,255,.1);flex-direction:column}
+  .mobile-nav a{display:block;padding:13px 28px;font-size:15px;color:var(--cream);font-weight:500;font-family:var(--body);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.07)}
+  .mobile-nav a:last-child{border-bottom:none}
+  .mobile-nav a.btn{margin:14px 28px 6px;display:block;background:var(--gold);color:#fff;padding:12px 20px;border-radius:2px;font-weight:600;text-align:center;border:none}
+  .mobile-nav.open{display:flex}
+  @media(max-width:860px){.ham{display:block}.topbar .more-wrap{display:none}.topbar nav > .btn{display:none}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="/" class="brand">Feel Fully <b>You</b></a>
+</div>
+
+
+<nav class="mobile-nav" id="mobileNav">
+  <a href="/">Home</a>
+  <a href="/work-with-me" class="btn">Start here</a>
+</nav>
+
+<div class="hero">
+  <div class="eyebrow">Free practice</div>
+  <h1>The Touch Base Anchor</h1>
+  <p class="hero-sub">Two minutes. No equipment. A way back to yourself, anywhere, any time.</p>
+</div>
+
+<div class="divider"></div>
+
+<div class="body-copy">
+  <p>Most of us have learned to live above the neck. We think, we plan, we worry. We forget that the body is there, holding all of it.</p>
+  <p>The Touch Base Anchor is a practice I have used for years, with clients and on myself. It does not require anything from you. <strong>It only asks you to slow down for two minutes and feel.</strong></p>
+  <p>That is enough to shift the nervous system. To move from scattered to present. From braced to open.</p>
+</div>
+
+<div class="form-wrap">
+  <span class="form-label">Where should I send it?</span>
+  <form name="touch-base-anchor" method="POST" netlify action="/thankyou-touch-base">
+    <input type="hidden" name="form-name" value="touch-base-anchor">
+    <input type="text" name="first_name" placeholder="First name" required autocomplete="given-name">
+    <input type="email" name="email" placeholder="Email address" required autocomplete="email">
+    <button type="submit" class="btn">Send me the practice</button>
+  </form>
+  <p class="privacy">No spam. Just the practice, and occasional letters from Juliette.</p>
+</div>
+
+<div class="signature">
+  <p>This is always available to you. You already have it.</p>
+  <div class="name">Warmly, Juliette</div>
+</div>
+
+<footer>
+  <div class="inner">
+    <div class="brand">Feel Fully You
+  <button class="ham" id="hamBtn" aria-label="Open menu" aria-expanded="false">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+</div>
+    <div class="links">
+      <a href="mailto:support@feelfullyyou.com" class="email">support@feelfullyyou.com</a>
+      <a href="/terms">Terms</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.getElementById('hamBtn');
+  var nav=document.getElementById('mobileNav');
+  if(btn&&nav){btn.addEventListener('click',function(){nav.classList.toggle('open');btn.setAttribute('aria-expanded',nav.classList.contains('open'))});}
+})();
+</script>
+</body>
+</html>

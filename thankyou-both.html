@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Your Guides · Feel Fully You</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fefcfa;--ink:#1c1714;--brown:#5d4a33;
+    --gold:#a88538;--gold-deep:#99680c;--gold-pale:#ddc98e;--gold-soft:#b4a074;
+    --teal:#0d3535;
+    --blue:#d8dfe1;--line-dark:#1d3a39;--line:#e3dccf;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--cream);color:var(--brown);font-family:'Inter',system-ui,sans-serif;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  .topbar{position:fixed;top:0;left:0;right:0;z-index:9999;background:var(--teal);padding:0 28px;height:64px;display:flex;align-items:center;justify-content:space-between}
+  .topbar .brand{font-family:var(--display);font-weight:700;font-size:16px;letter-spacing:.02em;color:var(--cream)}
+  .topbar .brand b{color:var(--gold-pale)}
+  .topbar nav{display:flex;gap:26px;align-items:center}
+  .topbar nav a{font-size:14px;color:var(--cream);font-weight:500;transition:color .2s}
+  .topbar nav a:hover{color:var(--gold-pale)}
+  .topbar nav a.btn{background:var(--gold);color:#fff;padding:10px 20px;border-radius:2px;font-weight:600}
+  .topbar nav a.btn:hover{background:var(--gold-deep)}
+  @media(max-width:860px){.topbar nav > a:not(.btn){display:none}}
+  .wrap{max-width:620px;margin:0 auto;padding:72px 28px 80px;text-align:center}
+  .check{width:64px;height:64px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;margin:0 auto 28px}
+  .check svg{width:28px;height:28px;stroke:#fff;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+  .eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:16px}
+  h1{font-family:'Poppins',sans-serif;font-weight:700;font-size:clamp(1.8rem,4.5vw,2.6rem);color:var(--ink);line-height:1.08;letter-spacing:-.022em;margin-bottom:16px}
+  .sub{font-size:18px;color:var(--brown);max-width:44ch;margin:0 auto 40px;line-height:1.6}
+  .guides{display:flex;flex-direction:column;gap:20px;text-align:left}
+  .download-box{background:#fff;border:1px solid var(--line);border-radius:4px;padding:28px}
+  .download-box .label{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:10px}
+  .download-box h2{font-family:'Poppins',sans-serif;font-weight:700;font-size:1.25rem;color:var(--ink);margin-bottom:8px;letter-spacing:-.015em}
+  .download-box p{font-size:15px;color:var(--brown);line-height:1.65;margin-bottom:20px}
+  .btn-download{display:inline-block;background:var(--gold);color:#fff;font-family:'Inter',sans-serif;font-weight:700;font-size:15px;padding:13px 28px;border-radius:2px;text-decoration:none;letter-spacing:.01em;transition:background .2s}
+  .btn-download:hover{background:var(--gold-deep)}
+  .note{margin-top:40px;font-size:14px;color:var(--gold-soft);line-height:1.6;text-align:center}
+  footer{background:var(--gold);padding:20px 28px;text-align:center;margin-top:48px}
+  footer a{color:var(--gold-soft);text-decoration:none;font-size:12px;margin:0 8px}
+  a{color:inherit;text-decoration:none}
+  
+  /* MOBILE NAV */
+  .ham{display:none;background:none;border:none;cursor:pointer;padding:6px;color:var(--cream)}
+  .ham svg{display:block}
+  .mobile-nav{display:none;position:fixed;top:64px;left:0;right:0;background:var(--teal);z-index:9998;padding:16px 0;border-top:1px solid rgba(255,255,255,.1);flex-direction:column}
+  .mobile-nav a{display:block;padding:13px 28px;font-size:15px;color:var(--cream);font-weight:500;font-family:var(--body);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.07)}
+  .mobile-nav a:last-child{border-bottom:none}
+  .mobile-nav a.btn{margin:14px 28px 6px;display:block;background:var(--gold);color:#fff;padding:12px 20px;border-radius:2px;font-weight:600;text-align:center;border:none}
+  .mobile-nav.open{display:flex}
+  @media(max-width:860px){.ham{display:block}.topbar .more-wrap{display:none}.topbar nav > .btn{display:none}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><span>FEEL FULLY <b>YOU</b></span><button class="ham" id="hamBtn" aria-label="Open menu" aria-expanded="false">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button></div>
+<nav class="mobile-nav" id="mobileNav">
+  <a href="/">Home</a>
+  <a href="/work-with-me" class="btn">Start here</a>
+</nav>
+
+<div class="wrap">
+  <div class="check">
+    <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+  </div>
+  <div class="eyebrow">You're all set</div>
+  <h1>Both guides are yours.</h1>
+  <p class="sub">You have everything you need. Start with whichever one calls to you first.</p>
+
+  <div class="guides">
+    <div class="download-box">
+      <div class="label">Guide 1</div>
+      <h2>Between Touches</h2>
+      <p>What keeps connection alive in the space between the big moments. A good place to begin.</p>
+      <a href="https://drive.google.com/file/d/1Niby-UmY4R8wFwB1qAE7O89XfLC9S1C8/view?usp=sharing" target="_blank" rel="noopener" class="btn-download">Open your guide →</a>
+    </div>
+
+    <div class="download-box">
+      <div class="label">Guide 2</div>
+      <h2>31 Daily Touch Points</h2>
+      <p>One touch point a day for a month. This is where the space you opened becomes a practice.</p>
+      <a href="https://drive.google.com/file/d/1wPnCVEgzNCGPTHzmxIdMFC55IzUHjlXh/view?usp=sharing" target="_blank" rel="noopener" class="btn-download">Open your guide →</a>
+    </div>
+  </div>
+
+  <p class="note">Check your inbox too. Juliette's notes will find you there.</p>
+</div>
+
+<footer>
+  <a href="https://feelfullyyou.com/terms" target="_blank" rel="noopener">Terms</a>
+  <a href="mailto:support@feelfullyyou.com">support@feelfullyyou.com</a>
+</footer>
+
+<script>
+(function(){
+  var btn=document.getElementById('hamBtn');
+  var nav=document.getElementById('mobileNav');
+  if(btn&&nav){btn.addEventListener('click',function(){nav.classList.toggle('open');btn.setAttribute('aria-expanded',nav.classList.contains('open'))});}
+})();
+</script>
+</body>
+</html>

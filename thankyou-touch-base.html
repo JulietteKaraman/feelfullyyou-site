@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Touch Base™ · Your video is here</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:ital,wght@0,400;0,600;0,700;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fefcfa;--ink:#1c1714;--brown:#5d4a33;
+    --gold:#a88538;--gold-deep:#99680c;--gold-pale:#ddc98e;--gold-soft:#b4a074;
+    --teal:#0d3535;--teal-deep:#061a1a;--line:#e3dccf;
+    --display:'Poppins',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--cream);color:var(--brown);font-family:var(--body);font-size:17px;line-height:1.75;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+
+  .topbar{position:fixed;top:0;left:0;right:0;z-index:9999;background:var(--teal);padding:0 28px;height:64px;display:flex;align-items:center;justify-content:center}
+  .topbar .brand{font-family:var(--display);font-weight:700;font-size:16px;letter-spacing:.02em;color:var(--cream)}
+  .topbar .brand b{color:var(--gold-pale)}
+
+  /* HERO */
+  .hero{padding:96px 28px 0;text-align:center;max-width:720px;margin:0 auto}
+  .logo-wrap{margin:0 auto 28px;width:120px;height:120px}
+  .logo-wrap img{width:100%;height:100%;object-fit:contain}
+  .trademark{font-family:var(--display);font-weight:700;font-size:clamp(2rem,5vw,3rem);color:var(--ink);letter-spacing:-.02em;line-height:1.05;margin-bottom:12px}
+  .trademark sup{font-size:.55em;vertical-align:super;line-height:0;color:var(--gold)}
+  .tagline{font-size:20px;color:var(--gold-deep);font-family:var(--display);font-weight:600;font-style:italic;margin-bottom:40px}
+
+  /* VIDEO */
+  .video-wrap{max-width:720px;margin:0 auto 64px;padding:0 28px}
+  .video-container{position:relative;padding-bottom:56.25%;height:0;border-radius:4px;overflow:hidden;box-shadow:0 8px 40px rgba(13,53,53,.15)}
+  .video-container iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none}
+
+  /* COPY */
+  .copy-block{max-width:640px;margin:0 auto;padding:0 28px}
+  .copy-block p{margin-bottom:22px;font-size:17px;color:var(--brown);line-height:1.8}
+  .copy-block strong{color:var(--ink);font-weight:600}
+  .copy-block em{color:var(--gold-deep);font-style:italic}
+
+  .divider{width:48px;height:2px;background:var(--gold-pale);margin:48px auto}
+
+  /* BULLET LIST */
+  .benefit-list{max-width:600px;margin:0 auto 48px;padding:0 28px;list-style:none}
+  .benefit-list li{display:flex;gap:14px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line);font-size:16px;color:var(--brown);line-height:1.6}
+  .benefit-list li:last-child{border-bottom:none}
+  .benefit-list .dot{min-width:8px;height:8px;border-radius:50%;background:var(--gold);margin-top:7px}
+
+  /* SECTION HEADINGS */
+  .section-head{max-width:640px;margin:0 auto 20px;padding:0 28px}
+  .section-head h2{font-family:var(--display);font-weight:700;font-size:1.35rem;color:var(--ink);letter-spacing:-.015em}
+
+  /* HOW BOX */
+  .how-box{max-width:580px;margin:0 auto 48px;padding:0 28px}
+  .how-inner{background:var(--teal);border-radius:4px;padding:36px 32px;text-align:center}
+  .how-inner .label{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-pale);font-weight:600;margin-bottom:16px}
+  .how-inner h3{font-family:var(--display);font-weight:700;font-size:1.5rem;color:#fff;margin-bottom:20px;letter-spacing:-.01em}
+  .steps{list-style:none;text-align:left;margin-bottom:24px}
+  .steps li{display:flex;gap:14px;align-items:flex-start;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.1);font-size:15px;color:rgba(255,255,255,.88);line-height:1.55}
+  .steps li:last-child{border-bottom:none}
+  .steps .num{font-family:var(--display);font-weight:700;font-size:1rem;color:var(--gold-pale);min-width:20px;margin-top:2px}
+  .how-note{font-size:14px;color:rgba(255,255,255,.6);font-style:italic;line-height:1.6}
+
+  /* PROOF */
+  .proof-box{max-width:580px;margin:0 auto 64px;padding:0 28px;display:flex;flex-direction:column;gap:20px}
+  .proof-card{background:#fff;border-left:3px solid var(--gold);border-radius:0 4px 4px 0;padding:20px 24px}
+  .proof-card p{font-size:15px;color:var(--brown);line-height:1.7;font-style:italic}
+
+  /* CLOSING */
+  .closing{max-width:580px;margin:0 auto 48px;padding:0 28px;text-align:center}
+  .closing .pull{font-family:var(--display);font-weight:700;font-size:1.3rem;color:var(--ink);line-height:1.3;margin-bottom:20px;letter-spacing:-.01em}
+  .closing p{font-size:16px;color:var(--brown);line-height:1.75}
+
+  .signature{text-align:center;padding:0 28px 56px;max-width:520px;margin:0 auto}
+  .signature p{font-size:17px;color:var(--brown);margin-bottom:8px}
+  .signature .name{font-family:var(--display);font-weight:600;font-size:20px;color:var(--gold-deep);margin-top:12px}
+
+  /* CTA */
+  .cta-wrap{text-align:center;padding:0 28px 80px}
+  .btn{display:inline-block;background:var(--gold);color:#fff;font-family:var(--body);font-weight:700;font-size:17px;padding:18px 48px;border-radius:2px;letter-spacing:.01em;transition:background .2s,transform .2s}
+  .btn:hover{background:var(--gold-deep);transform:translateY(-2px)}
+  .cta-sub{font-size:13px;color:var(--gold-soft);margin-top:14px}
+
+  footer{background:var(--gold);color:#fff;padding:22px 32px;font-size:13px}
+  footer .inner{max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  footer .brand{font-family:var(--display);font-weight:700;font-size:.95rem;color:#fff}
+  footer a{color:rgba(255,255,255,.65)}
+  footer a.email{color:#fff;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(255,255,255,.4)}
+
+  @media(max-width:600px){
+    .hero{padding:80px 20px 0}
+    .video-wrap,.copy-block,.benefit-list,.section-head,.how-box,.proof-box,.closing,.signature{padding-left:20px;padding-right:20px}
+    .how-inner{padding:28px 20px}
+    .btn{font-size:15px;padding:16px 32px;white-space:nowrap}
+  }
+
+  /* MOBILE NAV */
+  .ham{display:none;background:none;border:none;cursor:pointer;padding:6px;color:var(--cream)}
+  .ham svg{display:block}
+  .mobile-nav{display:none;position:fixed;top:64px;left:0;right:0;background:var(--teal);z-index:9998;padding:16px 0;border-top:1px solid rgba(255,255,255,.1);flex-direction:column}
+  .mobile-nav a{display:block;padding:13px 28px;font-size:15px;color:var(--cream);font-weight:500;font-family:var(--body);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.07)}
+  .mobile-nav a:last-child{border-bottom:none}
+  .mobile-nav a.btn{margin:14px 28px 6px;display:block;background:var(--gold);color:#fff;padding:12px 20px;border-radius:2px;font-weight:600;text-align:center;border:none}
+  .mobile-nav.open{display:flex}
+  @media(max-width:860px){.ham{display:block}.topbar .more-wrap{display:none}.topbar nav > .btn{display:none}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand">Feel Fully <b>You</b>
+  <button class="ham" id="hamBtn" aria-label="Open menu" aria-expanded="false">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+</div>
+</div>
+
+
+<nav class="mobile-nav" id="mobileNav">
+  <a href="/">Home</a>
+  <a href="/work-with-me" class="btn">Start here</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="logo-wrap">
+    <img src="/touch-base-logo.png" alt="Touch Base™ logo">
+  </div>
+  <h1 class="trademark">Touch Base<sup>™</sup></h1>
+  <p class="tagline">A tiny gesture. A massive shift.</p>
+</div>
+
+<!-- VIDEO -->
+<div class="video-wrap">
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/qWaZ3rk0His" title="Touch Base™ — The Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</div>
+
+<!-- INTRO COPY -->
+<div class="copy-block">
+  <p>This short video introduces you to the Touch Base™ cue — a discreet, powerful physical anchor that signals to your body:</p>
+  <p><em>"I'm here. I'm safe. I can stay."</em></p>
+  <p>It's the foundational cue I teach all my private clients — including those navigating phobias, trauma, sudden shutdowns, or a tendency to leave their body the moment touch feels like too much.</p>
+  <p>Because this isn't just about touch. It's about helping your system feel safe enough to receive it.</p>
+</div>
+
+<ul class="benefit-list">
+  <li><span class="dot"></span><span>A simple technique to practise before offering or receiving touch — especially when things feel rushed, disconnected, or performative</span></li>
+  <li><span class="dot"></span><span>Anchors your breath, your body, and your attention — without needing to say a word</span></li>
+  <li><span class="dot"></span><span>Creates a full-body "pause" moment, where safety can override survival</span></li>
+  <li><span class="dot"></span><span>So discreet you can use it in bed, at dinner, mid-argument, or before intimacy</span></li>
+</ul>
+
+<div class="divider"></div>
+
+<!-- WHY IT WORKS -->
+<div class="section-head"><h2>Why it works</h2></div>
+<div class="copy-block">
+  <p>Touch Base™ activates pressure points that — when paired with slowness, breath, and focus — downregulate the stress response.</p>
+  <p>You're gently retraining your system to signal: <em>"There's no tiger. I don't have to brace. I'm safe to feel this."</em></p>
+  <p>And here's the real magic: it might feel silly at first (totally normal). But this soft, <strong>SLOOOOOOOW</strong> gesture becomes a kind of invisible safety blanket. Your partner won't even notice.</p>
+  <p>But your body will.</p>
+</div>
+
+<div class="divider"></div>
+
+<!-- WHAT'S REALLY HAPPENING -->
+<div class="section-head"><h2>What's really happening under the hood</h2></div>
+<div class="copy-block">
+  <p>Your body is always scanning. Especially if you're a woman — or were socialised as one — your subconscious is constantly asking:</p>
+  <p><em>"Is it safe to soften here?" &nbsp; "Is it safe to let go?"</em></p>
+  <p>All it takes is one loaded moment — a look. A brush. A hand that lingered where it shouldn't have — and your body registers it. You might not even remember when. But your system does.</p>
+  <p>It braces.</p>
+  <p>And often — even in loving relationships — this is why touch doesn't land. Not because you don't want to receive it. But because your body's still armoured, just in case.</p>
+  <p>This gesture interrupts that loop — without drama. No need for emotional excavation. No need to explain yourself mid-connection.</p>
+</div>
+
+<div class="divider"></div>
+
+<!-- HOW -->
+<div class="how-box">
+  <div class="how-inner">
+    <div class="label">The practice</div>
+    <h3>Touch Base™</h3>
+    <ul class="steps">
+      <li><span class="num">1</span><span>Press your thumb gently to your forefinger.</span></li>
+      <li><span class="num">2</span><span>Continue rubbing. <strong style="color:var(--gold-pale)">SLOOOOOW</strong> — soft like melted chocolate. Slower than that. Even slower than you think slow is.</span></li>
+      <li><span class="num">3</span><span>Say to yourself, quietly or silently: <em>I am safe right now.</em></span></li>
+      <li><span class="num">4</span><span>Keep rubbing for the full two minutes. Breathe.</span></li>
+    </ul>
+    <p class="how-note">The whole practice is two minutes. That's it. This is where the shift begins.</p>
+  </div>
+</div>
+
+<!-- PROOF STORIES -->
+<div class="proof-box">
+  <div class="proof-card">
+    <p>"A woman who had a lifelong fear of flying used this gesture mid-takeoff — it was the first time she stayed present in her body, rather than dissociating."</p>
+  </div>
+  <div class="proof-card">
+    <p>"Another used it to anchor herself during touch with her partner — after years of feeling like she 'left' her body the moment things became intimate."</p>
+  </div>
+</div>
+
+<!-- RAW DM PROOF -->
+<div class="section-head" style="text-align:center;margin-top:8px"><h2>What people send me after trying it</h2></div>
+<div class="proof-box" style="margin-top:16px">
+  <div class="proof-card" style="background:#f5f2ec;border-left:3px solid var(--teal);font-size:14px;padding:18px 22px">
+    <p style="font-size:12px;color:var(--gold-deep);font-style:normal;font-weight:600;letter-spacing:.05em;text-transform:uppercase;margin-bottom:8px">Instagram DM — Rob</p>
+    <p>"I tried touch base and it's been incredible. I feel so much more calm. I didn't realise that two minutes would make such a difference."</p>
+  </div>
+  <div class="proof-card" style="background:#f5f2ec;border-left:3px solid var(--teal);font-size:14px;padding:18px 22px">
+    <p style="font-size:12px;color:var(--gold-deep);font-style:normal;font-weight:600;letter-spacing:.05em;text-transform:uppercase;margin-bottom:8px">WhatsApp — Mon 22 Jun</p>
+    <p>"The technique you gave me is coming in handy today"</p>
+  </div>
+  <div class="proof-card" style="background:#f5f2ec;border-left:3px solid var(--teal);font-size:14px;padding:18px 22px">
+    <p style="font-size:12px;color:var(--gold-deep);font-style:normal;font-weight:600;letter-spacing:.05em;text-transform:uppercase;margin-bottom:8px">WhatsApp — follow-up</p>
+    <p>"The technique is coming in handy today too, the overwhelm just sneaks up on me but oddly when I organise everything I have on my plate, it subsides"</p>
+  </div>
+</div>
+
+<!-- CLOSING -->
+<div class="closing">
+  <p class="pull">Touch Base™ — the cue that brings your body back to YES.</p>
+  <p>Once you feel what it does? You'll return to it again and again. Not because it's flashy. But because it works.</p>
+  <p style="margin-top:16px">Your body already knows the way. This gesture just helps you remember it.</p>
+</div>
+
+<div class="signature">
+  <p>Use it everywhere. At work. On planes. In bed. Before difficult conversations.</p>
+  <div class="name">Warmly, Juliette</div>
+</div>
+
+<div class="closing" style="margin-top:0">
+  <p style="font-size:16px;color:var(--brown);line-height:1.75">When your body knows it's safe, the next question becomes: <em>how do we actually come back to each other?</em></p>
+  <p style="font-size:16px;color:var(--brown);line-height:1.75;margin-top:14px">The 10 Touch Rituals are ten non-sexual practices — a few minutes each — that rebuild contact without pressure. Structure that creates intimacy. The way back into the same room.</p>
+</div>
+
+<div class="cta-wrap">
+  <a href="https://feelfullyyou.com/10-touch-rituals" class="btn">The 10 Touch Rituals — £7</a>
+  <p class="cta-sub">Ten non-sexual touch practices. A few minutes each.</p>
+</div>
+
+<footer>
+  <div class="inner">
+    <div class="brand">Feel Fully You</div>
+    <div style="font-size:12px;display:flex;gap:16px;align-items:center">
+      <a href="mailto:support@feelfullyyou.com" class="email">support@feelfullyyou.com</a>
+      <a href="/terms">Terms</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.getElementById('hamBtn');
+  var nav=document.getElementById('mobileNav');
+  if(btn&&nav){btn.addEventListener('click',function(){nav.classList.toggle('open');btn.setAttribute('aria-expanded',nav.classList.contains('open'))});}
+})();
+</script>
+</body>
+</html>

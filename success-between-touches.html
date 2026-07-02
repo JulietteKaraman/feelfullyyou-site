@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Your guide is ready · Feel Fully You</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fefcfa;--ink:#1c1714;--brown:#5d4a33;
+    --gold:#a88538;--gold-deep:#99680c;--gold-pale:#ddc98e;--gold-soft:#b4a074;
+    --teal:#0d3535;
+    --blue:#d8dfe1;--teal-deep:#061a1a;--line-dark:#1d3a39;
+    --display:'Poppins',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--cream);color:var(--brown);font-family:var(--body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+
+  .topbar{position:fixed;top:0;left:0;right:0;z-index:9999;background:var(--teal);padding:0 28px;height:64px;display:flex;align-items:center;justify-content:space-between}
+  .topbar .brand{font-family:var(--display);font-weight:700;font-size:16px;letter-spacing:.02em;color:var(--cream)}
+  .topbar .brand b{color:var(--gold-pale)}
+  .topbar nav{display:flex;gap:26px;align-items:center}
+  .topbar nav a{font-size:14px;color:var(--cream);font-weight:500;transition:color .2s}
+  .topbar nav a:hover{color:var(--gold-pale)}
+  .topbar nav a.btn{background:var(--gold);color:#fff;padding:10px 20px;border-radius:2px;font-weight:600}
+  .topbar nav a.btn:hover{background:var(--gold-deep)}
+  @media(max-width:860px){.topbar nav > a:not(.btn){display:none}}
+
+  .hero{padding:72px 28px 48px;text-align:center;max-width:640px;margin:0 auto}
+  .check{width:56px;height:56px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;margin:0 auto 24px}
+  .check svg{width:24px;height:24px;stroke:#fff;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+  .eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:16px}
+  h1{font-family:var(--display);font-weight:700;font-size:clamp(1.8rem,4.5vw,2.6rem);color:var(--ink);line-height:1.06;letter-spacing:-.022em;margin-bottom:16px}
+  .hero-sub{font-size:17px;color:var(--brown);max-width:46ch;margin:0 auto;line-height:1.6}
+
+  .offer{max-width:520px;margin:36px auto 0;background:var(--teal);border-radius:4px;padding:40px 36px;text-align:center}
+  .offer .eye{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-pale);font-weight:600;margin-bottom:10px}
+  .offer h2{font-family:var(--display);font-weight:700;font-size:clamp(1.3rem,3vw,1.8rem);color:#fff;letter-spacing:-.018em;line-height:1.1;margin-bottom:14px}
+  .offer .sub{font-size:15px;color:rgba(255,255,255,.75);line-height:1.65;margin-bottom:20px;max-width:44ch;margin-left:auto;margin-right:auto}
+  .price-row{margin-bottom:22px}
+  .price-now{font-family:var(--display);font-weight:700;font-size:48px;color:var(--gold-pale);letter-spacing:-.02em}
+  .price-now span{font-size:.45em;font-weight:400;color:var(--gold-pale);letter-spacing:0}
+
+  .what-inside{list-style:none;text-align:left;margin:0 0 24px;border-top:1px solid rgba(255,255,255,.12)}
+  .what-inside li{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.12);font-size:14px;color:rgba(255,255,255,.82);line-height:1.5}
+  .what-inside li::before{content:"→";color:var(--gold-pale);min-width:16px;margin-top:1px}
+
+  .btn-yes{display:block;background:var(--gold);color:#fff;font-family:var(--body);font-weight:700;font-size:17px;padding:18px 32px;border-radius:2px;letter-spacing:.01em;transition:background .2s,transform .2s;margin-bottom:12px;text-align:center}
+  .btn-yes:hover{background:var(--gold-deep);transform:translateY(-2px)}
+  .no-thanks{display:block;font-size:13px;color:rgba(255,255,255,.55);margin-top:6px}
+  .no-thanks:hover{color:var(--gold-pale)}
+
+  footer{background:#a88538;color:#fff;padding:22px 32px;font-size:13px;margin-top:64px}
+  footer .inner{max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  footer .brand{font-family:var(--display);font-weight:700;font-size:.95rem;color:#fff}
+  footer a{color:rgba(255,255,255,.75)}
+  footer a.email{color:#fff;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(255,255,255,.5)}
+
+  @media(max-width:560px){.offer{padding:32px 20px;margin:36px 16px 0}.btn-yes{font-size:16px;padding:16px 24px}}
+
+  /* MOBILE NAV */
+  .ham{display:none;background:none;border:none;cursor:pointer;padding:6px;color:var(--cream)}
+  .ham svg{display:block}
+  .mobile-nav{display:none;position:fixed;top:64px;left:0;right:0;background:var(--teal);z-index:9998;padding:16px 0;border-top:1px solid rgba(255,255,255,.1);flex-direction:column}
+  .mobile-nav a{display:block;padding:13px 28px;font-size:15px;color:var(--cream);font-weight:500;font-family:var(--body);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.07)}
+  .mobile-nav a:last-child{border-bottom:none}
+  .mobile-nav a.btn{margin:14px 28px 6px;display:block;background:var(--gold);color:#fff;padding:12px 20px;border-radius:2px;font-weight:600;text-align:center;border:none}
+  .mobile-nav.open{display:flex}
+  @media(max-width:860px){.ham{display:block}.topbar .more-wrap{display:none}.topbar nav > .btn{display:none}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="/" class="brand">Feel Fully <b>You</b></a>
+</div>
+
+
+<nav class="mobile-nav" id="mobileNav">
+  <a href="/">Home</a>
+  <a href="/work-with-me" class="btn">Start here</a>
+</nav>
+
+<div class="hero">
+  <div class="check">
+    <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+  </div>
+  <div class="eyebrow">Your guide is ready</div>
+  <h1>Before you go.</h1>
+  <p class="hero-sub">Between Touches is waiting for you. One more thing that belongs alongside it.</p>
+</div>
+
+<div class="offer" style="margin-left:auto;margin-right:auto">
+  <div class="eye">One-time offer · this page only</div>
+  <h2>The Communication Reboot Kit</h2>
+  <div class="sub">45 conversation starter cards. Repair scripts for the moments that go sideways. A Touch Base® video. A 31-day tracker. Everything you need to bring language back into the space Between Touches creates.</div>
+  <div class="price-row">
+    <span class="price-now">£37 <span>one-time</span></span>
+  </div>
+  <ul class="what-inside">
+    <li>45 conversation starter cards: warmth, curiosity, truth</li>
+    <li>Repair scripts for the hard asks</li>
+    <li>Touch Connection playlist: softens the room before you begin</li>
+    <li>Touch Base® video + 31-day tracker</li>
+    <li>Fillable digital guide</li>
+  </ul>
+  <a href="https://buy.stripe.com/7sYeVceOvelq0Dj9qZ0co0D" class="btn-yes">Yes, add the Communication Reboot Kit · £37</a>
+  <a href="https://drive.google.com/file/d/1Niby-UmY4R8wFwB1qAE7O89XfLC9S1C8/view?usp=sharing" class="no-thanks" target="_blank" rel="noopener">No thanks. Take me to my Between Touches guide</a>
+</div>
+
+<footer>
+  <div class="inner">
+    <div class="brand">Feel Fully You
+  <button class="ham" id="hamBtn" aria-label="Open menu" aria-expanded="false">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+</div>
+    <div style="font-size:12px;color:rgba(255,255,255,.85);display:flex;gap:16px;align-items:center">
+      <a href="mailto:support@feelfullyyou.com" class="email">support@feelfullyyou.com</a>
+      <a href="/terms">Terms</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.getElementById('hamBtn');
+  var nav=document.getElementById('mobileNav');
+  if(btn&&nav){btn.addEventListener('click',function(){nav.classList.toggle('open');btn.setAttribute('aria-expanded',nav.classList.contains('open'))});}
+})();
+</script>
+</body>
+</html>

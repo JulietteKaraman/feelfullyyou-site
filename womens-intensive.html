@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Women's Intensive. Feel Fully You · Juliette Karaman</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fefcfa;--cream-2:#f6f4f1;
+    --ink:#1c1714;--brown:#5d4a33;
+    --gold:#a88538;--gold-deep:#99680c;--gold-soft:#b4a074;--gold-pale:#ddc98e;
+    --teal:#0d3535;--teal-deep:#061a1a;--teal-mid:#0f4040;
+    --blue:#d8dfe1;
+    --line:#e3dccf;--line-dark:#1d3a39;--max:1140px;
+    --display:'Poppins',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--brown);font-family:var(--body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  ::selection{background:var(--gold);color:#fff}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  p{max-width:62ch}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+  .narrow{max-width:700px;margin:0 auto;padding:0 28px}
+  .eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);font-weight:600}
+  h1,h2,h3{font-family:var(--display);font-weight:700}
+  h1,h2{line-height:1.07;letter-spacing:-.022em}
+  h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:22px;color:var(--ink)}
+  h3{font-size:1.2rem;line-height:1.2;letter-spacing:-.015em;color:var(--ink)}
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  .btn{display:inline-block;cursor:pointer;border:none;font-family:var(--body);font-weight:600;font-size:15px;letter-spacing:.01em;padding:16px 32px;border-radius:2px;background:var(--gold);color:#fff;transition:transform .25s,background .25s;text-decoration:none}
+  .btn:hover{background:var(--gold-deep);transform:translateY(-1px)}
+  .btn.teal{background:var(--teal);color:#fff}
+  .btn.teal:hover{background:var(--teal-mid)}
+  .btn.ghost{background:transparent;border:1px solid var(--gold-pale);color:var(--gold-pale)}
+  .btn.ghost:hover{background:rgba(255,255,255,.08)}
+
+  /* TOPBAR */
+  .topbar{position:fixed;top:0;left:0;right:0;z-index:9999;background:var(--teal);padding:0 28px;height:64px;display:flex;align-items:center;justify-content:space-between}
+  .topbar .brand{font-family:var(--display);font-weight:700;font-size:16px;letter-spacing:.02em;color:var(--cream)}
+  .topbar .brand b{color:var(--gold-pale)}
+  .topbar nav{display:flex;gap:26px;align-items:center}
+  .topbar nav a{font-size:14px;color:var(--cream);font-weight:500;transition:color .2s}
+  .topbar nav a:hover{color:var(--gold-pale)}
+  .topbar nav a.btn{background:var(--gold);color:#fff;padding:10px 20px;border-radius:2px;font-weight:600}
+  .topbar nav a.btn:hover{background:var(--gold-deep)}
+  @media(max-width:860px){.topbar nav > a:not(.btn){display:none}}
+
+  /* HERO */
+  .hero{padding-top:66px;background:var(--teal);overflow:hidden}
+  .hero-inner{display:grid;grid-template-columns:1.1fr .9fr;align-items:end;max-width:var(--max);margin:0 auto;padding:0 28px}
+  .hero .copy{padding:64px 56px 72px 0}
+  .hero .eyebrow{color:var(--gold-pale);margin-bottom:18px}
+  .hero h1{font-size:clamp(2rem,4.2vw,3.2rem);color:#fff;letter-spacing:-.028em;line-height:1.05;margin-bottom:24px}
+  .hero h1 em{font-style:italic;color:var(--gold-pale)}
+  .hero .sub{font-size:18px;color:#d7d0c4;max-width:38ch;line-height:1.55;margin-bottom:36px}
+  .hero .photo-col img{width:100%;height:auto;display:block}
+  @media(max-width:860px){
+    .hero-inner{grid-template-columns:1fr}
+    .hero .copy{padding:48px 0 36px}
+  }
+
+  /* BELIEF BAND */
+  .belief{padding:72px 0;background:#99680c;border-top:1px solid var(--line);text-align:center}
+  .belief .line{font-family:var(--display);font-weight:700;font-style:italic;color:#fff;font-size:clamp(1.4rem,3vw,2.2rem);line-height:1.2;max-width:28ch;margin:0 auto;letter-spacing:-.02em}
+
+  /* PAIN */
+  .pain{padding:80px 0;border-top:1px solid var(--line);background:var(--cream)}
+  .pain .eyebrow{margin-bottom:18px}
+  .pain h2{max-width:28ch}
+  .pain p{color:var(--brown);font-size:17px;line-height:1.7;margin-bottom:18px}
+  .pain .pull{font-family:var(--display);font-weight:600;font-size:19px;color:var(--ink);line-height:1.35;margin:32px 0;padding-left:20px;border-left:3px solid var(--gold);max-width:46ch}
+  .pain .client-q{margin-top:36px;background:#a88538;border-radius:4px;padding:32px 36px}
+  .pain .client-q .mark{font-family:var(--display);font-weight:700;font-size:2.4rem;color:#fff;line-height:.5;height:22px}
+  .pain .client-q blockquote{font-family:var(--display);font-weight:600;font-style:italic;color:#fff;font-size:1.1rem;line-height:1.4;margin:10px 0 14px;max-width:none}
+  .pain .client-q .who{font-size:13px;color:#fff;font-weight:500;letter-spacing:.04em;text-transform:uppercase}
+
+  /* METHOD */
+  .method{background:var(--teal);border-top:1px solid var(--line-dark)}
+  .method-inner{display:grid;grid-template-columns:1fr 1fr;align-items:start;max-width:var(--max);margin:0 auto}
+  .method .photo-col{overflow:hidden;align-self:stretch}
+  .method .photo-col img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+  .method .copy{padding:80px 52px}
+  .method .eyebrow{color:var(--gold-pale);margin-bottom:18px}
+  .method h2{color:#fff;margin-bottom:16px}
+  .method .sub{color:#d7d0c4;font-size:17px;margin-bottom:36px;max-width:44ch;line-height:1.6}
+  .rrr{display:flex;flex-direction:column;gap:22px}
+  .rrr-item h3{font-family:var(--display);font-weight:700;color:var(--gold-pale);font-size:1rem;letter-spacing:.04em;text-transform:uppercase;margin-bottom:6px}
+  .rrr-item p{color:#c8c0b4;font-size:15px;line-height:1.6;max-width:none}
+  @media(max-width:860px){
+    .method-inner{grid-template-columns:1fr}
+    .method .photo-col{min-height:340px;order:-1}
+    .method .copy{padding:52px 28px}
+  }
+
+  /* OFFER */
+  .offer{padding:80px 0;background:var(--cream-2);border-top:1px solid var(--line)}
+  .offer .eyebrow{margin-bottom:18px}
+  .offer h2{max-width:24ch}
+  .offer-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:36px}
+  .offer-card{background:var(--cream);border:1px solid var(--line);border-radius:4px;padding:36px 32px}
+  .offer-card.featured{background:var(--teal);border-color:var(--line-dark)}
+  .offer-card .tag{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--gold-deep);margin-bottom:12px}
+  .offer-card.featured .tag{color:var(--gold-pale)}
+  .offer-card .price{font-family:var(--display);font-weight:700;font-size:2.2rem;color:var(--ink);letter-spacing:-.02em;margin-bottom:4px}
+  .offer-card.featured .price{color:#fff}
+  .offer-card .price-sub{font-size:14px;color:var(--brown);margin-bottom:24px}
+  .offer-card.featured .price-sub{color:#d7d0c4}
+  .offer-list{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:28px}
+  .offer-list li{display:flex;align-items:flex-start;gap:12px;font-size:15px;color:var(--brown);line-height:1.5}
+  .offer-card.featured .offer-list li{color:#d7d0c4}
+  .offer-list li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:9px}
+  .offer-card.featured .offer-list li::before{background:var(--gold-pale)}
+  .offer-note{font-size:13px;color:var(--brown);font-style:italic;margin-top:16px}
+  .offer-card.featured .offer-note{color:var(--gold-soft)}
+  @media(max-width:700px){.offer-grid{grid-template-columns:1fr}}
+
+  /* TESTIMONIALS */
+  .testi{padding:80px 0;background:var(--teal);border-top:1px solid var(--line-dark)}
+  .testi .eyebrow{color:var(--gold-pale);margin-bottom:36px}
+  .testi-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px}
+  .tcard{border-radius:4px;padding:32px 28px}
+  .tcard:nth-child(1){background:#a88538}
+  .tcard:nth-child(2){background:var(--blue)}
+  .tcard:nth-child(3){background:var(--teal);border:1px solid var(--line-dark)}
+  .tcard .mark{font-family:var(--display);font-weight:700;font-size:2.2rem;line-height:.5;height:20px;margin-bottom:8px}
+  .tcard:nth-child(1) .mark{color:#fff}
+  .tcard:nth-child(2) .mark{color:var(--gold-deep)}
+  .tcard:nth-child(3) .mark{color:var(--gold-pale)}
+  .tcard blockquote{font-family:var(--display);font-weight:600;font-style:italic;font-size:1rem;line-height:1.4;margin-bottom:14px}
+  .tcard:nth-child(1) blockquote{color:#fff}
+  .tcard:nth-child(2) blockquote{color:var(--ink)}
+  .tcard:nth-child(3) blockquote{color:#fff}
+  .tcard .who{font-size:12px;letter-spacing:.06em;text-transform:uppercase;font-weight:500}
+  .tcard:nth-child(1) .who{color:rgba(255,255,255,.8)}
+  .tcard:nth-child(2) .who{color:var(--gold-deep)}
+  .tcard:nth-child(3) .who{color:var(--gold-pale)}
+  @media(max-width:760px){.testi-grid{grid-template-columns:1fr}}
+
+  /* WHY ME */
+  .why-me{border-top:1px solid var(--line)}
+  .why-split{display:grid;grid-template-columns:.9fr 1.1fr;align-items:stretch}
+  .why-photo{overflow:hidden}
+  .why-photo img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+  .why-copy{padding:72px 56px}
+  .why-copy .eyebrow{margin-bottom:16px}
+  .why-copy h2{margin-bottom:20px}
+  .why-copy .intro{font-size:16px;color:var(--brown);line-height:1.65;margin-bottom:16px;max-width:52ch}
+  .modalities{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0}
+  .modalities span{font-family:var(--body);font-weight:500;font-size:14px;color:var(--gold-deep);border:1px solid var(--gold-soft);border-radius:99px;padding:7px 16px;background:var(--cream);letter-spacing:.01em}
+  .needed{font-style:italic;color:var(--gold-deep);font-size:15px;margin-bottom:20px}
+  .press{display:flex;gap:20px;flex-wrap:wrap;align-items:center;margin:28px 0;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .press span{font-family:var(--display);font-size:16px;color:var(--gold-soft)}
+  .press .pod{font-style:italic;color:var(--gold-deep);font-size:14px}
+  .why-last{font-size:16px;color:var(--ink);font-weight:600;line-height:1.5;max-width:44ch;margin-top:20px}
+  @media(max-width:820px){
+    .why-split{grid-template-columns:1fr}
+    .why-photo{min-height:340px}
+    .why-copy{padding:52px 28px}
+  }
+
+  /* OUTCOMES */
+  .outcomes{padding:80px 0;background:var(--cream-2);border-top:1px solid var(--line)}
+  .outcomes h2{max-width:24ch}
+  .outcomes-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:36px}
+  .outcome{background:var(--blue);border:none;border-radius:4px;padding:28px}
+  .outcome h3{font-size:1.05rem;color:var(--teal);margin-bottom:10px;font-weight:700}
+  .outcome p{font-size:15px;color:var(--ink);line-height:1.6;max-width:none}
+  @media(max-width:700px){.outcomes-grid{grid-template-columns:1fr}}
+
+  /* FILTER */
+  .filter{padding:80px 0;background:var(--cream);border-top:1px solid var(--line)}
+  .filter-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-top:36px}
+  .filter h3{font-size:1.1rem;font-weight:700;margin-bottom:20px}
+  .filter-list{list-style:none;display:flex;flex-direction:column;gap:12px}
+  .filter-list li{font-size:16px;color:var(--brown);line-height:1.55;padding-left:18px;position:relative}
+  .filter-list li::before{content:"";position:absolute;left:0;top:10px;width:6px;height:6px;border-radius:50%;background:var(--gold-soft)}
+  @media(max-width:700px){.filter-grid{grid-template-columns:1fr}}
+
+  /* CTA */
+  .cta-section{padding:88px 0;background:var(--teal);border-top:1px solid var(--line-dark);text-align:center}
+  .cta-section h2{color:#fff;max-width:22ch;margin:0 auto 16px}
+  .cta-section p{color:#d7d0c4;font-size:17px;max-width:42ch;margin:0 auto 36px;line-height:1.6}
+  .cta-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+  /* FAQ */
+  .faq{padding:80px 0;background:var(--cream-2);border-top:1px solid var(--line)}
+  .faq h2{max-width:24ch;margin-bottom:40px}
+  .faq-list{max-width:680px}
+  .faq-item{border-bottom:1px solid var(--line);padding:24px 0}
+  .faq-item:first-child{border-top:1px solid var(--line)}
+  .faq-item h3{font-size:1.05rem;color:var(--ink);margin-bottom:10px;font-weight:600}
+  .faq-item p{font-size:15px;color:var(--brown);line-height:1.65;max-width:none}
+
+  /* FOOTER */
+  footer{padding:56px 0 48px;background:var(--gold);color:rgba(255,255,255,.85);border-top:1px solid var(--line-dark)}
+  footer .top{display:flex;justify-content:space-between;align-items:flex-start;gap:30px;flex-wrap:wrap;margin-bottom:28px}
+  footer .brand{font-family:var(--display);font-weight:700;font-size:17px;color:var(--cream)}
+  footer .brand b{color:var(--gold-pale)}
+  footer .tag{font-style:italic;color:var(--gold-pale);margin-top:6px;font-family:var(--display);font-weight:500;font-size:15px}
+  footer .fine{font-size:13px;color:#7e8a88;border-top:1px solid var(--line-dark);padding-top:20px}
+
+  @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}.reveal{opacity:1;transform:none}}
+  /* More dropdown */
+  .more-wrap{position:relative}
+  .more-wrap > button{background:none;border:none;cursor:pointer;font-size:14px;color:var(--cream);font-weight:500;font-family:var(--body);display:flex;align-items:center;gap:5px;padding:0;transition:color .2s}
+  .more-wrap > button:hover{color:var(--gold-pale)}
+  .more-wrap > button svg{transition:transform .2s}
+  .more-wrap.open > button svg{transform:rotate(180deg)}
+  .dropdown{position:absolute;top:calc(100% + 10px);right:0;background:var(--teal-deep);border:1px solid var(--line-dark);border-radius:3px;min-width:180px;padding:6px 0;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .18s,transform .18s;z-index:9999}
+  .more-wrap.open .dropdown{opacity:1;pointer-events:all;transform:none}
+  @media(max-width:860px){.dropdown{position:fixed;top:56px;right:16px}}
+  .dropdown a{display:block;padding:10px 18px;font-size:13px;color:var(--cream);font-weight:500;transition:background .15s,color .15s}
+  .dropdown a:hover{background:var(--teal);color:var(--gold-pale)}
+
+  /* MOBILE NAV */
+  .ham{display:none;background:none;border:none;cursor:pointer;padding:6px;color:var(--cream)}
+  .ham svg{display:block}
+  .mobile-nav{display:none;position:fixed;top:64px;left:0;right:0;background:var(--teal);z-index:9998;padding:16px 0;border-top:1px solid rgba(255,255,255,.1);flex-direction:column}
+  .mobile-nav a{display:block;padding:13px 28px;font-size:15px;color:var(--cream);font-weight:500;font-family:var(--body);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.07)}
+  .mobile-nav a:last-child{border-bottom:none}
+  .mobile-nav a.btn{margin:14px 28px 6px;display:block;background:var(--gold);color:#fff;padding:12px 20px;border-radius:2px;font-weight:600;text-align:center;border:none}
+  .mobile-nav.open{display:flex}
+  @media(max-width:860px){.ham{display:block}.topbar .more-wrap{display:none}.topbar nav > .btn{display:none}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="/" class="brand">Feel Fully <b>You</b>
+  <button class="ham" id="hamBtn" aria-label="Open menu" aria-expanded="false">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+</a>
+  <nav>
+    <a href="/">Home</a>
+    <div class="more-wrap" id="workWrap">
+      <button onclick="document.getElementById('workWrap').classList.toggle('open')" aria-expanded="false">
+        Work With Me <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg>
+      </button>
+      <div class="dropdown">
+        <a href="/for-her">For Her</a>
+        <a href="/for-him">For Him</a>
+        <a href="/for-both">For Both</a>
+        <a href="/the-room">The Room</a>
+      </div>
+    </div>
+    <a href="/cards">The Cards</a>
+    <a href="/shop">Shop</a>
+    <div class="more-wrap" id="moreWrap">
+      <button onclick="document.getElementById('moreWrap').classList.toggle('open')" aria-expanded="false">
+        More <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg>
+      </button>
+      <div class="dropdown">
+        <a href="/free-resources">Free Resources</a>
+        <a href="/grief-duality-process">Grief Process</a>
+        <a href="/media-and-pr">Media &amp; PR</a>
+        <a href="/contact">Contact</a>
+      </div>
+    </div>
+    <a href="/work-with-me" class="btn">Start here</a>
+  </nav>
+</div>
+
+<nav class="mobile-nav" id="mobileNav">
+  <a href="/">Home</a>
+  <a href="/for-her">For Her</a>
+  <a href="/for-him">For Him</a>
+  <a href="/for-both">For Both</a>
+  <a href="/the-room">The Room</a>
+  <a href="/cards">The Cards</a>
+  <a href="/shop">Shop</a>
+  <a href="/about">About Juliette</a>
+  <a href="/free-resources">Free Resources</a>
+  <a href="/grief-duality-process">Grief Process</a>
+  <a href="/media-and-pr">Media &amp; PR</a>
+  <a href="/contact">Contact</a>
+  <a href="/work-with-me" class="btn">Start here</a>
+</nav>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="copy">
+      <div class="eyebrow reveal">Women's Intensive</div>
+      <h1 class="reveal">You were made<br>to be <em>touched by life.</em></h1>
+      <p class="sub reveal">A bespoke day, in person or online, where you stop managing and start feeling. Where you come back into your skin. Slowly. Fully.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap">
+        <a href="https://links.ivorey.io/preview/DarIB5QLZEEYraFfFrmk?notrack=true" class="btn reveal">Book the intensive</a>
+        <a href="https://form.jotform.com/261584568346368" class="btn ghost reveal">Book a call</a>
+      </div>
+    </div>
+    <div class="photo-col">
+      <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/68556ab2c1dfb2fd4ea398d1.png" alt="Women's Intensive" class="reveal">
+    </div>
+  </div>
+</header>
+
+<!-- BELIEF -->
+<section class="belief">
+  <div class="narrow">
+    <p class="line reveal">Somewhere in you, there is still a woman who knows how to soften. This is the day she gets to come home.</p>
+  </div>
+</section>
+
+<!-- PAIN AS PROOF -->
+<section class="pain">
+  <div class="narrow">
+    <div class="eyebrow reveal" style="margin-bottom:18px">What is happening</div>
+    <h2 class="reveal">You know how to give.<br>You've forgotten what it feels like to receive.</h2>
+    <p class="reveal">There is a hunger in you. Quiet now, not because it left, but because you stopped feeding it. The wanting to be touched, held, seen all the way through. You learned to keep that to yourself.</p>
+    <p class="reveal">And so the body adapted. A small bracing when closeness begins. A breath that doesn't quite drop all the way down. A readiness to give before you've fully arrived. You've been doing it so long you stopped noticing.</p>
+    <p class="reveal">This isn't about what's wrong. It's about what's been waiting. The part of you that knows, in her skin, in her chest, in the slow exhale she almost never lets herself take, that she was made for more than this.</p>
+    <div class="pull reveal">You've been holding so much. This is the day your body gets to put it down.</div>
+    <div class="pain client-q reveal">
+      <div class="mark">"</div>
+      <blockquote>I came in feeling like I'd forgotten how to feel. I left remembering that feeling it all is my strength.</blockquote>
+      <div class="who">Christine · London</div>
+    </div>
+  </div>
+</section>
+
+<!-- METHOD -->
+<section class="method">
+  <div class="method-inner">
+    <div class="photo-col">
+      <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/687a548b88de25a9fd2b406b.jpeg" alt="">
+    </div>
+    <div class="copy">
+      <div class="eyebrow reveal">What happens in the session</div>
+      <h2 class="reveal" style="color:#fff">Not a protocol. A conversation between me and your body.</h2>
+      <p class="sub reveal">I bring everything I have. EMDR, hypnotherapy, somatic experiencing, spinal attunement, and Rapid Release Rewire Restore®, and I follow what your body needs. Nothing is forced. Everything moves at the pace of your body actually opening.</p>
+      <p class="sub reveal" style="font-style:italic;color:var(--gold-pale);font-size:15px">There is warmth when you arrive. Something that smells like calm. A space that is not asking anything of you yet. And then, almost before you notice it, your shoulders drop.</p>
+      <div class="rrr">
+        <div class="rrr-item reveal">
+          <h3>Arrive</h3>
+          <p>We don't rush to begin. What looks like stillness is your body starting to co-regulate, beginning to remember what its natural state actually feels like. Not forced. Not performed. Just the slow recognition that you are safe, and you can put it all down. That is where the day starts.</p>
+        </div>
+        <div class="rrr-item reveal">
+          <h3>Map your pleasure</h3>
+          <p>Using Touch Languages™ and your personal pleasure languages, we discover exactly how your body is wired, which touches open you, which textures, pressures, rhythms, and areas make you come alive. Every woman is different. Most have never been shown their own map. This is the part of the day where you find out who you actually are.</p>
+        </div>
+        <div class="rrr-item reveal">
+          <h3>Release what blocks it</h3>
+          <p>Where the body braces, guards, or goes numb, we move it. Not by talking. By going directly to where it lives. And I leave enough space. If something intense surfaces, an old memory, an unexpected wave of feeling, there is room for it. We move it through and out. Nothing gets left in the middle.</p>
+        </div>
+        <div class="rrr-item reveal">
+          <h3>Leave with a library</h3>
+          <p>You go home with a full personal touch library, a map of how you are wired, plus a curated set of touches to explore on your own. So the discovery doesn't stop when the day does.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFER -->
+<section class="offer" id="offer">
+  <div class="narrow">
+    <div class="eyebrow reveal">Choose your format</div>
+    <h2 class="reveal">The Women's Intensive</h2>
+    <div class="offer-grid">
+      <div class="offer-card featured reveal">
+        <div class="tag">In Person · East Sussex, UK</div>
+        <div class="price">£4,000</div>
+        <div class="price-sub">Six hours. Fully held.</div>
+        <ul class="offer-list">
+          <li>Six-hour immersion in East Sussex</li>
+          <li>Body guided gently into truth</li>
+          <li>Mapping of where you open and where you brace</li>
+          <li>Nourishing lunch included</li>
+          <li>30-minute integration call</li>
+          <li>Intimacy and Communication Cards</li>
+        </ul>
+        <a href="https://links.ivorey.io/preview/DarIB5QLZEEYraFfFrmk?notrack=true" class="btn">Book in person · £4,000</a>
+        <p class="offer-note">Two spaces a month. Must be redeemed within 6 months. All sales final.</p>
+      </div>
+      <div class="offer-card reveal">
+        <div class="tag">Online · Via Zoom</div>
+        <div class="price">£2,000</div>
+        <div class="price-sub">2.5 hours. No less held.</div>
+        <ul class="offer-list">
+          <li>2.5-hour self-touch session via Zoom</li>
+          <li>Guided presence with real-time tracking</li>
+          <li>Honouring your capacity for sensation</li>
+          <li>30-minute integration call</li>
+          <li>Intimacy and Communication Cards</li>
+        </ul>
+        <a href="https://links.ivorey.io/preview/DarIB5QLZEEYraFfFrmk?notrack=true" class="btn teal">Book online · £2,000</a>
+        <p class="offer-note">Two spaces a month. Must be redeemed within 6 months. All sales final.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi">
+  <div class="narrow">
+    <div class="eyebrow reveal">What women say</div>
+    <div class="testi-grid">
+      <div class="tcard reveal">
+        <div class="mark">"</div>
+        <blockquote>You've created a magical alchemy. Through profound challenge, you offer deep healing.</blockquote>
+        <div class="who">Linda Davies · Author &amp; Jungian Life Coach, UK</div>
+      </div>
+      <div class="tcard reveal">
+        <div class="mark">"</div>
+        <blockquote>This didn't just save my marriage. It changed how I mother, lead, and speak. Not a treat. A return to self.</blockquote>
+        <div class="who">Gina · Lawyer, New York</div>
+      </div>
+      <div class="tcard reveal">
+        <div class="mark">"</div>
+        <blockquote>I came in feeling like I'd forgotten how to feel. I left remembering that feeling it all is my strength.</blockquote>
+        <div class="who">Christine · London</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY ME -->
+<section class="why-me">
+  <div class="why-split">
+    <div class="why-photo">
+      <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/6a26a7defc95b24549c0479e.png" alt="Juliette Karaman">
+    </div>
+    <div class="why-copy">
+      <div class="eyebrow reveal">Why me</div>
+      <h2 class="reveal">I'm <em style="font-style:italic;color:var(--gold-deep)">Juliette.</em></h2>
+      <p class="intro reveal">For twenty-seven years I have been in the room with women at exactly this threshold, the brilliant ones, the capable ones, the ones who have held everything together so long they have forgotten what it feels like to be held.</p>
+      <p class="intro reveal">I know this place. I have been there. I followed my own wound into every room it needed to understand, until I had a way through.</p>
+      <p class="intro reveal">What I build in this work is not insight. It is a new felt sense, a body that knows it is safe to open, and a woman who trusts what she finds there.</p>
+      <div class="modalities reveal">
+        <span>EMDR</span><span>Somatic experiencing</span><span>Hypnotherapy</span><span>Spinal attunement</span><span>Deep PEAT</span><span>Aspectics</span><span>Touch Languages™</span><span>OM &amp; tantra</span>
+      </div>
+      <div class="press reveal">
+        <span>Forbes</span><span>The Times</span><span>Marie Claire</span><span>ITV</span><span>Telegraph</span><span>Newsweek</span>
+        <span class="pod">The Scrumptious Woman, top 2.5% globally</span>
+      </div>
+      <p class="why-last reveal">I don't sell safety. I unlock your capacity to feel it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- OUTCOMES -->
+<section class="outcomes">
+  <div class="narrow">
+    <div class="eyebrow reveal" style="margin-bottom:18px">What you leave holding</div>
+    <h2 class="reveal">You will feel different in your skin.</h2>
+    <div class="outcomes-grid">
+      <div class="outcome reveal">
+        <h3>Your pleasure map</h3>
+        <p>A real, personal map of your Touch Languages™ and pleasure languages, exactly how your body is wired, what opens you, what lights you up. Something most women never get to know about themselves.</p>
+      </div>
+      <div class="outcome reveal">
+        <h3>A full touch library</h3>
+        <p>A curated set of touches built around your pleasure languages, to explore on your own or bring to a partner. So the discovery keeps going long after the day ends.</p>
+      </div>
+      <div class="outcome reveal">
+        <h3>The blocks, moved</h3>
+        <p>Where you were bracing, guarding, or going numb, shifted. Not talked about. Actually moved, at the level it was running.</p>
+      </div>
+      <div class="outcome reveal">
+        <h3>A body you trust</h3>
+        <p>Your yes feels like a yes. Your no feels clean. You stop second-guessing what you actually want, and you know how to ask for it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FILTER -->
+<section class="filter">
+  <div class="narrow">
+    <div class="eyebrow reveal" style="margin-bottom:18px">Is this for you?</div>
+    <h2 class="reveal">Who this is for, and who it isn't.</h2>
+    <div class="filter-grid">
+      <div class="reveal">
+        <h3>This is for you if</h3>
+        <ul class="filter-list">
+          <li>You have built the life and the capacity to be held has gone quiet</li>
+          <li>You stiffen slightly when closeness begins and you don't know why</li>
+          <li>You have done the work, therapy, courses, retreats, and the body still runs the old pattern</li>
+          <li>You are ready for something to actually move, not more understanding</li>
+          <li>Your yes is clear</li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <h3>This is not for you if</h3>
+        <ul class="filter-list">
+          <li>You are looking for more information or a new framework</li>
+          <li>You are in acute crisis or need weekly clinical support</li>
+          <li>You want to move slowly and see how it feels first</li>
+          <li>You need a refund policy to feel safe</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="wrap">
+    <h2 class="reveal">You come holding.<br>You leave mapped.</h2>
+    <p class="reveal">Your yes, your no, your real way in. Touched in the places that open you, not just in the moment, but in how you live.</p>
+    <div class="cta-buttons">
+      <a href="https://links.ivorey.io/preview/DarIB5QLZEEYraFfFrmk?notrack=true" class="btn reveal">Book the intensive</a>
+      <a href="https://form.jotform.com/261584568346368" class="btn ghost reveal">Not sure? Book a 15-min clarity call</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="narrow">
+    <h2 class="reveal">Frequently asked</h2>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <h3>What is the difference between online and in-person?</h3>
+        <p>In-person is a six-hour immersion in East Sussex, the pace slows significantly and you are held fully in the room. Online is 2.5 hours via Zoom, designed to honour your capacity for sensation. Both formats meet you where you are.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h3>Is this therapy?</h3>
+        <p>No. I bring everything I have. EMDR, hypnotherapy, somatic experiencing, spinal attunement, and my own method Rapid Release Rewire Restore®, to move what is held in the body. Think of it this way: we use whatever the moment needs, not a fixed protocol. You will not spend the day talking about your past. You will spend it actually shifting it.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h3>Do you work with trauma?</h3>
+        <p>Yes. Much of this work involves the quiet aftermath of trauma, particularly where it impacts intimacy, the capacity to receive, and the ability to trust the body. I meet the body where it holds things, without needing words for it.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h3>Is this available outside the UK?</h3>
+        <p>Online is available globally. For in-person sessions outside East Sussex, reach out and we will explore options, additional costs apply.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h3>What happens after the intensive?</h3>
+        <p>You leave with the Intimacy and Communication Cards. Many women also continue with the Six-Week Intensive or The Beginning couples programme.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h3>Is this confidential?</h3>
+        <p>Everything is held in complete confidence. Always.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h3>What is your refund policy?</h3>
+        <p>This is bespoke, personal work. All sales are final. Book when your yes is clear.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background:#a88538;color:#fff;padding:22px 32px;font-size:13px">
+  <div style="max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+    <div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:0.95rem;color:#fff;letter-spacing:-.01em">Feel Fully You</div>
+    <div style="font-size:12px;color:rgba(255,255,255,.85);display:flex;gap:16px;align-items:center"><a href="mailto:support@feelfullyyou.com" style="color:#fff;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(255,255,255,.5)">support@feelfullyyou.com</a><a href="https://feelfullyyou.com/terms" style="color:rgba(255,255,255,.75);text-decoration:none" target="_blank" rel="noopener">Terms</a></div>
+    <div style="display:flex;gap:14px;align-items:center">
+      <a href="https://www.instagram.com/juliettekaraman/" aria-label="Instagram" style="color:rgba(255,255,255,.85);display:flex;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+      <a href="https://www.facebook.com/juliette.karamanvanschaardenburg" aria-label="Facebook" style="color:rgba(255,255,255,.85);display:flex;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+      <a href="https://www.linkedin.com/in/juliette-karaman-van-schaardenburg-89399913b" aria-label="LinkedIn" style="color:rgba(255,255,255,.85);display:flex;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+      <a href="https://www.tiktok.com/@juliettekaraman" aria-label="TikTok" style="color:rgba(255,255,255,.85);display:flex;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+      <a href="https://substack.com/@juliettekaraman" aria-label="Substack" style="color:rgba(255,255,255,.85);display:flex;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 17.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+<script>
+(function(){
+  var btn=document.getElementById('hamBtn');
+  var nav=document.getElementById('mobileNav');
+  if(btn&&nav){btn.addEventListener('click',function(){nav.classList.toggle('open');btn.setAttribute('aria-expanded',nav.classList.contains('open'))});}
+})();
+</script>
+</body>
+</html>

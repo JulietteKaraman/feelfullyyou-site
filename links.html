@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Links · Juliette Karaman</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fefcfa;--ink:#1c1714;--brown:#5d4a33;
+    --gold:#a88538;--gold-deep:#99680c;--gold-pale:#ddc98e;--gold-soft:#b4a074;
+    --teal:#0d3535;
+    --blue:#d8dfe1;--line:#e3dccf;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--cream);font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased;min-height:100vh}
+
+  /* HERO — full portrait, not cropped */
+  .hero{text-align:center;padding:40px 20px 28px}
+  .hero img{width:140px;height:140px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid var(--gold-soft);margin:0 auto 16px;display:block}
+  .hero .name{font-family:'Poppins',sans-serif;font-weight:700;font-size:1.2rem;color:var(--ink);letter-spacing:-.02em;margin-bottom:4px}
+  .hero .bio{font-size:13px;color:var(--brown);line-height:1.5}
+
+  /* CONTENT */
+  .content{max-width:480px;margin:0 auto;padding:8px 16px 60px}
+
+  /* SECTION LABEL */
+  .slabel{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin:24px 0 8px 2px}
+
+  /* LINK ROW — photo left, text right */
+  .row{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--line);border-radius:5px;padding:10px 14px 10px 10px;margin-bottom:8px;text-decoration:none;color:var(--ink);transition:background .18s,transform .15s}
+  .row:hover{background:var(--cream);transform:translateY(-1px)}
+  .row.gold{background:var(--gold);border-color:transparent;color:#fff}
+  .row.gold:hover{background:var(--gold-deep)}
+  .row img{width:52px;height:52px;border-radius:4px;object-fit:cover;flex-shrink:0}
+  .row .rtext{flex:1;min-width:0}
+  .row .rtitle{font-family:'Poppins',sans-serif;font-weight:600;font-size:.9rem;letter-spacing:-.01em;line-height:1.2;margin-bottom:2px}
+  .row .rdesc{font-size:11.5px;color:var(--brown);line-height:1.4}
+  .row.gold .rdesc{color:rgba(255,255,255,.8)}
+  .row .rarr{color:var(--gold-deep);font-size:14px;flex-shrink:0;margin-left:4px}
+  .row.gold .rarr{color:rgba(255,255,255,.8)}
+
+  /* DIVIDER */
+  .div{height:1px;background:var(--line);margin:20px 0 4px}
+
+  /* WEBSITE CARD */
+  .site-card{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--line);border-radius:5px;padding:10px 14px 10px 10px;text-decoration:none;color:var(--ink);transition:background .18s,transform .15s;margin-bottom:8px}
+  .site-card:hover{background:var(--cream);transform:translateY(-1px)}
+  .site-card img{width:52px;height:52px;border-radius:4px;object-fit:cover;object-position:center 25%;flex-shrink:0}
+  .site-card .rtext .rtitle{font-family:'Poppins',sans-serif;font-weight:600;font-size:.9rem;letter-spacing:-.01em;line-height:1.2;margin-bottom:2px}
+  .site-card .rtext .rdesc{font-size:11.5px;color:var(--brown)}
+  .site-card .rarr{color:var(--gold-deep);font-size:14px;flex-shrink:0;margin-left:auto;padding-left:8px}
+
+  /* SOCIALS */
+  .socials{display:flex;justify-content:center;gap:22px;margin-top:32px}
+  .socials a{color:var(--gold-soft);transition:color .2s;display:flex}
+  .socials a:hover{color:var(--gold-deep)}
+  .socials svg{width:20px;height:20px;fill:currentColor}
+
+  .footer{text-align:center;margin-top:22px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-soft)}
+  a{color:inherit;text-decoration:none}
+  
+  /* MOBILE NAV */
+  .ham{display:none;background:none;border:none;cursor:pointer;padding:6px;color:var(--cream)}
+  .ham svg{display:block}
+  .mobile-nav{display:none;position:fixed;top:64px;left:0;right:0;background:var(--teal);z-index:9998;padding:16px 0;border-top:1px solid rgba(255,255,255,.1);flex-direction:column}
+  .mobile-nav a{display:block;padding:13px 28px;font-size:15px;color:var(--cream);font-weight:500;font-family:var(--body);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.07)}
+  .mobile-nav a:last-child{border-bottom:none}
+  .mobile-nav a.btn{margin:14px 28px 6px;display:block;background:var(--gold);color:#fff;padding:12px 20px;border-radius:2px;font-weight:600;text-align:center;border:none}
+  .mobile-nav.open{display:flex}
+  @media(max-width:860px){.ham{display:block}.topbar .more-wrap{display:none}.topbar nav > .btn{display:none}}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/6a16ee7050a5a2a5d2fa0bc5.jpeg" alt="Juliette Karaman">
+  <div class="name">Juliette Karaman</div>
+  <div class="bio">Embodied Intimacy, Touch &amp; Relationship Specialist</div>
+</div>
+
+<div class="content">
+
+  <div class="slabel">For Her</div>
+
+  <a href="https://feelfullyyou.com/the-room" class="row">
+    <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/6a3e9bb95aefbd076b96d5ce.png" alt="The Room">
+    <div class="rtext">
+      <div class="rtitle">The Room — 8-Week Programme</div>
+      <div class="rdesc">For women. The body work that changes everything.</div>
+    </div>
+    <span class="rarr">→</span>
+  </a>
+
+  <div class="slabel">For Him</div>
+
+  <a href="https://feelfullyyou.com/touch-point" class="row">
+    <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/6a2fee79bc11d12c0bbafe45.jpg" alt="Touch Point">
+    <div class="rtext">
+      <div class="rtitle">Touch Point — Men's Membership</div>
+      <div class="rdesc">Telegram + monthly call · £97/mo</div>
+    </div>
+    <span class="rarr">→</span>
+  </a>
+
+  <div class="slabel">For Couples</div>
+
+  <a href="https://feelfullyyou.com/cards" class="row">
+    <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/695bce014d9452f24cb4b08c.jpg" alt="Cards">
+    <div class="rtext">
+      <div class="rtitle">Intimacy &amp; Communication Cards</div>
+      <div class="rdesc">475 cards to reach each other again</div>
+    </div>
+    <span class="rarr">→</span>
+  </a>
+
+  <a href="https://cards.feelfullyyou.com" class="row">
+    <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/69f863ac945c4a6aa51c56f4.png" alt="Get the Cards">
+    <div class="rtext">
+      <div class="rtitle">Get the Cards — from £15</div>
+      <div class="rdesc">Direct checkout · instant access</div>
+    </div>
+    <span class="rarr">→</span>
+  </a>
+
+  <a href="https://feelfullyyou.com/work-with-me" style="display:flex;align-items:center;justify-content:space-between;border:1.5px solid var(--gold);border-radius:5px;padding:12px 16px;margin-bottom:8px;text-decoration:none;color:var(--gold-deep);font-family:'Poppins',sans-serif;font-weight:600;font-size:.9rem;letter-spacing:-.01em;transition:background .18s">
+    <span>See all programs</span>
+    <span style="font-size:14px">→</span>
+  </a>
+
+  <div class="div"></div>
+
+  <div class="slabel">Work with Juliette</div>
+
+  <a href="https://form.jotform.com/261584568346368" class="row gold" target="_blank" rel="noopener">
+    <div class="rtext">
+      <div class="rtitle">Apply for a Touch Audit</div>
+      <div class="rdesc">Find your way in</div>
+    </div>
+    <span class="rarr">→</span>
+  </a>
+
+  <div class="slabel">Guides</div>
+
+  <a href="https://feelfullyyou.com/10-touch-rituals" class="row">
+    <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/6a2ff5bee5b9322bddd1ead5.png" alt="10 Touch Rituals">
+    <div class="rtext">
+      <div class="rtitle">10 Touch Rituals · £7</div>
+      <div class="rdesc">Instant access</div>
+    </div>
+    <span class="rarr">→</span>
+  </a>
+
+  <a href="https://feelfullyyou.com/31-daily-touch-points" class="row">
+    <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/6a2ff5be80d813e2ec82f31d.png" alt="31 Daily Touch Points">
+    <div class="rtext">
+      <div class="rtitle">31 Daily Touch Points · £27</div>
+      <div class="rdesc">Feel each other again, one day at a time</div>
+    </div>
+    <span class="rarr">→</span>
+  </a>
+
+  <div class="slabel">Explore</div>
+
+  <a href="https://feelfullyyou.com/free-resources" class="row">
+    <div class="rtext">
+      <div class="rtitle">Free Resources</div>
+      <div class="rdesc">Touch Base, Couple Cards, guides</div>
+    </div>
+    <span class="rarr">→</span>
+  </a>
+
+  <a href="https://substack.com/@juliettekaraman" class="row" target="_blank" rel="noopener">
+    <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/6a0b2c2f2e98e28fa19dbe5a.png" alt="Substack">
+    <div class="rtext">
+      <div class="rtitle">What the Body Knows — Substack</div>
+      <div class="rdesc">Essays on touch, intimacy, the body</div>
+    </div>
+    <span class="rarr">→</span>
+  </a>
+
+  <a href="https://open.spotify.com/show/50jFN83FxoNm0UXiryqkJW" class="row" target="_blank" rel="noopener">
+    <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/6a311cec22582c14f11b3ad5.png" alt="The Scrumptious Woman Podcast">
+    <div class="rtext">
+      <div class="rtitle">The Scrumptious Woman — Podcast</div>
+      <div class="rdesc">On Spotify</div>
+    </div>
+    <span class="rarr">→</span>
+  </a>
+
+  <div class="slabel">The full site</div>
+
+  <a href="https://feelfullyyou.com" class="site-card">
+    <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/68f7ca9d84a9d68db66b2a16.jpeg" alt="Feel Fully You">
+    <div class="rtext">
+      <div class="rtitle">feelfullyyou.com</div>
+      <div class="rdesc">Explore everything</div>
+    </div>
+    <span class="rarr">→</span>
+  </a>
+
+  <div class="socials">
+    <a href="https://www.instagram.com/juliettekaraman" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+    </a>
+    <a href="https://www.facebook.com/juliette.karamanvanschaardenburg" target="_blank" rel="noopener" aria-label="Facebook">
+      <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+    </a>
+    <a href="https://www.tiktok.com/@juliettekaraman" target="_blank" rel="noopener" aria-label="TikTok">
+      <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.74a4.85 4.85 0 01-1.01-.05z"/></svg>
+    </a>
+    <a href="https://www.youtube.com/@juliettekaraman" target="_blank" rel="noopener" aria-label="YouTube">
+      <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+    </a>
+  </div>
+
+  <div class="footer">feelfullyyou.com</div>
+</div>
+
+<script>
+(function(){
+  var btn=document.getElementById('hamBtn');
+  var nav=document.getElementById('mobileNav');
+  if(btn&&nav){btn.addEventListener('click',function(){nav.classList.toggle('open');btn.setAttribute('aria-expanded',nav.classList.contains('open'))});}
+})();
+</script>
+</body>
+</html>

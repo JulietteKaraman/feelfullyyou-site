@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Beginning. The Ultimate Touch Reset · Feel Fully You</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fefcfa;--cream-2:#f6f4f1;
+    --ink:#1c1714;--brown:#5d4a33;
+    --gold:#a88538;--gold-deep:#99680c;--gold-soft:#b4a074;--gold-pale:#ddc98e;
+    --teal:#0d3535;--teal-deep:#061a1a;--teal-mid:#0f4040;
+    --blue:#d8dfe1;
+    --line:#e3dccf;--line-dark:#1d3a39;--max:1140px;
+    --display:'Poppins',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--brown);font-family:var(--body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  ::selection{background:var(--gold);color:#fff}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  p{max-width:62ch}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+  .narrow{max-width:700px;margin:0 auto;padding:0 28px}
+  .eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);font-weight:600}
+  h1,h2,h3{font-family:var(--display);font-weight:700}
+  h1,h2{line-height:1.07;letter-spacing:-.022em}
+  h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:22px;color:var(--ink)}
+  h3{font-size:1.15rem;line-height:1.2;letter-spacing:-.015em;color:var(--ink)}
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  .btn{display:inline-block;cursor:pointer;border:none;font-family:var(--body);font-weight:600;font-size:15px;letter-spacing:.01em;padding:16px 32px;border-radius:2px;background:var(--gold);color:#fff;transition:transform .25s,background .25s;text-decoration:none}
+  .btn:hover{background:var(--gold-deep);transform:translateY(-1px)}
+  .btn.ghost{background:transparent;border:1px solid var(--gold-pale);color:var(--gold-pale)}
+  .btn.ghost:hover{background:rgba(255,255,255,.08)}
+
+  .topbar{position:fixed;top:0;left:0;right:0;z-index:9999;background:var(--teal);padding:0 28px;height:64px;display:flex;align-items:center;justify-content:space-between}
+  .topbar .brand{font-family:var(--display);font-weight:700;font-size:16px;letter-spacing:.02em;color:var(--cream)}
+  .topbar .brand b{color:var(--gold-pale)}
+  .topbar nav{display:flex;gap:26px;align-items:center}
+  .topbar nav a{font-size:14px;color:var(--cream);font-weight:500;transition:color .2s}
+  .topbar nav a:hover{color:var(--gold-pale)}
+  .topbar nav a.btn{background:var(--gold);color:#fff;padding:10px 20px;border-radius:2px;font-weight:600}
+  .topbar nav a.btn:hover{background:var(--gold-deep)}
+  @media(max-width:860px){.topbar nav > a:not(.btn){display:none}}
+
+  .hero{padding-top:66px;background:var(--teal);overflow:hidden}
+  .hero-inner{display:grid;grid-template-columns:1.1fr .9fr;align-items:end;max-width:var(--max);margin:0 auto;padding:0 28px}
+  .hero .copy{padding:64px 56px 72px 0}
+  .hero .eyebrow{color:var(--gold-pale);margin-bottom:18px}
+  .hero h1{font-size:clamp(2rem,4.2vw,3.2rem);color:#fff;letter-spacing:-.028em;line-height:1.05;margin-bottom:24px}
+  .hero h1 em{font-style:italic;color:var(--gold-pale)}
+  .hero .sub{font-size:18px;color:#d7d0c4;max-width:40ch;line-height:1.55;margin-bottom:36px}
+  .hero .photo-col img{width:100%;height:auto;display:block}
+  @media(max-width:860px){.hero-inner{grid-template-columns:1fr}.hero .copy{padding:48px 0 36px}}
+
+  .belief{padding:72px 0;background:#99680c;border-top:1px solid var(--line);text-align:center}
+  .belief .line{font-family:var(--display);font-weight:700;font-style:italic;color:#fff;font-size:clamp(1.4rem,3vw,2.2rem);line-height:1.3;max-width:36ch;margin:0 auto;letter-spacing:-.02em}
+
+  .atmo{position:relative;min-height:480px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+  .atmo img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+  .atmo .overlay{position:absolute;inset:0;background:rgba(6,26,26,.75)}
+  .atmo .content{position:relative;z-index:1;text-align:center;padding:60px 28px;max-width:680px}
+  .atmo .content h2{color:#fff;margin-bottom:20px;font-size:clamp(1.8rem,4vw,2.8rem)}
+  .atmo .content p{color:#d7d0c4;font-size:18px;line-height:1.65;margin:0 auto;max-width:52ch}
+
+  .pain{padding:80px 0;border-top:1px solid var(--line);background:var(--cream)}
+  .pain .eyebrow{margin-bottom:18px}
+  .pain h2{max-width:28ch}
+  .pain p{color:var(--brown);font-size:17px;line-height:1.7;margin-bottom:18px}
+  .pain .pull{font-family:var(--display);font-weight:600;font-size:19px;color:var(--ink);line-height:1.35;margin:32px 0;padding-left:20px;border-left:3px solid var(--gold);max-width:46ch}
+  .pain-split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .feeling-split{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center;margin:48px 0 36px}
+  .feeling-photo img{width:100%;height:auto;display:block;border-radius:12px}
+  @media(max-width:700px){.feeling-split{grid-template-columns:1fr}}
+  .pain-photo img{border-radius:12px;width:100%;height:auto;display:block}
+  .pain-lede{font-size:18px;line-height:1.75;color:var(--brown);margin-bottom:16px}
+  .pain-hook{font-size:17px;line-height:1.7;color:var(--ink);font-weight:600;margin-bottom:0}
+  @media(max-width:700px){.pain-split{grid-template-columns:1fr}.pain-photo{order:-1}}
+  .recognition-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:36px 0}
+  .recog-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:32px 28px}
+  .recog-label{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+  .recog-card p{font-size:16px;line-height:1.7;color:var(--brown);margin-bottom:12px}
+  .recog-q{font-family:var(--display);font-weight:700;font-size:17px;color:var(--ink);line-height:1.4;font-style:italic;border-top:1px solid var(--line);padding-top:16px;margin-top:16px}
+  .missing{padding:80px 0;background:var(--cream);border-top:1px solid var(--line)}
+  .missing h2{max-width:32ch;margin-bottom:24px}
+  .missing-pull{font-family:var(--display);font-weight:700;font-size:20px;color:var(--ink);line-height:1.4;padding:24px 28px;border-left:4px solid var(--gold);background:#fff;border-radius:0 8px 8px 0;margin:32px 0}
+  .missing p{font-size:17px;line-height:1.75;color:var(--brown);margin-bottom:14px}
+  .week-culm{grid-column:1/-1;background:var(--teal);color:#fff;border-color:transparent}
+  .week-culm .wlabel{color:var(--gold)}
+  .week-culm h3{color:#fff}
+  .week-culm p{color:rgba(255,255,255,.85);margin-bottom:12px}
+  .culm-note{font-style:italic;color:var(--gold) !important;font-weight:600;margin-top:16px;font-size:15px}
+  .testi-grid--5{grid-template-columns:1fr 1fr;gap:20px}
+  .tried-block{margin-top:56px;padding-top:48px;border-top:1px solid var(--line)}
+  .tried-banner{border-radius:12px;overflow:hidden;max-height:320px}
+  .tried-banner img{width:100%;height:320px;object-fit:cover;display:block}
+  .tried-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:36px}
+  .tried-item{padding:20px 24px;background:#fff;border:1px solid var(--line);border-radius:10px}
+  .tried-item h4{font-family:var(--display);font-size:15px;font-weight:700;color:var(--ink);margin-bottom:6px}
+  .tried-item p{font-size:15px;line-height:1.65;color:var(--brown);margin:0}
+  @media(max-width:640px){.tried-grid{grid-template-columns:1fr}}
+  @media(max-width:640px){.recognition-grid{grid-template-columns:1fr}.tried-grid{grid-template-columns:1fr}}
+  .maybe-list{margin:28px 0;display:flex;flex-direction:column}
+  .maybe-item{padding:16px 0 16px 24px;border-bottom:1px solid var(--line);color:var(--brown);font-size:17px;line-height:1.5;position:relative}
+  .maybe-item:first-child{border-top:1px solid var(--line)}
+  .maybe-item::before{content:"";position:absolute;left:0;top:50%;width:8px;height:8px;border-radius:50%;background:var(--gold-soft);transform:translateY(-50%)}
+
+  .spine{padding:80px 0;border-top:1px solid var(--line);background:var(--cream-2)}
+  .spine h2{max-width:24ch}
+  .spine .lede{font-size:17px;color:var(--brown);max-width:58ch;margin-bottom:48px;line-height:1.65}
+  .weeks{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:36px}
+  .week{background:var(--cream);border:1px solid var(--line);border-radius:4px;padding:32px 28px}
+  .week .wlabel{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:10px}
+  .week h3{font-size:1.2rem;color:var(--ink);margin-bottom:10px}
+  .week p{font-size:15px;color:var(--brown);line-height:1.6;max-width:none}
+  @media(max-width:700px){.weeks{grid-template-columns:1fr}}
+
+  .included{padding:80px 0;border-top:1px solid var(--line);background:var(--teal)}
+  .included .eyebrow{color:var(--gold-pale);margin-bottom:18px}
+  .included h2{color:#fff;margin-bottom:12px}
+  .included .lede{color:#d7d0c4;font-size:17px;max-width:52ch;margin-bottom:48px;line-height:1.6}
+  .included-feature{margin-bottom:48px}
+  .included-feature img{width:100%;max-width:720px;margin:0 auto;border-radius:4px;display:block}
+  .checklist{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .check-item{background:rgba(255,255,255,.05);border:1px solid var(--line-dark);border-radius:4px;padding:24px;display:grid;grid-template-columns:68px 1fr;gap:18px;align-items:start}
+  .check-item img{width:68px;height:68px;object-fit:contain;border-radius:4px}
+  .check-item .ctitle{font-family:var(--display);font-weight:700;color:var(--gold-pale);font-size:.95rem;margin-bottom:6px}
+  .check-item .cdesc{color:#c8c0b4;font-size:14px;line-height:1.6;max-width:none}
+  @media(max-width:700px){.checklist{grid-template-columns:1fr}}
+
+  .testi{padding:80px 0;background:var(--cream-2);border-top:1px solid var(--line)}
+  .testi .eyebrow{margin-bottom:36px}
+  .testi-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .tcard{border-radius:4px;padding:36px 32px}
+  .tcard.t1{background:var(--teal);border:1px solid var(--line-dark)}
+  .tcard.t2{background:#a88538}
+  .tcard.t3{background:var(--blue);grid-column:1/-1}
+  .tcard .mark{font-family:var(--display);font-weight:700;font-size:2.4rem;line-height:.5;height:20px;margin-bottom:10px}
+  .tcard.t1 .mark,.tcard.t2 .mark{color:rgba(255,255,255,.6)}
+  .tcard.t3 .mark{color:var(--gold-deep)}
+  .tcard blockquote{font-family:var(--display);font-weight:600;font-style:italic;font-size:1.05rem;line-height:1.45;margin-bottom:16px}
+  .tcard.t1 blockquote,.tcard.t2 blockquote{color:#fff}
+  .tcard.t3 blockquote{color:var(--ink);font-size:1.15rem}
+  .tcard .who{font-size:12px;letter-spacing:.07em;text-transform:uppercase;font-weight:600}
+  .tcard.t1 .who,.tcard.t2 .who{color:rgba(255,255,255,.75)}
+  .tcard.t3 .who{color:var(--gold-deep)}
+  @media(max-width:700px){.testi-grid{grid-template-columns:1fr}.tcard.t3{grid-column:auto}}
+
+  .why-me{border-top:1px solid var(--line)}
+  .why-split{display:grid;grid-template-columns:.9fr 1.1fr;align-items:stretch}
+  .why-photo{overflow:hidden}
+  .why-photo img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+  .why-copy{padding:72px 56px}
+  .why-copy .eyebrow{margin-bottom:16px}
+  .why-copy h2{margin-bottom:20px}
+  .why-copy .intro{font-size:16px;color:var(--brown);line-height:1.65;margin-bottom:16px;max-width:52ch}
+  .modalities{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0}
+  .modalities span{font-family:var(--body);font-weight:500;font-size:14px;color:var(--gold-deep);border:1px solid var(--gold-soft);border-radius:99px;padding:7px 16px;background:var(--cream);letter-spacing:.01em}
+  .press{display:flex;gap:20px;flex-wrap:wrap;align-items:center;margin:28px 0;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .press span{font-family:var(--display);font-size:16px;color:var(--gold-soft)}
+  .press .pod{font-style:italic;color:var(--gold-deep);font-size:14px}
+  .why-last{font-size:16px;color:var(--ink);font-weight:600;line-height:1.5;max-width:44ch;margin-top:20px}
+  @media(max-width:820px){.why-split{grid-template-columns:1fr}.why-photo{min-height:340px}.why-copy{padding:52px 28px}}
+
+  .outcomes{padding:80px 0;background:var(--cream-2);border-top:1px solid var(--line)}
+  .outcomes h2{max-width:24ch}
+  .outcomes-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:36px}
+  .outcome{background:var(--blue);border-radius:4px;padding:28px}
+  .outcome h3{font-size:1.05rem;color:var(--teal);margin-bottom:10px;font-weight:700}
+  .outcome p{font-size:15px;color:var(--ink);line-height:1.6;max-width:none}
+  @media(max-width:700px){.outcomes-grid{grid-template-columns:1fr}}
+
+  .filter{padding:80px 0;background:var(--cream);border-top:1px solid var(--line)}
+  .filter-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-top:36px}
+  .filter h3{font-size:1.1rem;font-weight:700;margin-bottom:20px}
+  .filter-list{list-style:none;display:flex;flex-direction:column;gap:12px}
+  .filter-list li{font-size:16px;color:var(--brown);line-height:1.55;padding-left:18px;position:relative}
+  .filter-list li::before{content:"";position:absolute;left:0;top:10px;width:6px;height:6px;border-radius:50%;background:var(--gold-soft)}
+  @media(max-width:700px){.filter-grid{grid-template-columns:1fr}}
+
+  .cta-section{padding:100px 0;background:var(--teal);border-top:1px solid var(--line-dark);text-align:center}
+  .cta-section .eyebrow{color:var(--gold-pale);margin-bottom:20px}
+  .cta-section h2{color:#fff;max-width:26ch;margin:0 auto 12px}
+  .price-big{font-family:var(--display);font-weight:700;font-size:clamp(56px,10vw,100px);color:#fff;line-height:1;letter-spacing:-.03em;margin:28px 0 8px}
+  .price-note{color:var(--gold-pale);font-size:15px;margin-bottom:36px}
+  .cta-sub{color:#d7d0c4;font-size:17px;max-width:44ch;margin:0 auto 40px;line-height:1.6}
+  .cta-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+  .arrives{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-dark);border:1px solid var(--line-dark);max-width:560px;margin:52px auto 0;border-radius:4px;overflow:hidden}
+  .arrives div{background:var(--teal);padding:22px 16px;font-size:14px;color:#c9c2b4}
+  .arrives div b{display:block;color:#fff;font-family:var(--display);font-weight:600;font-size:15px;margin-bottom:4px}
+  @media(max-width:600px){.arrives{grid-template-columns:1fr}}
+
+  .faq{padding:80px 0;background:var(--cream-2);border-top:1px solid var(--line)}
+  .faq h2{max-width:24ch;margin-bottom:40px}
+  .faq-list{max-width:680px}
+  .faq-item{border-bottom:1px solid var(--line);padding:24px 0}
+  .faq-item:first-child{border-top:1px solid var(--line)}
+  .faq-item h3{font-size:1.05rem;color:var(--ink);margin-bottom:10px;font-weight:600}
+  .faq-item p{font-size:15px;color:var(--brown);line-height:1.65;max-width:none}
+
+  footer{padding:56px 0 48px;background:var(--gold);color:rgba(255,255,255,.85);border-top:1px solid var(--line-dark)}
+  footer .top{display:flex;justify-content:space-between;align-items:flex-start;gap:30px;flex-wrap:wrap;margin-bottom:28px}
+  footer .brand{font-family:var(--display);font-weight:700;font-size:17px;color:var(--cream)}
+  footer .brand b{color:var(--gold-pale)}
+  footer .tag{font-style:italic;color:var(--gold-pale);margin-top:6px;font-family:var(--display);font-weight:500;font-size:15px}
+  footer .fine{font-size:13px;color:#7e8a88;border-top:1px solid var(--line-dark);padding-top:20px}
+
+  @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}.reveal{opacity:1;transform:none}}
+  /* More dropdown */
+  .more-wrap{position:relative}
+  .more-wrap > button{background:none;border:none;cursor:pointer;font-size:14px;color:var(--cream);font-weight:500;font-family:var(--body);display:flex;align-items:center;gap:5px;padding:0;transition:color .2s}
+  .more-wrap > button:hover{color:var(--gold-pale)}
+  .more-wrap > button svg{transition:transform .2s}
+  .more-wrap.open > button svg{transform:rotate(180deg)}
+  .dropdown{position:absolute;top:calc(100% + 10px);right:0;background:var(--teal-deep);border:1px solid var(--line-dark);border-radius:3px;min-width:180px;padding:6px 0;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .18s,transform .18s;z-index:9999}
+  .more-wrap.open .dropdown{opacity:1;pointer-events:all;transform:none}
+  @media(max-width:860px){.dropdown{position:fixed;top:56px;right:16px}}
+  .dropdown a{display:block;padding:10px 18px;font-size:13px;color:var(--cream);font-weight:500;transition:background .15s,color .15s}
+  .dropdown a:hover{background:var(--teal);color:var(--gold-pale)}
+
+  /* MOBILE NAV */
+  .ham{display:none;background:none;border:none;cursor:pointer;padding:6px;color:var(--cream)}
+  .ham svg{display:block}
+  .mobile-nav{display:none;position:fixed;top:64px;left:0;right:0;background:var(--teal);z-index:9998;padding:16px 0;border-top:1px solid rgba(255,255,255,.1);flex-direction:column}
+  .mobile-nav a{display:block;padding:13px 28px;font-size:15px;color:var(--cream);font-weight:500;font-family:var(--body);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.07)}
+  .mobile-nav a:last-child{border-bottom:none}
+  .mobile-nav a.btn{margin:14px 28px 6px;display:block;background:var(--gold);color:#fff;padding:12px 20px;border-radius:2px;font-weight:600;text-align:center;border:none}
+  .mobile-nav.open{display:flex}
+  @media(max-width:860px){.ham{display:block}.topbar .more-wrap{display:none}.topbar nav > .btn{display:none}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="/" class="brand">Feel Fully <b>You</b>
+  <button class="ham" id="hamBtn" aria-label="Open menu" aria-expanded="false">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+</a>
+  <nav>
+    <a href="/">Home</a>
+    <div class="more-wrap" id="workWrap">
+      <button onclick="document.getElementById('workWrap').classList.toggle('open')" aria-expanded="false">
+        Work With Me <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg>
+      </button>
+      <div class="dropdown">
+        <a href="/for-her">For Her</a>
+        <a href="/for-him">For Him</a>
+        <a href="/for-both">For Both</a>
+        <a href="/the-room">The Room</a>
+      </div>
+    </div>
+    <a href="/cards">The Cards</a>
+    <a href="/shop">Shop</a>
+    <div class="more-wrap" id="moreWrap">
+      <button onclick="document.getElementById('moreWrap').classList.toggle('open')" aria-expanded="false">
+        More <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg>
+      </button>
+      <div class="dropdown">
+        <a href="/free-resources">Free Resources</a>
+        <a href="/grief-duality-process">Grief Process</a>
+        <a href="/media-and-pr">Media &amp; PR</a>
+        <a href="/contact">Contact</a>
+      </div>
+    </div>
+    <a href="/work-with-me" class="btn">Start here</a>
+  </nav>
+</div>
+
+<nav class="mobile-nav" id="mobileNav">
+  <a href="/">Home</a>
+  <a href="/for-her">For Her</a>
+  <a href="/for-him">For Him</a>
+  <a href="/for-both">For Both</a>
+  <a href="/the-room">The Room</a>
+  <a href="/cards">The Cards</a>
+  <a href="/shop">Shop</a>
+  <a href="/about">About Juliette</a>
+  <a href="/free-resources">Free Resources</a>
+  <a href="/grief-duality-process">Grief Process</a>
+  <a href="/media-and-pr">Media &amp; PR</a>
+  <a href="/contact">Contact</a>
+  <a href="/work-with-me" class="btn">Start here</a>
+</nav>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="copy">
+      <div class="eyebrow reveal">The Beginning · 8-Week Programme</div>
+      <h1 class="reveal">Touch that feels like<br><em>coming home.</em></h1>
+      <p class="sub reveal">A completely private 8-week programme for couples who still love each other, and want the connection in the body to match. Structure that ends the guessing. Presence that actually lands.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap">
+        <a href="https://links.ivorey.io/widget/booking/0jVgdt5G48h2rkGVioq4" class="btn reveal">Book a clarity call</a>
+        <a href="#included" class="btn ghost reveal">See what's included</a>
+      </div>
+    </div>
+    <div class="photo-col">
+      <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/698afbc0a41b876eb63dd582.png" alt="The Beginning" class="reveal">
+    </div>
+  </div>
+</header>
+
+<!-- BELIEF -->
+<section class="belief">
+  <div class="narrow">
+    <p class="line reveal">Leading touch and receiving touch are two completely different skill sets. This is where you both learn yours.</p>
+  </div>
+</section>
+
+<!-- PAIN -->
+<section class="pain">
+  <div class="wrap">
+    <div class="pain-split">
+      <div class="pain-copy">
+        <h2 class="reveal">You still love each other.<br>So why does touch feel like something you have to brace for?</h2>
+        <p class="reveal pain-lede">What if you could touch each other without second-guessing every move, and actually feel safe enough to stay present instead of pulling away or performing?</p>
+        <p class="reveal pain-lede">What if you could stop the cycle of blame, shame, and silence, fully experience intimacy that feels natural and connected, and feel like the two of you again?</p>
+        <p class="reveal pain-hook">If you still love each other, and you want touch to feel safe and close again, but you keep drifting apart the moment it begins, this might be the most important thing you read today.</p>
+      </div>
+      <div class="pain-photo">
+        <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/6838a6c6af7b3c51d1de03a2.jpeg" alt="" class="reveal">
+      </div>
+    </div>
+  </div>
+  <div class="narrow">
+
+    <div class="feeling-split">
+      <div class="feeling-photo">
+        <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/68f7ca9e57ab483cff405aee.jpeg" alt="" class="reveal">
+      </div>
+      <div class="feeling-copy">
+        <div class="eyebrow reveal" style="margin-bottom:20px">You know this feeling</div>
+        <p class="reveal" style="font-size:17px;line-height:1.75;color:var(--brown)">Something in you recognises this. Not as a story someone told you. As a memory that lives in your body.</p>
+      </div>
+    </div>
+
+    <div class="recognition-grid">
+      <div class="recog-card reveal" style="background:var(--blue)">
+        <div class="recog-label">Her experience</div>
+        <p>He reaches for you in bed and your body tightens.</p>
+        <p>You start to kiss. Somewhere between his hand on your waist and the moment things would normally deepen, it is not wrong. <em>It just doesn't go anywhere.</em></p>
+        <p>You don't pull away dramatically. You drift. He feels it. The moment passes.</p>
+        <p>Sooner or later, he stops.</p>
+        <p>And then something confusing happens. Your Pilates instructor adjusts your leg and a warmth flickers through your body. A stranger smiles and you feel a brief spark. A song comes on and you remember what alive used to feel like.</p>
+        <p>Suddenly you're asking yourself the question you never wanted to ask:</p>
+        <div class="recog-q">If my body can respond there... why not with the man I love?</div>
+      </div>
+      <div class="recog-card reveal" style="background:#f5ead8">
+        <div class="recog-label">His experience</div>
+        <p>You reach for her. You used to not think about it.</p>
+        <p>Now there's a pause before your hand moves. You read her breathing. Check her shoulders. Try to gauge if this is a good moment or if you're about to make it worse.</p>
+        <p>You touch her and part of you is already watching for the flinch. The smile that means she's tolerating it. The slight shift away.</p>
+        <p>So you pull back. Keep it safe. A hand on her shoulder instead of her waist. A kiss on the forehead instead of the mouth. You tell yourself it's enough.</p>
+        <p>Then you're at work and you make a decision without hesitating. You hold a room. Someone looks at you and you feel the thing you used to feel at home: steady. Sure of yourself.</p>
+        <p>You think: I still have this. I just lost it somewhere between the bedroom door and the bed.</p>
+        <div class="recog-q">If I still know how to lead everywhere else... why do I freeze the moment I reach for her?</div>
+      </div>
+    </div>
+
+    <div class="tried-block">
+      <div class="tried-banner reveal">
+        <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/887ba9a2-e5af-48ba-9b26-885221d6d987.jpeg" alt="">
+      </div>
+      <div class="eyebrow reveal" style="margin:32px 0 24px">Both of you have tried</div>
+      <div class="tried-grid">
+        <div class="tried-item reveal">
+          <h4>The conversation</h4>
+          <p>That was supposed to fix it. You talked for two hours and felt closer for a night. By Thursday it was the same.</p>
+        </div>
+        <div class="tried-item reveal">
+          <h4>The weekend away</h4>
+          <p>New hotel. New city. You both wanted it to work so badly you could taste it. Something shifted for a moment. By the time you got home it was gone.</p>
+        </div>
+        <div class="tried-item reveal">
+          <h4>Maybe therapy</h4>
+          <p>Sitting across from someone explaining what you feel while the other listens and nods. You understand each other better now. Your bodies haven't caught up.</p>
+        </div>
+        <div class="tried-item reveal">
+          <h4>The workshop</h4>
+          <p>You connected. Really connected. The spark was back. Three weeks later, the same tightening. The same pulling away. The same silence afterwards.</p>
+        </div>
+      </div>
+      <div class="pull reveal">The pattern comes back. Every time. Because one felt experience, no matter how beautiful, does not change the pattern yet.</div>
+      <p class="reveal" style="color:var(--brown);font-size:17px;line-height:1.7;margin-bottom:10px">She does not know how to receive without managing. He does not know how to lead without guessing.</p>
+      <p class="reveal" style="color:var(--brown);font-size:17px;line-height:1.7">Nobody ever separated the two skills and taught them properly. That is what changes in The Beginning.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- WHAT'S BEEN MISSING -->
+<section class="missing">
+  <div class="narrow">
+    <div class="eyebrow reveal">What's been missing</div>
+    <h2 class="reveal">They have plenty of effort. Plenty of love.<br>What has been missing is the one thing nobody teaches couples.</h2>
+    <div class="missing-pull reveal">Leading touch and receiving touch are two completely different skill sets. They require different training. Different tools. Different practice.</div>
+    <p class="reveal">In long-term relationships, the roles collapse. She stops receiving and starts managing. He stops leading and starts guessing. Both override their own experience to take care of the other.</p>
+    <p class="reveal">It is a pattern learned over time. Slowly. Without either person noticing.</p>
+    <p class="reveal">The good news: it is a pattern. Patterns have structure. Structure can be learned.</p>
+    <p class="reveal" style="font-weight:600;color:var(--ink)">That is why The Beginning separates them. From day one.</p>
+  </div>
+</section>
+
+<!-- ATMOSPHERIC BREAK -->
+<div class="atmo">
+  <img class="bg" src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/687a548bbb0323857e3f56a8.jpeg" alt="">
+  <div class="overlay"></div>
+  <div class="content">
+    <h2 class="reveal">When there is structure,<br>there is less guessing.</h2>
+    <p class="reveal">The Beginning gives you both a clear role, one leads, one receives, and a progression that builds week by week. Not scripts. Not advice. A real practice that changes what happens when you reach for each other.</p>
+    <p class="reveal" style="opacity:.9;font-size:16px">Each partner gets their own membership portal. Their own learning path. Their own individual coaching calls. She does not know what he is learning. He does not know what she is learning. Because the skills are different.</p>
+  </div>
+</div>
+
+<!-- 8-WEEK SPINE -->
+<section class="spine">
+  <div class="wrap">
+    <div class="eyebrow reveal" style="margin-bottom:18px">How the 8 weeks unfold</div>
+    <h2 class="reveal">This isn't a course you watch.<br><em style="font-style:italic;color:var(--gold)">It's an experience you live.</em></h2>
+    <p class="lede reveal">Together. At a pace your body can actually trust.</p>
+    <div class="weeks">
+      <div class="week reveal">
+        <div class="wlabel">Weeks 1 – 2</div>
+        <h3>You stop guessing</h3>
+        <p>A simple, clear way to be in physical contact that takes the pressure off. Touch has a clean beginning. There is nowhere you are supposed to get to.</p>
+      </div>
+      <div class="week reveal">
+        <div class="wlabel">Weeks 3 – 4</div>
+        <h3>You find your roles</h3>
+        <p>One of you learns to lead without rushing or overthinking. The other learns to receive without managing, disappearing, or bracing. He stops guessing. She stops correcting. He leads. She softens.</p>
+      </div>
+      <div class="week reveal">
+        <div class="wlabel">Weeks 5 – 6</div>
+        <h3>You learn how to stay</h3>
+        <p>You practise staying present together in touch. The moments that used to make one of you tighten or pull away become the moments you can now hold.</p>
+      </div>
+      <div class="week week-culm reveal">
+        <div class="wlabel">Weeks 7 – 8</div>
+        <h3>The culmination</h3>
+        <p>Everything in the 8 weeks has been building to this.</p>
+        <p>A 30-minute guided touch audio. Created for you. Only you. Your preferences. Your touch language. Your love and pleasure language. What has been intense for you. Everything I have learned about you across 8 weeks, woven into one experience.</p>
+        <p>He sets everything up, the room, the atmosphere, the playlist. Everything he has been building, used here in full. She receives. The audio plays. I guide you both through it, in your ears.</p>
+        <p>You finish with one experience that lands in both of your bodies. One you recognise, trust, and can return to again and again.</p>
+        <p class="culm-note">I used to sell this audio experience alone for £997. It is included in The Beginning.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S INCLUDED -->
+<section class="included" id="included">
+  <div class="wrap">
+    <div class="eyebrow reveal">Everything you receive</div>
+    <h2 class="reveal">Built for two. Held completely privately.</h2>
+    <p class="lede reveal">Separate portals. Individual calls. One shared couple call. Weekly check-ins. Everything structured so you each show up fully, without your partner in the room until it matters.</p>
+    <div class="included-feature reveal">
+      <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/698b15e7a41b874f9942ff6c.png" alt="What's included in The Beginning">
+    </div>
+    <div class="checklist">
+      <div class="check-item reveal">
+        <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/69da9c0c81ed6d1ab1e178ac.png" alt="">
+        <div>
+          <div class="ctitle">Access to dedicated portal</div>
+          <div class="cdesc">Lifetime access. Separate from your partner's. Your own space for your own process.</div>
+        </div>
+      </div>
+      <div class="check-item reveal">
+        <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/6a0d9a99ca9579c76ba217cb.png" alt="">
+        <div>
+          <div class="ctitle">8 Weekly Calls</div>
+          <div class="cdesc">Individual calls for him, individual calls for her. Tailored to your role, leading or receiving.</div>
+        </div>
+      </div>
+      <div class="check-item reveal">
+        <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/6a08a4abdbe569a25d7a1dba.png" alt="">
+        <div>
+          <div class="ctitle">One private call as a couple</div>
+          <div class="cdesc">A dedicated couple call where both of you are held together, timed for when it will matter most.</div>
+        </div>
+      </div>
+      <div class="check-item reveal">
+        <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/6a08b06d0a69f1e766a30724.png" alt="">
+        <div>
+          <div class="ctitle">Weekly Structured Check-Ins</div>
+          <div class="cdesc">Telegram / WhatsApp support on Mondays. So you are never navigating the week without a thread back.</div>
+        </div>
+      </div>
+      <div class="check-item reveal">
+        <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/69da9c0d019dc508d34b9d7f.png" alt="">
+        <div>
+          <div class="ctitle">7 Progressive Touch Dates</div>
+          <div class="cdesc">Structured home practices that build week by week. Real experiences designed to shift what happens between you.</div>
+        </div>
+      </div>
+      <div class="check-item reveal">
+        <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/69da9c0c019dc508d34b9d5f.png" alt="">
+        <div>
+          <div class="ctitle">Your Bespoke 30-Min Guided Touch Audio</div>
+          <div class="cdesc">Personalised for your couple from everything learned across the 8 weeks. Yours to return to.</div>
+        </div>
+      </div>
+      <div class="check-item reveal">
+        <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/69ab0a5cb003fa4335ee46f2.png" alt="">
+        <div>
+          <div class="ctitle">Intimacy and Communication Cards App</div>
+          <div class="cdesc">Three editions. A daily structure for connection that lives outside the sessions, and after the programme ends.</div>
+        </div>
+      </div>
+      <div class="check-item reveal">
+        <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/69da9c0ca4e6aa34cbd22267.png" alt="">
+        <div>
+          <div class="ctitle">Bonus</div>
+          <div class="cdesc">Post-experience integration pack, so what opened in the 8 weeks keeps moving after the programme closes.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi">
+  <div class="narrow">
+    <div class="eyebrow reveal">In their words</div>
+    <div class="testi-grid testi-grid--5">
+      <div class="tcard t2 reveal">
+        <div class="mark">"</div>
+        <blockquote>The experience began before the night itself: with the personalised quiz and videos. For once, I didn't micromanage. I trusted. When I stepped into the space he created, I felt deeply held. He was present, confident, attuned, in a way I didn't know I needed. This wasn't just a Valentine's gift. It was a reconnection we'll carry long beyond 2025.</blockquote>
+        <div class="who">Anna Shapiro</div>
+      </div>
+      <div class="tcard t1 reveal">
+        <div class="mark">"</div>
+        <blockquote>I wanted to create something meaningful, not just for her, but for us. Your guidance gave me confidence. I stopped second-guessing. For the first time in years, I knew what she needed. Watching her soften, open, and receive was everything. This changed how we show up for each other: not just for one night, but for the life we're building together.</blockquote>
+        <div class="who">Ben Shapiro</div>
+      </div>
+      <div class="tcard t3 reveal">
+        <div class="mark">"</div>
+        <blockquote>Ok so what the fuck has happened. I got back and we talked and he tenderly and very respectfully made love to me for 2 hours. And I make it mean nothing other than the beauty of what it is.</blockquote>
+        <div class="who">Client · sent the week after completing The Beginning</div>
+      </div>
+      <div class="tcard t1 reveal">
+        <div class="mark">"</div>
+        <blockquote>I have had the most magical 24 hours. He really really held me so kindly and strongly last night when I had a crazy scary moment. Thank you so much.</blockquote>
+        <div class="who">Deidre A.</div>
+      </div>
+      <div class="tcard t2 reveal">
+        <div class="mark">"</div>
+        <blockquote>My husband was feeling a bit insecure about how to touch me after trying various things. I didn't know what to ask for, everything just felt flat. This was the perfect way in. Private, with time to watch the videos, yet very personalised. I am thrilled we did this. It brought us together despite being massively busy.</blockquote>
+        <div class="who">Jody</div>
+      </div>
+      <div class="tcard t3 reveal" style="grid-column:1/-1">
+        <div class="mark">"</div>
+        <blockquote>Juliette took my partner and I through her program to help us understand our preferences. She then gave us individual teachings along with joint teachings and instructions. This was such a beautiful personalised experience. Her creativity opened up a pleasure portal that is safe and perfect. Thank you for giving me these new experiences with my partner. I am forever grateful.</blockquote>
+        <div class="who">Amber</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY JULIETTE -->
+<section class="why-me">
+  <div class="why-split">
+    <div class="why-photo">
+      <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/68f7ca9f669c9a7f4ba9dd65.jpeg" alt="Juliette Karaman">
+    </div>
+    <div class="why-copy">
+      <div class="eyebrow reveal">Why Juliette</div>
+      <h2 class="reveal">I'm <em style="font-style:italic;color:var(--gold-deep)">Juliette.</em></h2>
+      <p class="intro reveal">For fifteen years I have sat with couples who love each other and live full lives, and still find themselves losing connection when touch begins. I know this threshold exactly. The moment one partner reaches and the other is not quite there.</p>
+      <p class="intro reveal">I work with the body directly. I don't give advice about intimacy. I create the conditions where the body remembers what intimacy actually feels like. Where touch stops being a performance and starts being a return.</p>
+      <p class="intro reveal">The Beginning is the structure I built for couples who needed more than a session. Eight weeks of real practice, held privately, built around you.</p>
+      <div class="modalities reveal">
+        <span>Touch Languages™</span><span>EMDR</span><span>Somatic experiencing</span><span>Hypnotherapy</span><span>Spinal attunement</span><span>Deep PEAT</span><span>Aspectics</span><span>Rapid Release Rewire Restore®</span>
+      </div>
+      <div class="press reveal">
+        <span>Forbes</span><span>The Times</span><span>Marie Claire</span><span>ITV</span><span>Telegraph</span><span>Newsweek</span><span>NBC</span><span>ABC</span>
+        <span class="pod">The Scrumptious Woman, top 2.5% globally</span>
+      </div>
+      <p class="why-last reveal">Couples rarely regret investing in their relationship. They regret waiting until the distance feels normal.</p>
+    </div>
+  </div>
+</section>
+
+<!-- OUTCOMES -->
+<section class="outcomes">
+  <div class="narrow">
+    <div class="eyebrow reveal" style="margin-bottom:18px">What changes</div>
+    <h2 class="reveal">You stop drifting.<br>You come back to each other.</h2>
+    <div class="outcomes-grid">
+      <div class="outcome reveal">
+        <h3>Touch that lands</h3>
+        <p>The reaching stops triggering bracing. Contact feels like an arrival. Both of you know what you are doing, and why it works.</p>
+      </div>
+      <div class="outcome reveal">
+        <h3>Two clear roles</h3>
+        <p>Leading and receiving. Both learned, both felt. One partner creates the container. The other discovers what it means to fully enter it.</p>
+      </div>
+      <div class="outcome reveal">
+        <h3>A map of each other</h3>
+        <p>You leave knowing how the other opens. Not guessing. Not performing. A real, felt understanding that lives in the body, not the mind.</p>
+      </div>
+      <div class="outcome reveal">
+        <h3>A practice that continues</h3>
+        <p>Your bespoke audio, your touch library, the Intimacy and Communication Cards, a structure for connection that outlasts the programme.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FILTER -->
+<section class="filter">
+  <div class="narrow">
+    <div class="eyebrow reveal" style="margin-bottom:18px">Is this for you?</div>
+    <h2 class="reveal">Who The Beginning is for, and who it isn't.</h2>
+    <div class="filter-grid">
+      <div class="reveal">
+        <h3>This is for you if</h3>
+        <ul class="filter-list">
+          <li>You still love each other and want the body to catch up</li>
+          <li>You have tried talking, therapy, or books, and nothing has changed in the body</li>
+          <li>You want clear structure, not more advice</li>
+          <li>Both of you are willing to show up for 8 weeks</li>
+          <li>You want to stop guessing and stop performing intimacy</li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <h3>This is not for you if</h3>
+        <ul class="filter-list">
+          <li>Only one partner is willing</li>
+          <li>You are in active crisis, infidelity, abuse, or unprocessed trauma needing clinical support</li>
+          <li>You want insight without practice</li>
+          <li>You are looking for therapy or emotional processing</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICE / CTA -->
+<section class="cta-section">
+  <div class="wrap">
+    <div class="eyebrow reveal">Investment</div>
+    <h2 class="reveal">The Beginning. The Ultimate Touch Reset</h2>
+    <div class="price-big reveal">£8,997</div>
+    <p class="price-note reveal">Flexible payment available through Klarna · Two couples per month · Start within 4 weeks of booking</p>
+    <p class="cta-sub reveal">Eight weeks. Completely private. Built for your relationship, not a cohort. One clarity call to make sure this is right for both of you.</p>
+    <div class="cta-buttons">
+      <a href="https://feelfullyyou.com/the-touch-reboot-kit-payment-9978" class="btn reveal">Join The Beginning · £8,997</a>
+      <a href="https://links.ivorey.io/widget/booking/0jVgdt5G48h2rkGVioq4" class="btn ghost reveal">Book a clarity call first</a>
+    </div>
+    <div class="arrives reveal">
+      <div><b>Week 1</b>Your portals open. Individual calls begin.</div>
+      <div><b>Weeks 1–6</b>Progressive touch dates. Weekly check-ins.</div>
+      <div><b>Weeks 7–8</b>Culmination. Your bespoke audio delivered.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="narrow">
+    <h2 class="reveal">Frequently asked</h2>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <h3>Do we do the calls together?</h3>
+        <p>No, your calls are individual. Him with Juliette. Her with Juliette. Each tailored to your role. The one couple call happens at the right moment in the programme, when both of you are ready to be held together.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h3>What are the 7 progressive touch dates?</h3>
+        <p>Structured practices you do at home together, one per week, building in depth and presence. Not exercises. Real experiences designed to shift what happens between you in the moments that have been hardest.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h3>Is this therapy?</h3>
+        <p>The Beginning works with both the body and the psyche, because both are involved in why touch stops landing. I bring structure to all of it: the somatic, the emotional, the relational pattern. Using Touch Languages™, EMDR, somatic experiencing, spinal attunement, and Rapid Release Rewire Restore®, we work at the level where things actually shift.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h3>What if one of us isn't sure?</h3>
+        <p>That's what the clarity call is for. We talk, I listen, and we work out together whether this is the right fit. If it isn't, I will tell you. Thirty minutes, no pressure, completely confidential.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h3>Can we do this if we live in different time zones?</h3>
+        <p>Yes. The calls are scheduled individually, so different time zones are no barrier. The programme works online globally.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h3>What happens after the 8 weeks?</h3>
+        <p>Your portal access is lifetime. Your bespoke audio is yours to keep. Many couples continue with bespoke mentorship or the Couples Intensive. The Beginning sets a foundation, not a ceiling.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h3>What is your refund policy?</h3>
+        <p>All sales are final. The clarity call exists so that both of you are certain before committing. We do not begin until both partners have confirmed their yes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer style="background:#a88538;color:#fff;padding:22px 32px;font-size:13px">
+  <div style="max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+    <div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:0.95rem;color:#fff;letter-spacing:-.01em">Feel Fully You</div>
+    <div style="font-size:12px;color:rgba(255,255,255,.85);display:flex;gap:16px;align-items:center"><a href="mailto:support@feelfullyyou.com" style="color:#fff;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(255,255,255,.5)">support@feelfullyyou.com</a><a href="https://feelfullyyou.com/terms" style="color:rgba(255,255,255,.75);text-decoration:none" target="_blank" rel="noopener">Terms</a></div>
+    <div style="display:flex;gap:14px;align-items:center">
+      <a href="https://www.instagram.com/juliettekaraman/" aria-label="Instagram" style="color:rgba(255,255,255,.85);display:flex;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+      <a href="https://www.facebook.com/juliette.karamanvanschaardenburg" aria-label="Facebook" style="color:rgba(255,255,255,.85);display:flex;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+      <a href="https://www.linkedin.com/in/juliette-karaman-van-schaardenburg-89399913b" aria-label="LinkedIn" style="color:rgba(255,255,255,.85);display:flex;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+      <a href="https://www.tiktok.com/@juliettekaraman" aria-label="TikTok" style="color:rgba(255,255,255,.85);display:flex;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+      <a href="https://substack.com/@juliettekaraman" aria-label="Substack" style="color:rgba(255,255,255,.85);display:flex;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 17.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+<script>
+(function(){
+  var btn=document.getElementById('hamBtn');
+  var nav=document.getElementById('mobileNav');
+  if(btn&&nav){btn.addEventListener('click',function(){nav.classList.toggle('open');btn.setAttribute('aria-expanded',nav.classList.contains('open'))});}
+})();
+</script>
+</body>
+</html>
