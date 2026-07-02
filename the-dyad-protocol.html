@@ -158,6 +158,24 @@
   .cta-note{font-size:var(--t-xs);color:var(--brown);line-height:2;opacity:.8}
   @media(max-width:600px){.cta-block{padding:36px 24px}.pricing-table{flex-direction:column}.price-col{border-right:none;border-bottom:1px solid var(--line)}.price-col:last-child{border-bottom:none}}
 
+  /* ── TESTIMONIALS ── */
+  .testi-wrap{padding:72px 0;background:var(--cream-2);margin:0 -28px;padding-left:28px;padding-right:28px}
+  .testi-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:36px}
+  .tcard{border-radius:4px;padding:36px 32px}
+  .tcard.t1{background:var(--teal);border:1px solid var(--line-dark)}
+  .tcard.t2{background:#a88538}
+  .tcard.t3{background:var(--blue);grid-column:1/-1}
+  .tcard .mark{font-family:var(--display);font-weight:700;font-size:2.4rem;line-height:.5;height:20px;margin-bottom:10px}
+  .tcard.t1 .mark,.tcard.t2 .mark{color:rgba(255,255,255,.6)}
+  .tcard.t3 .mark{color:var(--gold-deep)}
+  .tcard blockquote{font-family:var(--display);font-weight:600;font-style:italic;font-size:1.05rem;line-height:1.45;margin-bottom:16px;max-width:none}
+  .tcard.t1 blockquote,.tcard.t2 blockquote{color:#fff}
+  .tcard.t3 blockquote{color:var(--ink);font-size:1.15rem}
+  .tcard .who{font-size:12px;letter-spacing:.07em;text-transform:uppercase;font-weight:600}
+  .tcard.t1 .who,.tcard.t2 .who{color:rgba(255,255,255,.75)}
+  .tcard.t3 .who{color:var(--gold-deep)}
+  @media(max-width:700px){.testi-grid{grid-template-columns:1fr}.tcard.t3{grid-column:auto}}
+
   /* ── FOOTER ── */
   footer{background:var(--gold);color:#fff;padding:22px 32px;font-size:13px}
   footer .inner{max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
@@ -465,6 +483,38 @@
       <p>Most card decks give you a question.<br>This one gives you a system.</p>
     </div>
   </section>
+
+  <!-- TESTIMONIALS -->
+  <div class="testi-wrap">
+    <p class="eyebrow reveal">In their words</p>
+    <div class="testi-grid">
+      <div class="tcard t2 reveal">
+        <div class="mark">"</div>
+        <blockquote>The experience began before the night itself: with the personalised quiz and videos. For once, I didn't micromanage. I trusted. When I stepped into the space he created, I felt deeply held. He was present, confident, attuned, in a way I didn't know I needed. This wasn't just a Valentine's gift. It was a reconnection we'll carry long beyond 2025.</blockquote>
+        <div class="who">Anna Shapiro</div>
+      </div>
+      <div class="tcard t1 reveal">
+        <div class="mark">"</div>
+        <blockquote>I wanted to create something meaningful, not just for her, but for us. Your guidance gave me confidence. I stopped second-guessing. For the first time in years, I knew what she needed. Watching her soften, open, and receive was everything. This changed how we show up for each other: not just for one night, but for the life we're building together.</blockquote>
+        <div class="who">Ben Shapiro</div>
+      </div>
+      <div class="tcard t1 reveal">
+        <div class="mark">"</div>
+        <blockquote>I have had the most magical 24 hours. He really really held me so kindly and strongly last night when I had a crazy scary moment. Thank you so much.</blockquote>
+        <div class="who">Deidre A.</div>
+      </div>
+      <div class="tcard t2 reveal">
+        <div class="mark">"</div>
+        <blockquote>My husband was feeling a bit insecure about how to touch me after trying various things. I didn't know what to ask for, everything just felt flat. This was the perfect way in. Private, with time to watch the videos, yet very personalised. I am thrilled we did this. It brought us together despite being massively busy.</blockquote>
+        <div class="who">Jody</div>
+      </div>
+      <div class="tcard t3 reveal">
+        <div class="mark">"</div>
+        <blockquote>Juliette took my partner and I through her program to help us understand our preferences. She then gave us individual teachings along with joint teachings and instructions. This was such a beautiful personalised experience. Her creativity opened up a pleasure portal that is safe and perfect. Thank you for giving me these new experiences with my partner. I am forever grateful.</blockquote>
+        <div class="who">Amber</div>
+      </div>
+    </div>
+  </div>
 
   <!-- PRACTITIONER ACCESS -->
   <section class="section">
