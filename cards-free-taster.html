@@ -336,29 +336,20 @@
 </footer>
 
 <script>
-  // =====================================================================
-  // KIT CONFIGURATION
-  // Replace these two values with your Kit credentials.
-  //
-  // API KEY:  Kit → Settings → Advanced → API Key (public key is fine)
-  // FORM ID:  Kit → Forms → create "Free Cards Taster" → number in the URL
-  // =====================================================================
-  const KIT_API_KEY  = 'YOUR_KIT_API_KEY';  // ← replace this
-  const KIT_FORM_ID  = 'YOUR_KIT_FORM_ID';  // ← replace this
   const REDIRECT_URL = 'https://couplecards.netlify.app/free';
 
   async function subscribeAndRedirect(email, btn) {
     btn.disabled = true;
     btn.textContent = 'Taking you there…';
 
-    // Fire the Kit subscribe request (non-blocking — don't await)
-    fetch(`https://api.convertkit.com/v3/forms/${KIT_FORM_ID}/subscribe`, {
+    // Send to Netlify function (Kit API key stays server-side)
+    fetch('/.netlify/functions/subscribe', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({api_key: KIT_API_KEY, email})
-    }).catch(() => {}); // silent fail if Kit is unreachable
+      body: JSON.stringify({email, tag: 'free-cards-taster'})
+    }).catch(() => {}); // silent — don't block redirect on failure
 
-    // Redirect after a brief moment so Kit can receive the request
+    // Brief pause then redirect straight to the free deck
     await new Promise(r => setTimeout(r, 600));
     window.location.href = REDIRECT_URL;
   }
