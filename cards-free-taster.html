@@ -3,21 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Try 10 Free Cards · Intimacy &amp; Communication Cards</title>
-<meta name="description" content="Pick a card. Ask the question. Notice what happens. 10 free cards from Juliette Karaman's 475-card Intimacy and Communication deck.">
+<title>Free Taster · Intimacy &amp; Communication Cards</title>
+<meta name="description" content="10 free cards from the Intimacy and Communication deck. Enter your email and go straight in.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
     --cream:#fefcfa;
-    --cream-2:#f6f4f1;
     --ink:#1c1714;
     --brown:#5d4a33;
     --gold:#a88538;
     --gold-deep:#99680c;
     --gold-soft:#b4a074;
-    --gold-pale:#ddc98e;
     --teal:#0d3535;
     --teal-deep:#061a1a;
     --line:#e3dccf;
@@ -25,363 +23,81 @@
     --body:'Inter',system-ui,sans-serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{background:var(--cream);color:var(--brown);font-family:var(--body);font-size:1.0625rem;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-  ::selection{background:var(--gold);color:#fff}
-  a{color:inherit;text-decoration:none}
-  img{max-width:100%;display:block}
-  p{max-width:62ch}
-
-  .wrap{max-width:1100px;margin:0 auto;padding:0 28px}
-  .narrow{max-width:700px;margin:0 auto;padding:0 28px}
-
-  .eyebrow{font-size:0.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);font-weight:700}
-  h1,h2,h3{font-family:var(--display);font-weight:700;color:var(--ink);line-height:1.06;letter-spacing:-.022em}
-  h2{font-size:clamp(2rem,4.8vw,2.8rem);margin-bottom:22px}
-  h3{font-size:1.35rem;line-height:1.2}
-  strong{font-weight:700;color:var(--ink)}
-  em{font-style:italic}
-
-  .reveal{opacity:0;transform:translateY(20px);transition:opacity .85s cubic-bezier(.2,.7,.2,1),transform .85s cubic-bezier(.2,.7,.2,1)}
-  .reveal.in{opacity:1;transform:none}
+  body{background:var(--cream);color:var(--brown);font-family:var(--body);-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
 
   /* TOPBAR */
-  .topbar{position:fixed;top:0;left:0;right:0;z-index:9999;background:var(--teal);padding:0 28px;height:64px;display:flex;align-items:center;justify-content:space-between}
-  .topbar .brand{font-family:var(--display);font-weight:700;font-size:16px;letter-spacing:.02em;color:var(--cream)}
-  .topbar .brand b{color:var(--gold-pale)}
-  .topbar nav{display:flex;gap:24px;align-items:center}
-  .topbar nav a{font-size:14px;color:var(--cream);font-weight:500}
-  .topbar nav a.btn{background:var(--gold);color:#fff;padding:10px 20px;border-radius:2px;font-weight:600}
-  .ham{display:none;background:none;border:none;cursor:pointer;padding:6px;color:var(--cream)}
-  .ham svg{display:block}
-  .mobile-nav{display:none;position:fixed;top:64px;left:0;right:0;background:var(--teal);z-index:9998;padding:16px 0;border-top:1px solid rgba(255,255,255,.1);flex-direction:column}
-  .mobile-nav a{display:block;padding:13px 28px;font-size:15px;color:var(--cream);font-weight:500;border-bottom:1px solid rgba(255,255,255,.07)}
-  .mobile-nav a:last-child{border-bottom:none}
-  .mobile-nav a.btn-m{margin:14px 28px 6px;display:block;background:var(--gold);color:#fff;padding:12px 20px;border-radius:2px;font-weight:600;text-align:center}
-  .mobile-nav.open{display:flex}
-  @media(max-width:860px){.ham{display:block}.topbar nav > a{display:none}}
+  .topbar{background:var(--teal);padding:0 28px;height:60px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .topbar .brand{font-family:var(--display);font-weight:700;font-size:15px;color:#fff;letter-spacing:.02em}
+  .topbar .brand b{color:#ddc98e}
 
-  /* HERO */
-  .hero{padding:120px 28px 72px;background:var(--cream);text-align:center;border-bottom:1px solid var(--line)}
-  .hero .eyebrow{color:var(--gold-deep);margin-bottom:20px}
-  .hero h1{font-family:var(--display);font-size:clamp(2.4rem,6vw,4rem);color:var(--teal);letter-spacing:-.028em;line-height:1.04;margin-bottom:22px;max-width:18ch;margin-left:auto;margin-right:auto}
-  .hero h1 em{font-style:italic;color:var(--gold)}
-  .hero .sub{font-size:1.2rem;color:var(--brown);line-height:1.65;max-width:46ch;margin:0 auto 40px}
-  .hero .sub p{max-width:none}
-  .hero-form{max-width:480px;margin:0 auto}
-  .hero-form form{display:flex;gap:10px;flex-wrap:wrap}
-  .hero-form input[type="email"]{flex:1;min-width:220px;padding:15px 18px;font-size:1rem;font-family:var(--body);border:1.5px solid var(--line);border-radius:2px;background:#fff;color:var(--ink);outline:none;transition:border-color .2s}
-  .hero-form input[type="email"]::placeholder{color:var(--gold-soft)}
-  .hero-form input[type="email"]:focus{border-color:var(--teal)}
-  .hero-form button{padding:15px 28px;background:var(--teal);color:#fff;font-family:var(--body);font-size:1rem;font-weight:700;border:none;border-radius:2px;cursor:pointer;transition:background .2s;white-space:nowrap}
-  .hero-form button:hover{background:var(--teal-deep)}
-  .hero-form button:disabled{opacity:.7;cursor:not-allowed}
-  .hero .fine{font-size:12px;color:var(--gold-soft);margin-top:12px}
-  .hero .stat-row{display:flex;gap:32px;justify-content:center;flex-wrap:wrap;margin-top:48px;padding-top:40px;border-top:1px solid var(--line)}
-  .hero .stat-row .stat .n{font-family:var(--display);font-size:2rem;font-weight:700;color:var(--teal)}
-  .hero .stat-row .stat .l{font-size:0.82rem;color:var(--gold-soft);letter-spacing:.06em;text-transform:uppercase;margin-top:2px}
+  /* MAIN — centred single column */
+  .main{flex:1;display:flex;align-items:center;justify-content:center;padding:60px 28px}
+  .card{max-width:520px;width:100%;text-align:center}
 
-  /* WHAT YOU GET */
-  .what{padding:80px 0;border-top:1px solid var(--line);background:var(--cream)}
-  .what .grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-  .what .photo{border-radius:4px;overflow:hidden}
-  .what .photo img{width:100%;height:480px;object-fit:cover;object-position:top;display:block}
-  .what .copy .eyebrow{margin-bottom:16px}
-  .what .copy h2{max-width:20ch}
-  .what .copy p{margin-bottom:16px;font-size:1.1rem;line-height:1.7;color:var(--brown)}
-  .what .copy p:last-of-type{margin-bottom:0}
+  .eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-deep);font-weight:700;margin-bottom:20px}
+  h1{font-family:var(--display);font-size:clamp(2rem,5vw,3rem);font-weight:700;color:var(--teal);line-height:1.07;letter-spacing:-.022em;margin-bottom:16px}
+  h1 em{font-style:italic;color:var(--gold)}
+  .sub{font-size:1.05rem;color:var(--brown);line-height:1.7;margin-bottom:40px}
 
-  /* HOW IT WORKS */
-  .how{padding:80px 0;background:var(--cream-2);border-top:1px solid var(--line)}
-  .how .head{text-align:center;margin-bottom:52px}
-  .how .head .eyebrow{margin-bottom:14px}
-  .how .head h2{margin-bottom:0;max-width:none}
-  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);max-width:860px;margin:0 auto}
-  .step{background:var(--cream);padding:36px 32px}
-  .step .n{font-family:var(--display);font-size:3rem;font-weight:700;color:var(--gold-pale);line-height:1;margin-bottom:14px}
-  .step h3{color:var(--ink);margin-bottom:10px;font-size:1.15rem}
-  .step p{font-size:0.95rem;color:var(--brown);max-width:none;line-height:1.65}
+  .form-label{font-family:var(--display);font-size:1.1rem;font-weight:600;color:var(--teal);margin-bottom:14px}
+  form{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+  input[type="email"]{flex:1;min-width:220px;max-width:300px;padding:14px 18px;font-size:1rem;font-family:var(--body);border:1.5px solid var(--line);border-radius:2px;background:#fff;color:var(--ink);outline:none;transition:border-color .2s}
+  input[type="email"]::placeholder{color:var(--gold-soft)}
+  input[type="email"]:focus{border-color:var(--teal)}
+  button{padding:14px 28px;background:var(--teal);color:#fff;font-family:var(--body);font-size:1rem;font-weight:700;border:none;border-radius:2px;cursor:pointer;transition:background .2s;white-space:nowrap}
+  button:hover{background:var(--teal-deep)}
+  button:disabled{opacity:.65;cursor:not-allowed}
+  .fine{font-size:12px;color:var(--gold-soft);margin-top:12px}
 
-  /* ABOUT JULIETTE */
-  .about{padding:88px 0;background:var(--cream);border-top:1px solid var(--line)}
-  .about .inner{display:grid;grid-template-columns:.95fr 1.05fr;gap:56px;align-items:start}
-  .about .photos{display:flex;flex-direction:column;gap:16px}
-  .about .photos img:first-child{width:100%;height:420px;object-fit:cover;object-position:top;border-radius:4px}
-  .about .photos img:last-child{width:66%;height:260px;object-fit:cover;object-position:top;border-radius:4px;align-self:flex-end;margin-right:0}
-  .about .copy .eyebrow{margin-bottom:18px}
-  .about .copy h2{font-size:clamp(1.8rem,3.6vw,2.4rem);margin-bottom:24px;max-width:22ch}
-  .about .copy p{font-size:1.05rem;line-height:1.75;color:var(--brown);margin-bottom:18px;max-width:56ch}
-  .about .copy p:last-of-type{margin-bottom:0}
-  .about .modalities{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0 0}
-  .about .modalities span{font-size:13px;font-weight:500;color:var(--gold-deep);border:1px solid var(--gold-soft);border-radius:99px;padding:6px 14px;background:var(--cream)}
-  .press{display:flex;gap:18px 32px;flex-wrap:wrap;align-items:center;margin-top:32px;padding-top:28px;border-top:1px solid var(--line)}
-  .press img{height:22px;width:auto;max-width:100px;object-fit:contain;filter:brightness(0) opacity(.38);transition:filter .2s}
-  .press img:hover{filter:brightness(0) opacity(.65)}
-
-  /* PROOF */
-  .proof{padding:72px 0;background:var(--cream-2);border-top:1px solid var(--line)}
-  .proof .head{text-align:center;margin-bottom:48px}
-  .proof .head .eyebrow{margin-bottom:14px}
-  .proof .head h2{max-width:none;font-size:clamp(1.7rem,3.2vw,2.2rem)}
-  .testi-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:860px;margin:0 auto}
-  .testi-card{background:var(--cream);border:1px solid var(--line);border-radius:4px;padding:32px 28px}
-  .testi-card blockquote{font-style:italic;font-size:1rem;line-height:1.75;color:var(--brown);margin-bottom:14px;max-width:none}
-  .testi-card cite{font-size:13px;font-weight:600;color:var(--gold-deep);font-style:normal;letter-spacing:.04em}
-
-  /* CTA BAND */
-  .cta-band{padding:88px 28px;background:var(--cream-2);border-top:1px solid var(--line);text-align:center}
-  .cta-band .eyebrow{color:var(--gold-deep);margin-bottom:18px}
-  .cta-band h2{color:var(--teal);font-size:clamp(2rem,4.4vw,3rem);margin-bottom:16px;max-width:20ch;margin-left:auto;margin-right:auto}
-  .cta-band .sub{font-size:1.1rem;color:var(--brown);max-width:44ch;margin:0 auto 36px}
-  .cta-band .sub p{max-width:none}
-  .cta-form{max-width:480px;margin:0 auto}
-  .cta-form form{display:flex;gap:10px;flex-wrap:wrap}
-  .cta-form input[type="email"]{flex:1;min-width:220px;padding:15px 18px;font-size:1rem;font-family:var(--body);border:1.5px solid var(--line);border-radius:2px;background:#fff;color:var(--ink);outline:none;transition:border-color .2s}
-  .cta-form input[type="email"]::placeholder{color:var(--gold-soft)}
-  .cta-form input[type="email"]:focus{border-color:var(--teal)}
-  .cta-form button{padding:15px 28px;background:var(--teal);color:#fff;font-family:var(--body);font-size:1rem;font-weight:700;border:none;border-radius:2px;cursor:pointer;transition:background .2s;white-space:nowrap}
-  .cta-form button:hover{background:var(--teal-deep)}
-  .cta-form button:disabled{opacity:.7;cursor:not-allowed}
-  .cta-band .fine{font-size:12px;color:rgba(255,255,255,.4);margin-top:12px}
-
-  footer{padding:32px 28px;background:var(--gold);color:#fff;font-size:13px}
-  footer .inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
-  footer .brand{font-family:var(--display);font-weight:700;font-size:0.95rem}
-  footer a{color:rgba(255,255,255,.8)}
-
-  @media(max-width:820px){
-    .what .grid{grid-template-columns:1fr}
-    .what .photo img{height:320px}
-    .about .inner{grid-template-columns:1fr}
-    .about .photos img:first-child{height:320px}
-    .about .photos img:last-child{width:50%;height:200px}
-    .steps{grid-template-columns:1fr}
-    .testi-grid{grid-template-columns:1fr}
-  }
-  @media(prefers-reduced-motion:reduce){*{transition:none!important}.reveal{opacity:1;transform:none}}
+  footer{padding:22px 28px;text-align:center;font-size:12px;color:var(--gold-soft);flex-shrink:0}
+  footer a{color:inherit;text-decoration:underline;text-underline-offset:3px}
 </style>
 </head>
 <body>
 
 <div class="topbar">
   <a href="/" class="brand">Feel Fully <b>You</b></a>
-  <button class="ham" id="hamBtn" aria-label="Open menu">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-  </button>
-  <nav>
-    <a href="/cards">The Cards</a>
-    <a href="/work-with-me" class="btn">Start here</a>
-  </nav>
 </div>
 
-<nav class="mobile-nav" id="mobileNav">
-  <a href="/">Home</a>
-  <a href="/cards">The Cards</a>
-  <a href="/work-with-me" class="btn-m">Start here</a>
-</nav>
+<main class="main">
+  <div class="card">
+    <div class="eyebrow">FREE TASTER · INTIMACY &amp; COMMUNICATION CARDS</div>
+    <h1>Pick a card. Ask the question. <em>Notice what happens.</em></h1>
+    <p class="sub">10 cards from the 475-card deck. Free. Straight to you.</p>
 
-<!-- HERO -->
-<header class="hero">
-  <div class="eyebrow reveal">FREE TASTER · INTIMACY &amp; COMMUNICATION CARDS</div>
-  <h1 class="reveal">Pick a card. Ask the question. <em>Notice what happens.</em></h1>
-  <div class="sub reveal">
-    <p>10 cards from the 475-card deck. Free. Straight to you.</p>
-  </div>
-
-  <div class="hero-form reveal">
-    <p style="font-family:var(--display);font-size:1.15rem;font-weight:600;color:var(--teal);margin-bottom:14px">Where do we send the taster deck?</p>
-    <form id="heroForm">
-      <input type="email" id="heroEmail" name="email" placeholder="Your email address" required autocomplete="email">
-      <button type="submit" id="heroBtn">Send it to me</button>
+    <p class="form-label">Where do we send the taster deck?</p>
+    <form id="signupForm">
+      <input type="email" id="emailInput" name="email" placeholder="Your email address" required autocomplete="email">
+      <button type="submit" id="submitBtn">Send it to me</button>
     </form>
-    <p class="fine">No spam. You can unsubscribe any time.</p>
+    <p class="fine">No spam. Unsubscribe any time.</p>
   </div>
-
-  <div class="stat-row reveal">
-    <div class="stat"><div class="n">475</div><div class="l">cards in the full deck</div></div>
-    <div class="stat"><div class="n">650+</div><div class="l">couples worked with</div></div>
-    <div class="stat"><div class="n">27</div><div class="l">years of practice</div></div>
-  </div>
-</header>
-
-<!-- WHAT YOU GET -->
-<section class="what">
-  <div class="wrap">
-    <div class="grid">
-      <div class="photo reveal">
-        <img src="/julietteherobarstools.jpg" alt="Juliette Karaman">
-      </div>
-      <div class="copy">
-        <div class="eyebrow reveal">WHAT YOU ARE GETTING</div>
-        <h2 class="reveal">A conversation you have been trying to have for years.</h2>
-        <p class="reveal">Most couples know something is missing. They just cannot find the door in. These cards are the door.</p>
-        <p class="reveal">Ten prompts from across the deck. Each one designed to open something — in you, between you, underneath the version of each other you have both been performing.</p>
-        <p class="reveal">No coaching required. No preparation. One card, one question, one answer at a time.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- HOW IT WORKS -->
-<section class="how">
-  <div class="wrap">
-    <div class="head">
-      <div class="eyebrow reveal">HOW IT WORKS</div>
-      <h2 class="reveal">Three steps. Fifteen minutes.</h2>
-    </div>
-    <div class="steps">
-      <div class="step reveal">
-        <div class="n">01</div>
-        <h3>Pick a card</h3>
-        <p>Person A picks. Person B reads it aloud. That small act of one person reading to the other already changes the air in the room.</p>
-      </div>
-      <div class="step reveal">
-        <div class="n">02</div>
-        <h3>One answer</h3>
-        <p>Person A answers from the heart. No interrupting. No fixing. No debating. Person B holds three responses only: <em>Thank you. Clarify that. Summarise that.</em></p>
-      </div>
-      <div class="step reveal">
-        <div class="n">03</div>
-        <h3>Switch</h3>
-        <p>Same card. Same question. Person B answers now. 15 minutes per card, going deeper with each turn. Then switch to a new card whenever you are ready.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT JULIETTE -->
-<section class="about">
-  <div class="wrap">
-    <div class="inner">
-      <div class="photos reveal">
-        <img src="/juliettekingsx-forher.jpg" alt="Juliette Karaman">
-        <img src="/julietteherobarstools.jpg" alt="Juliette Karaman">
-      </div>
-      <div class="copy">
-        <div class="eyebrow reveal">ABOUT JULIETTE KARAMAN</div>
-        <h2 class="reveal">I bring the va-va-voom back into relationships that have stopped moving.</h2>
-        <p class="reveal">For twenty-seven years I have worked with couples, women, and men on what happens in the body and the emotions when love stays but the heat fades. The way back is structure. Structured touch, structured communication, structured dates.</p>
-        <p class="reveal">I built these cards because I needed the tool first. Fifteen years in the room with couples who love each other and cannot reach each other. I watched what happened when the right question landed at the right moment. The cards are that moment, structured, repeatable, available at home on a Tuesday night.</p>
-        <p class="reveal">I work with the body and the emotions together. The patterns couples cannot see are carried in both. The right question opens what years of talking around it could not.</p>
-        <div class="modalities reveal">
-          <span>Somatic Experiencing</span><span>EMDR</span><span>Touch Base®</span><span>Touch Languages™</span><span>RRR®</span><span>Spinal Attunement</span>
-        </div>
-        <div class="press reveal">
-          <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/672266601f25a7590d252591.png" alt="Forbes">
-          <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/6722666046dc7a0bb395dcb1.png" alt="The Times">
-          <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/672266609ccb72e4c5428c52.png" alt="Marie Claire">
-          <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/6722666030643409dd828ee6.png" alt="ITV">
-          <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/672266637253cd083c119486.png" alt="The Telegraph">
-          <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/672266627253cd865b119485.png" alt="TED">
-          <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/67226660e141300c3c4236e2.png" alt="Mindvalley">
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROOF -->
-<section class="proof">
-  <div class="wrap">
-    <div class="head">
-      <div class="eyebrow reveal">FROM COUPLES WHO TRIED THE CARDS</div>
-      <h2 class="reveal">What happens in 15 minutes.</h2>
-    </div>
-    <div class="testi-grid">
-      <div class="testi-card reveal">
-        <blockquote>"She shared something about her body she had never said out loud before. I said thank you. Nothing else. For the first time, she felt heard."</blockquote>
-        <cite>— Ben</cite>
-      </div>
-      <div class="testi-card reveal">
-        <blockquote>"Something flickered back on. I didn't know it had gone until I felt it return."</blockquote>
-        <cite>— Client, London</cite>
-      </div>
-      <div class="testi-card reveal">
-        <blockquote>"Life-changing — and it only took about five minutes."</blockquote>
-        <cite>— Client</cite>
-      </div>
-      <div class="testi-card reveal">
-        <blockquote>"We had been talking around the same thing for three years. One card and we were finally in it."</blockquote>
-        <cite>— Client couple</cite>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA BAND -->
-<section class="cta-band">
-  <div class="eyebrow reveal">FREE · NO CATCH · INSTANT ACCESS</div>
-  <h2 class="reveal">Ten cards. Yours right now.</h2>
-  <div class="sub reveal">
-    <p>Enter your email and go straight to the free deck. No waiting, no checkout.</p>
-  </div>
-
-  <div class="cta-form reveal">
-    <p style="font-family:var(--display);font-size:1.15rem;font-weight:600;color:var(--teal);margin-bottom:14px">Where do we send the taster deck?</p>
-    <form id="ctaForm">
-      <input type="email" id="ctaEmail" name="email" placeholder="Your email address" required autocomplete="email">
-      <button type="submit" id="ctaBtn">Send it to me</button>
-    </form>
-    <p class="fine">No spam. You can unsubscribe any time.</p>
-  </div>
-</section>
+</main>
 
 <footer>
-  <div class="inner">
-    <span class="brand">Feel Fully You</span>
-    <div style="display:flex;gap:16px;flex-wrap:wrap">
-      <a href="mailto:support@feelfullyyou.com">support@feelfullyyou.com</a>
-      <a href="/cards">Full Deck</a>
-      <a href="/work-with-me">Work With Me</a>
-    </div>
-  </div>
+  <a href="/cards">See the full deck</a> &nbsp;·&nbsp; <a href="mailto:support@feelfullyyou.com">support@feelfullyyou.com</a>
 </footer>
 
 <script>
   const REDIRECT_URL = 'https://couplecards.netlify.app/free';
 
-  async function subscribeAndRedirect(email, btn) {
-    btn.disabled = true;
-    btn.textContent = 'Taking you there…';
+  document.getElementById('signupForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const email = document.getElementById('emailInput').value.trim();
+    const btn   = document.getElementById('submitBtn');
 
-    // Send to Netlify function (Kit API key stays server-side)
+    btn.disabled = true;
+    btn.textContent = 'On its way…';
+
     fetch('/.netlify/functions/subscribe', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({email, tag: 'free-cards-taster'})
-    }).catch(() => {}); // silent — don't block redirect on failure
+    }).catch(() => {});
 
-    // Brief pause then redirect straight to the free deck
     await new Promise(r => setTimeout(r, 600));
     window.location.href = REDIRECT_URL;
-  }
-
-  document.getElementById('heroForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    subscribeAndRedirect(
-      document.getElementById('heroEmail').value.trim(),
-      document.getElementById('heroBtn')
-    );
   });
-
-  document.getElementById('ctaForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    subscribeAndRedirect(
-      document.getElementById('ctaEmail').value.trim(),
-      document.getElementById('ctaBtn')
-    );
-  });
-
-  // Reveal animations
-  const io = new IntersectionObserver(es => {
-    es.forEach(e => { if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);} });
-  }, {threshold:.14, rootMargin:'0px 0px -6% 0px'});
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-  // Mobile nav
-  const btn = document.getElementById('hamBtn');
-  const nav = document.getElementById('mobileNav');
-  if(btn && nav) btn.addEventListener('click', () => nav.classList.toggle('open'));
 </script>
 </body>
 </html>
