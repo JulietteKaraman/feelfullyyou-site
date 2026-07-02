@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Dyad Protocol · Juliette Karaman</title>
+<meta name="description" content="A structured container for intimate conversation. Built on 60 years of research. For therapists, coaches, and somatic practitioners.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fefcfa;--cream-2:#f6f4f1;--paper:#fdfbf8;
+    --ink:#1c1714;--brown:#5d4a33;
+    --gold:#a88538;--gold-deep:#99680c;--gold-soft:#b4a074;--gold-pale:#ddc98e;
+    --teal:#0d3535;--teal-deep:#061a1a;
+    --blue:#d8dfe1;--line:#e3dccf;--line-dark:#1d3a39;
+    --max:1140px;
+    --display:'Poppins',system-ui,sans-serif;
+    --body:'Inter',system-ui,sans-serif;
+    --t-xs:0.78rem;--t-sm:0.94rem;--t-base:1.0625rem;--t-md:1.2rem;--t-lg:1.5rem;--t-2xl:2.75rem;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--brown);font-family:var(--body);font-size:var(--t-base);line-height:1.68;letter-spacing:-.003em;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  ::selection{background:var(--gold);color:#fff}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  p{max-width:64ch}
+  em{font-style:italic}
+  strong{font-weight:600;color:var(--ink)}
+
+  /* ── NAV ── */
+  .topbar{position:fixed;top:0;left:0;right:0;z-index:9999;background:var(--teal);padding:0 28px;height:64px;display:flex;align-items:center;justify-content:space-between}
+  .topbar .brand{font-family:var(--display);font-weight:700;font-size:16px;letter-spacing:.02em;color:var(--cream)}
+  .topbar .brand b{color:var(--gold-pale)}
+  .ham{display:none;background:none;border:none;cursor:pointer;color:var(--cream);padding:4px}
+  .topbar nav{display:flex;gap:26px;align-items:center}
+  .topbar nav a{font-size:14px;color:var(--cream);font-weight:500;transition:color .2s}
+  .topbar nav a:hover{color:var(--gold-pale)}
+  .topbar nav a.btn{background:var(--gold);color:#fff;padding:10px 20px;border-radius:2px;font-weight:600}
+  .mobile-nav{display:none;position:fixed;top:64px;left:0;right:0;background:var(--teal);z-index:9998;padding:16px 0;border-top:1px solid rgba(255,255,255,.1);flex-direction:column}
+  .mobile-nav a{display:block;padding:13px 28px;font-size:15px;color:var(--cream);font-weight:500;border-bottom:1px solid rgba(255,255,255,.07)}
+  .mobile-nav a.btn{margin:14px 28px 6px;background:var(--gold);color:#fff;padding:12px 20px;border-radius:2px;font-weight:600;text-align:center}
+  .mobile-nav.open{display:flex}
+  @media(max-width:860px){.ham{display:block}.topbar nav{display:none}}
+
+  /* ── UTILITIES ── */
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  .reveal:nth-child(2){transition-delay:.07s}
+  .reveal:nth-child(3){transition-delay:.14s}
+  .eyebrow{font-family:var(--body);font-size:var(--t-xs);letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);font-weight:600}
+  .btn{display:inline-block;cursor:pointer;border:none;font-family:var(--body);font-weight:600;font-size:var(--t-sm);padding:14px 32px;border-radius:2px;background:var(--gold);color:#fff;transition:transform .2s,background .2s}
+  .btn:hover{background:var(--gold-deep);transform:translateY(-1px)}
+  h1,h2,h3{font-family:var(--display);color:var(--ink);font-weight:700}
+  h1,h2{line-height:1.07;letter-spacing:-.022em}
+  h2{font-size:clamp(1.8rem,4vw,2.5rem);margin-bottom:20px}
+  h3{font-size:var(--t-lg);line-height:1.2;letter-spacing:-.012em;font-weight:600}
+
+  /* ── COVER ── */
+  .cover{padding-top:64px;background:var(--teal);color:var(--cream);min-height:92vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding-left:28px;padding-right:28px;padding-bottom:80px;position:relative;overflow:hidden}
+  .cover-motif{display:block;margin:0 auto 40px}
+  .cover .eyebrow{color:var(--gold-pale);margin-bottom:24px;font-size:10px;letter-spacing:.28em}
+  .cover h1{font-size:clamp(3rem,9vw,6rem);font-weight:300;color:var(--cream);line-height:1.05;letter-spacing:-.03em;margin-bottom:0}
+  .cover h1 strong{font-weight:600;color:var(--gold-pale);display:block}
+  .cover-rule{width:40px;height:1px;background:var(--gold-pale);opacity:.45;margin:40px auto}
+  .cover-sub{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:rgba(254,252,250,.45);font-family:var(--body)}
+  .cover-motif-bottom{display:block;position:absolute;bottom:40px;left:50%;transform:translateX(-50%);opacity:.3}
+
+  /* ── HERO PHOTO ── */
+  .hero-photo{width:100%;max-height:70vh;object-fit:cover;object-position:center 60%;display:block}
+
+  /* ── BROCHURE BODY ── */
+  .brochure{max-width:780px;margin:0 auto;padding:0 28px 120px}
+
+  /* ── SECTION ── */
+  .section{padding:72px 0;border-top:1px solid var(--line)}
+  .section:first-child{border-top:none;padding-top:80px}
+  .section .eyebrow{margin-bottom:18px}
+  .section h2{color:var(--ink);max-width:28ch}
+  .section p{color:var(--brown);margin-bottom:18px;font-size:var(--t-base)}
+  .section p:last-child{margin-bottom:0}
+  .section em{color:var(--ink)}
+
+  /* ── METHOD BLOCK ── */
+  .method-block{background:var(--teal);padding:56px 48px;margin:44px 0;text-align:center}
+  .method-line{display:block;font-family:var(--body);font-size:11px;font-weight:400;letter-spacing:.28em;text-transform:uppercase;color:var(--cream);line-height:3.2;opacity:.9}
+  .method-dot{display:block;width:3px;height:3px;border-radius:50%;background:var(--gold-pale);margin:0 auto;opacity:.4}
+  @media(max-width:600px){.method-block{padding:40px 24px}}
+
+  /* ── THREE RESPONSES ── */
+  .responses{margin-top:44px}
+  .response{display:grid;grid-template-columns:172px 1fr;gap:24px;padding:28px 0;border-top:1px solid var(--line);align-items:start}
+  .response:last-child{border-bottom:1px solid var(--line)}
+  .response-phrase{font-family:var(--display);font-style:italic;font-weight:400;font-size:1.05rem;color:var(--gold);line-height:1.4;padding-top:3px}
+  .response-text{font-size:var(--t-sm);color:var(--brown);line-height:1.72}
+  @media(max-width:600px){.response{grid-template-columns:1fr;gap:6px}}
+
+  /* ── INLINE PHOTO (full bleed) ── */
+  .photo-bleed{width:calc(100% + 56px);margin-left:-28px;display:block;max-height:540px;object-fit:cover;margin-top:56px}
+  .photo-bleed + .section{border-top:none;padding-top:72px}
+
+  /* ── PHOTO PAIR ── */
+  .photo-pair{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:52px -28px 0}
+  .photo-pair img{width:100%;height:340px;object-fit:cover;display:block}
+  @media(max-width:600px){.photo-pair{grid-template-columns:1fr;margin:40px -28px 0}.photo-pair img{height:260px}}
+
+  /* ── PULL QUOTE ── */
+  .pull-quote{border-left:3px solid var(--gold);background:var(--cream-2);padding:40px 44px;margin:52px 0}
+  .pull-quote p{font-family:var(--display);font-style:italic;font-weight:400;font-size:clamp(1.05rem,2vw,1.2rem);color:var(--ink);line-height:1.65;max-width:54ch}
+  .pull-quote cite{display:block;font-family:var(--body);font-style:normal;font-size:var(--t-xs);letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);margin-top:18px;font-weight:600}
+  @media(max-width:600px){.pull-quote{padding:30px 24px}}
+
+  /* ── DECK OVERVIEW ── */
+  .deck-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:40px}
+  .deck-tile{background:var(--cream);padding:32px 28px;display:flex;flex-direction:column;gap:10px}
+  .deck-tile.app-only{background:var(--teal)}
+  .deck-name{font-family:var(--display);font-weight:600;font-size:var(--t-sm);color:var(--ink);line-height:1.25}
+  .deck-tile.app-only .deck-name{color:var(--cream)}
+  .deck-desc{font-size:var(--t-xs);color:var(--brown);line-height:1.7}
+  .deck-tile.app-only .deck-desc{color:rgba(254,252,250,.75)}
+  .deck-badge{display:inline-block;font-size:8px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;padding:4px 10px;border:1px solid var(--gold);color:var(--gold);width:fit-content}
+  .deck-tile.app-only .deck-badge{border-color:var(--gold-pale);color:var(--gold-pale)}
+  @media(max-width:600px){.deck-row{grid-template-columns:1fr}}
+
+  /* ── SAMPLE CARDS ── */
+  .card-photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+  .card-photo-slot{position:relative;background:var(--ink);aspect-ratio:2/3;overflow:hidden;display:flex;align-items:center;justify-content:center}
+  .card-photo-slot img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+  /* Card motif: top arc */
+  .card-photo-slot::before{content:'';position:absolute;top:12px;left:50%;transform:translateX(-50%);width:28px;height:16px;border-left:1px solid rgba(168,133,56,.55);border-right:1px solid rgba(168,133,56,.55);border-bottom:1px solid rgba(168,133,56,.55);z-index:2}
+  /* Card motif: bottom arc */
+  .card-photo-slot::after{content:'';position:absolute;bottom:12px;left:50%;transform:translateX(-50%);width:22px;height:12px;border-left:1px solid rgba(168,133,56,.55);border-right:1px solid rgba(168,133,56,.55);border-top:1px solid rgba(168,133,56,.55);z-index:2}
+  .card-photo-placeholder{position:relative;z-index:1;text-align:center;padding:24px 16px;display:flex;flex-direction:column;align-items:center;gap:14px;pointer-events:none}
+  .card-photo-placeholder .ph-deck{font-size:8px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-pale);background:rgba(168,133,56,.2);padding:4px 12px}
+  .card-photo-placeholder .ph-q{font-family:var(--display);font-style:italic;font-weight:300;font-size:.8rem;color:var(--cream);line-height:1.6}
+  .card-photo-placeholder .ph-url{font-size:7px;letter-spacing:.2em;text-transform:uppercase;color:rgba(254,252,250,.25)}
+  .card-photo-note{font-size:var(--t-xs);color:var(--brown);opacity:.7;margin-top:20px;font-style:italic}
+  @media(max-width:700px){.card-photo-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:440px){.card-photo-grid{grid-template-columns:1fr}}
+
+  /* ── DIFFERENTIATOR ── */
+  .differentiator{background:var(--teal);padding:56px 48px;margin-top:44px;text-align:center}
+  .differentiator p{font-family:var(--display);font-style:italic;font-weight:400;font-size:clamp(1.1rem,2.2vw,1.45rem);color:var(--cream);line-height:1.6;max-width:44ch;margin:0 auto}
+  @media(max-width:600px){.differentiator{padding:40px 24px}}
+
+  /* ── CTA BLOCK ── */
+  .cta-block{border:1px solid var(--line);background:var(--cream-2);padding:52px 48px;margin-top:52px;text-align:center}
+  .cta-block .eyebrow{margin-bottom:14px}
+  .cta-block h3{font-size:var(--t-lg);margin-bottom:8px}
+  .cta-url{font-family:var(--display);font-size:1.1rem;font-weight:500;color:var(--gold-deep);display:block;margin:6px 0 28px;letter-spacing:-.01em}
+  .pricing-table{display:flex;justify-content:center;gap:0;margin:0 auto 28px;border:1px solid var(--line);max-width:460px}
+  .price-col{flex:1;padding:18px 12px;border-right:1px solid var(--line);text-align:center}
+  .price-col:last-child{border-right:none}
+  .price-qty{font-family:var(--display);font-weight:700;font-size:var(--t-sm);color:var(--ink);display:block;margin-bottom:4px}
+  .price-amt{font-family:var(--body);font-size:var(--t-xs);color:var(--gold-deep);font-weight:600;display:block}
+  .cta-note{font-size:var(--t-xs);color:var(--brown);line-height:2;opacity:.8}
+  @media(max-width:600px){.cta-block{padding:36px 24px}.pricing-table{flex-direction:column}.price-col{border-right:none;border-bottom:1px solid var(--line)}.price-col:last-child{border-bottom:none}}
+
+  /* ── FOOTER ── */
+  footer{background:var(--gold);color:#fff;padding:22px 32px;font-size:13px}
+  footer .inner{max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  footer .brand{font-family:var(--display);font-weight:700;font-size:.95rem}
+  footer .links{font-size:12px;color:rgba(255,255,255,.85);display:flex;gap:16px;align-items:center}
+  footer .links a{color:#fff;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(255,255,255,.5)}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<div class="topbar">
+  <a href="/" class="brand">Feel Fully <b>You</b></a>
+  <button class="ham" id="hamBtn" aria-label="Open menu" aria-expanded="false">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/work-with-me">Work With Me</a>
+    <a href="/cards">Cards</a>
+    <a href="/about">About</a>
+    <a href="/cards" class="btn">Get the Cards</a>
+  </nav>
+</div>
+<nav class="mobile-nav" id="mobileNav">
+  <a href="/">Home</a>
+  <a href="/for-her">For Her</a>
+  <a href="/for-him">For Him</a>
+  <a href="/for-both">For Both</a>
+  <a href="/cards">Cards</a>
+  <a href="/about">About</a>
+  <a href="/cards" class="btn">Get the Cards</a>
+</nav>
+
+<!-- COVER -->
+<section class="cover">
+  <!-- Motif: double downward chevron matching the cards -->
+  <svg class="cover-motif" width="52" height="44" viewBox="0 0 52 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <polyline points="4,4 26,24 48,4" stroke="#ddc98e" stroke-width="1.2" fill="none" stroke-linejoin="round"/>
+    <polyline points="13,4 26,18 39,4" stroke="#ddc98e" stroke-width="1.2" fill="none" stroke-linejoin="round"/>
+  </svg>
+  <p class="eyebrow">Juliette Karaman &nbsp;·&nbsp; Feel Fully You</p>
+  <h1>The Dyad<strong>Protocol</strong></h1>
+  <div class="cover-rule"></div>
+  <p class="cover-sub">A structured container for intimate conversation</p>
+  <!-- Bottom motif: double upward triangle -->
+  <svg class="cover-motif-bottom" width="52" height="44" viewBox="0 0 52 44" fill="none" aria-hidden="true">
+    <polyline points="4,40 26,20 48,40" stroke="#ddc98e" stroke-width="1.2" fill="none" stroke-linejoin="round"/>
+    <polyline points="13,40 26,26 39,40" stroke="#ddc98e" stroke-width="1.2" fill="none" stroke-linejoin="round"/>
+  </svg>
+</section>
+
+<!-- HERO PHOTO — save your pomegranates/candle/cards overhead shot as: dyad-hero.jpg -->
+<img class="hero-photo" src="dyad-hero.jpg" alt="Communication and Intimacy Cards on a dark table with candles and pomegranates">
+
+<main class="brochure">
+
+  <!-- ORIGIN -->
+  <section class="section">
+    <p class="eyebrow reveal">The Origin</p>
+    <h2 class="reveal">Built on 60 years of research into what it means to be truly heard</h2>
+    <p class="reveal">In the 1960s, Charles and Ava Berner spent 20,000 hours researching what actually happens when communication is complete.</p>
+    <p class="reveal">Their finding: when a communication cycle closes without advice, reaction, or interruption, there are no residuals. Nothing gets stuck. The person speaking lands inside themselves.</p>
+    <p class="reveal">Ava Berner structured this as the dyad in 1965. The first Enlightenment Intensive ran in July 1968: 26 people, Mojave Desert, five days. Participants had breakthroughs expected to take months.</p>
+    <p class="reveal">Juliette Karaman arrived at the same principles through 27 years of clinical work with couples and individuals — independently, through practice rather than theory. The Communication &amp; Intimacy Cards are built on what both lines of research confirmed.</p>
+  </section>
+
+  <!-- PHOTO — save as: dyad-hands.jpg (hands holding the deck, green nails, gold ring) -->
+  <img class="photo-bleed reveal" src="dyad-hands.jpg" alt="Hands holding the Communication and Intimacy Cards">
+
+  <!-- THE METHOD -->
+  <section class="section">
+    <p class="eyebrow reveal">The Method</p>
+    <h2 class="reveal">One card. One reader. Minimum 15 minutes.</h2>
+    <p class="reveal">The reader draws a card and reads the question aloud. They answer it, without interruption, for as long as they need. Then switch.</p>
+    <p class="reveal">The listener has three permitted responses. Nothing else.</p>
+
+    <div class="method-block reveal">
+      <span class="method-line">One card</span>
+      <span class="method-dot"></span>
+      <span class="method-line">One reader</span>
+      <span class="method-dot"></span>
+      <span class="method-line">Minimum 15 minutes</span>
+      <span class="method-dot"></span>
+      <span class="method-line">Berner used 40</span>
+    </div>
+
+    <p class="reveal">No advice. No fixing. No interjecting. No performing empathy.</p>
+  </section>
+
+  <!-- THREE RESPONSES -->
+  <section class="section">
+    <p class="eyebrow reveal">The Three Responses</p>
+    <h2 class="reveal">The constraint is not a limitation. It is the container.</h2>
+    <p class="reveal">When listeners are freed from the pressure to respond correctly, their nervous system settles. Speakers register this somatically. Disclosure deepens.</p>
+
+    <div class="responses">
+      <div class="response reveal">
+        <span class="response-phrase">"Thank you."</span>
+        <p class="response-text">Acknowledgement without evaluation. The speaker knows they have been received. Nothing added, nothing compared.</p>
+      </div>
+      <div class="response reveal">
+        <span class="response-phrase">"Clarify that."</span>
+        <p class="response-text">A request for more, not a question. The speaker expands on whatever they choose. The listener does not direct the expansion.</p>
+      </div>
+      <div class="response reveal">
+        <span class="response-phrase">"Summarise that."</span>
+        <p class="response-text">An invitation to distil. The speaker identifies what mattered most in what they just said. The listener receives it again.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PULL QUOTE -->
+  <div class="pull-quote reveal">
+    <p>"After working with over six hundred couples and thousands of clients, I noticed the same thing: what people want most is to be seen. To be heard. To feel understood."</p>
+    <cite>— Juliette Karaman</cite>
+  </div>
+
+  <!-- WHY IT WORKS -->
+  <section class="section">
+    <p class="eyebrow reveal">Why It Works</p>
+    <h2 class="reveal">A paradox: the listener has less to do, so the speaker feels more held.</h2>
+    <p class="reveal">This is Berner's finding made tactile. When the communication cycle is truly complete, there are no residuals. The person speaking lands inside themselves.</p>
+    <p class="reveal">People consistently report after their first session: <em>I have never felt so seen.</em></p>
+    <p class="reveal">The three-response framework mirrors the clean-listening structures used in NVC, somatic practice, and couples therapy. What makes this different is that clients carry the container home — and keep using it between sessions.</p>
+  </section>
+
+  <!-- CLINICAL APPLICATION -->
+  <section class="section">
+    <p class="eyebrow reveal">Clinical Application</p>
+    <h2 class="reveal">For therapists, coaches, and somatic practitioners</h2>
+
+    <p class="reveal"><em>Introducing it to clients:</em><br>
+    "I'm going to give you a method that removes the need to know how to respond. There are only three things you're allowed to say. Everything else is off the table. That's not a restriction — that's the point."</p>
+
+    <p class="reveal"><em>In session:</em><br>
+    One card per person. Minimum 15 minutes each. No debrief required — the processing happens in the nervous system, not in analysis.</p>
+
+    <p class="reveal"><em>As homework:</em><br>
+    Designed to be used independently between sessions. Clients do not need a practitioner present. The goal is a conversation practice that lives outside the therapeutic container and compounds over time.</p>
+  </section>
+
+  <!-- PHOTO PAIR — save as: dyad-lifestyle.jpg and dyad-phone.jpg -->
+  <div class="photo-pair reveal">
+    <img src="dyad-lifestyle.jpg" alt="Two people using the cards together">
+    <img src="dyad-phone.jpg" alt="The Communication and Intimacy Cards app">
+  </div>
+
+  <!-- DECKS -->
+  <section class="section">
+    <p class="eyebrow reveal">The Decks</p>
+    <h2 class="reveal">Two physical decks. One digital collection.</h2>
+    <p class="reveal">Each deck is designed to work as a standalone practice or alongside your existing therapeutic framework. The Dyad Protocol works with all of them.</p>
+
+    <div class="deck-row reveal">
+      <div class="deck-tile">
+        <span class="deck-badge">Physical deck</span>
+        <span class="deck-name">Communication &amp; Intimacy Cards — Couples</span>
+        <p class="deck-desc">For partners navigating closeness, desire, repair, and depth. 150 prompts across five categories including Touch &amp; Desire, Healing &amp; Growth, and Play &amp; Discovery.</p>
+      </div>
+      <div class="deck-tile">
+        <span class="deck-badge">Physical deck</span>
+        <span class="deck-name">Communication &amp; Intimacy Cards — Family &amp; Friends</span>
+        <p class="deck-desc">For any relationship where more depth is wanted. Works across generations and contexts — family dinners, friend groups, therapeutic groups, and coaching cohorts.</p>
+      </div>
+      <div class="deck-tile app-only">
+        <span class="deck-badge">App · Trust &amp; Repair</span>
+        <span class="deck-name">Trust &amp; Repair</span>
+        <p class="deck-desc">50 prompts specifically designed for rupture and reconnection. Available inside the Feel Fully You app. Digital access included with every physical deck order.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SAMPLE CARDS — replace text placeholders with card images from Canva -->
+  <section class="section">
+    <p class="eyebrow reveal">From the Cards</p>
+    <h2 class="reveal">What the cards actually look like</h2>
+    <p class="reveal">Drop your card images from Canva into the site folder to replace these placeholders. Name them: <code style="font-size:.85em;background:var(--cream-2);padding:2px 6px;border-radius:2px">card-01.jpg</code> through <code style="font-size:.85em;background:var(--cream-2);padding:2px 6px;border-radius:2px">card-06.jpg</code></p>
+
+    <div class="card-photo-grid">
+      <div class="card-photo-slot reveal">
+        <img src="card-01.jpg" alt="Communication and Intimacy Card" onerror="this.style.display='none'">
+        <div class="card-photo-placeholder">
+          <span class="ph-deck">Couples</span>
+          <span class="ph-q">Tell me what feels unfinished between us.</span>
+          <span class="ph-url">FEELFULLYYOU.COM</span>
+        </div>
+      </div>
+      <div class="card-photo-slot reveal">
+        <img src="card-02.jpg" alt="Communication and Intimacy Card" onerror="this.style.display='none'">
+        <div class="card-photo-placeholder">
+          <span class="ph-deck">Couples</span>
+          <span class="ph-q">Tell me what kind of touch your body is asking for right now.</span>
+          <span class="ph-url">FEELFULLYYOU.COM</span>
+        </div>
+      </div>
+      <div class="card-photo-slot reveal">
+        <img src="card-03.jpg" alt="Communication and Intimacy Card" onerror="this.style.display='none'">
+        <div class="card-photo-placeholder">
+          <span class="ph-deck">Couples</span>
+          <span class="ph-q">Tell me what you need more of right now.</span>
+          <span class="ph-url">FEELFULLYYOU.COM</span>
+        </div>
+      </div>
+      <div class="card-photo-slot reveal">
+        <img src="card-04.jpg" alt="Communication and Intimacy Card" onerror="this.style.display='none'">
+        <div class="card-photo-placeholder">
+          <span class="ph-deck">Family &amp; Friends</span>
+          <span class="ph-q">Tell me what you noticed today.</span>
+          <span class="ph-url">FEELFULLYYOU.COM</span>
+        </div>
+      </div>
+      <div class="card-photo-slot reveal">
+        <img src="card-05.jpg" alt="Communication and Intimacy Card" onerror="this.style.display='none'">
+        <div class="card-photo-placeholder">
+          <span class="ph-deck">Trust &amp; Repair</span>
+          <span class="ph-q">Tell me what a win, insight or learning you've had about this experience.</span>
+          <span class="ph-url">FEELFULLYYOU.COM</span>
+        </div>
+      </div>
+      <div class="card-photo-slot reveal">
+        <img src="card-06.jpg" alt="Communication and Intimacy Card" onerror="this.style.display='none'">
+        <div class="card-photo-placeholder">
+          <span class="ph-deck">Family &amp; Friends</span>
+          <span class="ph-q">Tell me a secret sign or code you want for us.</span>
+          <span class="ph-url">FEELFULLYYOU.COM</span>
+        </div>
+      </div>
+    </div>
+    <p class="card-photo-note reveal">The Dyad Protocol works with all three decks. Practitioners may order any combination.</p>
+  </section>
+
+  <!-- MARKET GAP -->
+  <section class="section">
+    <p class="eyebrow reveal">The Market Gap</p>
+    <h2 class="reveal">Every competitor offers prompts. None offers a protocol.</h2>
+    <p class="reveal">A 2026 analysis of 12 card deck brands confirmed: no other deck in this category has a structured listening framework. The Communication &amp; Intimacy Cards are the only deck with a built-in method for both speaker and listener.</p>
+
+    <div class="differentiator reveal">
+      <p>Most card decks give you a question.<br>This one gives you a system.</p>
+    </div>
+  </section>
+
+  <!-- PRACTITIONER ACCESS -->
+  <section class="section">
+    <p class="eyebrow reveal">Practitioner Access</p>
+    <h2 class="reveal">For your practice</h2>
+    <p class="reveal">Physical decks available at wholesale pricing for therapists, coaches, and somatic practitioners. Digital app access included with every order. Practitioner licence for in-session use available on request.</p>
+
+    <div class="cta-block reveal">
+      <p class="eyebrow">Access &amp; Enquiries</p>
+      <a href="https://feelfullyyou.com/practitioners" class="cta-url">feelfullyyou.com/practitioners</a>
+
+      <div class="pricing-table">
+        <div class="price-col">
+          <span class="price-qty">3 decks</span>
+          <span class="price-amt">£70</span>
+        </div>
+        <div class="price-col">
+          <span class="price-qty">6 decks</span>
+          <span class="price-amt">£120</span>
+        </div>
+        <div class="price-col">
+          <span class="price-qty">12+ decks</span>
+          <span class="price-amt">£200</span>
+        </div>
+      </div>
+
+      <p class="cta-note">Digital app access included with every order &nbsp;·&nbsp; Ships from the UK, 3–5 working days<br>
+      To order: <a href="mailto:juliette@feelfullyyou.com" style="color:var(--gold-deep);text-decoration:underline">juliette@feelfullyyou.com</a></p>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="inner">
+    <div class="brand">Feel Fully You</div>
+    <div class="links">
+      <a href="mailto:support@feelfullyyou.com">support@feelfullyyou.com</a>
+      <a href="/terms" style="color:rgba(255,255,255,.75)">Terms</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})
+  },{threshold:.08});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // Mobile nav
+  const btn=document.getElementById('hamBtn'),nav=document.getElementById('mobileNav');
+  if(btn&&nav)btn.addEventListener('click',()=>{nav.classList.toggle('open');btn.setAttribute('aria-expanded',nav.classList.contains('open'))});
+</script>
+</body>
+</html>
