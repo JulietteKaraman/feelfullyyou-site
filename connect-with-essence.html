@@ -51,7 +51,7 @@
 
   /* SHARED */
   .wrap{max-width:var(--max);margin:0 auto;padding:0 40px}
-  .eyebrow{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-deep);font-weight:700;margin-bottom:12px}
+  .eyebrow{font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-deep);font-weight:700;margin-bottom:12px}
   h2{font-family:var(--display);font-weight:800;font-size:clamp(1.7rem,3.5vw,2.4rem);color:var(--brown);letter-spacing:-.025em;line-height:1.1;margin-bottom:18px}
   p.lead{font-size:1rem;color:var(--brown);line-height:1.8;max-width:56ch}
   p.lead+p.lead{margin-top:14px}
@@ -62,15 +62,15 @@
   .hero img{width:100%;height:auto;display:block}
 
   /* PAGE TITLE */
-  .page-title{background:var(--cream);padding:44px 40px 32px;border-bottom:1px solid var(--line)}
+  .page-title{background:#fdf8ed;padding:44px 40px 32px;border-bottom:1px solid var(--line)}
   .page-title h1{font-family:var(--display);font-weight:800;font-size:clamp(2.2rem,5vw,3.6rem);color:var(--brown);letter-spacing:-.03em;line-height:1.04;max-width:var(--max);margin:0 auto}
-  .page-title .meta{max-width:var(--max);margin:14px auto 0;font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;gap:16px 28px}
+  .page-title .meta{max-width:var(--max);margin:14px auto 0;font-size:14px;color:var(--muted);display:flex;flex-wrap:wrap;gap:16px 28px}
   .page-title .meta strong{color:var(--brown);font-weight:600}
   @media(max-width:600px){.page-title{padding:32px 24px 24px}}
 
   /* PHOTO — full width, height capped */
   .photo{width:100%}
-  .photo img{width:100%;height:auto;max-height:500px;object-fit:cover;object-position:center;display:block}
+  .photo img{width:100%;height:auto;max-height:620px;object-fit:cover;object-position:top;display:block}
   /* Smaller photos — centered column, no cropping */
   .photo.small{display:flex;justify-content:center;background:var(--cream-2)}
   .photo.small img{width:auto;max-width:420px;height:auto}
@@ -94,10 +94,10 @@
   @media(max-width:600px){.section{padding:52px 24px}}
 
   /* BELIEF */
-  .belief{background:var(--teal);padding:72px 40px;border-bottom:1px solid var(--line);text-align:center}
-  .belief blockquote{font-family:var(--display);font-style:italic;font-weight:500;font-size:clamp(1.35rem,3vw,2rem);color:var(--cream);max-width:30ch;margin:0 auto 20px;line-height:1.42;letter-spacing:-.01em}
-  .belief blockquote em{color:var(--gold-pale);font-style:normal}
-  .belief .sub{font-size:1.15rem;color:var(--cream);opacity:.85;max-width:44ch;margin:0 auto;line-height:1.75;font-style:italic}
+  .belief{background:var(--cream);padding:72px 40px;border-bottom:1px solid var(--line);text-align:center}
+  .belief blockquote{font-family:var(--display);font-style:italic;font-weight:500;font-size:clamp(1.35rem,3vw,2rem);color:var(--brown);max-width:30ch;margin:0 auto 20px;line-height:1.42;letter-spacing:-.01em}
+  .belief blockquote em{color:var(--gold-deep);font-style:normal}
+  .belief .sub{font-size:1.15rem;color:var(--brown);max-width:44ch;margin:0 auto;line-height:1.75;font-style:italic}
   @media(max-width:600px){.belief{padding:52px 24px}}
 
   /* PILLARS */
@@ -114,26 +114,26 @@
   .host-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:44px}
   .host{text-align:center}
   .host img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;object-position:center top;display:block;margin-bottom:20px}
-  .host .hname{font-family:var(--display);font-weight:700;font-size:1.05rem;color:var(--brown);margin-bottom:4px}
-  .host .hrole{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);font-weight:700;margin-bottom:12px}
-  .host p{color:var(--brown);font-size:14px;line-height:1.75;font-style:italic}
+  .host .hname{font-family:var(--display);font-weight:700;font-size:1.2rem;color:var(--brown);margin-bottom:4px}
+  .host .hrole{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);font-weight:700;margin-bottom:12px}
+  .host p{color:var(--brown);font-size:1rem;line-height:1.75;font-style:italic}
   @media(max-width:660px){.host-grid{grid-template-columns:1fr;gap:36px}}
 
   /* LIST */
   .nice-list{list-style:none;display:flex;flex-direction:column;gap:10px;margin-top:10px}
-  .nice-list li{display:flex;align-items:flex-start;gap:12px;font-size:15px;color:var(--brown);line-height:1.58}
+  .nice-list li{display:flex;align-items:flex-start;gap:12px;font-size:1.05rem;color:var(--brown);line-height:1.65}
   .nice-list li::before{content:'—';color:var(--gold-soft);font-weight:700;flex-shrink:0;margin-top:2px}
 
   /* FOR YOU IF */
   .for-you-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:32px}
-  .for-you-item{background:var(--cream);border:1px solid var(--line);padding:20px 22px;font-size:14.5px;color:var(--brown);line-height:1.65;font-style:italic}
+  .for-you-item{background:var(--cream);border:1px solid var(--line);padding:20px 22px;font-size:1.05rem;color:var(--brown);line-height:1.65;font-style:italic}
   @media(max-width:600px){.for-you-grid{grid-template-columns:1fr}}
 
   /* TESTIMONIALS */
   .testi-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:40px}
   .testi{background:var(--cream);border:1px solid var(--line);padding:26px}
   .testi .testi-head{font-family:var(--display);font-weight:700;font-size:.95rem;color:var(--brown);margin-bottom:8px}
-  .testi blockquote{font-style:italic;color:var(--brown);font-size:14.5px;line-height:1.75;margin-bottom:10px}
+  .testi blockquote{font-style:italic;color:var(--brown);font-size:1rem;line-height:1.75;margin-bottom:10px}
   .testi .name{font-size:11px;font-weight:700;color:var(--gold-deep);letter-spacing:.1em;text-transform:uppercase}
   @media(max-width:600px){.testi-grid{grid-template-columns:1fr}}
 
@@ -243,7 +243,7 @@
       <span><strong>25 September 2026</strong> · 10:30am – 4:30pm</span>
       <span>Private venue · Central London</span>
       <span><strong>£247</strong></span>
-      <span><strong>5 spots</strong> remaining</span>
+      <span><strong>7 spots</strong> remaining</span>
     </div>
   </div>
 </div>
@@ -263,8 +263,8 @@
 <!-- PAIN / RECALIBRATION -->
 <section class="section cream">
   <div class="wrap">
-    <p class="eyebrow reveal">This isn't just a retreat</p>
-    <h2 class="reveal">It's a recalibration.</h2>
+    <p class="eyebrow reveal" style="font-size:1.1rem;letter-spacing:.15em">This isn't just a retreat</p>
+    <h2 class="reveal" style="font-size:clamp(2rem,4vw,3rem)">It's a recalibration.</h2>
     <p class="lead reveal">Most women are trying to think their way into feeling better. And they're very good at it. They can name what's off, explain it clearly, hold space for everyone else's version of it, and still come home to a body that hasn't quite landed.</p>
     <p class="lead reveal">At some point you took on an identity. The capable one. The strong one. The one who holds it all together. It served you. It may still serve you. But a new beginning asks a different question: what do you need to put down?</p>
     <p class="reveal" style="font-family:var(--display);font-size:clamp(1.2rem,2.5vw,1.7rem);font-weight:700;color:var(--gold-deep);line-height:1.35;max-width:28ch;margin-top:8px">Essence is where that starts. Not with more thinking. With the body.</p>
@@ -279,7 +279,7 @@
 <!-- NEW BEGINNINGS -->
 <section class="section blue" style="text-align:center">
   <div class="wrap">
-    <p class="eyebrow reveal" style="font-size:13px;font-weight:800;letter-spacing:.3em"><strong>NEW BEGINNINGS</strong></p>
+    <p class="eyebrow reveal" style="font-size:1.1rem;font-weight:800;letter-spacing:.2em">NEW BEGINNINGS</p>
     <p class="reveal" style="font-size:1rem;color:var(--muted);font-style:italic;margin-bottom:24px">This is the last Essence event we'll be hosting</p>
     <p class="reveal" style="margin:0 auto;max-width:52ch;font-size:1.45rem;line-height:1.75;color:var(--brown)">There are moments where you begin to sense that something is shifting. A quiet feeling that you are ready for more. Or a growing awareness that the way you are currently living, working, or showing up no longer fully fits the version of yourself you are becoming.</p>
     <p class="reveal" style="margin:28px auto 0;max-width:52ch;font-size:1.45rem;line-height:1.75;color:var(--brown)">What stands between where you are and where you know you could be is rarely a lack of ability. It is the invisible weight you are still carrying. The beliefs inherited over years. The emotional patterns that quietly shape your decisions. The physical exhaustion you have normalised. The stories about what is possible for you.</p>
@@ -306,7 +306,7 @@
           <span style="font-family:var(--display);font-size:0.6rem;font-weight:800;color:var(--gold-deep);letter-spacing:.05em">10am</span>
         </div>
         <div style="padding-top:10px">
-          <div style="font-family:var(--display);font-size:1.15rem;font-weight:700;color:var(--teal);margin-bottom:10px">Morning</div>
+          <div style="font-family:var(--display);font-size:1.15rem;font-weight:700;color:var(--gold-deep);margin-bottom:10px">Morning</div>
           <div style="display:flex;flex-direction:column;gap:6px">
             <span style="font-size:0.95rem;color:var(--brown)"><strong>Opening Circle</strong></span>
             <span style="font-size:0.95rem;color:var(--brown)"><strong>Current reality check</strong></span>
@@ -321,7 +321,7 @@
           <span style="font-family:var(--display);font-size:0.6rem;font-weight:800;color:var(--cream);letter-spacing:.05em">1pm</span>
         </div>
         <div style="padding-top:10px">
-          <div style="font-family:var(--display);font-size:1.15rem;font-weight:700;color:var(--teal);margin-bottom:10px">Lunch · a full hour</div>
+          <div style="font-family:var(--display);font-size:1.15rem;font-weight:700;color:var(--gold-deep);margin-bottom:10px">Lunch · a full hour</div>
           <div style="display:flex;flex-direction:column;gap:6px">
             <span style="font-size:0.95rem;color:var(--brown)"><strong>Ottolenghi-style. Unhurried.</strong></span>
             <span style="font-size:0.88rem;color:var(--muted);font-style:italic">Mindful touch and eating experience through the break — integration doesn't stop when the sessions do.</span>
@@ -335,7 +335,7 @@
           <span style="font-family:var(--display);font-size:0.6rem;font-weight:800;color:var(--gold-deep);letter-spacing:.05em">2pm</span>
         </div>
         <div style="padding-top:10px">
-          <div style="font-family:var(--display);font-size:1.15rem;font-weight:700;color:var(--teal);margin-bottom:10px">Afternoon</div>
+          <div style="font-family:var(--display);font-size:1.15rem;font-weight:700;color:var(--gold-deep);margin-bottom:10px">Afternoon</div>
           <div style="display:flex;flex-direction:column;gap:6px">
             <span style="font-size:0.95rem;color:var(--brown)"><strong>Soul work, breathwork and calling her in</strong></span>
             <span style="font-size:0.95rem;color:var(--brown)"><strong>Hormones and body intelligence</strong></span>
@@ -351,7 +351,7 @@
           <span style="font-family:var(--display);font-size:0.6rem;font-weight:800;color:var(--cream);letter-spacing:.05em">4pm</span>
         </div>
         <div style="padding-top:10px">
-          <div style="font-family:var(--display);font-size:1.15rem;font-weight:700;color:var(--teal)">We leave</div>
+          <div style="font-family:var(--display);font-size:1.15rem;font-weight:700;color:var(--gold-deep)">We leave</div>
         </div>
       </div>
 
@@ -374,7 +374,7 @@
       <div class="reveal" style="background:var(--cream);border:1.5px solid var(--gold);border-bottom:none;padding:48px 40px">
         <div style="font-family:var(--display);font-size:4.5rem;font-weight:700;color:var(--gold);line-height:1;margin-bottom:16px;opacity:.6">01</div>
         <p style="font-family:var(--display);font-size:0.7rem;font-weight:700;letter-spacing:.22em;color:var(--gold-deep);text-transform:uppercase;margin-bottom:8px">Juliette Karaman</p>
-        <h3 style="font-family:var(--display);font-size:1.8rem;font-weight:700;color:var(--teal);margin-bottom:16px">Patterns and Emotions</h3>
+        <h3 style="font-family:var(--display);font-size:1.8rem;font-weight:700;color:var(--teal);margin-bottom:16px">Patterns &amp; Emotions</h3>
         <p style="font-size:0.95rem;line-height:1.75;color:var(--brown)">An honest look at where you are. Where life feels heavy, where you've been on autopilot, what you've been carrying without naming it.</p>
         <p style="font-size:0.95rem;line-height:1.75;color:var(--brown);margin-top:14px">Then the emotional patterns underneath — fear, old identity, the protective behaviours that got you here but no longer fit.</p>
         <p style="font-size:0.95rem;line-height:1.75;color:var(--muted);margin-top:14px">And then: <strong style="color:var(--brown)">physical movement. Spinal attunement. Embodied release.</strong> The body participates in the shift, not just the mind.</p>
@@ -449,7 +449,7 @@
 <!-- THIS IS FOR YOU IF -->
 <section class="section blue">
   <div class="wrap">
-    <p class="eyebrow reveal">This is for you if…</p>
+    <p class="eyebrow reveal" style="font-size:1.05rem">This is for you if…</p>
     <div class="for-you-grid">
       <div class="for-you-item reveal">You're functioning. Well, even. There is a quiet knowing that you are nowhere near the woman you used to be inside yourself.</div>
       <div class="for-you-item reveal">You've been the capable one for so long that softness now feels like a skill you've misplaced.</div>
@@ -469,8 +469,8 @@
 <!-- WHAT'S INCLUDED -->
 <section class="section cream-2">
   <div class="wrap">
-    <p class="eyebrow reveal">What's included</p>
-    <h2 class="reveal">A full day. Three practitioners. Ottolenghi-style lunch.</h2>
+    <p class="eyebrow reveal" style="font-size:1.05rem">What's included</p>
+    <h2 class="reveal" style="font-size:clamp(1.9rem,4vw,2.8rem)">A full day. Three practitioners. Ottolenghi-style lunch.</h2>
     <ul class="nice-list reveal">
       <li>A beautiful private venue in Central London</li>
       <li>A relaxed, intimate group setting</li>
@@ -490,8 +490,8 @@
 <!-- LEAVE WITH -->
 <section class="section cream">
   <div class="wrap">
-    <p class="eyebrow reveal">Leave with</p>
-    <h2 class="reveal">Something part of you has been quietly asking for.</h2>
+    <p class="eyebrow reveal" style="font-size:1.05rem">Leave with</p>
+    <h2 class="reveal" style="font-size:clamp(1.9rem,4vw,2.8rem)">Something part of you has been quietly asking for.</h2>
     <ul class="nice-list reveal">
       <li>A completely different understanding of your body</li>
       <li>Clear insight into your energy patterns</li>
@@ -504,7 +504,7 @@
 <!-- TESTIMONIALS -->
 <section class="section blue">
   <div class="wrap">
-    <p class="eyebrow reveal" style="text-align:center">From women who were in the room</p>
+    <p class="eyebrow reveal" style="text-align:center;font-size:1.05rem">From women who were in the room</p>
     <h2 class="reveal" style="text-align:center">What they said afterwards.</h2>
     <div class="testi-grid">
       <div class="testi reveal">
@@ -539,8 +539,8 @@
 <!-- PHOTOSHOOT ADD-ON -->
 <section class="section photoshoot cream-2">
   <div class="wrap">
-    <p class="eyebrow reveal">Optional add-on</p>
-    <h2 class="reveal">Leave with photos that actually look like you.</h2>
+    <p class="eyebrow reveal" style="font-size:1.05rem">Optional add-on</p>
+    <h2 class="reveal" style="font-size:clamp(1.9rem,4vw,2.8rem)">Leave with photos that actually look like you.</h2>
     <div class="photoshoot-grid">
       <div>
         <p class="lead reveal">While you are here, in this light, in this space, in this version of yourself, you can book a private mini shoot with the fabulous Justine Stoddart. Ten minutes. Ten fully edited images. No awkward posing. Just you, as you are, on a day when you finally arrived back to yourself.</p>
@@ -557,9 +557,9 @@
 <!-- BOOK -->
 <section class="book" id="book">
   <div class="wrap">
-    <p class="eyebrow reveal">Reserve your place</p>
-    <h2 class="reveal">This is the last Essence event.</h2>
-    <p class="sub reveal">25 September 2026 · 10:30am–4:30pm<br>Private venue, Central London · 5 spots remaining<br>The list closes at the end of July.</p>
+    <p class="eyebrow reveal" style="font-size:1.05rem">Reserve your place</p>
+    <h2 class="reveal" style="font-size:clamp(1.9rem,4vw,2.8rem)">This is the last Essence event.</h2>
+    <p class="sub reveal">25 September 2026 · 10:30am–4:30pm<br>Private venue, Central London · 7 spots remaining<br>The list closes at the end of July.</p>
     <div class="reveal">
       <div class="price-main">£247</div>
       
@@ -567,7 +567,7 @@
     </div>
     <br>
     <a href="https://buy.stripe.com/bJe7sKayf3GM71H7iR0co0F" class="cta reveal" target="_blank" rel="noopener">Reserve Your Spot →</a>
-    <div class="spots reveal">5 spots remaining</div>
+    <div class="spots reveal">7 spots remaining</div>
   </div>
 </section>
 
