@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>You're in · Free Cards Taster</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fefcfa;
+    --ink:#1c1714;
+    --brown:#5d4a33;
+    --gold:#a88538;
+    --gold-deep:#99680c;
+    --gold-soft:#b4a074;
+    --gold-pale:#ddc98e;
+    --teal:#0d3535;
+    --teal-deep:#061a1a;
+    --line:#e3dccf;
+    --display:'Poppins',system-ui,sans-serif;
+    --body:'Inter',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--cream);color:var(--brown);font-family:var(--body);-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
+
+  /* TOPBAR */
+  .topbar{background:var(--teal);padding:0 28px;height:60px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .topbar .brand{font-family:var(--display);font-weight:700;font-size:15px;color:#fff;letter-spacing:.02em;text-decoration:none}
+  .topbar .brand b{color:var(--gold-pale)}
+
+  /* MAIN */
+  .main{flex:1;display:flex;align-items:flex-start;justify-content:center;padding:52px 24px 60px}
+  .card{max-width:480px;width:100%}
+
+  /* CONFIRM */
+  .confirm{text-align:center;margin-bottom:48px}
+  .check{width:56px;height:56px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;margin:0 auto 22px}
+  .check svg{width:26px;height:26px;stroke:#fff;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+  .eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-deep);font-weight:700;margin-bottom:12px}
+  h1{font-family:var(--display);font-size:clamp(1.8rem,5vw,2.4rem);font-weight:700;color:var(--teal);line-height:1.1;letter-spacing:-.02em;margin-bottom:12px}
+  .confirm .sub{font-size:1rem;color:var(--brown);line-height:1.7}
+
+  /* CTA */
+  .cta-wrap{text-align:center;margin-bottom:48px}
+  .cta{display:block;width:100%;padding:18px 24px;background:var(--teal);color:#fff;font-family:var(--display);font-size:1.1rem;font-weight:700;border-radius:3px;text-decoration:none;letter-spacing:-.01em;transition:background .2s}
+  .cta:hover{background:var(--teal-deep)}
+  .cta-note{font-size:12px;color:var(--gold-soft);margin-top:10px}
+
+  /* HOW IT WORKS */
+  .how{border-top:1px solid var(--line);padding-top:36px}
+  .how .label{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);font-weight:700;margin-bottom:22px}
+  .rule{display:flex;gap:16px;align-items:flex-start;padding:18px 0;border-bottom:1px solid var(--line)}
+  .rule:last-child{border-bottom:none}
+  .rule .num{font-family:var(--display);font-size:1.4rem;font-weight:700;color:var(--gold-pale);line-height:1;min-width:28px;padding-top:2px}
+  .rule .copy h3{font-family:var(--display);font-size:1rem;font-weight:700;color:var(--teal);margin-bottom:5px;letter-spacing:-.01em}
+  .rule .copy p{font-size:0.94rem;color:var(--brown);line-height:1.65}
+  .rule .copy p strong{color:var(--ink);font-weight:600}
+
+  /* THREE RESPONSES */
+  .responses{margin-top:10px;display:flex;flex-direction:column;gap:8px}
+  .response{background:#fff;border:1px solid var(--line);border-radius:3px;padding:10px 14px;display:flex;gap:12px;align-items:center}
+  .response .tag{font-family:var(--display);font-size:0.82rem;font-weight:700;color:var(--teal);white-space:nowrap}
+  .response .desc{font-size:0.82rem;color:var(--brown);line-height:1.5}
+
+  /* EMAIL NOTE */
+  .email-note{margin-top:36px;padding:18px 20px;background:#fff;border:1px solid var(--line);border-radius:3px;font-size:0.88rem;color:var(--brown);line-height:1.6;text-align:center}
+  .email-note strong{color:var(--teal)}
+
+  footer{padding:22px 28px;text-align:center;font-size:12px;color:var(--gold-soft);flex-shrink:0}
+  footer a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="/" class="brand">Feel Fully <b>You</b></a>
+</div>
+
+<main class="main">
+  <div class="card">
+
+    <!-- CONFIRMATION -->
+    <div class="confirm">
+      <div class="check">
+        <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <div class="eyebrow">You're in</div>
+      <h1>Your free deck is ready.</h1>
+      <p class="sub">Tap the button below to open it on your phone. The link is also on its way to your inbox.</p>
+    </div>
+
+    <!-- BIG CTA -->
+    <div class="cta-wrap">
+      <a href="https://couplecards.netlify.app/free" class="cta" target="_blank" rel="noopener">Open the free cards →</a>
+      <p class="cta-note">Opens in your browser — no app download needed</p>
+    </div>
+
+    <!-- HOW IT WORKS -->
+    <div class="how">
+      <div class="label">How to use them</div>
+
+      <div class="rule">
+        <div class="num">01</div>
+        <div class="copy">
+          <h3>Pick a card</h3>
+          <p>Person A picks. Person B reads the prompt aloud. One prompt. That's it.</p>
+        </div>
+      </div>
+
+      <div class="rule">
+        <div class="num">02</div>
+        <div class="copy">
+          <h3>15 minutes</h3>
+          <p>Person A answers from the heart. No interrupting, no fixing, no debating. Person B holds <strong>three responses only:</strong></p>
+          <div class="responses">
+            <div class="response">
+              <span class="tag">Thank you</span>
+              <span class="desc">If you understood what they said.</span>
+            </div>
+            <div class="response">
+              <span class="tag">Clarify that</span>
+              <span class="desc">If you didn't.</span>
+            </div>
+            <div class="response">
+              <span class="tag">Summarise that</span>
+              <span class="desc">If they go on and on.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rule">
+        <div class="num">03</div>
+        <div class="copy">
+          <h3>Switch</h3>
+          <p>Same card. Same prompt. Now Person B answers and Person A holds the three responses. Then pick a new card whenever you're ready.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- EMAIL NOTE -->
+    <div class="email-note">
+      <strong>Check your inbox</strong> — the link is also on its way to you so you can come back to it any time.
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <a href="/cards">See the full deck</a> &nbsp;·&nbsp; <a href="mailto:support@feelfullyyou.com">support@feelfullyyou.com</a>
+</footer>
+
+</body>
+</html>
