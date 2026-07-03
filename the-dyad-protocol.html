@@ -112,17 +112,39 @@
   .pull-quote cite{display:block;font-family:var(--body);font-style:normal;font-size:var(--t-xs);letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);margin-top:18px;font-weight:600}
   @media(max-width:600px){.pull-quote{padding:30px 24px}}
 
-  /* ── DECK OVERVIEW ── */
-  .deck-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:40px}
-  .deck-tile{background:var(--cream);padding:32px 28px;display:flex;flex-direction:column;gap:10px}
-  .deck-tile.app-only{background:var(--teal)}
-  .deck-name{font-family:var(--display);font-weight:600;font-size:var(--t-sm);color:var(--ink);line-height:1.25}
-  .deck-tile.app-only .deck-name{color:var(--cream)}
-  .deck-desc{font-size:var(--t-xs);color:var(--brown);line-height:1.7}
-  .deck-tile.app-only .deck-desc{color:rgba(254,252,250,.75)}
-  .deck-badge{display:inline-block;font-size:8px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;padding:4px 10px;border:1px solid var(--gold);color:var(--gold);width:fit-content}
-  .deck-tile.app-only .deck-badge{border-color:var(--gold-pale);color:var(--gold-pale)}
-  @media(max-width:600px){.deck-row{grid-template-columns:1fr}}
+  /* ── DECK SECTIONS ── */
+  .deck-section{padding:72px 28px;border-top:1px solid var(--line);max-width:780px;margin:0 auto}
+  .deck-section--alt{background:var(--cream-2)}
+  .deck-section--alt{margin-left:-28px;margin-right:-28px;padding-left:56px;padding-right:56px;max-width:none}
+  .deck-intro{display:grid;grid-template-columns:160px 1fr;gap:44px;align-items:start;margin-bottom:44px}
+  .deck-cover-wrap{flex-shrink:0}
+  .deck-cover-img{width:160px;display:block;box-shadow:0 4px 28px rgba(0,0,0,.15)}
+  .deck-intro-text h3{font-size:clamp(1.3rem,3vw,1.7rem);margin-bottom:12px;line-height:1.2}
+  .deck-intro-text h3 em{font-style:italic;font-weight:300;color:var(--gold-deep);display:block}
+  .deck-intro-text p{font-size:var(--t-sm);color:var(--brown);margin-bottom:18px;line-height:1.72}
+  .deck-badge-inline{display:inline-block;font-size:8px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;padding:4px 10px;border:1px solid var(--gold);color:var(--gold);margin-bottom:14px}
+  .section-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+  .section-list li{font-size:var(--t-xs);color:var(--brown);letter-spacing:.06em;text-transform:uppercase;display:flex;align-items:center;gap:10px}
+  .section-dot{width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0}
+  .deck-cards-row{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+  .deck-card-item{display:flex;flex-direction:column;gap:10px}
+  .deck-card-item img{width:100%;aspect-ratio:2/3;object-fit:cover;display:block;box-shadow:0 2px 14px rgba(0,0,0,.1)}
+  .deck-card-label{font-size:8px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);text-align:center;line-height:1.4}
+  /* Trust & Repair block */
+  .trust-repair-block{background:var(--teal);padding:56px 48px;display:grid;grid-template-columns:1fr 280px;gap:48px;align-items:center}
+  .trust-repair-block h3{color:var(--cream)}
+  .trust-repair-card-wrap{margin-top:28px}
+  .trust-repair-card{width:130px;box-shadow:0 4px 28px rgba(0,0,0,.3)}
+  .trust-repair-cta{text-align:center}
+  .btn-outline-cream{display:inline-block;border:1px solid var(--cream);color:var(--cream);font-family:var(--body);font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;padding:14px 28px;text-decoration:none;transition:background .2s,color .2s}
+  .btn-outline-cream:hover{background:var(--cream);color:var(--teal)}
+  @media(max-width:700px){
+    .deck-intro{grid-template-columns:1fr;gap:24px}
+    .deck-cover-img{width:120px}
+    .deck-cards-row{grid-template-columns:repeat(2,1fr)}
+    .trust-repair-block{grid-template-columns:1fr;padding:40px 28px}
+    .deck-section--alt{padding-left:28px;padding-right:28px}
+  }
 
   /* ── SAMPLE CARDS ── */
   .card-photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
@@ -328,69 +350,106 @@
   <section class="section">
     <p class="eyebrow reveal">The Decks</p>
     <h2 class="reveal">Two physical decks. One digital collection.</h2>
-    <p class="reveal">Each deck is designed to work as a standalone practice or alongside your existing therapeutic framework. The Dyad Protocol works with all of them.</p>
+    <p class="reveal">Each deck is structured into distinct sections so clients are never stuck in one emotional register. The Dyad Protocol works with all of them — one card, one reader, minimum 15 minutes.</p>
+  </section>
 
-    <div class="deck-row reveal">
-      <div class="deck-tile">
-        <span class="deck-badge">Physical deck</span>
-        <span class="deck-name">Communication &amp; Intimacy Cards — Couples</span>
-        <p class="deck-desc">For partners navigating closeness, desire, repair, and depth. 150 prompts across five categories including Touch &amp; Desire, Healing &amp; Growth, and Play &amp; Discovery.</p>
+  <!-- COUPLES DECK -->
+  <section class="deck-section reveal">
+    <div class="deck-intro">
+      <div class="deck-cover-wrap">
+        <img src="deck-couples-cover.png" alt="Communication & Intimacy Cards — Couples deck cover" class="deck-cover-img">
       </div>
-      <div class="deck-tile">
-        <span class="deck-badge">Physical deck</span>
-        <span class="deck-name">Communication &amp; Intimacy Cards — Family &amp; Friends</span>
-        <p class="deck-desc">For any relationship where more depth is wanted. Works across generations and contexts — family dinners, friend groups, therapeutic groups, and coaching cohorts.</p>
+      <div class="deck-intro-text">
+        <span class="deck-badge-inline">Physical deck · 150 cards</span>
+        <h3>Communication &amp; Intimacy Cards<br><em>Couples</em></h3>
+        <p>For partners at any stage — new, long-term, in repair, or deepening. Five sections move couples from everyday connection through to desire, body-based truth, and old wounds. The depth is built in.</p>
+        <ul class="section-list">
+          <li><span class="section-dot"></span>Romantic Relationships — 30 cards</li>
+          <li><span class="section-dot"></span>Intimacy &amp; Repair — 30 cards</li>
+          <li><span class="section-dot"></span>Touch &amp; Desire — 30 cards</li>
+          <li><span class="section-dot"></span>Healing &amp; Growth — 30 cards</li>
+          <li><span class="section-dot"></span>Play &amp; Discovery — 30 cards</li>
+        </ul>
       </div>
-      <div class="deck-tile app-only">
-        <span class="deck-badge">App · Trust &amp; Repair</span>
-        <span class="deck-name">Trust &amp; Repair</span>
-        <p class="deck-desc">50 prompts specifically designed for rupture and reconnection. Available inside the Feel Fully You app. Digital access included with every physical deck order.</p>
+    </div>
+    <div class="deck-cards-row">
+      <div class="deck-card-item">
+        <img src="card-rr.png" alt="Romantic Relationships card">
+        <span class="deck-card-label">Romantic Relationships</span>
+      </div>
+      <div class="deck-card-item">
+        <img src="card-ir.png" alt="Intimacy & Repair card">
+        <span class="deck-card-label">Intimacy &amp; Repair</span>
+      </div>
+      <div class="deck-card-item">
+        <img src="card-td.png" alt="Touch & Desire card">
+        <span class="deck-card-label">Touch &amp; Desire</span>
+      </div>
+      <div class="deck-card-item">
+        <img src="card-hg.png" alt="Healing & Growth card">
+        <span class="deck-card-label">Healing &amp; Growth</span>
+      </div>
+      <div class="deck-card-item">
+        <img src="card-pd.png" alt="Play & Discovery card">
+        <span class="deck-card-label">Play &amp; Discovery</span>
       </div>
     </div>
   </section>
 
-  <!-- SAMPLE CARDS — replace text placeholders with card images from Canva -->
-  <section class="section">
-    <p class="eyebrow reveal">From the Cards</p>
-    <h2 class="reveal">What the cards actually look like</h2>
-    <p class="reveal">Drop your card images from Canva into the site folder to replace these placeholders. Name them: <code style="font-size:.85em;background:var(--cream-2);padding:2px 6px;border-radius:2px">card-01.jpg</code> through <code style="font-size:.85em;background:var(--cream-2);padding:2px 6px;border-radius:2px">card-06.jpg</code></p>
-
-    <div class="card-photo-grid">
-
-      <!-- Card 1 — real image -->
-      <div class="real-card reveal" style="padding:0;overflow:hidden">
-        <img src="card-01.png" alt="Trust & Repair card: Tell me what you're tired of carrying between us" style="width:100%;height:100%;object-fit:cover;display:block">
+  <!-- FAMILY & FRIENDS DECK -->
+  <section class="deck-section deck-section--alt reveal">
+    <div class="deck-intro">
+      <div class="deck-cover-wrap">
+        <img src="deck-family-cover.png" alt="Communication & Intimacy Cards — Family & Friends deck cover" class="deck-cover-img">
       </div>
-
-      <!-- Card 2 — real image -->
-      <div class="real-card reveal" style="padding:0;overflow:hidden">
-        <img src="card-02.jpg" alt="Romantic Relationships Repair card: Tell me what you no longer say because it feels unsafe" style="width:100%;height:100%;object-fit:cover;display:block">
+      <div class="deck-intro-text">
+        <span class="deck-badge-inline">Physical deck · 120 cards</span>
+        <h3>Communication &amp; Intimacy Cards<br><em>Family &amp; Friends</em></h3>
+        <p>For any relationship where more depth is wanted. Works across generations — family dinners, adult siblings, long friendships, coaching cohorts, therapeutic groups. Four sections move from everyday life into the things rarely said.</p>
+        <ul class="section-list">
+          <li><span class="section-dot"></span>Family, Life — 30 cards</li>
+          <li><span class="section-dot"></span>Stories &amp; Growth — 30 cards</li>
+          <li><span class="section-dot"></span>Beliefs &amp; Emotions — 30 cards</li>
+          <li><span class="section-dot"></span>Friendships &amp; Belonging — 30 cards</li>
+        </ul>
       </div>
-
-      <!-- Card 3 — real image -->
-      <div class="real-card reveal" style="padding:0;overflow:hidden">
-        <img src="card-03.png" alt="Romantic Relationships card: Tell me how has your relationship changed you" style="width:100%;height:100%;object-fit:cover;display:block">
-      </div>
-
-      <!-- Card 4 — real image -->
-      <div class="real-card reveal" style="padding:0;overflow:hidden">
-        <img src="card-04.png" alt="Romantic Relationships Repair card: Tell me what you miss about us" style="width:100%;height:100%;object-fit:cover;display:block">
-      </div>
-
-      <!-- Card 5 — real image -->
-      <div class="real-card reveal" style="padding:0;overflow:hidden">
-        <img src="card-05.png" alt="Romantic Relationships card: Tell me what it's like to be in a relationship with me" style="width:100%;height:100%;object-fit:cover;display:block">
-      </div>
-
-      <!-- Card 6 — taster CTA -->
-      <div class="real-card reveal" style="background:var(--teal);border-color:var(--teal);justify-content:center;gap:16px;padding:32px 24px;text-align:center">
-        <span style="font-family:var(--body);font-size:9px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-pale)">Try free</span>
-        <span style="font-family:var(--display);font-size:clamp(.85rem,2vw,1rem);font-weight:300;color:var(--cream);line-height:1.55;font-style:italic">Experience the cards before you recommend them</span>
-        <a href="https://couplecards.netlify.app/free" target="_blank" style="display:inline-block;background:var(--gold);color:#fff;font-family:var(--body);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:12px 22px;text-decoration:none;margin-top:8px">Try the free taster</a>
-      </div>
-
     </div>
-    <p class="card-photo-note reveal">The Dyad Protocol works with all three decks. Practitioners may order any combination.</p>
+    <div class="deck-cards-row">
+      <div class="deck-card-item">
+        <img src="card-life.png" alt="Family, Life card">
+        <span class="deck-card-label">Family, Life</span>
+      </div>
+      <div class="deck-card-item">
+        <img src="card-stories.png" alt="Stories & Growth card">
+        <span class="deck-card-label">Stories &amp; Growth</span>
+      </div>
+      <div class="deck-card-item">
+        <img src="card-beliefs.png" alt="Beliefs & Emotions card">
+        <span class="deck-card-label">Beliefs &amp; Emotions</span>
+      </div>
+      <div class="deck-card-item">
+        <img src="card-friendships.png" alt="Friendships & Belonging card">
+        <span class="deck-card-label">Friendships &amp; Belonging</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST & REPAIR -->
+  <section class="section">
+    <div class="trust-repair-block reveal">
+      <div class="trust-repair-text">
+        <span class="deck-badge-inline" style="background:var(--teal);color:var(--cream)">App only · 50 cards</span>
+        <h3 style="color:var(--cream);margin:16px 0 12px">Trust &amp; Repair</h3>
+        <p style="color:rgba(254,252,250,.8)">Fifty prompts specifically for rupture, betrayal, and the work of reconnection. Available inside the Feel Fully You app. Digital access is included with every physical deck order — so your clients get this the moment they purchase.</p>
+        <div class="trust-repair-card-wrap">
+          <img src="card-01.png" alt="Trust & Repair card: Tell me what you're tired of carrying between us" class="trust-repair-card">
+        </div>
+      </div>
+      <div class="trust-repair-cta">
+        <p style="font-family:var(--display);font-size:clamp(1rem,2.5vw,1.2rem);color:var(--cream);font-weight:300;line-height:1.6;font-style:italic;margin-bottom:28px">"Tell me what you're tired of carrying between us."</p>
+        <a href="https://couplecards.netlify.app/free" target="_blank" class="btn-outline-cream">Try a free taster first</a>
+      </div>
+    </div>
   </section>
 
   <!-- MARKET GAP -->
