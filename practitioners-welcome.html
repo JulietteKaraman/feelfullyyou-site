@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>You're in — Practitioner App Access · Feel Fully You</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fefcfa;
+    --ink:#1c1714;
+    --brown:#5d4a33;
+    --gold:#a88538;
+    --gold-deep:#99680c;
+    --gold-pale:#ddc98e;
+    --gold-soft:#b4a074;
+    --teal:#0d3535;
+    --teal-deep:#061a1a;
+    --line:#e3dccf;
+    --line-dark:#1d3a39;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--cream);color:var(--brown);font-family:'Inter',system-ui,sans-serif;font-size:17px;font-weight:400;line-height:1.65;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+
+  /* NAV */
+  .topbar{position:fixed;top:0;left:0;right:0;z-index:9999;background:var(--teal);padding:0 28px;height:64px;display:flex;align-items:center;justify-content:space-between}
+  .topbar .brand{font-family:'Poppins',sans-serif;font-weight:700;font-size:16px;letter-spacing:.02em;color:var(--cream)}
+  .topbar .brand b{color:var(--gold-pale)}
+  .topbar nav{display:flex;gap:26px;align-items:center}
+  .topbar nav a{font-size:14px;color:var(--cream);font-weight:500;transition:color .2s}
+  .topbar nav a:hover{color:var(--gold-pale)}
+  .topbar nav a.btn{background:var(--gold);color:#fff;padding:10px 20px;border-radius:2px;font-weight:600}
+  .ham{display:none;background:none;border:none;cursor:pointer;padding:6px;color:var(--cream)}
+  .ham svg{display:block}
+  .mobile-nav{display:none;position:fixed;top:64px;left:0;right:0;background:var(--teal);z-index:9998;padding:16px 0;border-top:1px solid rgba(255,255,255,.1);flex-direction:column}
+  .mobile-nav a{display:block;padding:13px 28px;font-size:15px;color:var(--cream);font-weight:500;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.07)}
+  .mobile-nav a.btn{margin:14px 28px 6px;background:var(--gold);color:#fff;padding:12px 20px;border-radius:2px;font-weight:600;text-align:center;border:none}
+  .mobile-nav.open{display:flex}
+  @media(max-width:860px){.ham{display:block}.topbar nav > a:not(.btn){display:none}}
+
+  /* HERO */
+  .hero{padding:112px 28px 56px;text-align:center;max-width:640px;margin:0 auto}
+  .check{width:72px;height:72px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;margin:0 auto 32px}
+  .check svg{width:32px;height:32px;stroke:#fff;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+  .eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:16px}
+  h1{font-family:'Poppins',sans-serif;font-weight:700;font-size:clamp(2rem,5vw,2.8rem);color:var(--ink);line-height:1.1;letter-spacing:-.022em;margin-bottom:16px}
+  .hero-sub{font-size:19px;color:var(--brown);max-width:44ch;margin:0 auto;line-height:1.6}
+
+  /* STEPS */
+  .steps-wrap{max-width:580px;margin:0 auto 64px;padding:0 28px}
+  .steps-inner{background:#fff;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+  .step-row{display:flex;align-items:flex-start;gap:20px;padding:28px 28px;border-bottom:1px solid var(--line)}
+  .step-row:last-child{border-bottom:none}
+  .step-num{width:40px;height:40px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+  .step-num span{font-family:'Poppins',sans-serif;font-weight:700;font-size:15px;color:#fff}
+  .step-text h3{font-family:'Poppins',sans-serif;font-weight:600;font-size:18px;color:var(--ink);margin-bottom:5px;letter-spacing:-.01em}
+  .step-text p{font-size:15px;color:var(--brown);line-height:1.6}
+  .step-text a{color:var(--gold-deep);text-decoration:underline}
+
+  /* APP LINK */
+  .app-link{display:inline-flex;align-items:center;gap:10px;background:var(--teal);color:var(--cream);font-family:'Poppins',sans-serif;font-weight:600;font-size:15px;padding:14px 28px;border-radius:2px;margin-top:16px;transition:background .2s}
+  .app-link:hover{background:var(--teal-deep)}
+
+  /* SIGNOFF */
+  .signoff{text-align:center;padding:0 28px 80px;max-width:520px;margin:0 auto}
+  .signoff p{font-size:17px;color:var(--brown);margin-bottom:6px;line-height:1.7}
+  .signoff .name{font-family:'Poppins',sans-serif;font-weight:600;font-size:20px;color:var(--gold-deep);margin-top:14px}
+
+  /* FOOTER */
+  footer{background:var(--gold);padding:32px 28px;text-align:center}
+  footer span{font-family:'Inter',sans-serif;font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--cream);opacity:.7}
+
+  @media(max-width:600px){
+    .hero{padding:90px 20px 40px}
+    .steps-wrap{padding:0 20px}
+    .step-row{padding:22px 20px;gap:16px}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="topbar">
+  <a href="/" class="brand">Feel Fully <b>You</b></a>
+  <nav>
+    <a href="/cards">The Cards</a>
+    <a href="/the-dyad-protocol">The Dyad Protocol</a>
+    <a href="/cards" class="btn">Get the Cards</a>
+  </nav>
+  <button class="ham" id="hamBtn" aria-label="Open menu" aria-expanded="false">
+    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect y="4" width="22" height="2" rx="1" fill="currentColor"/><rect y="10" width="22" height="2" rx="1" fill="currentColor"/><rect y="16" width="22" height="2" rx="1" fill="currentColor"/></svg>
+  </button>
+</header>
+<nav class="mobile-nav" id="mobileNav">
+  <a href="/cards">The Cards</a>
+  <a href="/the-dyad-protocol">The Dyad Protocol</a>
+  <a href="/cards" class="btn">Get the Cards</a>
+</nav>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="check">
+      <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+    </div>
+    <p class="eyebrow">Practitioner Access Confirmed</p>
+    <h1>You're in.</h1>
+    <p class="hero-sub">Your app access is on its way. Check your inbox — instructions will arrive within a few minutes.</p>
+  </section>
+
+  <!-- STEPS -->
+  <div class="steps-wrap">
+    <div class="steps-inner">
+
+      <div class="step-row">
+        <div class="step-num"><span>1</span></div>
+        <div class="step-text">
+          <h3>Check your email</h3>
+          <p>You'll receive access instructions from <strong>juliette@feelfullyyou.com</strong> within a few minutes. Check your spam folder if it doesn't arrive.</p>
+        </div>
+      </div>
+
+      <div class="step-row">
+        <div class="step-num"><span>2</span></div>
+        <div class="step-text">
+          <h3>Download the app</h3>
+          <p>The Intimacy &amp; Communication Cards app is available on iOS and Android. Search <strong>"Couple Cards"</strong> or use the link in your email.</p>
+        </div>
+      </div>
+
+      <div class="step-row">
+        <div class="step-num"><span>3</span></div>
+        <div class="step-text">
+          <h3>Unlock all three decks</h3>
+          <p>Once inside the app, your purchase unlocks all 350 cards — Couples (150), Family &amp; Friends (150), and Trust &amp; Repair (50). All sections, nothing held back.</p>
+        </div>
+      </div>
+
+      <div class="step-row">
+        <div class="step-num"><span>4</span></div>
+        <div class="step-text">
+          <h3>Read the method first</h3>
+          <p>Before you recommend the cards to a client, read <a href="/the-dyad-protocol">The Dyad Protocol</a> — it explains the three-response structure that makes the cards work.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SIGNOFF -->
+  <div class="signoff">
+    <p>If you have any questions about the app, group licences, or how to introduce the cards in session, reach out directly.</p>
+    <p><a href="mailto:juliette@feelfullyyou.com" style="color:var(--gold-deep);text-decoration:underline">juliette@feelfullyyou.com</a></p>
+    <p class="name">Warmly, Juliette</p>
+  </div>
+
+</main>
+
+<footer>
+  <span>Feel Fully You &nbsp;·&nbsp; feelfullyyou.com</span>
+</footer>
+
+<script>
+  const btn=document.getElementById('hamBtn'),nav=document.getElementById('mobileNav');
+  if(btn&&nav)btn.addEventListener('click',()=>{nav.classList.toggle('open');btn.setAttribute('aria-expanded',nav.classList.contains('open'))});
+</script>
+</body>
+</html>
