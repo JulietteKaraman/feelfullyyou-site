@@ -25,14 +25,12 @@
   <nav aria-label="Main navigation">
     <a href="/">Home</a>
     <div class="more-wrap" id="workWrap">
-      <button aria-expanded="false" aria-haspopup="true">
-        Work With Me <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M2 4l4 4 4-4"/></svg>
-      </button>
-      <div class="dropdown" role="menu">
-        <a href="/for-her" role="menuitem">For Her</a>
-        <a href="/for-him" role="menuitem">For Him</a>
-        <a href="/for-both" role="menuitem">For Both</a>
-        <a href="/the-room" role="menuitem">The Room</a>
+      <a href="/work-with-me" style="font-size:14px;color:var(--cream);font-weight:500;transition:color .2s;text-decoration:none">Work With Me</a><button onclick="document.getElementById('workWrap').classList.toggle('open')" aria-label="Sub-pages" style="background:none;border:none;cursor:pointer;color:var(--cream);padding:0 0 0 5px;display:inline-flex;align-items:center;transition:color .2s"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg></button>
+      <div class="dropdown">
+        <a href="/for-her">For Her</a>
+        <a href="/for-him">For Him</a>
+        <a href="/for-both">For Both</a>
+        <a href="/the-room">The Room</a>
       </div>
     </div>
     <a href="/cards">The Cards</a>
@@ -67,7 +65,6 @@
   <a href="/grief-duality-process">Grief Process</a>
   <a href="/media-and-pr">Media &amp; PR</a>
   <a href="/contact">Contact</a>
-  <a href="/work-with-me" class="btn-mob">Start here</a>
 </nav>
 
 <!-- ============================================================
