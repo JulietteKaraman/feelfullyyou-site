@@ -640,7 +640,7 @@
   window.addEventListener('scroll',fillProgress,{passive:true});
   window.addEventListener('resize',fillProgress);fillProgress();
 
-  const claimed=0,total=20;
+  const claimed=2,total=20;
   const meter=document.getElementById('meter'),seatCount=document.getElementById('seatcount');
   const mObs=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){meter.style.width=(claimed/total*100)+'%';seatCount.textContent=claimed+' founding spots claimed';mObs.disconnect();}})},{threshold:.4});
   if(meter)mObs.observe(meter.closest('.seats'));
