@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practitioner Access · Communication & Intimacy Cards</title>
+<meta name="description" content="Try all three card decks before you recommend them. App access for therapists, coaches, hotel teams and group facilitators — £25, one-time.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fefcfa;--cream-2:#f6f4f1;
+    --ink:#1c1714;--brown:#5d4a33;
+    --gold:#a88538;--gold-deep:#99680c;--gold-pale:#ddc98e;
+    --teal:#0d3535;--teal-deep:#061a1a;
+    --line:#e3dccf;
+    --max:860px;
+    --display:'Poppins',system-ui,sans-serif;
+    --body:'Inter',system-ui,sans-serif;
+    --t-xs:0.78rem;--t-sm:0.94rem;--t-base:1.0625rem;--t-lg:1.5rem;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--brown);font-family:var(--body);font-size:var(--t-base);line-height:1.68;letter-spacing:-.003em;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  ::selection{background:var(--gold);color:#fff}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  p{max-width:60ch}
+  em{font-style:italic}
+  strong{font-weight:600;color:var(--ink)}
+
+  /* ── NAV ── */
+  .topbar{position:fixed;top:0;left:0;right:0;z-index:9999;background:var(--teal);padding:0 28px;height:64px;display:flex;align-items:center;justify-content:space-between}
+  .topbar .brand{font-family:var(--display);font-weight:700;font-size:16px;letter-spacing:.02em;color:var(--cream)}
+  .topbar .brand b{color:var(--gold-pale)}
+  .ham{display:none;background:none;border:none;cursor:pointer;color:var(--cream);padding:4px}
+  .topbar nav{display:flex;gap:26px;align-items:center}
+  .topbar nav a{font-size:14px;color:var(--cream);font-weight:500;transition:color .2s}
+  .topbar nav a:hover{color:var(--gold-pale)}
+  .topbar nav a.btn{background:var(--gold);color:#fff;padding:10px 20px;border-radius:2px;font-weight:600}
+  .mobile-nav{display:none;position:fixed;top:64px;left:0;right:0;background:var(--teal);z-index:9998;padding:16px 0;border-top:1px solid rgba(255,255,255,.1);flex-direction:column}
+  .mobile-nav a{display:block;padding:13px 28px;font-size:15px;color:var(--cream);font-weight:500;border-bottom:1px solid rgba(255,255,255,.07)}
+  .mobile-nav a.btn{margin:14px 28px 6px;background:var(--gold);color:#fff;padding:12px 20px;border-radius:2px;font-weight:600;text-align:center}
+  .mobile-nav.open{display:flex}
+  @media(max-width:860px){.ham{display:block}.topbar nav{display:none}}
+
+  /* ── UTILITIES ── */
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  .eyebrow{font-family:var(--body);font-size:10px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--gold)}
+
+  /* ── HERO ── */
+  .hero{padding-top:64px;background:var(--teal);color:var(--cream);text-align:center;padding-left:28px;padding-right:28px;padding-bottom:80px}
+  .hero-inner{max-width:var(--max);margin:0 auto;padding-top:80px}
+  .hero .eyebrow{color:var(--gold-pale);margin-bottom:24px}
+  .hero h1{font-family:var(--display);font-size:clamp(2.2rem,6vw,3.8rem);font-weight:300;color:var(--cream);line-height:1.1;letter-spacing:-.03em;margin-bottom:28px}
+  .hero h1 strong{font-weight:600;display:block;color:var(--gold-pale)}
+  .hero p{font-size:var(--t-sm);color:rgba(254,252,250,.75);max-width:52ch;margin:0 auto 48px;line-height:1.75}
+  .hero-price{display:inline-flex;align-items:baseline;gap:12px;margin-bottom:36px}
+  .hero-price .now{font-family:var(--display);font-size:clamp(2.8rem,8vw,5rem);font-weight:300;color:var(--cream);line-height:1}
+  .hero-price .was{font-size:var(--t-sm);color:rgba(254,252,250,.45);text-decoration:line-through}
+  .hero-price .label{font-size:var(--t-xs);color:rgba(254,252,250,.55);letter-spacing:.1em}
+  .btn-primary{display:inline-block;background:var(--gold);color:#fff;font-family:var(--body);font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:18px 44px;transition:background .2s,transform .15s}
+  .btn-primary:hover{background:var(--gold-deep);transform:translateY(-1px)}
+  .hero-note{font-size:var(--t-xs);color:rgba(254,252,250,.4);margin-top:16px;letter-spacing:.04em}
+
+  /* ── BODY ── */
+  .body-wrap{max-width:var(--max);margin:0 auto;padding:0 28px 120px}
+
+  /* ── SECTION ── */
+  .section{padding:72px 0;border-top:1px solid var(--line)}
+  .section .eyebrow{margin-bottom:18px}
+  .section h2{font-family:var(--display);font-size:clamp(1.7rem,4vw,2.4rem);font-weight:700;color:var(--ink);line-height:1.1;letter-spacing:-.022em;margin-bottom:20px;max-width:26ch}
+  .section p{color:var(--brown);margin-bottom:18px;font-size:var(--t-sm)}
+  .section p:last-child{margin-bottom:0}
+
+  /* ── WHO IT'S FOR ── */
+  .audience-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:44px}
+  .audience-tile{background:var(--cream);padding:36px 28px;display:flex;flex-direction:column;gap:14px}
+  .audience-icon{font-size:28px;line-height:1}
+  .audience-title{font-family:var(--display);font-size:var(--t-sm);font-weight:600;color:var(--ink);line-height:1.25}
+  .audience-desc{font-size:var(--t-xs);color:var(--brown);line-height:1.72}
+  @media(max-width:640px){.audience-grid{grid-template-columns:1fr}}
+
+  /* ── WHAT THEY GET ── */
+  .decks-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+  .deck-card{border:1px solid var(--line);padding:28px 24px;display:flex;flex-direction:column;gap:10px;background:var(--cream)}
+  .deck-card.app{background:var(--teal)}
+  .deck-tag{font-size:8px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;padding:4px 10px;border:1px solid var(--gold);color:var(--gold);width:fit-content}
+  .deck-card.app .deck-tag{border-color:var(--gold-pale);color:var(--gold-pale)}
+  .deck-title{font-family:var(--display);font-weight:600;font-size:var(--t-sm);color:var(--ink);line-height:1.25}
+  .deck-card.app .deck-title{color:var(--cream)}
+  .deck-sections{font-size:var(--t-xs);color:var(--brown);line-height:1.8}
+  .deck-card.app .deck-sections{color:rgba(254,252,250,.7)}
+  @media(max-width:600px){.decks-grid{grid-template-columns:1fr}}
+
+  /* ── OFFER BLOCK ── */
+  .offer-block{background:var(--cream-2);border:1px solid var(--line);padding:56px 48px;text-align:center;margin-top:44px}
+  .offer-block .eyebrow{margin-bottom:20px}
+  .offer-block h3{font-family:var(--display);font-size:clamp(1.4rem,3vw,2rem);font-weight:300;color:var(--ink);margin-bottom:8px;line-height:1.2}
+  .offer-price-row{display:flex;align-items:baseline;justify-content:center;gap:16px;margin:28px 0}
+  .offer-price-row .price-now{font-family:var(--display);font-size:clamp(3.5rem,10vw,6rem);font-weight:300;color:var(--teal);line-height:1}
+  .offer-price-row .price-was{font-size:1.1rem;color:var(--brown);opacity:.5;text-decoration:line-through}
+  .offer-price-row .price-note{font-size:var(--t-xs);color:var(--brown);opacity:.6;text-align:left;line-height:1.5;max-width:12ch}
+  .offer-block .btn-primary{margin-top:8px}
+  .offer-checklist{display:flex;flex-direction:column;gap:10px;max-width:36ch;margin:0 auto 36px;text-align:left}
+  .offer-checklist li{font-size:var(--t-xs);color:var(--brown);list-style:none;display:flex;align-items:flex-start;gap:10px;line-height:1.5}
+  .offer-checklist li::before{content:'';width:16px;height:16px;flex-shrink:0;background:var(--gold);border-radius:50%;margin-top:2px}
+  .offer-note{font-size:var(--t-xs);color:var(--brown);opacity:.55;margin-top:18px;line-height:1.6}
+  @media(max-width:600px){.offer-block{padding:40px 24px}}
+
+  /* ── DYAD CTA ── */
+  .dyad-bar{background:var(--teal);padding:48px 28px;text-align:center;margin-top:72px}
+  .dyad-bar p{font-family:var(--display);font-style:italic;font-weight:300;font-size:clamp(1rem,2.5vw,1.2rem);color:rgba(254,252,250,.75);max-width:52ch;margin:0 auto 24px}
+  .dyad-bar a{display:inline-block;border:1px solid var(--gold-pale);color:var(--gold-pale);font-family:var(--body);font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;padding:14px 32px;transition:background .2s,color .2s}
+  .dyad-bar a:hover{background:var(--gold-pale);color:var(--teal)}
+
+  /* ── FOOTER ── */
+  footer{background:var(--gold);padding:52px 28px}
+  footer .inner{max-width:var(--max);margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+  footer .brand{font-family:var(--display);font-weight:700;font-size:18px;color:#fff;letter-spacing:.01em}
+  footer .links{display:flex;gap:24px;flex-wrap:wrap}
+  footer .links a{font-size:var(--t-xs);color:rgba(255,255,255,.75);font-weight:500;transition:color .2s}
+  footer .links a:hover{color:#fff}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="topbar">
+  <a class="brand" href="/"><b>Feel</b> Fully You</a>
+  <button class="ham" id="hamBtn" aria-label="Menu" aria-expanded="false">
+    <svg width="22" height="16" viewBox="0 0 22 16" fill="none"><rect y="0" width="22" height="2" fill="currentColor"/><rect y="7" width="22" height="2" fill="currentColor"/><rect y="14" width="22" height="2" fill="currentColor"/></svg>
+  </button>
+  <nav>
+    <a href="/cards">Cards</a>
+    <a href="/the-dyad-protocol">The Dyad Protocol</a>
+    <a href="/work-with-me">Work With Me</a>
+    <a href="https://buy.stripe.com/aFa00iayfcdicm19qZ0co0K" class="btn">Get access — £25</a>
+  </nav>
+</header>
+
+<nav class="mobile-nav" id="mobileNav">
+  <a href="/cards">Cards</a>
+  <a href="/the-dyad-protocol">The Dyad Protocol</a>
+  <a href="/work-with-me">Work With Me</a>
+  <a href="https://buy.stripe.com/aFa00iayfcdicm19qZ0co0K" class="btn">Get access — £25</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow reveal">Practitioner Access</p>
+    <h1 class="reveal">Try the cards<br><strong>before you recommend them.</strong></h1>
+    <p class="reveal">Full app access for therapists, coaches, hotel teams and group facilitators. All three card decks — including Trust &amp; Repair — in one place. One-time purchase, no subscription.</p>
+    <div class="reveal">
+      <div class="hero-price">
+        <span class="now">£25</span>
+        <span class="was">£55</span>
+        <span class="label">one-time<br>access</span>
+      </div>
+    </div>
+    <div class="reveal">
+      <a href="https://buy.stripe.com/aFa00iayfcdicm19qZ0co0K" class="btn-primary">Get practitioner access</a>
+      <p class="hero-note">Instant access · No subscription · All three decks</p>
+    </div>
+  </div>
+</div>
+
+<main class="body-wrap">
+
+  <!-- WHO IT'S FOR -->
+  <section class="section">
+    <p class="eyebrow reveal">Who this is for</p>
+    <h2 class="reveal">Three kinds of work. One set of cards.</h2>
+    <p class="reveal">The Communication &amp; Intimacy Cards were designed to live between sessions — not just inside them. They give clients a practice that runs outside the therapeutic container and compounds over time.</p>
+
+    <div class="audience-grid reveal">
+      <div class="audience-tile">
+        <div class="audience-icon">🪑</div>
+        <div class="audience-title">Therapists &amp; Counsellors</div>
+        <p class="audience-desc">Use in session to open conversations clients can't start alone. Send home between sessions as structured practice. Recommend as a between-appointment tool for couples.</p>
+      </div>
+      <div class="audience-tile">
+        <div class="audience-icon">🏨</div>
+        <div class="audience-title">Hotels &amp; Retreat Venues</div>
+        <p class="audience-desc">Place in couples suites, spa waiting areas, and retreat spaces. Creates an experience guests remember and talk about. Natural fit for romantic weekends and anniversary packages.</p>
+      </div>
+      <div class="audience-tile">
+        <div class="audience-icon">◎</div>
+        <div class="audience-title">Coaches &amp; Group Facilitators</div>
+        <p class="audience-desc">Built for couples intensives, women's circles, family constellation work, and group coaching cohorts. One card, one reader, minimum 15 minutes — the Dyad Protocol handles the container.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT THEY GET -->
+  <section class="section">
+    <p class="eyebrow reveal">What's included</p>
+    <h2 class="reveal">All three decks. In one app.</h2>
+    <p class="reveal">Your £25 gives you full access to every card across both physical deck ranges — plus the Trust &amp; Repair collection, which is only available digitally.</p>
+
+    <div class="decks-grid reveal">
+      <div class="deck-card">
+        <span class="deck-tag">Couples · 150 cards</span>
+        <div class="deck-title">Communication &amp; Intimacy — Couples</div>
+        <div class="deck-sections">
+          Romantic Relationships<br>
+          Intimacy &amp; Repair<br>
+          Touch &amp; Desire<br>
+          Healing &amp; Growth<br>
+          Play &amp; Discovery
+        </div>
+      </div>
+      <div class="deck-card">
+        <span class="deck-tag">Family &amp; Friends · 120 cards</span>
+        <div class="deck-title">Communication &amp; Intimacy — Family &amp; Friends</div>
+        <div class="deck-sections">
+          Family, Life<br>
+          Stories &amp; Growth<br>
+          Beliefs &amp; Emotions<br>
+          Friendships &amp; Belonging
+        </div>
+      </div>
+      <div class="deck-card app">
+        <span class="deck-tag">App only · 50 cards</span>
+        <div class="deck-title">Trust &amp; Repair</div>
+        <div class="deck-sections">
+          Fifty prompts for rupture, betrayal, and reconnection. Only available in the app — included with your practitioner access.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE OFFER -->
+  <section class="section">
+    <p class="eyebrow reveal">The offer</p>
+    <h2 class="reveal">£25 to try everything first.</h2>
+    <p class="reveal">The app normally costs £55 through the App Store. Practitioner access is £25 — because you should know what you're recommending before you recommend it.</p>
+
+    <div class="offer-block reveal">
+      <p class="eyebrow">One-time · Instant access</p>
+      <h3>Practitioner App Access</h3>
+
+      <div class="offer-price-row">
+        <span class="price-now">£25</span>
+        <span class="price-was">£55</span>
+        <span class="price-note">one-time<br>no subscription</span>
+      </div>
+
+      <ul class="offer-checklist">
+        <li>All 320 cards across three decks</li>
+        <li>Trust &amp; Repair — 50 cards, app only</li>
+        <li>The Dyad Protocol method included</li>
+        <li>Instant access, no expiry</li>
+        <li>Works on iOS and Android</li>
+      </ul>
+
+      <a href="https://buy.stripe.com/aFa00iayfcdicm19qZ0co0K" class="btn-primary">Get practitioner access — £25</a>
+      <p class="offer-note">Secure checkout via Stripe · You'll receive app access instructions by email</p>
+    </div>
+  </section>
+
+  <!-- WANT TO KNOW MORE -->
+  <section class="section">
+    <p class="eyebrow reveal">Questions</p>
+    <h2 class="reveal">Want to talk it through first?</h2>
+    <p class="reveal">If you're considering using the cards with groups, at a venue, or as part of a structured programme — reach out before you buy. Juliette works directly with practitioners on how to integrate the cards and the Dyad Protocol into existing frameworks.</p>
+    <p class="reveal" style="margin-top:20px"><a href="mailto:juliette@feelfullyyou.com" style="color:var(--gold-deep);font-weight:600;text-decoration:underline;text-underline-offset:3px">juliette@feelfullyyou.com</a></p>
+  </section>
+
+</main>
+
+<!-- DYAD CTA -->
+<div class="dyad-bar reveal">
+  <p>Want to understand the method behind the cards before you purchase?</p>
+  <a href="/the-dyad-protocol">Read The Dyad Protocol</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="inner">
+    <div class="brand">Feel Fully You</div>
+    <div class="links">
+      <a href="mailto:support@feelfullyyou.com">support@feelfullyyou.com</a>
+      <a href="/terms">Terms</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})
+  },{threshold:.08});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  const btn=document.getElementById('hamBtn'),nav=document.getElementById('mobileNav');
+  if(btn&&nav)btn.addEventListener('click',()=>{nav.classList.toggle('open');btn.setAttribute('aria-expanded',nav.classList.contains('open'))});
+</script>
+</body>
+</html>
