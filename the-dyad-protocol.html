@@ -89,6 +89,15 @@
   .method-dot{display:block;width:3px;height:3px;border-radius:50%;background:var(--gold-pale);margin:0 auto;opacity:.4}
   @media(max-width:600px){.method-block{padding:40px 24px}}
 
+  /* ── STEPS ── */
+  .steps{display:flex;flex-direction:column;gap:0;margin-top:40px}
+  .step{display:grid;grid-template-columns:48px 1fr;gap:20px;padding:28px 0;border-top:1px solid var(--line);align-items:start}
+  .step:last-child{border-bottom:1px solid var(--line)}
+  .step-num{font-family:var(--display);font-size:1.6rem;font-weight:300;color:var(--gold);line-height:1;padding-top:2px}
+  .step-body strong{display:block;font-family:var(--display);font-weight:600;font-size:var(--t-sm);color:var(--ink);margin-bottom:6px}
+  .step-body p{font-size:var(--t-sm);color:var(--brown);line-height:1.72;margin:0;max-width:none}
+  @media(max-width:600px){.step{grid-template-columns:36px 1fr;gap:14px}}
+
   /* ── THREE RESPONSES ── */
   .responses{margin-top:44px}
   .response{display:grid;grid-template-columns:172px 1fr;gap:24px;padding:28px 0;border-top:1px solid var(--line);align-items:start}
@@ -268,44 +277,62 @@
   <!-- PHOTO — save as: dyad-hands.jpg (hands holding the deck, green nails, gold ring) -->
   <img class="photo-bleed reveal" src="dyad-hands.jpg" alt="Hands holding the Communication and Intimacy Cards">
 
-  <!-- THE METHOD -->
+  <!-- HOW IT WORKS -->
   <section class="section">
-    <p class="eyebrow reveal">The Method</p>
-    <h2 class="reveal">One card. One reader. Minimum 15 minutes.</h2>
-    <p class="reveal">The reader draws a card and reads the question aloud. They answer it, without interruption, for as long as they need. Then switch.</p>
-    <p class="reveal">The listener has three permitted responses. Nothing else.</p>
+    <p class="eyebrow reveal">How It Works</p>
+    <h2 class="reveal">15 minutes. One card. One question at a time.</h2>
+    <p class="reveal">No preparation. No agenda. Just a card and the willingness to be in the room with each other.</p>
 
-    <div class="method-block reveal">
-      <span class="method-line">One card</span>
-      <span class="method-dot"></span>
-      <span class="method-line">One reader</span>
-      <span class="method-dot"></span>
-      <span class="method-line">Minimum 15 minutes</span>
-      <span class="method-dot"></span>
-      <span class="method-line">Berner used 40</span>
+    <div class="steps reveal">
+      <div class="step">
+        <span class="step-num">1</span>
+        <div class="step-body">
+          <strong>Set a 15-minute timer</strong>
+          <p>One person picks a card and reads it aloud.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-num">2</span>
+        <div class="step-body">
+          <strong>One answer at a time</strong>
+          <p>The listener responds only with: <em>Thank you. Clarify that. Summarise that.</em></p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-num">3</span>
+        <div class="step-body">
+          <strong>Go deeper</strong>
+          <p>Same prompt, different layer. Stay until the timer ends.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-num">4</span>
+        <div class="step-body">
+          <strong>Switch</strong>
+          <p>The other person answers. The room changes.</p>
+        </div>
+      </div>
     </div>
-
-    <p class="reveal">No advice. No fixing. No interjecting. No performing empathy.</p>
   </section>
 
   <!-- THREE RESPONSES -->
   <section class="section">
     <p class="eyebrow reveal">The Three Responses</p>
-    <h2 class="reveal">The constraint is not a limitation. It is the container.</h2>
-    <p class="reveal">When listeners are freed from the pressure to respond correctly, their nervous system settles. Speakers register this somatically. Disclosure deepens.</p>
+    <h2 class="reveal">The listener has exactly three options. That's it.</h2>
+    <p class="reveal">No fixing. No interrupting. No debating. When someone knows you cannot correct them or agree or disagree — they speak differently. Something opens. This is what makes people feel seen, heard, and understood.</p>
 
     <div class="responses">
       <div class="response reveal">
         <span class="response-phrase">"Thank you."</span>
-        <p class="response-text">Acknowledgement without evaluation. The speaker knows they have been received. Nothing added, nothing compared.</p>
+        <p class="response-text">You understood. The speaker feels received. Move on or switch.</p>
       </div>
       <div class="response reveal">
         <span class="response-phrase">"Clarify that."</span>
-        <p class="response-text">A request for more, not a question. The speaker expands on whatever they choose. The listener does not direct the expansion.</p>
+        <p class="response-text">Something wasn't clear. The speaker unpacks it further — in their own direction, not yours.</p>
       </div>
       <div class="response reveal">
         <span class="response-phrase">"Summarise that."</span>
-        <p class="response-text">An invitation to distil. The speaker identifies what mattered most in what they just said. The listener receives it again.</p>
+        <p class="response-text">They've been speaking for a while. Invite them to land on one clear thought. Keeps the session from drifting.</p>
       </div>
     </div>
   </section>
