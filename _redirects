@@ -33,6 +33,8 @@
 /landing                        /landing.html                   200
 /trip-wire                      /trip-wire.html                 200
 /trip                           /trip-wire.html                 200
+/pattern-session                /pattern-session.html           200
+/relationship-pattern-session   /pattern-session                301
 
 # Thank-you pages
 /thankyou-10rituals             /thankyou-10rituals.html        200
