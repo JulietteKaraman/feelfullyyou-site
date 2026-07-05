@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>One Touch · Members Area</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:ital,wght@0,400;0,600;0,700;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fefcfa;
+    --ink:#070707;
+    --brown:#5d4a33;
+    --gold:#a88538;
+    --gold-deep:#99680c;
+    --gold-soft:#b4a074;
+    --gold-pale:#ddc98e;
+    --teal:#0d3535;
+    --teal-deep:#061a1a;
+    --line:#e3dccf;
+    --display:'Poppins',system-ui,sans-serif;
+    --body:'Inter',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--cream);color:var(--brown);font-family:var(--body);font-size:17px;line-height:1.75;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+
+  /* ── TOPBAR ── */
+  .topbar{position:fixed;top:0;left:0;right:0;z-index:9999;background:var(--teal);padding:0 28px;height:64px;display:flex;align-items:center;justify-content:space-between}
+  .topbar .brand{font-family:var(--display);font-weight:700;font-size:16px;letter-spacing:.02em;color:var(--cream)}
+  .topbar .brand b{color:var(--gold-pale)}
+  .topbar .badge{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.5);font-weight:500}
+
+  /* ── PASSWORD GATE ── */
+  #gate{position:fixed;inset:0;background:var(--teal);z-index:8888;display:flex;align-items:center;justify-content:center;padding:28px}
+  .gate-box{background:var(--cream);border-radius:6px;padding:48px 40px;max-width:420px;width:100%;text-align:center}
+  .gate-box .eyebrow{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:16px}
+  .gate-box h2{font-family:var(--display);font-weight:700;font-size:1.8rem;color:var(--ink);letter-spacing:-.02em;margin-bottom:10px}
+  .gate-box p{font-size:15px;color:var(--brown);margin-bottom:28px;line-height:1.6}
+  .gate-box input{width:100%;border:1.5px solid var(--line);border-radius:3px;padding:14px 16px;font-family:var(--body);font-size:16px;color:var(--ink);background:#fff;outline:none;margin-bottom:12px;transition:border-color .2s;letter-spacing:.1em;text-align:center}
+  .gate-box input:focus{border-color:var(--gold)}
+  .gate-box button{width:100%;background:var(--teal);color:#fff;font-family:var(--display);font-weight:700;font-size:16px;padding:15px;border-radius:3px;border:none;cursor:pointer;letter-spacing:-.01em;transition:background .2s}
+  .gate-box button:hover{background:var(--teal-deep)}
+  .gate-error{color:#c0392b;font-size:14px;margin-top:10px;display:none}
+
+  /* ── MAIN CONTENT (hidden until unlocked) ── */
+  #content{display:none;padding-top:64px}
+
+  /* ── HERO ── */
+  .hero{background:var(--teal);padding:64px 28px 56px;text-align:center}
+  .hero .eyebrow{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-pale);font-weight:600;margin-bottom:16px;opacity:.8}
+  .hero h1{font-family:var(--display);font-weight:700;font-size:clamp(2.2rem,5vw,3.2rem);color:#fff;line-height:1.06;letter-spacing:-.022em;margin-bottom:16px}
+  .hero .sub{font-size:18px;color:rgba(255,255,255,.7);max-width:46ch;margin:0 auto;line-height:1.7}
+
+  /* ── SECTION WRAPPER ── */
+  .section{max-width:720px;margin:0 auto;padding:56px 28px 0}
+  .section-label{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:24px}
+  .section-title{font-family:var(--display);font-weight:700;font-size:1.4rem;color:var(--ink);letter-spacing:-.015em;margin-bottom:8px}
+  .section-body{font-size:16px;color:var(--brown);line-height:1.7;margin-bottom:32px;max-width:54ch}
+
+  /* ── DAY CARDS ── */
+  .day-grid{display:flex;flex-direction:column;gap:16px}
+  .day-card{border:1px solid var(--line);border-radius:4px;overflow:hidden;background:#fff}
+  .day-header{background:var(--teal);padding:16px 22px;display:flex;align-items:center;gap:14px}
+  .day-num{font-family:var(--display);font-weight:700;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold-pale);min-width:48px}
+  .day-title{font-family:var(--display);font-weight:600;font-size:1rem;color:#fff;letter-spacing:-.01em}
+  .day-body{padding:22px}
+
+  /* ── VIDEO EMBED ── */
+  .video-frame{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:3px;background:var(--teal);margin-bottom:16px}
+  .video-frame iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none;border-radius:3px}
+  .placeholder-box{position:relative;padding-bottom:56.25%;background:#f0ebe4;border-radius:3px;border:2px dashed var(--line);margin-bottom:16px}
+  .placeholder-box .ph-inner{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;padding:20px}
+  .placeholder-box .ph-label{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-soft);font-weight:600}
+  .placeholder-box .ph-note{font-size:13px;color:var(--gold-soft);line-height:1.5}
+
+  /* ── AUDIO PLAYER ── */
+  .audio-row{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
+  .audio-row:last-child{border-bottom:none}
+  .audio-icon{width:40px;height:40px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .audio-icon svg{width:16px;height:16px;fill:#fff}
+  .audio-info{flex:1}
+  .audio-info strong{display:block;font-family:var(--display);font-weight:600;font-size:14px;color:var(--ink);margin-bottom:2px}
+  .audio-info span{font-size:13px;color:var(--gold-soft)}
+  .audio-link{font-size:13px;font-weight:600;color:var(--gold);text-decoration:underline;white-space:nowrap}
+  audio{width:100%;margin-top:10px;border-radius:3px}
+
+  /* ── DOWNLOAD CARD ── */
+  .download-card{background:var(--teal);border-radius:4px;padding:32px;display:flex;align-items:center;gap:24px}
+  .dl-icon{width:56px;height:56px;border-radius:3px;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .dl-icon svg{width:24px;height:24px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .dl-text{flex:1}
+  .dl-text h3{font-family:var(--display);font-weight:700;font-size:1.1rem;color:#fff;margin-bottom:4px;letter-spacing:-.01em}
+  .dl-text p{font-size:14px;color:rgba(255,255,255,.6);line-height:1.5}
+  .btn-dl{display:inline-block;background:var(--gold);color:#fff;font-family:var(--display);font-weight:700;font-size:14px;padding:12px 24px;border-radius:2px;white-space:nowrap;transition:background .2s;flex-shrink:0}
+  .btn-dl:hover{background:var(--gold-deep)}
+  .btn-dl.disabled{background:var(--gold-soft);cursor:not-allowed;pointer-events:none}
+
+  /* ── SUPPORT ── */
+  .support{max-width:720px;margin:48px auto 80px;padding:0 28px;text-align:center}
+  .support p{font-size:16px;color:var(--brown);line-height:1.7}
+  .support a{color:var(--gold);font-weight:600;text-decoration:underline}
+
+  /* ── DIVIDER ── */
+  .divider{max-width:720px;margin:48px auto 0;padding:0 28px}
+  .divider hr{border:none;border-top:1px solid var(--line)}
+
+  footer{background:var(--ink);color:rgba(255,255,255,.5);padding:22px 32px;font-size:13px;margin-top:64px}
+  footer .inner{max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  footer .brand{font-family:var(--display);font-weight:700;font-size:.95rem;color:#fff}
+  footer a{color:rgba(255,255,255,.5)}
+
+  @media(max-width:600px){
+    .gate-box{padding:36px 24px}
+    .section{padding:40px 20px 0}
+    .download-card{flex-direction:column;text-align:center}
+    .btn-dl{width:100%;text-align:center}
+    .support{padding:0 20px}
+  }
+</style>
+</head>
+<body>
+
+<!-- ── PASSWORD GATE ── -->
+<div id="gate">
+  <div class="gate-box">
+    <div class="eyebrow">Members only</div>
+    <h2>One Touch</h2>
+    <p>Enter your access password to get into your programme.</p>
+    <input type="password" id="pw-input" placeholder="Password" autocomplete="current-password">
+    <button onclick="checkPassword()">Enter →</button>
+    <div class="gate-error" id="gate-error">That password isn't right. Check your welcome email.</div>
+  </div>
+</div>
+
+<!-- ── TOPBAR ── -->
+<div class="topbar">
+  <a href="/" class="brand">Feel Fully <b>You</b></a>
+  <span class="badge">One Touch · Members</span>
+</div>
+
+<!-- ── MAIN CONTENT ── -->
+<div id="content">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="eyebrow">Welcome to your programme</div>
+    <h1>One Touch.</h1>
+    <p class="sub">Seven days. Real practices. Start at your own pace — there is no wrong way to move through this.</p>
+  </div>
+
+  <!-- ════════════════════════════════════════════
+       DAY 1
+       ══════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-label">Your programme</div>
+    <div class="day-grid">
+
+      <div class="day-card">
+        <div class="day-header">
+          <span class="day-num">Day 1</span>
+          <!-- KIERA: replace below with the Day 1 title -->
+          <span class="day-title">REPLACE — Day 1 title here</span>
+        </div>
+        <div class="day-body">
+          <!-- KIERA: replace the placeholder-box below with an actual iframe embed.
+               In Google Drive: open the video → Share → change to "Anyone with the link" →
+               click the 3-dot menu → Embed → copy the iframe src URL.
+               Then replace the whole placeholder-box div with:
+               <div class="video-frame">
+                 <iframe src="PASTE_DRIVE_EMBED_URL_HERE" allowfullscreen></iframe>
+               </div>
+          -->
+          <div class="placeholder-box">
+            <div class="ph-inner">
+              <span class="ph-label">Video — Day 1</span>
+              <span class="ph-note">Kiera: paste Drive embed URL here</span>
+            </div>
+          </div>
+          <!-- KIERA: if there's an audio for Day 1, paste the Drive link as the href below.
+               If there's no audio for this day, delete this audio-row entirely. -->
+          <div class="audio-row">
+            <div class="audio-icon">
+              <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+            </div>
+            <div class="audio-info">
+              <strong>Day 1 audio</strong>
+              <span>REPLACE — audio title or duration</span>
+            </div>
+            <a href="REPLACE_DRIVE_LINK_DAY1_AUDIO" target="_blank" rel="noopener" class="audio-link">Listen →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-header">
+          <span class="day-num">Day 2</span>
+          <span class="day-title">REPLACE — Day 2 title here</span>
+        </div>
+        <div class="day-body">
+          <div class="placeholder-box">
+            <div class="ph-inner">
+              <span class="ph-label">Video — Day 2</span>
+              <span class="ph-note">Kiera: paste Drive embed URL here</span>
+            </div>
+          </div>
+          <div class="audio-row">
+            <div class="audio-icon">
+              <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+            </div>
+            <div class="audio-info">
+              <strong>Day 2 audio</strong>
+              <span>REPLACE — audio title or duration</span>
+            </div>
+            <a href="REPLACE_DRIVE_LINK_DAY2_AUDIO" target="_blank" rel="noopener" class="audio-link">Listen →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-header">
+          <span class="day-num">Day 3</span>
+          <span class="day-title">REPLACE — Day 3 title here</span>
+        </div>
+        <div class="day-body">
+          <div class="placeholder-box">
+            <div class="ph-inner">
+              <span class="ph-label">Video — Day 3</span>
+              <span class="ph-note">Kiera: paste Drive embed URL here</span>
+            </div>
+          </div>
+          <div class="audio-row">
+            <div class="audio-icon">
+              <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+            </div>
+            <div class="audio-info">
+              <strong>Day 3 audio</strong>
+              <span>REPLACE — audio title or duration</span>
+            </div>
+            <a href="REPLACE_DRIVE_LINK_DAY3_AUDIO" target="_blank" rel="noopener" class="audio-link">Listen →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-header">
+          <span class="day-num">Day 4</span>
+          <span class="day-title">REPLACE — Day 4 title here</span>
+        </div>
+        <div class="day-body">
+          <div class="placeholder-box">
+            <div class="ph-inner">
+              <span class="ph-label">Video — Day 4</span>
+              <span class="ph-note">Kiera: paste Drive embed URL here</span>
+            </div>
+          </div>
+          <div class="audio-row">
+            <div class="audio-icon">
+              <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+            </div>
+            <div class="audio-info">
+              <strong>Day 4 audio</strong>
+              <span>REPLACE — audio title or duration</span>
+            </div>
+            <a href="REPLACE_DRIVE_LINK_DAY4_AUDIO" target="_blank" rel="noopener" class="audio-link">Listen →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-header">
+          <span class="day-num">Day 5</span>
+          <span class="day-title">REPLACE — Day 5 title here</span>
+        </div>
+        <div class="day-body">
+          <div class="placeholder-box">
+            <div class="ph-inner">
+              <span class="ph-label">Video — Day 5</span>
+              <span class="ph-note">Kiera: paste Drive embed URL here</span>
+            </div>
+          </div>
+          <div class="audio-row">
+            <div class="audio-icon">
+              <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+            </div>
+            <div class="audio-info">
+              <strong>Day 5 audio</strong>
+              <span>REPLACE — audio title or duration</span>
+            </div>
+            <a href="REPLACE_DRIVE_LINK_DAY5_AUDIO" target="_blank" rel="noopener" class="audio-link">Listen →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-header">
+          <span class="day-num">Day 6</span>
+          <span class="day-title">REPLACE — Day 6 title here</span>
+        </div>
+        <div class="day-body">
+          <div class="placeholder-box">
+            <div class="ph-inner">
+              <span class="ph-label">Video — Day 6</span>
+              <span class="ph-note">Kiera: paste Drive embed URL here</span>
+            </div>
+          </div>
+          <div class="audio-row">
+            <div class="audio-icon">
+              <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+            </div>
+            <div class="audio-info">
+              <strong>Day 6 audio</strong>
+              <span>REPLACE — audio title or duration</span>
+            </div>
+            <a href="REPLACE_DRIVE_LINK_DAY6_AUDIO" target="_blank" rel="noopener" class="audio-link">Listen →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-header">
+          <span class="day-num">Day 7</span>
+          <span class="day-title">REPLACE — Day 7 title here</span>
+        </div>
+        <div class="day-body">
+          <div class="placeholder-box">
+            <div class="ph-inner">
+              <span class="ph-label">Video — Day 7</span>
+              <span class="ph-note">Kiera: paste Drive embed URL here</span>
+            </div>
+          </div>
+          <div class="audio-row">
+            <div class="audio-icon">
+              <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+            </div>
+            <div class="audio-info">
+              <strong>Day 7 audio</strong>
+              <span>REPLACE — audio title or duration</span>
+            </div>
+            <a href="REPLACE_DRIVE_LINK_DAY7_AUDIO" target="_blank" rel="noopener" class="audio-link">Listen →</a>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /day-grid -->
+  </div><!-- /section -->
+
+  <!-- CARDS DOWNLOAD -->
+  <div class="divider"><hr></div>
+  <div class="section">
+    <div class="section-label">Also included</div>
+    <div class="download-card">
+      <div class="dl-icon">
+        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="12" x2="12" y2="18"/><polyline points="9 15 12 18 15 15"/></svg>
+      </div>
+      <div class="dl-text">
+        <h3>One Touch Cards</h3>
+        <!-- KIERA: update the description below with the actual card count / description -->
+        <p>Your printable PDF cards — save, print, or keep on your phone.</p>
+      </div>
+      <!-- KIERA: replace REPLACE_DRIVE_LINK_CARDS_PDF with the actual Drive share link for the PDF -->
+      <a href="REPLACE_DRIVE_LINK_CARDS_PDF" target="_blank" rel="noopener" class="btn-dl">Download PDF →</a>
+    </div>
+  </div>
+
+  <!-- SUPPORT -->
+  <div class="divider" style="margin-top:48px"><hr></div>
+  <div class="support" style="margin-top:40px">
+    <p>Questions? Something not working? Email <a href="mailto:juliette@feelfullyyou.com">juliette@feelfullyyou.com</a> and I'll come back to you.</p>
+  </div>
+
+  <footer>
+    <div class="inner">
+      <span class="brand">Feel Fully You</span>
+      <a href="mailto:juliette@feelfullyyou.com">juliette@feelfullyyou.com</a>
+    </div>
+  </footer>
+
+</div><!-- /content -->
+
+<script>
+  const PASSWORD = 'onetouch2026';
+  const SESSION_KEY = 'ot_access';
+
+  function checkPassword() {
+    const val = document.getElementById('pw-input').value.trim().toLowerCase();
+    if (val === PASSWORD) {
+      sessionStorage.setItem(SESSION_KEY, '1');
+      unlock();
+    } else {
+      document.getElementById('gate-error').style.display = 'block';
+    }
+  }
+
+  function unlock() {
+    document.getElementById('gate').style.display = 'none';
+    document.getElementById('content').style.display = 'block';
+  }
+
+  // Stay unlocked within the same browser session
+  if (sessionStorage.getItem(SESSION_KEY) === '1') unlock();
+
+  // Allow Enter key on password field
+  document.getElementById('pw-input').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') checkPassword();
+  });
+</script>
+</body>
+</html>
