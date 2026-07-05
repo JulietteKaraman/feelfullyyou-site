@@ -219,10 +219,10 @@
   <h2 class="reveal">Carve out 25 minutes.</h2>
   <p class="sub reveal">Enter your details below and the process comes straight to you. No cost. No catch. Just the space your body has been asking for.</p>
   <div class="form-wrap">
-    <form method="GET" action="https://feelfullyyou.com/thank-you-page-page-2455-3496">
-      <input type="text" name="first_name" placeholder="First name" required>
-      <input type="email" name="email" placeholder="Email address" required>
-      <button type="submit">Send me the process →</button>
+    <form id="griefForm" onsubmit="handleGrief(event)">
+      <input id="grief_name" type="text" placeholder="First name" required>
+      <input id="grief_email" type="email" placeholder="Email address" required>
+      <button type="submit" id="griefBtn">Send me the process →</button>
     </form>
     <p class="form-note">Your details stay private. Unsubscribe any time.</p>
   </div>
@@ -255,6 +255,22 @@
   </div>
 </footer>
 
+<script>
+function handleGrief(e){
+  e.preventDefault();
+  var email=document.getElementById('grief_email').value.trim();
+  var name=document.getElementById('grief_name').value.trim();
+  if(!email){return;}
+  var btn=document.getElementById('griefBtn');
+  btn.textContent='One moment...';
+  btn.disabled=true;
+  fetch('/.netlify/functions/subscribe',{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({email:email,firstName:name,tagIds:[20896551],sequenceId:null})
+  }).finally(function(){window.location.href='/thankyou-grief';});
+}
+</script>
 <script>
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target); } });
