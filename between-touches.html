@@ -155,12 +155,11 @@
 
 <div class="form-wrap">
   <span class="form-label">Where should I send it?</span>
-  <form name="between-touches" method="POST" netlify action="/thankyou-between-touches-only">
-    <input type="hidden" name="form-name" value="between-touches">
-    <input type="text" name="first_name" placeholder="First name" required autocomplete="given-name">
-    <input type="email" name="email" placeholder="Email address" required autocomplete="email">
+  <form id="btForm" onsubmit="handleBt(event)">
+    <input id="bt_name" type="text" placeholder="First name" required autocomplete="given-name">
+    <input id="bt_email" type="email" placeholder="Email address" required autocomplete="email">
     <div class="form-cta">
-      <button type="submit" class="btn">Get the guide, free</button>
+      <button type="submit" class="btn" id="btBtn">Get the guide, free</button>
     </div>
   </form>
   <p class="privacy">No spam. Just the guide, and occasional letters from Juliette.</p>
@@ -168,7 +167,7 @@
 
 <div class="signature">
   <p>This is where it starts.</p>
-  <div class="name">Warmly, Juliette</div>
+  <div class="name">Juliette</div>
 </div>
 
 <footer style="background:#a88538;color:#fff;padding:22px 32px;font-size:13px">
@@ -185,6 +184,22 @@
   </div>
 </footer>
 
+<script>
+function handleBt(e){
+  e.preventDefault();
+  var email=document.getElementById('bt_email').value.trim();
+  var name=document.getElementById('bt_name').value.trim();
+  if(!email){return;}
+  var btn=document.getElementById('btBtn');
+  btn.textContent='One moment...';
+  btn.disabled=true;
+  fetch('/.netlify/functions/subscribe',{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({email:email,firstName:name,tagIds:[20896291],sequenceId:2812534})
+  }).finally(function(){window.location.href='/thankyou-between-touches-only';});
+}
+</script>
 <script>
   const obs = new IntersectionObserver((entries) => {
     entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target); } });

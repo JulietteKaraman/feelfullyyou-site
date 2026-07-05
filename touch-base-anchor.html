@@ -104,18 +104,17 @@
 
 <div class="form-wrap">
   <span class="form-label">Where should I send it?</span>
-  <form name="touch-base-anchor" method="POST" netlify action="/thankyou-touch-base">
-    <input type="hidden" name="form-name" value="touch-base-anchor">
-    <input type="text" name="first_name" placeholder="First name" required autocomplete="given-name">
-    <input type="email" name="email" placeholder="Email address" required autocomplete="email">
-    <button type="submit" class="btn">Send me the practice</button>
+  <form id="tbForm" onsubmit="handleTb(event)">
+    <input id="tb_name" type="text" placeholder="First name" required autocomplete="given-name">
+    <input id="tb_email" type="email" placeholder="Email address" required autocomplete="email">
+    <button type="submit" class="btn" id="tbBtn">Send me the practice</button>
   </form>
   <p class="privacy">No spam. Just the practice, and occasional letters from Juliette.</p>
 </div>
 
 <div class="signature">
   <p>This is always available to you. You already have it.</p>
-  <div class="name">Warmly, Juliette</div>
+  <div class="name">Juliette</div>
 </div>
 
 <footer>
@@ -132,6 +131,22 @@
   </div>
 </footer>
 
+<script>
+function handleTb(e){
+  e.preventDefault();
+  var email=document.getElementById('tb_email').value.trim();
+  var name=document.getElementById('tb_name').value.trim();
+  if(!email){return;}
+  var btn=document.getElementById('tbBtn');
+  btn.textContent='One moment...';
+  btn.disabled=true;
+  fetch('/.netlify/functions/subscribe',{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({email:email,firstName:name,tagIds:[20896290],sequenceId:2812534})
+  }).finally(function(){window.location.href='/thankyou-touch-base';});
+}
+</script>
 <script>
 (function(){
   var btn=document.getElementById('hamBtn');

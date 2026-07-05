@@ -175,7 +175,7 @@ document.getElementById('wsqForm').addEventListener('submit', function(e) {
   fetch('/.netlify/functions/subscribe', {
     method: 'POST',
     headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({email: email, firstName: name, tagIds: []})
+    body: JSON.stringify({email: email, firstName: name, tagIds: [20896289], sequenceId: 2812534})
   }).finally(function() {
     window.location.href = '/thankyou-when-she-goes-quiet';
   });
@@ -184,7 +184,7 @@ document.getElementById('wsqForm').addEventListener('submit', function(e) {
 
 <div class="signature">
   <p>She hasn't gone. She's waiting.</p>
-  <div class="name">Warmly, Juliette</div>
+  <div class="name">Juliette</div>
 </div>
 
 <footer style="background:#a88538;color:#fff;padding:22px 32px;font-size:13px">

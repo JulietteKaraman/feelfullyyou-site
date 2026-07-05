@@ -66,11 +66,11 @@ const PRODUCT_MAP = {
     sequenceId: 2812534,
     label: 'CONNECT With Essence £247'
   },
-  // 'REPLACE_price_onetouch': {  ← add once you create a £97 price on prod_TMpi5kaSnhGD1d
-  //   tagId: 20794312,   // "one touch"
-  //   sequenceId: 2812534,
-  //   label: 'One Touch £97'
-  // }
+  'price_1Tpr13CCw18geY15W6ooICYF': {
+    tagId: 20794312,   // "one touch"
+    sequenceId: 2812534,
+    label: 'One Touch £97'
+  }
 };
 
 async function addToKit(email, firstName, tagId, sequenceId, apiSecret) {
