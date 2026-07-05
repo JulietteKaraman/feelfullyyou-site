@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Sacred No | Juliette Karaman</title>
+<title>One Touch | Juliette Karaman</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -90,20 +90,11 @@
   .thesis .pivot{font-weight:600;color:var(--gold-deep);font-size:clamp(19px,2.6vw,24px);margin:6px 0}
   .thesis .closer{font-family:var(--display);font-weight:700;font-size:clamp(22px,3.4vw,32px);color:var(--ink);max-width:28ch;margin-top:30px;line-height:1.18;letter-spacing:-.02em}
 
-  /* RECOGNITION / PAIN */
-  .recog{padding:92px 0;background:var(--cream-2);border-top:1px solid var(--line)}
-  .recog h2{max-width:24ch}
-  .maybe-list{border-left:2px solid var(--gold-soft);margin:30px 0}
-  .maybe{padding:16px 0 16px 24px;position:relative;color:var(--brown);font-size:18px;line-height:1.5}
-  .recog .note{margin-top:32px;font-size:18px;color:var(--brown);max-width:60ch}
-  .recog .qline{font-family:var(--display);font-weight:600;font-size:clamp(21px,3vw,27px);color:var(--ink);margin-top:26px;line-height:1.22;letter-spacing:-.015em;max-width:32ch}
-
-  /* WHAT HAPPENS / METHOD */
-  .method{padding:92px 0;background:var(--cream);border-top:1px solid var(--line)}
+  /* WHAT HAPPENS */
+  .method{padding:92px 0;background:var(--cream-2);border-top:1px solid var(--line)}
   .method .split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
   .method h2{max-width:22ch}
   .method p{max-width:58ch;margin-bottom:18px;color:var(--brown);font-size:var(--t-md);line-height:1.65}
-  .method .closer{font-family:var(--display);font-weight:600;font-size:clamp(19px,2.6vw,24px);color:var(--ink);max-width:36ch;margin-top:10px;line-height:1.22;letter-spacing:-.015em}
   .deliverables{display:flex;flex-direction:column;gap:0;border:1px solid var(--line);background:var(--paper);margin-top:12px}
   .del{padding:22px 26px;border-bottom:1px solid var(--line);border-left:3px solid var(--gold)}
   .del:last-child{border-bottom:none}
@@ -112,24 +103,12 @@
   .del p{font-size:15px;color:var(--brown);margin:0;max-width:none}
   @media(max-width:800px){.method .split{grid-template-columns:1fr;gap:36px}}
 
-  /* SPINE / TIMELINE */
-  .spine{padding:92px 0;border-top:1px solid var(--line);background:var(--cream-2)}
-  .spine .lede{max-width:60ch;color:var(--brown);margin-bottom:14px;font-size:var(--t-md);line-height:1.65}
-  .timeline{position:relative;margin-left:8px;padding-left:42px;margin-top:36px}
-  .timeline::before{content:"";position:absolute;left:0;top:6px;bottom:6px;width:2px;background:var(--line)}
-  .progress-line{position:absolute;left:0;top:6px;width:2px;background:var(--gold);height:0;transition:height .15s linear}
-  .node{position:relative;padding:0 0 36px}
-  .node::before{content:"";position:absolute;left:-42px;top:4px;width:13px;height:13px;border-radius:50%;background:var(--cream-2);border:2px solid var(--gold-soft);transition:border-color .4s,background .4s,box-shadow .4s;transform:translateX(-5px)}
-  .node.in::before{border-color:var(--gold);background:var(--gold);box-shadow:0 0 0 5px rgba(168,133,56,.14)}
-  .node .day{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);font-weight:600}
-  .node h3{margin:7px 0 8px;font-size:22px}
-  .node p{color:var(--brown);font-size:16px;max-width:56ch}
-  .pinned{margin-top:22px;border:1px solid var(--line);border-radius:4px;overflow:hidden;background:var(--paper)}
-  .pinned .ph{padding:16px 22px;background:var(--cream);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep);border-bottom:1px solid var(--line);font-weight:600}
-  .guide{padding:18px 22px;border-bottom:1px solid var(--line)}
-  .guide:last-child{border-bottom:none}
-  .guide .t{font-family:var(--display);font-weight:600;font-size:19px;color:var(--ink);margin-bottom:5px;letter-spacing:-.01em}
-  .guide p{color:var(--brown);font-size:15.5px;margin:0;max-width:none}
+  /* ONE PURCHASE ONLY */
+  .one-only{background:var(--ink);padding:72px 0}
+  .one-only .narrow{text-align:center}
+  .one-only .eyebrow{color:var(--gold-pale);margin-bottom:18px}
+  .one-only h2{color:#fff;font-size:clamp(1.6rem,4vw,2.4rem);max-width:22ch;margin:0 auto 22px}
+  .one-only p{color:rgba(254,252,250,.72);font-size:17px;max-width:52ch;margin:0 auto;line-height:1.7}
 
   /* WHY JULIETTE */
   .why{padding:0;border-top:1px solid var(--line);background:var(--paper)}
@@ -142,7 +121,10 @@
   .why .intro{font-size:var(--t-md);max-width:58ch;margin:20px 0;color:var(--brown);line-height:1.65}
   .modalities{display:flex;flex-wrap:wrap;gap:8px;margin:26px 0}
   .modalities span{font-family:var(--body);font-weight:500;font-size:15px;color:var(--gold-deep);border:1px solid var(--gold-soft);border-radius:99px;padding:7px 16px;background:var(--cream);letter-spacing:.01em}
-  .why .needed{font-family:var(--display);font-weight:600;font-size:clamp(19px,2.6vw,24px);color:var(--ink);margin:6px 0 32px;max-width:34ch;line-height:1.22;letter-spacing:-.015em}
+  .why .story{border-left:2px solid var(--gold);padding:4px 0 4px 26px;margin:26px 0;max-width:58ch}
+  .why .story p{margin-bottom:12px;color:var(--brown);font-size:17px;max-width:none}
+  .why .story .ask{font-family:var(--body);font-style:italic;font-weight:500;color:var(--gold-deep)}
+  .why .needed{font-family:var(--display);font-weight:600;font-size:clamp(19px,2.6vw,24px);color:var(--ink);margin:6px 0 32px;max-width:30ch;line-height:1.22;letter-spacing:-.015em}
   .press{display:flex;gap:24px;flex-wrap:wrap;align-items:center;margin:32px 0;padding:24px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
   .press span{font-family:var(--display);font-size:17px;color:var(--gold-soft)}
   .press .pod{font-style:italic;color:var(--gold-deep)}
@@ -153,19 +135,17 @@
     .why .copy{padding:60px 28px}
   }
 
-  /* OUTCOMES */
-  .changes{padding:92px 0;border-top:1px solid var(--line);background:var(--cream-2)}
-  .changes h2{max-width:22ch}
-  .change-row{display:grid;grid-template-columns:34px 1fr;gap:20px;align-items:start;padding:24px 0;border-bottom:1px solid var(--line)}
-  .change-row:last-of-type{border-bottom:none}
-  .change-row .ix{color:var(--gold);padding-top:4px;font-size:18px}
-  .change-row p{font-size:clamp(17px,2.1vw,20px);line-height:1.5;color:var(--ink);max-width:56ch}
-
-  /* TESTIMONIALS */
-  .testimonials{padding:92px 0;border-top:1px solid var(--line);background:var(--cream)}
-  .testimonials blockquote{border-left:2px solid var(--gold-pale);padding-left:24px}
-  .testimonials blockquote p{font-size:18px;color:var(--ink);font-style:italic;margin-bottom:8px;max-width:56ch}
-  .testimonials cite{font-size:14px;color:var(--gold-deep);font-style:normal;font-weight:600}
+  /* PROOF */
+  .proof{padding:100px 0;border-top:1px solid var(--line);background:var(--cream)}
+  .proof .eyebrow{margin-bottom:18px}
+  .proof h2{max-width:26ch;margin-bottom:36px}
+  .proof-story{background:var(--paper);border-left:3px solid var(--gold);padding:32px 36px;margin-bottom:28px}
+  .proof-story .label{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:14px}
+  .proof-story p{color:var(--brown);font-size:17px;line-height:1.7;max-width:58ch;margin-bottom:10px}
+  .proof-story p:last-child{margin-bottom:0}
+  .proof-quote{background:var(--teal);padding:40px 48px;margin-bottom:28px}
+  .proof-quote blockquote{font-family:var(--display);font-size:clamp(16px,2.2vw,20px);font-style:italic;font-weight:500;color:var(--cream);line-height:1.65;margin-bottom:20px}
+  .proof-quote cite{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-pale);font-style:normal;font-weight:600}
 
   /* FIT */
   .fit{padding:92px 0;border-top:1px solid var(--line);background:var(--cream-2)}
@@ -189,11 +169,9 @@
   .pricing .price-big sub{font-size:.26em;color:var(--gold-pale);vertical-align:baseline;font-weight:400}
   .pricing .price-note{color:rgba(254,252,250,.5);font-size:14px;margin-bottom:14px;font-style:italic}
   .pricing .flow-note{max-width:44ch;margin:0 auto 36px;color:rgba(254,252,250,.72);font-size:16px;line-height:1.7}
-  .pricing .arrives{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-dark);border:1px solid var(--line-dark);max-width:580px;margin:0 auto 36px}
-  .pricing .arrives div{background:var(--teal);padding:22px 16px;font-size:14px;color:#c9c2b4}
-  .pricing .arrives div b{display:block;color:#fff;font-family:var(--display);font-weight:600;font-size:16px;margin-bottom:4px}
   .pricing .btn{font-size:16px;padding:16px 42px;margin-bottom:14px}
-  .pricing .signoff{margin-top:26px;font-family:var(--display);font-weight:600;font-size:18px;color:var(--gold-pale)}
+  .pricing .couples-note{font-size:14px;color:rgba(254,252,250,.38);margin-top:16px}
+  .pricing .couples-note a{color:var(--gold-pale);text-decoration:underline;text-underline-offset:3px}
 
   /* STICKY */
   .sticky-buy{position:fixed;left:0;right:0;bottom:0;z-index:55;transform:translateY(120%);transition:transform .5s cubic-bezier(.2,.7,.2,1);background:var(--teal);border-top:1px solid var(--line-dark);display:flex;align-items:center;justify-content:space-between;gap:16px;padding:13px 28px}
@@ -241,8 +219,7 @@
         <a href="/contact">Contact</a>
       </div>
     </div>
-    <!-- TODO: replace with Stripe payment link when created -->
-    <a href="mailto:support@feelfullyyou.com?subject=The%20Sacred%20No%20%C2%B7%20%C2%A355" class="btn">Join · £55</a>
+    <a href="https://buy.stripe.com/8x2dR8bCj4KQ2Lr8mV0co0O" class="btn" target="_blank">Begin · £97</a>
   </nav>
 </div>
 
@@ -260,25 +237,23 @@
   <a href="/grief-duality-process">Grief Process</a>
   <a href="/media-and-pr">Media &amp; PR</a>
   <a href="/contact">Contact</a>
-  <!-- TODO: replace with Stripe payment link when created -->
-  <a href="mailto:support@feelfullyyou.com?subject=The%20Sacred%20No%20%C2%B7%20%C2%A355" class="btn">Join · £55</a>
+  <a href="https://buy.stripe.com/8x2dR8bCj4KQ2Lr8mV0co0O" class="btn" target="_blank">Begin · £97</a>
 </nav>
 
 <!-- HERO -->
 <header class="hero">
   <div class="hero-split">
-    <!-- PLACEHOLDER IMAGE — Juliette to supply Sacred No photo -->
+    <!-- PLACEHOLDER IMAGE — Juliette to supply One Touch photo -->
     <div class="hero-photo"></div>
     <div class="hero-content">
-      <p class="hero-kicker">7-day self-led somatic experience</p>
-      <h1>The Sacred No</h1>
-      <p class="sub">"You've said yes when your body whispered no. You're no longer available for that."</p>
-      <div class="hero-price"><sub>£</sub>55</div>
-      <p class="hero-note">One-time payment. Instant access.</p>
+      <p class="hero-kicker">with Juliette Karaman</p>
+      <h1>One Touch</h1>
+      <p class="sub">Seven days. Your own hand. The start of receiving again.</p>
+      <div class="hero-price"><sub>£</sub>97</div>
+      <p class="hero-note">One purchase. Seven days. Yours to keep.</p>
       <div class="hero-cta">
-        <!-- TODO: replace with Stripe payment link when created -->
-        <a href="mailto:support@feelfullyyou.com?subject=The%20Sacred%20No%20%C2%B7%20%C2%A355" class="btn">JOIN THE SACRED NO · £55</a>
-        <a href="#what" class="btn ghost" style="border-color:rgba(254,252,250,.4);color:var(--cream)">What's inside</a>
+        <a href="https://buy.stripe.com/8x2dR8bCj4KQ2Lr8mV0co0O" class="btn" target="_blank">Begin One Touch · £97</a>
+        <a href="#what" class="btn ghost" style="border-color:rgba(254,252,250,.4);color:var(--cream)">What this is</a>
       </div>
     </div>
   </div>
@@ -287,166 +262,114 @@
 <!-- THESIS -->
 <section class="thesis">
   <div class="narrow">
-    <h2 class="reveal">Your body has always known.</h2>
-    <p class="reveal">It whispered no when you said yes. It contracted when you smiled through it. It carried what you could not say out loud.</p>
-    <p class="pivot reveal">The Sacred No is about becoming more honestly yourself, so that your yes means something, and your no lands with dignity rather than guilt.</p>
-    <p class="closer reveal">Seven days. One no at a time.</p>
+    <h2 class="reveal">Structure creates safety. Safety creates surrender.</h2>
+    <p class="reveal">You have read the books. You understand the nervous system, the freeze response, the years it takes to build a wall like yours. None of that understanding has moved a single thing in your body.</p>
+    <p class="pivot reveal">Receiving was never going to start in your head. It starts with one touch.</p>
+    <p class="reveal">Most women have not truly received in years. Not held, not touched, not felt, without bracing, performing, or leaving the room before the sensation lands. One Touch is where that starts to change, alone, in private, at your own pace.</p>
+    <p class="closer reveal">Seven days. Your own hand. A body that starts to trust again.</p>
   </div>
 </section>
 
-<!-- RECOGNITION / PAIN -->
-<section class="recog">
-  <div class="narrow">
-    <div class="eyebrow reveal">You already feel it</div>
-    <h2 class="reveal">You keep overriding your own body's signals.</h2>
-    <div class="maybe-list">
-      <div class="maybe reveal">"You say yes and immediately feel the tightening."</div>
-      <div class="maybe reveal">"You manage the situation instead of honouring what you actually feel."</div>
-      <div class="maybe reveal">"You smooth things over. You adjust. You accommodate. Then you resent it."</div>
-      <div class="maybe reveal">"You know what you want. You don't trust yourself to say it."</div>
+<!-- WHAT HAPPENS -->
+<section class="method" id="what">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <div class="eyebrow reveal">What this is</div>
+        <h2 class="reveal">A structured return to sensation, seven days at a time.</h2>
+        <p class="reveal">This is self-touch and somatic work, not talk therapy and not a relationship course. No partner is required. No group calls. No one watching. Just you, your body, and seven days of practice built to bring you back into contact with yourself.</p>
+        <p class="reveal">Each day builds on the one before it. A short audio practice guides you through the touch itself. You move at your own pace, in your own space, as many times as you need to.</p>
+        <p class="reveal">This works because it is somatic. Your body has been running an old pattern on automatic, bracing before touch even lands. Talking about that pattern does not move it. Practicing safety, structured and repeated, does.</p>
+      </div>
+      <div>
+        <div class="deliverables">
+          <div class="del reveal">
+            <div class="label">Seven days</div>
+            <h3>Daily audio practice</h3>
+            <p>A guided self-touch practice for each of the seven days, building from safety toward sensation, one session at a time.</p>
+          </div>
+          <div class="del reveal">
+            <div class="label">Included</div>
+            <h3>One Touch Cards</h3>
+            <p>A downloadable PDF deck that travels with you past the seven days, prompts to return to whenever you need them.</p>
+          </div>
+          <div class="del reveal">
+            <div class="label">Self-paced</div>
+            <h3>Private members area</h3>
+            <p>Your own password-protected space. Move through the days in order or return to any of them, on your own schedule.</p>
+          </div>
+          <div class="del reveal">
+            <div class="label">One purchase</div>
+            <h3>Yours to keep</h3>
+            <p>No subscription, no expiry. Once you are in, the seven days and the cards are yours for as long as you want them.</p>
+          </div>
+        </div>
+      </div>
     </div>
-    <p class="note reveal">This is a pattern, not a character flaw. Patterns have structure. Structure can be changed.</p>
-    <p class="qline reveal">Seven days is enough to begin.</p>
   </div>
 </section>
 
-<!-- METHOD -->
-<section class="method">
+<!-- ONE PURCHASE ONLY -->
+<section class="one-only">
   <div class="narrow">
-    <div class="eyebrow reveal">Why the body first</div>
-    <h2 class="reveal">Understanding your no is not enough. You have to feel it.</h2>
-    <p class="reveal">The Sacred No is a somatic experience, not a mindset course. Each day, one short practice, under 15 minutes, that drops the work into the body rather than the head.</p>
-    <p class="reveal">By day seven, you will not just understand your no. You will feel it in your bones. You will be able to stand in it without collapsing, defending, or explaining.</p>
-    <p class="closer reveal">No guilt. No performance. Just clarity.</p>
-  </div>
-</section>
-
-<!-- WHAT'S INSIDE / SPINE -->
-<section class="spine" id="what">
-  <div class="narrow">
-    <div class="eyebrow reveal">What's inside</div>
-    <h2 class="reveal">Seven days. Seven practices.</h2>
-    <p class="lede reveal">Self-led, self-paced. One new practice each day, under 15 minutes. No group calls. No scheduling around anyone else's timeline.</p>
-    <div class="timeline" id="timeline">
-      <div class="progress-line" id="progress"></div>
-      <div class="node reveal">
-        <div class="day">Day 1</div>
-        <h3>Finding the signal</h3>
-        <p>Where your no lives in the body. Learning to feel it before it becomes resentment.</p>
-      </div>
-      <div class="node reveal">
-        <div class="day">Day 2</div>
-        <h3>The breath of refusal</h3>
-        <p>What happens in the nervous system when you override yourself. Reversing it.</p>
-      </div>
-      <div class="node reveal">
-        <div class="day">Day 3</div>
-        <h3>Standing in it</h3>
-        <p>Practising the no without explanation, apology, or softening.</p>
-      </div>
-      <div class="node reveal">
-        <div class="day">Day 4</div>
-        <h3>The guilt response</h3>
-        <p>Why guilt follows a no, and how to let it move through without making a decision.</p>
-      </div>
-      <div class="node reveal">
-        <div class="day">Day 5</div>
-        <h3>Clarity without collapse</h3>
-        <p>Staying grounded when the no is met with pressure, disappointment, or silence.</p>
-      </div>
-      <div class="node reveal">
-        <div class="day">Day 6</div>
-        <h3>The body as authority</h3>
-        <p>Trusting sensation over story. The practice of leading from what you feel.</p>
-      </div>
-      <div class="node reveal">
-        <div class="day">Day 7</div>
-        <h3>Integration</h3>
-        <p>What it feels like when the no is clean. Living from here.</p>
-      </div>
-    </div>
-    <div class="pinned reveal">
-      <div class="ph">Also included</div>
-      <div class="guide">
-        <div class="t">The Sacred No Tracker PDF</div>
-        <p>Track your signals across the seven days. What you notice, what shifts, what becomes available.</p>
-      </div>
-      <div class="guide">
-        <div class="t">Lifetime access</div>
-        <p>Return to any practice whenever you need it.</p>
-      </div>
-    </div>
+    <div class="eyebrow reveal">Please read this before you begin</div>
+    <h2 class="reveal">This is self-study. There are no live calls and no group.</h2>
+    <p class="reveal">Seven days, delivered in full the moment you join. You move through them privately, at whatever pace your body asks for. If you want to go further after One Touch, that is a separate conversation, not something built into this course.</p>
   </div>
 </section>
 
 <!-- WHY JULIETTE -->
 <section class="why">
   <div class="split">
-    <!-- CANONICAL: juliettekingsxaboutmesalespages.jpg -->
     <div class="photo reveal"></div>
     <div class="copy">
       <div class="eyebrow reveal">Why me</div>
       <h2 class="reveal">I'm <em>Juliette.</em></h2>
-      <p class="intro reveal">For 27 years I have worked with how people feel, relate, and connect, reading what the body holds before the mind knows to say it. Fifteen of those years working specifically with couples and the patterns that keep love at a distance.</p>
-      <p class="intro reveal">I know what it costs to override the body. I know what it feels like when it finally gets to speak. I followed my own no into every room it needed to understand.</p>
+      <p class="intro reveal">I have spent 27 years learning to read what the body holds before the mind knows to say it. Fifteen of those years working specifically with couples and trauma: women who love the people beside them and still cannot let a hand land without flinching first.</p>
+      <p class="intro reveal">Before I was the practitioner in that room, I was the woman leaving it before touch arrived. I know what it costs to perform closeness because the real thing feels too far away to reach. I know what it takes to come back.</p>
+      <p class="intro reveal">It took me years to understand what my body needed and had never been given, and what structure would have changed everything. So I followed my own pattern into every room it needed to understand.</p>
       <div class="modalities reveal">
-        <span>EMDR</span><span>Somatic experiencing</span><span>Spinal attunement</span><span>Touch Base®</span><span>Touch Languages™</span><span>Deep PEAT</span><span>Hypnotherapy</span><span>Tantra</span>
+        <span>Somatic experiencing</span><span>Spinal attunement</span><span>Touch Base®</span><span>Touch Languages™</span><span>Deep PEAT</span><span>Hypnotherapy</span><span>Tantra</span>
       </div>
-      <p class="needed reveal">The Sacred No was built from that knowledge.</p>
+      <p class="needed reveal">I did not collect these. I needed every single one.</p>
+
+      <div class="story reveal">
+        <p>I built One Touch for the woman I used to be: the one who could name every reason her body pulled away and still could not stop it happening. Insight was never where the pattern lived.</p>
+        <p>Every woman I have worked with who has changed this has asked me the same thing afterwards: <span class="ask">why did no one tell me it was this simple?</span></p>
+        <p>Structure did what understanding alone could not. A body shown, again and again, that touch can be safe.</p>
+      </div>
+
+      <p class="needed reveal" style="max-width:34ch">I know what your body has been protecting you from. I know exactly where to begin.</p>
 
       <div class="press reveal">
         <span>Forbes</span>
         <span>The Times</span>
-        <span>Marie Claire</span>
-        <span>ITV</span>
         <span>Telegraph</span>
+        <span>ITV</span>
+        <span>Marie Claire</span>
         <span>Newsweek</span>
-        <span>NBC</span>
-        <span>ABC</span>
-        <span>TED</span>
-        <span>Mindvalley</span>
-        <span>Bloomberg</span>
         <span class="pod">The Scrumptious Woman, top 2.5% globally</span>
       </div>
 
-      <p class="last reveal"><strong>Your no is a direction.</strong> It tells you where to go next, if you are willing to feel it rather than talk yourself out of it.</p>
+      <p class="last reveal"><strong>I have spent 27 years learning what the body needs to feel safe enough to receive again.</strong> That is not theory. That is what happens when the work is specific, gentle, and done in the body rather than just the mind.</p>
     </div>
   </div>
 </section>
 
-<!-- OUTCOMES -->
-<section class="changes">
+<!-- PROOF -->
+<section class="proof">
   <div class="narrow">
-    <div class="eyebrow reveal">What changes</div>
-    <h2 class="reveal">What becomes possible when the no is clean.</h2>
-    <div class="change-row reveal">
-      <div class="ix">→</div>
-      <p>You feel your no before it becomes resentment. The signal arrives early enough to act on.</p>
+    <div class="eyebrow reveal">What becomes possible in seven days</div>
+    <h2 class="reveal">A body that stops bracing before it starts.</h2>
+    <div class="proof-story reveal">
+      <div class="label">What changes across the seven days</div>
+      <p>By day one, most women notice how quickly their body pulls away, sometimes before their hand has even landed. That is the pattern showing itself, not a failure.</p>
+      <p>By day seven, that same hand can rest, stay, and be felt. The pattern is not gone forever. The body has simply practiced something else often enough to trust it.</p>
+      <p>Some women feel this shift within days. Some need to return to the earlier days more than once before it settles. Both are the work working.</p>
     </div>
-    <div class="change-row reveal">
-      <div class="ix">→</div>
-      <p>You live it without guilt, defence, or collapse. It is yours, and it holds.</p>
-    </div>
-    <div class="change-row reveal">
-      <div class="ix">→</div>
-      <p>You choose what honours you, without apology, without performance, without the tightening that used to follow.</p>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="testimonials">
-  <div class="narrow">
-    <div class="eyebrow reveal" style="margin-bottom:32px">What others say</div>
-    <div style="display:flex;flex-direction:column;gap:32px">
-      <blockquote class="reveal">
-        <p>"I learned how to feel it. I didn't defend it, argue it, or apologise for it. I simply stood in it."</p>
-        <cite>Paul, London</cite>
-      </blockquote>
-      <blockquote class="reveal">
-        <p>"My body started speaking in ways I'd never heard before. I stopped performing and started actually feeling."</p>
-        <cite>Denise, Edinburgh</cite>
-      </blockquote>
+    <div class="proof-quote reveal">
+      <blockquote>"I stopped performing closeness and started feeling it again."</blockquote>
+      <cite>Claire M., Creative Director</cite>
     </div>
   </div>
 </section>
@@ -456,21 +379,22 @@
   <div class="narrow">
     <div class="eyebrow reveal" style="margin-bottom:8px">Is this for you?</div>
     <div class="fit-grid">
-      <div class="fit-col yes reveal">
-        <h3>This is for you if</h3>
-        <ul>
-          <li>You keep overriding your own signals to keep things smooth</li>
-          <li>You confuse peace-keeping with self-respect</li>
-          <li>You know what you feel, and don't yet trust yourself to say it</li>
-          <li>You are ready to feel your no in the body, not just understand it in your head</li>
-        </ul>
-      </div>
       <div class="fit-col no reveal">
         <h3>This is not for you if</h3>
         <ul>
-          <li>You are looking for permission to become harder or less feeling</li>
-          <li>You are in acute emotional crisis and need therapeutic support first</li>
-          <li>You want techniques without doing the somatic work</li>
+          <li>You are in active mental health crisis. Please contact a therapist</li>
+          <li>You are looking for live coaching or group support</li>
+          <li>You want your partner fixed rather than your own body attended to</li>
+          <li>You are not willing to spend a few quiet minutes with yourself each day</li>
+        </ul>
+      </div>
+      <div class="fit-col yes reveal">
+        <h3>This is for you if</h3>
+        <ul>
+          <li>Your body leaves the room before touch lands, and you are ready to change that</li>
+          <li>You have understood the pattern for years and it has not moved</li>
+          <li>You want a private, self-paced way back into sensation</li>
+          <li>You are ready to give your body seven days of proof it can trust again</li>
         </ul>
       </div>
     </div>
@@ -478,30 +402,22 @@
 </section>
 
 <!-- PRICING -->
-<section class="pricing" id="buy">
-  <div class="eyebrow reveal">The Sacred No</div>
-  <h2 class="reveal">Seven days. Yours immediately.</h2>
-  <div class="price-big reveal"><sub>£</sub>55</div>
-  <p class="price-note">One-time payment. Instant access. Non-refundable.</p>
-  <p class="flow-note reveal">Self-led. Self-paced. One practice a day, under 15 minutes, from wherever you are.</p>
-  <div class="arrives reveal">
-    <div><b>7 practices</b>Under 15 minutes each</div>
-    <div><b>Sacred No Tracker</b>PDF included</div>
-    <div><b>Lifetime access</b>Return whenever you need</div>
-  </div>
-  <!-- TODO: replace with Stripe payment link when created -->
-  <a href="mailto:support@feelfullyyou.com?subject=The%20Sacred%20No%20%C2%B7%20%C2%A355" class="btn reveal">JOIN THE SACRED NO · £55</a>
-  <p class="signoff reveal">Juliette.</p>
+<section class="pricing" id="book">
+  <div class="eyebrow reveal">One purchase. Seven days.</div>
+  <h2 class="reveal">One Touch</h2>
+  <div class="price-big reveal"><sub>£</sub>97</div>
+  <p class="price-note">One-time payment. Instant access.</p>
+  <p class="flow-note reveal">After payment you receive access to your private members area straight away, with all seven days and the One Touch Cards ready to go.</p>
+  <a href="https://buy.stripe.com/8x2dR8bCj4KQ2Lr8mV0co0O" class="btn reveal" target="_blank" rel="noopener">Begin One Touch · £97</a>
 </section>
 
 <!-- STICKY -->
 <div class="sticky-buy" id="stickyBar">
   <div>
-    <div class="nm">The Sacred No</div>
-    <div class="pr">£55. Instant access.</div>
+    <div class="nm">One Touch</div>
+    <div class="pr">£97. Seven days, self-paced.</div>
   </div>
-  <!-- TODO: replace with Stripe payment link when created -->
-  <a href="mailto:support@feelfullyyou.com?subject=The%20Sacred%20No%20%C2%B7%20%C2%A355" class="btn">Join Now</a>
+  <a href="https://buy.stripe.com/8x2dR8bCj4KQ2Lr8mV0co0O" class="btn" target="_blank" rel="noopener">Begin Now</a>
 </div>
 
 <!-- FOOTER -->
@@ -526,7 +442,7 @@
 
   // Scroll reveal
   const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
-  document.querySelectorAll('.reveal, .node').forEach(el=>io.observe(el));
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
   // Sticky bar — show after hero photo scrolls past
   const sticky=document.getElementById('stickyBar');
@@ -535,12 +451,6 @@
     const obs=new IntersectionObserver(es=>{sticky.classList.toggle('show',!es[0].isIntersecting);},{threshold:0});
     obs.observe(heroPhoto);
   }
-
-  // Timeline progress fill
-  const timeline=document.getElementById('timeline');
-  const progress=document.getElementById('progress');
-  function fillProgress(){if(!timeline||!progress)return;const rect=timeline.getBoundingClientRect();let v=window.innerHeight*0.5-rect.top;progress.style.height=Math.max(0,Math.min(rect.height,v))+'px';}
-  window.addEventListener('scroll',fillProgress,{passive:true});window.addEventListener('resize',fillProgress);fillProgress();
 
   // Close dropdowns on outside click
   document.addEventListener('click',e=>{

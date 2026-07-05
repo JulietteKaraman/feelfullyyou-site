@@ -34,6 +34,8 @@
 /trip-wire                      /trip-wire.html                 200
 /trip                           /trip-wire.html                 200
 /pattern-session                /pattern-session.html           200
+/one-touch                      /one-touch.html                 200
+/relationship-pattern-disruptor /relationship-pattern-disruptor.html 200
 /relationship-pattern-session   /pattern-session                301
 /pattern-session-thankyou       /pattern-session-thankyou.html  200
 /relationship-pattern-session-thankyou /pattern-session-thankyou 301
@@ -55,9 +57,9 @@
 /payment-4108                   https://shop.feelfullyyou.com/payment-4108                   301
 /payment-2838                   https://shop.feelfullyyou.com/payment-2838                   301
 /payment-6weeks                 https://shop.feelfullyyou.com/payment-6weeks                 301
-/payment-6weeks-5194            https://shop.feelfullyyou.com/payment-6weeks-5194            301
-/7-day-no-challenge             https://shop.feelfullyyou.com/7-day-no-challenge             301
-/the-romantic-relationship-repair-kit-177535 https://shop.feelfullyyou.com/the-romantic-relationship-repair-kit-177535 301
+/payment-6weeks-5194            /mens-six-week-intensive        301
+/7-day-no-challenge             /sacred-no                      301
+/the-romantic-relationship-repair-kit-177535 /romantic-relationship-repair-kit 301
 /couples-intensive785342        https://shop.feelfullyyou.com/couples-intensive785342        301
 /mens-intensive-3894            https://shop.feelfullyyou.com/mens-intensive-3894            301
 /the-touch-reboot-kit-payment-9978 https://shop.feelfullyyou.com/the-touch-reboot-kit-payment-9978 301
