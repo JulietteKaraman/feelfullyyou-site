@@ -8,13 +8,16 @@
 
 ## Tag to apply on purchase: `10-touch-rituals`
 
+## Stripe product ID: prod_UlGmc49L1m5Uxg
+## Stripe price ID: price_1Tlpu0CCw18geY15b8J3jlBW
+
 ---
 
 ## Email 1 — Subject: Your 10 Touch Rituals
 
 Hello {{contact.first_name}}
 
-Your 10 Touch Rituals are attached.
+Your 10 Touch Rituals are here: https://drive.google.com/file/d/1igZbenFRZHI3NCoZGtZpc1LvKhG0ANdY/view
 
 One thing before you get on with your day.
 
@@ -36,12 +39,11 @@ One ritual. Tonight.
 
 I'll be in touch.
 
-Warmly,
-[signature]
+Juliette
 
 ---
 
-## Email 2 — Subject: Two days in — Subject: Two days in
+## Email 2 — Subject: Two days in
 
 Hello {{contact.first_name}}
 
@@ -63,20 +65,19 @@ That's my whole practice in one sentence: intimacy is built through structure, n
 
 I've worked with couples where she hadn't been able to receive his touch for two years. We didn't start by talking about it. We started with five minutes a day of structured contact. Within three weeks she was initiating. He stopped bracing too.
 
-The rituals you have are the same logic, in your hands, for free.
+The rituals you have are the same logic, in your hands.
 
 If you want to go deeper, I've built a 31-day practice that extends exactly what the rituals started.
 
 For women: it will bring you back into your own body first, then toward the kind of contact that lands rather than lands and immediately gets catalogued and managed.
 
-For men: it gives you something specific to do every day. Not more advice. Actual practice. The kind that builds something real.
+For men: it gives you something specific to do every day. Actual practice. The kind that builds something real.
 
-[BUTTON: 31 Daily Touch Points — £27 → https://feelfullyyou.com/31-daily-touch-points]
+[BUTTON: 31 Daily Touch Points → https://feelfullyyou.com/31-daily-touch-points]
 
-It's simple. It works. And it starts exactly where you are.
+It starts exactly where you are.
 
-Warmly,
-[signature]
+Juliette
 
 ---
 
@@ -104,14 +105,13 @@ The practice changes things. But only if you do it.
 
 If the 10 rituals feel like a beginning and you want to keep going, this is the next door.
 
-For women: The 31 Daily Touch Points is a month of daily practice that builds the capacity to be in your body, receive contact, and stop managing what you feel. After that, One Touch — seven days of structured self-touch that takes you even further in.
+For women: The 31 Daily Touch Points is a month of daily practice that builds the capacity to be in your body, receive contact, and stop managing what you feel.
 
-For men: The same practice from your side. Specific. Physical. No guesswork. Something to come back to every day that tells you exactly what to do.
+For men: The same practice from your side. Specific. Physical. Something to come back to every day.
 
 [BUTTON: See the 31-day touch practice → https://feelfullyyou.com/31-daily-touch-points]
 
-Warmly,
-[signature]
+Juliette
 
 ---
 
@@ -129,7 +129,7 @@ She said: "I caught myself breathing when he touched me. Properly breathing. It 
 
 It doesn't sound stupid.
 
-That half-second of bracing is where desire goes. Where intimacy goes. Where the felt sense of each other goes. The body cannot open and brace at the same time. So it picks one. And it picks the one it's been practising longest.
+That half-second of bracing is where desire goes. Where intimacy goes. Where the felt sense of each other goes. The body cannot open and brace at the same time. So it picks one. It picks the one it's been practising longest.
 
 Her husband wrote to me separately. He said he didn't know what had changed, but something had. She seemed more present. He felt less like he was reaching and missing.
 
@@ -151,5 +151,4 @@ TOUCH POINT is a membership for men who are done guessing. Every month, structur
 
 [BUTTON: TOUCH POINT membership → https://feelfullyyou.com/touch-point]
 
-Warmly,
-[signature]
+Juliette

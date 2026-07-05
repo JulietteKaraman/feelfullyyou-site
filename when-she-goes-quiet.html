@@ -175,7 +175,7 @@ document.getElementById('wsqForm').addEventListener('submit', function(e) {
   fetch('/.netlify/functions/subscribe', {
     method: 'POST',
     headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({email: email, firstName: name, tagIds: [20896289], sequenceId: 2812534})
+    body: JSON.stringify({email: email, firstName: name, tagIds: [20896289], sequenceId: 2812533})
   }).finally(function() {
     window.location.href = '/thankyou-when-she-goes-quiet';
   });
