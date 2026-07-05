@@ -155,16 +155,32 @@
 
 <div class="form-wrap">
   <span class="form-label">Where should I send it?</span>
-  <form name="when-she-goes-quiet" method="POST" data-netlify="true" action="/thankyou-when-she-goes-quiet">
-    <input type="hidden" name="form-name" value="when-she-goes-quiet">
-    <input type="text" name="first_name" placeholder="First name" required autocomplete="given-name">
-    <input type="email" name="email" placeholder="Email address" required autocomplete="email">
+  <form id="wsqForm">
+    <input type="text" id="wsq_name" placeholder="First name" required autocomplete="given-name">
+    <input type="email" id="wsq_email" placeholder="Email address" required autocomplete="email">
     <div class="form-cta">
-      <button type="submit" class="btn">Get the guide, free</button>
+      <button type="submit" class="btn" id="wsqBtn">Get the guide, free</button>
     </div>
   </form>
   <p class="privacy">No spam. Just the guide, and occasional letters from Juliette.</p>
 </div>
+<script>
+document.getElementById('wsqForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var btn = document.getElementById('wsqBtn');
+  btn.textContent = 'One moment...';
+  btn.disabled = true;
+  var email = document.getElementById('wsq_email').value.trim();
+  var name = document.getElementById('wsq_name').value.trim();
+  fetch('/.netlify/functions/subscribe', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({email: email, firstName: name, tagIds: []})
+  }).finally(function() {
+    window.location.href = '/thankyou-when-she-goes-quiet';
+  });
+});
+</script>
 
 <div class="signature">
   <p>She hasn't gone. She's waiting.</p>
