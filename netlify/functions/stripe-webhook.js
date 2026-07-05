@@ -70,6 +70,23 @@ const PRODUCT_MAP = {
     tagId: 20794312,   // "one touch"
     sequenceId: 2812534,
     label: 'One Touch £97'
+  },
+  // ─── CARDS DIGITAL ──────────────────────────────────────────────────────────
+  // sequenceId: null until Kiera creates "Cards Buyer Welcome" sequence in Kit
+  'price_1TOxLhCCw18geY15bLrNioHw': {
+    tagId: 20896673,   // "cards-trust-repair"
+    sequenceId: null,
+    label: 'Trust & Repair Cards £15'
+  },
+  'price_1TOJatCCw18geY15HbPQTtH7': {
+    tagId: 20896674,   // "cards-one-deck"
+    sequenceId: null,
+    label: 'One Core Deck Cards £35'
+  },
+  'price_1TiBwtCCw18geY15OsJnUNMV': {
+    tagId: 20896675,   // "cards-full-bundle"
+    sequenceId: null,
+    label: 'Cards Full Bundle £55'
   }
 };
 

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>You're in · Intimacy &amp; Communication Cards</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fefcfa;
+    --ink:#070707;
+    --brown:#5d4a33;
+    --gold:#a88538;
+    --gold-deep:#99680c;
+    --gold-soft:#b4a074;
+    --gold-pale:#ddc98e;
+    --teal:#0d3535;
+    --teal-deep:#061a1a;
+    --line:#e3dccf;
+    --display:'Poppins',system-ui,sans-serif;
+    --body:'Inter',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--cream);color:var(--brown);font-family:var(--body);-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
+
+  .topbar{background:var(--teal);padding:0 28px;height:60px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .topbar .brand{font-family:var(--display);font-weight:700;font-size:15px;color:#fff;letter-spacing:.02em;text-decoration:none}
+  .topbar .brand b{color:var(--gold-pale)}
+
+  .main{flex:1;display:flex;align-items:flex-start;justify-content:center;padding:52px 24px 72px}
+  .card{max-width:500px;width:100%}
+
+  .confirm{text-align:center;margin-bottom:44px}
+  .check{width:64px;height:64px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;margin:0 auto 24px}
+  .check svg{width:28px;height:28px;stroke:#fff;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+  .eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-deep);font-weight:700;margin-bottom:14px}
+  h1{font-family:var(--display);font-size:clamp(1.9rem,5vw,2.5rem);font-weight:700;color:var(--teal);line-height:1.08;letter-spacing:-.022em;margin-bottom:14px}
+  .confirm .sub{font-size:1.05rem;color:var(--brown);line-height:1.7;max-width:38ch;margin:0 auto}
+
+  .email-block{background:#fff;border:1px solid var(--line);border-radius:3px;padding:22px 24px;text-align:center;margin-bottom:32px}
+  .email-block strong{color:var(--teal)}
+  .email-block p{font-size:0.9rem;color:var(--brown);line-height:1.65}
+
+  .teal-block{background:var(--teal);border-radius:3px;padding:28px 26px;margin-bottom:32px}
+  .teal-block h3{font-family:var(--display);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-pale);font-weight:600;margin-bottom:18px}
+  .rule{display:flex;gap:16px;align-items:flex-start;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+  .rule:first-of-type{padding-top:0}
+  .rule:last-child{border-bottom:none;padding-bottom:0}
+  .rule .num{font-family:var(--display);font-size:1.3rem;font-weight:700;color:var(--gold-pale);line-height:1;min-width:26px;padding-top:2px}
+  .rule .copy{font-size:0.9rem;color:rgba(255,255,255,.85);line-height:1.6}
+  .rule .copy strong{color:#fff;display:block;margin-bottom:3px}
+
+  .responses{margin-top:10px;display:flex;flex-direction:column;gap:6px}
+  .response{background:rgba(255,255,255,.07);border-radius:2px;padding:9px 12px;display:flex;gap:12px;align-items:center}
+  .response .tag{font-family:var(--display);font-size:0.78rem;font-weight:700;color:var(--gold-pale);white-space:nowrap}
+  .response .desc{font-size:0.78rem;color:rgba(255,255,255,.7);line-height:1.5}
+
+  .next{display:flex;flex-direction:column;gap:10px;margin-bottom:32px}
+  .next-row{display:flex;align-items:center;justify-content:space-between;border:1px solid var(--line);border-radius:3px;padding:16px 20px;background:#fff;text-decoration:none;transition:border-color .2s}
+  .next-row:hover{border-color:var(--gold-soft)}
+  .next-row-text h3{font-family:var(--display);font-weight:600;font-size:0.95rem;color:var(--ink);margin-bottom:2px}
+  .next-row-text p{font-size:12px;color:var(--gold-soft)}
+  .next-arr{color:var(--gold);font-size:17px;margin-left:16px;flex-shrink:0}
+
+  .signoff{text-align:center;padding:8px 0 0;font-size:0.95rem;color:var(--brown);line-height:1.7}
+  .signoff .name{font-family:var(--display);font-weight:600;font-size:1.1rem;color:var(--gold-deep);margin-top:8px}
+
+  footer{padding:22px 28px;text-align:center;font-size:12px;color:var(--gold-soft);flex-shrink:0}
+  footer a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="/" class="brand">Feel Fully <b>You</b></a>
+</div>
+
+<main class="main">
+  <div class="card">
+
+    <div class="confirm">
+      <div class="check">
+        <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <div class="eyebrow">Payment confirmed</div>
+      <h1>Your cards are ready.</h1>
+      <p class="sub">Your access link is heading to your inbox now. Check your email to open the deck on any device.</p>
+    </div>
+
+    <div class="email-block">
+      <p><strong>Check your inbox</strong> — your access link is on its way. If it doesn't arrive within a few minutes, check your spam folder and move it to your main inbox.</p>
+    </div>
+
+    <div class="teal-block">
+      <h3>How to use the cards</h3>
+      <div class="rule">
+        <div class="num">01</div>
+        <div class="copy"><strong>Pick a card</strong>One person picks and reads the prompt aloud. One question. That's it.</div>
+      </div>
+      <div class="rule">
+        <div class="num">02</div>
+        <div class="copy">
+          <strong>15 minutes</strong>The other person answers. The listener holds three responses only:
+          <div class="responses">
+            <div class="response"><span class="tag">Thank you</span><span class="desc">If you heard them clearly.</span></div>
+            <div class="response"><span class="tag">Clarify that</span><span class="desc">If you didn't.</span></div>
+            <div class="response"><span class="tag">Summarise that</span><span class="desc">If they go on.</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="rule">
+        <div class="num">03</div>
+        <div class="copy"><strong>Switch</strong>Same card, same prompt — now the other person answers. Then pick a new card whenever you're ready.</div>
+      </div>
+    </div>
+
+    <div class="next">
+      <a href="/cards-free-taster" class="next-row">
+        <div class="next-row-text">
+          <h3>Try 10 free cards while you wait</h3>
+          <p>Opens in your browser — no download needed</p>
+        </div>
+        <span class="next-arr">→</span>
+      </a>
+      <a href="/free-resources" class="next-row">
+        <div class="next-row-text">
+          <h3>More free tools</h3>
+          <p>Practices, guides, and downloads</p>
+        </div>
+        <span class="next-arr">→</span>
+      </a>
+    </div>
+
+    <div class="signoff">
+      <p>These cards were built to open what talking alone can't reach. Use them.</p>
+      <div class="name">Juliette</div>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <a href="/cards">Back to the cards page</a> &nbsp;·&nbsp; <a href="mailto:support@feelfullyyou.com">support@feelfullyyou.com</a>
+</footer>
+
+</body>
+</html>

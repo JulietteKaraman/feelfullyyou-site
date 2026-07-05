@@ -394,6 +394,73 @@ Juliette
 ---
 
 # ═══════════════════════════════════════════════════════════
+# SEQUENCE 7 — CARDS BUYER WELCOME
+# Kit name: Create new sequence "Cards Buyer Welcome"
+# Trigger: Stripe purchase of any digital cards tier — fires via webhook automatically
+# IMPORTANT: After creating in Kit, report all 3 sequence IDs below so the webhook can be updated:
+#   cards-trust-repair tag (20896673) → this sequence
+#   cards-one-deck tag (20896674) → this sequence
+#   cards-full-bundle tag (20896675) → this sequence
+# NOTE: [CARDS APP LINK] = the paid deck URL — Juliette to confirm before activating
+# ═══════════════════════════════════════════════════════════
+
+## Email 1  |  Delay: 0 days (send immediately)
+**Subject:** Your cards are ready — here's your access
+
+Hi [First Name],
+
+Here's your link: [CARDS APP LINK]
+
+It works in any browser. No download. Bookmark it so you can come back whenever you want to use them.
+
+The first time, you'll probably spend five minutes reading cards before you've even started. That's part of it.
+
+When you're ready to use them with someone: one card, 15 minutes, three responses only — "Thank you. Clarify that. Summarise that." That structure is what makes the difference between a conversation that goes somewhere and one that doesn't.
+
+Juliette
+
+---
+
+## Email 2  |  Delay: 3 days
+**Subject:** What usually happens in the first session
+
+Hi [First Name],
+
+Three days in.
+
+The people who get the most from the cards do one thing differently from the ones who don't: they stay with the same card for the full 15 minutes.
+
+The instinct is to pick another card as soon as one person has answered. Resist it. Let the second person answer the same prompt. Then sit with what came up before moving on.
+
+The card itself is just a door. The room behind it is the point.
+
+If you're using the Trust & Repair deck specifically — those cards can bring up things that have been waiting a long time. Go gently. You don't have to resolve anything in one sitting.
+
+Juliette
+
+---
+
+## Email 3  |  Delay: 10 days
+**Subject:** The question that changes how you use them
+
+Hi [First Name],
+
+Ten days.
+
+The question I get most from people who've been using the cards for a week or two: "Should we use them when things are good, or only when something needs to be addressed?"
+
+Both. That's the answer.
+
+The cards aren't a repair tool. They're a practice. The couples who use them when things are already good have a completely different resource available when things get harder. They've already built the habit of being in a room together this way.
+
+If you'd like to go deeper in how you communicate — or if you're working through something that needs more than a card can hold — my one-to-one work is here: https://feelfullyyou.com/work-with-me
+
+Juliette
+
+
+---
+
+# ═══════════════════════════════════════════════════════════
 # KIERA'S PASTE CHECKLIST
 # ═══════════════════════════════════════════════════════════
 
@@ -402,7 +469,8 @@ Juliette
 - [ ] Create new sequence "When She Goes Quiet Welcome" — 3 emails (delays: 0, 3, 7 days) → set ACTIVE
 - [ ] Sequence 4 rename to "Touch Point Member Welcome" — 3 emails (delays: 0, 3, 10 days) → set ACTIVE
 - [ ] Sequence 5 "Re-engagement Sequence" — 2 emails (delays: 0, 5 days) → set ACTIVE
-- [ ] Create new sequence "Grief Duality Process Welcome" — 3 emails (delays: 0, 3, 7 days) → fill [GRIEF PROCESS LINK] → set ACTIVE → tell Juliette the sequence ID
+- [ ] Create new sequence "Grief Duality Process Welcome" — 3 emails (delays: 0, 3, 7 days) → set ACTIVE → tell Juliette the sequence ID
+- [ ] Create new sequence "Cards Buyer Welcome" — 3 emails (delays: 0, 3, 10 days) → fill [CARDS APP LINK] → set ACTIVE → tell Juliette the sequence ID
 
 ## ManyChat → Kit connection (Kiera does this in ManyChat UI)
 - [ ] ManyChat → Settings → Integrations → Kit → enter Kit API key (Juliette has it)
