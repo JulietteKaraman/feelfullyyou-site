@@ -3,11 +3,12 @@ exports.handler = async function(event) {
     return { statusCode: 405, body: 'Method Not Allowed' };
   }
 
-  let email, tag;
+  let email, firstName, tagIds;
   try {
     const body = JSON.parse(event.body);
     email = body.email;
-    tag   = body.tag || 'website';
+    firstName = body.firstName || '';
+    tagIds = body.tagIds || [];
   } catch {
     return { statusCode: 400, body: JSON.stringify({ error: 'Invalid JSON' }) };
   }
@@ -22,29 +23,40 @@ exports.handler = async function(event) {
   }
 
   try {
-    const res = await fetch('https://api.kit.com/v4/subscribers', {
+    // Create/update subscriber
+    const subRes = await fetch('https://api.kit.com/v4/subscribers', {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${apiKey}`,
+        'X-Kit-Api-Key': apiKey,
         'Content-Type': 'application/json',
-        'X-Kit-Api-Key': apiKey
+        'Accept': 'application/json'
       },
       body: JSON.stringify({
         email_address: email,
-        tags: [{ name: tag }]
+        first_name: firstName
       })
     });
 
-    if (!res.ok && res.status !== 409) {
-      const err = await res.text();
-      console.error('Kit error:', err);
-      return { statusCode: 502, body: JSON.stringify({ error: 'Kit error' }) };
+    const subData = await subRes.json();
+    const subscriberId = subData?.subscriber?.id;
+
+    // Add each tag
+    for (const tagId of tagIds) {
+      await fetch(`https://api.kit.com/v4/tags/${tagId}/subscribers`, {
+        method: 'POST',
+        headers: {
+          'X-Kit-Api-Key': apiKey,
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({ email_address: email })
+      });
     }
 
     return {
       statusCode: 200,
-      headers: { 'Access-Control-Allow-Origin': '*' },
-      body: JSON.stringify({ ok: true })
+      headers: { 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json' },
+      body: JSON.stringify({ ok: true, subscriberId })
     };
   } catch (err) {
     console.error('Subscribe error:', err);

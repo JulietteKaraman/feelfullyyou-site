@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your 10 Touch Rituals — Feel Fully You</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #070707;
+      --cream: #fefcfa;
+      --green: #0D3535;
+      --gold: #A88538;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--cream);
+      color: var(--black);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 24px;
+    }
+    .logo {
+      font-family: 'Poppins', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 48px;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid rgba(13,53,53,0.1);
+      border-radius: 4px;
+      padding: 48px 40px;
+      max-width: 480px;
+      width: 100%;
+      text-align: center;
+    }
+    .tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid var(--gold);
+      padding: 4px 12px;
+      border-radius: 2px;
+      margin-bottom: 24px;
+    }
+    h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 28px;
+      font-weight: 600;
+      color: var(--green);
+      line-height: 1.25;
+      margin-bottom: 16px;
+    }
+    .sub {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+    .divider {
+      width: 40px;
+      height: 2px;
+      background: var(--gold);
+      margin: 0 auto 32px;
+    }
+    label {
+      display: block;
+      text-align: left;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 6px;
+    }
+    input {
+      width: 100%;
+      padding: 14px 16px;
+      font-size: 15px;
+      font-family: 'Inter', sans-serif;
+      border: 1px solid rgba(13,53,53,0.25);
+      border-radius: 3px;
+      background: var(--cream);
+      color: var(--black);
+      margin-bottom: 16px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    input:focus { border-color: var(--green); }
+    button {
+      width: 100%;
+      padding: 16px;
+      background: var(--green);
+      color: var(--cream);
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: background 0.2s, opacity 0.2s;
+      margin-top: 4px;
+    }
+    button:hover { background: #0a2828; }
+    button:disabled { opacity: 0.6; cursor: not-allowed; }
+    .note {
+      font-size: 12px;
+      color: #888;
+      margin-top: 16px;
+      line-height: 1.5;
+    }
+    .error {
+      color: #c0392b;
+      font-size: 13px;
+      margin-top: 8px;
+      display: none;
+    }
+    @media (max-width: 520px) {
+      .card { padding: 36px 24px; }
+      h1 { font-size: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">Feel Fully You</div>
+
+  <div class="card">
+    <div class="tag">Confidence Magazine</div>
+    <h1>Your 10 Touch Rituals</h1>
+    <div class="divider"></div>
+    <p class="sub">Enter your details below and your rituals land in your inbox immediately.</p>
+
+    <form id="form">
+      <label for="firstName">First name</label>
+      <input type="text" id="firstName" name="firstName" placeholder="Your first name" required>
+
+      <label for="email">Email address</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+      <button type="submit" id="btn">Send me the rituals</button>
+      <p class="error" id="err">Something went wrong. Please try again.</p>
+    </form>
+
+    <p class="note">Your details are safe. No spam, ever.</p>
+  </div>
+
+  <script>
+    document.getElementById('form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const btn = document.getElementById('btn');
+      const err = document.getElementById('err');
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+      err.style.display = 'none';
+
+      const email = document.getElementById('email').value.trim();
+      const firstName = document.getElementById('firstName').value.trim();
+
+      try {
+        const res = await fetch('/.netlify/functions/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            email,
+            firstName,
+            tagIds: [20895627, 20794257] // confidence-magazine-reader, 10touchrituals
+          })
+        });
+
+        if (res.ok) {
+          window.location.href = '/confidence-thankyou';
+        } else {
+          throw new Error('Failed');
+        }
+      } catch {
+        err.style.display = 'block';
+        btn.disabled = false;
+        btn.textContent = 'Send me the rituals';
+      }
+    });
+  </script>
+</body>
+</html>
