@@ -97,7 +97,7 @@
     fetch('/.netlify/functions/subscribe', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({email, tag: 'free-cards-taster'})
+      body: JSON.stringify({email, tagIds: [20896609], sequenceId: 2812534})
     }).catch(() => {});
 
     await new Promise(r => setTimeout(r, 600));
