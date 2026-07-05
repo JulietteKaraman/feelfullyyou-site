@@ -5,49 +5,72 @@
 //   KIT_API_SECRET        — your Kit API secret
 //   STRIPE_WEBHOOK_SECRET — from Stripe → Developers → Webhooks (starts with whsec_)
 
+const crypto = require('crypto');
+
+function verifyStripeSignature(rawBody, sigHeader, secret) {
+  const parts = sigHeader.split(',').reduce((acc, part) => {
+    const [k, v] = part.split('=');
+    acc[k] = v;
+    return acc;
+  }, {});
+  const timestamp = parts['t'];
+  const sig = parts['v1'];
+  if (!timestamp || !sig) return false;
+  // Reject events older than 5 minutes
+  if (Math.abs(Date.now() / 1000 - Number(timestamp)) > 300) return false;
+  const expected = crypto
+    .createHmac('sha256', secret)
+    .update(`${timestamp}.${rawBody}`)
+    .digest('hex');
+  return crypto.timingSafeEqual(Buffer.from(expected), Buffer.from(sig));
+}
+
 const KIT_V3 = 'https://api.convertkit.com/v3';
 
 // ─── PRODUCT MAP ─────────────────────────────────────────────────────────────
 // Map Stripe price_id → Kit tag ID + sequence ID
-// HOW TO FIND YOUR STRIPE PRICE IDs:
-//   Stripe dashboard → Products → click product → copy "Price ID" (starts with price_)
-// Then replace the placeholder keys below with your real price IDs.
+//
+// IMPORTANT — each Stripe payment link also needs metadata set:
+//   Stripe → Payment Links → click link → Metadata → add key: price_id, value: <price_id below>
+//
+// One Touch: product exists (prod_TMpi5kaSnhGD1d) but has NO price yet.
+//   → Create a £97 price in Stripe → Products → One Touch, then add it here.
 const PRODUCT_MAP = {
-  'REPLACE_price_10touchrituals': {
+  'price_1Tlpu0CCw18geY15b8J3jlBW': {
     tagId: 20794257,   // "10touchrituals"
     sequenceId: 2812534,
     label: '10 Touch Rituals £7'
   },
-  'REPLACE_price_31touchpoints': {
+  'price_1TlpvDCCw18geY15wlpzVg4f': {
     tagId: 20794225,   // "31 daily touch points"
     sequenceId: 2812534,
     label: '31 Daily Touch Points £19'
   },
-  'REPLACE_price_touchpoint': {
+  'price_1TghjICCw18geY15V4AkohbE': {
     tagId: 20794281,   // "touchpoint"
     sequenceId: 2812591,
     label: 'Touch Point Membership £97/mo'
   },
-  'REPLACE_price_distance': {
+  'price_1TnxAqCCw18geY153w22a2Ye': {
     tagId: 20794292,   // "the unspoken distance"
     sequenceId: 2812534,
     label: 'Unspoken Distance £97'
   },
-  'REPLACE_price_crk': {
+  'price_1TnwwmCCw18geY15egD5h7Fr': {
     tagId: 20794295,   // "the communication reboot kit"
     sequenceId: 2812534,
     label: 'Communication Reboot Kit £37'
   },
-  'REPLACE_price_connect': {
+  'price_1To2MZCCw18geY15DzT0iv5A': {
     tagId: 20794287,   // "essence day sept 26"
     sequenceId: 2812534,
     label: 'CONNECT With Essence £247'
   },
-  'REPLACE_price_onetouch': {
-    tagId: 20794312,   // "one touch"
-    sequenceId: 2812534,
-    label: 'One Touch £97'
-  }
+  // 'REPLACE_price_onetouch': {  ← add once you create a £97 price on prod_TMpi5kaSnhGD1d
+  //   tagId: 20794312,   // "one touch"
+  //   sequenceId: 2812534,
+  //   label: 'One Touch £97'
+  // }
 };
 
 async function addToKit(email, firstName, tagId, sequenceId, apiSecret) {
@@ -83,9 +106,16 @@ exports.handler = async function(event) {
   }
 
   const apiSecret = process.env.KIT_API_SECRET;
-  if (!apiSecret) {
-    console.error('KIT_API_SECRET env var not set');
+  const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
+  if (!apiSecret || !webhookSecret) {
+    console.error('KIT_API_SECRET or STRIPE_WEBHOOK_SECRET env var not set');
     return { statusCode: 500, body: 'Server not configured' };
+  }
+
+  const sigHeader = event.headers['stripe-signature'] || '';
+  if (!verifyStripeSignature(event.body, sigHeader, webhookSecret)) {
+    console.error('Invalid Stripe signature');
+    return { statusCode: 400, body: 'Invalid signature' };
   }
 
   let stripeEvent;
