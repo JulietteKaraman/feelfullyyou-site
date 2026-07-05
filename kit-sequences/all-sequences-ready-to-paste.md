@@ -394,7 +394,49 @@ Juliette
 ---
 
 # ═══════════════════════════════════════════════════════════
-# SEQUENCE 7 — CARDS BUYER WELCOME
+# SEQUENCE 7 — RELATIONSHIP PATTERN SESSION CONFIRMATION
+# Kit name: Create new sequence "Pattern Session Confirmation"
+# Trigger: Stripe purchase of Pattern Session (£597) — fires via webhook automatically
+# Tag: pattern-session-buyer (20896797)
+# NOTE: After creating in Kit, tell Juliette the sequence ID
+# ═══════════════════════════════════════════════════════════
+
+## Email 1  |  Delay: 0 days (send immediately)
+**Subject:** Your session is booked — next steps
+
+Hi [First Name],
+
+You're in.
+
+I'll be in touch within 24 hours to confirm your date and time. If you haven't heard from me by then, please check your spam folder or email me directly: juliette@feelfullyyou.com
+
+Between now and our session, one thing I'd ask: notice what comes up when you think about the pattern we'll be working with. Not to analyse it — just to notice. The body will already be preparing.
+
+I'm looking forward to being in the room with you.
+
+Juliette
+
+---
+
+## Email 2  |  Delay: 2 days
+**Subject:** Before we meet
+
+Hi [First Name],
+
+Two things before we sit down together.
+
+The first: there's nothing you need to prepare or read. You don't have to arrive with answers or a clear articulation of what's happening. If you could say it clearly, it probably wouldn't still be a pattern.
+
+The second: if anything has shifted since you booked — if you're feeling relief, resistance, or something you can't quite name — that's useful information. Bring it with you.
+
+I'll meet you exactly where you are.
+
+Juliette
+
+---
+
+# ═══════════════════════════════════════════════════════════
+# SEQUENCE 8 — CARDS BUYER WELCOME
 # Kit name: Create new sequence "Cards Buyer Welcome"
 # Trigger: Stripe purchase of any digital cards tier — fires via webhook automatically
 # IMPORTANT: After creating in Kit, report all 3 sequence IDs below so the webhook can be updated:
@@ -470,6 +512,7 @@ Juliette
 - [ ] Sequence 4 rename to "Touch Point Member Welcome" — 3 emails (delays: 0, 3, 10 days) → set ACTIVE
 - [ ] Sequence 5 "Re-engagement Sequence" — 2 emails (delays: 0, 5 days) → set ACTIVE
 - [ ] Create new sequence "Grief Duality Process Welcome" — 3 emails (delays: 0, 3, 7 days) → set ACTIVE → tell Juliette the sequence ID
+- [ ] Create new sequence "Pattern Session Confirmation" — 2 emails (delays: 0, 2 days) → set ACTIVE → tell Juliette the sequence ID
 - [ ] Create new sequence "Cards Buyer Welcome" — 3 emails (delays: 0, 3, 10 days) → fill [CARDS APP LINK] → set ACTIVE → tell Juliette the sequence ID
 
 ## ManyChat → Kit connection (Kiera does this in ManyChat UI)

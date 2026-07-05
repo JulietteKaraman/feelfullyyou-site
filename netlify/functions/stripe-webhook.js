@@ -44,7 +44,12 @@ const PRODUCT_MAP = {
   'price_1TlpvDCCw18geY15wlpzVg4f': {
     tagId: 20794225,   // "31 daily touch points"
     sequenceId: 2812534,
-    label: '31 Daily Touch Points £19'
+    label: '31 Daily Touch Points £19 (tripwire)'
+  },
+  'price_1TiBhLCCw18geY15dLECqNFr': {
+    tagId: 20794225,   // "31 daily touch points"
+    sequenceId: 2812534,
+    label: '31 Daily Touch Points £27 (standalone)'
   },
   'price_1TghjICCw18geY15V4AkohbE': {
     tagId: 20794281,   // "touchpoint"
@@ -70,6 +75,12 @@ const PRODUCT_MAP = {
     tagId: 20794312,   // "one touch"
     sequenceId: 2812534,
     label: 'One Touch £97'
+  },
+  // ─── PATTERN SESSION ────────────────────────────────────────────────────────
+  'price_1TpnUaCCw18geY15x9owuBBk': {
+    tagId: 20896797,   // "pattern-session-buyer"
+    sequenceId: null,
+    label: 'Relationship Pattern Session £597'
   },
   // ─── CARDS DIGITAL ──────────────────────────────────────────────────────────
   // sequenceId: null until Kiera creates "Cards Buyer Welcome" sequence in Kit
