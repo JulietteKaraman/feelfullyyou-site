@@ -3,44 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Relationship Pattern Session. Juliette Karaman</title>
+<title>The Relationship Pattern Session — Juliette Karaman</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --cream:#fefcfa;
-    --cream-2:#f6f4f1;
-    --paper:#fdfbf8;
-    --ink:#1c1714;
-    --brown:#5d4a33;
-    --gold:#a88538;
-    --gold-deep:#99680c;
-    --gold-soft:#b4a074;
-    --gold-pale:#ddc98e;
-    --teal:#0d3535;
-    --teal-deep:#061a1a;
-    --line:#e3dccf;
-    --line-dark:#1d3a39;
-    --max:1140px;
-    --display:'Poppins',system-ui,sans-serif;
-    --body:'Inter',system-ui,sans-serif;
-    --t-xs:0.78rem;
-    --t-sm:0.94rem;
-    --t-base:1.0625rem;
-    --t-md:1.2rem;
-    --t-lg:1.5rem;
-    --t-xl:2.05rem;
-    --t-2xl:2.75rem;
-    --t-3xl:3.6rem;
+    --cream:#fefcfa;--cream-2:#f6f4f1;--paper:#fdfbf8;--ink:#1c1714;--brown:#5d4a33;
+    --gold:#a88538;--gold-deep:#99680c;--gold-soft:#b4a074;--gold-pale:#ddc98e;
+    --teal:#0d3535;--teal-deep:#061a1a;--line:#e3dccf;--line-dark:#1d3a39;
+    --max:1140px;--display:'Poppins',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;
+    --t-xs:0.78rem;--t-sm:0.94rem;--t-base:1.0625rem;--t-md:1.2rem;--t-lg:1.5rem;
+    --t-xl:2.05rem;--t-2xl:2.75rem;--t-3xl:3.6rem;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   body{background:var(--cream);color:var(--brown);font-family:var(--body);font-size:var(--t-base);font-weight:400;line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden;letter-spacing:-.003em}
   ::selection{background:var(--gold);color:#fff}
-  a{color:inherit}
-  img{max-width:100%;display:block}
-  p{max-width:62ch}
+  a{color:inherit}img{max-width:100%;display:block}p{max-width:62ch}
   .wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
   .narrow{max-width:720px;margin:0 auto;padding:0 28px}
   section{position:relative}
@@ -49,8 +29,7 @@
   h1,h2{line-height:1.06;letter-spacing:-.022em}
   h2{font-size:clamp(2rem,4.8vw,var(--t-2xl));margin-bottom:26px}
   h3{font-size:var(--t-lg);line-height:1.18;letter-spacing:-.015em;font-weight:600}
-  em{font-style:italic}
-  strong{font-weight:700;color:var(--ink)}
+  em{font-style:italic}strong{font-weight:700;color:var(--ink)}
   .reveal{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
   .reveal.in{opacity:1;transform:none}
 
@@ -64,20 +43,10 @@
   .topbar nav a.btn{background:var(--gold);color:#fff;padding:10px 20px;border-radius:2px;font-weight:600}
   .topbar nav a.btn:hover{background:var(--gold-deep)}
   @media(max-width:860px){.topbar nav > a:not(.btn){display:none}}
-  .btn{display:inline-block;text-decoration:none;cursor:pointer;border:none;font-family:var(--body);font-weight:600;font-size:var(--t-sm);letter-spacing:.01em;padding:14px 30px;border-radius:2px;background:var(--gold);color:#fff;transition:transform .25s,background .25s;white-space:nowrap}
+  .btn{display:inline-block;text-decoration:none;cursor:pointer;border:none;font-family:var(--body);font-weight:600;font-size:var(--t-sm);letter-spacing:.01em;padding:13px 26px;border-radius:2px;background:var(--gold);color:#fff;transition:transform .25s,background .25s;white-space:nowrap}
   .btn:hover{background:var(--gold-deep);transform:translateY(-1px)}
   .btn.ghost{background:transparent;border:1px solid var(--gold);color:var(--gold-deep)}
   .btn.ghost:hover{background:var(--gold);color:#fff}
-
-  /* MOBILE NAV */
-  .ham{display:none;background:none;border:none;cursor:pointer;padding:6px;color:var(--cream)}
-  .ham svg{display:block}
-  .mobile-nav{display:none;position:fixed;top:64px;left:0;right:0;background:var(--teal);z-index:9998;padding:16px 0;border-top:1px solid rgba(255,255,255,.1);flex-direction:column}
-  .mobile-nav a{display:block;padding:13px 28px;font-size:15px;color:var(--cream);font-weight:500;font-family:var(--body);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.07)}
-  .mobile-nav a:last-child{border-bottom:none}
-  .mobile-nav a.btn{margin:14px 28px 6px;display:block;background:var(--gold);color:#fff;padding:12px 20px;border-radius:2px;font-weight:600;text-align:center;border:none}
-  .mobile-nav.open{display:flex}
-  @media(max-width:860px){.ham{display:block}.topbar nav > .btn{display:none}}
 
   /* MORE DROPDOWN */
   .more-wrap{position:relative;display:inline-flex;align-items:center}
@@ -87,54 +56,101 @@
   .dropdown a{display:block;padding:10px 18px;font-size:13px;color:var(--cream);font-weight:500;transition:background .15s,color .15s}
   .dropdown a:hover{background:var(--teal);color:var(--gold-pale)}
 
-  /* HERO */
-  .hero{padding-top:64px;position:relative;overflow:hidden}
-  .hero-photo{width:100%;max-height:700px;object-fit:cover;object-position:center top;display:block}
-  .hero-band{background:var(--teal);padding:52px 28px 56px;text-align:center}
-  .hero-band .kicker{font-family:var(--body);font-size:var(--t-xs);letter-spacing:.22em;text-transform:uppercase;color:var(--gold-pale);margin-bottom:18px}
-  .hero-band h1{font-family:var(--display);font-weight:700;font-size:clamp(2rem,5.5vw,3.4rem);color:var(--cream);line-height:1.06;letter-spacing:-.022em;max-width:22ch;margin:0 auto 14px}
-  .hero-band .sub{font-family:var(--display);font-size:clamp(16px,2.2vw,20px);font-style:italic;color:rgba(254,252,250,.7);margin:0 auto 36px;max-width:44ch;line-height:1.5;font-weight:500}
-  .hero-band .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  /* MOBILE NAV */
+  .ham{display:none;background:none;border:none;cursor:pointer;padding:6px;color:var(--cream)}
+  .ham svg{display:block}
+  .mobile-nav{display:none;position:fixed;top:64px;left:0;right:0;background:var(--teal);z-index:9998;padding:16px 0;border-top:1px solid rgba(255,255,255,.1);flex-direction:column}
+  .mobile-nav a{display:block;padding:13px 28px;font-size:15px;color:var(--cream);font-weight:500;font-family:var(--body);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.07)}
+  .mobile-nav a.btn{margin:14px 28px 6px;background:var(--gold);color:#fff;padding:12px 20px;border-radius:2px;font-weight:600;text-align:center;border:none}
+  .mobile-nav.open{display:flex}
+  @media(max-width:860px){.ham{display:block}.topbar .more-wrap{display:none}.topbar nav > .btn{display:none}}
 
-  /* OPENING */
-  .opening{padding:92px 0;border-top:1px solid var(--line)}
-  .opening p{max-width:60ch;margin-bottom:18px;color:var(--brown);font-size:var(--t-md);line-height:1.65}
-  .opening .pivot{font-family:var(--display);font-weight:700;font-size:clamp(20px,3vw,28px);color:var(--ink);max-width:34ch;margin:8px 0 26px;line-height:1.18;letter-spacing:-.02em}
+  /* HERO — split: photo left, content right */
+  .hero{padding-top:64px}
+  .hero-split{display:grid;grid-template-columns:1fr 1fr;min-height:calc(100vh - 64px)}
+  .hero-photo{background:url('/juliette-relationship-pattern.jpg') center top / cover no-repeat;min-height:560px}
+  .hero-content{background:var(--teal);display:flex;flex-direction:column;justify-content:center;padding:72px 56px}
+  .hero-kicker{font-size:var(--t-xs);letter-spacing:.22em;text-transform:uppercase;color:var(--gold-pale);margin-bottom:18px}
+  .hero-content h1{font-size:clamp(2rem,4.5vw,3.2rem);color:#fff;line-height:1.06;letter-spacing:-.022em;max-width:16ch;margin-bottom:20px}
+  .hero-content .sub{font-family:var(--display);font-size:clamp(16px,2vw,20px);font-style:italic;font-weight:500;color:rgba(254,252,250,.7);margin-bottom:36px;line-height:1.45;max-width:32ch}
+  .hero-price{font-family:var(--display);font-weight:700;font-size:2.4rem;color:#fff;margin-bottom:6px;letter-spacing:-.02em}
+  .hero-price sub{font-size:.4em;font-weight:400;color:var(--gold-pale);vertical-align:baseline}
+  .hero-note{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-pale);margin-bottom:30px;opacity:.7}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  @media(max-width:860px){
+    .hero-split{grid-template-columns:1fr}
+    .hero-photo{min-height:420px;order:-1}
+    .hero-content{padding:48px 28px}
+  }
 
-  /* WHAT THIS IS */
+  /* THESIS */
+  .thesis{padding:92px 0;border-top:1px solid var(--line)}
+  .thesis h2{max-width:20ch}
+  .thesis p{max-width:60ch;margin-bottom:18px;color:var(--brown);font-size:var(--t-md);line-height:1.65}
+  .thesis .pivot{font-weight:600;color:var(--gold-deep);font-size:clamp(19px,2.6vw,24px);margin:6px 0}
+  .thesis .closer{font-family:var(--display);font-weight:700;font-size:clamp(22px,3.4vw,32px);color:var(--ink);max-width:28ch;margin-top:30px;line-height:1.18;letter-spacing:-.02em}
+
+  /* WHAT HAPPENS */
   .method{padding:92px 0;background:var(--cream-2);border-top:1px solid var(--line)}
-  .method h2{max-width:24ch;margin-bottom:30px}
-  .method p{max-width:60ch;margin-bottom:18px;color:var(--brown);font-size:var(--t-md);line-height:1.65}
-  .method .flow{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:40px}
-  .method .flow-item{background:var(--paper);padding:28px 26px;border-left:3px solid var(--gold)}
-  .method .flow-item .step{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:10px}
-  .method .flow-item h3{font-size:17px;margin-bottom:8px;color:var(--ink)}
-  .method .flow-item p{font-size:15.5px;color:var(--brown);margin:0;max-width:none}
-  @media(max-width:640px){.method .flow{grid-template-columns:1fr}}
+  .method .split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+  .method h2{max-width:22ch}
+  .method p{max-width:58ch;margin-bottom:18px;color:var(--brown);font-size:var(--t-md);line-height:1.65}
+  .deliverables{display:flex;flex-direction:column;gap:0;border:1px solid var(--line);background:var(--paper);margin-top:12px}
+  .del{padding:22px 26px;border-bottom:1px solid var(--line);border-left:3px solid var(--gold)}
+  .del:last-child{border-bottom:none}
+  .del .label{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:7px}
+  .del h3{font-size:17px;margin-bottom:4px;color:var(--ink)}
+  .del p{font-size:15px;color:var(--brown);margin:0;max-width:none}
+  @media(max-width:800px){.method .split{grid-template-columns:1fr;gap:36px}}
 
   /* ONE PURCHASE ONLY */
-  .one-only{padding:72px 0;background:var(--ink);border-top:1px solid var(--line-dark)}
+  .one-only{background:var(--ink);padding:72px 0}
   .one-only .narrow{text-align:center}
-  .one-only .eyebrow{color:var(--gold-pale);margin-bottom:16px}
-  .one-only h2{color:var(--cream);max-width:28ch;margin:0 auto 24px}
-  .one-only p{color:rgba(254,252,250,.75);max-width:54ch;margin:0 auto;font-size:17px;line-height:1.7}
+  .one-only .eyebrow{color:var(--gold-pale);margin-bottom:18px}
+  .one-only h2{color:#fff;font-size:clamp(1.6rem,4vw,2.4rem);max-width:22ch;margin:0 auto 22px}
+  .one-only p{color:rgba(254,252,250,.72);font-size:17px;max-width:52ch;margin:0 auto;line-height:1.7}
+
+  /* WHY JULIETTE */
+  .why{padding:0;border-top:1px solid var(--line);background:var(--paper)}
+  .why .split{display:grid;grid-template-columns:.85fr 1.15fr;align-items:stretch}
+  .why .photo{background:url('/juliette-relationship-pattern.jpg') center 20% / cover no-repeat;min-height:660px}
+  .why .copy{padding:88px 56px}
+  .why .eyebrow{margin-bottom:16px}
+  .why h2{font-size:clamp(32px,5vw,52px);margin-bottom:4px}
+  .why h2 em{font-style:normal;color:var(--gold-deep)}
+  .why .intro{font-size:var(--t-md);max-width:58ch;margin:20px 0;color:var(--brown);line-height:1.65}
+  .modalities{display:flex;flex-wrap:wrap;gap:8px;margin:26px 0}
+  .modalities span{font-family:var(--body);font-weight:500;font-size:15px;color:var(--gold-deep);border:1px solid var(--gold-soft);border-radius:99px;padding:7px 16px;background:var(--cream);letter-spacing:.01em}
+  .why .story{border-left:2px solid var(--gold);padding:4px 0 4px 26px;margin:26px 0;max-width:58ch}
+  .why .story p{margin-bottom:12px;color:var(--brown);font-size:17px;max-width:none}
+  .why .story .ask{font-family:var(--body);font-style:italic;font-weight:500;color:var(--gold-deep)}
+  .why .needed{font-family:var(--display);font-weight:600;font-size:clamp(19px,2.6vw,24px);color:var(--ink);margin:6px 0 32px;max-width:30ch;line-height:1.22;letter-spacing:-.015em}
+  .press{display:flex;gap:24px;flex-wrap:wrap;align-items:center;margin:32px 0;padding:24px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .press span{font-family:var(--display);font-size:17px;color:var(--gold-soft)}
+  .press .pod{font-style:italic;color:var(--gold-deep)}
+  .why .last{font-size:17px;max-width:58ch;color:var(--brown);line-height:1.7}
+  @media(max-width:940px){
+    .why .split{grid-template-columns:1fr}
+    .why .photo{min-height:460px;order:-1}
+    .why .copy{padding:60px 28px}
+  }
 
   /* PROOF */
   .proof{padding:100px 0;border-top:1px solid var(--line);background:var(--cream)}
+  .proof .eyebrow{margin-bottom:18px}
   .proof h2{max-width:26ch;margin-bottom:36px}
-  .proof-story{background:var(--paper);border-left:3px solid var(--gold);padding:32px 36px;margin-bottom:28px;max-width:680px}
+  .proof-story{background:var(--paper);border-left:3px solid var(--gold);padding:32px 36px;margin-bottom:28px}
   .proof-story .label{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:14px}
-  .proof-story p{color:var(--brown);font-size:17px;line-height:1.7;max-width:none;margin-bottom:10px}
+  .proof-story .number{font-family:var(--display);font-weight:700;font-size:clamp(40px,6vw,64px);color:var(--gold);line-height:1;margin-bottom:12px;letter-spacing:-.02em}
+  .proof-story p{color:var(--brown);font-size:17px;line-height:1.7;max-width:58ch;margin-bottom:10px}
   .proof-story p:last-child{margin-bottom:0}
-  .proof-story .number{font-family:var(--display);font-weight:700;font-size:clamp(32px,5vw,52px);color:var(--gold);line-height:1;margin-bottom:8px}
-  .proof-quote{background:var(--teal);padding:40px 48px;margin-bottom:28px;max-width:680px}
+  .proof-quote{background:var(--teal);padding:40px 48px;margin-bottom:28px}
   .proof-quote blockquote{font-family:var(--display);font-size:clamp(16px,2.2vw,20px);font-style:italic;font-weight:500;color:var(--cream);line-height:1.65;margin-bottom:20px}
-  .proof-quote cite{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-pale);font-style:normal;font-weight:600}
+  .proof-quote cite{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-pale);font-style:normal;font-weight:600}
 
   /* FIT */
   .fit{padding:92px 0;border-top:1px solid var(--line);background:var(--cream-2)}
-  .fit-head{text-align:center;margin-bottom:8px}
-  .fit-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:24px;max-width:800px;margin-left:auto;margin-right:auto}
+  .fit-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:24px}
   .fit-col{background:var(--paper);padding:36px 32px}
   .fit-col h3{margin-bottom:22px}
   .fit-col.no h3{color:var(--gold-soft)}
@@ -150,33 +166,26 @@
   .pricing{padding:100px 0;text-align:center;background:var(--teal);border-top:1px solid var(--line-dark)}
   .pricing .eyebrow{color:var(--gold-pale);margin-bottom:16px}
   .pricing h2{color:var(--cream);max-width:28ch;margin:0 auto 8px}
-  .pricing .price-big{font-family:var(--display);font-weight:700;font-size:clamp(54px,11vw,104px);line-height:1;margin:28px 0 8px;color:#fff;letter-spacing:-.03em}
+  .pricing .price-big{font-family:var(--display);font-weight:700;font-size:clamp(54px,11vw,104px);line-height:1;margin:28px 0 6px;color:#fff;letter-spacing:-.03em}
   .pricing .price-big sub{font-size:.26em;color:var(--gold-pale);vertical-align:baseline;font-weight:400}
-  .pricing .price-note{color:rgba(254,252,250,.6);font-size:14px;margin-bottom:40px;font-style:italic}
-  .pricing .flow-note{max-width:46ch;margin:0 auto 36px;color:rgba(254,252,250,.75);font-size:16px;line-height:1.7}
-  .pricing .btn{font-size:17px;padding:18px 44px;margin-bottom:14px}
-  .pricing .couples-link{font-size:14px;color:rgba(254,252,250,.45);margin-top:16px}
-  .pricing .couples-link a{color:var(--gold-pale);text-decoration:underline;text-underline-offset:3px}
+  .pricing .price-note{color:rgba(254,252,250,.5);font-size:14px;margin-bottom:14px;font-style:italic}
+  .pricing .flow-note{max-width:44ch;margin:0 auto 36px;color:rgba(254,252,250,.72);font-size:16px;line-height:1.7}
+  .pricing .btn{font-size:16px;padding:16px 42px;margin-bottom:14px}
+  .pricing .couples-note{font-size:14px;color:rgba(254,252,250,.38);margin-top:16px}
+  .pricing .couples-note a{color:var(--gold-pale);text-decoration:underline;text-underline-offset:3px}
 
-  /* SIGNOFF */
-  .signoff-section{padding:80px 0;border-top:1px solid var(--line);background:var(--paper)}
-  .signoff-section .narrow{text-align:center}
-  .signoff-section p{color:var(--brown);font-size:17px;line-height:1.75;max-width:54ch;margin:0 auto 18px}
-  .signoff-section .name{font-family:var(--display);font-weight:600;font-size:20px;color:var(--gold-deep);margin-top:28px}
-
-  /* STICKY BAR */
+  /* STICKY */
   .sticky-buy{position:fixed;left:0;right:0;bottom:0;z-index:55;transform:translateY(120%);transition:transform .5s cubic-bezier(.2,.7,.2,1);background:var(--teal);border-top:1px solid var(--line-dark);display:flex;align-items:center;justify-content:space-between;gap:16px;padding:13px 28px}
   .sticky-buy.show{transform:none}
   .sticky-buy .nm{font-family:var(--body);font-size:15px;letter-spacing:.12em;text-transform:uppercase;color:var(--cream)}
   .sticky-buy .pr{font-size:13px;color:var(--gold-pale);font-weight:600}
 
   footer{padding:46px 0 58px;background:var(--gold);color:rgba(255,255,255,.85)}
-  footer .wrap{display:flex;flex-direction:column;gap:12px}
-  footer .brand{font-family:var(--body);letter-spacing:.34em;text-transform:uppercase;font-size:15px;color:var(--cream);display:block}
-  footer .fine{font-size:13px;max-width:72ch;line-height:1.7;color:rgba(255,255,255,.6)}
-  footer nav a{color:rgba(255,255,255,.7);font-size:13px;margin-right:20px;text-decoration:none}
+  footer .brand{font-family:var(--body);letter-spacing:.34em;text-transform:uppercase;font-size:15px;color:var(--cream);margin-bottom:18px;display:block}
+  footer .fine{font-size:13px;max-width:72ch;line-height:1.7;color:rgba(255,255,255,.55)}
+  footer nav{margin-bottom:18px}
+  footer nav a{color:rgba(255,255,255,.75);font-size:13px;margin-right:20px;text-decoration:none}
   footer nav a:hover{color:#fff}
-
   @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}.reveal{opacity:1;transform:none}}
 </style>
 </head>
@@ -192,7 +201,7 @@
   <nav>
     <a href="/">Home</a>
     <div class="more-wrap" id="workWrap">
-      <a href="/work-with-me">Work With Me</a><button onclick="document.getElementById('workWrap').classList.toggle('open')" aria-label="Sub-pages" style="background:none;border:none;cursor:pointer;color:var(--cream);padding:0 0 0 5px;display:inline-flex;align-items:center;transition:color .2s"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg></button>
+      <a href="/work-with-me">Work With Me</a><button onclick="document.getElementById('workWrap').classList.toggle('open')" aria-label="Sub-pages" style="background:none;border:none;cursor:pointer;color:var(--cream);padding:0 0 0 5px;display:inline-flex;align-items:center"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg></button>
       <div class="dropdown">
         <a href="/for-her">For Her</a>
         <a href="/for-him">For Him</a>
@@ -203,7 +212,7 @@
     <a href="/cards">The Cards</a>
     <a href="/shop">Shop</a>
     <div class="more-wrap" id="moreWrap">
-      <button onclick="document.getElementById('moreWrap').classList.toggle('open')" style="background:none;border:none;cursor:pointer;font-size:14px;color:var(--cream);font-weight:500;font-family:var(--body);display:flex;align-items:center;gap:5px;padding:0;transition:color .2s">More <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg></button>
+      <button onclick="document.getElementById('moreWrap').classList.toggle('open')" style="background:none;border:none;cursor:pointer;font-size:14px;color:var(--cream);font-weight:500;font-family:var(--body);display:flex;align-items:center;gap:5px;padding:0">More <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg></button>
       <div class="dropdown">
         <a href="/free-resources">Free Resources</a>
         <a href="/grief-duality-process">Grief Process</a>
@@ -234,54 +243,67 @@
 
 <!-- HERO -->
 <header class="hero">
-  <img class="hero-photo" src="/juliette-relationship-pattern.jpg" alt="Juliette Karaman">
-  <div class="hero-band">
-    <p class="kicker">with Juliette Karaman</p>
-    <h1>The Relationship Pattern Session</h1>
-    <p class="sub">One hour. Just you. The pattern named.</p>
-    <div class="cta-row">
-      <a href="https://buy.stripe.com/fZuaEWbCjdhm99P0Ut0co0N" class="btn" target="_blank">Book Your Session — £597</a>
+  <div class="hero-split">
+    <div class="hero-photo"></div>
+    <div class="hero-content">
+      <p class="hero-kicker">with Juliette Karaman</p>
+      <h1>The Relationship Pattern Session</h1>
+      <p class="sub">One hour. Just you. The pattern named.</p>
+      <div class="hero-price"><sub>£</sub>597</div>
+      <p class="hero-note">One session. One purchase. Pay first, then book.</p>
+      <div class="hero-cta">
+        <a href="https://buy.stripe.com/fZuaEWbCjdhm99P0Ut0co0N" class="btn" target="_blank">Book Your Session</a>
+        <a href="#what" class="btn ghost" style="border-color:rgba(254,252,250,.4);color:var(--cream)">What this is</a>
+      </div>
     </div>
   </div>
 </header>
 
-<!-- OPENING -->
-<section class="opening">
+<!-- THESIS -->
+<section class="thesis">
   <div class="narrow">
-    <p class="reveal">You have been trying to figure this out.</p>
+    <h2 class="reveal">You have been trying to figure this out.</h2>
     <p class="reveal">Reading. Listening. Turning it over at 2am, looking for the thing that explains why something that should feel close keeps feeling distant. You know your relationship better than anyone. You still cannot name what is actually wrong.</p>
     <p class="pivot reveal">That is not a lack of effort. That is the nature of patterns. They are hardest to see from inside them.</p>
+    <p class="reveal">One hour. I name the pattern. You leave with something specific — not a concept, a tool you have already practiced before we finish.</p>
+    <p class="closer reveal">And you know exactly what you are dealing with.</p>
   </div>
 </section>
 
-<!-- WHAT THIS IS -->
+<!-- WHAT HAPPENS -->
 <section class="method" id="what">
-  <div class="narrow">
-    <div class="eyebrow reveal">What this is</div>
-    <h2 class="reveal">One hour. The pattern named. Something real in your hands.</h2>
-    <p class="reveal">One hour on Zoom. Just you. Your partner does not need to be there, and you do not need their agreement to come.</p>
-    <p class="reveal">You tell me the story. I listen to how you tell it — what you move past quickly, what slows down, where your body shifts before your words do. I ask what I need. I work somatically, which means I am reading what your nervous system is doing, not just what your mind is saying.</p>
-    <p class="reveal">By the end of the hour, you will know what the pattern is. I will name it plainly. I will tell you what changes it — not in general, but for your relationship specifically. And I will give you one thing you can use tonight. A tool we use together in the session, so you leave with it already in your body.</p>
-    <div class="flow reveal">
-      <div class="flow-item">
-        <div class="step">After the session</div>
-        <h3>Recording</h3>
-        <p>Full recording of the hour, yours to keep.</p>
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <div class="eyebrow reveal">What this is</div>
+        <h2 class="reveal">One hour of the most specific work you have ever done on your relationship.</h2>
+        <p class="reveal">One hour on Zoom. Just you. Your partner does not need to be there, and you do not need their agreement to come.</p>
+        <p class="reveal">You tell me the story. I listen to how you tell it — what you move past quickly, what slows down, where your body shifts before your words do. I ask what I need. I work somatically, which means I am reading what your nervous system is doing, not just what your mind is saying.</p>
+        <p class="reveal">By the end of the hour you will know what the pattern is. I will name it plainly. I will tell you what changes it — not in general, but for your relationship specifically.</p>
       </div>
-      <div class="flow-item">
-        <div class="step">After the session</div>
-        <h3>Written summary</h3>
-        <p>The pattern named. Three things that shift it. Clear direction on what to do next.</p>
-      </div>
-      <div class="flow-item">
-        <div class="step">In the session</div>
-        <h3>Touch Base® anchor</h3>
-        <p>A somatic grounding tool practiced together so you leave with it already in your body.</p>
-      </div>
-      <div class="flow-item">
-        <div class="step">If you want more</div>
-        <h3>Clear next step</h3>
-        <p>Whether that is solo work, something to bring your partner, or a deeper container — named at the end of the session.</p>
+      <div>
+        <div class="deliverables">
+          <div class="del reveal">
+            <div class="label">In the session</div>
+            <h3>Touch Base® anchor</h3>
+            <p>A somatic grounding tool practiced together. You leave with it already in your body — not as homework, as something you have done.</p>
+          </div>
+          <div class="del reveal">
+            <div class="label">After the session</div>
+            <h3>Full recording</h3>
+            <p>The whole hour, yours to keep.</p>
+          </div>
+          <div class="del reveal">
+            <div class="label">After the session</div>
+            <h3>Written summary</h3>
+            <p>The pattern named. Three things that shift it. Clear direction on what to do next — whether that is solo work, something to bring your partner, or a container to go deeper in.</p>
+          </div>
+          <div class="del reveal">
+            <div class="label">One session only</div>
+            <h3>No follow-on programme</h3>
+            <p>You come in, we do the work, you leave with something real. If you want to go deeper, that conversation happens at the end of the hour. No pressure, no hidden next step.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -290,9 +312,47 @@
 <!-- ONE PURCHASE ONLY -->
 <section class="one-only">
   <div class="narrow">
-    <div class="eyebrow reveal">One purchase only</div>
-    <h2 class="reveal">This is not the beginning of a programme.</h2>
-    <p class="reveal">You do not book a second one. You come in, we do the work, you leave with something real. If you want to go deeper — into The Beginning, my couples container, or an Intensive — that conversation happens at the end of the session. There is no pressure. There is also no ambiguity: one hour, one session, one purchase.</p>
+    <div class="eyebrow reveal">Important</div>
+    <h2 class="reveal">One purchase only. This is not the start of a programme.</h2>
+    <p class="reveal">You cannot book a second session. You come in, we do the work, you leave with something real. One hour, one session, one purchase. The work is that specific. The result is that clear.</p>
+  </div>
+</section>
+
+<!-- WHY JULIETTE -->
+<section class="why">
+  <div class="split">
+    <div class="photo reveal"></div>
+    <div class="copy">
+      <div class="eyebrow reveal">Why me</div>
+      <h2 class="reveal">I'm <em>Juliette.</em></h2>
+      <p class="intro reveal">I have spent 27 years learning to read what the body holds before the mind knows to say it. Fifteen of those years working specifically with couples and relationship patterns — people who love each other and cannot understand why that love keeps turning into distance, silence, or war.</p>
+      <p class="intro reveal">Before I was the practitioner in that room, I was the woman on the other side of it. I know what it feels like to pull away and have no language for why. To perform closeness because the real thing felt too far to access. To love someone and still feel unreachable.</p>
+      <p class="intro reveal">It took me years to understand what I was braced against, what I needed and had never been given, and what structure would have changed everything. So I followed my own wound into every room it needed to understand.</p>
+      <div class="modalities reveal">
+        <span>EMDR</span><span>Somatic experiencing</span><span>Spinal attunement</span><span>Touch Base®</span><span>Touch Languages™</span><span>Deep PEAT</span><span>Hypnotherapy</span><span>Tantra</span>
+      </div>
+      <p class="needed reveal">I did not collect these. I needed every single one.</p>
+
+      <div class="story reveal">
+        <p>When my own marriage ended, my ex-husband and I sat down together — before any lawyers — and decided everything. The houses, the money, the life we had built, how our children would move between us. By the time we reached the lawyers, there was nothing left to fight over. Our children never had to choose sides.</p>
+        <p>Fifteen years later, we spend Christmas together. Birthdays together. Every time we are at a table together, someone pulls me aside and asks: <span class="ask">how did you do that?</span></p>
+        <p>Structure. Not the absence of pain — a container strong enough to hold it without destroying everything else.</p>
+      </div>
+
+      <p class="needed reveal" style="max-width:34ch">I know what she cannot yet tell you. I know what the ending does not have to look like. And I can translate both in one hour.</p>
+
+      <div class="press reveal">
+        <span>Forbes</span>
+        <span>The Times</span>
+        <span>Telegraph</span>
+        <span>ITV</span>
+        <span>Marie Claire</span>
+        <span>NBC</span>
+        <span class="pod">The Scrumptious Woman — top 2.5% globally</span>
+      </div>
+
+      <p class="last reveal"><strong>I have been where you are, in all of it — and I came out with my family intact, my children whole, and the man I was married to still one of my closest people.</strong> That is not luck. That is what happens when the work is specific, honest, and done in the body rather than just the mind.</p>
+    </div>
   </div>
 </section>
 
@@ -301,7 +361,6 @@
   <div class="narrow">
     <div class="eyebrow reveal">What becomes possible in one session</div>
     <h2 class="reveal">Two people. Two different situations. One hour each.</h2>
-
     <div class="proof-story reveal">
       <div class="label">Client, 2026 — anonymous</div>
       <div class="number">9 → 2</div>
@@ -309,7 +368,6 @@
       <p>Within one hour, he was at a 2.</p>
       <p>Not because we talked about it for long enough. Because we worked where it actually lives.</p>
     </div>
-
     <div class="proof-quote reveal">
       <blockquote>"Juliette, your gift is beyond words. It's a feeling. I have seen countless healers and no one has even come close to touching the deep inner wall I had up from trauma as a teen. I am blessed to have you in my life, to experience first hand your magic and love. Every woman deserves to be freed from trauma. You are a beautiful conduit for channelling the words, energy and release to trapped memories. Thank you for sharing it."</blockquote>
       <cite>Jenny Bitner — COO, Mexico</cite>
@@ -320,11 +378,9 @@
 <!-- FOR / NOT FOR -->
 <section class="fit">
   <div class="narrow">
-    <div class="fit-head">
-      <div class="eyebrow reveal">Is this for you?</div>
-    </div>
+    <div class="eyebrow reveal" style="margin-bottom:8px">Is this for you?</div>
     <div class="fit-grid">
-      <div class="fit-col no">
+      <div class="fit-col no reveal">
         <h3>This is not for you if</h3>
         <ul>
           <li>You are in active mental health crisis — please contact a therapist</li>
@@ -333,13 +389,13 @@
           <li>You are not ready to hear a clear and honest answer</li>
         </ul>
       </div>
-      <div class="fit-col yes">
+      <div class="fit-col yes reveal">
         <h3>This is for you if</h3>
         <ul>
           <li>Something is off and you cannot name it</li>
           <li>You have been trying to understand this for longer than feels reasonable</li>
           <li>You are ready to know — even if what you hear is hard</li>
-          <li>You want to walk away from one hour with something real</li>
+          <li>You want to walk away from one hour with something real in your hands</li>
         </ul>
       </div>
     </div>
@@ -351,26 +407,17 @@
   <div class="eyebrow reveal">One session. One purchase.</div>
   <h2 class="reveal">The Relationship Pattern Session</h2>
   <div class="price-big reveal"><sub>£</sub>597</div>
-  <p class="price-note">One-time. Pay first, then book.</p>
-  <p class="flow-note reveal">After payment you receive a booking link and a pre-session questionnaire. Your answers shape the hour — take your time with them.</p>
-  <a href="https://buy.stripe.com/fZuaEWbCjdhm99P0Ut0co0N" class="btn" target="_blank" rel="noopener">Book Your Session — £597</a>
-  <p class="couples-link">Working through this together? <a href="mailto:juliette@feelfullyyou.com">Email Juliette</a> about the couples version — 90 minutes, £997.</p>
+  <p class="price-note">One-time payment. Pay first, then book your date.</p>
+  <p class="flow-note reveal">After payment you receive a TidyCal booking link and a pre-session questionnaire. Your answers shape the hour — take your time with them.</p>
+  <a href="https://buy.stripe.com/fZuaEWbCjdhm99P0Ut0co0N" class="btn reveal" target="_blank" rel="noopener">Book Your Session — £597</a>
+  <p class="couples-note">For both of you together: <a href="mailto:juliette@feelfullyyou.com">email Juliette</a> about the 90-minute couples version — £997.</p>
 </section>
 
-<!-- SIGN OFF -->
-<section class="signoff-section">
-  <div class="narrow">
-    <p class="reveal"><em>I have spent 27 years learning to read what the body holds before the mind knows to say it. Fifteen of those years working specifically with couples and relationship patterns.</em></p>
-    <p class="reveal"><em>Everything I do in a session — the questions I ask, the places I pause, the moment I introduce a tool — comes from that. You will feel the difference.</em></p>
-    <p class="name reveal">Warmly, Juliette</p>
-  </div>
-</section>
-
-<!-- STICKY BAR -->
+<!-- STICKY -->
 <div class="sticky-buy" id="stickyBar">
   <div>
     <div class="nm">The Relationship Pattern Session</div>
-    <div class="pr">£597 — One session only</div>
+    <div class="pr">£597 — one session only</div>
   </div>
   <a href="https://buy.stripe.com/fZuaEWbCjdhm99P0Ut0co0N" class="btn" target="_blank" rel="noopener">Book Now</a>
 </div>
@@ -385,43 +432,30 @@
       <a href="/about">About</a>
       <a href="/contact">Contact</a>
     </nav>
-    <p class="fine">© 2026 Feel Fully You. Juliette Karaman. All rights reserved.<br>This session is not a substitute for therapy or crisis support. If you are in distress, please contact a qualified mental health professional.</p>
+    <p class="fine">© 2026 Feel Fully You. Juliette Karaman. All rights reserved.<br>This session is not a substitute for therapy or crisis support. If you are in active mental health distress, please contact a qualified professional.</p>
   </div>
 </footer>
 
 <script>
   // Hamburger
-  const hamBtn = document.getElementById('hamBtn');
-  const mobileNav = document.getElementById('mobileNav');
-  if(hamBtn && mobileNav){
-    hamBtn.addEventListener('click', () => {
-      const open = mobileNav.classList.toggle('open');
-      hamBtn.setAttribute('aria-expanded', open);
-    });
-  }
+  const hamBtn=document.getElementById('hamBtn'),mobileNav=document.getElementById('mobileNav');
+  if(hamBtn&&mobileNav){hamBtn.addEventListener('click',()=>{const o=mobileNav.classList.toggle('open');hamBtn.setAttribute('aria-expanded',o)});}
 
   // Scroll reveal
-  const revEls = document.querySelectorAll('.reveal');
-  const revObs = new IntersectionObserver(entries => {
-    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); revObs.unobserve(e.target); }});
-  }, {threshold:.12});
-  revEls.forEach(el => revObs.observe(el));
+  const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
-  // Sticky bar
-  const stickyBar = document.getElementById('stickyBar');
-  const heroImg = document.querySelector('.hero-photo');
-  if(stickyBar && heroImg){
-    const stickyObs = new IntersectionObserver(entries => {
-      stickyBar.classList.toggle('show', !entries[0].isIntersecting);
-    }, {threshold:0});
-    stickyObs.observe(heroImg);
+  // Sticky bar — show after hero photo scrolls past
+  const sticky=document.getElementById('stickyBar');
+  const heroPhoto=document.querySelector('.hero-photo');
+  if(sticky&&heroPhoto){
+    const obs=new IntersectionObserver(es=>{sticky.classList.toggle('show',!es[0].isIntersecting);},{threshold:0});
+    obs.observe(heroPhoto);
   }
 
   // Close dropdowns on outside click
-  document.addEventListener('click', e => {
-    if(!e.target.closest('.more-wrap')){
-      document.querySelectorAll('.more-wrap').forEach(m => m.classList.remove('open'));
-    }
+  document.addEventListener('click',e=>{
+    if(!e.target.closest('.more-wrap'))document.querySelectorAll('.more-wrap').forEach(m=>m.classList.remove('open'));
   });
 </script>
 </body>
