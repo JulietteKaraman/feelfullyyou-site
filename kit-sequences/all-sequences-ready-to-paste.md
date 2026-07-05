@@ -340,7 +340,7 @@ Juliette
 
 Hi [First Name],
 
-Here it is: [REPLACE: GRIEF PROCESS LINK — paste your Google Drive or video link here]
+Here it is: https://drive.google.com/file/d/1SOk0ToC6_Hy5ldgh3NI_zlalER_on2ki/view?usp=sharing
 
 Carve out 25 minutes somewhere quiet. Lie down if you can. Have a glass of water nearby.
 
