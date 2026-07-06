@@ -125,6 +125,16 @@ const PRODUCT_MAP = {
     tagId: 20907435,   // "cards-complete-set"
     sequenceId: null,
     label: 'Cards Complete the Set £20 (single deck owners)'
+  },
+  'price_1Tq7jRCCw18geY155S5mNiMG': {
+    tagId: 20907435,   // "cards-complete-set"
+    sequenceId: null,
+    label: 'Cards Complete the Set £45 (email offer, T&R owners)'
+  },
+  'price_1Tq7jUCCw18geY15Rgrwliu9': {
+    tagId: 20907435,   // "cards-complete-set"
+    sequenceId: null,
+    label: 'Cards Complete the Set £25 (email offer, single deck owners)'
   }
 };
 
