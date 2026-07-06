@@ -140,6 +140,16 @@ const PRODUCT_MAP = {
     sequenceId: null,
     label: 'The Room £1,000 x 3 (payment plan — cancel sub after 3)'
   },
+  'price_1TqAOtCCw18geY15eIBYrJnE': {
+    tagId: 20913132,   // "the-room-member"
+    sequenceId: null,
+    label: 'The Room: Held (VIP) £5,000 (pay in full)'
+  },
+  'price_1TqAOxCCw18geY157k8z790r': {
+    tagId: 20913132,   // "the-room-member"
+    sequenceId: null,
+    label: 'The Room: Held (VIP) £2,500 x 2 (payment plan — cancel sub after 2)'
+  },
   // ─── SACRED NO + REPAIR KIT ─────────────────────────────────────────────────
   'price_1TqA3ECCw18geY15UMO40IWX': {
     tagId: 20913133,   // "sacred-no-buyer"
