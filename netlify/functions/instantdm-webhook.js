@@ -72,6 +72,18 @@ async function instantdm(apiKey, body) {
 exports.handler = async function (event) {
   if (event.httpMethod !== 'POST') return { statusCode: 405, body: 'Method Not Allowed' };
 
+  // ─── SUPERSEDED 6 July PM ────────────────────────────────────────────────────
+  // InstantDM only sends its "comment" webhook when the post ALREADY has a native
+  // automation in the InstantDM dashboard (it's a pre-processing webhook). There is
+  // no catch-all "forward every comment" mode, so this code-side router can never be
+  // the sole brain. Keyword automations now live NATIVELY in the InstantDM dashboard
+  // (handover doc Part B). This function is disabled so it cannot double-send on top
+  // of them. Re-enable only for a deliberate dynamic-content setup by setting
+  // INSTANTDM_ROUTER_ENABLED=true in Netlify env.
+  if (process.env.INSTANTDM_ROUTER_ENABLED !== 'true') {
+    return { statusCode: 200, body: 'Router disabled — keyword automations run natively in InstantDM' };
+  }
+
   const apiKey = process.env.INSTANTDM_API_KEY;
   const secret = process.env.INSTANTDM_WEBHOOK_SECRET;
   if (!apiKey || !secret) {
