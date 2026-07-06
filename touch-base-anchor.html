@@ -143,7 +143,7 @@ function handleTb(e){
   fetch('/.netlify/functions/subscribe',{
     method:'POST',
     headers:{'Content-Type':'application/json'},
-    body:JSON.stringify({email:email,firstName:name,tagIds:[20896290],sequenceId:2812534})
+    body:JSON.stringify({email:email,firstName:name,tagIds:[20896290],sequenceId:null /* was 2812534, deleted in Kit — wire new ID when Kiera creates it */})
   }).finally(function(){window.location.href='/thankyou-touch-base';});
 }
 </script>

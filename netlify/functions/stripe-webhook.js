@@ -36,44 +36,47 @@ const KIT_V4 = 'https://api.kit.com/v4';
 // One Touch: product exists (prod_TMpi5kaSnhGD1d) but has NO price yet.
 //   → Create a £97 price in Stripe → Products → One Touch, then add it here.
 const PRODUCT_MAP = {
+  // SEQUENCE IDs REWIRED 6 July PM: Kit's original template sequences (2812532/33/34/91)
+  // were deleted or repurposed during the paste-in. Nulls below = no sequence exists in
+  // Kit yet for that product; fill in as Kiera creates them from the Paste Pack.
   'price_1Tlpu0CCw18geY15b8J3jlBW': {
     tagId: 20794257,   // "10touchrituals"
-    sequenceId: 2812534,
+    sequenceId: null,  // pending "10 Touch Rituals Welcome" (Paste Pack seq 2)
     label: '10 Touch Rituals £7'
   },
   'price_1TlpvDCCw18geY15wlpzVg4f': {
     tagId: 20794225,   // "31 daily touch points"
-    sequenceId: 2812534,
+    sequenceId: 2817543,  // "31 Daily Touch Points"
     label: '31 Daily Touch Points £19 (tripwire)'
   },
   'price_1TiBhLCCw18geY15dLECqNFr': {
     tagId: 20794225,   // "31 daily touch points"
-    sequenceId: 2812534,
+    sequenceId: 2817543,  // "31 Daily Touch Points"
     label: '31 Daily Touch Points £27 (standalone)'
   },
   'price_1TghjICCw18geY15V4AkohbE': {
     tagId: 20794281,   // "touchpoint"
-    sequenceId: 2812591,
+    sequenceId: 2812535,  // "Touch Point" (renamed from Re-engagement template)
     label: 'Touch Point Membership £97/mo'
   },
   'price_1TnxAqCCw18geY153w22a2Ye': {
     tagId: 20794292,   // "the unspoken distance"
-    sequenceId: 2812534,
+    sequenceId: 2817577,  // "The Unspoken Distance"
     label: 'Unspoken Distance £97'
   },
   'price_1TnwwmCCw18geY15egD5h7Fr': {
     tagId: 20794295,   // "the communication reboot kit"
-    sequenceId: 2812534,
+    sequenceId: null,  // no CRK sequence in Kit yet
     label: 'Communication Reboot Kit £37'
   },
   'price_1To2MZCCw18geY15DzT0iv5A': {
     tagId: 20794287,   // "essence day sept 26"
-    sequenceId: 2812534,
+    sequenceId: null,  // no CONNECT sequence in Kit yet
     label: 'CONNECT With Essence £247'
   },
   'price_1Tpr13CCw18geY15W6ooICYF': {
     tagId: 20794312,   // "one touch"
-    sequenceId: 2812534,
+    sequenceId: null,  // no One Touch sequence in Kit yet
     label: 'One Touch £97'
   },
   // ─── THE BEGINNING ──────────────────────────────────────────────────────────
@@ -162,20 +165,19 @@ const PRODUCT_MAP = {
     label: 'Romantic Relationship Repair Kit £27'
   },
   // ─── CARDS DIGITAL ──────────────────────────────────────────────────────────
-  // sequenceId: null until Kiera creates "Cards Buyer Welcome" sequence in Kit
   'price_1TOxLhCCw18geY15bLrNioHw': {
     tagId: 20896673,   // "cards-trust-repair"
-    sequenceId: null,
+    sequenceId: 2817582,  // "Cards Buyer Welcome"
     label: 'Trust & Repair Cards £15'
   },
   'price_1TOJatCCw18geY15HbPQTtH7': {
     tagId: 20896674,   // "cards-one-deck"
-    sequenceId: null,
+    sequenceId: 2817582,  // "Cards Buyer Welcome"
     label: 'One Core Deck Cards £35'
   },
   'price_1TiBwtCCw18geY15OsJnUNMV': {
     tagId: 20896675,   // "cards-full-bundle"
-    sequenceId: null,
+    sequenceId: 2817582,  // "Cards Buyer Welcome"
     label: 'Cards Full Bundle £55'
   },
   'price_1Tq7PiCCw18geY15kgJMkb6E': {
@@ -206,12 +208,12 @@ const PRODUCT_MAP = {
   },
   'price_1TOJaDCCw18geY15CKuWkE1z': {
     tagId: 20896674,   // "cards-one-deck"
-    sequenceId: null,
+    sequenceId: 2817582,  // "Cards Buyer Welcome"
     label: 'Family & Friends deck £35 (app)'
   },
   'price_1TOxGfCCw18geY15mESPCeFC': {
     tagId: 20896675,   // "cards-full-bundle"
-    sequenceId: null,
+    sequenceId: 2817582,  // "Cards Buyer Welcome"
     label: 'Cards Full Set £75 (app, old price still active)'
   },
   // ─── PHYSICAL CARDS (shipped) ───────────────────────────────────────────────

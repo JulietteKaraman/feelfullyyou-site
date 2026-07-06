@@ -97,7 +97,7 @@
     fetch('/.netlify/functions/subscribe', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({email, tagIds: [20896609], sequenceId: 2812534})
+      body: JSON.stringify({email, tagIds: [20896609], sequenceId: null /* was 2812534, deleted in Kit — wire new ID when Kiera creates it */})
     }).catch(() => {});
 
     await new Promise(r => setTimeout(r, 600));
