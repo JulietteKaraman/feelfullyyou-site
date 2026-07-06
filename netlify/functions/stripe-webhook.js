@@ -76,6 +76,23 @@ const PRODUCT_MAP = {
     sequenceId: 2812534,
     label: 'One Touch £97'
   },
+  // ─── THE BEGINNING ──────────────────────────────────────────────────────────
+  'price_1Tp740CCw18geY15gg4z1oEg': {
+    tagId: 20794305,   // "the beginning"
+    sequenceId: null,
+    label: 'The Beginning £8,997 (full payment)'
+  },
+  'price_1Tp748CCw18geY15wQ4wP9CY': {
+    tagId: 20794305,   // "the beginning"
+    sequenceId: null,
+    label: 'The Beginning £4,499 x 2 (payment plan)'
+  },
+  // ─── PRACTITIONERS ──────────────────────────────────────────────────────────
+  'price_1Tp3fMCCw18geY15GgRINCbd': {
+    tagId: 20907215,   // "practitioners-app"
+    sequenceId: null,
+    label: 'Practitioners App Access £25'
+  },
   // ─── PATTERN SESSION ────────────────────────────────────────────────────────
   'price_1TpnUaCCw18geY15x9owuBBk': {
     tagId: 20896797,   // "pattern-session-buyer"
