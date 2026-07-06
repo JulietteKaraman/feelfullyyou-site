@@ -2,7 +2,7 @@
 // Fires when a Stripe payment completes → tags subscriber in Kit → sequence starts
 //
 // ENV VARS NEEDED (Netlify → Site Settings → Environment Variables):
-//   KIT_API_SECRET        — your Kit API secret
+//   KIT_API_KEY           — Kit v4 API key (same one subscribe.js uses)
 //   STRIPE_WEBHOOK_SECRET — from Stripe → Developers → Webhooks (starts with whsec_)
 
 const crypto = require('crypto');
@@ -25,7 +25,7 @@ function verifyStripeSignature(rawBody, sigHeader, secret) {
   return crypto.timingSafeEqual(Buffer.from(expected), Buffer.from(sig));
 }
 
-const KIT_V3 = 'https://api.convertkit.com/v3';
+const KIT_V4 = 'https://api.kit.com/v4';
 
 // ─── PRODUCT MAP ─────────────────────────────────────────────────────────────
 // Map Stripe price_id → Kit tag ID + sequence ID
@@ -101,29 +101,35 @@ const PRODUCT_MAP = {
   }
 };
 
-async function addToKit(email, firstName, tagId, sequenceId, apiSecret) {
+async function addToKit(email, firstName, tagId, sequenceId, apiKey) {
+  const headers = {
+    'X-Kit-Api-Key': apiKey,
+    'Content-Type': 'application/json',
+    'Accept': 'application/json'
+  };
+
   // 1. Ensure subscriber exists
-  await fetch(`${KIT_V3}/subscribers`, {
+  await fetch(`${KIT_V4}/subscribers`, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ api_secret: apiSecret, email, first_name: firstName || '' })
+    headers,
+    body: JSON.stringify({ email_address: email, first_name: firstName || '' })
   });
 
   // 2. Apply product tag
   if (tagId) {
-    await fetch(`${KIT_V3}/tags/${tagId}/subscribe`, {
+    await fetch(`${KIT_V4}/tags/${tagId}/subscribers`, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ api_secret: apiSecret, email })
+      headers,
+      body: JSON.stringify({ email_address: email })
     });
   }
 
   // 3. Enrol in welcome sequence
   if (sequenceId) {
-    await fetch(`${KIT_V3}/sequences/${sequenceId}/subscribe`, {
+    await fetch(`${KIT_V4}/sequences/${sequenceId}/subscribers`, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ api_secret: apiSecret, email, first_name: firstName || '' })
+      headers,
+      body: JSON.stringify({ email_address: email })
     });
   }
 }
@@ -133,10 +139,10 @@ exports.handler = async function(event) {
     return { statusCode: 405, body: 'Method Not Allowed' };
   }
 
-  const apiSecret = process.env.KIT_API_SECRET;
+  const apiSecret = process.env.KIT_API_KEY || process.env.KIT_API_SECRET;
   const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
   if (!apiSecret || !webhookSecret) {
-    console.error('KIT_API_SECRET or STRIPE_WEBHOOK_SECRET env var not set');
+    console.error('KIT_API_KEY or STRIPE_WEBHOOK_SECRET env var not set');
     return { statusCode: 500, body: 'Server not configured' };
   }
 
