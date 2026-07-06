@@ -46,17 +46,17 @@ const PRODUCT_MAP = {
   },
   'price_1TlpvDCCw18geY15wlpzVg4f': {
     tagId: 20794225,   // "31 daily touch points"
-    sequenceId: 2817543,  // "31 Daily Touch Points"
+    sequenceId: null,  // seq 2817543 is a PLACEHOLDER ("Write a compelling subject...") — wire when real emails pasted
     label: '31 Daily Touch Points £19 (tripwire)'
   },
   'price_1TiBhLCCw18geY15dLECqNFr': {
     tagId: 20794225,   // "31 daily touch points"
-    sequenceId: 2817543,  // "31 Daily Touch Points"
+    sequenceId: null,  // seq 2817543 is a PLACEHOLDER — wire when real emails pasted
     label: '31 Daily Touch Points £27 (standalone)'
   },
   'price_1TghjICCw18geY15V4AkohbE': {
     tagId: 20794281,   // "touchpoint"
-    sequenceId: 2812535,  // "Touch Point" (renamed from Re-engagement template)
+    sequenceId: null,  // seq 2812535 holds WRONG emails (re-engagement/live-session reminders, no Telegram link) — wire when Member Welcome pasted
     label: 'Touch Point Membership £97/mo'
   },
   'price_1TnxAqCCw18geY153w22a2Ye': {
@@ -93,7 +93,7 @@ const PRODUCT_MAP = {
   // ─── PRACTITIONERS ──────────────────────────────────────────────────────────
   'price_1Tp3fMCCw18geY15GgRINCbd': {
     tagId: 20907215,   // "practitioners-app"
-    sequenceId: null,
+    sequenceId: 2817569,  // "Cards App access" — the practitioner access email
     label: 'Practitioners App Access £25'
   },
   // ─── PATTERN SESSION ────────────────────────────────────────────────────────
