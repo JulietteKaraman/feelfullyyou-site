@@ -99,6 +99,58 @@ const PRODUCT_MAP = {
     sequenceId: null,
     label: 'Relationship Pattern Session £597'
   },
+  // ─── INTENSIVES + THE ROOM (Ivorey replacements, 6 July 2026) ───────────────
+  'price_1TqA2jCCw18geY15gV5ALKWx': {
+    tagId: 20913129,   // "womens-intensive-buyer"
+    sequenceId: null,
+    label: "Women's Intensive £2,000 (online)"
+  },
+  'price_1TqA2oCCw18geY15gUN8eDpy': {
+    tagId: 20913129,   // "womens-intensive-buyer"
+    sequenceId: null,
+    label: "Women's Intensive £4,000 (in person)"
+  },
+  'price_1TqA2rCCw18geY15fixLVYeB': {
+    tagId: 20913130,   // "couples-intensive-buyer"
+    sequenceId: null,
+    label: 'Couples Intensive £3,333 (online)'
+  },
+  'price_1TqA2xCCw18geY15vu3C8DOs': {
+    tagId: 20913130,   // "couples-intensive-buyer"
+    sequenceId: null,
+    label: 'Couples Intensive £6,000 (in person)'
+  },
+  'price_1TqA31CCw18geY15LHopiNWx': {
+    tagId: 20913131,   // "womens-six-week-buyer"
+    sequenceId: null,
+    label: "Women's 6-Week Intensive £4,497"
+  },
+  'price_1TqA34CCw18geY15O4rXtodc': {
+    tagId: 20913132,   // "the-room-member"
+    sequenceId: null,
+    label: 'The Room £3,000 (pay in full)'
+  },
+  'price_1TqA37CCw18geY15UVa15ctp': {
+    tagId: 20913132,   // "the-room-member"
+    sequenceId: null,
+    label: 'The Room £1,500 x 2 (payment plan — cancel sub after 2)'
+  },
+  'price_1TqA3BCCw18geY15myzAp0Xy': {
+    tagId: 20913132,   // "the-room-member"
+    sequenceId: null,
+    label: 'The Room £1,000 x 3 (payment plan — cancel sub after 3)'
+  },
+  // ─── SACRED NO + REPAIR KIT ─────────────────────────────────────────────────
+  'price_1TqA3ECCw18geY15UMO40IWX': {
+    tagId: 20913133,   // "sacred-no-buyer"
+    sequenceId: null,
+    label: 'The Sacred No £55'
+  },
+  'price_1TqA3HCCw18geY15tlkswswP': {
+    tagId: 20913134,   // "repair-kit-buyer"
+    sequenceId: null,
+    label: 'Romantic Relationship Repair Kit £27'
+  },
   // ─── CARDS DIGITAL ──────────────────────────────────────────────────────────
   // sequenceId: null until Kiera creates "Cards Buyer Welcome" sequence in Kit
   'price_1TOxLhCCw18geY15bLrNioHw': {

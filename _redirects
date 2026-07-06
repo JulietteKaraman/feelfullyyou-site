@@ -39,6 +39,7 @@
 /cards-complete-tr              /cards-complete-tr.html         200
 /cards-complete-deck            /cards-complete-deck.html       200
 /relationship-pattern-disruptor /relationship-pattern-disruptor.html 200
+/touch-languages                /touch-languages.html           200
 /relationship-pattern-session   /pattern-session                301
 /pattern-session-thankyou       /pattern-session-thankyou.html  200
 /relationship-pattern-session-thankyou /pattern-session-thankyou 301
@@ -52,6 +53,8 @@
 /thankyou-when-she-goes-quiet   /thankyou-when-she-goes-quiet.html  200
 /thankyou-when-she-goes-quiet-only /thankyou-when-she-goes-quiet-only.html 200
 /touch-point-thankyou           /touch-point-thankyou.html      200
+/thankyou-sacred-no             /thankyou-sacred-no.html        200
+/thankyou-repair-kit            /thankyou-repair-kit.html       200
 /tb-thank-you-page              /tb-thank-you-page.html         200
 /success-between-touches        /success-between-touches.html   200
 
@@ -78,7 +81,7 @@
 /the-room                       /the-room.html                  200
 /thankyou-grief                 /thankyou-grief.html            200
 /be-touched                     https://findthetouch.live/      301
-/terms                          https://shop.feelfullyyou.com/terms  301
+/terms                          /terms.html                     200
 
 # 404 fallback
 /*                              /404.html                       404

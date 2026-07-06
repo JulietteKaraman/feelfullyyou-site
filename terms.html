@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms &amp; Conditions · Feel Fully You</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;0,800;1,600;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fefcfa;--cream-2:#f6f4f1;--paper:#fdfbf8;
+    --ink:#1c1714;--brown:#5d4a33;
+    --gold:#a88538;--gold-deep:#99680c;--gold-pale:#ddc98e;
+    --teal:#0d3535;
+    --blue:#d8dfe1;--teal-deep:#061a1a;
+    --line:#e3dccf;
+    --display:'Poppins',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;
+    --t-xs:0.78rem;--t-sm:0.94rem;--t-base:1.0625rem;--t-md:1.2rem;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--brown);font-family:var(--body);font-size:var(--t-base);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+
+  .topbar{position:fixed;top:0;left:0;right:0;z-index:9999;background:var(--teal);padding:0 28px;height:64px;display:flex;align-items:center;justify-content:space-between}
+  .topbar .brand{font-family:var(--display);font-weight:700;font-size:16px;letter-spacing:.02em;color:var(--cream)}
+  .topbar .brand b{color:var(--gold-pale)}
+  .topbar nav{display:flex;gap:26px;align-items:center}
+  .topbar nav a{font-size:14px;color:var(--cream);font-weight:500;transition:color .2s}
+  .topbar nav a:hover{color:var(--gold-pale)}
+  .topbar nav a.btn{background:var(--gold);color:#fff;padding:10px 20px;border-radius:2px;font-weight:600}
+  .topbar nav a.btn:hover{background:var(--gold-deep)}
+  @media(max-width:860px){.topbar nav > a:not(.btn){display:none}}
+  .topbar .logo{font-family:var(--display);font-weight:700;font-size:1.15rem;color:var(--cream);letter-spacing:-.02em}
+  .topbar .logo span{color:var(--gold-pale)}
+  .topbar nav a:hover,.topbar nav a.active{opacity:1;color:var(--gold-pale)}
+
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .55s ease,transform .55s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  /* HERO */
+  .hero{padding-top:64px;position:relative;height:76vh;min-height:480px;overflow:hidden}
+  .hero img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+  .hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(6,26,26,.05) 0%,rgba(6,26,26,.1) 40%,rgba(6,26,26,.68) 72%,rgba(6,26,26,.90) 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:60px 52px}
+  .hero-overlay h1{font-family:var(--display);font-weight:800;font-size:clamp(2.2rem,5vw,3.8rem);color:#fff;letter-spacing:-.03em;line-height:1.0;margin-bottom:12px}
+  .hero-overlay p{color:#c8c0b4;font-size:var(--t-md);max-width:46ch}
+
+  /* PRESS */
+  .press{background:var(--teal);padding:44px 28px}
+  .press .eyebrow{font-size:var(--t-xs);letter-spacing:.18em;text-transform:uppercase;color:var(--gold-pale);font-weight:600;text-align:center;margin-bottom:24px}
+  .press-logos{display:flex;flex-wrap:wrap;gap:24px 44px;align-items:center;justify-content:center;max-width:860px;margin:0 auto}
+  .press-logos img{height:18px;width:auto;max-width:80px;filter:brightness(0) invert(1);opacity:.7;transition:opacity .2s}
+  .press-logos img:hover{opacity:1}
+
+  /* FORM SECTION */
+  .form-section{padding:80px 28px;background:var(--cream)}
+  .form-inner{max-width:640px;margin:0 auto}
+  .form-inner .eyebrow{font-size:var(--t-xs);letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:12px}
+  .form-inner h2{font-family:var(--display);font-weight:700;font-size:clamp(1.8rem,3.5vw,2.4rem);color:var(--ink);letter-spacing:-.025em;line-height:1.08;margin-bottom:10px}
+  .form-inner .sub{color:var(--brown);font-size:var(--t-md);margin-bottom:40px}
+
+  .contact-form{display:flex;flex-direction:column;gap:20px}
+  .field-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .field{display:flex;flex-direction:column;gap:6px}
+  .field label{font-size:var(--t-xs);letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:var(--brown)}
+  .field input,.field textarea,.field select{width:100%;background:var(--paper);border:1.5px solid var(--line);border-radius:2px;padding:14px 16px;font-family:var(--body);font-size:var(--t-sm);color:var(--ink);outline:none;transition:border-color .2s;resize:none}
+  .field input:focus,.field textarea:focus{border-color:var(--gold)}
+  .field input::placeholder,.field textarea::placeholder{color:#b0a898}
+  .field textarea{min-height:140px}
+  .submit-btn{background:var(--teal);color:#fff;border:none;padding:16px 36px;font-family:var(--body);font-weight:700;font-size:1rem;letter-spacing:.01em;border-radius:2px;cursor:pointer;transition:background .2s,transform .15s;align-self:flex-start}
+  .submit-btn:hover{background:var(--teal-deep);transform:translateY(-1px)}
+
+  /* EMAIL ALT */
+  .email-alt{margin-top:48px;padding-top:36px;border-top:1px solid var(--line);text-align:center}
+  .email-alt p{color:var(--brown);margin-bottom:8px;font-size:var(--t-sm)}
+  .email-alt a{font-family:var(--display);font-weight:600;font-size:1.1rem;color:var(--gold-deep);text-decoration:underline;text-underline-offset:3px}
+
+  @media(max-width:600px){
+    .field-row{grid-template-columns:1fr}
+    .hero-overlay{padding:40px 24px}
+  }
+  /* More dropdown */
+  .more-wrap{position:relative;display:inline-flex;align-items:center}
+  .more-wrap > button{background:none;border:none;cursor:pointer;font-size:14px;color:var(--cream);font-weight:500;font-family:var(--body);display:flex;align-items:center;gap:5px;padding:0;transition:color .2s}
+  .more-wrap > button:hover{color:var(--gold-pale)}
+  .more-wrap > button svg{transition:transform .2s}
+  .more-wrap.open > button svg{transform:rotate(180deg)}
+  .dropdown{position:absolute;top:calc(100% + 10px);right:0;background:var(--teal-deep);border:1px solid var(--line-dark);border-radius:3px;min-width:180px;padding:6px 0;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .18s,transform .18s;z-index:9999}
+  .more-wrap.open .dropdown{opacity:1;pointer-events:all;transform:none}
+  @media(max-width:860px){.dropdown{position:fixed;top:56px;right:16px}}
+  .dropdown a{display:block;padding:10px 18px;font-size:13px;color:var(--cream);font-weight:500;transition:background .15s,color .15s}
+  .dropdown a:hover{background:var(--teal);color:var(--gold-pale)}
+
+  /* MOBILE NAV */
+  .ham{display:none;background:none;border:none;cursor:pointer;padding:6px;color:var(--cream)}
+  .ham svg{display:block}
+  .mobile-nav{display:none;position:fixed;top:64px;left:0;right:0;background:var(--teal);z-index:9998;padding:16px 0;border-top:1px solid rgba(255,255,255,.1);flex-direction:column}
+  .mobile-nav a{display:block;padding:13px 28px;font-size:15px;color:var(--cream);font-weight:500;font-family:var(--body);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.07)}
+  .mobile-nav a:last-child{border-bottom:none}
+  .mobile-nav a.btn{margin:14px 28px 6px;display:block;background:var(--gold);color:#fff;padding:12px 20px;border-radius:2px;font-weight:600;text-align:center;border:none}
+  .mobile-nav.open{display:flex}
+  @media(max-width:860px){.ham{display:block}.topbar .more-wrap{display:none}.topbar nav > .btn{display:none}}
+
+  /* TERMS */
+  .terms-head{background:var(--teal);padding:120px 28px 56px;text-align:center}
+  .terms-head h1{font-family:var(--display);font-weight:800;font-size:clamp(2rem,4.5vw,3.2rem);color:#fff;letter-spacing:-.03em;line-height:1.05}
+  .terms-head p{color:var(--gold-pale);font-size:var(--t-sm);margin-top:14px;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+  .terms-body{max-width:820px;margin:0 auto;padding:56px 28px 90px}
+  .terms-body .intro{color:var(--brown);font-size:var(--t-md);margin-bottom:36px}
+  .terms-toc{background:var(--paper);border:1.5px solid var(--line);border-radius:3px;padding:22px 26px;margin-bottom:48px}
+  .terms-toc p{font-size:var(--t-xs);letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--gold-deep);margin-bottom:10px}
+  .terms-toc a{display:block;padding:5px 0;color:var(--teal);font-weight:500;font-size:var(--t-sm);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--line)}
+  .terms-toc a:hover{color:var(--gold-deep)}
+  .terms-section{margin-bottom:54px}
+  .terms-section h2{font-family:var(--display);font-weight:700;font-size:clamp(1.5rem,3vw,2rem);color:var(--ink);letter-spacing:-.02em;margin-bottom:20px;padding-top:24px;border-top:2px solid var(--gold);scroll-margin-top:84px}
+  .terms-section h3{font-family:var(--display);font-weight:600;font-size:1.08rem;color:var(--teal);margin:26px 0 8px}
+  .terms-section p{margin-bottom:13px;font-size:var(--t-sm);color:var(--brown)}
+  .terms-section a{color:var(--gold-deep);text-decoration:underline;text-underline-offset:3px}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="/" class="logo">Feel Fully <span>You</span></a>
+  <button class="ham" id="hamBtn" aria-label="Open menu" aria-expanded="false">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+  <nav>
+    <a href="/">Home</a>
+    <div class="more-wrap" id="workWrap">
+      <a href="/work-with-me" style="font-size:14px;color:var(--cream);font-weight:500;transition:color .2s;text-decoration:none">Work With Me</a><button onclick="document.getElementById('workWrap').classList.toggle('open')" aria-label="Sub-pages" style="background:none;border:none;cursor:pointer;color:var(--cream);padding:0 0 0 5px;display:inline-flex;align-items:center;transition:color .2s"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg></button>
+      <div class="dropdown">
+        <a href="/for-her">For Her</a>
+        <a href="/for-him">For Him</a>
+        <a href="/for-both">For Both</a>
+        <a href="/the-room">The Room</a>
+      </div>
+    </div>
+    <a href="/cards">The Cards</a>
+    <a href="/shop">Shop</a>
+    <div class="more-wrap" id="moreWrap">
+      <button onclick="document.getElementById('moreWrap').classList.toggle('open')" aria-expanded="false">
+        More <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg>
+      </button>
+      <div class="dropdown">
+        <a href="/free-resources">Free Resources</a>
+        <a href="/grief-duality-process">Grief Process</a>
+        <a href="/media-and-pr">Media &amp; PR</a>
+        <a href="/contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<nav class="mobile-nav" id="mobileNav">
+  <a href="/">Home</a>
+  <a href="/work-with-me" style="font-weight:600;color:var(--gold-pale)">Work With Me</a>
+  <a href="/for-her" style="padding-left:44px;font-size:14px;opacity:.85">For Her</a>
+  <a href="/for-him" style="padding-left:44px;font-size:14px;opacity:.85">For Him</a>
+  <a href="/for-both" style="padding-left:44px;font-size:14px;opacity:.85">For Both</a>
+  <a href="/the-room" style="padding-left:44px;font-size:14px;opacity:.85">The Room</a>
+  <a href="/cards">The Cards</a>
+  <a href="/shop">Shop</a>
+  <a href="/about">About Juliette</a>
+  <a href="/free-resources">Free Resources</a>
+  <a href="/grief-duality-process">Grief Process</a>
+  <a href="/media-and-pr">Media &amp; PR</a>
+  <a href="/contact">Contact</a>
+</nav>
+</nav>
+
+<!-- TERMS -->
+<section class="terms-head">
+  <h1>Terms &amp; Conditions</h1>
+  <p>Pleasure by Design Ltd &middot; FeelFullyYou.com</p>
+</section>
+
+<div class="terms-body">
+  <p class="intro">These terms are a binding legal contract between you and Pleasure by Design Ltd, the company behind Feel Fully You. Please read them carefully. Questions: <a href="mailto:support@feelfullyyou.com" style="color:var(--gold-deep);text-decoration:underline;text-underline-offset:3px">support@feelfullyyou.com</a></p>
+  <nav class="terms-toc">
+    <p>On this page</p>
+    <a href="#terms-of-purchase">Terms of Purchase</a>
+    <a href="#terms-of-service">Terms Of Service</a>
+    <a href="#terms-of-private-coaching">Terms of Private Coaching</a>
+    <a href="#podcast-contributors">Podcast Contributors</a>
+    <a href="#podcast-sponsors">Podcast Sponsors</a>
+  </nav>
+  <section class="terms-section">
+  <h2 id="terms-of-purchase">Terms of Purchase</h2>
+  <p>Here’s what You need to know:This is a contract between You and FeelFullyYou.com/Pleasure by Design Ltd. Please read these terms carefully as they are a binding legal contract, and we suggest downloading a copy for Your records.</p>
+  <h3>Background</h3>
+  <p>FeelFullyYou.com/Pleasure by Design Ltd is engaged in the business of teaching,mentoringor coaching for individuals to optimise their physical and mental wellbeing.</p>
+  <p>B. FeelFullyYou.com/Pleasure by Design Ltd is offering You the opportunity to participate in the programme designed to optimise human mindset and leadership skills.</p>
+  <p>C. You desire to engage FeelFullyYou.com/Pleasure by Design Ltd to participate in and provide access to the Programme to You.</p>
+  <h3>Agreed Terms</h3>
+  <h3>Membership and Programme Fees</h3>
+  <h3>1.1. Programme/Membership</h3>
+  <p>In consideration of the payment set out below (Programme/Membership Fee), FeelFullyYou.com/Pleasure by Design Ltd agrees to provide the Programme/Membership, the details of which are set out in Part 1 of the Schedule attached to (and which forms part of) this Agreement to You for the period set out in the Programme/Membership details. Your access to the Programme/Membership is conditional on FeelFullyYou.com/Pleasure by Design Ltd’s receipt of the Programme/Membership Fee.1.2. Term</p>
+  <p>This Agreement commences upon Your acceptance of it and payment of the Programme/Membership Fee and expires on the date calculated in the Schedule.</p>
+  <h3>1.3. Programme Fee</h3>
+  <p>(a) The Programme/Membership Fee set out in Part 2 the Schedule, or information relating to the Programme/Membership Fee shall have been separately provided to You. Until payment of the Programme/Membership is made, no access shall be given to You, and You shall not be entitled to participate in the Programme in any manner.</p>
+  <p>Subject to clause 1. Programme/Membership Fee isvnot refundable for any reason.</p>
+  <p>(b) Provided You have not accessed the content provided to You under this agreement or have not attended a group session (whether in person or not), You have the right to cancel Your order hereunder provided that Your cancellation is received by Us by email to <a href="mailto:support@feelfullyyou.com">support@feelfullyyou.com</a> within 14 days of Your payment of the Programme/Membership Fee. We will reimburse You no later than 14 days from receiving Your notice of such cancellation. If You do not contact us before then and You are paying in instalments, Your card will be charged for the remaining instalments.</p>
+  <p>(c) Our secure payment processors are Stripe and/or Paypal. You will receive a receipt for your records shortly after purchase, and your credit card statement will say Pleasure by Design Ltd.</p>
+  <p>(d) Within 24 hours, you will receive a welcome email and a link from us. The email will have the relevant information to access the Programme/Membership.</p>
+  <p>(e) (i) If You are paying in full, You will be charged once on the date of Your purchase.</p>
+  <p>(ii) If You are paying in instalments, Your card will be charged for the payment plan You selected.</p>
+  <p>(f) By completing this purchase, You acknowledge, agree, and authorise us to charge Your card repeatedly for the total amount of the payment plan.</p>
+  <p>(g) This Programme/Membership is an “all-or-nothing” purchase. If your card account is declined for any reason (insufficient credit, closed, expired, or other reasons), we will contact you to update your payment information.</p>
+  <p>You agree to do so within 5 business days. Failure to update your account information will cause your access to the Programme/Membership to be suspended entirely.</p>
+  <p>Provided You have not accessed the content provided to You under this agreement or have not attended a group session (whether in person or not), You have the right to cancel Your order hereunder provided that Your cancellation is received by Us by email to <a href="mailto:support@feelfullyyou.com">support@feelfullyyou.com</a> within 14 days of Your payment of the Programme/Membership Fee.</p>
+  <p>We will reimburse You no later than 14 days from receiving Your notice of such cancellation. If You do not contact us before then and You are paying in instalments including subscriptions, Your card will be charged for the remaining instalments until the term of the agreement has finished.</p>
+  <h3>1.4. Knowhow Licence</h3>
+  <p>In the course of the provision of the Programme/Membership and the specific elements thereof, FeelFullyYou.com/Pleasure by Design Ltd will provide You with knowledge, guidance, and materials (knowhow).</p>
+  <p>This knowhow is provided to You under a limited licence. To the extent that the knowhow is confidential information, it is subject to clause 7.</p>
+  <p>All knowhow is licensed to You solely and exclusively for Your personal use only (and not for the purpose of providing services to others or otherwise undertaking its distribution in any form,) and on the basis of Your full compliance with the terms of this contract.</p>
+  <p>The licence of knowhow is perpetual and survives termination of this contract.</p>
+  <h3>1.5. Removal of Content</h3>
+  <p>You acknowledge and agree that as a result of Your participation in online group sessions and social media support group, Your comments must help create a supportive environment for all participants in the Programme/Membership. Pleasure by Design Ltd reserves the right to remove any content posted by You if FeelFullyYou.com/Pleasure by Design Ltd. considers (in its sole discretion) that Your comments are inappropriate and/or counter-productive to the goals of the Programme/Membership.</p>
+  <h3>2. Licence</h3>
+  <p>In consideration of entering into this Agreement and being granted Access to the Programme/Membership</p>
+  <p>(a) You hereby grant to FeelFullyYou.com/Pleasure by Design Ltd an irrevocable, royalty-free, perpetual licence to use, copy, distribute, reproduce and publish in any form (whether now known or hereafter invented) at any time any and all information regarding Your experience of the Programme/Membership including any specific results experienced or obtained by You over the course thereof; and,</p>
+  <p>(b) You acknowledge that this may include any written statements You may publish through social media accounts and online forums (whether as articles or by way of posts or other commentary), as well as any statements and/or images captured or otherwise recorded over the course of attendance at any event related to the Programme/Membership.</p>
+  <p>You represent and warrant that any statements or testimonials that You make shall be correct, accurate, and truthful; and,</p>
+  <p>(c) You hereby grant an irrevocable, royalty-free, perpetual licence to FeelFullyYou.com/Pleasure by Design Ltd for the right to use, broadcast, distribute, and exhibit in any form now or later developed, including publications for promotion on website entries and social media sites, Your name, likeness, image, photograph, voice, and video as related to and in conjunction with Your participation in the Programme/Membership including in relation to any specific event therein (“Knowhow”).</p>
+  <p>You hereby acknowledge and agree that all of the intellectual property in and to the Knowhow belongs to Us and that You have no licence to exploit the Knowhow except for the specific requirements of the Programme/Membershipas described by Us from time to time.</p>
+  <p>The Knowhow is subject to the provisions of this agreement including but not limited to Clause 7.</p>
+  <h3>3. Your Warranties and Commitment to the Programme</h3>
+  <h3>3.1. By entering into this Agreement, You warrant the following:-</h3>
+  <p>(a) You are not aware of any circumstances that would suggest or indicate that the Programme/Membership (or any element thereof) is not suitable for You or may be damaging to Your health or well-being; and,</p>
+  <p>(b) You are not currently being treated for depression or any other psychological disorder or taking any psychoactive prescription drugs or other medicines that may be contra-indicated for the type of activity the Programme/Membership provides; and,</p>
+  <p>(c) You are over the age of 18; and,</p>
+  <p>(d) You are not pregnant or, if You are pregnant, You have consulted Your doctor and Your doctor has not advised You to avoid participation in coaching.</p>
+  <p>If any of the foregoing information changes during the course of the Programme/Membership, then You agree to inform Pleasure by Design Ltd immediately.</p>
+  <p>3.2. You represent that the Warranties that You have made to FeelFullyYou.com/Pleasure by Design Ltd are accurate, and You acknowledge that FeelFullyYou.com/Pleasure by Design Ltd has relied upon them in order to enter into this Agreement.</p>
+  <p>You agree that You will continue to honour those Warranties throughout the duration of this Agreement. You agree to notify us in writing that You are discontinuing the services immediately in the event that Your circumstances change such that the Warranties or any of them are no longer true or accurate in all material respects.</p>
+  <h3>3.3. By entering into this Agreement, You are committing and agreeing to</h3>
+  <p>(a) faithfully execute all of the lessons, assignments, and coursework in the Programme/Membership to the best of Your ability.</p>
+  <p>(b) to attend all scheduled coaching sessions included as part of the Programme/Membership</p>
+  <p>(c) You also acknowledge that creating results requires considerable effort on Your part and that by entering into this Agreement, You are prepared and committed to make that effort.</p>
+  <p>3.4. You agree not to:</p>
+  <p>(a) make any disparaging or critical remarks about our services, whether during or after the provision of services; or</p>
+  <p>(b) take copies of our website, any content or other materials (in whatever form) that have been provided to You in the course of the Programme/Membership, or any element thereof.</p>
+  <h3>4. Acknowledgments</h3>
+  <p>By entering into this Agreement, You hereby agree, acknowledge and understand that:</p>
+  <p>(a)FeelFullyYou.com/Pleasure by Design Ltd is only granting you access to the Programme/Membership to teach you complementary somatic-experienced, non-medical interventions intended for those who wish to enhance their performance or improve their work or personal life in general.</p>
+  <p>(b) FeelFullyYou.com/Pleasure by Design Ltd does not guarantee any specific results for any person participating in the Programme/Membership. You acknowledge that everyone’s success is different and depends on numerous factors, including, but not limited to, Your own commitment to the Programme/Membership and other circumstances beyond the control of Pleasure by Design Ltd.</p>
+  <p>(c) The Programme/Membership takes the form of education, motivation, information and guidance, which may address specific personal projects or general conditions in Your life or work that might have an impact on overall health. FeelFullyYou.com/Pleasure by Design Ltd does not provide medical or diagnostic advice or other medical or therapeutic counselling. Your attention is specifically drawn to the provisions of paragraph 5 in this regard,</p>
+  <p>(d) prior results do not guarantee a similar outcome. Thus, the results obtained by others applying the principles set out in the Programme/Membership are no guarantee that You will be able to obtain similar results.</p>
+  <p>(e) All Programs/calls must be used in the period of time set out on the sales page or email if not you will forfeit all remaining sessions or program access.</p>
+  <h3>5. Exclusion</h3>
+  <p>LIABILITY – YOUR ATTENTION IS SPECIFICALLY DRAWN TO THE PROVISIONS OF THIS SECTION. IF YOU ARE UNCERTAIN ABOUT OR DO NOT UNDERSTAND THIS CLAUSE, YOU ARE ENCOURAGED TO SEEK INDEPENDENT LEGAL ADVICE BEFORE ENTERING INTO THIS CONTRACT. BY TICKING THE BOX, YOU CONFIRM THAT YOU HAVE OBTAINED SUCH ADVICE.</p>
+  <p>5.1. All content of the Programme/Membership is intended for informational purposes only. This Agreement expressly excludes any responsibility or liability for any damages arising as a result of Your reliance on The Programme/Membership, any element thereof or any other information provided by FeelFullyYou.com/Pleasure by Design Ltd pursuant to this Agreement.</p>
+  <p>5.2. You acknowledge that the Programme/Membership is not intended to be a substitute for professional medical advice and should not be relied on as health or personal advice. You acknowledge that You should always seek the guidance of Your doctor or other qualified health professional with any questions You may have regarding Your health or a medical condition You may have</p>
+  <p>5.3. You agree that You should never disregard and have not disregarded the advice of a medical professional, or delay in seeking it because of something You have read or heard or information You may have obtained from Your participation in the Programme/Membership.</p>
+  <p>5.4. FeelFullyYou.com/Pleasure by Design Ltd will not diagnose, treat, or cure in any manner any disease, condition, or other physical or mental human ailment. If You consider You may have a medical emergency, call Your doctor, go to the nearest hospital emergency department, or call the emergency services immediately. If you choose to rely on any information provided by the Programme/Membership, you do so at your own risk.</p>
+  <p>5.5. FeelFullyYou.com/Pleasure by Design Ltd shall not be liable to You or any party related to You for any damages, including damages (direct or indirect), loss of business profits or other economic loss, or costs as a result of Your entry into this Agreement and Your participation in the Programme/Membership. In the event that FeelFullyYou.com/Pleasure by Design Ltd is or shall become liable to You in any manner (whether for breach of contract or otherwise), then FeelFullyYou.com/Pleasure by Design Ltd’s liability to You shall be limited to £5000.00, provided that nothing herein shall limit liability for death or personal injury.</p>
+  <h3>6. Indemnity</h3>
+  <p>6.1. You hereby indemnify us against all liabilities, costs, expenses, damages and losses (including but not limited to any direct, indirect or consequential losses, loss of profit, loss of reputation and all interest, penalties and legal costs (calculated on a full indemnity basis) and all other reasonable professional costs and expenses) suffered or incurred by us, our officers, directors, employees and/or agents arising out of or in connection with:(a) any breach of the Warranties or any circumstances where the Warranties cease to be true or accurate; and,</p>
+  <p>(b) any other breach of this agreement, including any invalid termination or cancellation thereof; and,</p>
+  <p>(c) Your participation in the Programme/Membership or any element thereof.6.2. This indemnity shall apply whether or not the Company has been negligent or at fault.</p>
+  <p>6.3. If a payment due from You under this clause is subject to tax (whether by way of direct assessment or withholding at its source), the Company shall be entitled to receive from You such amounts as shall ensure that the net receipt, after tax, to the Company in respect of the payment is the same as it would have been were the payment not subject to tax.</p>
+  <h3>7. Confidential Information</h3>
+  <p>7.1. Each of You or FeelFullyYou.com/Pleasure by Design Ltd that receives (“receiving party”) confidential information (which includes details of clients and any elements of the Knowhow that are marked as confidential or that are otherwise are not freely and publicly available) from the other (“disclosing party”), shall:</p>
+  <p>(a) keep the confidential information confidential;</p>
+  <p>(b) not disclose the confidential information to any other person other than with the prior written consent of the disclosing party or in accordance with clause 7.2; and</p>
+  <p>(c) not use the confidential information for any purpose other than in order to comply with the terms of this contract (“permitted purpose”).</p>
+  <p>7.2. FeelFullyYou.com/Pleasure by Design Ltd may disclose confidential information to its officers, directors, employees, contractors agents and advisers who reasonably need to know for the purpose of providing the services and any activities ancillary to the provision of the services (each a “permitted third party”), provided that FeelFullyYou.com/Pleasure by Design Ltd shall remain solely liable to You for the acts, omissions, and compliance with the terms of this clause of such permitted third party as if such permitted third party was Pleasure by Design Ltd.</p>
+  <h3>8. Data Protection</h3>
+  <p>8.1. FeelFullyYou.com/Pleasure by Design Ltd is committed to protecting the privacy and security of Your personal information. Accordingly, FeelFullyYou.com/Pleasure by Design Ltd will process Your personal information in accordance with the General Data Protection Regulation (GDPR), the Data Protection Act 2018 and any other national implementing laws, regulations and secondary legislation, as amended or updated from time to time, in the UK (“Data Protection Legislation”).</p>
+  <p>8.2. FeelFullyYou.com/Pleasure by Design Ltd’s privacy policy is available on request, as updated from time to time (“Privacy Policy”). It details how it collects and uses personal information about You in accordance with the Data Protection Legislation. Please read the Privacy Policy carefully to understand our practices regarding your personal data and how we will treat it.</p>
+  <h3>9. Intellectual Property</h3>
+  <p>In addition to the know-how licence set out in clause 1, FeelFullyYou.com/Pleasure by Design Ltd will make certain information available to You as part of Your participation in the Programme/Membership. This information comprises intellectual property owned by FeelFullyYou.com/Pleasure by Design Ltd, which includes (but is not limited to) audio and visual presentations, documentation, images, designs, trademarks Whether registered or not), trade secrets, and any other materials or elements associated with the Programme/Membership (collectively the “Intellectual Property”).</p>
+  <p>The Intellectual Property is licensed to You by FeelFullyYou.com/Pleasure by Design Ltd for Your personal, non-commercial, home use only and for no other use. Any other use by You is agreed to be an infringement of FeelFullyYou.com/Pleasure by Design Ltd’s rights in and to such Intellectual Property. You acknowledge that any and all Intellectual Property, is the sole intellectual property of FeelFullyYou.com/Pleasure by Design Ltd.</p>
+  <p>You further acknowledge and agree that as between You and FeelFullyYou.com/Pleasure by Design Ltd, FeelFullyYou.com/Pleasure by Design Ltd and its third-party licensors own and shall continue to own all rights, titles, and interests in and to the Intellectual Property.</p>
+  <p>You may not sell, redistribute, or reproduce the Intellectual Property. Except for the limited, revocable license expressly granted to You herein, this Agreement does not grant You any ownership or other right or interest in or to any Intellectual Property.</p>
+  <p>You shall not assert any right, license, or interest in such marks or Intellectual Property that are confusingly similar thereto.</p>
+  <h3>10. Termination</h3>
+  <p>FeelFullyYou.com/Pleasure by Design Ltd may immediately terminate this Agreement at any time in its sole discretion upon written notice to You, which may be sent via email to the last email address for You known by it. Notwithstanding anything to the contrary herein or otherwise, the provisions of this Agreement, indemnity, non-disclosure, Confidential Information, Intellectual Property, disclaimer of warranties, and limitation of liability shall survive the termination of this Agreement.</p>
+  <h3>11. General Provisions</h3>
+  <h3>11.1. Force Majeure</h3>
+  <p>11. FeelFullyYou.com/Pleasure by Design Ltd will not be liable for any delay or failure in performing its duties under this contract caused by an act of God, act of terrorism, civil disturbance, or another event that is beyond its reasonable control (an event of “Force Majeure”).</p>
+  <h3>11.2. Entire Agreement</h3>
+  <p>You agree that You have not relied on any promises or representations by FeelFullyYou.com/Pleasure by Design Ltd, its officers, directors, employees or agents in entering into this contract. The Company has relied on Your Warranties in order to enter into this contract.</p>
+  <h3>11.3. Notices</h3>
+  <p>All notices under this contract shall be in writing and shall be sent to the address of the recipient set out in this contract or to such other address as the recipient may have notified from time to time. Any notice may be delivered personally (deemed served when delivered), by a reputable courier service (deemed served 48 hours after delivery), or by email (deemed served immediately).</p>
+  <h3>11.4. Law and Jurisdiction</h3>
+  <p>This contract is governed by the laws of England and Wales and is subject to the exclusive jurisdiction of the courts of England and Wales.</p>
+  </section>
+  <section class="terms-section">
+  <h2 id="terms-of-service">Terms Of Service</h2>
+  <p>PLEASE READ THESE TERMS OF USE CAREFULLY BEFORE USING THIS WEBSITE. By using this website, you signify your consent to these terms of use.</p>
+  <p>If you do not agree to these Terms of Use, please do not use the website.</p>
+  <p>Your access to and use of this website, as well as all related websites operated by Pleasure by Design Ltd (which includes www.feelfullyyou.com, among others) (collectively the “Site”) is subject to the following terms and conditions (“Terms of Use”) and all applicable laws.</p>
+  <p>By accessing and browsing the Site, you accept, without limitation or qualification, the Terms of Use and acknowledge that any other agreements between you and the Site are superseded and of no force or effect:</p>
+  <p>1. You agree that the Site itself, as well as all content, videos, training materials, products, services and/or other materials, made available on the Site by us or other third parties, as well as the look and feel of all of the foregoing, (collectively referred to as the “Content”) are maintained for your personal use and information by Pleasure by Design Ltd, (the “Company”) and are the property of the Company and/or its third party providers. You agree that such Company Content shall include all proprietary videos, HTML/CSS, Javascript, graphics, voice, and sound recordings, artwork, photos, documents, and text as well as all other materials included in the Site, excluding only the materials you provide. Subject to your compliance with these Terms of Use, the Company hereby grants you a limited license, which is non-exclusive, non-transferable, and non-sublicensable, to access, view, and use the Site solely for your personal purposes. No Company Content may be copied, reproduced, republished, uploaded, posted, transmitted, distributed, used for public or commercial purposes, or downloaded in any way unless written permission is expressly granted by the Company.</p>
+  <p>Modification of the Content or use of the Content for any other purpose is a violation of the copyright and other proprietary rights of the Company, as well as other authors who created the materials, and may be subject to monetary damages and penalties. You may not distribute, modify, transmit or use the content of the Site or any Content, including any and all software, tools, graphics and/or sound files, for public or commercial purposes without the express written permission of the Company.</p>
+  <p>2. All Content, such as text, data, graphics files, videos and sound files, and other materials contained in the Site, are copyrighted unless otherwise noted and are the property of the Company and/or a supplier to the Company. No such materials may be used except as provided in these Terms of Use.</p>
+  <p>3. All trade names, trademarks, and images and biographical information of people used in the Company Content and contained in the Site, including without limitation the name and trademark “Pleasure by Design Ltd” , are either the property of, or used with permission by, the Company. The use of Content by you is strictly prohibited unless specifically permitted by these Terms of Use. Any unauthorized use of Content may violate the copyright, trademark, and other proprietary rights of the Company and/or third parties, as well as the laws of privacy and publicity, and other regulations and statutes. Nothing contained in this Agreement or in the Site shall be construed as granting, by implication or otherwise, any license or right to use any Trademark or other proprietary information without the express written consent of the Company or third party owner. The Company respects the copyright, trademark and all other intellectual property rights of others. The Company has the right, but has no obligation, to remove content and accounts containing materials that it deems, in its sole discretion, to be unlawful, offensive, threatening, libellous, defamatory, pornographic, obscene or otherwise objectionable or violates any party’s intellectual property or these Terms of Use. If you believe that your intellectual property rights are being violated and/or that any work belonging to you has been reproduced on the Site or in any Content in any way, you may notify Company at <a href="mailto:juliette@feelfullyyou.com">juliette@feelfullyyou.com</a>. Please provide your name and contact information, the nature of your work and how it is being violated, all relevant copyright and/or trademark registration information, the location/URL of the violation, and any other information you believe is relevant.</p>
+  <p>4. While the Company uses reasonable efforts to include accurate and up-to-date information in the Site, the Company makes no warranties or representations as to its accuracy. The Company assumes no liability or responsibility for any errors or omissions in the content of the Site.</p>
+  <p>5. When you register with the Company and/or this Site, you expressly consent to receive any notices, announcements, agreements, disclosures, reports, documents, communications concerning new products or services, or other records or correspondence from the Company. You consent to receive notices electronically by way of transmitting the notice to you by email.</p>
+  <p>6. If you send comments or suggestions about the Site to the Company, including, but not limited to, notes, text, drawings, images, designs or computer programs, such submissions shall become, and shall remain, the sole property of the Company. No submission shall be subject to any obligation of confidence on the part of the Company. The Company shall exclusively own all rights to (including intellectual property rights thereto), and shall be entitled to unrestricted use, publication, and dissemination as to all such submissions for any purpose, commercial or otherwise without any acknowledgment or compensation to you.</p>
+  <p>7. The Company shall use commercially reasonable efforts to restrict unauthorized access to our data and files. However no system whether or not password protected can be entirely impenetrable. You acknowledge that it may be possible for an unauthorized third party to access, view, copy, modify, or distribute the data and files you store using the Site. Use of the Site is completely at your own risk.</p>
+  <p>8. The Company will not intentionally disclose any personally identifying information about you to third parties, except where the Company, in good faith, believes such disclosure is necessary to comply with the law or enforce these Terms of Use. By using the Site, you signify your acceptance of the Company’s Privacy Policy, https://juliettek4.sg-host.com///pages/privacy-policy. If you do not agree with this Privacy Policy, in whole or part, please do not use this Site.</p>
+  <p>9. NEITHER THE COMPANY NOR ANY OTHER PARTY INVOLVED IN CREATING, PRODUCING, OR MAINTAINING THE SITE AND/OR ANY CONTENT ON THE SITE SHALL BE LIABLE UNDER ANY CIRCUMSTANCES FOR ANY DIRECT, INCIDENTAL, CONSEQUENTIAL, INDIRECT, OR PUNITIVE DAMAGES ARISING OUT OF YOUR ACCESS TO OR USE OF THE SITE. WITHOUT LIMITING THE FOREGOING, ALL CONTENT ON THE SITE IS PROVIDED “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. THE COMPANY DOES NOT WARRANT OR MAKE ANY REPRESENTATIONS REGARDING THE USE OF THE MATERIALS IN THE SITE, THE RESULTS OF THE USE OF SUCH MATERIALS, THE SUITABILITY OF SUCH MATERIALS FOR ANY USER’S NEEDS OR THE LIKELIHOOD THAT THEIR USE WILL MEET ANY USER’S EXPECTATIONS, OR THEIR CORRECTNESS, ACCURACY, RELIABILITY, OR CORRECTION. OR THAT THIS SITE, THE CONTENT, AND/OR THE MATERIALS AVAILABLE ON THIS SITE ARE FREE FROM BUGS OR VIRUSES OR OTHER HARMFUL COMPONENTS. YOU ASSUME ALL RESPONSIBILITY FOR THE COST OF ALL NECESSARY REPAIRS OR CORRECTIONS. THE COMPANY SHALL NOT BE RESPONSIBLE FOR ANY PERFORMANCE OR SERVICE PROBLEMS CAUSED BY ANY THIRD PARTY WEBSITE OR THIRD PARTY SERVICE PROVIDER. ANY SUCH PROBLEM SHALL BE GOVERNED SOLELY BY THE AGREEMENT BETWEEN YOU AND THAT PROVIDER. P</p>
+  <p>lease note that the applicable jurisdiction may not allow the exclusion of implied warranties. Some of the above exclusions may thus not apply to you.</p>
+  <p>10. THE COMPANY SHALL NOT BE RESPONSIBLE FOR ANY PERFORMANCE OR SERVICE PROBLEMS CAUSED BY ANY THIRD PARTY WEBSITE OR THIRD PARTY SERVICE PROVIDER (including, for example, your web service provider service, Stripe payment services, your software and/or any updates or upgrades to that software). ANY SUCH PROBLEM SHALL BE GOVERNED SOLELY BY THE AGREEMENT BETWEEN YOU AND THAT PROVIDER.</p>
+  <p>THE COMPANY RESERVES THE RIGHT TO DETERMINE, IN ITS SOLE DISCRETION, WHETHER THE COMPANY IS RESPONSIBLE FOR ANY SUCH MALFUNCTION OR DISRUPTION. THE COMPANY ALSO RESERVES THE RIGHT TO LIMIT YOUR USE OF THE SITE AND/OR THE CONTENT OR TO TERMINATE YOUR ACCOUNT SHOULD THE COMPANY DETERMINE THAT YOU HAVE VIOLATED THESE TERMS OF USE, OR THAT YOU HAVE VIOLATED ANY OTHER RULES OR CONDITIONS OF THE COMPANY. THE COMPANY RESERVES THE RIGHT TO REFUSE ACCESS TO THE SITE AND/OR THE COMPANY’S CONTENT, PRODUCTS AND/OR SERVICES TO ANYONE IN ITS SOLE DISCRETION. THE COMPANY RESERVES THE RIGHT TO DETERMINE, IN ITS SOLE DISCRETION, WHETHER THE COMPANY IS RESPONSIBLE FOR ANY SUCH MALFUNCTION OR DISRUPTION. THE COMPANY MAY, IN ITS SOLE DISCRETION, REFUND THE INITIAL FEE CHARGED FOR ANY USE OF THE SITE AND/OR ANY CONTENT OR A PRO-RATA PORTION THEREOF CONSISTENT WITH THE COMPANY’S REFUND POLICY. THE COMPANY SHALL REFUSE ANY REFUND THIRTY (30) DAYS AFTER YOUR PAYMENT FOR USE OF THE SITE AND/OR ANY CONTENT, EITHER PURSUANT TO THE COMPANY’S CUSTOMER LICENSE AGREEMENT OR OTHERWISE, REGARDLESS OF THE REASON FOR DISRUPTION.</p>
+  <p>11. IN NO EVENT SHALL THE COMPANY BE LIABLE FOR ANY SPECIAL, INCIDENTAL, INDIRECT, PUNITIVE, RELIANCE OR CONSEQUENTIAL DAMAGES, WHETHER FORESEEABLE OR NOT, INCLUDING, BUT NOT LIMITED TO, DAMAGE OR LOSS OF PROPERTY, EQUIPMENT, INFORMATION OR DATA, LOSS OF PROFITS, REVENUE OR GOODWILL, COST OF CAPITAL, COST OF REPLACEMENT SERVICES, OR CLAIMS FOR SERVICE INTERRUPTIONS OR TRANSMISSION PROBLEMS, OCCASIONED BY ANY DEFECT IN THE SITE, THE CONTENT, AND/OR RELATED MATERIALS, THE INABILITY TO USE SERVICES PROVIDED HEREUNDER OR ANY OTHER CAUSE WHATSOEVER WITH RESPECT THERETO, REGARDLESS OF THEORY OF LIABILITY. THIS LIMITATION WILL APPLY EVEN IF THE COMPANY HAS BEEN ADVISED OR IS AWARE OF THE POSSIBILITY OF SUCH DAMAGES.</p>
+  <p>12. You agree to indemnify and hold the Company and each of its directors, officers employees, and agents, harmless from any and all liabilities, claims, damages and expenses, including reasonable attorney’s fees, arising out of or relating to</p>
+  <p>(i) your breach of this Agreement,</p>
+  <p>(ii) any violation by you of law or the rights of any third party,</p>
+  <p>(iii) any materials, information, works and/or other content of whatever nature or media that you post or share on or through the Site,</p>
+  <p>(iv) your use of the Site or any services that the Company may provide via the Site, and</p>
+  <p>(v) your conduct in connection with the Site or the services or with other users of the Site or the services. The Company reserves the right to assume the exclusive defence of any claim for which we are entitled to indemnification under this Section. In such an event, you shall provide the Company with such cooperation as is reasonably requested by the Company.</p>
+  <p>13. The provisions of these Terms of Use are for the benefit of the Company, its subsidiaries, affiliates and its third party content providers and licensors, and each shall have the right to assert and enforce such provisions directly or on its own behalf.</p>
+  <p>14. This agreement shall be governed by and construed in accordance with the laws of England and Wales, without giving effect to any principles of conflicts of law.</p>
+  <p>If any provision of this agreement shall be unlawful, void, or for any reason unenforceable, then that provision shall be deemed severable from this agreement and shall not affect the validity and enforceability of any remaining provisions.</p>
+  <p>15. These Terms of Use may be revised from time to time by updating this posting. You are bound by any such revisions and should therefore periodically visit this page to review the then current Terms of Use to which you are bound.</p>
+  </section>
+  <section class="terms-section">
+  <h2 id="terms-of-private-coaching">Terms of Private Coaching</h2>
+  <p>The contract terms and the coaching services’ details are set out in further detail below. Before entering into the contract, you need to provide certain warranties (Warranties) regarding your health and well-being. It is very important that you read the Warranties carefully and check their accuracy.</p>
+  <p>If you cannot confirm the Warranties’ accuracy, we will not be able to provide the coaching services to you. Juliette Karaman- van Schaardenburg will provide the coaching services. She will coach and mentor you based on protocols and methodologies she has experienced over many years from multiple sources. She will include some or all of these to suit the requirements that become apparent to her in your sessions together. She will use the many tools she is qualified in to empower yourself.</p>
+  <p>She will also give you her perspective, where she has direct experience of any matter that arises, and it may include some advice on specific issues.</p>
+  <p>This is designed to facilitate the creation &amp; development of personal and professional goals and to develop and carry out a plan for achieving these. Somatic coaching can also include hands-on treatment and is always guided by the client.</p>
+  <p>There is no guarantee that her coaching and expertise will produce the desired results in all aspects, and you understand and acknowledge this point. She is not a doctor or a medical professional, so if you need medical help during our sessions, please contact a doctor.</p>
+  <p>Your warranties:</p>
+  <p>You agree that:</p>
+  <p>You are unaware of any circumstances that would suggest that the coaching and mentoring are unsuitable for you or may damage your health or well-being.</p>
+  <p>You are not currently being treated for depression or any other psychological disorder or taking any psychoactive prescription drugs or other medicines that may be contra-indicated for coaching or mentoring services.</p>
+  <p>You recognise that coaching and mentoring do not guarantee results.</p>
+  <p>In particular (without limitation), you recognise that the extent of your participation in the coaching process is likely to have a material impact on the results. Nevertheless, you recognise that even if you are fully engaged, in limited cases, clients do not get the results that they expect or desire from coaching or mentoring.</p>
+  <p>You acknowledge that creating results requires considerable effort and that, by entering into this Agreement, you are prepared and committed to making that effort.</p>
+  <p>You are not pregnant or, if you are pregnant, you have consulted your doctor, and your doctor has not advised you to avoid participation in coaching.</p>
+  <p>You are over the age of 18.</p>
+  <p>You will not use any alcohol or mind-altering drugs for at least 24 hours before an in-person or online session.</p>
+  <p>If any of the above changes during the course of our work together, you will let us know immediately.</p>
+  <p>You confirm that you have understood the Warranties.</p>
+  <p>You also recognise that by ticking the box, you will enter into a legally binding contract per the terms and conditions herein.</p>
+  <h3>1. SERVICES</h3>
+  <p>1.1. The range of services are set out in the order form.</p>
+  <p>1.2. The Company will use its reasonable endeavours to provide those services that you have ordered. The Company (and its employees and consultants) operates during normal business hours in the United Kingdom (that is, from 9.00am to 5.00pm) from Monday to Friday. Any provision of services outside those hours is at the Company’s sole discretion. It will use reasonable care in the provision of the services.</p>
+  <p>1.3. In the course of the provision of the services, we will provide you with knowledge, guidance, and materials (“know-how”). This know-how is provided to you under a limited licence. To the extent that the knowhow is confidential information, it is subject to clause 8.</p>
+  <p>All know-how is licensed to you solely and exclusively for your personal use only (and not for the purpose of providing services to others or otherwise undertaking its distribution) and based on your full compliance with the terms of this contract. The licence of know-how is perpetual and survives termination of this contract.</p>
+  <h3>2. YOUR ACKNOWLEDGEMENTS</h3>
+  <p>2.1. You acknowledge that the services involve coaching, mentoring, education, hypnotherapy and personal development, not counselling or medical advice.</p>
+  <p>2.2. You acknowledge that the services cannot guarantee any specific results. Results depend on many factors, some within your control and some outside of your control.</p>
+  <h3>3. YOUR COMMITMENTS</h3>
+  <p>3.1. You represent that the Warranties you have made to us in the order are accurate, and you acknowledge that we have relied upon them to enter into this contract. You agree that you will continue to honour those Warranties throughout the duration of this contract.</p>
+  <p>You agree to notify us in writing that you are discontinuing the services immediately in the event that your circumstances change such that the</p>
+  <p>Warranties or any of them are no longer true or accurate in all material respects.</p>
+  <p>3.2. You agree not to:</p>
+  <p>(a) make any disparaging or critical remarks about our services, whether during or after the provision of services; or</p>
+  <p>(b) take copies of our website or other materials that have been provided to you.</p>
+  <h3>4. PAYMENT</h3>
+  <p>4.1. Fees correspond to the services you receive from us as set out in the order form. Fees are quoted inclusive of VAT.</p>
+  <p>4.2. Any fee that has been paid to us is non-refundable. We are entitled to terminate this contract at any time for any reason by giving written notice, which will take effect immediately. Unless we have terminated this contract due to your material breach of its provisions, you will be entitled to a daily pro-rated refund of any pre-paid fees (to cover the unused services period to which the pre-paid fees are related). for reasons other than your material breach of the provisions of this contract.</p>
+  <h3>5. TERM AND TERMINATION</h3>
+  <p>5.1. This contract commences when you tick the box and expires immediately after completing the services or at the period set out in the Checkout Page, whichever is earlier. To avoid doubt, any sessions not used before the end of the term shall not be available to you thereafter, nor shall any refunds (whether pro rata or otherwise) be given.</p>
+  <p>5.2. We are entitled to terminate this contract at any time for any reason by giving written notice, which will take effect immediately.</p>
+  <p>Unless we have terminated this contract due to your material breach of its provisions, you will be entitled to a daily pro-rated refund of any pre-paid fees (to cover the unused services period to which the pre-paid fees are related).</p>
+  <h3>6. RESCHEDULING / CANCELLING 1:1 SESSIONS</h3>
+  <p>6.1. Subject always to clause 5, you may reschedule a session by giving us at least 48 hours’ notice. If you give us less than 48 hours’ notice, you lose the right to have that session, and you shall not be entitled to any refund or reduction of our fees. Furthermore, you shall not be entitled to any refund or reduction of our fee if you cancel any session.</p>
+  <p>6.2 You may reschedule a session for The Scrumptious Experience® VIP experience, by giving us a minimum of 48 hours’ notice.</p>
+  <p>6.3 All sessions for The Scrumptious Experience® VIP experience must be booked and compleated in the 6 week time period. Any sessions not booked or compleated will be forfeited.</p>
+  <p>You may reschedule a session for the Scrumptious Experience® Receive and Reveal &amp; the Couples Receive and Reveal by giving us a minimum of 7 working days notice. If you give us less than the above notice, you lose the right to have that experience and you shall not be entitled to any refund or reduction of our fees.</p>
+  <h3>7. CONFIDENTIALITY</h3>
+  <p>7.1. Each of you or us that receives (“receiving party”) confidential information (which includes details of our clients, and any elements of the knowhow that are marked as confidential or that are not freely and publicly available) from the other (“disclosing party”), shall:</p>
+  <p>(a) keep the confidential information confidential;</p>
+  <p>(b) not disclose the confidential information to any other person other than with the prior written consent of the disclosing party or in accordance with clause.</p>
+  <p>We may disclose confidential information to our own officers, directors, employees contractors \ agents and advisers who reasonably need to know for the purpose of providing the services and any activities ancillary to the provision of the services (each a “permitted third party”), provided that we shall remain solely liable to you for the acts, omissions, and compliance with the terms of this clause of such permitted third party as if such permitted third party was us.;</p>
+  <h3>and</h3>
+  <p>(c) not use the confidential information for any purpose other than in order to comply with the terms of this contract (“permitted purpose”).</p>
+  <p>7.2. We may disclose confidential information to our own officers, directors, employees contractors agents and advisers who reasonably need to know for the purpose of providing the services and any activities ancillary to the provision of the services (each a “permitted third party”), provided that we shall remain solely liable to you for the acts, omissions, and compliance with the terms of this clause of such permitted third party as if such a permitted third party was us.</p>
+  <h3>8. DATA PROTECTION</h3>
+  <p>8.1. We are committed to protecting the privacy and security of your personal information. Accordingly, I will process your personal information in accordance with the General Data Protection Regulation (GDPR), the Data Protection Act 2018 and any other national implementing laws, regulations and secondary legislation, as amended or updated from time to time, in the UK (“Data Protection Legislation”).</p>
+  <p>8.2. Our privacy policy is available on request, as updated from time to time (“Privacy Policy”) and details how we collect and use personal information about you, in accordance with the Data Protection Legislation. Please read our Privacy Policy carefully to understand our practices regarding your personal data and how we will treat it.</p>
+  <h3>9. PERMISSIONS YOU GIVE TO US</h3>
+  <p>9.1. You agree that any information and materials that you give to us (whether in the course of the provision of the services or otherwise);</p>
+  <p>(a) is not confidential information unless you have marked it as “confidential”;</p>
+  <p>(b) may be retained and used by us (for any purpose) in perpetuity, subject always to clause Data Protection (in respect of any of your personal data or sensitive personal data that we hold and/or process).</p>
+  <p>9.2. We shall be entitled to anonymise and retain your data. Such anonymised data will;</p>
+  <p>(a) not be capable of identifying you and</p>
+  <p>(b) belong to the Company and, as such, can be used for any purpose.</p>
+  <h3>10. LIABILITY</h3>
+  <p>10.1. Nothing in this contract affects your statutory rights. If the Company becomes legally responsible to you for breach of contract or negligence, you agree that its liability is limited to £10,000, provided that this does not limit our liability for death or personal injury caused by its negligence.</p>
+  <h3>11. INDEMNITY</h3>
+  <p>11.1. You hereby indemnify us against all liabilities, costs, expenses, damages and losses (including but not limited to any direct, indirect or consequential losses, loss of profit, loss of reputation and all interest, penalties and legal costs (calculated on a full indemnity basis) and all other reasonable professional costs and expenses) suffered or incurred by us, our officers, directors, employees and/or agents arising out of or in connection with:</p>
+  <p>(b) any breach of the Warranties or any circumstances where the Warranties cease to be true or accurate; and,</p>
+  <p>(c) any other breach of this agreement, including any invalid termination or cancellation thereof.</p>
+  <p>11.2. This indemnity shall apply whether or not the Company has been negligent or at fault.</p>
+  <p>If a payment due from you under this clause is subject to tax (whether by way of direct assessment or withholding at its source), the Company shall be entitled to receive from you such amounts as shall ensure that the net receipt, after tax, to the Company in respect of the payment is the same as it would have been were the payment not subject to tax.</p>
+  <h3>GENERAL PROVISIONS</h3>
+  <h3>Assignment</h3>
+  <p>Notwithstanding anything in this agreement, you may not assign this agreement to any other person. No sessions purchased pursuant to this agreement may be transferred or used by any other person without the Company’s consent in writing, which may be withheld in the Company’s sole discretion.</p>
+  <p>Force Majeure.</p>
+  <p>The Company will not be liable for any delay or failure in performing its duties under this contract caused by an act of God, the act of terrorism, civil disturbance, or another event that is beyond its reasonable control (an event of “Force Majeure”).</p>
+  <p>Entire Agreement.</p>
+  <p>You agree that you have not relied on any promises or representations by the Company, its officers, directors, employees, or agents in entering into this contract. The Company has relied on your Warranties in entering into this contract.</p>
+  <p>Notices.</p>
+  <p>All notices under this contract shall be in writing and shall be sent to the address of the recipient set out in this contract or to such other address as the recipient may have been notified from time to time. Any notice may be delivered personally (deemed served when delivered), by a reputable courier service (deemed served 48 hours after delivery), or by email (deemed served immediately).</p>
+  <p>Law and Jurisdiction.</p>
+  <p>This contract is governed by the laws of England and is subject to the exclusive jurisdiction of the courts of England and Wales.</p>
+  <h3>DATA PROTECTION CONSENT</h3>
+  <p>In the course of the provision of the services, you may disclose to us certain sensitive or other personal information about you or which may identify you (the Data). Pursuant to the provisions of the General Data Protection Regulation and the Data Protection Act 2018, you hereby explicitly consent to the control and processing of the Data in accordance with the provisions of the Company’s Privacy Policy</p>
+  <p>I understand that all sales are final and no refunds will be given.</p>
+  </section>
+  <section class="terms-section">
+  <h2 id="podcast-contributors">Podcast Contributors</h2>
+  <p>The Scrumptious Woman ® Podcast terms and conditions:</p>
+  <h3>Podcast: The Scrumptious Woman®</h3>
+  <p>Producer’s name: Pleasure By Design Limited t/a Feel Fully You</p>
+  <h3>Producer’s email address: support@feelfullyyou.com</h3>
+  <p>Assets: One image with Scrumptious Woman trade dress featuring the Contributor and Juliette Karaman, show notes in relation to Contributor’s contribution to the Podcast, link to the Podcast episode featuring the Contributor.</p>
+  <p>Description of Contribution: As an interview guest on the Podcast</p>
+  <p>By ticking the box, you (contributor) confirm our agreement whereby, in consideration of our agreeing to have you participate in the Podcast and of our giving you the opportunity to provide us with the Contribution, and of our arranging to film and/or record the Contribution:</p>
+  <p>You agree to the recording and distribution of the Contribution and hereby assign to us absolutely with full title guarantee all existing and future rights (including without limitation copyright and performers’ property rights) in such Contribution and all consents necessary to enable us to make full use of the</p>
+  <p>Contribution worldwide in perpetuity in any and all media, whether now known or hereafter developed or discovered, and whether as part of the Podcast or as part of other content owned, controlled or represented by the Company, without payment, liability, or acknowledgement to you.</p>
+  <p>You agree that we may edit, copy, add to, adapt or translate the Contribution, and dub it into foreign languages, at our discretion and, in respect of the Contribution, you irrevocably waive in favour of us and our future assignees and licensees the benefit of all moral rights and performers’ rights arising under the Copyright, Designs and Patents Act 1988 or similar rights under the laws of any jurisdiction.</p>
+  <p>You grant us the right to issue publicity relating to the Contribution, the Podcast and any other Podcast in which it may be included and to use and publish for such purposes the Contribution, your name, photograph or likeness, biographical details about you, recordings of you and interviews with you.</p>
+  <p>You agree that within 7 days of receipt of the Assets that:</p>
+  <p>you will share the Assets with your email list; and,</p>
+  <p>post the Assets on your social media accounts which post shall include:</p>
+  <p>#thescrumptiouswoman and @juliettekaraman.</p>
+  <p>You understand and agree that we reserve the right to not distribute or exhibit the Contribution nor to exploit it in any other way.</p>
+  <p>You warrant that:</p>
+  <p>you are fully entitled to enter into this agreement and to grant all rights in the Contribution to us and you have the legal capacity to enter freely into this agreement with us;</p>
+  <p>the Contribution will not infringe the copyright or any other right of any third party or breach any contract or duty of confidence, data protection law or the Official Secrets Act or other legislation relating to national security, constitute a contempt of court or be obscene, defamatory or blasphemous;</p>
+  <p>you are at least 18 years old;</p>
+  <p>except as specifically provided herein, you will keep confidential and not disclose to any third party any confidential information, photographs or other material relating to the affairs or personnel of the Producer or to the Podcast or anyone taking part in it that you came to know about as a result of your participation in the Podcast or otherwise; and</p>
+  <p>You agree that we may at any time assign, mortgage, charge, declare a trust over or deal in any other manner with any or all of our rights under this agreement.</p>
+  <p>You agree that this agreement and any dispute or claim (including non-contractual disputes or claims) arising out of or in connection with it or its subject matter or formation shall be governed by and construed in accordance with the law of England and Wales.</p>
+  <p>You and we irrevocably agree that the courts of England and Wales shall have exclusive jurisdiction to settle any dispute or claim (including non-contractual disputes or claims) arising out of or in connection with this agreement or its subject matter or formation.</p>
+  </section>
+  <section class="terms-section">
+  <h2 id="podcast-sponsors">Podcast Sponsors</h2>
+  <p>The Scrumptious Woman ® Podcast Sponsorship Terms and Conditions:</p>
+  <p>By ticking the box, you (Sponsor) confirm our agreement between Pleasure By Design Limited t/a Feel Fully You (Company) and You (Sponsor) and relates to the Sponsorship of the Podcast known as the The Scrumptious Woman (Podcast).</p>
+  <h3>Sponsor Rights</h3>
+  <p>The Sponsor Rights are set out in the Proposal.</p>
+  <p>Subject to the payment of the Sponsorship Fee, the Sponsor Rights shall be implemented with respect to the Sponsorship Period as set out in the Proposal.</p>
+  <p>The commencement of the Sponsorship Period shall be at the discretion of the Company but shall be not later than 3 months from acceptance by the Sponsor of the Proposal and discharge by the Sponsor of the Sponsor Obligations.</p>
+  <h3>Sponsor Obligations</h3>
+  <p>To pay the Fee set out in the Proposal to the Company which shall be paid prior to any of the Sponsor Rights being implemented.</p>
+  <p>To supply the Company with a high-resolution pdf comprising its brand/logo for the purpose of the implementation of the Sponsor Rights.</p>
+  <p>To supply the Company with the completed questionnaire, the form which shall be supplied to the Sponsor within three working day of the payment of the Sponsorship Fee and acceptance by the Company of the Sponsorship.</p>
+  <h3>Company Rights</h3>
+  <p>The Company may refuse to accept the Proposal by the Sponsor. If the Company refuses the Proposal for the Sponsorship, any monies paid to the Company shall be returned to the Sponsor within two weeks of such refusal of the Sponsorship.</p>
+  <p>The Company may refer to the Sponsor’s association with the Podcast at any time in the Company’s promotional and marketing activities.</p>
+  <h3>Confidentiality</h3>
+  <p>Each party undertakes that it shall not at any time disclose to any person any confidential information concerning the business, assets, affairs, customers, clients or suppliers of the other party.</p>
+  <p>Each party shall keep the terms of this Agreement confidential and shall not disclose the terms thereof except to such persons as may be required for the proper performance thereof.</p>
+  <h3>Intellectual Property</h3>
+  <p>All intellectual property including without limitation any and all copyright in and to the Podcast shall belong to the Company.</p>
+  <p>The Company shall be entitled to exploit the Podcast (including any of the Sponsor Intellectual Property) by any means of distribution whether now known or hereafter invented.</p>
+  <p>Subject to the provisions set out above, the Sponsor retains all of the rights in the intellectual property comprising the Sponsor brand or log referred to in this Agreement.</p>
+  <h3>Force majeure</h3>
+  <p>Neither party shall be in breach of this agreement or otherwise liable for any failure or delay in the performance of its obligations if such delay or failure results from events, circumstances or causes beyond its reasonable control. The time for performance of such obligations shall be extended accordingly.</p>
+  <p>If the period of delay or non-performance continues for 12 weeks, the party not affected may terminate this agreement by giving 14 days written notice to the affected party.</p>
+  <h3>Entire agreement</h3>
+  <p>This agreement constitutes the entire agreement between the parties.</p>
+  <p>Each party acknowledges that in entering into this agreement it does not rely on any statement, representation, assurance or warranty (whether made innocently or negligently) that is not set out in this agreement or in the Proposal.</p>
+  <h3>Governing law</h3>
+  <p>This agreement and any dispute or claim (including non-contractual disputes or claims) arising out of or in connection with it or its subject matter or formation shall be governed by and construed in accordance with the law of England and Wales.</p>
+  <p>Each party irrevocably agrees that the courts of England and Wales shall have exclusive jurisdiction to settle any dispute or claim (including non-contractual disputes or claims) arising out of or in connection with this agreement or its subject matter or formation.</p>
+  </section>
+</div>
+
+<footer style="background:#a88538;color:#fff;padding:22px 32px;font-size:13px">
+  <div style="max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+    <div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:0.95rem;color:#fff;letter-spacing:-.01em">Feel Fully You</div>
+    <div style="font-size:12px;color:rgba(255,255,255,.85);display:flex;gap:16px;align-items:center"><a href="mailto:support@feelfullyyou.com" style="color:#fff;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(255,255,255,.5)">support@feelfullyyou.com</a><a href="/terms" style="color:rgba(255,255,255,.75);text-decoration:none" target="_blank" rel="noopener">Terms</a></div>
+    <div style="display:flex;gap:14px;align-items:center">
+      <a href="https://www.instagram.com/juliettekaraman/" aria-label="Instagram" style="color:rgba(255,255,255,.85);display:flex;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+      <a href="https://www.facebook.com/juliette.karamanvanschaardenburg" aria-label="Facebook" style="color:rgba(255,255,255,.85);display:flex;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+      <a href="https://www.linkedin.com/in/juliette-karaman-van-schaardenburg-89399913b" aria-label="LinkedIn" style="color:rgba(255,255,255,.85);display:flex;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+      <a href="https://www.tiktok.com/@juliettekaraman" aria-label="TikTok" style="color:rgba(255,255,255,.85);display:flex;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+      <a href="https://substack.com/@juliettekaraman" aria-label="Substack" style="color:rgba(255,255,255,.85);display:flex;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 17.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+<script>
+(function(){
+  var btn=document.getElementById('hamBtn');
+  var nav=document.getElementById('mobileNav');
+  if(btn&&nav){btn.addEventListener('click',function(){nav.classList.toggle('open');btn.setAttribute('aria-expanded',nav.classList.contains('open'))});}
+})();
+</script>
+</body>
+</html>
