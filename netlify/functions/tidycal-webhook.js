@@ -83,6 +83,22 @@ exports.handler = async function(event) {
     return { statusCode: 405, body: 'Method Not Allowed' };
   }
 
+  // ─── Shared-secret gate (TidyCal has no signed webhooks) ─────────────────────
+  // FAIL-SAFE: only enforced once TIDYCAL_TOKEN is set in Netlify env. Until then
+  // this endpoint stays open (so bookings never silently break), but it logs a
+  // warning. TO SECURE: set TIDYCAL_TOKEN in Netlify → Site Settings → Environment
+  // Variables, then set the TidyCal webhook URL to end with ?token=<that value>.
+  const requiredToken = process.env.TIDYCAL_TOKEN;
+  if (requiredToken) {
+    const given = (event.queryStringParameters && event.queryStringParameters.token) || '';
+    if (given !== requiredToken) {
+      console.error('TidyCal webhook: missing/invalid token — rejected');
+      return { statusCode: 401, body: 'Invalid token' };
+    }
+  } else {
+    console.warn('TIDYCAL_TOKEN not set — webhook is UNAUTHENTICATED. Set it in Netlify to secure this endpoint.');
+  }
+
   const apiSecret = process.env.KIT_API_KEY || process.env.KIT_API_SECRET;
   if (!apiSecret) {
     console.error('KIT_API_KEY env var not set');

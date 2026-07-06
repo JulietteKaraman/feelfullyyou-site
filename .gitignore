@@ -1,0 +1,15 @@
+# Secrets — never commit
+.env
+.env.*
+*.pem
+*.key
+
+# Dependencies / build
+node_modules/
+.netlify/
+
+# OS / editor
+.DS_Store
+*.swp
+.vscode/
+.idea/

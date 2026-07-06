@@ -22,6 +22,8 @@ function verifyStripeSignature(rawBody, sigHeader, secret) {
     .createHmac('sha256', secret)
     .update(`${timestamp}.${rawBody}`)
     .digest('hex');
+  // Length guard: timingSafeEqual throws on unequal-length buffers, so bail first.
+  if (expected.length !== sig.length) return false;
   return crypto.timingSafeEqual(Buffer.from(expected), Buffer.from(sig));
 }
 
@@ -295,15 +297,21 @@ exports.handler = async function(event) {
     return { statusCode: 500, body: 'Server not configured' };
   }
 
+  // Netlify may base64-encode the request body. The Stripe signature is computed
+  // over the exact raw bytes, so decode first or the HMAC will never match.
+  const rawBody = event.isBase64Encoded
+    ? Buffer.from(event.body || '', 'base64').toString('utf8')
+    : (event.body || '');
+
   const sigHeader = event.headers['stripe-signature'] || '';
-  if (!verifyStripeSignature(event.body, sigHeader, webhookSecret)) {
+  if (!verifyStripeSignature(rawBody, sigHeader, webhookSecret)) {
     console.error('Invalid Stripe signature');
     return { statusCode: 400, body: 'Invalid signature' };
   }
 
   let stripeEvent;
   try {
-    stripeEvent = JSON.parse(event.body);
+    stripeEvent = JSON.parse(rawBody);
   } catch {
     return { statusCode: 400, body: 'Invalid JSON' };
   }

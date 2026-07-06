@@ -5,15 +5,23 @@ exports.handler = async function(event) {
     return { statusCode: 405, body: 'Method Not Allowed' };
   }
 
-  let email, firstName, tagIds, sequenceId;
+  let email, firstName, tagIds, sequenceId, honeypot;
   try {
     const body = JSON.parse(event.body);
     email = body.email;
     firstName = body.firstName || '';
-    tagIds = body.tagIds || [];
+    tagIds = Array.isArray(body.tagIds) ? body.tagIds : [];
     sequenceId = body.sequenceId || null;
+    // Anti-spam honeypot: add a hidden field named "website" to forms. Real users
+    // leave it empty; bots fill every field. If it's filled, silently accept
+    // (return 200 so the bot sees success) but do nothing.
+    honeypot = body.website || '';
   } catch {
     return { statusCode: 400, body: JSON.stringify({ error: 'Invalid JSON' }) };
+  }
+
+  if (honeypot) {
+    return { statusCode: 200, body: JSON.stringify({ ok: true }) };
   }
 
   if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
@@ -38,7 +46,11 @@ exports.handler = async function(event) {
       headers,
       body: JSON.stringify({ email_address: email, first_name: firstName })
     });
-    const subData = await subRes.json();
+    const subData = await subRes.json().catch(() => ({}));
+    if (!subRes.ok) {
+      console.error('Kit subscriber create failed:', subRes.status, JSON.stringify(subData).slice(0, 300));
+      return { statusCode: 502, body: JSON.stringify({ error: 'Subscription service error' }) };
+    }
     const subscriberId = subData?.subscriber?.id;
 
     // 2. Apply tags
