@@ -22,19 +22,22 @@ const PUBLIC_REPLY = 'Just sent it over, check your DMs 🤍';
 
 // Keyword → DM copy. EXACT copy from the InstantDM handover doc (Notion,
 // 395c7588d9ea8180bd31fdae97006e19). Multi-word phrases are matched before
-// single words so TOUCH BASE never falls through to ONE TOUCH.
-// Retired, never add: ALIVE, STEADY, TOUCH (misfires — RITUALS replaced it).
+// single words, so TOUCH BASE and ONE TOUCH always win over bare TOUCH —
+// which is why TOUCH (kept for Juliette's existing reels, 6 July) must stay
+// LAST in this list. Retired, never add: ALIVE, STEADY, RITUALS (was TOUCH's
+// stand-in; Juliette swapped it back since her reels all say TOUCH).
 const KEYWORDS = [
   { match: 'TOUCH BASE', dm: 'Here is Touch Base: https://feelfullyyou.com/touch-base-anchor. Three minutes. Thumb to forefinger. Your body learns it is safe right now.' },
   { match: 'ONE TOUCH', dm: 'Here is One Touch: https://feelfullyyou.com/one-touch. Seven days, one practice a day, just you. Structure creates safety. Safety creates surrender.' },
   { match: 'DECK', dm: 'Here they are. The Intimacy and Communication Cards, 475 prompts across four decks, from £15: https://feelfullyyou.com/cards. Pull one tonight. One answer, from the heart.' },
   { match: 'CARDS', dm: 'Here is your free taster deck. Ten cards, start tonight: https://feelfullyyou.com/cards-free-taster. Enter your email and the deck opens straight away. Read one out loud. One answer, from the heart. Fifteen minutes is all it takes.' },
   { match: 'DISTANCE', dm: 'Here is The Unspoken Distance: https://feelfullyyou.com/the-unspoken-distance. Written for the man who feels her closing and does not know why. Start there.' },
-  { match: 'RITUALS', dm: 'Here are the 10 Touch Rituals: https://feelfullyyou.com/10-touch-rituals. £7, instant access, start tonight. One ritual is all it takes to begin.' },
   { match: 'QUIET', dm: 'Here is When She Goes Quiet: https://feelfullyyou.com/when-she-goes-quiet. It explains what her silence is actually saying, and what reaches her when words do not.' },
   { match: 'BETWEEN', dm: 'Here is Between Touches: https://feelfullyyou.com/between-touches. What happens between you when nobody is touching is where the work starts.' },
   { match: 'INTENSIVE', dm: 'The intensives start with a fifteen-minute call. I will tell you honestly if I can help: https://tidycal.com/juliette2/the-beginning-clarity-call' },
-  { match: 'BEGINNING', dm: 'Here is The Beginning: https://feelfullyyou.com/the-beginning. Eight private weeks, both of you, each with your own space inside it.' }
+  { match: 'BEGINNING', dm: 'Here is The Beginning: https://feelfullyyou.com/the-beginning. Eight private weeks, both of you, each with your own space inside it.' },
+  // must stay LAST — longer phrases above (TOUCH BASE, ONE TOUCH) match first
+  { match: 'TOUCH', dm: 'Here are the 10 Touch Rituals: https://feelfullyyou.com/10-touch-rituals. £7, instant access, start tonight. One ritual is all it takes to begin.' }
 ];
 
 function findKeyword(text) {
