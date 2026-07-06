@@ -151,6 +151,38 @@ const PRODUCT_MAP = {
     tagId: 20896675,   // "cards-full-bundle"
     sequenceId: null,
     label: 'Cards Full Set £75 (app, old price still active)'
+  },
+  // ─── PHYSICAL CARDS (shipped) ───────────────────────────────────────────────
+  'price_1Tq9COCCw18geY15l19M8pis': {
+    tagId: 20912672,   // "physical-cards-buyer"
+    sequenceId: null,
+    label: 'Physical Cards single deck £47'
+  },
+  'price_1Tq9CYCCw18geY15BQISoldJ': {
+    tagId: 20912672,   // "physical-cards-buyer"
+    sequenceId: null,
+    label: 'Physical Cards Touch Languages £47'
+  },
+  'price_1Tq9CcCCw18geY15kDbDH8fv': {
+    tagId: 20912672,   // "physical-cards-buyer"
+    sequenceId: null,
+    label: 'Physical Cards 2-deck bundle £77'
+  },
+  'price_1Tq9CfCCw18geY151w171G6I': {
+    tagId: 20912672,   // "physical-cards-buyer"
+    sequenceId: null,
+    label: 'Physical Cards all three £111'
+  },
+  // ─── CANDLES (shipped) ──────────────────────────────────────────────────────
+  'price_1Tq9CmCCw18geY1567KBbH0X': {
+    tagId: 20912673,   // "candles-buyer"
+    sequenceId: null,
+    label: 'Scrumptious Candle £35'
+  },
+  'price_1Tq9CtCCw18geY15uN6irdOk': {
+    tagId: 20912673,   // "candles-buyer"
+    sequenceId: null,
+    label: 'Pleasure Candle £35'
   }
 };
 
