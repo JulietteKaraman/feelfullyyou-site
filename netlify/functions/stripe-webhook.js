@@ -135,6 +135,22 @@ const PRODUCT_MAP = {
     tagId: 20907435,   // "cards-complete-set"
     sequenceId: null,
     label: 'Cards Complete the Set £25 (email offer, single deck owners)'
+  },
+  // ─── CARDS APP CHECKOUT (couplecards.netlify.app in-app purchases) ──────────
+  'price_1TOJbnCCw18geY15CjoyXpdr': {
+    tagId: 20911186,   // "cards-touch-languages"
+    sequenceId: null,
+    label: 'Touch Languages deck £35 (app)'
+  },
+  'price_1TOJaDCCw18geY15CKuWkE1z': {
+    tagId: 20896674,   // "cards-one-deck"
+    sequenceId: null,
+    label: 'Family & Friends deck £35 (app)'
+  },
+  'price_1TOxGfCCw18geY15mESPCeFC': {
+    tagId: 20896675,   // "cards-full-bundle"
+    sequenceId: null,
+    label: 'Cards Full Set £75 (app, old price still active)'
   }
 };
 
@@ -218,6 +234,23 @@ exports.handler = async function(event) {
     console.log(`${product.label} purchase — adding ${email} to Kit`);
     await addToKit(email, firstName, product.tagId, product.sequenceId, apiSecret);
     return { statusCode: 200, body: JSON.stringify({ ok: true, product: product.label }) };
+  }
+
+  // Fallback for cards-app checkouts (couplecards.netlify.app): those sessions carry
+  // no price_id metadata, so match on the amount paid. Only unambiguous cards amounts.
+  // NOTE: if a future non-cards product shares one of these amounts, give its payment
+  // link metadata.price_id and PRODUCT_MAP wins before this fallback is reached.
+  const AMOUNT_MAP = {
+    1500: { tagId: 20896673, label: 'Cards £15 by amount (Trust & Repair)' },
+    3500: { tagId: 20896674, label: 'Cards £35 by amount (single deck)' },
+    5500: { tagId: 20896675, label: 'Cards £55 by amount (full set)' },
+    7500: { tagId: 20896675, label: 'Cards £75 by amount (old app full set)' }
+  };
+  const amountMatch = session?.currency === 'gbp' ? AMOUNT_MAP[session?.amount_total] : null;
+  if (amountMatch) {
+    console.log(`${amountMatch.label} — adding ${email} to Kit`);
+    await addToKit(email, firstName, amountMatch.tagId, null, apiSecret);
+    return { statusCode: 200, body: JSON.stringify({ ok: true, product: amountMatch.label }) };
   }
 
   // Fallback: tag as unknown purchaser so nobody is lost
