@@ -293,20 +293,7 @@ function unused(){
   amtEl.textContent = '£' + total + '.00';
 }
 
-// Form submit, routes to Ivorey/payment
-function submitOrder(e){
-  e.preventDefault();
-  const selected = document.querySelectorAll('.candle-opt.checked');
-  if(selected.length === 0){
-    alert('Please select at least one candle.');
-    return;
-  }
-  // TODO: Add Stripe payment link(s) for candles here
-  // Single candle → individual Stripe link
-  // Both candles → bundle Stripe link
-  // For now, redirect to the Ivorey shop page
-  window.location.href = 'https://feelfullyyou.com/the-scrumptious--and-pleasure-candles';
-}
+// Ordering now runs through the regional Stripe checkout buttons above.
 
 // Reveal
 const io = new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
