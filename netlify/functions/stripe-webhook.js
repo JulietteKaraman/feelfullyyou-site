@@ -115,6 +115,16 @@ const PRODUCT_MAP = {
     tagId: 20896675,   // "cards-full-bundle"
     sequenceId: null,
     label: 'Cards Full Bundle £55'
+  },
+  'price_1Tq7PiCCw18geY15kgJMkb6E': {
+    tagId: 20907435,   // "cards-complete-set"
+    sequenceId: null,
+    label: 'Cards Complete the Set £40 (T&R owners)'
+  },
+  'price_1Tq7PpCCw18geY15ojeYpePd': {
+    tagId: 20907435,   // "cards-complete-set"
+    sequenceId: null,
+    label: 'Cards Complete the Set £20 (single deck owners)'
   }
 };
 
