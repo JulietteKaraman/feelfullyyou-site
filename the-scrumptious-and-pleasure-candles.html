@@ -212,8 +212,16 @@
     <p>Dark oud and rich Tuscan leather embrace you, while spiced incense, Damascus rose, and ripe raspberries add warmth and depth.</p>
     <p>A hint of pepper ignites every sense. This isn't just a scent, it's an experience.</p>
     <div class="price">£35</div>
-    <div class="price-note">Shipping added at checkout · UK &amp; International</div>
-    <a href="https://feelfullyyou.com/the-scrumptious--and-pleasure-candles" class="btn order-btn" target="_blank" rel="noopener">Order now</a>
+    <div class="price-note">Postage added at checkout: £5.99 UK · £15.99 Europe · £27.99 US &amp; worldwide</div>
+    <select class="candle-region" style="display:block;margin:0 0 12px;padding:10px 12px;border:1.5px solid rgba(0,0,0,.15);border-radius:4px;font-size:14px;max-width:300px">
+      <option value="uk" selected>Ship to: United Kingdom</option>
+      <option value="eu">Ship to: Europe</option>
+      <option value="world">Ship to: US &amp; worldwide</option>
+    </select>
+    <a class="btn order-btn candle-order" target="_blank" rel="noopener"
+       data-uk="https://buy.stripe.com/6oU14m0XF2CI99P32B0co13"
+       data-eu="https://buy.stripe.com/7sYeVc5dVgtyeu97iR0co1a"
+       data-world="https://buy.stripe.com/eVq8wO5dV5OU99Pav30co1g">Order now</a>
   </div>
 </div>
 
@@ -229,8 +237,25 @@
     <p>Juicy blackcurrants and figs meet zesty lemon and bergamot, unfolding into a floral heart of rose and spiced carnation.</p>
     <p>Anchored in sandalwood, oakmoss, and warm amber, it lingers, soft, sensual, and utterly irresistible.</p>
     <div class="price">£35</div>
-    <div class="price-note">Shipping added at checkout · UK &amp; International</div>
-    <a href="https://feelfullyyou.com/the-scrumptious--and-pleasure-candles" class="btn order-btn" target="_blank" rel="noopener">Order now</a>
+    <div class="price-note">Postage added at checkout: £5.99 UK · £15.99 Europe · £27.99 US &amp; worldwide</div>
+    <select class="candle-region" style="display:block;margin:0 0 12px;padding:10px 12px;border:1.5px solid rgba(0,0,0,.15);border-radius:4px;font-size:14px;max-width:300px">
+      <option value="uk" selected>Ship to: United Kingdom</option>
+      <option value="eu">Ship to: Europe</option>
+      <option value="world">Ship to: US &amp; worldwide</option>
+    </select>
+    <a class="btn order-btn candle-order" target="_blank" rel="noopener"
+       data-uk="https://buy.stripe.com/6oUbJ0bCjelq4Tz0Ut0co14"
+       data-eu="https://buy.stripe.com/00wcN47m3a5a3Pv9qZ0co1b"
+       data-world="https://buy.stripe.com/eVqcN40XFelq4TzdHf0co1h">Order now</a>
+    <script>
+    (function(){
+      document.querySelectorAll('.candle-region').forEach(function(sel){
+        var btn=sel.parentElement.querySelector('.candle-order');
+        function set(){btn.href=btn.getAttribute('data-'+(sel.value==='eu'?'eu':(sel.value==='world'?'world':'uk')));}
+        sel.addEventListener('change',set); set();
+      });
+    })();
+    </script>
   </div>
 </div>
 

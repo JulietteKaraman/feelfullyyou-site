@@ -522,26 +522,60 @@
       <h2 class="reveal">For the people who want to hold the cards.</h2>
       <p class="reveal">The same prompts, printed and beautifully made. For the kitchen table, the bedside, the weekend away.</p>
       <p class="reveal">Available as individual decks or bundled. Shipped to your door.</p>
+      <div class="reveal" style="margin:0 0 18px">
+        <label for="shipRegion" style="font-size:13px;font-weight:600;color:var(--ink);display:block;margin-bottom:6px">Where are we shipping to?</label>
+        <select id="shipRegion" style="width:100%;max-width:340px;padding:12px 14px;border:1.5px solid var(--line);border-radius:4px;font-family:'Inter',sans-serif;font-size:15px;color:var(--ink);background:#fff">
+          <option value="uk" selected>United Kingdom · £5.99 postage</option>
+          <option value="eu">Europe · £15.99 postage</option>
+          <option value="world">US &amp; worldwide · £27.99 postage</option>
+        </select>
+      </div>
       <div class="physical-prices reveal">
         <div class="phys-row">
-          <span class="name">Single deck</span>
+          <span class="name">Single deck <span style="font-weight:400;font-size:12px;color:var(--brown)">(Couples or Family &amp; Friends)</span></span>
           <span class="price">£47</span>
-        </div>
-        <div class="phys-row">
-          <span class="name">Friends &amp; Family + Couples bundle</span>
-          <span class="price">£77</span>
+          <a class="btn ship-btn" style="margin-left:14px;padding:9px 18px;font-size:13px" target="_blank" rel="noopener"
+             data-uk="https://buy.stripe.com/dRm4gy9ubfpufydav30co15"
+             data-eu="https://buy.stripe.com/dRm00ifSzgtyadTeLj0co16"
+             data-world="https://buy.stripe.com/5kQeVcgWDfpufydav30co1c">Order</a>
         </div>
         <div class="phys-row">
           <span class="name">Touch Languages™ deck</span>
           <span class="price">£47</span>
+          <a class="btn ship-btn" style="margin-left:14px;padding:9px 18px;font-size:13px" target="_blank" rel="noopener"
+             data-uk="https://buy.stripe.com/7sY00i49R1yE5XDgTr0co10"
+             data-eu="https://buy.stripe.com/28E6oG0XF0uA2Lr1Yx0co17"
+             data-world="https://buy.stripe.com/bJe14m49RelqbhX1Yx0co1d">Order</a>
+        </div>
+        <div class="phys-row">
+          <span class="name">Friends &amp; Family + Couples bundle</span>
+          <span class="price">£77</span>
+          <a class="btn ship-btn" style="margin-left:14px;padding:9px 18px;font-size:13px" target="_blank" rel="noopener"
+             data-uk="https://buy.stripe.com/5kQ9AS6hZelq99P32B0co11"
+             data-eu="https://buy.stripe.com/3cIaEW9ub7X285L7iR0co18"
+             data-world="https://buy.stripe.com/4gM00idKr2CIdq56eN0co1e">Order</a>
         </div>
         <div class="phys-row" style="border-left-color:var(--teal);background:var(--cream-2)">
           <span class="name">All three decks</span>
           <span class="price">£111</span>
+          <a class="btn ship-btn" style="margin-left:14px;padding:9px 18px;font-size:13px" target="_blank" rel="noopener"
+             data-uk="https://buy.stripe.com/00w14m49R0uA1HnfPn0co12"
+             data-eu="https://buy.stripe.com/fZu14m5dVdhm71H6eN0co19"
+             data-world="https://buy.stripe.com/3cI7sK5dVfpu1Hn46F0co1f">Order</a>
         </div>
       </div>
-      <p class="reveal" style="font-size:0.9rem;color:var(--brown);margin-bottom:20px;margin-top:-8px"><em>Shipping will be added at checkout.</em></p>
-      <a href="mailto:support@feelfullyyou.com?subject=Physical%20Cards%20Order&body=Hi%20Juliette%2C%0A%0AI%27d%20like%20to%20order%20physical%20cards.%0A%0ADeck%3A%20%5BPlease%20write%20which%20deck(s)%5D%0AShipping%20address%3A%20%5BYour%20address%5D%0A%0AThanks%21" class="btn dark reveal">Order Physical Cards</a>
+      <p class="reveal" style="font-size:0.9rem;color:var(--brown);margin-bottom:20px;margin-top:-8px"><em>Postage is added at checkout: £5.99 UK · £15.99 Europe · £27.99 US &amp; worldwide.</em></p>
+      <script>
+      (function(){
+        var sel=document.getElementById('shipRegion');
+        function setRegion(){
+          var r=sel.value==='eu'?'eu':(sel.value==='world'?'world':'uk');
+          document.querySelectorAll('.ship-btn').forEach(function(b){b.href=b.getAttribute('data-'+r);});
+        }
+        sel.addEventListener('change',setRegion);
+        setRegion();
+      })();
+      </script>
     </div>
     <div class="photo reveal">
       <img src="https://assets.cdn.filesafe.space/wYN7lBF78aq3jxazOaIb/media/69f8604e68affeac154eee79.jpg" alt="">
