@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Body Went Quiet. This Is How It Comes Back. Feel Fully You</title>
+<meta name="description" content="A free live masterclass with Juliette Karaman. One hour, three experiences in your own body. For women who have done the work and still cannot feel what they came to feel.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fefcfa;--ink:#1c1714;--brown:#5d4a33;--gold:#a88538;--gold-deep:#99680c;
+    --gold-pale:#ddc98e;--gold-soft:#b4a074;--teal:#0d3535;--blue:#d8dfe1;--teal-deep:#061a1a;
+    --line:#e3dccf;--line-dark:#1d3a39;--display:'Poppins',sans-serif;--body:'Inter',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--cream);color:var(--brown);font-family:'Inter',system-ui,sans-serif;font-size:17px;font-weight:400;line-height:1.65;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+
+  .topbar{position:fixed;top:0;left:0;right:0;z-index:9999;background:var(--teal);padding:0 28px;height:64px;display:flex;align-items:center;justify-content:space-between}
+  .topbar .brand{font-family:var(--display);font-weight:700;font-size:16px;letter-spacing:.02em;color:var(--cream)}
+  .topbar .brand b{color:var(--gold-pale)}
+  .topbar nav{display:flex;gap:26px;align-items:center}
+  .topbar nav a{font-size:14px;color:var(--cream);font-weight:500;transition:color .2s}
+  .topbar nav a:hover{color:var(--gold-pale)}
+  @media(max-width:860px){.topbar nav > a:not(.btn){display:none}}
+
+  .hero-banner{padding-top:64px}
+  .hero-banner img{display:block;width:100%;height:auto;max-height:520px;object-fit:cover}
+
+  .hero{padding:52px 28px 8px;text-align:center;max-width:720px;margin:0 auto}
+  .eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:18px}
+  h1{font-family:var(--display);font-weight:700;font-size:clamp(2rem,5vw,3.1rem);color:var(--ink);line-height:1.08;letter-spacing:-.022em;margin-bottom:20px}
+  .hero-sub{font-size:19px;color:var(--brown);max-width:46ch;margin:0 auto 14px;line-height:1.6}
+  .hero-promise{font-family:var(--display);font-weight:600;font-size:18px;color:var(--gold-deep);max-width:40ch;margin:22px auto 0;line-height:1.5}
+
+  .divider{width:48px;height:2px;background:var(--gold-pale);margin:40px auto}
+
+  .section{max-width:620px;margin:0 auto;padding:0 28px 8px}
+  .kicker{font-family:var(--display);font-weight:600;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep);text-align:center;margin:44px 0 22px}
+  .section p{font-size:18px;color:var(--brown);line-height:1.75;margin-bottom:20px}
+  .section p.lede{font-size:20px;color:var(--ink);font-weight:500}
+  .section strong{color:var(--ink);font-weight:600}
+  .feels{list-style:none;max-width:560px;margin:0 auto 24px;display:flex;flex-direction:column;gap:14px}
+  .feels li{position:relative;padding-left:28px;font-size:18px;color:var(--brown);line-height:1.6}
+  .feels li::before{content:"";position:absolute;left:0;top:10px;width:8px;height:8px;border-radius:50%;background:var(--gold)}
+
+  .cameras{max-width:560px;margin:8px auto 0;padding:18px 28px;text-align:center}
+  .cameras p{font-family:var(--display);font-weight:600;font-size:18px;color:var(--teal);line-height:1.5;margin:0}
+
+  .btn-link{display:inline-block;background:var(--gold);color:#fff;font-family:var(--display);font-weight:600;font-size:17px;padding:16px 44px;border-radius:2px;transition:background .2s}
+  .btn-link:hover{background:var(--gold-deep)}
+  .center{text-align:center;margin:8px auto 0}
+
+  .form-wrap{max-width:480px;margin:40px auto 20px;padding:36px 28px;background:#fff;border:1px solid var(--line);border-radius:4px;box-shadow:0 8px 40px rgba(13,53,53,.06)}
+  .form-label{font-family:var(--display);font-weight:600;font-size:18px;color:var(--ink);text-align:center;margin-bottom:22px;display:block}
+  .form-wrap form{display:flex;flex-direction:column;gap:12px;margin-bottom:14px}
+  .form-wrap input{width:100%;padding:14px 18px;border:1.5px solid var(--line);border-radius:2px;font-family:var(--body);font-size:16px;color:var(--ink);background:var(--cream);outline:none;transition:border-color .2s}
+  .form-wrap input:focus{border-color:var(--gold)}
+  .form-wrap input::placeholder{color:var(--gold-soft)}
+  .form-wrap button.btn{width:100%;padding:16px 48px;font-size:17px;border:none;cursor:pointer;background:var(--gold);color:#fff;border-radius:2px;font-family:var(--display);font-weight:600;transition:background .2s}
+  .form-wrap button.btn:hover{background:var(--gold-deep)}
+  .privacy{text-align:center;font-size:13px;color:var(--gold-soft);margin-top:14px;max-width:360px;margin-left:auto;margin-right:auto}
+
+  .bio{max-width:620px;margin:0 auto;padding:0 28px}
+  .credits{font-size:15px;color:var(--gold-deep);font-weight:500;text-align:center;max-width:560px;margin:8px auto 0;line-height:1.6}
+
+  .quote{max-width:600px;margin:0 auto 22px;padding:4px 0 4px 22px;border-left:2px solid var(--gold-pale)}
+  .quote p{font-size:17px;color:var(--brown);font-style:italic;line-height:1.7;margin-bottom:8px}
+  .quote .cite{font-family:var(--display);font-weight:600;font-size:14px;color:var(--gold-deep);font-style:normal}
+
+  .thesis{background:var(--teal);color:var(--cream);padding:56px 28px;margin:56px 0 0;text-align:center}
+  .thesis .inner{max-width:620px;margin:0 auto}
+  .thesis .kicker{color:var(--gold-pale)}
+  .thesis p{font-size:19px;line-height:1.7;color:var(--cream);margin-bottom:18px}
+  .thesis strong{color:#fff}
+
+  .final{max-width:600px;margin:0 auto;padding:56px 28px 24px;text-align:center}
+  .final p.big{font-family:var(--display);font-weight:600;font-size:21px;color:var(--ink);line-height:1.5;margin-bottom:28px}
+  .microcopy{font-size:14px;letter-spacing:.04em;color:var(--gold-soft);margin-top:18px}
+
+  .signature{text-align:center;padding:24px 28px 80px;max-width:520px;margin:0 auto}
+  .signature p{font-size:17px;color:var(--brown);margin-bottom:8px;line-height:1.6}
+  .signature .name{font-family:var(--display);font-weight:600;font-size:20px;color:var(--gold-deep);margin-top:12px}
+
+  @media(max-width:600px){.hero{padding:36px 20px 8px}.section,.bio,.final{padding-left:20px;padding-right:20px}.form-wrap{margin-left:16px;margin-right:16px}}
+
+  .ham{display:none;background:none;border:none;cursor:pointer;padding:6px;color:var(--cream)}
+  .ham svg{display:block}
+  .mobile-nav{display:none;position:fixed;top:64px;left:0;right:0;background:var(--teal);z-index:9998;padding:16px 0;border-top:1px solid rgba(255,255,255,.1);flex-direction:column}
+  .mobile-nav a{display:block;padding:13px 28px;font-size:15px;color:var(--cream);font-weight:500;border-bottom:1px solid rgba(255,255,255,.07)}
+  .mobile-nav a:last-child{border-bottom:none}
+  .mobile-nav.open{display:flex}
+  @media(max-width:860px){.ham{display:block}}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="brand">Feel&nbsp;Fully&nbsp;<b>You</b>
+  <button class="ham" id="hamBtn" aria-label="Open menu" aria-expanded="false">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+  </div>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/for-her">For Her</a>
+    <a href="/the-room">The Room</a>
+    <a href="/cards">The Cards</a>
+    <a href="/contact">Contact</a>
+  </nav>
+</div>
+
+<nav class="mobile-nav" id="mobileNav">
+  <a href="/">Home</a>
+  <a href="/for-her">For Her</a>
+  <a href="/the-room">The Room</a>
+  <a href="/cards">The Cards</a>
+  <a href="/contact">Contact</a>
+</nav>
+
+<div class="hero-banner">
+  <img src="/be-touched-masterclass-hero.png" alt="Be Touched. The Masterclass with Juliette Karaman.">
+</div>
+
+<div class="hero">
+  <div class="eyebrow">Free live masterclass &middot; Sunday 19 July &middot; 7pm UK / 2pm EST</div>
+  <h1>Your Body Went Quiet. This Is How It Comes Back.</h1>
+  <p class="hero-sub">A free live masterclass with Juliette Karaman, for women who have done the work and still cannot feel what they came to feel.</p>
+  <p class="hero-promise">Seventy-five minutes. Three experiences in your own body. You will feel something shift before we are done.</p>
+  <div class="center" style="margin-top:28px"><a class="btn-link" href="#save">Save my seat</a></div>
+</div>
+
+<div class="divider"></div>
+
+<div class="section">
+  <div class="kicker">You have not had sex in months</div>
+  <p>Or you have, and your body braced before your mind decided anything. You reach and something closes. You go through the motions and you are very good at it. You have done the therapy, the courses, the retreats. You felt close for a few days and slipped back. You have read everything there is to read about nervous systems and attachment and you still go quiet when it matters.</p>
+  <p><strong>Understanding why has never been the issue.</strong> The body does not move because you understand it. It moves because someone finally speaks its language.</p>
+  <p class="lede">That is what this masterclass is for.</p>
+</div>
+
+<div class="section">
+  <div class="kicker">What you will learn and feel</div>
+  <p>In these seventy-five minutes together I am going to teach you four things, and we are going to do three pieces of work in your own body, live.</p>
+  <ul class="feels">
+    <li>Why safety is a structure and not a feeling, and why that changes everything.</li>
+    <li>The half-second your body uses to decide whether it is safe to receive.</li>
+    <li>Why your own hands have to land before anyone else's can.</li>
+    <li>How to be met and not managed.</li>
+  </ul>
+  <p><strong>You will not leave with a framework to memorise. You will leave having felt something move in your own body.</strong> That is a different thing entirely.</p>
+</div>
+
+<div class="section">
+  <div class="kicker">Who this is for</div>
+  <p>This is for you if your body checks out before your mind decides to. If you disappear halfway through and you do not know why. If the signals have stopped landing and you have stopped expecting them to. If you have spent years doing the inner work and your body is still not fully home.</p>
+  <p>You do not need to be in a relationship to be in this room. You need to be ready to stop waiting for something outside you to fix what lives inside you.</p>
+</div>
+
+<div class="cameras">
+  <p>Cameras on. I want to see you. This is connection, live, not a webinar you hide behind.</p>
+</div>
+
+<div class="form-wrap" id="save">
+  <span class="form-label">Save your seat</span>
+  <form id="mcForm" onsubmit="handleMc(event)">
+    <input id="mc_name" type="text" placeholder="First name" required autocomplete="given-name">
+    <input id="mc_email" type="email" placeholder="Email address" required autocomplete="email">
+    <button type="submit" class="btn" id="mcBtn">Save my seat</button>
+  </form>
+  <p class="privacy">Your seat and the Zoom link land in your inbox. Can't make it live? Register anyway and I'll send you the replay.</p>
+</div>
+
+<div class="bio">
+  <div class="kicker">Who I am</div>
+  <p>I didn't learn this in a classroom. My body handed me the truth years before my mind would say it out loud.</p>
+  <p>I'm Juliette Karaman. I started by teaching children on the autism spectrum to feel safe in their own skin, before they had words for any of it. Then my own life cracked open, and I went looking for everything that could help me work with what I found.</p>
+  <p>I know what it feels like to lie next to someone who loves you and feel completely unreachable. To go through the motions and be very good at it. To have your body start saying no before your mind catches up. Mine did. For years.</p>
+  <p>I trained as a somatic trauma therapist. A hypnotherapist. An EMDR practitioner. A professional dominatrix. A death doula. Not to collect them. Because each one held a piece I needed first.</p>
+  <p>Twenty-seven years on: thousands of women, 600 couples, more than 20 countries. A couple who hadn't touched in 23 years, back together in three months. A coach who'd spent a quarter of a million on herself and still couldn't feel her own body, until she could. My own mother, held through her last breath with the exact anchor I'll teach you in this hour.</p>
+  <p>Whatever you're most afraid to say out loud, I have almost certainly already sat with it. I am not shocked by any of it. That matters more than any technique.</p>
+  <p class="credits">Host of The Scrumptious Woman Podcast, top 2.5% worldwide. As seen in Forbes, The Times, The Telegraph, Newsweek, Marie Claire, NBC, ABC, TED, Bloomberg, ITV and Mindvalley.</p>
+</div>
+
+<div class="section">
+  <div class="kicker">What this is not</div>
+  <p>This is not therapy. It is not just another communication framework. It is seventy-five minutes of structured body work that starts moving something in you tonight, and shows you what eight weeks of the same work can do inside The Room.</p>
+</div>
+
+<div class="section">
+  <div class="kicker">What they say</div>
+  <div class="quote"><p>"Your fearless scrumptiousness, your generosity, your naughtiness. You've had my back in ways I'll never forget. Being with you is exquisite. You make space for all of us to show up fully, and the ripple you create makes this world better."</p><span class="cite">Sue Ann Maccara</span></div>
+  <div class="quote"><p>"There is something sacred in the laughter, softness and the deep soul presence you carry. You helped me return to my body, not with shame, but with sensuality and curiosity."</p><span class="cite">Amber Scott</span></div>
+  <div class="quote"><p>"You encouraged me to share my sexual assault and submission story. You showed me it needed to be shared, and I did. Thank you."</p><span class="cite">Alison</span></div>
+  <!-- HOLD: Dr Penelope quote from the proven copy is parked here. She was removed from The Room page in July 2026 — re-add only if Juliette confirms.
+  <div class="quote"><p>"Your presence has touched me beyond words. You see women's essence, meet them where they are, and gently stretch them into more of their truth. You've helped me become more visible, more shameless, and more myself."</p><span class="cite">Dr Penelope</span></div>
+  -->
+  <div class="quote"><p>"The touch sessions helped me more than I can say. I feel ready to explore myself with curiosity and confidence."</p><span class="cite">Alyne Hansen-Damm</span></div>
+</div>
+
+<div class="thesis">
+  <div class="inner">
+    <div class="kicker">The thing no one tells you</div>
+    <p>Intimacy was never built on spontaneity. It's built on structure. Structured communication. A structured container. Structured touch. <strong>That is what lets a guarded body stop bracing and open.</strong></p>
+    <p>That's the hour.</p>
+  </div>
+</div>
+
+<div class="final">
+  <p class="big">The masterclass is free. The seat is yours. What moves in you tonight, you keep.</p>
+  <a class="btn-link" href="#save">Save my seat, Sunday 19 July</a>
+  <p class="microcopy">Cameras on. Live, with a replay if you can't make it.</p>
+</div>
+
+<div class="signature">
+  <p>The distance doesn't have to keep settling. Seventy-five minutes can show you the way back in.</p>
+  <div class="name">Juliette</div>
+</div>
+
+<footer style="background:#a88538;color:#fff;padding:22px 32px;font-size:13px">
+  <div style="max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+    <div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:0.95rem;color:#fff;letter-spacing:-.01em">Feel Fully You</div>
+    <div style="font-size:12px;color:rgba(255,255,255,.85);display:flex;gap:16px;align-items:center"><a href="mailto:support@feelfullyyou.com" style="color:#fff;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(255,255,255,.5)">support@feelfullyyou.com</a><a href="https://feelfullyyou.com/terms" style="color:rgba(255,255,255,.75);text-decoration:none" target="_blank" rel="noopener">Terms</a></div>
+    <div style="display:flex;gap:14px;align-items:center">
+      <a href="https://www.instagram.com/juliettekaraman/" aria-label="Instagram" style="color:rgba(255,255,255,.85);display:flex;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+      <a href="https://www.facebook.com/juliette.karamanvanschaardenburg" aria-label="Facebook" style="color:rgba(255,255,255,.85);display:flex;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+      <a href="https://www.linkedin.com/in/juliette-karaman-van-schaardenburg-89399913b" aria-label="LinkedIn" style="color:rgba(255,255,255,.85);display:flex;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+      <a href="https://substack.com/@juliettekaraman" aria-label="Substack" style="color:rgba(255,255,255,.85);display:flex;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 17.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function handleMc(e){
+  e.preventDefault();
+  var email=document.getElementById('mc_email').value.trim();
+  var name=document.getElementById('mc_name').value.trim();
+  if(!email){return;}
+  var btn=document.getElementById('mcBtn');
+  btn.textContent='Saving your seat...';
+  btn.disabled=true;
+  fetch('/.netlify/functions/subscribe',{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    /* TAG: create a "Be Touched Masterclass" tag in Kit and paste its numeric id into tagIds.
+       SEQUENCE: create the masterclass reminder sequence in Kit and paste its id into sequenceId.
+       The page already subscribes the email to Kit without these; they only add tagging + reminders. */
+    body:JSON.stringify({email:email,firstName:name,tagIds:[],sequenceId:null})
+  }).finally(function(){window.location.href='/thankyou-be-touched-masterclass';});
+}
+(function(){
+  var btn=document.getElementById('hamBtn');
+  var nav=document.getElementById('mobileNav');
+  if(btn&&nav){btn.addEventListener('click',function(){nav.classList.toggle('open');btn.setAttribute('aria-expanded',nav.classList.contains('open'))});}
+})();
+</script>
+</body>
+</html>
