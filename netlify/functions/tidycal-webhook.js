@@ -2,19 +2,25 @@
 // Fires when someone books a call → tags them in Kit → reminder sequence starts
 //
 // ENV VARS NEEDED (Netlify → Site Settings → Environment Variables):
-//   KIT_API_SECRET — your Kit API secret
+//   KIT_API_KEY — Kit v4 API key (same one subscribe.js uses)
 //
 // HOW TO SET UP IN TIDYCAL:
 //   TidyCal → Settings → Webhooks → Add webhook
 //   URL: https://feelfullyyou.com/.netlify/functions/tidycal-webhook
 //   Events: booking.created
 
-const KIT_V3 = 'https://api.convertkit.com/v3';
+const KIT_V4 = 'https://api.kit.com/v4';
 
 // ─── BOOKING TYPE MAP ─────────────────────────────────────────────────────────
 // Map TidyCal booking_type name → Kit tag ID + sequence ID
 // The "name" here must match exactly what your TidyCal booking type is called.
 const BOOKING_MAP = {
+  // Pattern Session (booked after £597 Stripe payment)
+  'The Pattern Session': {
+    tagId: 20896797,      // "pattern-session-buyer"
+    sequenceId: null,
+    label: 'Pattern Session booked'
+  },
   // In Touch Taster Audit (15-min free call)
   'In Touch Taster Audit': {
     tagId: null,          // add an "audit-booked" tag if you want — or leave null
@@ -41,27 +47,33 @@ const BOOKING_MAP = {
   }
 };
 
-async function addToKit(email, firstName, tagId, sequenceId, apiSecret) {
+async function addToKit(email, firstName, tagId, sequenceId, apiKey) {
+  const headers = {
+    'X-Kit-Api-Key': apiKey,
+    'Content-Type': 'application/json',
+    'Accept': 'application/json'
+  };
+
   // Ensure subscriber exists
-  await fetch(`${KIT_V3}/subscribers`, {
+  await fetch(`${KIT_V4}/subscribers`, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ api_secret: apiSecret, email, first_name: firstName || '' })
+    headers,
+    body: JSON.stringify({ email_address: email, first_name: firstName || '' })
   });
 
   if (tagId) {
-    await fetch(`${KIT_V3}/tags/${tagId}/subscribe`, {
+    await fetch(`${KIT_V4}/tags/${tagId}/subscribers`, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ api_secret: apiSecret, email })
+      headers,
+      body: JSON.stringify({ email_address: email })
     });
   }
 
   if (sequenceId) {
-    await fetch(`${KIT_V3}/sequences/${sequenceId}/subscribe`, {
+    await fetch(`${KIT_V4}/sequences/${sequenceId}/subscribers`, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ api_secret: apiSecret, email, first_name: firstName || '' })
+      headers,
+      body: JSON.stringify({ email_address: email })
     });
   }
 }
@@ -71,9 +83,9 @@ exports.handler = async function(event) {
     return { statusCode: 405, body: 'Method Not Allowed' };
   }
 
-  const apiSecret = process.env.KIT_API_SECRET;
+  const apiSecret = process.env.KIT_API_KEY || process.env.KIT_API_SECRET;
   if (!apiSecret) {
-    console.error('KIT_API_SECRET env var not set');
+    console.error('KIT_API_KEY env var not set');
     return { statusCode: 500, body: 'Server not configured' };
   }
 
