@@ -83,6 +83,8 @@
 /be-touched                     https://findthetouch.live/      301
 /terms                          /terms.html                     200
 /pleasure-languages             /pleasure-languages.html        200
+/apply                          /touch-audit.html               200
+/touch-audit                    /touch-audit.html               200
 
 # 404 fallback
 /*                              /404.html                       404
