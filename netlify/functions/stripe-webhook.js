@@ -43,7 +43,7 @@ const PRODUCT_MAP = {
   // Kit yet for that product; fill in as Kiera creates them from the Paste Pack.
   'price_1Tlpu0CCw18geY15b8J3jlBW': {
     tagId: 20794257,   // "10touchrituals"
-    sequenceId: null,  // pending "10 Touch Rituals Welcome" (Paste Pack seq 2)
+    sequenceId: 2818643,  // "10 Touch Rituals Welcome" (built 7 Jul, delivery email sends immediately)
     label: '10 Touch Rituals £7'
   },
   'price_1TlpvDCCw18geY15wlpzVg4f': {
@@ -58,7 +58,7 @@ const PRODUCT_MAP = {
   },
   'price_1TghjICCw18geY15V4AkohbE': {
     tagId: 20794281,   // "touchpoint"
-    sequenceId: null,  // seq 2812535 holds WRONG emails (re-engagement/live-session reminders, no Telegram link) — wire when Member Welcome pasted
+    sequenceId: 2812535,  // "Touch Point" — welcome (Telegram link) + live-session reminders + nurture, fixed 7 Jul
     label: 'Touch Point Membership £97/mo'
   },
   'price_1TnxAqCCw18geY153w22a2Ye': {
@@ -101,7 +101,7 @@ const PRODUCT_MAP = {
   // ─── PATTERN SESSION ────────────────────────────────────────────────────────
   'price_1TpnUaCCw18geY15x9owuBBk': {
     tagId: 20896797,   // "pattern-session-buyer"
-    sequenceId: null,
+    sequenceId: 2818645,  // "Pattern Session Confirmation" (built 7 Jul, booking email sends immediately)
     label: 'Relationship Pattern Session £597'
   },
   // ─── INTENSIVES + THE ROOM (Ivorey replacements, 6 July 2026) ───────────────
