@@ -1,5 +1,5 @@
 # Be Touched Masterclass — Kit Emails, Ready to Paste
-# Written 7 July 2026 in Juliette's voice. Event: Sunday 19 July 2026, 7pm UK / 2pm EST, live on Zoom, cameras on, replay available.
+# Written 7 July 2026 in Juliette's voice. Event: Sunday 26 July 2026, 7pm UK / 2pm EST, live on Zoom, cameras on, replay available.
 #
 # HOW THIS WORKS IN KIT
 # Kit sequences send on delays from signup, so they cannot hit a fixed date.
@@ -19,7 +19,7 @@
 # Delay: 0 (sends the moment she saves her seat)
 # ═══════════════════════════════════════════════════════════
 
-Subject: Your seat is saved. Sunday 19 July, 7pm UK.
+Subject: Your seat is saved. Sunday 26 July, 7pm UK.
 Preview: The Zoom link is in this email. Keep it close.
 
 Hello {{ subscriber.first_name | default: "there" }},
@@ -27,7 +27,7 @@ Hello {{ subscriber.first_name | default: "there" }},
 Your seat is saved.
 
 Be Touched. The Masterclass.
-Sunday 19 July, 7pm UK / 2pm EST.
+Sunday 26 July, 7pm UK / 2pm EST.
 Seventy-five minutes, live on Zoom.
 
 Here is your link: [ZOOM LINK]
@@ -74,7 +74,7 @@ Three experiences, live, in your own body. You keep what moves.
 
 Thousands of women, 600 couples. I know where this goes.
 
-Sunday 19 July, 7pm UK / 2pm EST.
+Sunday 26 July, 7pm UK / 2pm EST.
 Your link: [ZOOM LINK]
 
 Love always,
@@ -109,7 +109,7 @@ Juliette
 
 # ═══════════════════════════════════════════════════════════
 # BROADCAST 3 · TONIGHT
-# Schedule: Sunday 19 July, 9:00am UK · To tag "Be Touched Masterclass"
+# Schedule: Sunday 26 July, 9:00am UK · To tag "Be Touched Masterclass"
 # ═══════════════════════════════════════════════════════════
 
 Subject: Tonight. 7pm UK.
@@ -132,7 +132,7 @@ Juliette
 
 # ═══════════════════════════════════════════════════════════
 # BROADCAST 4 · 45 MINUTES
-# Schedule: Sunday 19 July, 6:15pm UK · To tag "Be Touched Masterclass"
+# Schedule: Sunday 26 July, 6:15pm UK · To tag "Be Touched Masterclass"
 # ═══════════════════════════════════════════════════════════
 
 Subject: We start in 45 minutes
