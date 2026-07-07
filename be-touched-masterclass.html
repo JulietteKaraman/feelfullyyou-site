@@ -74,8 +74,27 @@
   .form-wrap button.btn:hover{background:var(--gold-deep)}
   .privacy{text-align:center;font-size:13px;color:var(--gold-soft);margin-top:14px;max-width:360px;margin-left:auto;margin-right:auto}
 
-  .bio{max-width:620px;margin:0 auto;padding:0 28px}
-  .credits{font-size:15px;color:var(--gold-deep);font-weight:500;text-align:center;max-width:560px;margin:8px auto 0;line-height:1.6}
+  /* WHY JULIETTE — canonical split treatment */
+  .why{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff;margin:56px 0}
+  .why .split{display:grid;grid-template-columns:.85fr 1.15fr;align-items:stretch}
+  .why .photo{background:url('/juliettekingsxaboutmesalespages.jpg') center top / cover no-repeat;min-height:660px}
+  .why .copy{padding:72px 56px}
+  .why .kicker{text-align:left;margin:0 0 14px}
+  .why h2{font-family:var(--display);font-weight:700;font-size:clamp(28px,4.5vw,44px);color:var(--ink);letter-spacing:-.02em;line-height:1.1;margin-bottom:20px}
+  .why p{font-size:17px;color:var(--brown);line-height:1.7;margin-bottom:16px;max-width:58ch}
+  .why .story{border-left:2px solid var(--gold);padding:4px 0 4px 24px;margin:24px 0;max-width:58ch}
+  .why .story p{margin-bottom:12px}
+  .modalities{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0}
+  .modalities span{font-family:var(--body);font-weight:500;font-size:14px;color:var(--gold-deep);border:1px solid var(--gold-soft);border-radius:99px;padding:6px 14px;background:var(--cream)}
+  .why .proofline{font-family:var(--display);font-weight:600;font-size:clamp(18px,2.4vw,22px);color:var(--ink);line-height:1.35;margin:24px 0;max-width:34ch}
+  .press{display:flex;gap:20px;flex-wrap:wrap;align-items:center;margin:28px 0 0;padding:22px 0 0;border-top:1px solid var(--line)}
+  .press span{font-family:var(--display);font-size:16px;color:var(--gold-soft)}
+  .press .pod{font-style:italic;color:var(--gold-deep)}
+  @media(max-width:940px){
+    .why .split{grid-template-columns:1fr}
+    .why .photo{min-height:440px;order:-1}
+    .why .copy{padding:52px 24px}
+  }
 
   .quote{max-width:600px;margin:0 auto 22px;padding:4px 0 4px 22px;border-left:2px solid var(--gold-pale)}
   .quote p{font-size:17px;color:var(--brown);font-style:italic;line-height:1.7;margin-bottom:8px}
@@ -196,15 +215,33 @@ gtag('config', 'G-SY8NKELMNZ');
   <p class="privacy">Your seat and the Zoom link land in your inbox. Can't make it live? Register anyway and I'll send you the replay.</p>
 </div>
 
-<div class="bio">
-  <div class="kicker">Who I am</div>
-  <p>I didn't learn this in a classroom. My body handed me the truth years before my mind would say it out loud.</p>
-  <p>I'm Juliette Karaman. I started by teaching children on the autism spectrum to feel safe in their own skin, before they had words for any of it. Then my own life cracked open, and I went looking for everything that could help me work with what I found.</p>
-  <p>I know what it feels like to lie next to someone who loves you and feel completely unreachable. To go through the motions and be very good at it. To have your body start saying no before your mind catches up. Mine did. For years.</p>
-  <p>I trained as a somatic trauma therapist. A hypnotherapist. An EMDR practitioner. A professional dominatrix. A death doula. Not to collect them. Because each one held a piece I needed first.</p>
-  <p>Twenty-seven years on: thousands of women, 600 couples, more than 20 countries. A couple who hadn't touched in 23 years, back together in three months. A coach who'd spent a quarter of a million on herself and still couldn't feel her own body, until she could. My own mother, held through her last breath with the exact anchor I'll teach you in this hour.</p>
-  <p>Whatever you're most afraid to say out loud, I have almost certainly already sat with it. I am not shocked by any of it. That matters more than any technique.</p>
-  <p class="credits">Host of The Scrumptious Woman Podcast, top 2.5% worldwide. As seen in Forbes, The Times, The Telegraph, Newsweek, Marie Claire, NBC, ABC, TED, Bloomberg, ITV and Mindvalley.</p>
+<div class="why">
+  <div class="split">
+    <div class="photo" role="img" aria-label="Juliette Karaman"></div>
+    <div class="copy">
+      <div class="kicker">Who I am</div>
+      <h2>I didn't learn this in a classroom.</h2>
+      <p>My body handed me the truth years before my mind would say it out loud.</p>
+      <p>I'm Juliette Karaman. I started by teaching children on the autism spectrum to feel safe in their own skin, before they had words for any of it. Then my own life cracked open, and I went looking for everything that could help me work with what I found.</p>
+      <div class="story">
+        <p>I know what it feels like to lie next to someone who loves you and feel completely unreachable. To go through the motions and be very good at it. To have your body start saying no before your mind catches up. Mine did. For years.</p>
+      </div>
+      <p>I trained in each of these because it held a piece I needed first:</p>
+      <div class="modalities">
+        <span>Somatic trauma therapist</span>
+        <span>Hypnotherapist</span>
+        <span>EMDR practitioner</span>
+        <span>Professional dominatrix</span>
+        <span>Death doula</span>
+      </div>
+      <p>Twenty-seven years on: thousands of women, 600 couples, more than 20 countries. A couple who hadn't touched in 23 years, back together in three months. A coach who'd spent a quarter of a million on herself and still couldn't feel her own body, until she could. My own mother, held through her last breath with the exact anchor I'll teach you in this hour.</p>
+      <p class="proofline">Whatever you're most afraid to say out loud, I have almost certainly already sat with it. I am not shocked by any of it.</p>
+      <div class="press">
+        <span class="pod">The Scrumptious Woman Podcast, top 2.5% worldwide</span>
+        <span>Forbes</span><span>The Times</span><span>The Telegraph</span><span>Newsweek</span><span>Marie Claire</span><span>NBC</span><span>ABC</span><span>TED</span><span>Bloomberg</span><span>ITV</span><span>Mindvalley</span>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="section">
