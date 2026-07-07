@@ -237,11 +237,20 @@ window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);
     if(typeof gtag==='function')gtag('event','quiz_start',{quiz:'pleasure_languages'});
   });
   function doReveal(){
-    var max=-1,win=0;
-    for(var t=0;t<5;t++){if(tally[t]>max){max=tally[t];win=t;}}
-    winner=TYPES[win];
+    // tally order: [Kinky, Sensual, Sexual, Energetic, Shapeshifter]
+    var K=tally[0],Se=tally[1],Sx=tally[2],En=tally[3],Sh=tally[4];
+    var primaries=[['Kinky',K],['Sensual',Se],['Sexual',Sx],['Energetic',En]];
+    primaries.sort(function(a,b){return b[1]-a[1];});
+    var top=primaries[0],second=primaries[1];
+    var spread=[K,Se,Sx,En].filter(function(n){return n>=2;}).length; // how many languages show up
+    // --- SCORING KNOBS (tweak these) ---
+    var isShapeshifter =
+        Sh>=3 ||                                  // chose "a blend / all of it" 3+ times
+        top[1]<=4 ||                              // no single language reached a real lead
+        (spread>=3 && (top[1]-second[1])<=1);     // 3+ languages present, no clear winner
+    winner = isShapeshifter ? 'Shapeshifter' : top[0];
     quiz.style.display='none';reveal.style.display='block';
-    $('typeName').textContent='You are '+winner;
+    $('typeName').textContent = (winner==='Shapeshifter') ? 'You are a Shapeshifter' : 'You are '+winner;
     $('typeCopy').textContent=RES[winner];
     if(typeof gtag==='function')gtag('event','quiz_complete',{quiz:'pleasure_languages',result:winner});
   }
