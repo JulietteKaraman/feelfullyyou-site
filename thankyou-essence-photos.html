@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment received · Essence Photos with Justine Stoddart</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:ital,wght@0,400;0,600;0,700;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fefcfa;
+    --ink:#070707;
+    --brown:#5d4a33;
+    --gold:#a88538;
+    --gold-deep:#99680c;
+    --gold-soft:#b4a074;
+    --gold-pale:#ddc98e;
+    --green:#0d3535;
+    --green-deep:#061a1a;
+    --line:#e3dccf;
+    --display:'Poppins',system-ui,sans-serif;
+    --body:'Inter',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--cream);color:var(--brown);font-family:var(--body);font-size:17px;line-height:1.75;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+
+  /* TOPBAR */
+  .topbar{position:fixed;top:0;left:0;right:0;z-index:9999;background:var(--green);padding:0 28px;height:64px;display:flex;align-items:center;justify-content:space-between}
+  .topbar .brand{font-family:var(--display);font-weight:700;font-size:16px;letter-spacing:.02em;color:var(--cream)}
+  .topbar .brand b{color:var(--gold-pale)}
+
+  /* MOBILE NAV */
+  .ham{display:none;background:none;border:none;cursor:pointer;padding:6px;color:var(--cream)}
+  .ham svg{display:block}
+  .mobile-nav{display:none;position:fixed;top:64px;left:0;right:0;background:var(--green);z-index:9998;padding:16px 0;border-top:1px solid rgba(255,255,255,.1);flex-direction:column}
+  .mobile-nav a{display:block;padding:13px 28px;font-size:15px;color:var(--cream);font-weight:500;border-bottom:1px solid rgba(255,255,255,.07)}
+  .mobile-nav a:last-child{border-bottom:none}
+  .mobile-nav.open{display:flex}
+  @media(max-width:860px){.ham{display:block}}
+
+  /* HERO */
+  .hero{padding:110px 28px 64px;text-align:center;max-width:680px;margin:0 auto}
+  .check{width:72px;height:72px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;margin:0 auto 32px}
+  .check svg{width:32px;height:32px;stroke:#fff;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+  .eyebrow{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:16px}
+  h1{font-family:var(--display);font-weight:700;font-size:clamp(2rem,5vw,3.2rem);color:var(--ink);line-height:1.06;letter-spacing:-.022em;margin-bottom:20px}
+  .hero-sub{font-size:18px;color:var(--brown);max-width:52ch;margin:0 auto;line-height:1.7}
+
+  /* DETAILS CARD */
+  .details{max-width:580px;margin:52px auto 0;padding:0 28px}
+  .details-card{background:var(--green);border-radius:4px;padding:36px 32px}
+  .details-card .label{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-pale);font-weight:600;margin-bottom:20px}
+  .detail-row{display:flex;gap:14px;align-items:flex-start;margin-bottom:16px}
+  .detail-row:last-child{margin-bottom:0}
+  .detail-icon{min-width:20px;color:var(--gold-pale);font-size:15px;margin-top:2px}
+  .detail-text{font-size:15px;color:rgba(255,255,255,.85);line-height:1.5}
+  .detail-text strong{color:#fff;font-weight:600}
+
+  /* WHAT TO EXPECT */
+  .expect{max-width:580px;margin:56px auto 0;padding:0 28px}
+  .section-label{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:20px}
+  .step{padding:18px 0;border-bottom:1px solid var(--line);display:flex;gap:18px;align-items:flex-start}
+  .step:last-child{border-bottom:none}
+  .step-num{min-width:28px;height:28px;border-radius:50%;background:var(--green);color:#fff;font-family:var(--display);font-weight:700;font-size:12px;display:flex;align-items:center;justify-content:center;margin-top:3px}
+  .step-text h3{font-family:var(--display);font-weight:600;font-size:16px;color:var(--ink);margin-bottom:4px}
+  .step-text p{font-size:15px;color:var(--brown);line-height:1.6}
+
+  /* SIGNOFF */
+  .signoff{text-align:center;padding:56px 28px 40px;max-width:520px;margin:0 auto}
+  .signoff p{font-size:17px;color:var(--brown);margin-bottom:8px;line-height:1.7}
+  .signoff .name{font-family:var(--display);font-weight:600;font-size:20px;color:var(--gold-deep);margin-top:14px}
+
+  footer{background:var(--gold);color:#fff;padding:22px 32px;font-size:13px}
+  footer .inner{max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  footer .brand{font-family:var(--display);font-weight:700;font-size:.95rem;color:#fff}
+  footer a{color:rgba(255,255,255,.75)}
+
+  /* EMAIL NOTICE */
+  .email-notice{max-width:580px;margin:28px auto 0;padding:0 28px}
+  .email-notice-inner{background:#fffbf0;border:1px solid var(--gold-pale);border-left:4px solid var(--gold);border-radius:3px;padding:22px 24px}
+  .email-notice-inner .notice-title{font-family:var(--display);font-weight:600;font-size:14px;color:var(--gold-deep);letter-spacing:.03em;text-transform:uppercase;margin-bottom:10px}
+  .email-notice-inner p{font-size:14px;color:var(--brown);line-height:1.65;margin-bottom:8px}
+  .email-notice-inner p:last-child{margin-bottom:0}
+  .email-notice-inner strong{color:var(--ink)}
+
+  @media(max-width:600px){
+    .hero{padding:88px 20px 40px}
+    .details,.expect,.signoff,.email-notice{padding-left:20px;padding-right:20px}
+    .details-card{padding:26px 20px}
+  }
+</style>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SY8NKELMNZ"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-SY8NKELMNZ');
+</script>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand">Feel Fully <b>You</b>
+    <button class="ham" id="hamBtn" aria-label="Open menu" aria-expanded="false">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</div>
+
+<nav class="mobile-nav" id="mobileNav">
+  <a href="/">Home</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="check">
+    <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+  </div>
+  <div class="eyebrow">Payment received</div>
+  <h1>Your photos are booked.</h1>
+  <p class="hero-sub">You've purchased your 10 fully edited images with Justine Stoddart at the CONNECT With Essence retreat on 25 September 2026. A record of the day you arrived back to yourself.</p>
+</div>
+
+<!-- DETAILS CARD -->
+<div class="details">
+  <div class="details-card">
+    <div class="label">What you've secured</div>
+    <div class="detail-row">
+      <div class="detail-icon">📷</div>
+      <div class="detail-text"><strong>A private mini shoot with Justine Stoddart</strong> — ten minutes, no awkward posing, just you as you are</div>
+    </div>
+    <div class="detail-row">
+      <div class="detail-icon">🖼️</div>
+      <div class="detail-text"><strong>10 fully edited images</strong>, delivered to you after the retreat</div>
+    </div>
+    <div class="detail-row">
+      <div class="detail-icon">📅</div>
+      <div class="detail-text"><strong>CONNECT With Essence</strong> · 25 September 2026 · Central London</div>
+    </div>
+    <div class="detail-row">
+      <div class="detail-icon">✉️</div>
+      <div class="detail-text">Any questions: <strong>support@feelfullyyou.com</strong></div>
+    </div>
+  </div>
+</div>
+
+<!-- EMAIL NOTICE -->
+<div class="email-notice">
+  <div class="email-notice-inner">
+    <div class="notice-title">📬 Keep an eye on your inbox</div>
+    <p>Your receipt is on its way from Stripe. Emails from the retreat are sent via <strong>Essence</strong> — the subject line will always say Essence, so you know it's the right one.</p>
+    <p>Please add <strong>support@feelfullyyou.com</strong> and <strong>juliette@feelfullyyou.com</strong> to your contacts so nothing lands in spam.</p>
+  </div>
+</div>
+
+<!-- WHAT HAPPENS NEXT -->
+<div class="expect">
+  <div class="section-label">What happens next</div>
+  <div class="step">
+    <div class="step-num">1</div>
+    <div class="step-text">
+      <h3>On the day</h3>
+      <p>Justine will take you aside for your ten-minute shoot during the retreat. Nothing to prepare — come as you are.</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num">2</div>
+    <div class="step-text">
+      <h3>After the retreat</h3>
+      <p>Justine edits your images and delivers your 10 final photographs to you by email.</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num">3</div>
+    <div class="step-text">
+      <h3>You keep them</h3>
+      <p>Yours to hold, to share, to remember the day by.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SIGNOFF -->
+<div class="signoff">
+  <p>We can't wait to capture you on the 25th.</p>
+  <p class="name">With love, from Juliette, Liz and Natasha</p>
+</div>
+
+<footer>
+  <div class="inner">
+    <div class="brand">Feel Fully You</div>
+    <div>Photography by <strong style="color:#fff">Justine Stoddart</strong> · <a href="mailto:support@feelfullyyou.com">support@feelfullyyou.com</a></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.getElementById('hamBtn');
+  var nav=document.getElementById('mobileNav');
+  if(btn&&nav){btn.addEventListener('click',function(){nav.classList.toggle('open');btn.setAttribute('aria-expanded',nav.classList.contains('open'))});}
+})();
+</script>
+</body>
+</html>
