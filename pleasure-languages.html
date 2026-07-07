@@ -130,7 +130,6 @@
         <div class="track"><div class="bar" id="bar"></div></div>
         <h2 class="qtext" id="question"></h2>
         <div class="opts" id="opts"></div>
-        <div class="qfoot"><button class="btn" id="next" disabled>Continue</button></div>
       </section>
 
       <!-- REVEAL -->
@@ -205,26 +204,29 @@ window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);
     ["My body opens most when…",["There's real trust, playful edge, and surprise.","The lights dim, the scent lands, and they begin with a touch that lingers.","There's no hesitation. They lead, and I follow.","The connection is layered, emotional, energetic, erotic.","Nothing is off-limits. I feel free to bring every part of me."]]
   ];
 
-  var i=0,chosen=-1,tally=[0,0,0,0,0],winner='';
+  var i=0,tally=[0,0,0,0,0],winner='',locked=false;
   var $=function(id){return document.getElementById(id);};
   var intro=$('intro'),quiz=$('quiz'),reveal=$('reveal');
 
   function pad(n){return n<10?'0'+n:''+n;}
   function renderQ(){
-    chosen=-1;
+    locked=false;
     $('question').textContent=Q[i][0];
     $('prog').textContent=pad(i+1)+' / 15';
     $('bar').style.width=Math.round(i/15*100+6)+'%';
-    $('next').disabled=true;
-    $('next').textContent=(i===Q.length-1)?'Reveal my language':'Continue';
     var box=$('opts');box.innerHTML='';
     Q[i][1].forEach(function(text,idx){
       var b=document.createElement('button');
       b.type='button';b.className='opt';b.textContent=text;
       b.addEventListener('click',function(){
-        chosen=idx;
+        if(locked)return;
+        locked=true;
         Array.prototype.forEach.call(box.children,function(c){c.classList.remove('sel');});
-        b.classList.add('sel');$('next').disabled=false;
+        b.classList.add('sel');
+        tally[idx]++;
+        setTimeout(function(){
+          if(i<Q.length-1){i++;renderQ();}else{doReveal();}
+        },340);
       });
       box.appendChild(b);
     });
@@ -232,11 +234,6 @@ window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);
   $('begin').addEventListener('click',function(){
     intro.style.display='none';quiz.style.display='block';renderQ();
     if(typeof gtag==='function')gtag('event','quiz_start',{quiz:'pleasure_languages'});
-  });
-  $('next').addEventListener('click',function(){
-    if(chosen<0)return;
-    tally[chosen]++;
-    if(i<Q.length-1){i++;renderQ();}else{doReveal();}
   });
   function doReveal(){
     var max=-1,win=0;
@@ -248,7 +245,7 @@ window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);
     if(typeof gtag==='function')gtag('event','quiz_complete',{quiz:'pleasure_languages',result:winner});
   }
   $('restart').addEventListener('click',function(){
-    i=0;chosen=-1;tally=[0,0,0,0,0];
+    i=0;tally=[0,0,0,0,0];locked=false;
     reveal.style.display='none';$('capForm').style.display='block';$('success').style.display='none';
     $('msg').textContent='';$('email').value='';
     quiz.style.display='block';renderQ();
