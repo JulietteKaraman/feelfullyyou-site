@@ -154,6 +154,27 @@
   .offer .btn{align-self:flex-start;margin-top:8px}
   @media(max-width:900px){.offer-grid{grid-template-columns:1fr;max-width:440px}}
 
+  /* FLAGSHIP — The Room */
+  .flagship{background:var(--teal);border-radius:4px;padding:56px 52px;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
+  .flagship .tag{font-size:var(--t-xs);letter-spacing:.14em;text-transform:uppercase;color:var(--gold-pale);font-weight:600;margin-bottom:14px}
+  .flagship h3{color:#fff;font-size:clamp(1.7rem,3.4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.1;margin-bottom:10px}
+  .flagship .price{font-family:var(--display);font-weight:700;color:var(--gold-pale);font-size:1.4rem;margin-bottom:18px}
+  .flagship p{color:#d7d0c4;font-size:var(--t-md);line-height:1.55;margin-bottom:14px;max-width:52ch}
+  .flagship .btn{margin-top:10px}
+  .flagship .side{border-left:1px solid rgba(255,255,255,.15);padding-left:40px;display:flex;flex-direction:column;gap:16px}
+  .flagship .side .item{color:#d7d0c4;font-size:.98rem;line-height:1.55;position:relative;padding-left:24px}
+  .flagship .side .item::before{content:"";position:absolute;left:0;top:9px;width:8px;height:8px;border-radius:50%;background:var(--gold)}
+  .flagship .side .item strong{color:#fff;font-weight:600}
+  @media(max-width:900px){.flagship{grid-template-columns:1fr;padding:44px 28px}.flagship .side{border-left:none;border-top:1px solid rgba(255,255,255,.15);padding-left:0;padding-top:28px}}
+
+  /* QUIET ROW */
+  .quietrow{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1100px;margin:22px auto 0}
+  .quiet{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:24px 26px}
+  .quiet .qtag{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:10px}
+  .quiet p{font-size:.95rem;color:var(--brown);line-height:1.55;margin-bottom:12px;max-width:none}
+  .quiet a{font-size:.9rem;font-weight:600;color:var(--gold-deep);text-decoration:underline;text-underline-offset:3px}
+  @media(max-width:900px){.quietrow{grid-template-columns:1fr;max-width:440px}}
+
   /* CLOSING */
   .closing{background:var(--teal);color:var(--cream);border-top:1px solid var(--line-dark)}
   .closing-inner{display:grid;grid-template-columns:1.15fr .85fr;align-items:end;max-width:none}
@@ -364,64 +385,61 @@ gtag('config', 'G-SY8NKELMNZ');
   </div>
 </section>
 
-<!-- TASTER -->
+<!-- STEP ONE — THE MASTERCLASS -->
 <section class="taster" id="taster">
   <div class="taster-inner">
     <div class="copy">
-      <div class="eyebrow reveal">Start where you are</div>
-      <h2 class="reveal">10 free conversation <span class="it">prompts.</span></h2>
-      <p class="reveal">From my Intimacy and Communication Cards. No signup. No email. Just the prompts.</p>
-      <p class="tryline reveal">Try one tonight.</p>
-      <a href="/cards-free-taster" class="btn light reveal">Get the free taster deck</a>
+      <div class="eyebrow reveal">Step one · Free live masterclass</div>
+      <h2 class="reveal">Be Touched. <span class="it">The Masterclass.</span></h2>
+      <p class="reveal">Sunday 19 July, 7pm UK / 2pm EST. Seventy-five minutes live on Zoom with Juliette, cameras on. Three experiences in your own body.</p>
+      <p class="tryline reveal">You leave having felt it, not just heard about it.</p>
+      <a href="/be-touched-masterclass" class="btn light reveal">Save my seat</a>
+      <p class="reveal" style="font-size:.85rem;color:#a8b5b3;margin-top:14px">Can't make it live? Register anyway and the replay lands in your inbox.</p>
     </div>
     <div class="photo-col">
-      <img src="https://feelfullyyou.com/media/6762e8ba81adf93734902b54.png" alt="Intimacy and Communication Cards" class="reveal" loading="lazy" decoding="async">
+      <img src="/be-touched-masterclass-hero.png" alt="Be Touched. The Masterclass with Juliette Karaman." class="reveal" loading="lazy" decoding="async">
     </div>
   </div>
 </section>
 
-<!-- OFFER LADDER -->
+<!-- THE FLAGSHIP — THE ROOM -->
 <section class="ladder" id="ways">
   <div class="wrap">
     <div class="head reveal">
-      <p class="eyebrow" style="margin-bottom:14px">A way in with me</p>
-      <h2>When you're ready.</h2>
+      <p class="eyebrow" style="margin-bottom:14px">Where this goes</p>
+      <h2>The Room.</h2>
     </div>
-    <div class="offer-grid">
-      <div class="offer reveal">
-        <p class="tag">Retreat · 25 Sep 2026 · London</p>
-        <h3>CONNECT With Essence</h3>
-        <div class="price">£247</div>
-        <p>A full day with Juliette, Liz, and Natasha. Body-based practices, honest conversation, and Ottolenghi lunch. For the woman ready to come back to herself.</p>
-        <a href="/connect-with-essence" class="btn">Find out more</a>
+    <div class="flagship reveal">
+      <div>
+        <p class="tag">8 weeks · A group of women · With Juliette</p>
+        <h3>Eight weeks of learning to be touched.</h3>
+        <div class="price">£3,000 &nbsp;·&nbsp; VIP £5,000</div>
+        <p>For the woman whose body has gone quiet. Somatic work in the order the body actually heals: safety, sensation, voice, and reach.</p>
+        <p>The masterclass is the first taste. The Room is where it becomes yours.</p>
+        <a href="/the-room" class="btn">Step inside The Room</a>
       </div>
-      <div class="offer reveal">
-        <p class="tag">8 weeks · Group</p>
-        <h3>The Room™</h3>
-        <div class="price">£3,000 · VIP £5,000</div>
-        <p>For the woman whose body has gone quiet. Eight weeks of somatic work, in the order the body actually heals. Safety, sensation, voice, and reach.</p>
-        <a href="/the-room" class="btn">Find out more</a>
+      <div class="side">
+        <div class="item"><strong>Safety first.</strong> The nervous system learns it is allowed to stop bracing.</div>
+        <div class="item"><strong>Sensation returns.</strong> Feeling comes back where it went quiet, at your pace.</div>
+        <div class="item"><strong>Voice and reach.</strong> Asking, receiving, and reaching without performing.</div>
+        <div class="item"><strong>Together.</strong> A room of women doing the same work, held by Juliette, cameras on.</div>
       </div>
-      <div class="offer reveal">
-        <p class="tag">One hour · 1:1</p>
-        <h3>The Pattern Session</h3>
-        <div class="price">£597</div>
-        <p>One hour on Zoom, just you. The pattern named plainly, a Touch Base® anchor practised together, and a written summary of what shifts it.</p>
-        <a href="/pattern-session" class="btn">Find out more</a>
+    </div>
+    <div class="quietrow">
+      <div class="quiet reveal">
+        <p class="qtag">One day · 25 Sep 2026 · London</p>
+        <p>CONNECT With Essence, a retreat day with Juliette, Liz, and Natasha. £247.</p>
+        <a href="/connect-with-essence">The retreat →</a>
       </div>
-      <div class="offer reveal">
-        <p class="tag">One day</p>
-        <h3>Women's Intensive</h3>
-        <div class="price">Half day £2,000 · Full day £4,000</div>
-        <p>A full VIP day with Juliette, body work, somatic release, and a clear path forward.</p>
-        <a href="/womens-intensive" class="btn">Explore</a>
+      <div class="quiet reveal">
+        <p class="qtag">Start on your own</p>
+        <p>One Touch, a 7-day self-touch course (£97). Sacred No, a 7-day somatic course (£55).</p>
+        <a href="/one-touch">One Touch →</a>
       </div>
-      <div class="offer reveal">
-        <p class="tag">Only 2 per month</p>
-        <h3>The 6-Week VIP</h3>
-        <div class="price">£4,497</div>
-        <p>Four sessions over six weeks plus a half-day VIP online to map your body for pleasure.</p>
-        <a href="/womens-six-week-intensive" class="btn">Explore</a>
+      <div class="quiet reveal">
+        <p class="qtag">Prefer private?</p>
+        <p>One session, one day, or six weeks, one to one with Juliette.</p>
+        <a href="/private-sessions">Private sessions →</a>
       </div>
     </div>
   </div>
@@ -434,8 +452,8 @@ gtag('config', 'G-SY8NKELMNZ');
       <div class="found reveal">You found this page.</div>
       <div class="knows reveal">Your body already knows something is off.</div>
       <p class="reveal">That's not a pattern to fix. It's a door, and you don't have to open it alone.</p>
-      <p class="reveal">The simplest next step: 10 free prompts. Try one tonight, and see what opens.</p>
-      <a href="/cards-free-taster" class="btn light reveal">Get the free taster deck</a>
+      <p class="reveal">The simplest next step: a seat at the free masterclass. Sunday 19 July, live, with me.</p>
+      <a href="/be-touched-masterclass" class="btn light reveal">Save my seat</a>
     </div>
     <div class="photo-col">
       <img src="https://feelfullyyou.com/media/6762e8ba81adf93734902b54.png" alt="" class="reveal" loading="lazy" decoding="async">
