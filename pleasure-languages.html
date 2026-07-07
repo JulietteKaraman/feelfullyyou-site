@@ -179,6 +179,7 @@ window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);
 (function(){
   var TYPES=['Kinky','Sensual','Sexual','Energetic','Shapeshifter'];
   var TAGS={Kinky:20944037,Sensual:20944034,Sexual:20944035,Energetic:20944036,Shapeshifter:20944038};
+  var SEQ={Sensual:2818985,Sexual:2818986,Energetic:2818987,Kinky:2818988,Shapeshifter:2818989};
   var RES={
     Sensual:"You don't just feel touch. You absorb it. The flicker of candlelight, the smell of their skin, the texture of sheets against your thighs. Your body responds to beauty, to detail, to the delicious unfolding of sensation. You don't just want connection. You want to be melted into. Slowly.",
     Sexual:"Direct. Honest. No fluff. No performance. You don't need a warm-up, you want to feel it now. Raw, real, unfiltered. You crave physical connection that doesn't apologise for its intensity, and you are not ashamed of wanting what you want. You just want it met.",
@@ -259,7 +260,7 @@ window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);
     var btn=$('sendBtn');btn.disabled=true;btn.textContent='Sending…';
     fetch('/.netlify/functions/subscribe',{
       method:'POST',headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({email:email,tagIds:[TAGS[winner]],website:$('capForm').website.value})
+      body:JSON.stringify({email:email,tagIds:[TAGS[winner]],sequenceId:SEQ[winner],website:$('capForm').website.value})
     }).then(function(r){return r.json().catch(function(){return {};});})
       .then(function(d){
         if(d&&d.ok){
