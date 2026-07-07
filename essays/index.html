@@ -249,11 +249,24 @@ gtag('config', 'G-SY8NKELMNZ');
   <a href="/contact">Contact</a>
 </nav>
 
+<style>
+.essay-hero .hero-split{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center;max-width:960px;margin:0 auto}
+.essay-hero .hero-split .stack-img{display:block;width:100%;height:auto;border-radius:8px;box-shadow:0 12px 40px rgba(13,53,53,.18);transition:transform .25s}
+.essay-hero .hero-split a:hover .stack-img{transform:translateY(-3px)}
+@media(max-width:760px){.essay-hero .hero-split{grid-template-columns:1fr;gap:28px}.essay-hero .hero-split .stack-img{max-width:440px;margin:0 auto}}
+</style>
 <section class="essay-hero">
-  <p class="eyebrow">What the Body Knows</p>
-  <h1>Essays</h1>
-  <p class="sub">Long reads on touch, intimacy and what the body is saying. Written by Juliette Karaman.</p>
-  <p class="meta">New essays publish first on <a href="https://substack.com/@juliettekaraman" rel="noopener">Substack</a></p>
+  <div class="hero-split">
+    <div>
+      <p class="eyebrow">What the Body Knows</p>
+      <h1>Essays</h1>
+      <p class="sub">Long reads on touch, intimacy and what the body is saying. Written by Juliette Karaman.</p>
+      <p class="meta">Every essay lands first in <a href="https://juliettekaraman.substack.com" rel="noopener">What the Body Knows</a>, the Substack. Subscribe there to get them in your inbox.</p>
+    </div>
+    <a href="https://juliettekaraman.substack.com" rel="noopener" aria-label="Subscribe to What the Body Knows on Substack">
+      <img class="stack-img" src="/what-the-body-knows-substack.jpg" alt="What the Body Knows — Juliette Karaman's Substack" loading="lazy" decoding="async">
+    </a>
+  </div>
 </section>
 <div class="essay-list">
   <a class="essay-card" href="/essays/the-body-still-reaches">
