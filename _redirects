@@ -82,6 +82,7 @@
 /thankyou-grief                 /thankyou-grief.html            200
 /be-touched                     https://findthetouch.live/      301
 /terms                          /terms.html                     200
+/pleasure-languages             /pleasure-languages.html        200
 
 # 404 fallback
 /*                              /404.html                       404

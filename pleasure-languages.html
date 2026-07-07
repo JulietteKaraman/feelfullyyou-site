@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What Is Your Pleasure Language? | Juliette Karaman</title>
+<meta name="description" content="A quiet, sensual quiz to reveal how you are wired for pleasure. Fifteen questions, one true reading. Part of The Room and The Beginning with Juliette Karaman.">
+<link rel="canonical" href="https://feelfullyyou.com/pleasure-languages">
+<meta property="og:title" content="What Is Your Pleasure Language? | Juliette Karaman">
+<meta property="og:description" content="A quiet, sensual quiz to reveal how you are wired for pleasure. Fifteen questions, one true reading.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://feelfullyyou.com/pleasure-languages">
+<meta property="og:image" content="https://feelfullyyou.com/Juliette_KingsX_theroom.jpg">
+<meta property="og:site_name" content="Feel Fully You">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="What Is Your Pleasure Language?">
+<meta name="twitter:description" content="A quiet, sensual quiz to reveal how you are wired for pleasure.">
+<meta name="twitter:image" content="https://feelfullyyou.com/Juliette_KingsX_theroom.jpg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fefcfa;--paper:#fdfbf8;--ink:#1c1714;--brown:#5d4a33;
+    --gold:#a88538;--gold-deep:#99680c;--gold-soft:#b4a074;--gold-pale:#ddc98e;
+    --teal:#0d3535;--teal-deep:#061a1a;--line-dark:#1d3a39;
+    --display:'Poppins',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--teal-deep);color:var(--cream);font-family:var(--body);font-size:1.0625rem;line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden;min-height:100vh;display:flex;flex-direction:column}
+  a{color:inherit}
+  ::selection{background:var(--gold);color:#fff}
+
+  .topbar{background:var(--teal);height:60px;display:flex;align-items:center;justify-content:center;position:relative}
+  .topbar .brand{font-family:var(--display);font-weight:600;font-size:15px;letter-spacing:.04em;color:var(--cream);text-decoration:none}
+  .topbar .brand b{color:var(--gold-pale);font-weight:600}
+
+  main{flex:1;display:flex;align-items:center;justify-content:center;padding:44px 20px}
+
+  .stage{position:relative;width:100%;max-width:560px;background:var(--teal);border-radius:18px;padding:46px 40px 40px;overflow:hidden;box-shadow:0 1px 0 rgba(168,133,56,.28) inset,0 30px 80px -40px rgba(0,0,0,.6)}
+  .glow{position:absolute;left:50%;bottom:-60px;transform:translateX(-50%);width:420px;height:260px;background:radial-gradient(closest-side,rgba(168,133,56,.20),rgba(168,133,56,0));pointer-events:none}
+  .inner{position:relative}
+
+  .eyebrow{font-family:var(--body);font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-pale);font-weight:400}
+  h1{font-family:var(--display);font-weight:500;color:var(--cream);line-height:1.12;letter-spacing:-.01em}
+  .divider{width:40px;height:1px;background:rgba(221,201,142,.5);margin:22px auto}
+
+  /* intro */
+  #intro{text-align:center}
+  #intro h1{font-size:2rem;margin:16px 0 0}
+  #intro .sub{color:rgba(254,252,250,.78);font-weight:300;font-size:1.02rem;line-height:1.7;margin:18px auto 0;max-width:40ch}
+  #intro .note{color:rgba(221,201,142,.85);font-style:italic;font-size:.85rem;margin-top:20px;font-weight:300}
+
+  .btn{display:inline-block;text-decoration:none;cursor:pointer;border:none;font-family:var(--display);font-weight:500;font-size:.95rem;letter-spacing:.01em;padding:13px 30px;border-radius:10px;background:var(--gold-pale);color:var(--teal);transition:transform .2s,background .2s}
+  .btn:hover{background:#e7d6a3;transform:translateY(-1px)}
+  .btn.block{width:100%;padding:14px 0;text-align:center}
+  .btn[disabled]{opacity:.35;pointer-events:none}
+  .btn-ghost{background:transparent;border:1px solid rgba(221,201,142,.4);color:var(--gold-pale);border-radius:10px;padding:11px 18px;font-family:var(--body);font-size:.85rem;cursor:pointer;font-weight:300}
+
+  /* progress */
+  .proghead{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:12px}
+  .proghead .l{width:24px;height:1px;background:rgba(221,201,142,.4)}
+  .track{height:2px;background:rgba(254,252,250,.1);border-radius:2px;overflow:hidden}
+  .track .bar{height:100%;width:0;background:var(--gold);transition:width .3s}
+
+  /* question */
+  .qtext{font-family:var(--display);color:var(--cream);font-size:1.32rem;font-weight:500;line-height:1.35;text-align:center;margin:22px 0 22px}
+  .opts{display:flex;flex-direction:column;gap:9px}
+  .opt{font-family:var(--body);text-align:left;width:100%;background:rgba(254,252,250,.035);border:1px solid rgba(221,201,142,.26);border-radius:11px;padding:14px 17px;font-size:.95rem;color:rgba(254,252,250,.82);line-height:1.5;cursor:pointer;transition:border-color .18s,background .18s,color .18s;font-weight:300}
+  .opt:hover{border-color:rgba(221,201,142,.6);background:rgba(221,201,142,.07)}
+  .opt.sel{border-color:var(--gold-pale);border-width:1.5px;background:rgba(221,201,142,.13);color:var(--cream)}
+  .qfoot{text-align:center;margin-top:24px}
+
+  /* reveal */
+  #reveal{text-align:center;display:none}
+  #reveal h1{font-size:2.3rem;margin:14px 0 0}
+  #reveal .copy{color:rgba(254,252,250,.86);font-weight:300;font-size:1.02rem;line-height:1.8;margin:0 auto 24px;max-width:44ch}
+  .capture{max-width:380px;margin:0 auto}
+  .capture label{display:block;font-size:.82rem;color:var(--gold-pale);letter-spacing:.02em;margin-bottom:10px;font-weight:300}
+  .capture input[type=email]{width:100%;background:rgba(254,252,250,.06);border:1px solid rgba(221,201,142,.35);border-radius:10px;padding:13px 15px;color:var(--cream);font-family:var(--body);font-size:.95rem;margin-bottom:10px}
+  .capture input[type=email]::placeholder{color:rgba(254,252,250,.4)}
+  .capture input[type=email]:focus{outline:none;border-color:var(--gold-pale)}
+  .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+  .msg{font-size:.85rem;margin-top:12px;min-height:1.2em}
+  .msg.err{color:#e6b8b8}
+  .msg.ok{color:var(--gold-pale)}
+  #success{display:none;text-align:center}
+  #success .big{font-family:var(--display);color:var(--cream);font-size:1.4rem;font-weight:500;margin-bottom:10px}
+  #success p{color:rgba(254,252,250,.8);font-weight:300;font-size:.98rem;line-height:1.7;max-width:40ch;margin:0 auto}
+
+  .again{margin-top:16px}
+  .again button{background:transparent;border:none;color:rgba(221,201,142,.8);font-size:.8rem;cursor:pointer;text-decoration:underline;font-weight:300;font-family:var(--body)}
+
+  footer{background:var(--gold);color:#fff;padding:20px 28px;font-size:13px}
+  footer .fwrap{max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  footer .fbrand{font-family:var(--display);font-weight:600;font-size:.95rem;color:#fff}
+  footer a{color:#fff}
+
+  @media(max-width:560px){
+    .stage{padding:38px 24px 32px}
+    #intro h1{font-size:1.7rem}
+    .qtext{font-size:1.18rem}
+    #reveal h1{font-size:2rem}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar"><a class="brand" href="/">Feel Fully <b>You</b></a></div>
+
+<main>
+  <div class="stage">
+    <div class="glow"></div>
+    <div class="inner">
+
+      <!-- INTRO -->
+      <section id="intro">
+        <div class="eyebrow">The Pleasure Languages</div>
+        <h1>How are you wired for pleasure?</h1>
+        <p class="sub">Fifteen quiet questions. No right answers, only true ones. At the end, the language your body already speaks.</p>
+        <div style="margin-top:30px"><button class="btn" id="begin">Begin</button></div>
+        <p class="note">Answer honestly. This is only for you.</p>
+      </section>
+
+      <!-- QUIZ -->
+      <section id="quiz" style="display:none">
+        <div class="proghead"><span class="l"></span><span class="eyebrow" id="prog">01 / 15</span><span class="l"></span></div>
+        <div class="track"><div class="bar" id="bar"></div></div>
+        <h2 class="qtext" id="question"></h2>
+        <div class="opts" id="opts"></div>
+        <div class="qfoot"><button class="btn" id="next" disabled>Continue</button></div>
+      </section>
+
+      <!-- REVEAL -->
+      <section id="reveal">
+        <div class="eyebrow">Your pleasure language</div>
+        <h1 id="typeName"></h1>
+        <div class="divider"></div>
+        <p class="copy" id="typeCopy"></p>
+
+        <form class="capture" id="capForm" autocomplete="on">
+          <label for="email">Where shall I send your full reading?</label>
+          <input type="email" id="email" name="email" placeholder="you@email.com" required>
+          <input type="text" class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button type="submit" class="btn block" id="sendBtn">Send me my full reading</button>
+          <div class="msg" id="msg"></div>
+        </form>
+
+        <div id="success">
+          <div class="big">It's on its way.</div>
+          <p>Your full reading is landing in your inbox now, your strengths, what gets in your way, and how to be met. Read it slowly.</p>
+        </div>
+
+        <div class="again"><button id="restart">start again</button></div>
+      </section>
+
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="fwrap">
+    <div class="fbrand">Feel Fully You</div>
+    <div style="font-size:12px;color:rgba(255,255,255,.85);display:flex;gap:16px;align-items:center">
+      <a href="mailto:support@feelfullyyou.com" style="text-decoration:underline;text-underline-offset:3px">support@feelfullyyou.com</a>
+      <a href="https://feelfullyyou.com/terms" style="color:rgba(255,255,255,.75);text-decoration:none" target="_blank" rel="noopener">Terms</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Google tag -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SY8NKELMNZ"></script>
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SY8NKELMNZ');
+</script>
+
+<script>
+(function(){
+  var TYPES=['Kinky','Sensual','Sexual','Energetic','Shapeshifter'];
+  var TAGS={Kinky:20944037,Sensual:20944034,Sexual:20944035,Energetic:20944036,Shapeshifter:20944038};
+  var RES={
+    Sensual:"You don't just feel touch. You absorb it. The flicker of candlelight, the smell of their skin, the texture of sheets against your thighs. Your body responds to beauty, to detail, to the delicious unfolding of sensation. You don't just want connection. You want to be melted into. Slowly.",
+    Sexual:"Direct. Honest. No fluff. No performance. You don't need a warm-up, you want to feel it now. Raw, real, unfiltered. You crave physical connection that doesn't apologise for its intensity, and you are not ashamed of wanting what you want. You just want it met.",
+    Energetic:"You feel everything, even in stillness. Your arousal lives in the invisible. The pause. The pulse. The moment before contact. You don't need touch to feel lit up. You need space, presence, attunement. You are the blueprint of anticipation.",
+    Kinky:"This isn't about performance. It's about permission. What turns you on isn't just the act, it's the dynamic underneath. Power. Trust. Tension. Taboo. You come alive in the unknown, in the pause before the command. This blueprint isn't dangerous. It's devotional.",
+    Shapeshifter:"You are fluent in many languages of turn-on. You're not linear, you're layered. You want it all, and you can handle it. The tease, the tenderness, the rawness, the sacred, the unexpected. You don't want to choose. You want to be met in your full spectrum."
+  };
+  var Q=[
+    ["The kind of presence that opens me is…",["Edgy or commanding, when someone leads with intensity or play.","Sensory-rich and slow, like soft touch and warm light.","Direct, bold, and unapologetic.","Grounded, steady, and attuned to my rhythm.","A blend of presence, depth, and curiosity. If it's only one note, I drift."]],
+    ["I disconnect when…",["There's no contrast, risk, or dynamic. I feel flat without it.","The mood is wrong, harsh light, cluttered space, no touch.","There's no spark. If desire isn't felt clearly, I zone out.","Someone skips emotional alignment and moves straight to touch. My body shuts down before it begins.","The experience stays in one gear. I show up, but not fully."]],
+    ["I feel most alive when…",["They look at me and say, “Don't move.” That's where the thrill lives.","My body is slowly invited in with texture, scent, and soothing tone.","They kiss me without hesitation. I want action, not warm-up.","I can feel the space between us like a current, each breath, pause, glance.","It begins one way and unfolds into something else entirely. That shift wakes me up."]],
+    ["When I feel fully at ease in intimacy, it's usually because…",["The power dynamic shifts, and something unsaid comes into play.","The room feels soft. The textures, the scent, the music, they help me melt.","They want me. Now. And I feel it in how they move.","Their presence is clean and still. They meet me with attention, not pressure.","The atmosphere is alive, changing, layered, sensual, playful."]],
+    ["I struggle to stay present when…",["It's too safe or neutral. I need a challenge to engage.","The space feels rushed or chaotic. I freeze and go into my head.","It becomes about performance instead of real desire.","They rush in without attunement. I disconnect even if I say yes.","I'm only met in one part of me. I start performing instead of feeling."]],
+    ["What draws me in and keeps me open is…",["The unexpected. When I can't predict what comes next.","Texture. Scent. Sound. When the details are right, my whole body says yes.","A bold move. Clear want. No fluff.","A pause before contact. That space lights up everything.","Freedom to move between it all, without being boxed."]],
+    ["I feel most satisfied when…",["They take control, tease, or give me instructions.","I'm courted through touch, scent, and softness.","There's clear, embodied desire. We don't overthink it when we go there.","The tension builds slowly, through breath and gaze.","We flow between desire, play, intensity, and presence."]],
+    ["I start checking out when…",["It stays too soft. I want to be pushed or led.","The environment is off, no rhythm, no warmth, no attention to detail.","There's too much build-up and no follow-through. I lose the heat.","I'm not emotionally seen before touch begins. I collapse into shutdown.","The moment feels like a script. I say yes, but I'm not really there."]],
+    ["Physical intimacy lands most when…",["They create a spark of resistance or tension, then lead me through it.","The space is beautiful and held. My senses are alive.","They don't hesitate. I feel wanted, and they act on it.","The energy is slow and intentional, I soften before I'm touched.","Each moment brings something new. No two encounters feel the same."]],
+    ["The moment I feel most turned on is…",["When they say, “Look at me. Keep still.” My whole body wakes up.","When the lights are low, music is soft, and I feel held.","When they undress slowly and let me feel their full want.","When the gaze softens and they breathe with me.","When the moment shifts, unexpected, layered, and alive."]],
+    ["I've learned to hide parts of my desire because…",["People misread my need for play or edge, so I keep it to myself.","I've been told my pace or slowness is too much.","If it isn't bold, clear, or hot, I assume I'm the problem.","My turn-on doesn't look like what others expect, so I stay quiet.","I adapt to what they want instead of asking for what I need."]],
+    ["What excites me most is…",["Being taken somewhere new, through edge, tease, command, or roleplay.","A warm atmosphere, soft textures, and attuned presence.","Touch that shows real want, without needing a reason.","Eye contact that lingers. Energy that builds without words.","When it's not just one tone, when everything I crave gets to land."]],
+    ["The thing that frustrates me most in intimacy is…",["When there's no risk, surprise, or power play. It starts to feel flat.","Feeling rushed or unheld. I need time to soften.","Losing the physical spark. If desire fades, I struggle to stay engaged.","When the moment is all intensity and no pacing. I short-circuit.","Being met in only one part of me. I'm there, but not fully felt."]],
+    ["My deepest pleasure comes when…",["I feel owned, seen, and met in the dark corners too.","I'm led into sensation with slowness and care.","We act on desire like it matters now. Not later.","My partner reads my energy like a language.","I don't have to choose. I move through softness, depth, heat, and play."]],
+    ["My body opens most when…",["There's real trust, playful edge, and surprise.","The lights dim, the scent lands, and they begin with a touch that lingers.","There's no hesitation. They lead, and I follow.","The connection is layered, emotional, energetic, erotic.","Nothing is off-limits. I feel free to bring every part of me."]]
+  ];
+
+  var i=0,chosen=-1,tally=[0,0,0,0,0],winner='';
+  var $=function(id){return document.getElementById(id);};
+  var intro=$('intro'),quiz=$('quiz'),reveal=$('reveal');
+
+  function pad(n){return n<10?'0'+n:''+n;}
+  function renderQ(){
+    chosen=-1;
+    $('question').textContent=Q[i][0];
+    $('prog').textContent=pad(i+1)+' / 15';
+    $('bar').style.width=Math.round(i/15*100+6)+'%';
+    $('next').disabled=true;
+    $('next').textContent=(i===Q.length-1)?'Reveal my language':'Continue';
+    var box=$('opts');box.innerHTML='';
+    Q[i][1].forEach(function(text,idx){
+      var b=document.createElement('button');
+      b.type='button';b.className='opt';b.textContent=text;
+      b.addEventListener('click',function(){
+        chosen=idx;
+        Array.prototype.forEach.call(box.children,function(c){c.classList.remove('sel');});
+        b.classList.add('sel');$('next').disabled=false;
+      });
+      box.appendChild(b);
+    });
+  }
+  $('begin').addEventListener('click',function(){
+    intro.style.display='none';quiz.style.display='block';renderQ();
+    if(typeof gtag==='function')gtag('event','quiz_start',{quiz:'pleasure_languages'});
+  });
+  $('next').addEventListener('click',function(){
+    if(chosen<0)return;
+    tally[chosen]++;
+    if(i<Q.length-1){i++;renderQ();}else{doReveal();}
+  });
+  function doReveal(){
+    var max=-1,win=0;
+    for(var t=0;t<5;t++){if(tally[t]>max){max=tally[t];win=t;}}
+    winner=TYPES[win];
+    quiz.style.display='none';reveal.style.display='block';
+    $('typeName').textContent='You are '+winner;
+    $('typeCopy').textContent=RES[winner];
+    if(typeof gtag==='function')gtag('event','quiz_complete',{quiz:'pleasure_languages',result:winner});
+  }
+  $('restart').addEventListener('click',function(){
+    i=0;chosen=-1;tally=[0,0,0,0,0];
+    reveal.style.display='none';$('capForm').style.display='block';$('success').style.display='none';
+    $('msg').textContent='';$('email').value='';
+    quiz.style.display='block';renderQ();
+  });
+
+  $('capForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    var email=$('email').value.trim();
+    var msg=$('msg');msg.className='msg';
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){msg.className='msg err';msg.textContent='Please enter a valid email.';return;}
+    var btn=$('sendBtn');btn.disabled=true;btn.textContent='Sending…';
+    fetch('/.netlify/functions/subscribe',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email,tagIds:[TAGS[winner]],website:$('capForm').website.value})
+    }).then(function(r){return r.json().catch(function(){return {};});})
+      .then(function(d){
+        if(d&&d.ok){
+          $('capForm').style.display='none';$('success').style.display='block';
+          if(typeof gtag==='function')gtag('event','quiz_optin',{quiz:'pleasure_languages',result:winner});
+        }else{throw new Error('fail');}
+      }).catch(function(){
+        btn.disabled=false;btn.textContent='Send me my full reading';
+        msg.className='msg err';msg.textContent='Something went wrong. Please try again.';
+      });
+  });
+})();
+</script>
+</body>
+</html>
