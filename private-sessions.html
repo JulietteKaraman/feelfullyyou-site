@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Private 1:1 Sessions with Juliette Karaman</title>
+<meta name="description" content="All private 1:1 work with Juliette Karaman in one place. One session, one day, or six weeks. The Pattern Session, the Relationship Pattern Disruptor, and the Intensives.">
+<link rel="canonical" href="https://feelfullyyou.com/private-sessions">
+<meta property="og:title" content="Private 1:1 Sessions with Juliette Karaman">
+<meta property="og:description" content="All private 1:1 work with Juliette Karaman in one place. One session, one day, or six weeks.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://feelfullyyou.com/private-sessions">
+<meta property="og:image" content="https://feelfullyyou.com/juliettekingsxaboutmesalespages.jpg">
+<meta property="og:site_name" content="Feel Fully You">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Private 1:1 Sessions with Juliette Karaman">
+<meta name="twitter:description" content="All private 1:1 work with Juliette Karaman in one place. One session, one day, or six weeks.">
+<meta name="twitter:image" content="https://feelfullyyou.com/juliettekingsxaboutmesalespages.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fefcfa;--cream-2:#f6f4f1;--paper:#fdfbf8;
+    --ink:#1c1714;--brown:#5d4a33;
+    --gold:#a88538;--gold-deep:#99680c;--gold-soft:#b4a074;--gold-pale:#ddc98e;
+    --teal:#0d3535;
+    --blue:#d8dfe1;--teal-deep:#061a1a;
+    --line:#e3dccf;--line-dark:#1d3a39;
+    --max:1100px;
+    --display:'Poppins',system-ui,sans-serif;
+    --body:'Inter',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--brown);font-family:var(--body);font-size:1.0625rem;line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  ::selection{background:var(--gold);color:#fff}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+
+  .topbar{position:fixed;top:0;left:0;right:0;z-index:9999;background:var(--teal);padding:0 28px;height:64px;display:flex;align-items:center;justify-content:space-between}
+  .topbar .brand{font-family:var(--display);font-weight:700;font-size:16px;letter-spacing:.02em;color:var(--cream)}
+  .topbar .brand b{color:var(--gold-pale)}
+  .topbar nav{display:flex;gap:26px;align-items:center}
+  .topbar nav a{font-size:14px;color:var(--cream);font-weight:500;transition:color .2s}
+  .topbar nav a:hover{color:var(--gold-pale)}
+  @media(max-width:860px){.topbar nav > a:not(.btn){display:none}}
+
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  /* HERO */
+  .hero{background:var(--cream);border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;min-height:520px;margin-top:64px}
+  .hero-text{padding:60px;display:flex;flex-direction:column;justify-content:center}
+  .hero-photo{overflow:hidden}
+  .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center 18%;display:block}
+  .hero .eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:20px}
+  .hero h1{font-family:var(--display);font-weight:800;font-size:clamp(2rem,4.5vw,3.2rem);color:var(--ink);letter-spacing:-.03em;line-height:1.06;max-width:16ch;margin-bottom:20px}
+  .hero .sub{font-style:italic;color:var(--brown);font-size:clamp(.95rem,1.8vw,1.1rem);max-width:46ch;line-height:1.65}
+  @media(max-width:700px){
+    .hero{grid-template-columns:1fr;min-height:auto}
+    .hero-photo{height:420px}
+    .hero-photo img{object-position:center 20%}
+    .hero-text{padding:48px 28px}
+  }
+
+  /* TIER SECTIONS */
+  .tier{padding:80px 28px;border-bottom:1px solid var(--line)}
+  .tier.one{background:#fff}
+  .tier.day{background:var(--cream-2)}
+  .tier.six{background:#ddeaf0}
+  .tier-head{max-width:var(--max);margin:0 auto 16px;display:flex;align-items:baseline;gap:20px}
+  .tier-head .label{font-family:var(--display);font-weight:800;font-size:clamp(1.8rem,4vw,2.6rem);color:var(--ink);letter-spacing:-.03em;line-height:1}
+  .tier-head .line{flex:1;height:1px;background:var(--line)}
+  .tier-sub{max-width:var(--max);margin:0 auto 44px;color:var(--brown);font-size:1rem;font-style:italic}
+
+  .card-grid{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .card-grid.two{grid-template-columns:repeat(2,1fr);max-width:760px}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:28px 26px;display:flex;flex-direction:column}
+  .card .cat{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--teal);font-weight:600;margin-bottom:12px}
+  .card h3{font-family:var(--display);font-size:1.15rem;font-weight:700;color:var(--ink);letter-spacing:-.015em;line-height:1.18;margin-bottom:8px}
+  .card .price{color:var(--gold-deep);font-weight:600;font-size:14px;margin-bottom:12px}
+  .card p{color:var(--brown);font-size:14.5px;line-height:1.6;flex:1;max-width:none}
+  .card .btn{margin-top:20px;align-self:flex-start;display:inline-block;background:var(--teal);color:#fff;font-family:var(--body);font-weight:600;font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding:10px 18px;border-radius:2px;transition:background .2s,transform .2s}
+  .card .btn:hover{background:var(--teal-deep);transform:translateY(-1px)}
+  .card.featured{background:var(--teal);border-color:var(--teal)}
+  .card.featured .cat{color:var(--gold-pale)}
+  .card.featured h3{color:#fff}
+  .card.featured .price{color:var(--gold-pale)}
+  .card.featured p{color:#c8c0b4}
+  .card.featured .btn{background:var(--gold);color:#fff}
+  .card.featured .btn:hover{background:var(--gold-deep)}
+
+  /* DEEPER DOORS STRIP */
+  .doors{background:var(--teal);padding:64px 28px;text-align:center}
+  .doors h2{font-family:var(--display);font-weight:800;font-size:clamp(1.6rem,3.5vw,2.4rem);color:#fff;letter-spacing:-.025em;line-height:1.08;margin-bottom:12px}
+  .doors p{color:rgba(255,255,255,.75);font-size:1rem;max-width:52ch;margin:0 auto 28px;line-height:1.6}
+  .doors .row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .doors a{display:inline-block;background:var(--gold);color:#fff;font-family:var(--body);font-weight:700;font-size:0.9rem;padding:14px 28px;border-radius:2px;letter-spacing:.02em;transition:transform .2s,background .2s}
+  .doors a:hover{background:var(--gold-deep);transform:translateY(-2px)}
+
+  footer{padding:32px;background:var(--gold);color:rgba(255,255,255,.85);font-size:13px;text-align:center}
+  footer a{color:#fff}
+
+  @media(max-width:900px){.card-grid{grid-template-columns:repeat(2,1fr)}.card-grid.two{grid-template-columns:1fr}}
+  @media(max-width:580px){.card-grid{grid-template-columns:1fr}.tier-head{margin-bottom:10px}}
+  @media(prefers-reduced-motion:reduce){*{transition:none!important}.reveal{opacity:1;transform:none}}
+
+  /* More dropdown */
+  .more-wrap{position:relative;display:inline-flex;align-items:center}
+  .more-wrap > button{background:none;border:none;cursor:pointer;font-size:14px;color:var(--cream);font-weight:500;font-family:var(--body);display:flex;align-items:center;gap:5px;padding:0;transition:color .2s}
+  .more-wrap > button:hover{color:var(--gold-pale)}
+  .more-wrap > button svg{transition:transform .2s}
+  .more-wrap.open > button svg{transform:rotate(180deg)}
+  .dropdown{position:absolute;top:calc(100% + 10px);right:0;background:var(--teal-deep);border:1px solid var(--line-dark);border-radius:3px;min-width:180px;padding:6px 0;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .18s,transform .18s;z-index:9999}
+  .more-wrap.open .dropdown{opacity:1;pointer-events:all;transform:none}
+  @media(max-width:860px){.dropdown{position:fixed;top:56px;right:16px}}
+  .dropdown a{display:block;padding:10px 18px;font-size:13px;color:var(--cream);font-weight:500;transition:background .15s,color .15s}
+  .dropdown a:hover{background:var(--teal);color:var(--gold-pale)}
+
+  /* MOBILE NAV */
+  .ham{display:none;background:none;border:none;cursor:pointer;padding:6px;color:var(--cream)}
+  .ham svg{display:block}
+  .mobile-nav{display:none;position:fixed;top:64px;left:0;right:0;background:var(--teal);z-index:9998;padding:16px 0;border-top:1px solid rgba(255,255,255,.1);flex-direction:column}
+  .mobile-nav a{display:block;padding:13px 28px;font-size:15px;color:var(--cream);font-weight:500;font-family:var(--body);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.07)}
+  .mobile-nav a:last-child{border-bottom:none}
+  .mobile-nav.open{display:flex}
+  @media(max-width:860px){.ham{display:block}.topbar .more-wrap{display:none}}
+</style>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SY8NKELMNZ"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-SY8NKELMNZ');
+</script>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand">Feel&nbsp;Fully&nbsp;<b>You</b>
+  <button class="ham" id="hamBtn" aria-label="Open menu" aria-expanded="false">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+</div>
+  <nav>
+    <a href="/">Home</a>
+    <div class="more-wrap" id="workWrap">
+      <a href="/work-with-me" style="font-size:14px;color:var(--cream);font-weight:500;transition:color .2s;text-decoration:none">Work With Me</a><button onclick="document.getElementById('workWrap').classList.toggle('open')" aria-label="Sub-pages" style="background:none;border:none;cursor:pointer;color:var(--cream);padding:0 0 0 5px;display:inline-flex;align-items:center;transition:color .2s"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg></button>
+      <div class="dropdown">
+        <a href="/for-her">For Her</a>
+        <a href="/for-him">For Him</a>
+        <a href="/for-both">For Both</a>
+        <a href="/the-room">The Room</a>
+        <a href="/private-sessions">Private 1:1 Sessions</a>
+      </div>
+    </div>
+    <a href="/cards">The Cards</a>
+    <a href="/shop">Shop</a>
+    <div class="more-wrap" id="moreWrap">
+      <button onclick="document.getElementById('moreWrap').classList.toggle('open')" aria-expanded="false">
+        More <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg>
+      </button>
+      <div class="dropdown">
+        <a href="/free-resources">Free Resources</a>
+        <a href="/essays/">Essays</a>
+        <a href="/questions/">Questions</a>
+        <a href="/podcast/">Podcast</a>
+        <a href="/grief-duality-process">Grief Process</a>
+        <a href="/media-and-pr">Media &amp; PR</a>
+        <a href="/contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<nav class="mobile-nav" id="mobileNav">
+  <a href="/">Home</a>
+  <a href="/work-with-me" style="font-weight:600;color:var(--gold-pale)">Work With Me</a>
+  <a href="/for-her" style="padding-left:44px;font-size:14px;opacity:.85">For Her</a>
+  <a href="/for-him" style="padding-left:44px;font-size:14px;opacity:.85">For Him</a>
+  <a href="/for-both" style="padding-left:44px;font-size:14px;opacity:.85">For Both</a>
+  <a href="/the-room" style="padding-left:44px;font-size:14px;opacity:.85">The Room</a>
+  <a href="/private-sessions" style="padding-left:44px;font-size:14px;opacity:.85">Private 1:1 Sessions</a>
+  <a href="/cards">The Cards</a>
+  <a href="/shop">Shop</a>
+  <a href="/about">About Juliette</a>
+  <a href="/free-resources">Free Resources</a>
+  <a href="/essays/">Essays</a>
+  <a href="/contact">Contact</a>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-text">
+    <div class="eyebrow reveal">Private 1:1 work</div>
+    <h1 class="reveal">Work with Juliette, privately.</h1>
+    <p class="sub reveal">Every private way to work with Juliette lives on this page. One session, one day, or six weeks. Choose the depth that matches where you are.</p>
+  </div>
+  <div class="hero-photo">
+    <img src="/juliettekingsxaboutmesalespages.jpg" alt="Juliette Karaman">
+  </div>
+</header>
+
+<!-- ONE SESSION -->
+<section class="tier one">
+  <div class="tier-head reveal">
+    <div class="label">One session</div>
+    <div class="line"></div>
+  </div>
+  <p class="tier-sub reveal">A single, focused hour or ninety minutes. The pattern named plainly, a tool practised before you leave.</p>
+  <div class="card-grid two">
+
+    <div class="card reveal">
+      <div class="cat">Solo or couples · One Hour · Online</div>
+      <h3>The Pattern Session</h3>
+      <div class="price">£597</div>
+      <p>One hour on Zoom. The pattern that keeps running your relationship named plainly, a Touch Base&reg; anchor practised together, and a written summary of what shifts it.</p>
+      <a href="/pattern-session" class="btn">Book &rarr;</a>
+    </div>
+
+    <div class="card reveal">
+      <div class="cat">Couples · 90 Minutes · Online</div>
+      <h3>The Relationship Pattern Disruptor</h3>
+      <div class="price">£997</div>
+      <p>Ninety minutes with both of you. The pattern between you named plainly, and a tool practised together before the session ends.</p>
+      <a href="/relationship-pattern-disruptor" class="btn">Book &rarr;</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ONE DAY -->
+<section class="tier day">
+  <div class="tier-head reveal">
+    <div class="label">One day</div>
+    <div class="line"></div>
+  </div>
+  <p class="tier-sub reveal">A full day with Juliette, in person or online. For the person or couple who is done circling.</p>
+  <div class="card-grid">
+
+    <div class="card reveal">
+      <div class="cat">Women · In-person or Online</div>
+      <h3>Women's Intensive</h3>
+      <div class="price">£4,000 in-person &nbsp;&middot;&nbsp; £2,000 online</div>
+      <p>One day. Just you and Juliette. Body-led, non-sexual touch, sacred space. For the woman who has done the work and still feels something is missing.</p>
+      <a href="/womens-intensive" class="btn">Book &rarr;</a>
+    </div>
+
+    <div class="card reveal">
+      <div class="cat">Men · In-person or Online</div>
+      <h3>Men's Intensive</h3>
+      <div class="price">£4,000 in-person &nbsp;&middot;&nbsp; £2,000 online</div>
+      <p>One day. Just you and Juliette. Body-based, presence-led, fully confidential. For the man who is done talking about it.</p>
+      <a href="/mens-intensive" class="btn">Book &rarr;</a>
+    </div>
+
+    <div class="card reveal">
+      <div class="cat">Couples · In-person or Online</div>
+      <h3>Couples Intensive</h3>
+      <div class="price">£6,000 in-person &nbsp;&middot;&nbsp; £3,333 online</div>
+      <p>One day. Both of you and Juliette. Individual and shared body work. For the couple who loves each other but can't seem to reach each other.</p>
+      <a href="/couples-intensive" class="btn">Book &rarr;</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- SIX WEEKS -->
+<section class="tier six">
+  <div class="tier-head reveal">
+    <div class="label">Six weeks</div>
+    <div class="line"></div>
+  </div>
+  <p class="tier-sub reveal">The deepest private container short of The Beginning. Four sessions over six weeks plus a VIP integration day.</p>
+  <div class="card-grid two">
+
+    <div class="card reveal featured">
+      <div class="cat">Women · 1:1 · Six Weeks</div>
+      <h3>Women's Six-Week Intensive</h3>
+      <div class="price">£4,497</div>
+      <p>Six weeks, one to one. The body catching up with everything you already know. Deep, layered, real.</p>
+      <a href="/womens-six-week-intensive" class="btn">Book &rarr;</a>
+    </div>
+
+    <div class="card reveal featured">
+      <div class="cat">Men · 1:1 · Six Weeks</div>
+      <h3>Men's Six-Week Intensive</h3>
+      <div class="price">£4,497</div>
+      <p>Six weeks, one to one. Becoming the man whose presence is felt before he has said a word.</p>
+      <a href="/mens-six-week-intensive" class="btn">Book &rarr;</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- DEEPER DOORS -->
+<div class="doors">
+  <h2 class="reveal">Looking for the deeper containers?</h2>
+  <p class="reveal">Private sessions are one way in. The ongoing work happens inside three rooms: The Room for women, Touch Point for men, and The Beginning for couples.</p>
+  <div class="row reveal">
+    <a href="/the-room">The Room &rarr;</a>
+    <a href="/touch-point">Touch Point &rarr;</a>
+    <a href="/the-beginning">The Beginning &rarr;</a>
+  </div>
+</div>
+
+<footer>
+  <div style="margin-bottom:10px;font-family:'Poppins',sans-serif;font-weight:700;color:var(--gold-pale);letter-spacing:-.01em">Feel Fully You</div>
+  <div><a href="mailto:support@feelfullyyou.com">support@feelfullyyou.com</a></div>
+</footer>
+
+<script>
+  const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -4% 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+<script>
+(function(){
+  var btn=document.getElementById('hamBtn');
+  var nav=document.getElementById('mobileNav');
+  if(btn&&nav){btn.addEventListener('click',function(){nav.classList.toggle('open');btn.setAttribute('aria-expanded',nav.classList.contains('open'))});}
+})();
+</script>
+<script>
+document.addEventListener('click', function(e){
+  var a = e.target.closest('a'); if(!a || typeof gtag !== 'function') return;
+  var h = a.href || '';
+  var label = (a.textContent || '').trim().slice(0, 60);
+  if (h.indexOf('stripe.com') > -1) gtag('event', 'begin_checkout', {link_url: h, link_text: label, page_path: location.pathname});
+  else if (h.indexOf('tidycal.com') > -1) gtag('event', 'book_call_click', {link_url: h, link_text: label, page_path: location.pathname});
+  else if (h.indexOf('instagram.com') > -1) gtag('event', 'instagram_click', {link_url: h, page_path: location.pathname});
+  else if (h.indexOf('/files/') > -1 || h.indexOf('.pdf') > -1) gtag('event', 'freebie_download', {link_url: h, page_path: location.pathname});
+});
+</script>
+</body>
+</html>
