@@ -19,77 +19,125 @@
   *{box-sizing:border-box;margin:0;padding:0}
   body{background:var(--cream);color:var(--brown);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
   a{color:inherit}img{max-width:100%;display:block}
-  h1,h2,h3{font-family:var(--display);color:var(--ink);font-weight:700;letter-spacing:-.02em}
+  h1,h2,h3,h4{font-family:var(--display);color:var(--ink);font-weight:700;letter-spacing:-.02em}
 
   /* GATE */
   #gate{position:fixed;inset:0;background:var(--teal);z-index:8888;display:flex;align-items:center;justify-content:center;padding:28px}
   .gate-box{background:var(--cream);border-radius:8px;padding:48px 40px;max-width:420px;width:100%;text-align:center}
   .gate-box .eyebrow{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:16px}
   .gate-box h2{font-size:1.9rem;margin-bottom:10px}
-  .gate-box p{font-size:15px;color:var(--brown);margin-bottom:26px;line-height:1.6}
+  .gate-box p{font-size:15px;color:var(--brown);margin-bottom:26px}
   .gate-box input{width:100%;border:1.5px solid var(--line);border-radius:4px;padding:14px 16px;font-family:var(--body);font-size:16px;color:var(--ink);background:#fff;outline:none;margin-bottom:12px;letter-spacing:.1em;text-align:center;transition:border-color .2s}
   .gate-box input:focus{border-color:var(--gold)}
   .gate-box button{width:100%;background:var(--teal);color:#fff;font-family:var(--display);font-weight:600;font-size:16px;padding:15px;border-radius:4px;border:none;cursor:pointer;transition:background .2s}
-  .gate-box button:hover{background:var(--teal-deep)}
   .gate-error{color:#c0392b;font-size:14px;margin-top:10px;display:none}
 
   #content{display:none}
   .topbar{background:var(--teal);height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 24px}
-  .topbar .brand{font-family:var(--display);font-weight:700;font-size:15px;color:var(--cream);text-decoration:none;letter-spacing:.02em}
+  .topbar .brand{font-family:var(--display);font-weight:700;font-size:15px;color:var(--cream);text-decoration:none}
   .topbar .brand b{color:var(--gold-pale)}
   .topbar .badge{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-pale);font-weight:500}
 
-  /* HERO with room photo */
-  .hero{position:relative;min-height:340px;display:flex;align-items:flex-end;overflow:hidden}
+  .hero{position:relative;min-height:320px;display:flex;align-items:flex-end;overflow:hidden}
   .hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 35%}
-  .hero .veil{position:absolute;inset:0;background:linear-gradient(to top,rgba(6,26,26,.88) 8%,rgba(6,26,26,.35) 55%,rgba(6,26,26,.15))}
-  .hero .hero-in{position:relative;padding:40px 28px 34px;max-width:1080px;margin:0 auto;width:100%}
+  .hero .veil{position:absolute;inset:0;background:linear-gradient(to top,rgba(6,26,26,.9) 8%,rgba(6,26,26,.35) 55%,rgba(6,26,26,.15))}
+  .hero .hero-in{position:relative;padding:38px 28px 32px;max-width:1080px;margin:0 auto;width:100%}
   .hero .eyebrow{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-pale);font-weight:600;margin-bottom:12px}
-  .hero h1{color:var(--cream);font-size:2.6rem;line-height:1.02;margin-bottom:10px}
-  .hero p{color:rgba(254,252,250,.9);font-weight:300;max-width:52ch;font-size:1.05rem}
+  .hero h1{color:var(--cream);font-size:2.5rem;line-height:1.02;margin-bottom:10px}
+  .hero p{color:rgba(254,252,250,.9);font-weight:300;max-width:52ch;font-size:1.02rem}
 
   .wrap{max-width:1080px;margin:0 auto;padding:0 28px}
-  .section{padding:44px 0 20px}
-  .section-label{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:22px}
 
-  .weeks{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
-  .week{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:24px 24px 22px;position:relative}
-  .week.locked{opacity:.6}
-  .week-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+  /* member email banner */
+  .idbar{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin:26px 0 6px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  .idbar .t{font-size:14px;color:var(--brown);flex:1;min-width:200px}
+  .idbar input{border:1.5px solid var(--line);border-radius:8px;padding:10px 12px;font-family:var(--body);font-size:14px;min-width:220px}
+  .idbar input:focus{outline:none;border-color:var(--gold)}
+  .idbar button{background:var(--teal);color:#fff;border:none;border-radius:8px;padding:10px 18px;font-family:var(--display);font-weight:600;font-size:14px;cursor:pointer}
+  .idbar .who{font-size:13px;color:var(--gold-deep);font-weight:600}
+
+  .section{padding:34px 0 10px}
+  .section-label{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:20px}
+
+  .week{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:24px 24px 22px;margin-bottom:16px}
+  .week.locked{opacity:.62}
+  .week.open1{background:var(--teal);border:none;color:var(--cream)}
+  .week-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px;flex-wrap:wrap}
   .week-num{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep);font-weight:600}
-  .week h3{font-size:1.2rem;line-height:1.2;color:var(--ink);margin-bottom:6px}
+  .open1 .week-num{color:var(--gold-pale)}
+  .week h3{font-size:1.25rem;line-height:1.2;color:var(--ink);margin-bottom:6px}
+  .open1 h3{color:var(--cream);font-size:1.5rem}
   .week .desc{font-size:14.5px;color:var(--brown);line-height:1.6}
-  .lock{display:inline-flex;align-items:center;gap:6px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--brown);font-weight:500}
-  .lock svg{width:13px;height:13px;stroke:var(--brown);fill:none;stroke-width:2}
-  .open-badge{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#2e7d5b;font-weight:600}
+  .open1 .desc{color:rgba(254,252,250,.85)}
+  .lock,.opens,.done-tag{display:inline-flex;align-items:center;gap:6px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:600}
+  .lock{color:var(--brown)} .lock svg{width:13px;height:13px;stroke:var(--brown);fill:none;stroke-width:2}
+  .opens{color:var(--gold-deep)}
+  .done-tag{color:#2e7d5b}
+  .now-tag{color:#2e7d5b;font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:600}
 
-  /* Week 1 open block */
-  .week1{grid-column:1/-1;background:var(--teal);border:none;color:var(--cream);padding:30px 30px 28px}
-  .week1 .week-num{color:var(--gold-pale)}
-  .week1 h3{color:var(--cream);font-size:1.5rem}
-  .week1 .desc{color:rgba(254,252,250,.85)}
-  .w1-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}
-  .tile{background:rgba(254,252,250,.05);border:1px solid rgba(221,201,142,.28);border-radius:12px;padding:20px}
+  .tiles{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .tile{background:rgba(254,252,250,.05);border:1px solid rgba(221,201,142,.28);border-radius:12px;padding:18px}
+  .tile.light{background:#fff;border:1px solid var(--line)}
   .tile .t-label{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-pale);font-weight:600;margin-bottom:8px}
-  .tile h4{font-family:var(--display);color:var(--cream);font-size:1.1rem;font-weight:600;margin-bottom:6px}
-  .tile p{font-size:14px;color:rgba(254,252,250,.78);font-weight:300;line-height:1.55;margin-bottom:16px}
+  .tile.light .t-label{color:var(--gold-deep)}
+  .tile h4{font-size:1.05rem;font-weight:600;margin-bottom:6px;color:var(--cream)}
+  .tile.light h4{color:var(--ink)}
+  .tile p{font-size:13.5px;color:rgba(254,252,250,.78);font-weight:300;line-height:1.55;margin-bottom:14px}
+  .tile.light p{color:var(--brown)}
   .tile.course{border-color:var(--gold-pale);background:rgba(221,201,142,.1)}
-  .btn{display:inline-block;text-decoration:none;font-family:var(--display);font-weight:600;font-size:14px;padding:11px 22px;border-radius:9px;background:var(--gold-pale);color:var(--teal);transition:background .2s,transform .2s}
+  .btn{display:inline-block;text-decoration:none;font-family:var(--display);font-weight:600;font-size:14px;padding:11px 20px;border-radius:9px;background:var(--gold-pale);color:var(--teal);border:none;cursor:pointer;transition:background .2s,transform .2s}
   .btn:hover{background:#e7d6a3;transform:translateY(-1px)}
   .btn.ghost{background:transparent;border:1px solid rgba(221,201,142,.5);color:var(--gold-pale)}
+  .btn.teal{background:var(--teal);color:#fff}
+
+  /* check-in */
+  .checkin{margin-top:18px;border-top:1px solid rgba(221,201,142,.25);padding-top:16px}
+  .open1 .checkin{border-top-color:rgba(221,201,142,.25)}
+  .week:not(.open1) .checkin{border-top-color:var(--line)}
+  .ci-head{display:flex;align-items:center;justify-content:space-between;gap:10px}
+  .ci-title{font-family:var(--display);font-weight:600;font-size:14px}
+  .open1 .ci-title{color:var(--cream)} .week:not(.open1) .ci-title{color:var(--ink)}
+  .ci-body{display:none;margin-top:14px}
+  .ci-body.show{display:block}
+  .ci-q{margin-bottom:14px}
+  .ci-q label{display:block;font-size:13.5px;margin-bottom:8px;font-weight:500}
+  .open1 .ci-q label{color:rgba(254,252,250,.9)} .week:not(.open1) .ci-q label{color:var(--brown)}
+  .ci-opts{display:flex;gap:8px;flex-wrap:wrap}
+  .ci-opt{border:1px solid var(--line);border-radius:8px;padding:8px 14px;font-size:13px;cursor:pointer;background:#fff;color:var(--brown)}
+  .open1 .ci-opt{background:rgba(254,252,250,.05);border-color:rgba(221,201,142,.3);color:rgba(254,252,250,.82)}
+  .ci-opt.sel{border-color:var(--gold);background:rgba(168,133,56,.14);color:var(--ink)}
+  .open1 .ci-opt.sel{border-color:var(--gold-pale);background:rgba(221,201,142,.16);color:var(--cream)}
+  .ci-scale{display:flex;align-items:center;gap:12px}
+  .ci-scale input[type=range]{flex:1;accent-color:var(--gold)}
+  .open1 .ci-scale input[type=range]{accent-color:var(--gold-pale)}
+  .ci-scale .val{font-family:var(--display);font-weight:600;min-width:26px;text-align:center;color:var(--gold-deep)}
+  .open1 .ci-scale .val{color:var(--gold-pale)}
+  .ci-body textarea{width:100%;border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-family:var(--body);font-size:14px;min-height:64px;resize:vertical;background:#fff;color:var(--ink)}
+  .open1 .ci-body textarea{background:rgba(254,252,250,.06);border-color:rgba(221,201,142,.3);color:var(--cream)}
+  .ci-msg{font-size:13px;margin-top:8px;min-height:1em}
+
+  /* guarantee */
+  .guarantee{background:var(--paper);border:1px solid var(--gold-pale);border-radius:14px;padding:26px 26px 22px;margin:30px 0}
+  .guarantee .g-label{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:10px}
+  .guarantee h3{font-size:1.3rem;margin-bottom:12px}
+  .guarantee p{font-size:14.5px;color:var(--brown);margin-bottom:10px}
+  .guarantee ul{margin:8px 0 8px 20px}
+  .guarantee li{font-size:14.5px;color:var(--brown);margin-bottom:6px}
 
   footer{background:var(--gold);color:#fff;padding:22px 28px;font-size:13px;margin-top:40px}
   footer .fwrap{max-width:1080px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;align-items:center}
   footer .fbrand{font-family:var(--display);font-weight:700;color:#fff}
 
-  @media(max-width:640px){
-    .hero h1{font-size:2rem}
-    .w1-grid{grid-template-columns:1fr}
-    .topbar .badge{display:none}
-  }
+  @media(max-width:640px){.hero h1{font-size:2rem}.tiles{grid-template-columns:1fr}.topbar .badge{display:none}}
 </style>
 </head>
 <body>
+
+<!-- Netlify detection form for weekly check-ins -->
+<form name="room-checkin" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+  <input type="email" name="email"><input type="text" name="week"><input type="text" name="module-done">
+  <input type="text" name="sensation"><textarea name="reflection"></textarea><input name="bot-field">
+</form>
 
 <!-- GATE -->
 <div id="gate">
@@ -105,100 +153,46 @@
 
 <!-- CONTENT -->
 <div id="content">
-
   <div class="topbar">
     <a href="/" class="brand">Feel Fully <b>You</b></a>
     <span class="badge">The Room · Members</span>
   </div>
 
-  <!-- HERO -->
   <div class="hero">
     <img class="bg" src="/Juliette_KingsX_theroom.jpg" alt="The Room">
     <div class="veil"></div>
     <div class="hero-in">
       <div class="eyebrow">Welcome to your container</div>
       <h1>The Room.</h1>
-      <p>Eight weeks, together. Cameras on, held the whole way. This is where you come back to your body, one week at a time.</p>
+      <p>Nine weeks, together, week zero to week eight. Cameras on, held the whole way. Each week opens as we move through it.</p>
     </div>
   </div>
 
   <div class="wrap">
 
-    <!-- WEEK 1 — OPEN -->
+    <!-- member id -->
+    <div class="idbar" id="idbar">
+      <div class="t" id="idbar-text">To track your progress through the programme, add the email you joined with.</div>
+      <input type="email" id="member-email" placeholder="you@email.com">
+      <button onclick="saveEmail()">Save</button>
+    </div>
+
+    <!-- GUARANTEE -->
+    <div class="guarantee">
+      <div class="g-label">Your 60-day promise</div>
+      <h3>Do the work, and it works — or you stay longer, on me.</h3>
+      <p>If you move through the eight weeks fully and still don't feel more sensation in your body, you continue with me for another 60 days at no extra cost. Here is what "fully" means:</p>
+      <ul>
+        <li>You complete each week's module</li>
+        <li>You do the short check-in after each week</li>
+        <li>You show up to at least 6 of the 8 live classes</li>
+      </ul>
+      <p>The check-ins below are how I see where you are, and how we both know you've done the work. That's the whole point of them.</p>
+    </div>
+
     <div class="section">
-      <div class="section-label">Your eight weeks</div>
-      <div class="weeks">
-
-        <div class="week week1">
-          <div class="week-top">
-            <span class="week-num">Week 1 · open now</span>
-            <span class="open-badge">Unlocked</span>
-          </div>
-          <h3>Coming home to your body</h3>
-          <p class="desc">Before anything else, we land. This week is about safety, sensation, and beginning to feel again, gently and on your own terms.</p>
-
-          <div class="w1-grid">
-            <!-- One Touch course unlock -->
-            <div class="tile course">
-              <div class="t-label">Your Week 1 course</div>
-              <h4>One Touch</h4>
-              <p>Seven days of real practice to bring you back into your body. Yours to keep, start whenever you're ready.</p>
-              <a class="btn" href="/one-touch-members" target="_blank" rel="noopener">Enter the course →</a>
-            </div>
-            <!-- This week's live -->
-            <div class="tile">
-              <div class="t-label">This week, live with me</div>
-              <h4>Opening circle</h4>
-              <p>Our first call together, cameras on. Day and time are in your welcome email and calendar invite.</p>
-              <a class="btn ghost" href="#" onclick="return false;">Zoom link — add in welcome email</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- WEEKS 2–8 — LOCKED -->
-        <div class="week locked">
-          <div class="week-top"><span class="week-num">Week 2</span><span class="lock"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Opens Week 2</span></div>
-          <h3>Where you brace</h3>
-          <p class="desc">Meeting the pattern that closes you, with tenderness instead of force.</p>
-        </div>
-
-        <div class="week locked">
-          <div class="week-top"><span class="week-num">Week 3</span><span class="lock"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Opens Week 3</span></div>
-          <h3>Receiving</h3>
-          <p class="desc">Letting touch land, and staying with it when it does.</p>
-        </div>
-
-        <div class="week locked">
-          <div class="week-top"><span class="week-num">Week 4</span><span class="lock"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Opens Week 4</span></div>
-          <h3>Your yes and your no</h3>
-          <p class="desc">The sacred no, and the desire that lives on the other side of it.</p>
-        </div>
-
-        <div class="week locked">
-          <div class="week-top"><span class="week-num">Week 5</span><span class="lock"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Opens Week 5</span></div>
-          <h3>Being met</h3>
-          <p class="desc">Staying present in contact instead of leaving your own body.</p>
-        </div>
-
-        <div class="week locked">
-          <div class="week-top"><span class="week-num">Week 6</span><span class="lock"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Opens Week 6</span></div>
-          <h3>Pleasure as your own</h3>
-          <p class="desc">Coming off performance and into what is actually yours.</p>
-        </div>
-
-        <div class="week locked">
-          <div class="week-top"><span class="week-num">Week 7</span><span class="lock"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Opens Week 7</span></div>
-          <h3>Bringing it to them</h3>
-          <p class="desc">Taking what has opened in you into the relationships that matter.</p>
-        </div>
-
-        <div class="week locked">
-          <div class="week-top"><span class="week-num">Week 8</span><span class="lock"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Opens Week 8</span></div>
-          <h3>Staying open</h3>
-          <p class="desc">How you keep this alive long after the eight weeks close.</p>
-        </div>
-
-      </div>
+      <div class="section-label">Your nine weeks</div>
+      <div id="weeks"></div>
     </div>
   </div>
 
@@ -208,20 +202,134 @@
       <div style="font-size:12px;color:rgba(255,255,255,.85)"><a href="mailto:support@feelfullyyou.com" style="text-decoration:underline;text-underline-offset:3px">support@feelfullyyou.com</a></div>
     </div>
   </footer>
-
 </div>
 
 <script>
+  /* ============================================================
+     ⚙️  SET YOUR COHORT START DATE (Week 0 opens on this date).
+     Weeks then unlock one per week automatically after this.
+     ============================================================ */
+  const COHORT_START = new Date('2026-06-29T09:00:00');
+
   const PASSWORD = 'theroom2026';
   const SESSION_KEY = 'ffy_room_unlocked';
+  const MS_WEEK = 7*24*60*60*1000;
+
+  const WEEKS = [
+    {n:0, title:'Before we begin', desc:'Orientation. How The Room works, how to get the most from it, and setting your intention for the eight weeks.'},
+    {n:1, title:'Coming home to your body', desc:'Safety, sensation, and beginning to feel again, gently and on your own terms.', week1:true},
+    {n:2, title:'Where you brace', desc:'Meeting the pattern that closes you, with tenderness instead of force.'},
+    {n:3, title:'Receiving', desc:'Letting touch land, and staying with it when it does.'},
+    {n:4, title:'Your yes and your no', desc:'The sacred no, and the desire that lives on the other side of it.'},
+    {n:5, title:'Being met', desc:'Staying present in contact instead of leaving your own body.'},
+    {n:6, title:'Pleasure as your own', desc:'Coming off performance and into what is actually yours.'},
+    {n:7, title:'Bringing it to them', desc:'Taking what has opened in you into the relationships that matter.'},
+    {n:8, title:'Staying open', desc:'How you keep this alive long after the eight weeks close.'}
+  ];
+
+  function unlockDate(n){ return new Date(COHORT_START.getTime() + n*MS_WEEK); }
+  function isUnlocked(n){ return Date.now() >= unlockDate(n).getTime(); }
+  function fmtDate(d){ return d.toLocaleDateString('en-GB',{day:'numeric',month:'long'}); }
+  function memberEmail(){ return localStorage.getItem('room_member_email') || ''; }
+
+  function saveEmail(){
+    var v = document.getElementById('member-email').value.trim();
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)) return;
+    localStorage.setItem('room_member_email', v);
+    renderIdbar();
+  }
+  function renderIdbar(){
+    var em = memberEmail();
+    if(em){
+      document.getElementById('idbar').innerHTML = '<div class="t">Tracking progress for <span class="who">'+em+'</span></div><button onclick="clearEmail()" style="background:transparent;border:1px solid var(--line);color:var(--brown)">Change</button>';
+    }
+  }
+  function clearEmail(){ localStorage.removeItem('room_member_email'); location.reload(); }
+
+  function ciDone(n){ return localStorage.getItem('room_ci_wk'+n)==='1'; }
+
+  function weekHTML(w){
+    var unlocked = isUnlocked(w.n);
+    var cls = 'week' + (unlocked ? (w.week1?' open1':'') : ' locked');
+    var top;
+    if(!unlocked){
+      top = '<span class="week-num">Week '+w.n+'</span><span class="opens"><svg viewBox="0 0 24 24" style="width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Opens '+fmtDate(unlockDate(w.n))+'</span>';
+    } else {
+      top = '<span class="week-num">Week '+w.n+(w.n===currentWeek()?' · this week':'')+'</span>'+(ciDone(w.n)?'<span class="done-tag">✓ Checked in</span>':'<span class="now-tag">Open</span>');
+    }
+    var body = '<h3>'+w.title+'</h3><p class="desc">'+w.desc+'</p>';
+    if(!unlocked) return '<div class="'+cls+'"><div class="week-top">'+top+'</div>'+body+'</div>';
+
+    // unlocked extras
+    var extra = '';
+    if(w.week1){
+      extra = '<div class="tiles">'+
+        '<div class="tile course"><div class="t-label">Your Week 1 course</div><h4>One Touch</h4><p>Seven days of real practice to bring you back into your body. Yours to keep.</p><a class="btn" href="/one-touch-members" target="_blank" rel="noopener">Enter the course →</a></div>'+
+        '<div class="tile"><div class="t-label">Your Week 1 app access</div><h4>The Cards · Relationship deck</h4><p>Your relationship deck inside the Intimacy &amp; Communication Cards app. Access details are in your welcome email.</p><a class="btn ghost" href="https://couplecards.netlify.app" target="_blank" rel="noopener">Open the app →</a></div>'+
+        '</div>';
+    }
+    // check-in
+    var extraFull = extra + checkinHTML(w.n);
+    return '<div class="'+cls+'"><div class="week-top">'+top+'</div>'+body+extraFull+'</div>';
+  }
+
+  function checkinHTML(n){
+    if(ciDone(n)){
+      return '<div class="checkin"><div class="ci-head"><span class="ci-title">Weekly check-in</span><span class="done-tag">✓ Done — thank you</span></div></div>';
+    }
+    return '<div class="checkin" data-wk="'+n+'">'+
+      '<div class="ci-head"><span class="ci-title">Your week '+n+' check-in · 3 quick questions</span><button class="btn teal" onclick="toggleCI('+n+')" id="ci-btn-'+n+'">Check in</button></div>'+
+      '<div class="ci-body" id="ci-body-'+n+'">'+
+        '<div class="ci-q"><label>Did you complete this week\'s module?</label><div class="ci-opts" data-q="module" data-wk="'+n+'">'+
+          '<div class="ci-opt" onclick="pick(this)">Yes, fully</div><div class="ci-opt" onclick="pick(this)">Partly</div><div class="ci-opt" onclick="pick(this)">Not yet</div></div></div>'+
+        '<div class="ci-q"><label>How much sensation are you feeling in your body right now? (1 = numb, 10 = fully alive)</label><div class="ci-scale"><input type="range" min="1" max="10" step="1" value="5" id="ci-sens-'+n+'" oninput="document.getElementById(\'ci-sensval-'+n+'\').textContent=this.value"><span class="val" id="ci-sensval-'+n+'">5</span></div></div>'+
+        '<div class="ci-q"><label>What are you noticing this week? What is shifting, or what is in the way?</label><textarea id="ci-refl-'+n+'"></textarea></div>'+
+        '<button class="btn" onclick="submitCI('+n+')" id="ci-submit-'+n+'">Send my check-in</button>'+
+        '<div class="ci-msg" id="ci-msg-'+n+'"></div>'+
+      '</div></div>';
+  }
+
+  function currentWeek(){
+    var wk = Math.floor((Date.now()-COHORT_START.getTime())/MS_WEEK);
+    return Math.max(0, Math.min(8, wk));
+  }
+  function pick(el){
+    var group = el.parentElement;
+    Array.prototype.forEach.call(group.children,function(c){c.classList.remove('sel');});
+    el.classList.add('sel');
+  }
+  function toggleCI(n){ document.getElementById('ci-body-'+n).classList.toggle('show'); }
+
+  function submitCI(n){
+    var email = memberEmail();
+    var msg = document.getElementById('ci-msg-'+n);
+    if(!email){ msg.style.color='#e6b8b8'; msg.textContent='Add your email at the top first so your progress is saved to you.'; window.scrollTo(0,0); return; }
+    var modGroup = document.querySelector('.ci-opts[data-q="module"][data-wk="'+n+'"] .ci-opt.sel');
+    var module = modGroup ? modGroup.textContent : '';
+    if(!module){ msg.style.color='#e6b8b8'; msg.textContent='Let me know if you completed the module.'; return; }
+    var sensation = document.getElementById('ci-sens-'+n).value;
+    var reflection = document.getElementById('ci-refl-'+n).value.trim();
+    var btn = document.getElementById('ci-submit-'+n); btn.disabled=true; btn.textContent='Sending…';
+    var body = new URLSearchParams({'form-name':'room-checkin', email:email, week:'Week '+n, 'module-done':module, sensation:sensation, reflection:reflection, 'bot-field':''}).toString();
+    fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:body})
+      .then(function(r){ if(!r.ok) throw new Error(); localStorage.setItem('room_ci_wk'+n,'1'); render(); })
+      .catch(function(){ btn.disabled=false; btn.textContent='Send my check-in'; msg.style.color='#e6b8b8'; msg.textContent='Something went wrong. Please try again.'; });
+  }
+
+  function render(){
+    document.getElementById('weeks').innerHTML = WEEKS.map(weekHTML).join('');
+    renderIdbar();
+  }
+
   function checkPassword(){
-    const val = document.getElementById('pw-input').value.trim().toLowerCase();
+    var val = document.getElementById('pw-input').value.trim().toLowerCase();
     if(val === PASSWORD){ sessionStorage.setItem(SESSION_KEY,'1'); unlock(); }
     else { document.getElementById('gate-error').style.display='block'; }
   }
   function unlock(){
     document.getElementById('gate').style.display='none';
     document.getElementById('content').style.display='block';
+    render();
   }
   if(sessionStorage.getItem(SESSION_KEY) === '1') unlock();
   document.getElementById('pw-input').addEventListener('keydown', function(e){ if(e.key==='Enter') checkPassword(); });
