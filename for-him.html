@@ -154,6 +154,30 @@
   .offer .btn{align-self:flex-start;margin-top:8px}
   @media(max-width:860px){.offer-grid{grid-template-columns:1fr;max-width:440px}}
 
+  /* FLAGSHIP — Touch Point */
+  .flagship{background:var(--teal);border-radius:4px;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:.8fr 1.2fr;overflow:hidden}
+  .flagship .photo-side{min-height:520px;background:url('/Juliette_KingsX_touchpoint.jpg') center 12% / cover no-repeat}
+  .flagship .copy-side{padding:56px 52px}
+  .flagship .tag{font-size:var(--t-xs);letter-spacing:.14em;text-transform:uppercase;color:var(--gold-pale);font-weight:600;margin-bottom:14px}
+  .flagship h3{color:#fff;font-size:clamp(1.7rem,3.4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.1;margin-bottom:10px}
+  .flagship .price{font-family:var(--display);font-weight:700;color:var(--gold-pale);font-size:1.4rem;margin-bottom:18px}
+  .flagship p{color:#d7d0c4;font-size:var(--t-md);line-height:1.55;margin-bottom:14px;max-width:52ch}
+  .flagship .btn{margin-top:10px}
+  .flagship .points{display:grid;grid-template-columns:1fr 1fr;gap:14px 26px;border-top:1px solid rgba(255,255,255,.15);margin-top:26px;padding-top:26px}
+  .flagship .item{color:#d7d0c4;font-size:.98rem;line-height:1.55;position:relative;padding-left:24px}
+  .flagship .item::before{content:"";position:absolute;left:0;top:9px;width:8px;height:8px;border-radius:50%;background:var(--gold)}
+  .flagship .item strong{color:#fff;font-weight:600}
+  @media(max-width:900px){.flagship{grid-template-columns:1fr}.flagship .photo-side{min-height:460px}.flagship .copy-side{padding:44px 28px}.flagship .points{grid-template-columns:1fr}}
+
+  /* QUIET ROW */
+  .quietrow{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1100px;margin:26px auto 0}
+  .quiet{background:var(--paper,#fdfbf8);border:1px solid var(--line);border-radius:4px;padding:34px 32px}
+  .quiet .qtag{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:12px}
+  .quiet h4{font-family:var(--display);font-size:1.25rem;font-weight:700;color:var(--ink);letter-spacing:-.015em;line-height:1.2;margin-bottom:10px}
+  .quiet p{font-size:1.02rem;color:var(--brown);line-height:1.6;margin-bottom:16px;max-width:none}
+  .quiet a{font-size:.98rem;font-weight:600;color:var(--gold-deep);text-decoration:underline;text-underline-offset:3px}
+  @media(max-width:900px){.quietrow{grid-template-columns:1fr;max-width:460px}}
+
   /* PRESS */
   .press{display:flex;gap:20px 36px;flex-wrap:wrap;align-items:center;justify-content:flex-start;margin:36px 0;padding:24px 0;border-top:1px solid rgba(255,255,255,.15);border-bottom:1px solid rgba(255,255,255,.15)}
   .press img{height:24px;width:auto;max-width:110px;object-fit:contain;filter:brightness(0) invert(1) opacity(.55);transition:filter .25s}
@@ -389,37 +413,44 @@ gtag('config', 'G-SY8NKELMNZ');
 <section class="ladder" id="ways">
   <div class="wrap">
     <div class="head reveal">
-      <p class="eyebrow" style="margin-bottom:14px">Ways in</p>
-      <h2>Choose where you want to begin.</h2>
+      <p class="eyebrow" style="margin-bottom:14px">Where this goes</p>
+      <h2>Touch Point.</h2>
     </div>
-    <div class="offer-grid">
-      <div class="offer reveal">
-        <p class="tag">Monthly membership</p>
-        <h3>Touch Point</h3>
-        <div class="price">£97 / month</div>
-        <p>The private weekly membership. Practical, body-forward, specific to where you actually are.</p>
-        <a href="/touch-point" class="btn">Join</a>
+    <div class="flagship reveal">
+      <div class="photo-side" role="img" aria-label="Juliette Karaman"></div>
+      <div class="copy-side">
+        <p class="tag">Membership · Monthly · With Juliette</p>
+        <h3>Become the man whose presence she can feel.</h3>
+        <div class="price">£97/month</div>
+        <p>You cannot gesture your way back. Doing more reads as pressure. Touch Point is where you build the steadiness her nervous system can actually trust.</p>
+        <p>Private, practical, specific to where you are. Nobody is put on a stage.</p>
+        <a href="/touch-point" class="btn">Join Touch Point</a>
+        <div class="points">
+          <div class="item"><strong>Private Telegram group.</strong> Fully confidential. Nobody sees you join.</div>
+          <div class="item"><strong>Weekly coaching audio.</strong> A few minutes, practical, body-first.</div>
+          <div class="item"><strong>Monthly live session</strong> with Juliette.</div>
+          <div class="item"><strong>First members locked at £97 for life.</strong></div>
+        </div>
       </div>
-      <div class="offer reveal">
-        <p class="tag">One hour · 1:1</p>
-        <h3>The Pattern Session</h3>
-        <div class="price">£597</div>
-        <p>One hour on Zoom, just you. She does not need to be there. The pattern named plainly, and a clear next step for your relationship specifically.</p>
-        <a href="/pattern-session" class="btn">Find out more</a>
+    </div>
+    <div class="quietrow">
+      <div class="quiet reveal">
+        <p class="qtag">Start with the guide</p>
+        <h4>The Unspoken Distance</h4>
+        <p>Nine parts. What the distance is made of, why it keeps showing up, and what to do about it. £97.</p>
+        <a href="/the-unspoken-distance">Get the guide →</a>
       </div>
-      <div class="offer reveal">
-        <p class="tag">One day with Juliette</p>
-        <h3>Men's Intensive</h3>
-        <div class="price">Half day £2,000 · Full day £4,000</div>
-        <p>Somatic, body-led, fully confidential. Just you. The fastest way through.</p>
-        <a href="/mens-intensive" class="btn">Enquire</a>
+      <div class="quiet reveal">
+        <p class="qtag">Free · Start tonight</p>
+        <h4>When She Has Gone Quiet</h4>
+        <p>The free guide for the man who feels her pulling away and does not know what changed.</p>
+        <a href="/when-she-goes-quiet">Get it free →</a>
       </div>
-      <div class="offer reveal">
-        <p class="tag">6 weeks · 1:1</p>
-        <h3>Men's 6-Week Intensive</h3>
-        <div class="price">£4,497</div>
-        <p>Six weeks of deep 1:1 work. Body-led, fully confidential. For the man who is ready to go all the way in.</p>
-        <a href="/mens-six-week-intensive" class="btn">Enquire</a>
+      <div class="quiet reveal">
+        <p class="qtag">Prefer private?</p>
+        <h4>Private 1:1 with Juliette</h4>
+        <p>One session, one day, or six weeks. Fully confidential. All the private ways to work together, on one page.</p>
+        <a href="/private-sessions">Private sessions →</a>
       </div>
     </div>
   </div>
