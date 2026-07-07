@@ -91,6 +91,15 @@
 </head>
 <body>
 
+<form name="touch-audit" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+  <input type="text" name="first-name"><input type="text" name="last-name"><input type="email" name="email"><input type="tel" name="phone"><input type="text" name="instagram">
+  <input type="text" name="relationship-status"><input type="text" name="applying-as"><input type="text" name="what-looking-for">
+  <textarea name="goal"></textarea><textarea name="struggles"></textarea><textarea name="actions-taken"></textarea><textarea name="somatic-work"></textarea>
+  <input type="text" name="commitment"><textarea name="what-drew-you"></textarea><textarea name="why-now"></textarea>
+  <input type="text" name="investment"><textarea name="value-of-mentorship"></textarea><textarea name="anything-else"></textarea>
+  <input name="bot-field">
+</form>
+
 <div class="topbar"><a class="brand" href="/">Feel Fully <b>You</b></a></div>
 
 <main>
@@ -109,7 +118,7 @@
       </section>
 
       <!-- FORM -->
-      <form id="auditForm" name="touch-audit" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="hidden">
+      <form id="auditForm" name="touch-audit" method="POST" class="hidden">
         <input type="hidden" name="form-name" value="touch-audit">
         <p class="honey"><label>Leave this empty <input name="bot-field"></label></p>
 
