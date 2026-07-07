@@ -237,5 +237,16 @@ gtag('config', 'G-SY8NKELMNZ');
   if(btn&&nav){btn.addEventListener('click',function(){nav.classList.toggle('open');btn.setAttribute('aria-expanded',nav.classList.contains('open'))});}
 })();
 </script>
+<script>
+document.addEventListener('click', function(e){
+  var a = e.target.closest('a'); if(!a || typeof gtag !== 'function') return;
+  var h = a.href || '';
+  var label = (a.textContent || '').trim().slice(0, 60);
+  if (h.indexOf('stripe.com') > -1) gtag('event', 'begin_checkout', {link_url: h, link_text: label, page_path: location.pathname});
+  else if (h.indexOf('tidycal.com') > -1) gtag('event', 'book_call_click', {link_url: h, link_text: label, page_path: location.pathname});
+  else if (h.indexOf('instagram.com') > -1) gtag('event', 'instagram_click', {link_url: h, page_path: location.pathname});
+  else if (h.indexOf('/files/') > -1 || h.indexOf('.pdf') > -1) gtag('event', 'freebie_download', {link_url: h, page_path: location.pathname});
+});
+</script>
 </body>
 </html>
