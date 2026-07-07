@@ -164,7 +164,7 @@
     <div class="hero-in">
       <div class="eyebrow">Welcome to your container</div>
       <h1>The Room.</h1>
-      <p>Nine weeks, together, week zero to week eight. Cameras on, held the whole way. Each week opens as we move through it.</p>
+      <p>Your own nine weeks, week zero to week eight, at your own pace. Cameras on, held the whole way. Each week opens seven days after the last.</p>
     </div>
   </div>
 
@@ -209,11 +209,25 @@
      ⚙️  SET YOUR COHORT START DATE (Week 0 opens on this date).
      Weeks then unlock one per week automatically after this.
      ============================================================ */
-  const COHORT_START = new Date('2026-07-19T09:00:00');
-
+  /* EVERGREEN: each member's 9 weeks run from HER own start date.
+     Start is anchored in this order:
+       1) a ?start=YYYY-MM-DD in the link (put their join date in the welcome-email link), then
+       2) whatever was saved on first visit.
+     Week N opens N weeks after that start. */
   const PASSWORD = 'theroom2026';
   const SESSION_KEY = 'ffy_room_unlocked';
   const MS_WEEK = 7*24*60*60*1000;
+
+  function pad2(n){ return String(n).padStart(2,'0'); }
+  function todayISO(){ var t=new Date(); return t.getFullYear()+'-'+pad2(t.getMonth()+1)+'-'+pad2(t.getDate()); }
+  function getStartISO(){
+    var p = new URLSearchParams(location.search).get('start');
+    if(p && /^\d{4}-\d{2}-\d{2}$/.test(p)){ localStorage.setItem('room_start', p); return p; }
+    var s = localStorage.getItem('room_start');
+    if(s) return s;
+    var t = todayISO(); localStorage.setItem('room_start', t); return t;
+  }
+  function memberStart(){ return new Date(getStartISO()+'T09:00:00'); }
 
   const WEEKS = [
     {n:0, title:'Before we begin', desc:'Orientation. How The Room works, how to get the most from it, and setting your intention for the eight weeks.'},
@@ -227,7 +241,7 @@
     {n:8, title:'Staying open', desc:'How you keep this alive long after the eight weeks close.'}
   ];
 
-  function unlockDate(n){ return new Date(COHORT_START.getTime() + n*MS_WEEK); }
+  function unlockDate(n){ return new Date(memberStart().getTime() + n*MS_WEEK); }
   function isUnlocked(n){ return Date.now() >= unlockDate(n).getTime(); }
   function fmtDate(d){ return d.toLocaleDateString('en-GB',{day:'numeric',month:'long'}); }
   function memberEmail(){ return localStorage.getItem('room_member_email') || ''; }
@@ -290,7 +304,7 @@
   }
 
   function currentWeek(){
-    var wk = Math.floor((Date.now()-COHORT_START.getTime())/MS_WEEK);
+    var wk = Math.floor((Date.now()-memberStart().getTime())/MS_WEEK);
     return Math.max(0, Math.min(8, wk));
   }
   function pick(el){
