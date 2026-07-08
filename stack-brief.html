@@ -151,7 +151,7 @@ gtag('config', 'G-SY8NKELMNZ');
       <div class="tool-body">
         <p class="job">Takes all the money.</p>
         <p>Every buy button on every Netlify page links to a Stripe payment link. Someone clicks "Get the 10 Rituals · £7", pays in Stripe, done. Stripe sends them a receipt. Stripe then tells Kit to send the welcome email sequence. No middle layer. No cart. No shop. Just a payment link.</p>
-        <p class="action">Juliette action: create payment links in Stripe for £7 / £27 / £97 per month. Takes 10 minutes.</p>
+        <p class="action">Juliette action: create payment links in Stripe for £7 / £31 / £97 per month. Takes 10 minutes.</p>
       </div>
       <div class="tool-cost">2.9% + 30p<span class="note">Per transaction only. No monthly fee.</span></div>
     </div>
@@ -164,7 +164,7 @@ gtag('config', 'G-SY8NKELMNZ');
       <div class="tool-body">
         <p class="job">Sends every email. Already paid for.</p>
         <p>When someone buys through Stripe, Kit automatically sends them a welcome sequence. The Insider Touch newsletter goes from Kit. All broadcast emails go from Kit. Kit connects to Stripe via a simple integration, when a payment lands, Kit fires the right sequence for that product.</p>
-        <p class="action">Kiera action: set up three automations in Kit, one triggered by each Stripe product (£7, £27, £97). Migrate the 2,700 contacts from Ivorey into Kit.</p>
+        <p class="action">Kiera action: set up three automations in Kit, one triggered by each Stripe product (£7, £31, £97). Migrate the 2,700 contacts from Ivorey into Kit.</p>
       </div>
       <div class="tool-cost">$75/mo<span class="note">Already paying. Rising to ~$100.</span></div>
     </div>
@@ -248,7 +248,7 @@ gtag('config', 'G-SY8NKELMNZ');
   <div class="next-section">
     <h2>What needs to happen this week</h2>
     <ul class="next-list">
-      <li><strong>Juliette, 10 minutes in Stripe:</strong> Create three payment links. £7 for 10 Rituals, £27 for 31 Touch Points, £97/month for Touch Point membership. Share links with Kiera.</li>
+      <li><strong>Juliette, 10 minutes in Stripe:</strong> Create three payment links. £7 for 10 Rituals, £31 for 31 Touch Points, £97/month for Touch Point membership. Share links with Kiera.</li>
       <li class="kiera"><strong>Kiera, drop Stripe links into HTML files:</strong> Three files in ~/Downloads, 10-touch-rituals.html, 31-daily-touch-points.html, touch-point.html. Find href="#" on the buy buttons and replace with Stripe links.</li>
       <li class="kiera"><strong>Kiera, deploy to Netlify:</strong> Go to netlify.com/drop. Drag all HTML files from ~/Downloads. Pages go live instantly with netlify.app URLs.</li>
       <li class="kiera"><strong>Kiera, point feelfullyyou.com to Netlify:</strong> In domain registrar, update DNS. Netlify provides the two values. Takes 5 minutes, propagates in under an hour.</li>
