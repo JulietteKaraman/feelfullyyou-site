@@ -87,6 +87,9 @@
 /touch-audit                    /touch-audit.html               200
 /the-room-members               /the-room-members.html          200
 /room-members                   /the-room-members.html          200
+/sacred-no-quiz                 /sacred-no-quiz.html            200
+/the-no-quiz                    /sacred-no-quiz.html            200
+/no-quiz                        /sacred-no-quiz.html            200
 
 # 404 fallback
 /*                              /404.html                       404
