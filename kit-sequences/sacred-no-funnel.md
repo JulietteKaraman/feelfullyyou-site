@@ -13,14 +13,13 @@ Built 8 Jul 2026. Front-door lead funnel: free quiz → archetype result → nur
   - Old £55 price (`price_1TqA3E…`) + link (`…co1q`) left inactive-in-place; retire when ready.
 - **Thank-you:** /thankyou-sacred-no (`thankyou-sacred-no.html`) — delivery page, no price. Needs the daily-video delivery added (see video map).
 
-## BLOCKED on Kit auth (do when Kit connector is live)
-The quiz page email capture stays hidden until these exist. In `sacred-no-quiz.html`, fill the `TAGS` map + set `SEQ`, then `WIRED` flips true and the capture form appears.
+## Kit WIRED 8 Jul 2026 ✅
+Tags + sequence created, IDs dropped into `sacred-no-quiz.html` (`WIRED` is now true, capture form shows). Quiz posts `{email, tagIds:[archetypeTag], sequenceId:2820133, archetype}` to `/.netlify/functions/subscribe`.
 
-1. Create 7 Kit tags, one per archetype:
-   `The Dimmed Flame`, `The Pattern Holder`, `The Armoured One`, `The Rhythm Restorer`, `The Living Signal`, `The Embodied Current`, `The Remembered One`
-2. Create one nurture sequence: **Sacred No Funnel** (Email 1 → 2 → 3 below).
-3. Drop the tag IDs into `TAGS{}` and the sequence ID into `SEQ` in `sacred-no-quiz.html`, redeploy.
-4. Quiz posts `{email, tagIds:[archetypeTag], sequenceId:SEQ, archetype}` to `/.netlify/functions/subscribe` (same function Pleasure Languages uses).
+- Archetype tag IDs: Dimmed Flame 20974673 · Pattern Holder 20974674 · Armoured One 20974675 · Rhythm Restorer 20974677 · Living Signal 20974683 · Embodied Current 20974684 · Remembered One 20974685
+- Nurture sequence: **Sacred No Funnel** = `2820133` (3 emails: 10055694 immediate, 10055695 +1 day, 10055696 +2 days)
+
+**ONE STEP LEFT — publish the emails.** They were created as DRAFTS (unpublished emails do not send). Open https://app.kit.com/sequences/2820133, review the 3 emails, hit Publish on each.
 
 ---
 
