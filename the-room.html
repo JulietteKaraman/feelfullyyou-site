@@ -96,6 +96,23 @@
   .hero-intro{padding:52px 28px 56px;background:var(--teal);text-align:center}
   .hero-intro p{font-family:var(--display);font-size:clamp(17px,2.2vw,22px);font-style:italic;font-weight:500;color:var(--cream);max-width:580px;margin:0 auto 36px;line-height:1.5;opacity:.9}
   .hero-intro .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .deliv-strip{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px 0;max-width:840px;margin:0 auto 34px}
+  .deliv-strip span{font-family:var(--body);font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--gold-pale);font-weight:600;padding:2px 16px;border-right:1px solid rgba(168,133,56,.42);line-height:1.15}
+  .deliv-strip span:last-child{border-right:none}
+  .founding .scarcity{display:inline-block;font-family:var(--body);font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--teal);font-weight:700;background:var(--gold-pale);padding:7px 17px;border-radius:99px;margin-bottom:20px}
+  .founding .anchor{color:var(--gold-pale);font-size:15px;letter-spacing:.04em;text-transform:uppercase;font-weight:600;margin:0}
+  .faq{background:var(--cream-2);padding:90px 28px;border-top:1px solid var(--line)}
+  .faq .inner{max-width:760px;margin:0 auto}
+  .faq .eyebrow{margin-bottom:14px}
+  .faq h2{margin-bottom:36px;max-width:24ch}
+  .faq details{border-top:1px solid var(--line);padding:0}
+  .faq details:last-of-type{border-bottom:1px solid var(--line)}
+  .faq summary{list-style:none;cursor:pointer;padding:22px 40px 22px 0;position:relative;font-family:var(--display);font-weight:600;font-size:clamp(16px,2vw,18px);color:var(--ink);letter-spacing:-.01em;line-height:1.35}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";position:absolute;right:4px;top:20px;font-family:var(--display);font-weight:400;font-size:26px;color:var(--gold);line-height:1;transition:transform .25s}
+  .faq details[open] summary::after{content:"–"}
+  .faq details p{margin:0 0 22px;color:var(--brown);font-size:16px;line-height:1.65;max-width:64ch}
+  .faq details p a{color:var(--gold-deep);text-decoration:underline;text-underline-offset:3px}
 
   /* THESIS */
   .thesis{padding:92px 0;border-top:1px solid var(--line)}
@@ -112,7 +129,7 @@
   .photo-break-text blockquote{font-family:var(--display);font-size:clamp(24px,4vw,44px);font-weight:700;color:#fff;max-width:22ch;line-height:1.18;letter-spacing:-.02em}
   .photo-break-text blockquote em{color:var(--gold-pale);font-style:italic}
 
-  /* RECOGNITION — three women */
+  /* RECOGNITION - three women */
   .recog{padding:0;border-top:1px solid var(--line)}
   .recog .copy{padding:84px 28px;max-width:760px;margin:0 auto}
   .recog .copy .eyebrow{margin-bottom:22px}
@@ -123,6 +140,29 @@
   .woman-card h3{font-size:18px;margin-bottom:12px;color:var(--ink)}
   .woman-card p{font-size:15.5px;color:var(--brown);margin:0;max-width:none}
   .recog .thread{font-family:var(--display);font-weight:600;font-size:clamp(20px,2.8vw,26px);color:var(--ink);max-width:38ch;margin-top:36px;line-height:1.22;letter-spacing:-.015em}
+
+  /* FIVE PATTERNS - deep green block, the framework centrepiece */
+  .patterns{background:var(--teal);color:var(--cream);padding:90px 28px;border-top:1px solid var(--line-dark)}
+  .patterns .inner{max-width:var(--max);margin:0 auto}
+  .patterns .eyebrow{color:var(--gold-pale);margin-bottom:18px}
+  .patterns h2{color:var(--cream);max-width:24ch;margin-bottom:16px}
+  .patterns h2 .gp{color:var(--gold-pale)}
+  .patterns .lead{color:rgba(254,252,250,.74);max-width:58ch;font-size:var(--t-md);line-height:1.62;margin-bottom:46px}
+  .pattern-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(168,133,56,.3);border:1px solid rgba(168,133,56,.3)}
+  @media(max-width:940px){.pattern-grid{grid-template-columns:repeat(2,1fr)}}
+  .pattern-card{background:var(--teal);padding:30px 26px;transition:background .25s}
+  .pattern-card:hover{background:var(--teal-deep)}
+  .pattern-card .pname{font-family:var(--display);font-weight:700;font-size:22px;color:var(--gold-pale);letter-spacing:-.01em;line-height:1.1;margin-bottom:7px}
+  .pattern-card .pstrat{font-family:var(--body);font-size:11.5px;text-transform:uppercase;letter-spacing:.13em;color:var(--gold);font-weight:600;margin-bottom:16px}
+  .pattern-card p{font-size:14.5px;color:rgba(254,252,250,.82);line-height:1.62;margin:0 0 14px}
+  .pattern-card .ptouch{font-size:13.5px;color:rgba(254,252,250,.66);line-height:1.56;margin:0 0 14px;border-top:1px solid rgba(168,133,56,.24);padding-top:13px}
+  .pattern-card .ptl{color:var(--gold);font-weight:600;letter-spacing:.02em}
+  .pattern-card .ache{font-family:var(--display);font-style:italic;font-weight:500;font-size:15px;color:var(--gold-pale);line-height:1.4;margin:0}
+  .spine .node .out{display:block;margin-top:14px;font-family:var(--display);font-weight:600;font-size:15px;color:var(--teal);line-height:1.4;max-width:none;background:rgba(6,26,26,.06);border-left:3px solid var(--teal);padding:11px 16px;border-radius:2px}
+  .spine .node .out b{display:block;font-family:var(--body);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-deep);font-weight:700;margin-bottom:4px;opacity:.85}
+  .patterns .pclose{font-family:var(--display);font-weight:600;font-size:clamp(20px,2.8vw,27px);color:var(--cream);max-width:34ch;margin:50px auto 30px;text-align:center;line-height:1.24;letter-spacing:-.015em}
+  .patterns .pcta{text-align:center}
+  @media(max-width:640px){.pattern-grid{grid-template-columns:1fr}}
 
   /* METHOD */
   .works{padding:92px 0;background:var(--cream-2);border-top:1px solid var(--line)}
@@ -136,7 +176,7 @@
   .pillar h3{font-size:17px;margin-bottom:8px;text-transform:uppercase;letter-spacing:.04em;color:var(--gold-deep)}
   .pillar p{font-size:15.5px;color:var(--brown);margin:0;max-width:none}
 
-  /* WHY ME — matches touch-point exactly */
+  /* WHY ME - matches touch-point exactly */
   .why{padding:0;border-top:1px solid var(--line);background:var(--paper)}
   .why .split{display:grid;grid-template-columns:.85fr 1.15fr;align-items:stretch}
   .why .photo{background-size:cover;background-position:center top;min-height:560px}
@@ -412,6 +452,15 @@ gtag('config', 'G-SY8NKELMNZ');
 <!-- HERO INTRO BAND -->
 <div class="hero-intro">
   <p>An 8-week programme for the woman whose body has gone quiet, and who is ready to do something specific about it.</p>
+  <div class="deliv-strip reveal">
+    <span>8 Live Group Calls</span>
+    <span>Weekly, With Me</span>
+    <span>Touch Base®</span>
+    <span>Touch Languages®</span>
+    <span>The Cards</span>
+    <span>Lifetime Access</span>
+    <span>60-Day Guarantee</span>
+  </div>
   <div class="cta-row">
     <a href="#book" class="btn">Book a Call</a>
     <a href="#what" class="btn ghost" style="border-color:rgba(254,252,250,.4);color:var(--cream)">What's inside</a>
@@ -426,7 +475,7 @@ gtag('config', 'G-SY8NKELMNZ');
     <p class="pivot reveal">Safety is not a feeling. It is a structure.</p>
     <p class="reveal">When the structure is missing, when touch carries too much wanting, when the nervous system learned to brace before desire could arrive, the body does what it was taught to do. It closes.</p>
     <p class="reveal">Patterns do not change through insight. <span style="color:var(--gold)">They change through structure, practiced in the body, in the right order, until it is simply who you are.</span></p>
-    <p class="reveal">My own divorce lawyer once asked me, "Can you teach this?" She had sat with women who did not want out. They wanted to be reached again, and did not know how to let it happen. Coming home to your body, learning to receive without bracing, is how the distance closes long before it ever reaches her office.</p>
+    <p class="reveal">My own divorce lawyer once asked me, "Can you teach this?" She had worked with women who did not want out. They wanted to be reached again, and did not know how to let it happen. Coming home to your body, learning to receive without bracing, is how the distance closes long before it ever reaches her office.</p>
     <p class="closer reveal">The Room is built on that. Eight weeks. In order. In the body.</p>
   </div>
 </section>
@@ -457,6 +506,54 @@ gtag('config', 'G-SY8NKELMNZ');
   </div>
 </section>
 
+<!-- FIVE PATTERNS -->
+<section class="patterns">
+  <div class="inner">
+    <div class="eyebrow reveal">Underneath the situation</div>
+    <h2 class="reveal">Three situations. Five patterns. <span class="gp">One of them is yours.</span></h2>
+    <p class="lead reveal">The situation is where you are. The pattern is how your body learned to protect itself inside it. These are the five Touch Languages patterns. Read them, and watch one describe you a little too well.</p>
+    <div class="pattern-grid">
+      <div class="pattern-card reveal">
+        <div class="pname">The Holder</div>
+        <div class="pstrat">Give to stay connected</div>
+        <p>You reach first. You organise, you soothe, you anticipate what everyone needs before they know it themselves. You create safety for your partner, your children, your whole world, then wonder why nobody thinks to ask what you need. Letting someone else lead feels reckless, almost selfish, so you keep giving, even when your body is quietly saying no.</p>
+        <p class="ptouch"><span class="ptl">With touch:</span> you give it easily and receive it awkwardly, bracing the moment a hand lands on you without you having earned it.</p>
+        <p class="ache">"I want to be held without having to earn it."</p>
+      </div>
+      <div class="pattern-card reveal">
+        <div class="pname">The Flame</div>
+        <div class="pstrat">Dim to stay digestible</div>
+        <p>There has always been fire in you. Somewhere you learned to turn it down to stay wanted: not too much, not too fast, not too real. You softened your yes, muted your rhythm, made your hunger easier to swallow. You are praised for your warmth and your depth, and underneath it you are starving to be met before you shrink yourself to fit.</p>
+        <p class="ptouch"><span class="ptl">With touch:</span> you only let it in once you have dimmed yourself for it, so it reaches the softened version of you, never the full heat.</p>
+        <p class="ache">"I want to be wanted without shrinking."</p>
+      </div>
+      <div class="pattern-card reveal">
+        <div class="pname">The Armour</div>
+        <div class="pstrat">Contain to stay safe</div>
+        <p>You did not collapse. You contained. You are the one who stays composed, who knows before she is asked, who manages closeness without letting it undo her. Softness once cost you too much, so safety came through control. When someone reaches too fast you tense. When they are too tender you question the motive. Most of the time you would rather hold than be held.</p>
+        <p class="ptouch"><span class="ptl">With touch:</span> you tense a beat before contact and would rather give it on your terms than be caught simply receiving it.</p>
+        <p class="ache">"I want to soften without collapsing."</p>
+      </div>
+      <div class="pattern-card reveal">
+        <div class="pname">The Signal</div>
+        <div class="pstrat">Curate to stay legible</div>
+        <p>You stay clear. You stay readable. You learned early that the safest way to be loved was to be understood, so you translate your feelings, filter your truth, read the room before you speak. It works. You are elegant, resonant, easy to love. When someone reaches for you mid-truth, you smile, say you are fine, turn the conversation back to them. You are fluent in every direction except toward your own rawness.</p>
+        <p class="ptouch"><span class="ptl">With touch:</span> yours is graceful and curated, and you disconnect a beat before it can actually sink in.</p>
+        <p class="ache">"I want to be met in the full mess of me."</p>
+      </div>
+      <div class="pattern-card reveal">
+        <div class="pname">The Current</div>
+        <div class="pstrat">Express to stay met</div>
+        <p>You live in the pulse. You lead from sensation, you bring the aliveness, you keep the charge in the room even when no one meets you there. When others numb or hesitate you feel it instantly, so you try harder, offer more, lead again. You have tasted what is possible and you refuse to settle, and the effort of always being the source is quietly exhausting you.</p>
+        <p class="ptouch"><span class="ptl">With touch:</span> you give it generously and feel every flicker of disconnection, so you offer more instead of letting yourself be the one received.</p>
+        <p class="ache">"I want to be received without leading it all."</p>
+      </div>
+    </div>
+    <p class="pclose reveal">Whichever one just described you, that is the pattern The Room is built to change.</p>
+    <div class="pcta reveal"><a href="#book" class="btn">Show me inside The Room</a></div>
+  </div>
+</section>
+
 <!-- WHY THE ROOM -->
 <section class="why-room">
   <div class="narrow">
@@ -479,7 +576,7 @@ gtag('config', 'G-SY8NKELMNZ');
 </section>
 
 <!-- PHOTO BREAK 1. THE ROOM image -->
-<div class="photo-break"><img src="https://feelfullyyou.com/media/6a3e9bb95aefbd076b96d5ce.jpg" alt="The Room — Juliette Karaman"></div>
+<div class="photo-break"><img src="https://feelfullyyou.com/media/6a3e9bb95aefbd076b96d5ce.jpg" alt="The Room · Juliette Karaman"></div>
 
 <!-- METHOD -->
 <section class="works">
@@ -560,20 +657,20 @@ gtag('config', 'G-SY8NKELMNZ');
 <section class="spine" id="what">
   <div class="narrow">
     <div class="eyebrow reveal" style="margin-bottom:18px">Eight weeks in the room</div>
-    <div class="quotebox reveal">Women only. You start the day you join. One module per week, dripped in so your nervous system can actually absorb it. Everything yours for life when the eight weeks close.</div>
+    <div class="quotebox reveal">Women only. Enrol now and your Week 0 primer unlocks today. The live eight-week round begins early August, with a new round each month. One module per week, dripped in so your nervous system can actually absorb it. Everything yours for life when the eight weeks close.</div>
     <div class="inc-head reveal">
       <h2 style="margin:0">The order the body actually heals.</h2>
     </div>
     <div class="timeline">
-      <div class="node reveal"><div class="day">Week 0</div><h3>The Thaw</h3><p>One Touch, a 7-day self-touch primer that is your doorway in. Trauma questionnaire. Pleasure type assessment. You begin before the programme begins.</p></div>
-      <div class="node reveal"><div class="day">Week 1</div><h3>Stop Watching Him</h3><p>Learning to track your own body signals. Establishing Touch Base®, your kinesthetic anchor. The half-second. The body as compass.</p></div>
-      <div class="node reveal"><div class="day">Week 2</div><h3>Why You Brace</h3><p>Understanding your safety mechanisms. Mastering Touch Base® for anxiety regulation. Building your personalised touch toolkit.</p></div>
-      <div class="node reveal"><div class="day">Week 3</div><h3>Your Own Hands First</h3><p>Structured self-touch sessions starting at three minutes. Your own hand, received by you, before anyone else's can land.</p></div>
-      <div class="node reveal"><div class="day">Week 4</div><h3>The Mirror, Undone</h3><p>Body image. Dressing. Mirror work. Your pleasure type, deep, with customised instructions for your specific way of receiving.</p></div>
-      <div class="node reveal"><div class="day">Week 5</div><h3>How You Like to Be Touched</h3><p>Mapping your Touch Languages®. Building your touch toolkit. Your yes, your no, your not-yet.</p></div>
-      <div class="node reveal"><div class="day">Week 6</div><h3>Say the Thing</h3><p>Structured communication. The Dyad. The Intimacy and Communication Cards. Saying what you want and being met, not managed.</p></div>
-      <div class="node reveal"><div class="day">Week 7</div><h3>Reach for Him</h3><p>Structured touch dates. Progressing sessions. The reach toward him, built on everything that came before it.</p></div>
-      <div class="node reveal"><div class="day">Week 8</div><h3>The Body You Live In Now</h3><p>Integration. Building to 45-minute sessions. The weekly rhythm you keep, without me in the room.</p></div>
+      <div class="node reveal"><div class="day">Week 0</div><h3>The Thaw</h3><p>One Touch, a 7-day self-touch primer that is your doorway in. Trauma questionnaire. Pleasure type assessment. You begin before the programme begins.</p><span class="out"><b>You leave with</b>your starting map: your trauma responses and your pleasure type, named.</span></div>
+      <div class="node reveal"><div class="day">Week 1</div><h3>Stop Watching Him</h3><p>Learning to track your own body signals. Establishing Touch Base®, your kinesthetic anchor. The half-second. The body as compass.</p><span class="out"><b>You leave with</b>the ability to read your own body instead of scanning his.</span></div>
+      <div class="node reveal"><div class="day">Week 2</div><h3>Why You Brace</h3><p>Understanding your safety mechanisms. Mastering Touch Base® for anxiety regulation. Building your personalised touch toolkit.</p><span class="out"><b>You leave with</b>a portable way to settle your own system the moment you brace.</span></div>
+      <div class="node reveal"><div class="day">Week 3</div><h3>Your Own Hands First</h3><p>Structured self-touch sessions starting at three minutes. Your own hand, received by you, before anyone else's can land.</p><span class="out"><b>You leave with</b>touch that lands from your own hand, received without bracing.</span></div>
+      <div class="node reveal"><div class="day">Week 4</div><h3>The Mirror, Undone</h3><p>Body image. Dressing. Mirror work. Your pleasure type, deep, with customised instructions for your specific way of receiving.</p><span class="out"><b>You leave with</b>a way to stand in front of the mirror that is no longer a fight.</span></div>
+      <div class="node reveal"><div class="day">Week 5</div><h3>How You Like to Be Touched</h3><p>Mapping your Touch Languages®. Building your touch toolkit. Your yes, your no, your not-yet.</p><span class="out"><b>You leave with</b>your own touch map, and the words for your yes, your no, your not-yet.</span></div>
+      <div class="node reveal"><div class="day">Week 6</div><h3>Say the Thing</h3><p>Structured communication. The Dyad. The Intimacy and Communication Cards. Saying what you want and being met, not managed.</p><span class="out"><b>You leave with</b>the exact structure to ask for what you want and be met, not managed.</span></div>
+      <div class="node reveal"><div class="day">Week 7</div><h3>Reach for Him</h3><p>Structured touch dates. Progressing sessions. The reach toward him, built on everything that came before it.</p><span class="out"><b>You leave with</b>the ability to reach for him on purpose, without it costing you yourself.</span></div>
+      <div class="node reveal"><div class="day">Week 8</div><h3>The Body You Live In Now</h3><p>Integration. Building to 45-minute sessions. The weekly rhythm you keep, without me in the room.</p><span class="out"><b>You leave with</b>a weekly rhythm you keep for good, with no one in the room but you.</span></div>
     </div>
   </div>
 </section>
@@ -588,7 +685,7 @@ gtag('config', 'G-SY8NKELMNZ');
       <div class="inc-item reveal"><div class="label">Practice</div><h3>Touch Base™ Anchor</h3><p>Your portable daily practice for regulation. The thing you take everywhere.</p></div>
       <div class="inc-item reveal"><div class="label">Tools</div><h3>Intimacy &amp; Communication Cards</h3><p>Digital access to the full deck, used throughout the programme for structured conversation.</p></div>
       <div class="inc-item reveal"><div class="label">Community</div><h3>WhatsApp Group</h3><p>Women only. Active for your eight weeks. Daily guidance, questions answered, the same work held in real time. Juliette's private support rate is £222 a day.</p></div>
-      <div class="inc-item reveal"><div class="label">Live access</div><h3>Weekly Embodiment Sessions with Juliette</h3><p>Sundays at 8pm UK on Zoom. Eight weeks. We do not just answer questions — we move what comes up through the body in real time. Recorded, so if you cannot make it live, you do not miss it.</p></div>
+      <div class="inc-item reveal"><div class="label">Live access</div><h3>Weekly Embodiment Sessions with Juliette</h3><p>Sundays at 8pm UK on Zoom. Eight weeks. We do not just answer questions. We move what comes up through the body in real time. Recorded, so if you cannot make it live, you do not miss it.</p></div>
       <div class="inc-item reveal"><div class="label">Accountability</div><h3>Knowledge Checks</h3><p>Short check-ins after each section to keep you moving, and to qualify the completion guarantee.</p></div>
       <div class="inc-item reveal"><div class="label">Juliette's IP</div><h3>Touch Languages™, Pleasure Language &amp; Love Language</h3><p>You have been speaking the wrong language. To him, and to yourself. Touch Languages™ are Juliette's own framework. Alongside your Pleasure Language and your Love Language, they give you a complete picture of everything that has not been working. The bracing. The distance. The reaching that never quite lands. Nobody else has this.</p></div>
     </div>
@@ -668,7 +765,7 @@ gtag('config', 'G-SY8NKELMNZ');
     <div class="eyebrow reveal" style="margin-bottom:28px">From the women who did the work</div>
     <div class="reveal" style="max-width:320px;margin:0 auto">
       <div style="position:relative;padding-bottom:177.78%;height:0;border-radius:12px;overflow:hidden;box-shadow:0 12px 48px rgba(13,53,53,.25)">
-        <iframe src="https://www.youtube.com/embed/HkDU9Y8goyc" title="Jenny — why The Room changed everything" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border:none"></iframe>
+        <iframe src="https://www.youtube.com/embed/HkDU9Y8goyc" title="Jenny · why The Room changed everything" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border:none"></iframe>
       </div>
     </div>
     <p class="reveal" style="margin-top:36px;font-size:22px;color:var(--brown);max-width:46ch;margin-left:auto;margin-right:auto;line-height:1.6">Eight weeks. <strong style="color:var(--ink)">A body you actually live in for the rest of your life.</strong> You have tried the other things. <strong style="color:var(--ink)">This is the thing that works.</strong></p>
@@ -696,39 +793,39 @@ gtag('config', 'G-SY8NKELMNZ');
     <h2 class="reveal" style="margin-bottom:40px">The full value of The Room.</h2>
     <div style="border:1px solid var(--line);border-radius:4px;overflow:hidden">
       <div class="reveal" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 24px;border-bottom:1px solid var(--line)">
-        <div><span style="font-family:var(--display);font-weight:600;font-size:16px;color:var(--ink)">One Touch™</span> <span style="font-size:14px;color:var(--brown)">— 7-day self-touch primer</span></div>
+        <div><span style="font-family:var(--display);font-weight:600;font-size:16px;color:var(--ink)">One Touch™</span> <span style="font-size:14px;color:var(--brown)">· 7-day self-touch primer</span></div>
         <span style="font-family:var(--display);font-weight:700;font-size:15px;color:var(--gold-deep);white-space:nowrap">£97</span>
       </div>
       <div class="reveal" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 24px;border-bottom:1px solid var(--line)">
-        <div><span style="font-family:var(--display);font-weight:600;font-size:16px;color:var(--ink)">8 Modules</span> <span style="font-size:14px;color:var(--brown)">— yours for life</span></div>
+        <div><span style="font-family:var(--display);font-weight:600;font-size:16px;color:var(--ink)">8 Modules</span> <span style="font-size:14px;color:var(--brown)">· yours for life</span></div>
         <span style="font-family:var(--display);font-weight:700;font-size:15px;color:var(--gold-deep);white-space:nowrap">£1,997</span>
       </div>
       <div class="reveal" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 24px;border-bottom:1px solid var(--line)">
-        <div><span style="font-family:var(--display);font-weight:600;font-size:16px;color:var(--ink)">Touch Base™ + tracker</span> <span style="font-size:14px;color:var(--brown)">— your daily regulation anchor</span></div>
+        <div><span style="font-family:var(--display);font-weight:600;font-size:16px;color:var(--ink)">Touch Base™ + tracker</span> <span style="font-size:14px;color:var(--brown)">· your daily regulation anchor</span></div>
         <span style="font-family:var(--display);font-weight:700;font-size:15px;color:var(--gold-deep);white-space:nowrap">£37</span>
       </div>
       <div class="reveal" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 24px;border-bottom:1px solid var(--line)">
-        <div><span style="font-family:var(--display);font-weight:600;font-size:16px;color:var(--ink)">Intimacy &amp; Communication Cards</span> <span style="font-size:14px;color:var(--brown)">— full digital set</span></div>
+        <div><span style="font-family:var(--display);font-weight:600;font-size:16px;color:var(--ink)">Intimacy &amp; Communication Cards</span> <span style="font-size:14px;color:var(--brown)">· full digital set</span></div>
         <span style="font-family:var(--display);font-weight:700;font-size:15px;color:var(--gold-deep);white-space:nowrap">£55</span>
       </div>
       <div class="reveal" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 24px;border-bottom:1px solid var(--line);background:rgba(168,133,56,.04)">
-        <div><span style="font-family:var(--display);font-weight:600;font-size:16px;color:var(--ink)">The Touch Menu</span> <span style="font-size:14px;color:var(--brown)">— 40+ types of touch, solo &amp; partnered</span></div>
+        <div><span style="font-family:var(--display);font-weight:600;font-size:16px;color:var(--ink)">The Touch Menu</span> <span style="font-size:14px;color:var(--brown)">· 40+ types of touch, solo &amp; partnered</span></div>
         <span style="font-family:var(--display);font-weight:700;font-size:15px;color:var(--gold-deep);white-space:nowrap">£795</span>
       </div>
       <div class="reveal" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 24px;border-bottom:1px solid var(--line)">
-        <div><span style="font-family:var(--display);font-weight:600;font-size:16px;color:var(--ink)">Touch Languages™ deck</span> <span style="font-size:14px;color:var(--brown)">— Juliette's own framework</span></div>
+        <div><span style="font-family:var(--display);font-weight:600;font-size:16px;color:var(--ink)">Touch Languages™ deck</span> <span style="font-size:14px;color:var(--brown)">· Juliette's own framework</span></div>
         <span style="font-family:var(--display);font-weight:700;font-size:15px;color:var(--gold-deep);white-space:nowrap">£35</span>
       </div>
       <div class="reveal" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 24px;border-bottom:1px solid var(--line)">
-        <div><span style="font-family:var(--display);font-weight:600;font-size:16px;color:var(--ink)">Pleasure Language &amp; Love Language</span> <span style="font-size:14px;color:var(--brown)">— deep dive into what lights you up, with music tracks curated to enhance your pleasure language</span></div>
+        <div><span style="font-family:var(--display);font-weight:600;font-size:16px;color:var(--ink)">Pleasure Language &amp; Love Language</span> <span style="font-size:14px;color:var(--brown)">· deep dive into what lights you up, with music tracks curated to enhance your pleasure language</span></div>
         <span style="font-family:var(--display);font-weight:700;font-size:15px;color:var(--gold-deep);white-space:nowrap">£197</span>
       </div>
       <div class="reveal" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 24px;border-bottom:1px solid var(--line)">
-        <div><span style="font-family:var(--display);font-weight:600;font-size:16px;color:var(--ink)">8 weekly live sessions with Juliette</span> <span style="font-size:14px;color:var(--brown)">— Sundays 8pm UK</span></div>
+        <div><span style="font-family:var(--display);font-weight:600;font-size:16px;color:var(--ink)">8 weekly live sessions with Juliette</span> <span style="font-size:14px;color:var(--brown)">· Sundays 8pm UK</span></div>
         <span style="font-family:var(--display);font-weight:700;font-size:15px;color:var(--gold-deep);white-space:nowrap">£1,976</span>
       </div>
       <div class="reveal" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 24px;border-bottom:1px solid var(--line)">
-        <div><span style="font-family:var(--display);font-weight:600;font-size:16px;color:var(--ink)">8 weeks WhatsApp group support</span> <span style="font-size:14px;color:var(--brown)">— daily guidance and coaching through the work</span></div>
+        <div><span style="font-family:var(--display);font-weight:600;font-size:16px;color:var(--ink)">8 weeks WhatsApp group support</span> <span style="font-size:14px;color:var(--brown)">· daily guidance and coaching through the work</span></div>
         <span style="font-family:var(--display);font-weight:700;font-size:15px;color:var(--gold-deep);white-space:nowrap">£1,776</span>
       </div>
       <div class="reveal" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 24px;background:var(--teal)">
@@ -745,7 +842,9 @@ gtag('config', 'G-SY8NKELMNZ');
 <section class="founding" id="pricing">
   <div class="narrow">
     <div class="eyebrow reveal">The investment</div>
+    <span class="scarcity reveal">Enrol now · First live round begins early August</span>
     <h2 class="reveal">The Room™</h2>
+    <p class="anchor reveal">£6,965 of value inside</p>
     <div class="price-big reveal">£3,000</div>
     <p class="sub-price reveal">Paid in full, or spread across 2 or 3 monthly payments.</p>
     <div class="pay-options reveal">
@@ -878,13 +977,49 @@ gtag('config', 'G-SY8NKELMNZ');
   </div>
 </section>
 
+<!-- FAQ -->
+<section class="faq">
+  <div class="inner">
+    <div class="eyebrow reveal">Before you decide</div>
+    <h2 class="reveal">Questions you are right to ask.</h2>
+    <details class="reveal">
+      <summary>Can I spread the cost?</summary>
+      <p>Yes. You can pay in full, or across 2 payments of £1,500, or 3 payments of £1,000. Klarna is also available at checkout if you want to spread it further. The Room: Held tier is £5,000, in full or 2 payments of £2,500.</p>
+    </details>
+    <details class="reveal">
+      <summary>What actually happens each week?</summary>
+      <p>One module drips in per week, with a short workbook, so your nervous system absorbs it rather than drowning in it. Then we meet live on a Sunday call where the work becomes personal. The training teaches it. The call is where it lands for you specifically. In between, the women-only WhatsApp group means you are never doing this alone.</p>
+    </details>
+    <details class="reveal">
+      <summary>What if I miss a live call?</summary>
+      <p>Every call is recorded and yours to keep, along with all eight modules, for life. You will not fall behind. You catch up in your own time, around the life you are actually running.</p>
+    </details>
+    <details class="reveal">
+      <summary>How do I know it will work for me?</summary>
+      <p>There is a 60-day completion guarantee. Complete the eight modules, pass the knowledge checks, show up on the calls. If by the end of week eight your body still has not started to shift, still bracing, still not landing, you get an additional 30 days in The Room with me, calls included, at no extra cost.</p>
+    </details>
+    <details class="reveal">
+      <summary>Is this therapy?</summary>
+      <p>No. Therapy works on understanding. Books work on information. Neither works on the body, and the body is where this pattern lives. The Room works in the order the body actually heals, with structure and practice, not insight alone.</p>
+    </details>
+    <details class="reveal">
+      <summary>I am between relationships. Is it still for me?</summary>
+      <p>Yes. The Room is built around your own body first, whatever your situation. Whether the touch has gone quiet with a partner, sex never quite lands on your own, or you are ready to start again without the old pattern running, the work begins with you.</p>
+    </details>
+    <details class="reveal">
+      <summary>Can I just talk to you first?</summary>
+      <p>Yes. If you would rather have a conversation before you commit, book a call. It is a call with me, not my team. If it is not right for you, I will tell you. <a href="/apply" target="_blank">Book a call with me here.</a></p>
+    </details>
+  </div>
+</section>
+
 <!-- FINAL CTA -->
 <section class="cta-final" id="book">
   <div class="narrow" style="text-align:center">
-    <h2>The next step is a conversation.</h2>
-    <p>There is no buy button here. You book a call with my team. They show you the inside of The Room. If it is not right for you, they will tell you, they do that. Book only if you are ready to commit to eight weeks of real work.</p>
-    <a href="/apply" target="_blank" class="btn" style="font-size:16px;padding:17px 44px">Book Your Call</a>
-    <p class="note" style="font-size:17px;font-weight:600;color:var(--cream);margin-top:14px">Women only. Evergreen. You start the day you join.</p>
+    <h2>You already know this is yours.</h2>
+    <p>Come get it now. This is a call with me, not my team. I take these myself, and they are usually £597. Book yours here, free, before you join. If it is not right for you, I will tell you, I do that. Book only if you are ready to commit to eight weeks of real work.</p>
+    <a href="/apply" target="_blank" class="btn" style="font-size:16px;padding:17px 44px">Book Your Call With Me</a>
+    <p class="note" style="font-size:17px;font-weight:600;color:var(--cream);margin-top:14px">Women only. Enrol now, your first live round begins early August.</p>
   </div>
 </section>
 
@@ -905,9 +1040,12 @@ gtag('config', 'G-SY8NKELMNZ');
 <div class="sticky-buy" id="stickybuy">
   <div style="display:flex;align-items:baseline;gap:14px">
     <span class="nm">THE ROOM™</span>
-    <span class="pr">from £1,000/mo</span>
+    <span class="pr">£3,000 · payment plans</span>
   </div>
-  <a href="#book" class="btn">Book a Call</a>
+  <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+    <a href="#book" class="btn ghost" style="border-color:rgba(254,252,250,.5);color:var(--cream)">Book a Call</a>
+    <a href="#pricing" class="btn">Pay Now</a>
+  </div>
 </div>
 
 <script>
