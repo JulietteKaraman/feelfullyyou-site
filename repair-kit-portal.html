@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>The Romantic Relationship Repair Kit | Feel Fully You</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+  :root{
+    --cream:#fefcfa;--ink:#1c1714;--brown:#5d4a33;
+    --gold:#a88538;--gold-deep:#99680c;--gold-soft:#b4a074;--gold-pale:#ddc98e;
+    --teal:#0d3535;--teal-deep:#061a1a;--line-dark:#1d3a39;
+    --display:'Poppins',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--teal-deep);color:var(--cream);font-family:var(--body);font-size:1.0625rem;line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden;min-height:100vh;display:flex;flex-direction:column}
+  a{color:inherit}
+  ::selection{background:var(--gold);color:#fff}
+
+  .topbar{background:var(--teal);height:60px;display:flex;align-items:center;justify-content:center}
+  .topbar .brand{font-family:var(--display);font-weight:600;font-size:15px;letter-spacing:.04em;color:var(--cream);text-decoration:none}
+  .topbar .brand b{color:var(--gold-pale);font-weight:600}
+
+  main{flex:1;display:flex;align-items:center;justify-content:center;padding:44px 20px}
+  .stage{position:relative;width:100%;max-width:600px;background:var(--teal);border-radius:18px;padding:44px 40px 40px;overflow:hidden;box-shadow:0 1px 0 rgba(168,133,56,.28) inset,0 30px 80px -40px rgba(0,0,0,.6)}
+  .glow{position:absolute;left:50%;bottom:-60px;transform:translateX(-50%);width:440px;height:260px;background:radial-gradient(closest-side,rgba(168,133,56,.18),rgba(168,133,56,0));pointer-events:none}
+  .inner{position:relative}
+
+  .eyebrow{font-family:var(--body);font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-pale);font-weight:400}
+  h1{font-family:var(--display);font-weight:500;color:var(--cream);line-height:1.12;letter-spacing:-.01em}
+  .divider{width:40px;height:1px;background:rgba(221,201,142,.5);margin:20px auto}
+
+  .btn{display:inline-block;text-decoration:none;cursor:pointer;border:none;font-family:var(--display);font-weight:500;font-size:.95rem;letter-spacing:.01em;padding:13px 30px;border-radius:10px;background:var(--gold-pale);color:var(--teal);transition:transform .2s,background .2s}
+  .btn:hover{background:#e7d6a3;transform:translateY(-1px)}
+  .btn.block{width:100%;padding:14px 0;text-align:center}
+  .btn[disabled]{opacity:.4;pointer-events:none}
+
+  /* GATE */
+  #gate{text-align:center}
+  #gate h1{font-size:1.7rem;margin:14px 0 6px}
+  #gate p{color:rgba(254,252,250,.72);font-weight:300;font-size:.98rem;max-width:38ch;margin:10px auto 0}
+  #gate input{width:100%;max-width:300px;margin:22px auto 12px;display:block;background:rgba(254,252,250,.06);border:1px solid rgba(221,201,142,.35);border-radius:10px;padding:13px 15px;color:var(--cream);font-family:var(--body);font-size:.95rem;text-align:center;letter-spacing:.06em}
+  #gate input:focus{outline:none;border-color:var(--gold-pale)}
+  #gate .err{color:#e6b8b8;font-size:.85rem;min-height:1.2em;margin-top:8px}
+
+  /* PORTAL */
+  #portal{display:none}
+  .phead{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
+  .phead .ph-name{font-family:var(--body);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-pale)}
+  .phead .ph-count{font-family:var(--body);font-size:11px;letter-spacing:.18em;color:rgba(254,252,250,.55)}
+  .track{height:2px;background:rgba(254,252,250,.1);border-radius:2px;overflow:hidden;margin-bottom:30px}
+  .track .bar{height:100%;width:0;background:var(--gold);transition:width .4s}
+
+  .cardface{text-align:center;padding:14px 0 6px}
+  .cardface .num{font-family:var(--display);font-weight:300;font-size:.85rem;color:var(--gold-soft);letter-spacing:.1em;margin-bottom:20px}
+  .cardface .prompt{font-family:var(--display);font-weight:400;font-size:1.7rem;line-height:1.34;color:var(--cream);letter-spacing:-.01em;max-width:20ch;margin:0 auto}
+  .howto{margin:30px auto 4px;max-width:40ch;color:rgba(254,252,250,.62);font-weight:300;font-size:.92rem;line-height:1.7}
+  .qfoot{margin-top:28px}
+
+  .revisit{margin-top:26px;border-top:1px solid rgba(255,255,255,.08);padding-top:18px}
+  .revisit summary{cursor:pointer;font-size:.8rem;letter-spacing:.04em;color:rgba(221,201,142,.85);font-weight:300;list-style:none;text-align:center}
+  .revisit summary::-webkit-details-marker{display:none}
+  .revisit ol{margin:16px 0 0;padding:0 0 0 4px;list-style:none;counter-reset:done}
+  .revisit li{counter-increment:done;font-size:.9rem;color:rgba(254,252,250,.6);font-weight:300;padding:8px 0 8px 30px;position:relative;border-bottom:1px solid rgba(255,255,255,.05);line-height:1.45}
+  .revisit li:last-child{border-bottom:none}
+  .revisit li::before{content:counter(done);position:absolute;left:0;top:8px;font-size:.72rem;color:var(--gold-soft)}
+
+  /* DONE */
+  #done{display:none;text-align:center}
+  #done h1{font-size:1.8rem;margin:12px 0 0}
+  #done .copy{color:rgba(254,252,250,.82);font-weight:300;font-size:1rem;line-height:1.8;margin:18px auto 26px;max-width:42ch}
+
+  .reset{margin-top:18px;text-align:center}
+  .reset button{background:transparent;border:none;color:rgba(221,201,142,.7);font-size:.78rem;cursor:pointer;text-decoration:underline;font-weight:300;font-family:var(--body)}
+
+  footer{background:var(--gold);color:#fff;padding:20px 28px;font-size:13px}
+  footer .fwrap{max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  footer .fbrand{font-family:var(--display);font-weight:600;font-size:.95rem;color:#fff}
+
+  @media(max-width:560px){
+    .stage{padding:36px 22px 30px}
+    .cardface .prompt{font-size:1.42rem}
+    #gate h1,#done h1{font-size:1.5rem}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar"><a class="brand" href="/">Feel Fully <b>You</b></a></div>
+
+<main>
+  <div class="stage">
+    <div class="glow"></div>
+    <div class="inner">
+
+      <!-- GATE -->
+      <section id="gate">
+        <div class="eyebrow">Romantic Relationship Repair</div>
+        <h1>Welcome in.</h1>
+        <p>Enter the access word from your welcome email to open your 31 cards.</p>
+        <input type="password" id="pw" placeholder="access word" autocomplete="off" aria-label="Access word">
+        <button class="btn block" id="enter" style="max-width:300px;margin:0 auto">Enter</button>
+        <div class="err" id="gerr"></div>
+      </section>
+
+      <!-- PORTAL -->
+      <section id="portal">
+        <div class="phead">
+          <span class="ph-name" id="phaseName">Internal orientation</span>
+          <span class="ph-count" id="phaseCount">Card 1 of 31</span>
+        </div>
+        <div class="track"><div class="bar" id="bar"></div></div>
+
+        <div class="cardface">
+          <div class="num" id="cardNum">Card 01</div>
+          <p class="prompt" id="cardPrompt"></p>
+          <p class="howto">One of you reads the card aloud. The other answers, fully and honestly. Let it be quiet between the words. When you have both spoken, open the next.</p>
+          <div class="qfoot"><button class="btn block" id="nextBtn">Mark complete &amp; open next card</button></div>
+        </div>
+
+        <details class="revisit" id="revisitWrap" style="display:none">
+          <summary id="revisitLabel">Cards you have opened</summary>
+          <ol id="revisitList"></ol>
+        </details>
+      </section>
+
+      <!-- DONE -->
+      <section id="done">
+        <div class="eyebrow">All 31 cards</div>
+        <h1>You reached the last one.</h1>
+        <div class="divider"></div>
+        <p class="copy">You have said the things that were hard to say, in order, all the way through. Whatever you decided, you decided with the truth on the table rather than under it. If you are choosing each other again, this is where the real work begins, and you do not have to do it alone.</p>
+        <a href="/the-beginning" class="btn block">Where couples go from here</a>
+        <div class="reset"><button id="reopen">reopen the cards</button></div>
+      </section>
+
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="fwrap">
+    <div class="fbrand">Feel Fully You</div>
+    <div style="font-size:12px;color:rgba(255,255,255,.85);display:flex;gap:16px;align-items:center">
+      <a href="mailto:support@feelfullyyou.com" style="text-decoration:underline;text-underline-offset:3px">support@feelfullyyou.com</a>
+      <a href="https://feelfullyyou.com/terms" style="color:rgba(255,255,255,.75);text-decoration:none" target="_blank" rel="noopener">Terms</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // ---- ACCESS (shared word, same pattern as The Room) ----
+  var PASSWORD='repair2026';
+  var AUTH_KEY='repair_authed';
+  var PROG_KEY='repair_progress'; // number of completed cards, 0..31
+
+  // ---- CARDS (from Juliette's Canva deck DAG78IQyA8c) ----
+  var PHASES=[
+    {name:'Internal orientation',end:6},
+    {name:'Defensiveness down',end:12},
+    {name:'Honest exchange',end:20},
+    {name:'Repair',end:27},
+    {name:'Integration',end:31}
+  ];
+  var CARDS=[
+    "Tell me what you no longer say because it feels unsafe.",
+    "Tell me what you're tired of carrying between us.",
+    "Tell me why you feel alone even when we're together.",
+    "Tell me what you miss most about us.",
+    "Tell me when you first felt our relationship start to drift.",
+    "Tell me what you think we keep avoiding.",
+    "Tell me which part of this relationship feels heavy or unfair to you.",
+    "Tell me what you're afraid will never change.",
+    "Tell me what you've given up hoping for.",
+    "Tell me what part of you feels unseen in this relationship.",
+    "Tell me what you need from me that you're not receiving.",
+    "Tell me what you need to hear from me, and haven't.",
+    "Tell me where you feel I misunderstand you.",
+    "Tell me how you experience me when I'm upset.",
+    "Tell me what I do that hurts you the most.",
+    "Tell me where you stopped trusting me or us.",
+    "Tell me how that feels in your body.",
+    "Tell me what happens inside of you when you protect yourself from me.",
+    "Tell me what happens inside of you when you pull away.",
+    "Tell me what happens inside of you when you feel I don't choose you.",
+    "Tell me what you need from me to trust us again.",
+    "Tell me what helps you feel safe enough to stay present with me.",
+    "Tell me what repair would look like for you, specifically.",
+    "Tell me what our relationship could look like if we both tried again.",
+    "Tell me the truth you've been afraid to say out loud.",
+    "Tell me what staying would require from both of us.",
+    "Tell me what you need from me to feel chosen.",
+    "Tell me what you're risking by staying silent.",
+    "Tell me what you're risking by staying.",
+    "Tell me what you're risking by leaving.",
+    "Tell me, do you still want this relationship. Truly."
+  ];
+  var N=CARDS.length;
+
+  var $=function(id){return document.getElementById(id);};
+  function pad(n){return n<10?'0'+n:''+n;}
+  function phaseFor(idx){ // idx 0-based
+    var card=idx+1;
+    for(var k=0;k<PHASES.length;k++){if(card<=PHASES[k].end)return PHASES[k].name;}
+    return PHASES[PHASES.length-1].name;
+  }
+  function getProgress(){var v=parseInt(localStorage.getItem(PROG_KEY),10);return isNaN(v)?0:Math.max(0,Math.min(N,v));}
+  function setProgress(v){localStorage.setItem(PROG_KEY,String(v));}
+
+  function showPortal(){
+    $('gate').style.display='none';
+    render();
+  }
+  function render(){
+    var done=getProgress();
+    if(done>=N){ // finished
+      $('portal').style.display='none';$('done').style.display='block';return;
+    }
+    $('done').style.display='none';$('portal').style.display='block';
+    var idx=done; // current frontier card, 0-based
+    $('phaseName').textContent=phaseFor(idx);
+    $('phaseCount').textContent='Card '+(idx+1)+' of '+N;
+    $('cardNum').textContent='Card '+pad(idx+1);
+    $('cardPrompt').textContent=CARDS[idx];
+    $('bar').style.width=Math.round(idx/N*100)+'%';
+    // revisit list of opened cards (1..idx)
+    var wrap=$('revisitWrap'),ol=$('revisitList');
+    if(idx>0){
+      wrap.style.display='block';
+      $('revisitLabel').textContent=idx+' card'+(idx>1?'s':'')+' opened so far';
+      ol.innerHTML='';
+      for(var c=0;c<idx;c++){var li=document.createElement('li');li.textContent=CARDS[c];ol.appendChild(li);}
+    }else{wrap.style.display='none';}
+  }
+
+  $('enter').addEventListener('click',doEnter);
+  $('pw').addEventListener('keydown',function(e){if(e.key==='Enter')doEnter();});
+  function doEnter(){
+    var val=($('pw').value||'').trim().toLowerCase();
+    if(val===PASSWORD){
+      try{sessionStorage.setItem(AUTH_KEY,'1');}catch(e){}
+      showPortal();
+    }else{
+      $('gerr').textContent='That access word is not right. Check your welcome email.';
+    }
+  }
+  $('nextBtn').addEventListener('click',function(){
+    var done=getProgress();
+    setProgress(done+1);
+    render();
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+  $('reopen').addEventListener('click',function(){render();});
+
+  // auto-enter if already authed this session
+  try{ if(sessionStorage.getItem(AUTH_KEY)==='1'){ showPortal(); } }catch(e){}
+})();
+</script>
+</body>
+</html>
