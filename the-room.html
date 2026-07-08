@@ -163,10 +163,10 @@
   .patterns h2{color:var(--cream);max-width:24ch;margin-bottom:16px}
   .patterns h2 .gp{color:var(--gold-pale)}
   .patterns .lead{color:rgba(254,252,250,.74);max-width:58ch;font-size:var(--t-md);line-height:1.62;margin-bottom:46px}
-  .pattern-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(168,133,56,.3);border:1px solid rgba(168,133,56,.3)}
+  .pattern-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;align-items:stretch}
   @media(max-width:940px){.pattern-grid{grid-template-columns:repeat(2,1fr)}}
-  .pattern-card{background:var(--teal);padding:30px 26px;transition:background .25s}
-  .pattern-card:hover{background:var(--teal-deep)}
+  .pattern-card{background:rgba(255,255,255,.035);border:1px solid rgba(168,133,56,.42);border-top:3px solid var(--gold);border-radius:6px;padding:28px 24px;transition:background .25s,transform .25s}
+  .pattern-card:hover{background:rgba(255,255,255,.07);transform:translateY(-4px)}
   .pattern-card .pname{font-family:var(--display);font-weight:700;font-size:27px;color:var(--gold-pale);letter-spacing:-.02em;line-height:1.05;margin-bottom:8px}
   .pattern-card .pstrat{font-family:var(--body);font-size:11.5px;text-transform:uppercase;letter-spacing:.13em;color:var(--gold);font-weight:600;margin-bottom:16px}
   .pattern-card p{font-size:14.5px;color:rgba(254,252,250,.82);line-height:1.62;margin:0 0 14px}
