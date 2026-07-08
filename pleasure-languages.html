@@ -246,7 +246,7 @@ window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);
     // --- SCORING KNOBS (tweak these) ---
     var isShapeshifter =
         Sh>=3 ||                                  // chose "a blend / all of it" 3+ times
-        top[1]<=4 ||                              // no single language reached a real lead
+        top[1]<=3 ||                              // no single language reached a real lead
         (spread>=3 && (top[1]-second[1])<=1);     // 3+ languages present, no clear winner
     winner = isShapeshifter ? 'Shapeshifter' : top[0];
     quiz.style.display='none';reveal.style.display='block';

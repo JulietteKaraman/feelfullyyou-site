@@ -87,6 +87,11 @@
   .audio-link{font-size:13px;font-weight:600;color:var(--gold);text-decoration:underline;white-space:nowrap}
   audio{width:100%;margin-top:10px;border-radius:3px}
 
+  /* ── PROMPT CARD IMAGE ── */
+  .prompt-card{border-radius:3px;overflow:hidden;margin-bottom:16px;border:1px solid var(--line)}
+  .prompt-card img{width:100%;display:block}
+  .video-note{font-size:13px;color:var(--gold-soft);margin-bottom:16px;padding:14px 16px;background:#f7f2ea;border-radius:3px}
+
   /* ── DOWNLOAD CARD ── */
   .download-card{background:var(--teal);border-radius:4px;padding:32px;display:flex;align-items:center;gap:24px}
   .dl-icon{width:56px;height:56px;border-radius:3px;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0}
@@ -162,44 +167,35 @@ gtag('config', 'G-SY8NKELMNZ');
   </div>
 
   <!-- ════════════════════════════════════════════
-       DAY 1
+       INTRO
        ══════════════════════════════════════════ -->
   <div class="section">
-    <div class="section-label">Your programme</div>
+    <div class="section-label">Before you begin</div>
     <div class="day-grid">
 
       <div class="day-card">
         <div class="day-header">
-          <span class="day-num">Day 1</span>
-          <!-- KIERA: replace below with the Day 1 title -->
-          <span class="day-title">REPLACE — Day 1 title here</span>
+          <span class="day-num">Intro</span>
+          <span class="day-title">Welcome to One Touch</span>
         </div>
         <div class="day-body">
-          <!-- KIERA: replace the placeholder-box below with an actual iframe embed.
-               In Google Drive: open the video → Share → change to "Anyone with the link" →
-               click the 3-dot menu → Embed → copy the iframe src URL.
-               Then replace the whole placeholder-box div with:
-               <div class="video-frame">
-                 <iframe src="PASTE_DRIVE_EMBED_URL_HERE" allowfullscreen></iframe>
-               </div>
-          -->
-          <div class="placeholder-box">
-            <div class="ph-inner">
-              <span class="ph-label">Video — Day 1</span>
-              <span class="ph-note">Kiera: paste Drive embed URL here</span>
-            </div>
+          <div class="video-frame">
+            <iframe src="https://drive.google.com/file/d/1KB1nlwF1Td_lHAM8kk8SrKaTx0m7EMA8/preview" allowfullscreen allow="autoplay"></iframe>
           </div>
-          <!-- KIERA: if there's an audio for Day 1, paste the Drive link as the href below.
-               If there's no audio for this day, delete this audio-row entirely. -->
-          <div class="audio-row">
-            <div class="audio-icon">
-              <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-            </div>
-            <div class="audio-info">
-              <strong>Day 1 audio</strong>
-              <span>REPLACE — audio title or duration</span>
-            </div>
-            <a href="REPLACE_DRIVE_LINK_DAY1_AUDIO" target="_blank" rel="noopener" class="audio-link">Listen →</a>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-header">
+          <span class="day-num">Day 1</span>
+          <span class="day-title">Your own touch</span>
+        </div>
+        <div class="day-body">
+          <div class="video-frame">
+            <iframe src="https://drive.google.com/file/d/1q4ppQvHoKIqmOBlYA48hELcWPbEZTylr/preview" allowfullscreen allow="autoplay"></iframe>
+          </div>
+          <div class="prompt-card">
+            <img src="https://drive.google.com/thumbnail?id=1zsHsn66XNowPvjh3H5j9TiSY_qs6ylSj&sz=w1000" alt="Day 1 prompt card">
           </div>
         </div>
       </div>
@@ -207,24 +203,14 @@ gtag('config', 'G-SY8NKELMNZ');
       <div class="day-card">
         <div class="day-header">
           <span class="day-num">Day 2</span>
-          <span class="day-title">REPLACE — Day 2 title here</span>
+          <span class="day-title">Day 2</span>
         </div>
         <div class="day-body">
-          <div class="placeholder-box">
-            <div class="ph-inner">
-              <span class="ph-label">Video — Day 2</span>
-              <span class="ph-note">Kiera: paste Drive embed URL here</span>
-            </div>
+          <div class="video-frame">
+            <iframe src="https://drive.google.com/file/d/1FqsEyFqhumwclL0gyaubVlLQkDCLz2wB/preview" allowfullscreen allow="autoplay"></iframe>
           </div>
-          <div class="audio-row">
-            <div class="audio-icon">
-              <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-            </div>
-            <div class="audio-info">
-              <strong>Day 2 audio</strong>
-              <span>REPLACE — audio title or duration</span>
-            </div>
-            <a href="REPLACE_DRIVE_LINK_DAY2_AUDIO" target="_blank" rel="noopener" class="audio-link">Listen →</a>
+          <div class="prompt-card">
+            <img src="https://drive.google.com/thumbnail?id=1XKyRBpkDHiRHGvdeRp0c_IzXVkFFRbVR&sz=w1000" alt="Day 2 prompt card">
           </div>
         </div>
       </div>
@@ -232,24 +218,24 @@ gtag('config', 'G-SY8NKELMNZ');
       <div class="day-card">
         <div class="day-header">
           <span class="day-num">Day 3</span>
-          <span class="day-title">REPLACE — Day 3 title here</span>
+          <span class="day-title">Saying yes when your body said no</span>
         </div>
         <div class="day-body">
-          <div class="placeholder-box">
-            <div class="ph-inner">
-              <span class="ph-label">Video — Day 3</span>
-              <span class="ph-note">Kiera: paste Drive embed URL here</span>
-            </div>
+          <div class="video-frame">
+            <iframe src="https://drive.google.com/file/d/11t2nkdfHAiaou3PLyLpz2vZVmivqqrPk/preview" allowfullscreen allow="autoplay"></iframe>
           </div>
-          <div class="audio-row">
+          <div class="prompt-card">
+            <img src="https://drive.google.com/thumbnail?id=1EAzel0T_9MvbnhHfLtnXMoy9WrpveBwl&sz=w1000" alt="Day 3 prompt card">
+          </div>
+          <div class="audio-row" style="border-bottom:none;padding-top:0">
             <div class="audio-icon">
               <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
             </div>
             <div class="audio-info">
-              <strong>Day 3 audio</strong>
-              <span>REPLACE — audio title or duration</span>
+              <strong>A little 3-minute follow-along embodiment</strong>
+              <span>Bonus practice for Day 3</span>
             </div>
-            <a href="REPLACE_DRIVE_LINK_DAY3_AUDIO" target="_blank" rel="noopener" class="audio-link">Listen →</a>
+            <a href="https://drive.google.com/file/d/1RVRhUZU8RTirAaNRQ0EN0xaKOpWdkA58/view?usp=drivesdk" target="_blank" rel="noopener" class="audio-link">Watch →</a>
           </div>
         </div>
       </div>
@@ -257,24 +243,12 @@ gtag('config', 'G-SY8NKELMNZ');
       <div class="day-card">
         <div class="day-header">
           <span class="day-num">Day 4</span>
-          <span class="day-title">REPLACE — Day 4 title here</span>
+          <span class="day-title">What you've never dared ask for</span>
         </div>
         <div class="day-body">
-          <div class="placeholder-box">
-            <div class="ph-inner">
-              <span class="ph-label">Video — Day 4</span>
-              <span class="ph-note">Kiera: paste Drive embed URL here</span>
-            </div>
-          </div>
-          <div class="audio-row">
-            <div class="audio-icon">
-              <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-            </div>
-            <div class="audio-info">
-              <strong>Day 4 audio</strong>
-              <span>REPLACE — audio title or duration</span>
-            </div>
-            <a href="REPLACE_DRIVE_LINK_DAY4_AUDIO" target="_blank" rel="noopener" class="audio-link">Listen →</a>
+          <div class="video-note">Video for Day 4 is on its way — for now, sit with today's prompt below.</div>
+          <div class="prompt-card">
+            <img src="https://drive.google.com/thumbnail?id=1g4qZo1dMKioqIpdR6RxMzIm-XwXTZk_G&sz=w1000" alt="Day 4 prompt card">
           </div>
         </div>
       </div>
@@ -282,24 +256,12 @@ gtag('config', 'G-SY8NKELMNZ');
       <div class="day-card">
         <div class="day-header">
           <span class="day-num">Day 5</span>
-          <span class="day-title">REPLACE — Day 5 title here</span>
+          <span class="day-title">Day 5</span>
         </div>
         <div class="day-body">
-          <div class="placeholder-box">
-            <div class="ph-inner">
-              <span class="ph-label">Video — Day 5</span>
-              <span class="ph-note">Kiera: paste Drive embed URL here</span>
-            </div>
-          </div>
-          <div class="audio-row">
-            <div class="audio-icon">
-              <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-            </div>
-            <div class="audio-info">
-              <strong>Day 5 audio</strong>
-              <span>REPLACE — audio title or duration</span>
-            </div>
-            <a href="REPLACE_DRIVE_LINK_DAY5_AUDIO" target="_blank" rel="noopener" class="audio-link">Listen →</a>
+          <div class="video-note">Video for Day 5 is on its way — for now, sit with today's prompt below.</div>
+          <div class="prompt-card">
+            <img src="https://drive.google.com/thumbnail?id=12KM0rpNcFG_edos0PZ3M64upVoGpBiJE&sz=w1000" alt="Day 5 prompt card">
           </div>
         </div>
       </div>
@@ -307,24 +269,11 @@ gtag('config', 'G-SY8NKELMNZ');
       <div class="day-card">
         <div class="day-header">
           <span class="day-num">Day 6</span>
-          <span class="day-title">REPLACE — Day 6 title here</span>
+          <span class="day-title">Day 6</span>
         </div>
         <div class="day-body">
-          <div class="placeholder-box">
-            <div class="ph-inner">
-              <span class="ph-label">Video — Day 6</span>
-              <span class="ph-note">Kiera: paste Drive embed URL here</span>
-            </div>
-          </div>
-          <div class="audio-row">
-            <div class="audio-icon">
-              <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-            </div>
-            <div class="audio-info">
-              <strong>Day 6 audio</strong>
-              <span>REPLACE — audio title or duration</span>
-            </div>
-            <a href="REPLACE_DRIVE_LINK_DAY6_AUDIO" target="_blank" rel="noopener" class="audio-link">Listen →</a>
+          <div class="video-frame">
+            <iframe src="https://drive.google.com/file/d/1heFMYPgEvIeh1fYaWdvEnGZlNjcfphCf/preview" allowfullscreen allow="autoplay"></iframe>
           </div>
         </div>
       </div>
@@ -332,48 +281,27 @@ gtag('config', 'G-SY8NKELMNZ');
       <div class="day-card">
         <div class="day-header">
           <span class="day-num">Day 7</span>
-          <span class="day-title">REPLACE — Day 7 title here</span>
+          <span class="day-title">What surprises you about your own touch</span>
         </div>
         <div class="day-body">
-          <div class="placeholder-box">
-            <div class="ph-inner">
-              <span class="ph-label">Video — Day 7</span>
-              <span class="ph-note">Kiera: paste Drive embed URL here</span>
-            </div>
+          <div class="prompt-card">
+            <img src="https://drive.google.com/thumbnail?id=1NpXkUiuc-fvqoPyyivAdnL5jW3piFcAm&sz=w1000" alt="Day 7 prompt card">
           </div>
-          <div class="audio-row">
+          <div class="audio-row" style="border-bottom:none;padding-top:0">
             <div class="audio-icon">
               <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
             </div>
             <div class="audio-info">
-              <strong>Day 7 audio</strong>
-              <span>REPLACE — audio title or duration</span>
+              <strong>Day 7 voice note</strong>
+              <span>Juliette, in her own voice</span>
             </div>
-            <a href="REPLACE_DRIVE_LINK_DAY7_AUDIO" target="_blank" rel="noopener" class="audio-link">Listen →</a>
+            <a href="https://drive.google.com/file/d/1KL85owED0FUflliD1OtRGJyY1wFDU6ZL/view?usp=drivesdk" target="_blank" rel="noopener" class="audio-link">Listen →</a>
           </div>
         </div>
       </div>
 
     </div><!-- /day-grid -->
   </div><!-- /section -->
-
-  <!-- CARDS DOWNLOAD -->
-  <div class="divider"><hr></div>
-  <div class="section">
-    <div class="section-label">Also included</div>
-    <div class="download-card">
-      <div class="dl-icon">
-        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="12" x2="12" y2="18"/><polyline points="9 15 12 18 15 15"/></svg>
-      </div>
-      <div class="dl-text">
-        <h3>One Touch Cards</h3>
-        <!-- KIERA: update the description below with the actual card count / description -->
-        <p>Your printable PDF cards — save, print, or keep on your phone.</p>
-      </div>
-      <!-- KIERA: replace REPLACE_DRIVE_LINK_CARDS_PDF with the actual Drive share link for the PDF -->
-      <a href="REPLACE_DRIVE_LINK_CARDS_PDF" target="_blank" rel="noopener" class="btn-dl">Download PDF →</a>
-    </div>
-  </div>
 
   <!-- SUPPORT -->
   <div class="divider" style="margin-top:48px"><hr></div>

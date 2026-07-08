@@ -1,6 +1,13 @@
 # Kit Email Sequences — Ready to Paste
 # All written in Juliette's voice. Kiera: paste each email into the correct Kit sequence.
 # Updated: July 2026
+#
+# ✅ BUILT IN KIT 7 JULY 2026 (via Claude, all sequences live and published)
+# Newsletter Welcome 2818642 | 10 Touch Rituals Welcome 2818643 | Re-engagement 2818644
+# Pattern Session Confirmation 2818645 | When She Goes Quiet 2817828 | Grief Duality 2817836
+# Cards Buyer Welcome 2817582 | Touch Point 2812535
+# Quiet-tag men (10 subscribers) added to When She Goes Quiet on 7 July.
+# Still manual: Re-engagement 60-day-inactive automation trigger (Kit UI only) + webhook tag→sequence wiring.
 
 ---
 
@@ -26,7 +33,7 @@ Hi [First Name],
 
 I'm Juliette.
 
-For 27 years I've been sitting with people in some of the most honest moments of their lives — bodies that had stopped trusting, couples who still loved each other but had lost the language to reach each other, men and women who had done every course and still felt the same quiet drift.
+My work began 27 years ago, teaching children on the autism spectrum how to feel safe in their bodies. For the last 15 years I've been sitting with couples and individuals in some of the most honest moments of their lives — bodies that had stopped trusting, couples who still loved each other but had lost the language to reach each other, men and women who had done every course and still felt the same quiet drift.
 
 This space is where I share what I've learned. Not the polished version. The real one.
 
