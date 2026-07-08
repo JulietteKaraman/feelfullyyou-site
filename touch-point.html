@@ -95,6 +95,12 @@
   .btn:hover{background:var(--gold-deep);transform:translateY(-1px)}
   .btn.ghost{background:transparent;border:1px solid var(--gold);color:var(--gold-deep)}
   .btn.ghost:hover{background:var(--gold);color:#fff}
+  @keyframes tp-pulse{0%,100%{box-shadow:0 0 0 0 rgba(168,133,56,.55)}70%{box-shadow:0 0 0 14px rgba(168,133,56,0)}}
+  .btn.pulse{animation:tp-pulse 2.6s ease-in-out infinite}
+  .was{text-decoration:line-through;text-decoration-color:rgba(153,104,12,.7);color:var(--gold-soft);font-family:var(--display);font-weight:600;opacity:.85}
+  .wgold{color:var(--gold-deep);font-weight:700}
+  .wbig{font-size:1.32em;font-family:var(--display);font-weight:700;color:var(--gold-deep);letter-spacing:-.01em}
+  @media(prefers-reduced-motion:reduce){.btn.pulse{animation:none}}
 
   /* HERO, her black logo card + tagline, on cream */
   .hero{padding-top:64px;padding:118px 0 70px;background:var(--cream)}
@@ -353,11 +359,12 @@ gtag('config', 'G-SY8NKELMNZ');
       <div>
         <p class="tag reveal">The private membership for men who want to understand women, and themselves in relation to them.</p>
         <div class="price-line reveal">
+          <span class="was" style="font-size:1.3rem">£197</span>
           <span class="p">£97<span>/month</span></span>
-          <span class="tag2">Only 5 left at £97, then £197</span>
+          <span class="tag2">Only 5 left at this price</span>
         </div>
         <div class="hero-cta reveal">
-          <a href="#join" class="btn">Join Touch Point</a>
+          <a href="#join" class="btn pulse">Join Touch Point</a>
           <a href="#what" class="btn ghost">What this actually is</a>
         </div>
       </div>
@@ -372,7 +379,7 @@ gtag('config', 'G-SY8NKELMNZ');
     <p class="reveal">The distance between you and her isn't a character flaw. It isn't proof that you've failed, or that she's the problem, or that you've left it too late.</p>
     <p class="pivot reveal">Something underneath isn't holding.</p>
     <p class="reveal">And no amount of trying harder at the same thing will change it.</p>
-    <p class="safety reveal">Because safety isn't a feeling. It's a structure.</p>
+    <p class="safety reveal">Because safety isn't a feeling. It's a <span class="wbig">structure</span>.</p>
     <p class="reveal">When it's missing, she feels it before either of you can name it. When it's there, she feels that too, before you've said a word.</p>
     <p class="pivot reveal">My own divorce lawyer once asked me, "Can you teach this?" She had watched good men lose the woman they loved without ever knowing what changed. Consistent, non-sexual touch is how a woman's body relearns that you are safe to reach for. It is how you stay the man she does not leave.</p>
     <p class="closer reveal">Rebuild the structure, and what she feels when you walk into the room changes. <b>That belief is what Touch Point is built on.</b></p>
@@ -602,6 +609,7 @@ gtag('config', 'G-SY8NKELMNZ');
   <div class="narrow">
     <div class="eyebrow reveal">Founding price, closing</div>
     <h2 class="reveal">The next 5 men get in at £97. Locked for life.</h2>
+    <div class="was reveal" style="font-size:clamp(24px,4vw,34px);color:var(--gold-pale);margin-bottom:2px">£197/month</div>
     <div class="price-big reveal">£97<sub>/month</sub></div>
     <p class="after reveal">After these five, it goes to £197, permanently. Same room, nearly double the price.</p>
     <p class="reveal" style="margin-top:16px;font-family:var(--display);font-weight:700;font-size:clamp(19px,2.6vw,26px);color:var(--gold-pale);letter-spacing:-.015em;line-height:1.25;max-width:30ch;margin-left:auto;margin-right:auto">Weekly access to a woman whose private clients pay over £4,000. At £97, this is a no-brainer.</p>
@@ -618,7 +626,7 @@ gtag('config', 'G-SY8NKELMNZ');
       <div class="reveal"><b>Pinned guides</b>Waiting for you on day one.</div>
     </div>
 
-    <a href="https://buy.stripe.com/00w28q21J9164Tz5aJ0co0B" class="btn reveal">Grab one of the 5 spots · £97/month</a>
+    <a href="https://buy.stripe.com/00w28q21J9164Tz5aJ0co0B" class="btn pulse reveal">Grab one of the 5 spots · £97/month</a>
   </div>
 </section>
 
