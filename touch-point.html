@@ -38,18 +38,18 @@
     --line:#e3dccf;
     --line-dark:#1d3a39;
     --max:1140px;
-    /* type system — fonts */
+    /* type system, fonts */
     --display:'Poppins',system-ui,sans-serif;
     --body:'Inter',system-ui,sans-serif;
     /* modular scale, ratio ~1.25 (major third) */
-    --t-xs:0.78rem;     /* 12.5px — eyebrows / captions */
-    --t-sm:0.94rem;     /* 15px — small text */
-    --t-base:1.0625rem; /* 17px — body */
-    --t-md:1.2rem;      /* 19px — lead paragraphs */
-    --t-lg:1.5rem;      /* 24px — h3 */
-    --t-xl:2.05rem;     /* 33px — h2 small */
-    --t-2xl:2.75rem;    /* 44px — h2 */
-    --t-3xl:3.6rem;     /* 58px — display */
+    --t-xs:0.78rem;     /* 12.5px, eyebrows / captions */
+    --t-sm:0.94rem;     /* 15px, small text */
+    --t-base:1.0625rem; /* 17px, body */
+    --t-md:1.2rem;      /* 19px, lead paragraphs */
+    --t-lg:1.5rem;      /* 24px, h3 */
+    --t-xl:2.05rem;     /* 33px, h2 small */
+    --t-2xl:2.75rem;    /* 44px, h2 */
+    --t-3xl:3.6rem;     /* 58px, display */
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
@@ -96,7 +96,7 @@
   .btn.ghost{background:transparent;border:1px solid var(--gold);color:var(--gold-deep)}
   .btn.ghost:hover{background:var(--gold);color:#fff}
 
-  /* HERO — her black logo card + tagline, on cream */
+  /* HERO, her black logo card + tagline, on cream */
   .hero{padding-top:64px;padding:118px 0 70px;background:var(--cream)}
   .hero .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center}
   .hero .logo-card{border-radius:4px;overflow:hidden;background:var(--black);box-shadow:0 30px 70px -30px rgba(0,0,0,.5)}
@@ -108,7 +108,7 @@
   .hero .price-line .tag2{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep);border:1px solid var(--gold-soft);padding:6px 12px;border-radius:2px}
   .hero-cta{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
 
-  /* THESIS — love doesn't have to turn into war */
+  /* THESIS, love doesn't have to turn into war */
   .thesis{padding:92px 0;border-top:1px solid var(--line)}
   .thesis h2{max-width:18ch}
   .thesis p{max-width:60ch;margin-bottom:18px;color:var(--brown);font-size:var(--t-md);line-height:1.6}
@@ -117,7 +117,7 @@
   .thesis .closer{font-family:var(--display);font-weight:700;font-size:clamp(22px,3.4vw,32px);color:var(--ink);max-width:26ch;margin-top:30px;line-height:1.18;letter-spacing:-.02em}
   .thesis .closer b{color:var(--gold-deep);font-style:normal;font-family:var(--body);font-weight:600}
 
-  /* SOMETHING ISN'T LANDING — with her image */
+  /* SOMETHING ISN'T LANDING, with her image */
   .recog{padding:0;border-top:1px solid var(--line)}
   .recog .split{display:grid;grid-template-columns:1fr 1fr;align-items:stretch}
   .recog .photo{background-size:cover;background-position:center;min-height:520px}
@@ -144,7 +144,7 @@
   .works p{max-width:60ch;margin-bottom:18px;color:var(--brown)}
   .works .key{font-family:var(--display);font-weight:700;font-size:clamp(21px,3vw,28px);color:var(--ink);max-width:30ch;margin-top:8px;line-height:1.2;letter-spacing:-.02em}
 
-  /* WHY ME — Juliette, her image */
+  /* WHY ME, Juliette, her image */
   .why{padding:0;border-top:1px solid var(--line);background:var(--paper)}
   .why .split{display:grid;grid-template-columns:.85fr 1.15fr;align-items:stretch}
   .why .photo{background-size:contain;background-position:center center;background-repeat:no-repeat;min-height:560px}
@@ -211,7 +211,7 @@
   .fit-col.no li::before{content:"";position:absolute;left:2px;top:16px;width:9px;height:9px;border:1px solid var(--gold-soft);border-radius:50%}
   .fit .span{margin-top:38px;font-family:var(--display);font-weight:600;font-size:clamp(19px,2.6vw,24px);color:var(--ink);max-width:42ch;line-height:1.24;letter-spacing:-.015em;text-align:center;margin-left:auto;margin-right:auto}
 
-  /* FOUNDING — teal panel for contrast, gold accents */
+  /* FOUNDING, teal panel for contrast, gold accents */
   .founding{padding:100px 0;text-align:center;border-top:1px solid var(--line-dark);background:var(--teal);color:var(--cream)}
   .founding .eyebrow{color:var(--gold-pale)}
   .founding h2{color:var(--cream)}
@@ -348,13 +348,13 @@ gtag('config', 'G-SY8NKELMNZ');
   <div class="wrap">
     <div class="grid">
       <div class="logo-card reveal">
-        <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_900/u_https://feelfullyyou.com/media/6a2fee79bc11d12c0bbafe45.jpg" alt="Touch Point">
+        <img src="https://feelfullyyou.com/media/6a2fee79bc11d12c0bbafe45.jpg" alt="Touch Point">
       </div>
       <div>
         <p class="tag reveal">The private membership for men who want to understand women, and themselves in relation to them.</p>
         <div class="price-line reveal">
           <span class="p">£97<span>/month</span></span>
-          <span class="tag2">Founding 20 · locked for life</span>
+          <span class="tag2">Only 5 left at £97, then £197</span>
         </div>
         <div class="hero-cta reveal">
           <a href="#join" class="btn">Join Touch Point</a>
@@ -452,7 +452,7 @@ gtag('config', 'G-SY8NKELMNZ');
 <section class="spine" id="what">
   <div class="narrow">
     <div class="eyebrow reveal" style="margin-bottom:18px">What Touch Point actually is</div>
-    <div class="quotebox reveal">For £97 a month, weekly access to someone whose private clients pay over £4,000 for six weeks of intensive work.</div>
+    <div class="quotebox reveal">For £97 a month, weekly access to a woman whose private clients pay over £4,000 for six weeks. The next five men lock that £97 in for life. After them, it is £197. This is the definition of a no-brainer.</div>
     <div class="nots reveal" style="margin-bottom:26px">
       <span>Not a course.</span><span>Not a portal.</span><span>Not content you'll never finish.</span>
     </div>
@@ -475,7 +475,7 @@ gtag('config', 'G-SY8NKELMNZ');
     </div>
 
     <div class="pinned reveal">
-      <div class="ph">Pinned from day one — yours the moment you join</div>
+      <div class="ph">Pinned from day one, yours the moment you join</div>
       <div class="guide" style="display:flex;justify-content:space-between;align-items:start;gap:16px">
         <div><div class="t">The Unspoken Distance, nine parts</div><p>What the distance is made of, and what keeps it in place.</p></div>
         <span style="font-family:var(--display);font-weight:700;font-size:15px;color:var(--gold-deep);white-space:nowrap">£97</span>
@@ -502,7 +502,7 @@ gtag('config', 'G-SY8NKELMNZ');
     <div class="change-row reveal"><span class="ix">–</span><p>A text in the middle of the day: <em>"I've been thinking about you."</em></p></div>
     <div class="change-row reveal"><span class="ix">–</span><p>You walk into the bedroom with the same spine you have in the boardroom. You stop dreading initiating, because you've stopped needing a particular response from her to feel like enough.</p></div>
     <div class="change-row reveal"><span class="ix">–</span><p>And if the relationship is ending: you stop making her the enemy. Your children feel it. She feels it. You feel it too.</p></div>
-    <p class="reveal" style="margin-top:42px;font-size:clamp(17px,2vw,20px);color:var(--ink);font-family:var(--display);font-weight:600;letter-spacing:-.015em;line-height:1.3;max-width:38ch">None of this changes overnight. But with consistency — and the genuine want to change — it does.</p>
+    <p class="reveal" style="margin-top:42px;font-size:clamp(17px,2vw,20px);color:var(--ink);font-family:var(--display);font-weight:600;letter-spacing:-.015em;line-height:1.3;max-width:38ch">None of this changes overnight. But with consistency, and the genuine want to change, it does.</p>
   </div>
 </section>
 
@@ -548,7 +548,7 @@ gtag('config', 'G-SY8NKELMNZ');
       </div>
       <div class="reveal" style="background:#d8dfe1;border-left:4px solid var(--gold);padding:36px 32px">
         <div style="font-family:var(--display);font-size:5rem;line-height:0.5;color:var(--gold);margin-bottom:24px">"</div>
-        <p style="font-family:var(--display);font-size:1.12rem;line-height:1.65;color:var(--ink);margin:0 0 24px;font-style:italic">Change — as always — is not linear, but exponential (with the right catalyst).</p>
+        <p style="font-family:var(--display);font-size:1.12rem;line-height:1.65;color:var(--ink);margin:0 0 24px;font-style:italic">Change, as always, is not linear, but exponential (with the right catalyst).</p>
         <p style="font-size:0.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin:0">Rupert W &nbsp;·&nbsp; Finance Director, UK</p>
       </div>
       <div class="reveal" style="background:#d8dfe1;border-left:4px solid var(--gold);padding:36px 32px">
@@ -568,7 +568,7 @@ gtag('config', 'G-SY8NKELMNZ');
 
       <div class="reveal" style="padding:28px 0;border-bottom:1px solid var(--line)">
         <h3 style="font-size:18px;font-weight:600;color:var(--ink);margin-bottom:10px">Is there a minimum commitment?</h3>
-        <p style="color:var(--brown);font-size:16px;max-width:60ch">Three months is recommended. That's how long it takes for the work to show up in the room rather than just in your head. After three months, you're free to stay or leave — no questions, no friction.</p>
+        <p style="color:var(--brown);font-size:16px;max-width:60ch">Three months is recommended. That's how long it takes for the work to show up in the room rather than just in your head. After three months, you're free to stay or leave, no questions, no friction.</p>
       </div>
 
       <div class="reveal" style="padding:28px 0;border-bottom:1px solid var(--line)">
@@ -578,7 +578,7 @@ gtag('config', 'G-SY8NKELMNZ');
 
       <div class="reveal" style="padding:28px 0;border-bottom:1px solid var(--line)">
         <h3 style="font-size:18px;font-weight:600;color:var(--ink);margin-bottom:10px">Is this therapy?</h3>
-        <p style="color:var(--brown);font-size:16px;max-width:60ch">No. I'm not your therapist and this isn't a therapeutic relationship. It's coaching, embodiment work, and translation — helping you understand what's running underneath, and giving you something specific to do about it.</p>
+        <p style="color:var(--brown);font-size:16px;max-width:60ch">No. I'm not your therapist and this isn't a therapeutic relationship. It's coaching, embodiment work, and translation, helping you understand what's running underneath, and giving you something specific to do about it.</p>
       </div>
 
       <div class="reveal" style="padding:28px 0;border-bottom:1px solid var(--line)">
@@ -598,15 +598,16 @@ gtag('config', 'G-SY8NKELMNZ');
 <!-- FOUNDING -->
 <section class="founding" id="join">
   <div class="narrow">
-    <div class="eyebrow reveal">Founding members</div>
-    <h2 class="reveal">Founding 20. Locked in for life.</h2>
+    <div class="eyebrow reveal">Founding price, closing</div>
+    <h2 class="reveal">The next 5 men get in at £97. Locked for life.</h2>
     <div class="price-big reveal">£97<sub>/month</sub></div>
-    <p class="after reveal">After the first 20 men, the price increases permanently.</p>
-    <p class="reveal" style="margin-top:10px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-pale)">Recommended 3-month minimum</p>
+    <p class="after reveal">After these five, it goes to £197, permanently. Same room, nearly double the price.</p>
+    <p class="reveal" style="margin-top:16px;font-family:var(--display);font-weight:700;font-size:clamp(19px,2.6vw,26px);color:var(--gold-pale);letter-spacing:-.015em;line-height:1.25;max-width:30ch;margin-left:auto;margin-right:auto">Weekly access to a woman whose private clients pay over £4,000. At £97, this is a no-brainer.</p>
+    <p class="reveal" style="margin-top:14px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-pale)">Recommended 3-month minimum</p>
 
     <div class="seats reveal">
       <div class="meter"><i id="meter"></i></div>
-      <div class="lbl"><span id="seatcount">, founding spots claimed</span><span>20 total</span></div>
+      <div class="lbl"><span id="seatcount">Only 5 spots left at £97</span><span>then £197</span></div>
     </div>
 
     <div class="arrives">
@@ -615,7 +616,7 @@ gtag('config', 'G-SY8NKELMNZ');
       <div class="reveal"><b>Pinned guides</b>Waiting for you on day one.</div>
     </div>
 
-    <a href="https://buy.stripe.com/00w28q21J9164Tz5aJ0co0B" class="btn reveal">Join Touch Point · £97/month</a>
+    <a href="https://buy.stripe.com/00w28q21J9164Tz5aJ0co0B" class="btn reveal">Grab one of the 5 spots · £97/month</a>
   </div>
 </section>
 
@@ -637,7 +638,7 @@ gtag('config', 'G-SY8NKELMNZ');
   <div class="info">
     <span class="nm">TOUCH POINT</span>
     <span class="pr">£97/mo</span>
-    <span class="sub">Founding 20 · locked for life</span>
+    <span class="sub">5 left at £97 · then £197</span>
   </div>
   <a href="#join" class="btn">Join now</a>
 </div>
@@ -667,9 +668,8 @@ gtag('config', 'G-SY8NKELMNZ');
   window.addEventListener('scroll',fillProgress,{passive:true});
   window.addEventListener('resize',fillProgress);fillProgress();
 
-  const claimed=2,total=20;
   const meter=document.getElementById('meter'),seatCount=document.getElementById('seatcount');
-  const mObs=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){meter.style.width=(claimed/total*100)+'%';seatCount.textContent=claimed+' founding spots claimed';mObs.disconnect();}})},{threshold:.4});
+  const mObs=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){meter.style.width='80%';seatCount.textContent='Only 5 spots left at £97';mObs.disconnect();}})},{threshold:.4});
   if(meter)mObs.observe(meter.closest('.seats'));
 </script>
 <script>
