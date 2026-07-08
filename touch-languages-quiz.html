@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Touch Languages™ Quiz · How You Are Touched By Life | Juliette Karaman</title>
+<meta name="description" content="A five-minute mirror, not a score. Discover your Touch Pattern and the language your body is starving for. The signature quiz inside The Touch Reset, by Juliette Karaman.">
+<link rel="canonical" href="https://feelfullyyou.com/touch-languages-quiz">
+<meta property="og:title" content="The Touch Languages™ Quiz · How You Are Touched By Life">
+<meta property="og:description" content="A five-minute mirror, not a score. Your Touch Pattern, and the language your body has been starving for.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://feelfullyyou.com/touch-languages-quiz">
+<meta property="og:image" content="https://feelfullyyou.com/touch-languages-og.jpg">
+<meta property="og:site_name" content="Feel Fully You">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Touch Languages™ Quiz">
+<meta name="twitter:description" content="A five-minute mirror, not a score. Your Touch Pattern, and the language your body has been starving for.">
+<meta name="twitter:image" content="https://feelfullyyou.com/touch-languages-og.jpg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fefcfa;--paper:#fdfbf8;--ink:#1c1714;--brown:#5d4a33;
+    --gold:#a88538;--gold-deep:#99680c;--gold-soft:#b4a074;--gold-pale:#ddc98e;
+    --teal:#0d3535;--teal-deep:#061a1a;--line-dark:#1d3a39;
+    --display:'Poppins',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--teal-deep);color:var(--cream);font-family:var(--body);font-size:1.0625rem;line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden;min-height:100vh;display:flex;flex-direction:column}
+  a{color:inherit}
+  ::selection{background:var(--gold);color:#fff}
+
+  .topbar{background:var(--teal);height:60px;display:flex;align-items:center;justify-content:center;position:relative}
+  .topbar .brand{font-family:var(--display);font-weight:600;font-size:15px;letter-spacing:.04em;color:var(--cream);text-decoration:none}
+  .topbar .brand b{color:var(--gold-pale);font-weight:600}
+
+  main{flex:1;display:flex;align-items:center;justify-content:center;padding:44px 20px}
+
+  .stage{position:relative;width:100%;max-width:600px;background:var(--teal);border-radius:18px;padding:46px 44px 40px;overflow:hidden;box-shadow:0 1px 0 rgba(168,133,56,.28) inset,0 30px 80px -40px rgba(0,0,0,.6)}
+  .glow{position:absolute;left:50%;bottom:-60px;transform:translateX(-50%);width:460px;height:280px;background:radial-gradient(closest-side,rgba(168,133,56,.20),rgba(168,133,56,0));pointer-events:none}
+  .inner{position:relative}
+
+  .eyebrow{font-family:var(--body);font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-pale);font-weight:400}
+  h1{font-family:var(--display);font-weight:500;color:var(--cream);line-height:1.12;letter-spacing:-.01em}
+  .divider{width:40px;height:1px;background:rgba(221,201,142,.5);margin:22px auto}
+
+  /* intro */
+  #intro{text-align:center}
+  #intro h1{font-size:2.05rem;margin:16px 0 0}
+  #intro h1 .it{font-style:italic;font-weight:400;color:var(--gold-pale)}
+  #intro .sub{color:rgba(254,252,250,.80);font-weight:300;font-size:1.04rem;line-height:1.72;margin:20px auto 0;max-width:42ch}
+  #intro .meta{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;margin:26px auto 0;color:rgba(221,201,142,.9);font-size:.82rem;letter-spacing:.02em;font-weight:300}
+  #intro .meta span{display:inline-flex;align-items:center;gap:7px}
+  #intro .meta b{color:var(--gold-pale);font-weight:500}
+  #intro .note{color:rgba(221,201,142,.85);font-style:italic;font-size:.85rem;margin-top:22px;font-weight:300}
+
+  .btn{display:inline-block;text-decoration:none;cursor:pointer;border:none;font-family:var(--display);font-weight:500;font-size:.98rem;letter-spacing:.01em;padding:14px 32px;border-radius:10px;background:var(--gold-pale);color:var(--teal);transition:transform .2s,background .2s}
+  .btn:hover{background:#e7d6a3;transform:translateY(-1px)}
+  .btn.block{width:100%;padding:15px 0;text-align:center}
+  .btn[disabled]{opacity:.35;pointer-events:none}
+
+  /* progress */
+  .proghead{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:12px}
+  .proghead .l{width:24px;height:1px;background:rgba(221,201,142,.4)}
+  .phase{display:block;text-align:center;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:rgba(221,201,142,.65);margin-bottom:16px;font-weight:400}
+  .track{height:2px;background:rgba(254,252,250,.1);border-radius:2px;overflow:hidden}
+  .track .bar{height:100%;width:0;background:var(--gold);transition:width .35s}
+
+  /* question */
+  .qtext{font-family:var(--display);color:var(--cream);font-size:1.34rem;font-weight:500;line-height:1.34;text-align:center;margin:22px 0 24px}
+  .opts{display:flex;flex-direction:column;gap:9px}
+  .opt{font-family:var(--body);text-align:left;width:100%;background:rgba(254,252,250,.035);border:1px solid rgba(221,201,142,.26);border-radius:11px;padding:15px 18px;font-size:.96rem;color:rgba(254,252,250,.84);line-height:1.5;cursor:pointer;transition:border-color .18s,background .18s,color .18s;font-weight:300}
+  .opt:hover{border-color:rgba(221,201,142,.6);background:rgba(221,201,142,.07)}
+  .opt.sel{border-color:var(--gold-pale);border-width:1.5px;background:rgba(221,201,142,.14);color:var(--cream)}
+  .qback{display:block;margin:18px auto 0;background:none;border:none;color:rgba(221,201,142,.7);font-size:.78rem;cursor:pointer;font-family:var(--body);font-weight:300;text-decoration:underline;text-underline-offset:3px}
+  .qback[hidden]{display:none}
+
+  /* reveal */
+  #reveal{display:none;text-align:center}
+  #reveal .kicker{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-pale);font-weight:400}
+  #reveal h1{font-size:2.35rem;margin:12px 0 0}
+  #reveal .epi{font-family:var(--display);font-style:italic;font-weight:300;color:rgba(221,201,142,.92);font-size:1.02rem;line-height:1.55;margin:16px auto 0;max-width:38ch}
+  #reveal .copy{color:rgba(254,252,250,.86);font-weight:300;font-size:1.0rem;line-height:1.78;margin:0 auto;max-width:46ch}
+  .langmap{background:rgba(254,252,250,.04);border:1px solid rgba(221,201,142,.22);border-radius:14px;padding:24px 26px;margin:26px auto 6px;max-width:44ch;text-align:left}
+  .langmap .row{display:flex;align-items:flex-start;gap:14px;padding:11px 0}
+  .langmap .row+.row{border-top:1px solid rgba(221,201,142,.14)}
+  .langmap .tag{flex:0 0 auto;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-pale);font-weight:500;width:74px;padding-top:3px}
+  .langmap .val{flex:1}
+  .langmap .val b{font-family:var(--display);font-weight:500;color:var(--cream);font-size:1.06rem;display:block}
+  .langmap .val span{font-size:.86rem;color:rgba(254,252,250,.62);font-weight:300;line-height:1.5}
+
+  .capture{max-width:400px;margin:28px auto 0}
+  .capture label{display:block;font-family:var(--display);font-weight:400;font-size:1.02rem;color:var(--cream);margin-bottom:6px}
+  .capture .sublabel{font-size:.84rem;color:rgba(254,252,250,.6);font-weight:300;margin-bottom:14px;line-height:1.5}
+  .capture input[type=email]{width:100%;background:rgba(254,252,250,.06);border:1px solid rgba(221,201,142,.35);border-radius:10px;padding:14px 16px;color:var(--cream);font-family:var(--body);font-size:.96rem;margin-bottom:10px}
+  .capture input[type=email]::placeholder{color:rgba(254,252,250,.4)}
+  .capture input[type=email]:focus{outline:none;border-color:var(--gold-pale)}
+  .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+  .consent{font-size:.74rem;color:rgba(254,252,250,.45);font-weight:300;margin-top:12px;line-height:1.5}
+  .msg{font-size:.85rem;margin-top:12px;min-height:1.2em}
+  .msg.err{color:#e6b8b8}
+  .msg.ok{color:var(--gold-pale)}
+
+  #success{display:none;text-align:center}
+  #success .big{font-family:var(--display);color:var(--cream);font-size:1.5rem;font-weight:500;margin-bottom:12px}
+  #success p{color:rgba(254,252,250,.8);font-weight:300;font-size:.98rem;line-height:1.7;max-width:42ch;margin:0 auto}
+  #success .next{margin-top:22px}
+
+  .again{margin-top:18px}
+  .again button{background:transparent;border:none;color:rgba(221,201,142,.75);font-size:.8rem;cursor:pointer;text-decoration:underline;text-underline-offset:3px;font-weight:300;font-family:var(--body)}
+
+  footer{background:var(--gold);color:#fff;padding:20px 28px;font-size:13px}
+  footer .fwrap{max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  footer .fbrand{font-family:var(--display);font-weight:600;font-size:.95rem;color:#fff}
+  footer a{color:#fff}
+
+  @media(max-width:560px){
+    .stage{padding:38px 24px 32px}
+    #intro h1{font-size:1.74rem}
+    .qtext{font-size:1.2rem}
+    #reveal h1{font-size:2rem}
+    #intro .meta{gap:14px}
+  }
+  @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><a class="brand" href="/">Feel Fully <b>You</b></a></div>
+
+<main>
+  <div class="stage">
+    <div class="glow"></div>
+    <div class="inner">
+
+      <!-- INTRO -->
+      <section id="intro">
+        <div class="eyebrow">The Touch Languages™ Quiz</div>
+        <h1>How are you <span class="it">touched</span> by life?</h1>
+        <p class="sub">Not a score. A mirror. In five minutes you'll meet the pattern your body runs to keep touch safe, and the one language it has quietly been starving for.</p>
+        <div class="meta">
+          <span><b>13</b> questions</span>
+          <span><b>5</b> minutes</span>
+          <span>No right answers</span>
+        </div>
+        <div style="margin-top:30px"><button class="btn" id="begin">Begin</button></div>
+        <p class="note">Answer from your life as it actually is, not as you wish it were.</p>
+      </section>
+
+      <!-- QUIZ -->
+      <section id="quiz" style="display:none">
+        <span class="phase" id="phase">Part one · how you are wired</span>
+        <div class="proghead"><span class="l"></span><span class="eyebrow" id="prog">01 / 13</span><span class="l"></span></div>
+        <div class="track"><div class="bar" id="bar"></div></div>
+        <h2 class="qtext" id="question"></h2>
+        <div class="opts" id="opts"></div>
+        <button class="qback" id="back" hidden>go back</button>
+      </section>
+
+      <!-- REVEAL -->
+      <section id="reveal">
+        <div class="kicker">Your Touch Pattern</div>
+        <h1 id="patternName"></h1>
+        <p class="epi" id="patternEpi"></p>
+        <div class="divider"></div>
+        <p class="copy" id="patternCopy"></p>
+
+        <div class="langmap">
+          <div class="row">
+            <div class="tag">Home</div>
+            <div class="val"><b id="homeLang"></b><span id="homeDesc"></span></div>
+          </div>
+          <div class="row">
+            <div class="tag">Starving</div>
+            <div class="val"><b id="starveLang"></b><span id="starveDesc"></span></div>
+          </div>
+        </div>
+
+        <form class="capture" id="capForm" autocomplete="on">
+          <label for="email">Where shall I send your full reading?</label>
+          <p class="sublabel">Your whole map: how your pattern protects you, how it softens, and the way back into the language you've been missing. Written in my own words, straight to your inbox.</p>
+          <input type="email" id="email" name="email" placeholder="you@email.com" required>
+          <input type="text" class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button type="submit" class="btn block" id="sendBtn">Send me my full reading</button>
+          <p class="consent">One email with your reading, then my letters on touch, intimacy and coming back to your body. Leave any time.</p>
+          <div class="msg" id="msg"></div>
+        </form>
+
+        <div id="success">
+          <div class="big">It's on its way.</div>
+          <p>Your full reading is landing in your inbox now. Read it slowly, somewhere you won't be interrupted. Your body already knows most of it.</p>
+          <div class="next"><a class="btn" href="/work-with-me">See where this work goes next</a></div>
+        </div>
+
+        <div class="again"><button id="restart">start again</button></div>
+      </section>
+
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="fwrap">
+    <div class="fbrand">Feel Fully You</div>
+    <div style="font-size:12px;color:rgba(255,255,255,.85);display:flex;gap:16px;align-items:center">
+      <a href="mailto:support@feelfullyyou.com" style="text-decoration:underline;text-underline-offset:3px">support@feelfullyyou.com</a>
+      <a href="https://feelfullyyou.com/terms" style="color:rgba(255,255,255,.75);text-decoration:none" target="_blank" rel="noopener">Terms</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Google tag -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SY8NKELMNZ"></script>
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SY8NKELMNZ');
+</script>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ============================================================
+     KIT WIRING  (tag + sequence IDs filled after Kit setup)
+     ============================================================ */
+  var PATTERN_TAG={Holder:20988556,Flame:20988557,Armour:20988558,Signal:20988559,Current:20988560};
+  var PATTERN_SEQ={Holder:2821038,Flame:2821039,Armour:2821040,Signal:2821041,Current:2821042};
+  // The language the body is starving for (the actionable craving signal)
+  var CRAVE_TAG={Emotional:20988561,Erotic:20988562,Energetic:20988563,Physical:20988564,Spiritual:20988565};
+
+  /* ============================================================
+     PATTERN CONTENT  (Layer 2: how you are wired)
+     ============================================================ */
+  var PATTERN={
+    Holder:{
+      name:"The Holder",
+      epi:"You are not here to perform care. You are here to be met in it.",
+      copy:"You learned to connect by giving, and to stay safe by serving. You reach first, soothe first, hold everyone. The one thing you rarely let happen is to be touched without having to earn it. Your ache is simple: to be held without earning it."
+    },
+    Flame:{
+      name:"The Flame",
+      epi:"You do not have to soften to be loved. Burn as you are.",
+      copy:"You learned early that staying safe meant softening. Your tone, your hunger, the signal pulsing just beneath your skin. Your flame never died. It waited. Your ache is to be wanted without shrinking, met where the fire still lives."
+    },
+    Armour:{
+      name:"The Armour",
+      epi:"You do not need to be disarmed. You need to be met with devotion.",
+      copy:"You did not shut down. You structured. Softness once meant exposure, so safety came through sovereignty and control. You touch from clarity, and rarely let touch lead you. Your ache is to soften without collapsing, to surrender through reverence rather than force."
+    },
+    Signal:{
+      name:"The Signal",
+      epi:"The raw, unfiltered signal was always the portal.",
+      copy:"You stayed legible. You translated your emotions, filtered your truth, read the room before you spoke. You became easy to love, and slowly stopped being fully real. Your ache is to be met in the full mess of you, loved in process rather than in proof."
+    },
+    Current:{
+      name:"The Current",
+      epi:"You do not need to keep creating the current. You are the current.",
+      copy:"You learned to stay met by staying on. You express, you initiate, you keep the aliveness moving, because when the charge drops you feel the disconnection instantly. Your ache is to be received without leading it all, to feel it move toward you for once."
+    }
+  };
+
+  /* ============================================================
+     LANGUAGE CONTENT  (Layer 1: how life touches you)
+     ============================================================ */
+  var LANG={
+    Emotional:{name:"Emotional Touch",home:"Being heard all the way through. Met in what you feel, without being fixed.",starve:"You hold everyone's feelings and no one asks about yours. Seen, and still unmet inside."},
+    Erotic:{name:"Erotic Touch",home:"The current of aliveness and wanting. Desire that gets to be yours.",starve:"Everything's gone flat and dutiful. Desire feels like an old address you used to live at."},
+    Energetic:{name:"Energetic Touch",home:"How someone approaches you before a word. Presence that settles your body.",starve:"Contact keeps arriving at the wrong speed. Surrounded by people and permanently braced."},
+    Physical:{name:"Physical Touch",home:"Skin, weight, warmth, proximity. Contact with nothing owed.",starve:"Touch-hungry, or touched all day and starving underneath it. Affection that feels like an invoice."},
+    Spiritual:{name:"Spiritual Touch",home:"Awe, meaning, belonging. Being touched by something larger than you.",starve:"It all works on paper and means nothing. You keep asking, quietly, is this it?"}
+  };
+
+  /* ============================================================
+     QUESTIONS
+     Part one (Q1–7): pattern letters H,F,A,S,C
+     Part two (Q8–11): "relief / lands" → home language  (E,Er,En,P,S)
+     Part three (Q12–13): "the ache" → starving language  (E,Er,En,P,S)
+     Each option: [text, key]
+     ============================================================ */
+  var LANG_ORDER=["Emotional","Erotic","Energetic","Physical","Spiritual"];
+
+  var QP=[
+    ["When someone offers to help you, your first instinct is to:",[
+      ["Wave it off. You are the one who helps.","H"],
+      ["Accept quietly, and make sure you are no trouble.","F"],
+      ["Politely decline. You have it handled.","A"],
+      ["Explain, in detail, exactly what would and would not be useful.","S"],
+      ["Turn it into something warmer and bigger than the small thing offered.","C"]
+    ]],
+    ["In a silence with someone you love, you tend to:",[
+      ["Reach for something to give, do, or ask them.","H"],
+      ["Wonder if you have taken up too much space.","F"],
+      ["Feel more comfortable than in most conversation.","A"],
+      ["Start composing the right thing to say next.","S"],
+      ["Fill it, lift it, bring the energy back up.","C"]
+    ]],
+    ["The hardest thing for you to receive is:",[
+      ["Care, with nothing expected back.","H"],
+      ["Full, undimmed desire or attention.","F"],
+      ["Tenderness that asks you to soften.","A"],
+      ["Being loved in a mess you have not tidied.","S"],
+      ["Aliveness you did not have to generate.","C"]
+    ]],
+    ["Under stress, you:",[
+      ["Over-function. You hold everyone.","H"],
+      ["Shrink, smooth, keep the peace.","F"],
+      ["Take control, contain it, manage.","A"],
+      ["Get precise, explain, curate.","S"],
+      ["Do more, lead more, keep it moving.","C"]
+    ]],
+    ["When someone reaches for you before you're quite ready, your body:",[
+      ["Meets them anyway, and gives.","H"],
+      ["Softens and goes along, even if part of you wanted a moment.","F"],
+      ["Tenses. You need to see it coming.","A"],
+      ["Smiles and says the right thing while you catch up inside.","S"],
+      ["Rises to meet it and lifts the whole moment.","C"]
+    ]],
+    ["The thing people rarely guess about you is:",[
+      ["How much you long to be held without having to earn it.","H"],
+      ["How much fire you keep turned down.","F"],
+      ["How much you want to soften, if it were ever safe enough.","A"],
+      ["How much of you they have never actually met.","S"],
+      ["How tired you are of being the one who brings the aliveness.","C"]
+    ]],
+    ["In intimacy, you are most likely to:",[
+      ["Give with care, and receive best when you're the one in control.","H"],
+      ["Follow their lead and rarely name your own edge.","F"],
+      ["Lead and hold authority, and struggle to surrender.","A"],
+      ["Stay composed, rarely letting go fully into sensation.","S"],
+      ["Spark the aliveness and keep it moving, even when it isn't met.","C"]
+    ]]
+  ];
+
+  var QL=[
+    ["When you imagine being truly met, it looks most like:",[
+      ["Someone staying with your feeling all the way to the end, without fixing it.","Emotional"],
+      ["Being wanted, slowly, and letting the wanting be yours.","Erotic"],
+      ["A presence that settles you before a single word is spoken.","Energetic"],
+      ["A hand that rests on you with nothing owed, and stays.","Physical"],
+      ["Being witnessed in front of something larger than both of you.","Spiritual"]
+    ]],
+    ["The moment that undoes you, in the best way, is:",[
+      ["A question that goes one layer deeper than politeness.","Emotional"],
+      ["A slow kiss that's complete in itself, going nowhere.","Erotic"],
+      ["The pause before contact, when you can feel them approach.","Energetic"],
+      ["A long hug, right at the second your body decides it's real.","Physical"],
+      ["Music, or a night sky, that quietly rearranges you.","Spiritual"]
+    ]],
+    ["You feel most safe when:",[
+      ["You can say the true thing and someone stays.","Emotional"],
+      ["You're desired without it turning into a demand.","Erotic"],
+      ["The approach is clean and unhurried, nothing needed back.","Energetic"],
+      ["There's warmth and weight, contact that isn't going anywhere.","Physical"],
+      ["The moment has meaning, and you're part of something.","Spiritual"]
+    ]],
+    ["Left to itself, life reaches you most through:",[
+      ["Words, attention, being heard.","Emotional"],
+      ["Appetite, beauty, the current of wanting.","Erotic"],
+      ["Atmosphere, resonance, the feeling in a room.","Energetic"],
+      ["Skin, warmth, closeness.","Physical"],
+      ["Awe, silence, the sense of the sacred.","Spiritual"]
+    ]]
+  ];
+
+  var QA=[
+    ["If you're honest, the thing you're most starving for is:",[
+      ["To be asked how you actually are, and be met in the answer.","Emotional"],
+      ["To feel that spark of aliveness that went quiet.","Erotic"],
+      ["To stop bracing, and trust the way someone comes toward you.","Energetic"],
+      ["Touch with nothing owed, in doses your body can trust.","Physical"],
+      ["For something to finally matter again, to actually register.","Spiritual"]
+    ]],
+    ["The absence you feel, even in a full life, sounds most like:",[
+      ["“I hold everyone. Nobody catches me.”","Emotional"],
+      ["“I function perfectly and feel almost nothing.”","Erotic"],
+      ["“I'm surrounded by people and permanently on guard.”","Energetic"],
+      ["“I'm touched all day and starving underneath it.”","Physical"],
+      ["“I have what I aimed for and keep asking, is this it?”","Spiritual"]
+    ]]
+  ];
+
+  var ALL=[].concat(QP,QL,QA); // 13 questions
+  var TOTAL=ALL.length;
+  var PART_LABEL=["Part one · how you are wired","Part one · how you are wired","Part one · how you are wired","Part one · how you are wired","Part one · how you are wired","Part one · how you are wired","Part one · how you are wired","Part two · how life lands","Part two · how life lands","Part two · how life lands","Part two · how life lands","Part three · what you miss","Part three · what you miss"];
+
+  /* ============================================================
+     STATE + ENGINE
+     ============================================================ */
+  var i=0,answers=new Array(TOTAL).fill(null),locked=false;
+  var $=function(id){return document.getElementById(id);};
+  var intro=$('intro'),quiz=$('quiz'),reveal=$('reveal');
+
+  function pad(n){return n<10?'0'+n:''+n;}
+
+  function renderQ(){
+    locked=false;
+    var q=ALL[i];
+    $('phase').textContent=PART_LABEL[i];
+    $('question').textContent=q[0];
+    $('prog').textContent=pad(i+1)+' / '+TOTAL;
+    $('bar').style.width=Math.round((i)/TOTAL*100+6)+'%';
+    $('back').hidden=(i===0);
+    var box=$('opts');box.innerHTML='';
+    q[1].forEach(function(opt,idx){
+      var b=document.createElement('button');
+      b.type='button';b.className='opt'+(answers[i]===idx?' sel':'');
+      b.textContent=opt[0];
+      b.addEventListener('click',function(){
+        if(locked)return;locked=true;
+        Array.prototype.forEach.call(box.children,function(c){c.classList.remove('sel');});
+        b.classList.add('sel');
+        answers[i]=idx;
+        setTimeout(function(){
+          if(i<TOTAL-1){i++;renderQ();}else{doReveal();}
+        },320);
+      });
+      box.appendChild(b);
+    });
+  }
+
+  $('begin').addEventListener('click',function(){
+    intro.style.display='none';quiz.style.display='block';renderQ();
+    if(typeof gtag==='function')gtag('event','quiz_start',{quiz:'touch_languages'});
+  });
+  $('back').addEventListener('click',function(){if(i>0){i--;renderQ();}});
+
+  var result={pattern:'',home:'',starve:''};
+
+  function doReveal(){
+    // ---- Pattern (Q1-7) ----
+    var pt={H:0,F:0,A:0,S:0,C:0};
+    for(var a=0;a<7;a++){if(answers[a]!=null){pt[QP[a][1][answers[a]][1]]++;}}
+    var MAP={H:'Holder',F:'Flame',A:'Armour',S:'Signal',C:'Current'};
+    var pOrder=Object.keys(pt).sort(function(x,y){return pt[y]-pt[x];});
+    var pattern=MAP[pOrder[0]];
+
+    // ---- Home language (Q8-11 relief) ----
+    var home={Emotional:0,Erotic:0,Energetic:0,Physical:0,Spiritual:0};
+    for(var b=0;b<4;b++){var ai=answers[7+b];if(ai!=null){home[QL[b][1][ai][1]]++;}}
+    var hOrder=LANG_ORDER.slice().sort(function(x,y){return home[y]-home[x];});
+    var homeLang=hOrder[0];
+
+    // ---- Starving language (Q12-13 ache), tie-broken by lowest relief ----
+    var ache={Emotional:0,Erotic:0,Energetic:0,Physical:0,Spiritual:0};
+    for(var c=0;c<2;c++){var aj=answers[11+c];if(aj!=null){ache[QA[c][1][aj][1]]++;}}
+    var aMax=Math.max.apply(null,LANG_ORDER.map(function(k){return ache[k];}));
+    var acheTop=LANG_ORDER.filter(function(k){return ache[k]===aMax;});
+    var starveLang;
+    if(acheTop.length===1){starveLang=acheTop[0];}
+    else{ // tie: pick the one with least relief among the tied set
+      starveLang=acheTop.slice().sort(function(x,y){return home[x]-home[y];})[0];
+    }
+    // never let starving == home if there's a real alternative
+    if(starveLang===homeLang){
+      var alt=LANG_ORDER.slice().sort(function(x,y){return (home[x]-ache[x])-(home[y]-ache[y]);})[0];
+      if(alt!==homeLang)starveLang=alt;
+    }
+
+    result={pattern:pattern,home:homeLang,starve:starveLang};
+
+    // ---- paint ----
+    var P=PATTERN[pattern];
+    $('patternName').textContent=P.name;
+    $('patternEpi').textContent='“'+P.epi+'”';
+    $('patternCopy').textContent=P.copy;
+    $('homeLang').textContent=LANG[homeLang].name;
+    $('homeDesc').textContent=LANG[homeLang].home;
+    $('starveLang').textContent=LANG[starveLang].name;
+    $('starveDesc').textContent=LANG[starveLang].starve;
+
+    quiz.style.display='none';reveal.style.display='block';reveal.scrollIntoView({behavior:'smooth',block:'start'});
+    if(typeof gtag==='function')gtag('event','quiz_complete',{quiz:'touch_languages',pattern:pattern,home:homeLang,starving:starveLang});
+  }
+
+  $('restart').addEventListener('click',function(){
+    i=0;answers=new Array(TOTAL).fill(null);locked=false;
+    reveal.style.display='none';$('capForm').style.display='block';$('success').style.display='none';
+    $('msg').textContent='';$('email').value='';
+    quiz.style.display='block';renderQ();
+  });
+
+  $('capForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    var email=$('email').value.trim();
+    var msg=$('msg');msg.className='msg';
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){msg.className='msg err';msg.textContent='Please enter a valid email.';return;}
+    var btn=$('sendBtn');btn.disabled=true;btn.textContent='Sending…';
+    var tags=[PATTERN_TAG[result.pattern],CRAVE_TAG[result.starve]].filter(function(t){return t;});
+    fetch('/.netlify/functions/subscribe',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email,tagIds:tags,sequenceId:PATTERN_SEQ[result.pattern]||null,website:$('capForm').website.value})
+    }).then(function(r){return r.json().catch(function(){return {};});})
+      .then(function(d){
+        if(d&&d.ok){
+          $('capForm').style.display='none';$('success').style.display='block';
+          if(typeof gtag==='function')gtag('event','quiz_optin',{quiz:'touch_languages',pattern:result.pattern});
+        }else{throw new Error('fail');}
+      }).catch(function(){
+        btn.disabled=false;btn.textContent='Send me my full reading';
+        msg.className='msg err';msg.textContent='Something went wrong. Please try again.';
+      });
+  });
+})();
+</script>
+</body>
+</html>
