@@ -92,6 +92,8 @@
 /no-quiz                        /sacred-no-quiz.html            200
 /repair-kit-portal              /repair-kit-portal.html         200
 /repair-portal                  /repair-kit-portal.html         200
+/members                        /members.html                   200
+/membership                     /members.html                   200
 
 # 404 fallback
 /*                              /404.html                       404

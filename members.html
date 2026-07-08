@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Member Areas | Feel Fully You</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fefcfa;--paper:#fdfbf8;--ink:#1c1714;--brown:#5d4a33;
+    --gold:#a88538;--gold-deep:#99680c;--gold-pale:#ddc98e;--line:#e3dccf;
+    --teal:#0d3535;--teal-deep:#061a1a;
+    --display:'Poppins',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--teal-deep);color:var(--cream);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;min-height:100vh;display:flex;flex-direction:column}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3{font-family:var(--display);font-weight:700;letter-spacing:-.02em}
+
+  .topbar{background:var(--teal);height:60px;display:flex;align-items:center;justify-content:center}
+  .topbar .brand{font-family:var(--display);font-weight:700;font-size:15px;color:var(--cream)}
+  .topbar .brand b{color:var(--gold-pale)}
+
+  main{flex:1;padding:56px 24px 80px}
+  .wrap{max-width:760px;margin:0 auto}
+
+  .hero{text-align:center;margin-bottom:48px}
+  .eyebrow{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-pale);font-weight:600;margin-bottom:16px}
+  h1{font-size:clamp(1.8rem,4vw,2.6rem);color:var(--cream);line-height:1.1;margin-bottom:14px}
+  .hero p{color:rgba(254,252,250,.72);font-weight:300;font-size:1.02rem;max-width:44ch;margin:0 auto}
+
+  .tiles{display:flex;flex-direction:column;gap:16px}
+  .tile{background:var(--teal);border:1px solid rgba(221,201,142,.22);border-radius:14px;padding:26px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;transition:border-color .2s,transform .2s}
+  .tile:hover{border-color:rgba(221,201,142,.55);transform:translateY(-1px)}
+  .tile .t{flex:1;min-width:220px}
+  .tile h3{font-size:1.3rem;color:var(--cream);margin-bottom:6px}
+  .tile p{font-size:14.5px;color:rgba(254,252,250,.68);font-weight:300;line-height:1.55}
+  .btn{display:inline-block;background:var(--gold-pale);color:var(--teal-deep);font-family:var(--display);font-weight:600;font-size:14px;padding:12px 24px;border-radius:8px;white-space:nowrap}
+  .tile:hover .btn{background:#e7d6a3}
+
+  .tile.soon{opacity:.55;pointer-events:none}
+  .tag-soon{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-pale);font-weight:600;border:1px solid rgba(221,201,142,.4);border-radius:99px;padding:5px 12px}
+
+  .note{text-align:center;margin-top:40px;font-size:13.5px;color:rgba(254,252,250,.5);font-weight:300}
+
+  footer{background:var(--gold);color:#fff;padding:20px 28px;font-size:13px}
+  footer .fwrap{max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  footer .fbrand{font-family:var(--display);font-weight:600;font-size:.95rem;color:#fff}
+
+  @media(max-width:560px){
+    main{padding:40px 20px 60px}
+    .tile{padding:20px 22px}
+    .btn{width:100%;text-align:center}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar"><a class="brand" href="/">Feel Fully <b>You</b></a></div>
+
+<main>
+  <div class="wrap">
+    <div class="hero">
+      <div class="eyebrow">Your Member Areas</div>
+      <h1>Welcome back.</h1>
+      <p>Find whichever course or portal you're a member of below. Each one opens with its own access word, sent to you when you joined.</p>
+    </div>
+
+    <div class="tiles">
+      <a class="tile" href="/the-room-members">
+        <div class="t">
+          <h3>The Room</h3>
+          <p>Your 9-week evergreen drip. Weekly practice, check-ins, and the path back to yourself.</p>
+        </div>
+        <span class="btn">Enter →</span>
+      </a>
+
+      <a class="tile" href="/repair-kit-portal">
+        <div class="t">
+          <h3>Romantic Relationship Repair Kit</h3>
+          <p>Your 31 cards, one at a time. The next opens once you've finished the one before.</p>
+        </div>
+        <span class="btn">Enter →</span>
+      </a>
+
+      <a class="tile" href="/one-touch-members">
+        <div class="t">
+          <h3>One Touch</h3>
+          <p>Your course materials and practices.</p>
+        </div>
+        <span class="btn">Enter →</span>
+      </a>
+
+      <div class="tile soon">
+        <div class="t">
+          <h3>The Sacred No</h3>
+          <p>Your 7-day reset. Opening soon.</p>
+        </div>
+        <span class="tag-soon">Coming soon</span>
+      </div>
+    </div>
+
+    <p class="note">Can't find your access word? Email <a href="mailto:support@feelfullyyou.com" style="text-decoration:underline">support@feelfullyyou.com</a> and we'll send it straight over.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="fwrap">
+    <div class="fbrand">Feel Fully You</div>
+    <div style="font-size:12px;color:rgba(255,255,255,.85);display:flex;gap:16px;align-items:center">
+      <a href="mailto:support@feelfullyyou.com" style="text-decoration:underline;text-underline-offset:3px">support@feelfullyyou.com</a>
+      <a href="https://feelfullyyou.com/terms" style="color:rgba(255,255,255,.75);text-decoration:none" target="_blank" rel="noopener">Terms</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
