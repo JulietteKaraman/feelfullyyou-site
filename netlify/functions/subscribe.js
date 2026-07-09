@@ -5,13 +5,14 @@ exports.handler = async function(event) {
     return { statusCode: 405, body: 'Method Not Allowed' };
   }
 
-  let email, firstName, tagIds, sequenceId, honeypot;
+  let email, firstName, tagIds, sequenceId, honeypot, fields;
   try {
     const body = JSON.parse(event.body);
     email = body.email;
     firstName = body.firstName || '';
     tagIds = Array.isArray(body.tagIds) ? body.tagIds : [];
     sequenceId = body.sequenceId || null;
+    fields = (body.fields && typeof body.fields === 'object') ? body.fields : null;
     // Anti-spam honeypot: add a hidden field named "website" to forms. Real users
     // leave it empty; bots fill every field. If it's filled, silently accept
     // (return 200 so the bot sees success) but do nothing.
@@ -44,7 +45,7 @@ exports.handler = async function(event) {
     const subRes = await fetch(`${KIT_BASE}/subscribers`, {
       method: 'POST',
       headers,
-      body: JSON.stringify({ email_address: email, first_name: firstName })
+      body: JSON.stringify(Object.assign({ email_address: email, first_name: firstName }, fields ? { fields } : {}))
     });
     const subData = await subRes.json().catch(() => ({}));
     if (!subRes.ok) {
