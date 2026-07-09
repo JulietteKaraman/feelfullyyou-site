@@ -4,17 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Touch Reset Quiz · What's Your Touch Pattern? | Juliette Karaman</title>
-<meta name="description" content="A five-minute mirror, not a score. Your erotic wiring, your touch pattern, and whether you lead or receive, plus exactly what to do about it. For women, men and couples. By Juliette Karaman.">
+<meta name="description" content="Not a single type, a four-layer stack: your pleasure language, your touch pattern, your touch language, and whether you lead or receive. Plus what to do about it. For women, men and couples. By Juliette Karaman.">
 <link rel="canonical" href="https://feelfullyyou.com/touch-reset-quiz">
 <meta property="og:title" content="The Touch Reset Quiz · What's Your Touch Pattern?">
-<meta property="og:description" content="Your erotic wiring, your touch pattern, and whether you lead or receive. Five minutes, not a score.">
+<meta property="og:description" content="Your four-layer touch stack: pleasure language, touch pattern, touch language, and whether you lead or receive.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://feelfullyyou.com/touch-reset-quiz">
 <meta property="og:image" content="https://feelfullyyou.com/touch-languages-og.jpg">
 <meta property="og:site_name" content="Feel Fully You">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="The Touch Reset Quiz · What's Your Touch Pattern?">
-<meta name="twitter:description" content="Your erotic wiring, your touch pattern, and whether you lead or receive.">
+<meta name="twitter:description" content="Your four-layer touch stack, not another single-type result.">
 <meta name="twitter:image" content="https://feelfullyyou.com/touch-languages-og.jpg">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
@@ -83,7 +83,6 @@
   .qback{display:block;margin:18px auto 0;background:none;border:none;color:rgba(221,201,142,.7);font-size:.78rem;cursor:pointer;font-family:var(--body);font-weight:300;text-decoration:underline;text-underline-offset:3px}
   .qback[hidden]{display:none}
 
-  /* teaser + capture */
   #reveal{display:none;text-align:center}
   #reveal .kicker{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-pale)}
   #reveal h1{font-size:2rem;margin:12px 0 0;line-height:1.14}
@@ -100,9 +99,9 @@
   .msg{font-size:.85rem;margin-top:12px;min-height:1.2em}
   .msg.err{color:#e6b8b8}
 
-  /* ============ FULL-WIDTH RESULT PAGE ============ */
+  /* RESULT */
   #resultPage{display:none;width:100%}
-  .rband{width:100%;padding:66px 24px;position:relative;overflow:hidden}
+  .rband{width:100%;padding:64px 24px;position:relative;overflow:hidden}
   .rin{max-width:680px;margin:0 auto;opacity:0;transform:translateY(22px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
   .rin.in{opacity:1;transform:none}
   .rband.green{background:var(--teal)}
@@ -116,42 +115,44 @@
   .bandtext{font-size:1.05rem;color:rgba(254,252,250,.86);font-weight:300;line-height:1.78;max-width:60ch}
   .bandtext.dark{color:rgba(6,26,26,.86)}
 
-  /* hero band */
-  .rband.hero{padding:70px 24px 64px;text-align:center;background:linear-gradient(180deg,rgba(6,26,26,.28) 0%,rgba(6,26,26,.5) 44%,rgba(6,26,26,.9) 100%),url('https://feelfullyyou.com/dyad-pomegranates.jpg') center 30%/cover no-repeat;background-color:var(--teal-deep)}
+  .rband.hero{padding:66px 24px 60px;text-align:center;background:linear-gradient(180deg,rgba(6,26,26,.28) 0%,rgba(6,26,26,.5) 40%,rgba(6,26,26,.9) 100%),url('https://feelfullyyou.com/dyad-pomegranates.jpg') center 30%/cover no-repeat;background-color:var(--teal-deep)}
   .rband.hero .rin{opacity:1;transform:none}
   .hero-eyebrow{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-pale);font-weight:500}
-  .emblem{width:96px;height:96px;margin:22px auto 6px;border-radius:50%;border:1px solid rgba(221,201,142,.55);display:flex;align-items:center;justify-content:center;background:rgba(6,26,26,.35);box-shadow:0 0 40px -8px rgba(168,133,56,.55)}
-  .emblem svg{width:46px;height:46px;stroke:var(--gold-pale);fill:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
-  .idline{font-family:var(--display);font-weight:600;color:#fff;font-size:clamp(2rem,7vw,3.3rem);line-height:1.06;letter-spacing:-.02em;margin:16px auto 0;max-width:16ch}
+  .emblem{width:88px;height:88px;margin:20px auto 4px;border-radius:50%;border:1px solid rgba(221,201,142,.55);display:flex;align-items:center;justify-content:center;background:rgba(6,26,26,.35);box-shadow:0 0 40px -8px rgba(168,133,56,.55)}
+  .emblem svg{width:42px;height:42px;stroke:var(--gold-pale);fill:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+  .idline{font-family:var(--display);font-weight:600;color:#fff;font-size:clamp(2.1rem,7vw,3.2rem);line-height:1.06;letter-spacing:-.02em;margin:14px auto 0}
   .idline .g{color:var(--gold-pale)}
-  .idsub{font-family:var(--display);font-style:italic;font-weight:300;color:var(--gold-pale);font-size:clamp(1.05rem,2.6vw,1.3rem);margin:16px auto 0;max-width:34ch;line-height:1.4}
-  .idaffirm{color:rgba(254,252,250,.78);font-weight:300;font-size:1rem;line-height:1.7;margin:18px auto 0;max-width:44ch}
-  .inbox{display:inline-flex;gap:10px;align-items:flex-start;text-align:left;background:rgba(221,201,142,.12);border:1px solid rgba(221,201,142,.34);border-radius:12px;padding:13px 16px;margin:26px auto 0;font-size:.84rem;color:var(--gold-pale);font-weight:300;line-height:1.55;max-width:46ch}
-  .scrollcue{margin-top:30px;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(221,201,142,.7);font-weight:400}
+  .idsub{color:rgba(254,252,250,.82);font-weight:300;font-size:1rem;margin:14px auto 0;max-width:40ch;line-height:1.6}
 
-  /* chips */
-  .chip-h{font-family:var(--display);font-weight:600;color:var(--gold-pale);font-size:1.05rem;margin:26px 0 14px}
+  .stack{max-width:440px;margin:26px auto 0;text-align:left;background:rgba(6,26,26,.42);border:1px solid rgba(221,201,142,.34);border-radius:14px;overflow:hidden}
+  .srow{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:15px 22px}
+  .srow+.srow{border-top:1px solid rgba(221,201,142,.16)}
+  .slabel{font-family:var(--body);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-pale);font-weight:500}
+  .sval{font-family:var(--display);font-weight:600;color:#fff;font-size:1.18rem;text-align:right}
+  .idaffirm{color:rgba(254,252,250,.78);font-weight:300;font-size:1rem;line-height:1.7;margin:22px auto 0;max-width:44ch}
+  .inbox{display:inline-flex;gap:10px;align-items:flex-start;text-align:left;background:rgba(221,201,142,.12);border:1px solid rgba(221,201,142,.34);border-radius:12px;padding:13px 16px;margin:22px auto 0;font-size:.84rem;color:var(--gold-pale);font-weight:300;line-height:1.55;max-width:46ch}
+  .scrollcue{margin-top:26px;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(221,201,142,.7);font-weight:400}
+
+  .chip-h{font-family:var(--display);font-weight:600;color:var(--gold-pale);font-size:1.05rem;margin:24px 0 14px}
   .chips{display:grid;grid-template-columns:1fr 1fr;gap:12px}
   .chip{background:rgba(254,252,250,.05);border:1px solid rgba(221,201,142,.3);border-radius:12px;padding:15px 16px 15px 40px;position:relative;font-size:.97rem;color:var(--cream);font-weight:300;line-height:1.42}
   .chip:before{content:"";position:absolute;left:16px;top:20px;width:10px;height:10px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px rgba(168,133,56,.18)}
   .chips.shut .chip{border-color:rgba(221,201,142,.2);color:rgba(254,252,250,.78)}
   .chips.shut .chip:before{background:transparent;border:1.5px solid var(--gold-soft);box-shadow:none;width:9px;height:9px;top:20px}
+  .aside{font-size:.96rem;color:rgba(254,252,250,.72);font-weight:300;line-height:1.7;margin-top:20px;border-left:2px solid rgba(221,201,142,.4);padding-left:16px}
 
-  /* lead/receive ochre band */
   .bigbadge{display:inline-block;font-family:var(--display);font-weight:700;font-size:clamp(1.8rem,6vw,2.8rem);color:var(--teal-deep);letter-spacing:-.01em;margin-bottom:12px}
   .edgecard{background:rgba(6,26,26,.14);border:1px solid rgba(6,26,26,.28);border-radius:12px;padding:20px 22px;margin-top:20px}
   .edgecard .el{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal-deep);font-weight:700;margin-bottom:8px;opacity:.8}
   .edgecard p{color:var(--teal-deep);font-weight:400;font-size:1.02rem;line-height:1.65}
 
-  /* try tonight */
-  .movecard{background:var(--teal-deep);border:1px solid rgba(221,201,142,.4);border-left:4px solid var(--gold);border-radius:12px;padding:30px 30px}
+  .movecard{background:var(--teal-deep);border:1px solid rgba(221,201,142,.4);border-left:4px solid var(--gold);border-radius:12px;padding:30px}
   .moveline{font-family:var(--display);font-weight:400;color:var(--cream);font-size:1.22rem;line-height:1.5}
   .basecard{background:rgba(254,252,250,.04);border:1px solid rgba(221,201,142,.26);border-radius:12px;padding:20px 22px;margin-top:16px}
   .basecard .bt{font-family:var(--display);font-weight:600;color:var(--gold-pale);font-size:.95rem;margin-bottom:6px}
   .basecard p{font-size:.97rem;color:rgba(254,252,250,.84);font-weight:300;line-height:1.7}
   .basecard strong{color:var(--cream);font-weight:600}
 
-  /* pitch */
   .pitch{background:linear-gradient(180deg,rgba(168,133,56,.14),rgba(6,26,26,0)),var(--teal);border:1px solid rgba(221,201,142,.4);border-top:3px solid var(--gold);border-radius:14px;padding:38px 32px;text-align:center}
   .pitch .pl{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-pale);font-weight:600;margin-bottom:10px}
   .pitch h2{font-family:var(--display);font-weight:600;color:var(--cream);font-size:clamp(1.7rem,5vw,2.2rem);line-height:1.12;margin-bottom:12px}
@@ -181,6 +182,7 @@
     .rband{padding:52px 20px}
     .chips{grid-template-columns:1fr}
     .movecard{padding:24px 22px}
+    .sval{font-size:1.05rem}
   }
   @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}.btn.pulse{animation:none}.rin{opacity:1;transform:none}}
 </style>
@@ -196,11 +198,11 @@
 
       <section id="intro">
         <div class="eyebrow">The Touch Reset Quiz</div>
-        <h1>What's your <span class="it">Touch Pattern?</span></h1>
-        <p class="sub">In five minutes, three things your body already knows: how you're wired for turn-on, the pattern you run to keep touch safe, and whether you lead or receive. Then exactly what to do about it. For women, men and couples.</p>
+        <h1>What's your <span class="it">Touch Stack?</span></h1>
+        <p class="sub">You are not one type. In five minutes, your four-layer stack: how you're wired for turn-on, the pattern you run to keep touch safe, the language touch actually reaches you in, and whether you lead or receive. Then what to do about it. For women, men and couples.</p>
         <div class="meta">
-          <span><b>14</b> questions</span>
-          <span><b>5</b> minutes</span>
+          <span><b>15</b> questions</span>
+          <span><b>4</b> layers</span>
           <span>Reading emailed to you</span>
         </div>
         <div style="margin-top:30px"><button class="btn pulse" id="begin">Begin</button></div>
@@ -219,7 +221,7 @@
 
       <section id="quiz" style="display:none">
         <span class="phase" id="phase"></span>
-        <div class="proghead"><span class="l"></span><span class="eyebrow" id="prog">01 / 14</span><span class="l"></span></div>
+        <div class="proghead"><span class="l"></span><span class="eyebrow" id="prog">01 / 15</span><span class="l"></span></div>
         <div class="track"><div class="bar" id="bar"></div></div>
         <h2 class="qtext" id="question"></h2>
         <div class="opts" id="opts"></div>
@@ -227,17 +229,17 @@
       </section>
 
       <section id="reveal">
-        <div class="kicker">Your reading is ready</div>
+        <div class="kicker">Your stack is ready</div>
         <h1>Where shall I send it?</h1>
-        <p class="sub">Your Touch Pattern, your erotic wiring, whether you lead or receive, what turns you on, and your first move to make tonight.</p>
+        <p class="sub">All four layers, what turns you on, what shuts you down, and your first move to make tonight.</p>
         <div class="divider"></div>
         <p class="tease">It all opens on the next screen, and lands in your inbox to keep.</p>
         <form class="capture" id="capForm" autocomplete="on">
           <label for="email">Your email</label>
-          <p class="sublabel">One step, and your full reading opens.</p>
+          <p class="sublabel">One step, and your full stack opens.</p>
           <input type="email" id="email" name="email" placeholder="you@email.com" required>
           <input type="text" class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <button type="submit" class="btn block pulse" id="sendBtn">Reveal my reading</button>
+          <button type="submit" class="btn block pulse" id="sendBtn">Reveal my stack</button>
           <p class="consent">Your reading, then my letters on touch, intimacy and coming back to your body. Leave any time.</p>
           <div class="msg" id="msg"></div>
         </form>
@@ -247,24 +249,29 @@
   </div>
 </main>
 
-<!-- FULL-WIDTH RESULT -->
 <div id="resultPage">
 
   <section class="rband hero">
     <div class="rin">
-      <div class="hero-eyebrow">Your Touch Reset reading</div>
+      <div class="hero-eyebrow">Your Touch Reset stack</div>
       <div class="emblem" id="emblem"></div>
-      <h1 class="idline" id="rHead"></h1>
-      <p class="idsub" id="rSub"></p>
-      <p class="idaffirm" id="rAffirm"></p>
+      <h1 class="idline">This is your <span class="g">stack</span>.</h1>
+      <p class="idsub">Four layers your body runs at once. No one else has this exact combination.</p>
+      <div class="stack">
+        <div class="srow"><span class="slabel">Pleasure Language</span><span class="sval" id="sPleasure"></span></div>
+        <div class="srow"><span class="slabel">Touch Pattern</span><span class="sval" id="sPattern"></span></div>
+        <div class="srow"><span class="slabel">Touch Language</span><span class="sval" id="sLanguage"></span></div>
+        <div class="srow"><span class="slabel">In touch, you</span><span class="sval" id="sOri"></span></div>
+      </div>
+      <p class="idaffirm">None of it is a flaw. It is a set of brilliant adaptations, and every one of them can soften.</p>
       <div class="inbox"><span>&#9993;</span><span>This is also on its way to your inbox. If it's not there in a few minutes, check spam or promotions and drag it across.</span></div>
-      <div class="scrollcue">Keep scrolling &darr;</div>
+      <div class="scrollcue">Your layers, one by one &darr;</div>
     </div>
   </section>
 
   <section class="rband green">
     <div class="rin">
-      <div class="reyebrow">Your erotic wiring</div>
+      <div class="reyebrow">Layer one · your pleasure language</div>
       <h2 class="bandhead" id="rPleasureName"></h2>
       <p class="bandtext" id="rPleasureDesc"></p>
       <div class="chip-h">What turns you on</div>
@@ -274,7 +281,7 @@
 
   <section class="rband dark">
     <div class="rin">
-      <div class="reyebrow">Your touch pattern</div>
+      <div class="reyebrow">Layer two · your touch pattern</div>
       <h2 class="bandhead" id="rPatternName"></h2>
       <p class="bandtext" id="rPatternLine"></p>
       <div class="chip-h" style="margin-bottom:14px">What shuts you down</div>
@@ -282,9 +289,20 @@
     </div>
   </section>
 
+  <section class="rband green">
+    <div class="rin">
+      <div class="reyebrow">Layer three · your touch language</div>
+      <h2 class="bandhead" id="rLangName"></h2>
+      <p class="bandtext" id="rLangReaches"></p>
+      <div class="chip-h">What feeds it</div>
+      <div class="chips" id="rLangFeed"></div>
+      <p class="aside" id="rLangLow"></p>
+    </div>
+  </section>
+
   <section class="rband ochre">
     <div class="rin">
-      <div class="reyebrow dark">Lead or receive</div>
+      <div class="reyebrow dark">Layer four · lead or receive</div>
       <div class="bigbadge" id="rOriBadge"></div>
       <p class="bandtext dark" id="rOriMeaning"></p>
       <div class="edgecard">
@@ -294,7 +312,7 @@
     </div>
   </section>
 
-  <section class="rband green">
+  <section class="rband dark">
     <div class="rin">
       <div class="reyebrow">Try this tonight</div>
       <div class="movecard">
@@ -307,7 +325,7 @@
     </div>
   </section>
 
-  <section class="rband dark">
+  <section class="rband green">
     <div class="rin">
       <div class="reyebrow">Your next step</div>
       <h2 class="bandhead" id="fTitle"></h2>
@@ -316,7 +334,7 @@
     </div>
   </section>
 
-  <section class="rband green">
+  <section class="rband dark">
     <div class="rin">
       <div class="pitch">
         <div class="pl" id="pLine"></div>
@@ -327,7 +345,7 @@
       </div>
       <div id="success">
         <div class="big">It's on its way.</div>
-        <p>Read your reading slowly, somewhere you won't be interrupted. Your body already knows most of it.</p>
+        <p>Read your stack slowly, somewhere you won't be interrupted. Your body already knows most of it.</p>
       </div>
       <div class="again"><button id="restart">start again</button></div>
     </div>
@@ -355,6 +373,7 @@
   var PATTERN_TAG={Holder:20988556,Flame:20988557,Armour:20988558,Signal:20988559,Current:20988560};
   var PATTERN_SEQ={Holder:2821038,Flame:2821039,Armour:2821040,Signal:2821041,Current:2821042};
   var PLEASURE_TAG={Sensual:20944034,Sexual:20944035,Energetic:20944036,Kinky:20944037,Shapeshifter:20944038};
+  var LANG_TAG={Emotional:20999648,Erotic:20999649,Energetic:20999650,Physical:20999651,Spiritual:20999652};
   var ORI_TAG={Leads:20994542,Receives:20994543,Switches:20994544};
   var AUD={
     woman:{tag:20994349,line:"The Touch Reset for Women",door:"The Room",href:"/the-room",cta:"Show me The Room",
@@ -380,19 +399,19 @@
   };
 
   var PLEASURE={
-    Sensual:{name:"The Sensual",
+    Sensual:{name:"The Sensual",short:"Sensual",
       desc:"You don't just feel touch. You absorb it. The flicker of candlelight, the smell of their skin, the texture of sheets against your thighs. Your body responds to beauty, to detail, to the slow unfolding of sensation. You don't just want connection. You want to be melted into, slowly.",
       turnons:["A slow build, no rushing to the finish","Candlelight, scent, music, texture","Full-body touch, not a straight line","Being savoured, like you're being tasted","Anticipation stretched until you can barely stand it"]},
-    Sexual:{name:"The Sexual",
+    Sexual:{name:"The Sexual",short:"Sexual",
       desc:"Direct. Honest. No fluff, no performance. You don't need a long warm-up, you want to feel it now. Raw, real, unfiltered. You crave physical connection that does not apologise for its intensity, and you are not ashamed of wanting what you want. You just want it met.",
       turnons:["Directness, no games","Skin on skin, now","Being wanted openly, and told so","Heat over elaborate staging","A partner who acts the moment they feel it"]},
-    Energetic:{name:"The Energetic",
+    Energetic:{name:"The Energetic",short:"Energetic",
       desc:"You feel everything, even in stillness. Your arousal lives in the invisible: the pause, the pulse, the moment before contact. You don't need touch to feel lit up. You need space, presence, attunement. You are the blueprint of anticipation.",
       turnons:["The charge before a single touch","Eye contact that says everything","Teasing, space, the delicious almost","Being felt from across a room","A partner who slows right down and tunes in"]},
-    Kinky:{name:"The Kinky",
+    Kinky:{name:"The Kinky",short:"Kinky",
       desc:"This is not about performance. It is about permission. What turns you on is not only the act, it is the dynamic underneath: power, trust, tension, a little taboo. You come alive in the unknown, in the pause before the command. This wiring is not dangerous. It is devotional.",
       turnons:["Power play, given or taken","Trust deep enough to hand over control","A little taboo, a little edge","Being told what to do, or telling them","Ritual, restraint, the charge of the unknown"]},
-    Shapeshifter:{name:"The Shapeshifter",
+    Shapeshifter:{name:"The Shapeshifter",short:"Shapeshifter",
       desc:"You are fluent in many languages of turn-on. You are not linear, you are layered. You want it all, and you can hold it: the tease, the tenderness, the rawness, the sacred, the unexpected. You don't want to choose. You want to be met in your full spectrum.",
       turnons:["Variety, surprise, range","Tenderness one night, edge the next","A partner who can meet every side of you","Never being boxed into one mode","The unexpected shift, mid-moment"]}
   };
@@ -415,45 +434,68 @@
       braces:["Being the only source of the spark","Silence read as a threat","Giving that is not returned","Carrying the aliveness alone"]}
   };
 
+  var TLANG={
+    Emotional:{name:"Emotional Touch",
+      reaches:"Touch reaches you through words, attention and being heard all the way through. You feel met when someone stays with what you feel, without reaching to fix it.",
+      feed:["A question that goes one layer deeper","Being listened to without being managed","Your feelings named back to you","Someone who stays while you feel something"]},
+    Erotic:{name:"Erotic Touch",
+      reaches:"Touch reaches you through the current of wanting: spark, desire, appetite, aliveness. You feel met when your own desire is allowed to be yours.",
+      feed:["Slowness and anticipation","Being wanted with no demand attached","Play, flirtation, appetite","Desire that gets to move at your pace"]},
+    Energetic:{name:"Energetic Touch",
+      reaches:"Touch reaches you before a word, in how someone approaches you. You feel met when the presence is clean and the approach can be trusted.",
+      feed:["An unhurried approach, nothing needed back","Attention that rests on you without pressure","Being felt from across a room","Slowness that lets your body choose the contact"]},
+    Physical:{name:"Physical Touch",
+      reaches:"Touch reaches you through skin, weight, warmth and proximity. You feel met by contact that is going nowhere and owes nothing.",
+      feed:["A long hug held past the point you relax","A hand that rests instead of asks","Warmth and weight, no agenda","Slow, unhurried, full-bodied contact"]},
+    Spiritual:{name:"Spiritual Touch",
+      reaches:"Touch reaches you through awe, meaning and belonging, being moved by something larger than you. You feel met when the moment has real weight.",
+      feed:["Shared silence in front of something beautiful","Ritual, the same small sacred thing repeated","Being witnessed, not just seen","Meaning that lands in the body"]}
+  };
+  var LANG_LOW={Emotional:"to be asked how you actually are, and be met in the answer",Erotic:"the spark of aliveness that went quiet",Energetic:"to stop bracing and trust how someone comes toward you",Physical:"contact with nothing owed, in doses your body can trust",Spiritual:"for something to matter again, to actually register"};
+
   var ORI={
-    Leads:{badge:"You lead",verb:"leads",sub:"You bring the charge, and secretly ache to be received.",
+    Leads:{badge:"You lead",word:"Lead",
       meaning:"You set the pace. You orchestrate the pleasure, read the room, make the moment happen. It is magnetic, and it is a lot to carry on your own.",
       edge:"Your growth is receiving. Being devoted to, without directing it. The turn-on you have been missing is being taken, not being the one who always takes.",
       tonight:"Tonight, hand over the lead. Ask your partner to run the whole thing while you do nothing but receive. Say it out loud: “tonight I am not leading.” Notice how hard, and how good, it is to simply be met."},
-    Receives:{badge:"You receive",verb:"receives",sub:"You melt beautifully, and you are ready to reach first.",
+    Receives:{badge:"You receive",word:"Receive",
       meaning:"You open, you soften, you let it wash over you. You receive beautifully, and you can wait a long time to be reached for.",
       edge:"Your growth is leading, and asking. The turn-on you have been missing is naming what you want out loud and reaching first, instead of hoping they read your mind.",
       tonight:"Tonight, make the first move. Say one specific thing you want, in plain words, before you are asked. Watch what happens when your desire gets to lead for once."},
-    Switches:{badge:"You switch",verb:"switches between the two",sub:"You move both ways, and now you get to choose on purpose.",
+    Switches:{badge:"You switch",word:"Switch",
       meaning:"You flip. You can lead with fire or surrender completely, depending on how safe you feel and who is across from you. Your range is your gift.",
       edge:"Your growth is choosing on purpose, rather than only reacting to the room. Lead when you want to lead. Receive when you want to receive. Both by choice.",
       tonight:"Tonight, name your lane before you begin. “I want to lead” or “I want to be taken.” Choosing it out loud turns your flexibility into power, instead of adaptation."}
   };
 
+  /* QUESTIONS: pattern(4) H/F/A/S/C · touch language(4) · pleasure(4) · lead/receive(3) */
   var QPAT=[
     ["When someone offers to help you, your first instinct is to:",[["Wave it off. You are the one who helps.","H"],["Accept quietly, and make sure you are no trouble.","F"],["Politely decline. You have it handled.","A"],["Explain exactly what would and would not be useful.","S"],["Turn it into something warmer and bigger than the small thing offered.","C"]]],
     ["The hardest thing for you to receive is:",[["Care, with nothing expected back.","H"],["Full, undimmed desire or attention.","F"],["Tenderness that asks you to soften.","A"],["Being loved in a mess you have not tidied.","S"],["Aliveness you did not have to generate.","C"]]],
     ["Under stress, you:",[["Over-function. You hold everyone.","H"],["Shrink, smooth, keep the peace.","F"],["Take control, contain it, manage.","A"],["Get precise, explain, curate.","S"],["Do more, lead more, keep it moving.","C"]]],
-    ["The thing people rarely guess about you is:",[["How much you long to be held without having to earn it.","H"],["How much fire you keep turned down.","F"],["How much you want to soften, if it were ever safe enough.","A"],["How much of you they have never actually met.","S"],["How tired you are of being the one who brings the aliveness.","C"]]],
     ["In intimacy, you are most likely to:",[["Give with care, and receive best when you're the one in control.","H"],["Follow their lead and rarely name your own edge.","F"],["Lead and hold authority, and struggle to surrender.","A"],["Stay composed, rarely letting go fully into sensation.","S"],["Spark the aliveness and keep it moving, even when it isn't met.","C"]]]
+  ];
+  var QTL=[
+    ["When you imagine being truly met, it looks most like:",[["Someone staying with your feeling all the way to the end, without fixing it.","Emotional"],["Being wanted, slowly, and letting the wanting be yours.","Erotic"],["A presence that settles you before a single word is spoken.","Energetic"],["A hand that rests on you with nothing owed, and stays.","Physical"],["Being witnessed in front of something larger than both of you.","Spiritual"]]],
+    ["The moment that lands deepest is:",[["A question that goes one layer past politeness.","Emotional"],["A slow kiss that's complete in itself, going nowhere.","Erotic"],["The pause before contact, when you feel them approach.","Energetic"],["A long hug, right at the second your body decides it's real.","Physical"],["Music, or a night sky, that quietly rearranges you.","Spiritual"]]],
+    ["You feel most safe when:",[["You can say the true thing and someone stays.","Emotional"],["You're desired without it turning into a demand.","Erotic"],["The approach is clean and unhurried, nothing needed back.","Energetic"],["There's warmth and weight, contact that isn't going anywhere.","Physical"],["The moment has meaning, and you're part of something.","Spiritual"]]],
+    ["Left to itself, touch reaches you most through:",[["Words, attention, being heard.","Emotional"],["Appetite, beauty, the current of wanting.","Erotic"],["Atmosphere, resonance, the feeling in a room.","Energetic"],["Skin, warmth, closeness.","Physical"],["Awe, silence, the sense of the sacred.","Spiritual"]]]
   ];
   var QPL=[
     ["Which scene would you most want to be in?",[["A candlelit bath, silk, and someone undressing you slowly.","Sensual"],["Pushed against the wall the second the door shuts.","Sexual"],["A long, charged look held across a crowded room.","Energetic"],["Hands pinned above your head, a whispered command.","Kinky"],["One that keeps changing: tender, then wild, then slow.","Shapeshifter"]]],
     ["How do you most like to be kissed?",[["Slowly and softly, like you're being savoured.","Sensual"],["Deep and hungry, with no hesitation.","Sexual"],["Barely touching at first, all breath and almost.","Energetic"],["Held by the jaw, and told to keep still.","Kinky"],["Differently every time. Surprise me.","Shapeshifter"]]],
     ["The text that would turn you on most:",[["“The bath's run and the candles are lit. Come home.”","Sensual"],["“I can't stop thinking about your body.”","Sexual"],["“I felt you the second you walked in tonight.”","Energetic"],["“Be ready when I get home. Do as you're told.”","Kinky"],["“Tonight could go so many different ways…”","Shapeshifter"]]],
-    ["What builds the heat for you?",[["Scent, texture, music, a slow unfolding.","Sensual"],["Directness, and someone who says what they want.","Sexual"],["The space and the tension before anything happens.","Energetic"],["Power, a little risk, the edge of the unknown.","Kinky"],["A mix that keeps shifting so you never quite settle.","Shapeshifter"]]],
     ["Your body opens most when&hellip;",[["There's beauty, and a touch that lingers.","Sensual"],["There's no hesitation, and real, felt want.","Sexual"],["There's presence, breath, and being truly felt.","Energetic"],["There's deep trust, a playful edge, and surprise.","Kinky"],["Nothing is off-limits and you can bring every side of you.","Shapeshifter"]]]
   ];
   var QLR=[
     ["When desire is in the air, you're the one who&hellip;",[["Makes the first move and sets the tone.","L"],["Waits to be reached for, and melts when you are.","R"],["Reads the moment and goes either way.","B"]]],
     ["Your favourite version of sex is&hellip;",[["You driving, watching them come undone.","L"],["Being taken, not having to think at all.","R"],["Trading who's in charge back and forth.","B"]]],
-    ["Handing over control feels&hellip;",[["Hard. You'd rather hold the reins.","L"],["Like relief. Finally.","R"],["Fine, once the trust is really there.","B"]]],
-    ["In bed, in one word, you're&hellip;",[["The initiator.","L"],["The receiver.","R"],["A switch.","B"]]]
+    ["Handing over control feels&hellip;",[["Hard. You'd rather hold the reins.","L"],["Like relief. Finally.","R"],["Fine, once the trust is really there.","B"]]]
   ];
 
-  var ALL=[].concat(QPAT,QPL,QLR);
-  var TOTAL=ALL.length;
-  function phaseFor(idx){ if(idx<5)return"Part one · how you protect touch"; if(idx<10)return"Part two · how you're turned on"; return"Part three · lead or receive"; }
+  var ALL=[].concat(QPAT,QTL,QPL,QLR);
+  var TOTAL=ALL.length; // 15
+  function phaseFor(idx){ if(idx<4)return"Part one · how you protect touch"; if(idx<8)return"Part two · how touch reaches you"; if(idx<12)return"Part three · how you're turned on"; return"Part four · lead or receive"; }
 
   var i=0,answers=new Array(TOTAL).fill(null),locked=false,audience='woman';
   var $=function(id){return document.getElementById(id);};
@@ -495,56 +537,58 @@
   }
   $('back').addEventListener('click',function(){if(i>0){i--;renderQ();}});
 
-  var result={pattern:'',pleasure:'',ori:''};
+  var result={pattern:'',language:'',languageLow:'',pleasure:'',ori:''};
 
   function score(){
     var pt={H:0,F:0,A:0,S:0,C:0};
-    for(var a=0;a<5;a++){if(answers[a]!=null)pt[QPAT[a][1][answers[a]][1]]++;}
+    for(var a=0;a<4;a++){if(answers[a]!=null)pt[QPAT[a][1][answers[a]][1]]++;}
     var PM={H:'Holder',F:'Flame',A:'Armour',S:'Signal',C:'Current'};
     var pattern=PM[Object.keys(pt).sort(function(x,y){return pt[y]-pt[x];})[0]];
+    var TLO=["Emotional","Erotic","Energetic","Physical","Spiritual"];
+    var tl={Emotional:0,Erotic:0,Energetic:0,Physical:0,Spiritual:0};
+    for(var b=0;b<4;b++){var ti=answers[4+b];if(ti!=null)tl[QTL[b][1][ti][1]]++;}
+    var tlSorted=TLO.slice().sort(function(x,y){return tl[y]-tl[x];});
+    var language=tlSorted[0],languageLow=tlSorted[tlSorted.length-1];
     var pl={Sensual:0,Sexual:0,Energetic:0,Kinky:0,Shapeshifter:0};
-    for(var b=0;b<5;b++){var pi=answers[5+b];if(pi!=null)pl[QPL[b][1][pi][1]]++;}
+    for(var c=0;c<4;c++){var pi=answers[8+c];if(pi!=null)pl[QPL[c][1][pi][1]]++;}
     var prim=[['Sensual',pl.Sensual],['Sexual',pl.Sexual],['Energetic',pl.Energetic],['Kinky',pl.Kinky]].sort(function(x,y){return y[1]-x[1];});
-    var spread=[pl.Sensual,pl.Sexual,pl.Energetic,pl.Kinky].filter(function(n){return n>=1;}).length;
     var isShift = pl.Shapeshifter>=2 || prim[0][1]<=1;
     var pleasure=isShift?'Shapeshifter':prim[0][0];
     var lr={L:0,R:0,B:0};
-    for(var c=0;c<4;c++){var li=answers[10+c];if(li!=null)lr[QLR[c][1][li][1]]++;}
+    for(var d=0;d<3;d++){var li=answers[12+d];if(li!=null)lr[QLR[d][1][li][1]]++;}
     var ori;
     if(lr.B>lr.L && lr.B>lr.R)ori='Switches';
     else if(lr.L===lr.R)ori='Switches';
     else ori=(lr.L>lr.R)?'Leads':'Receives';
-    return {pattern:pattern,pleasure:pleasure,ori:ori};
-  }
-
-  function headline(){
-    var pa=PATTERN[result.pattern],o=ORI[result.ori];
-    var art=/^[AEIOU]/i.test(result.pleasure)?'an':'a';
-    return "You're "+art+" "+result.pleasure+" "+pa.short+" who "+o.verb+".";
+    return {pattern:pattern,language:language,languageLow:languageLow,pleasure:pleasure,ori:ori};
   }
 
   function doReveal(){
     result=score();
     quiz.style.display='none';reveal.style.display='block';reveal.scrollIntoView({behavior:'smooth',block:'start'});
-    if(typeof gtag==='function')gtag('event','quiz_complete',{quiz:'touch_reset',pattern:result.pattern,pleasure:result.pleasure,orientation:result.ori,audience:audience});
+    if(typeof gtag==='function')gtag('event','quiz_complete',{quiz:'touch_reset',pattern:result.pattern,language:result.language,pleasure:result.pleasure,orientation:result.ori,audience:audience});
   }
 
   function fillList(el,arr,cls){el.innerHTML='';arr.forEach(function(t){var d=document.createElement('div');d.className=cls;d.textContent=t;el.appendChild(d);});}
   function fillLi(el,arr){el.innerHTML='';arr.forEach(function(t){var li=document.createElement('li');li.textContent=t;el.appendChild(li);});}
 
   function paintResult(){
-    var pl=PLEASURE[result.pleasure],pa=PATTERN[result.pattern],o=ORI[result.ori],a=AUD[audience];
-    var head=headline();
+    var pl=PLEASURE[result.pleasure],pa=PATTERN[result.pattern],lg=TLANG[result.language],o=ORI[result.ori],a=AUD[audience];
     $('emblem').innerHTML=EMBLEM[result.pattern];
-    $('rHead').innerHTML=head.replace(result.pleasure+' '+pa.short,'<span class="g">'+result.pleasure+' '+pa.short+'</span>');
-    $('rSub').textContent=o.sub;
-    $('rAffirm').textContent="You've just named how your body actually works in touch and desire. None of it is a flaw. It is a set of brilliant adaptations, and every one of them can soften.";
+    $('sPleasure').textContent=pl.short;
+    $('sPattern').textContent=pa.short;
+    $('sLanguage').textContent=lg.name.replace(' Touch','');
+    $('sOri').textContent=o.word;
     $('rPleasureName').textContent=pl.name;
     $('rPleasureDesc').textContent=pl.desc;
     fillList($('rTurnons'),pl.turnons,'chip');
     $('rPatternName').textContent=pa.name;
     $('rPatternLine').textContent=pa.line;
     fillList($('rBraces'),pa.braces,'chip');
+    $('rLangName').textContent=lg.name;
+    $('rLangReaches').textContent=lg.reaches;
+    fillList($('rLangFeed'),lg.feed,'chip');
+    $('rLangLow').textContent="And the one that's been waiting for you: "+TLANG[result.languageLow].name.replace(' Touch','')+". Underneath, you are quietly starving for "+LANG_LOW[result.languageLow]+".";
     $('rOriBadge').textContent=o.badge;
     $('rOriMeaning').textContent=o.meaning;
     $('rOriEdge').textContent=o.edge;
@@ -565,7 +609,7 @@
     var email=$('email').value.trim();var msg=$('msg');msg.className='msg';
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){msg.className='msg err';msg.textContent='Please enter a valid email.';return;}
     var btn=$('sendBtn');btn.disabled=true;btn.textContent='Revealing…';
-    var tags=[PATTERN_TAG[result.pattern],PLEASURE_TAG[result.pleasure],ORI_TAG[result.ori],AUD[audience].tag].filter(function(t){return t;});
+    var tags=[PATTERN_TAG[result.pattern],PLEASURE_TAG[result.pleasure],LANG_TAG[result.language],ORI_TAG[result.ori],AUD[audience].tag].filter(function(t){return t;});
     fetch('/.netlify/functions/subscribe',{
       method:'POST',headers:{'Content-Type':'application/json'},
       body:JSON.stringify({email:email,tagIds:tags,sequenceId:PATTERN_SEQ[result.pattern]||null,website:$('capForm').website.value})
@@ -575,10 +619,10 @@
           paintResult();
           funnel.style.display='none';resultPage.style.display='block';
           window.scrollTo(0,0);revealBands();
-          if(typeof gtag==='function')gtag('event','quiz_optin',{quiz:'touch_reset',pattern:result.pattern,pleasure:result.pleasure,orientation:result.ori,audience:audience});
+          if(typeof gtag==='function')gtag('event','quiz_optin',{quiz:'touch_reset',pattern:result.pattern,language:result.language,pleasure:result.pleasure,orientation:result.ori,audience:audience});
         }else{throw new Error('fail');}
       }).catch(function(){
-        btn.disabled=false;btn.textContent='Reveal my reading';
+        btn.disabled=false;btn.textContent='Reveal my stack';
         msg.className='msg err';msg.textContent='Something went wrong. Please try again.';
       });
   });
@@ -587,7 +631,7 @@
     i=0;answers=new Array(TOTAL).fill(null);locked=false;
     resultPage.style.display='none';funnel.style.display='flex';reveal.style.display='none';
     $('capForm').style.display='block';$('capForm').reset();$('msg').textContent='';
-    $('sendBtn').disabled=false;$('sendBtn').textContent='Reveal my reading';
+    $('sendBtn').disabled=false;$('sendBtn').textContent='Reveal my stack';
     intro.style.display='block';window.scrollTo(0,0);
   });
 })();
