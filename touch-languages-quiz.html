@@ -33,15 +33,13 @@
   body{background:var(--teal-deep);color:var(--cream);font-family:var(--body);font-size:1.0625rem;line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden;min-height:100vh;display:flex;flex-direction:column}
   a{color:inherit}
   ::selection{background:var(--gold);color:#fff}
-  .wgold{color:var(--gold-pale);font-weight:600}
 
-  .topbar{background:var(--teal);height:60px;display:flex;align-items:center;justify-content:center;position:relative}
+  .topbar{background:var(--teal);height:60px;display:flex;align-items:center;justify-content:center}
   .topbar .brand{font-family:var(--display);font-weight:600;font-size:15px;letter-spacing:.04em;color:var(--cream);text-decoration:none}
   .topbar .brand b{color:var(--gold-pale);font-weight:600}
 
   main{flex:1;display:flex;align-items:center;justify-content:center;padding:44px 20px}
-
-  .stage{position:relative;width:100%;max-width:620px;background:var(--teal);border-radius:18px;padding:46px 44px 40px;overflow:hidden;box-shadow:0 1px 0 rgba(168,133,56,.28) inset,0 30px 80px -40px rgba(0,0,0,.6)}
+  .stage{position:relative;width:100%;max-width:600px;background:var(--teal);border-radius:18px;padding:46px 44px 40px;overflow:hidden;box-shadow:0 1px 0 rgba(168,133,56,.28) inset,0 30px 80px -40px rgba(0,0,0,.6)}
   .glow{position:absolute;left:50%;bottom:-60px;transform:translateX(-50%);width:480px;height:300px;background:radial-gradient(closest-side,rgba(168,133,56,.20),rgba(168,133,56,0));pointer-events:none}
   .inner{position:relative}
 
@@ -49,23 +47,21 @@
   h1{font-family:var(--display);font-weight:500;color:var(--cream);line-height:1.1;letter-spacing:-.01em}
   .divider{width:40px;height:1px;background:rgba(221,201,142,.5);margin:20px auto}
 
-  /* intro */
   #intro{text-align:center}
   #intro h1{font-size:2.2rem;margin:14px 0 0}
   #intro h1 .it{font-style:italic;font-weight:400;color:var(--gold-pale)}
   #intro .sub{color:rgba(254,252,250,.82);font-weight:300;font-size:1.04rem;line-height:1.72;margin:20px auto 0;max-width:44ch}
-  #intro .meta{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin:26px auto 0;color:rgba(221,201,142,.9);font-size:.82rem;letter-spacing:.02em;font-weight:300}
+  #intro .meta{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin:26px auto 0;color:rgba(221,201,142,.9);font-size:.82rem;font-weight:300}
   #intro .meta b{color:var(--gold-pale);font-weight:500}
   #intro .note{color:rgba(221,201,142,.85);font-style:italic;font-size:.85rem;margin-top:22px;font-weight:300}
 
   .btn{display:inline-block;text-decoration:none;cursor:pointer;border:none;font-family:var(--display);font-weight:500;font-size:.98rem;letter-spacing:.01em;padding:14px 32px;border-radius:10px;background:var(--gold-pale);color:var(--teal);transition:transform .2s,background .2s}
   .btn:hover{background:#e7d6a3;transform:translateY(-1px)}
   .btn.block{width:100%;padding:15px 0;text-align:center}
-  .btn[disabled]{opacity:.35;pointer-events:none}
+  .btn[disabled]{opacity:.4;pointer-events:none}
   @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(221,201,142,.45)}70%{box-shadow:0 0 0 16px rgba(221,201,142,0)}100%{box-shadow:0 0 0 0 rgba(221,201,142,0)}}
   .btn.pulse{animation:pulse 2.4s infinite}
 
-  /* audience */
   #audience{text-align:center;display:none}
   #audience h1{font-size:1.7rem;margin-top:12px}
   #audience .aud-opts{display:flex;flex-direction:column;gap:11px;margin-top:26px}
@@ -73,14 +69,12 @@
   .aud:hover{border-color:var(--gold-pale);background:rgba(221,201,142,.09);transform:translateY(-1px)}
   .aud span{display:block;font-family:var(--body);font-weight:300;font-size:.82rem;color:rgba(254,252,250,.6);margin-top:3px}
 
-  /* progress */
   .proghead{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:12px}
   .proghead .l{width:24px;height:1px;background:rgba(221,201,142,.4)}
   .phase{display:block;text-align:center;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:rgba(221,201,142,.65);margin-bottom:16px;font-weight:400}
   .track{height:2px;background:rgba(254,252,250,.1);border-radius:2px;overflow:hidden}
   .track .bar{height:100%;width:0;background:var(--gold);transition:width .35s}
 
-  /* question */
   .qtext{font-family:var(--display);color:var(--cream);font-size:1.34rem;font-weight:500;line-height:1.34;text-align:center;margin:22px 0 24px}
   .opts{display:flex;flex-direction:column;gap:9px}
   .opt{font-family:var(--body);text-align:left;width:100%;background:rgba(254,252,250,.035);border:1px solid rgba(221,201,142,.26);border-radius:11px;padding:15px 18px;font-size:.96rem;color:rgba(254,252,250,.84);line-height:1.5;cursor:pointer;transition:border-color .18s,background .18s,color .18s;font-weight:300}
@@ -89,13 +83,13 @@
   .qback{display:block;margin:18px auto 0;background:none;border:none;color:rgba(221,201,142,.7);font-size:.78rem;cursor:pointer;font-family:var(--body);font-weight:300;text-decoration:underline;text-underline-offset:3px}
   .qback[hidden]{display:none}
 
-  /* reveal (teaser + capture) */
+  /* teaser + capture */
   #reveal{display:none;text-align:center}
-  #reveal .kicker{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-pale);font-weight:400}
-  #reveal h1{font-size:2.1rem;margin:12px 0 0;line-height:1.14}
+  #reveal .kicker{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-pale)}
+  #reveal h1{font-size:2rem;margin:12px 0 0;line-height:1.14}
   #reveal .sub{font-family:var(--display);font-style:italic;font-weight:300;color:rgba(221,201,142,.92);font-size:1.04rem;line-height:1.5;margin:14px auto 0;max-width:40ch}
   #reveal .tease{color:rgba(254,252,250,.82);font-weight:300;font-size:.98rem;line-height:1.7;margin:0 auto;max-width:44ch}
-  .capture{max-width:400px;margin:26px auto 0}
+  .capture{max-width:400px;margin:24px auto 0}
   .capture label{display:block;font-family:var(--display);font-weight:400;font-size:1.05rem;color:var(--cream);margin-bottom:6px}
   .capture .sublabel{font-size:.84rem;color:rgba(254,252,250,.6);font-weight:300;margin-bottom:14px;line-height:1.5}
   .capture input[type=email]{width:100%;background:rgba(254,252,250,.06);border:1px solid rgba(221,201,142,.35);border-radius:10px;padding:14px 16px;color:var(--cream);font-family:var(--body);font-size:.96rem;margin-bottom:10px}
@@ -106,76 +100,100 @@
   .msg{font-size:.85rem;margin-top:12px;min-height:1.2em}
   .msg.err{color:#e6b8b8}
 
-  /* result (rich) */
-  #result{display:none}
-  #result .rhero{text-align:center;margin-bottom:8px}
-  #result .rhero .kicker{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-pale)}
-  #result .rhero h1{font-size:2rem;margin:10px 0 0;line-height:1.16}
-  #result .rhero .rsub{font-family:var(--display);font-style:italic;font-weight:300;color:rgba(221,201,142,.92);font-size:1.02rem;margin:12px auto 0;max-width:38ch;line-height:1.45}
-  #result .rhero .affirm{color:rgba(254,252,250,.82);font-weight:300;font-size:1rem;line-height:1.75;margin:14px auto 0;max-width:46ch}
-  .inbox{display:flex;gap:10px;align-items:flex-start;background:rgba(221,201,142,.1);border:1px solid rgba(221,201,142,.3);border-radius:12px;padding:14px 16px;margin:22px 0;font-size:.86rem;color:var(--gold-pale);font-weight:300;line-height:1.55}
-  .rblock{margin:28px 0}
-  .rhead{font-family:var(--body);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-pale);font-weight:600;margin-bottom:6px;display:flex;align-items:center;gap:10px}
-  .rhead:before{content:"";width:20px;height:1px;background:var(--gold)}
-  .rname{font-family:var(--display);font-weight:600;color:var(--cream);font-size:1.32rem;margin:6px 0 12px}
-  .rtext{font-size:.99rem;color:rgba(254,252,250,.85);font-weight:300;line-height:1.75}
-  .rtext strong{color:var(--cream);font-weight:600}
-  .rlist{list-style:none;margin-top:10px}
-  .rlist li{position:relative;padding:11px 0 11px 24px;font-size:.98rem;color:rgba(254,252,250,.86);font-weight:300;line-height:1.5;border-bottom:1px solid rgba(221,201,142,.12)}
-  .rlist li:last-child{border-bottom:none}
-  .rlist li:before{content:"";position:absolute;left:0;top:19px;width:12px;height:2px;background:var(--gold)}
-  .badge{display:inline-block;font-family:var(--display);font-weight:600;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);background:var(--gold-pale);border-radius:99px;padding:6px 16px;margin-bottom:12px}
-  .edge{background:rgba(254,252,250,.035);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:16px 20px;margin-top:14px}
-  .edge .el{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-pale);font-weight:600;margin-bottom:6px}
-  .tonight{background:rgba(254,252,250,.035);border:1px solid rgba(221,201,142,.28);border-top:3px solid var(--gold);border-radius:8px;padding:22px 24px}
-  .tonight .tl{font-family:var(--display);font-weight:600;color:var(--cream);font-size:1.08rem;margin-bottom:8px}
-  .base{background:rgba(254,252,250,.035);border:1px solid rgba(221,201,142,.28);border-radius:8px;padding:20px 22px;margin-top:14px}
-  .base .bt{font-family:var(--display);font-weight:600;color:var(--gold-pale);font-size:.95rem;margin-bottom:6px}
+  /* ============ FULL-WIDTH RESULT PAGE ============ */
+  #resultPage{display:none;width:100%}
+  .rband{width:100%;padding:66px 24px;position:relative;overflow:hidden}
+  .rin{max-width:680px;margin:0 auto;opacity:0;transform:translateY(22px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+  .rin.in{opacity:1;transform:none}
+  .rband.green{background:var(--teal)}
+  .rband.dark{background:var(--teal-deep)}
+  .rband.ochre{background:var(--gold)}
+  .reyebrow{font-family:var(--body);font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-pale);font-weight:600;display:inline-flex;align-items:center;gap:10px;margin-bottom:16px}
+  .reyebrow:before{content:"";width:26px;height:1px;background:var(--gold-pale)}
+  .reyebrow.dark{color:var(--teal-deep)}
+  .reyebrow.dark:before{background:var(--teal-deep)}
+  .bandhead{font-family:var(--display);font-weight:600;color:var(--cream);font-size:clamp(1.6rem,5vw,2.3rem);line-height:1.1;letter-spacing:-.01em;margin-bottom:16px}
+  .bandtext{font-size:1.05rem;color:rgba(254,252,250,.86);font-weight:300;line-height:1.78;max-width:60ch}
+  .bandtext.dark{color:rgba(6,26,26,.86)}
 
-  .pitch{background:var(--teal-deep);border:1px solid rgba(221,201,142,.34);border-top:3px solid var(--gold);border-radius:10px;padding:30px 28px;margin-top:30px;text-align:center}
+  /* hero band */
+  .rband.hero{padding:80px 24px 70px;text-align:center;background:linear-gradient(180deg,rgba(6,26,26,.55),rgba(6,26,26,.93)),url('https://feelfullyyou.com/dyad-pomegranates.jpg') center/cover no-repeat;background-color:var(--teal-deep)}
+  .rband.hero .rin{opacity:1;transform:none}
+  .hero-eyebrow{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-pale);font-weight:500}
+  .emblem{width:96px;height:96px;margin:22px auto 6px;border-radius:50%;border:1px solid rgba(221,201,142,.55);display:flex;align-items:center;justify-content:center;background:rgba(6,26,26,.35);box-shadow:0 0 40px -8px rgba(168,133,56,.55)}
+  .emblem svg{width:46px;height:46px;stroke:var(--gold-pale);fill:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+  .idline{font-family:var(--display);font-weight:600;color:#fff;font-size:clamp(2rem,7vw,3.3rem);line-height:1.06;letter-spacing:-.02em;margin:16px auto 0;max-width:16ch}
+  .idline .g{color:var(--gold-pale)}
+  .idsub{font-family:var(--display);font-style:italic;font-weight:300;color:var(--gold-pale);font-size:clamp(1.05rem,2.6vw,1.3rem);margin:16px auto 0;max-width:34ch;line-height:1.4}
+  .idaffirm{color:rgba(254,252,250,.78);font-weight:300;font-size:1rem;line-height:1.7;margin:18px auto 0;max-width:44ch}
+  .inbox{display:inline-flex;gap:10px;align-items:flex-start;text-align:left;background:rgba(221,201,142,.12);border:1px solid rgba(221,201,142,.34);border-radius:12px;padding:13px 16px;margin:26px auto 0;font-size:.84rem;color:var(--gold-pale);font-weight:300;line-height:1.55;max-width:46ch}
+  .scrollcue{margin-top:30px;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(221,201,142,.7);font-weight:400}
+
+  /* chips */
+  .chip-h{font-family:var(--display);font-weight:600;color:var(--gold-pale);font-size:1.05rem;margin:26px 0 14px}
+  .chips{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .chip{background:rgba(254,252,250,.05);border:1px solid rgba(221,201,142,.3);border-radius:12px;padding:15px 16px 15px 40px;position:relative;font-size:.97rem;color:var(--cream);font-weight:300;line-height:1.42}
+  .chip:before{content:"";position:absolute;left:16px;top:20px;width:10px;height:10px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px rgba(168,133,56,.18)}
+  .chips.shut .chip{border-color:rgba(221,201,142,.2);color:rgba(254,252,250,.78)}
+  .chips.shut .chip:before{background:transparent;border:1.5px solid var(--gold-soft);box-shadow:none;width:9px;height:9px;top:20px}
+
+  /* lead/receive ochre band */
+  .bigbadge{display:inline-block;font-family:var(--display);font-weight:700;font-size:clamp(1.8rem,6vw,2.8rem);color:var(--teal-deep);letter-spacing:-.01em;margin-bottom:12px}
+  .edgecard{background:rgba(6,26,26,.14);border:1px solid rgba(6,26,26,.28);border-radius:12px;padding:20px 22px;margin-top:20px}
+  .edgecard .el{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal-deep);font-weight:700;margin-bottom:8px;opacity:.8}
+  .edgecard p{color:var(--teal-deep);font-weight:400;font-size:1.02rem;line-height:1.65}
+
+  /* try tonight */
+  .movecard{background:var(--teal-deep);border:1px solid rgba(221,201,142,.4);border-left:4px solid var(--gold);border-radius:12px;padding:30px 30px}
+  .moveline{font-family:var(--display);font-weight:400;color:var(--cream);font-size:1.22rem;line-height:1.5}
+  .basecard{background:rgba(254,252,250,.04);border:1px solid rgba(221,201,142,.26);border-radius:12px;padding:20px 22px;margin-top:16px}
+  .basecard .bt{font-family:var(--display);font-weight:600;color:var(--gold-pale);font-size:.95rem;margin-bottom:6px}
+  .basecard p{font-size:.97rem;color:rgba(254,252,250,.84);font-weight:300;line-height:1.7}
+  .basecard strong{color:var(--cream);font-weight:600}
+
+  /* pitch */
+  .pitch{background:linear-gradient(180deg,rgba(168,133,56,.14),rgba(6,26,26,0)),var(--teal);border:1px solid rgba(221,201,142,.4);border-top:3px solid var(--gold);border-radius:14px;padding:38px 32px;text-align:center}
   .pitch .pl{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-pale);font-weight:600;margin-bottom:10px}
-  .pitch h2{font-family:var(--display);font-weight:600;color:var(--cream);font-size:1.6rem;line-height:1.15;margin-bottom:12px}
-  .pitch .blurb{color:rgba(254,252,250,.82);font-weight:300;font-size:.98rem;line-height:1.7;max-width:42ch;margin:0 auto 18px}
-  .pitch .foryou{text-align:left;max-width:42ch;margin:0 auto 22px}
+  .pitch h2{font-family:var(--display);font-weight:600;color:var(--cream);font-size:clamp(1.7rem,5vw,2.2rem);line-height:1.12;margin-bottom:12px}
+  .pitch .blurb{color:rgba(254,252,250,.84);font-weight:300;font-size:1rem;line-height:1.7;max-width:42ch;margin:0 auto 20px}
+  .pitch .foryou{text-align:left;max-width:40ch;margin:0 auto 24px}
   .pitch .foryou .fyh{font-size:.8rem;letter-spacing:.02em;color:var(--gold-pale);font-weight:500;margin-bottom:8px}
-  .pitch .foryou li{list-style:none;position:relative;padding:7px 0 7px 22px;font-size:.94rem;color:rgba(254,252,250,.82);font-weight:300;line-height:1.45}
-  .pitch .foryou li:before{content:"";position:absolute;left:0;top:15px;width:11px;height:2px;background:var(--gold)}
+  .pitch .foryou li{list-style:none;position:relative;padding:8px 0 8px 24px;font-size:.96rem;color:rgba(254,252,250,.84);font-weight:300;line-height:1.45}
+  .pitch .foryou li:before{content:"";position:absolute;left:0;top:16px;width:12px;height:2px;background:var(--gold)}
+  .pitch .btn{font-size:1.05rem;padding:16px 40px}
 
-  #success{display:none;text-align:center}
-  #success .big{font-family:var(--display);color:var(--cream);font-size:1.4rem;font-weight:500;margin-bottom:10px}
-  #success p{color:rgba(254,252,250,.8);font-weight:300;font-size:.96rem;line-height:1.7;max-width:42ch;margin:0 auto}
-
-  .again{margin-top:20px;text-align:center}
-  .again button{background:transparent;border:none;color:rgba(221,201,142,.75);font-size:.8rem;cursor:pointer;text-decoration:underline;text-underline-offset:3px;font-weight:300;font-family:var(--body)}
+  #success{text-align:center;margin-top:30px}
+  #success .big{font-family:var(--display);color:var(--cream);font-size:1.3rem;font-weight:500;margin-bottom:8px}
+  #success p{color:rgba(254,252,250,.78);font-weight:300;font-size:.95rem;line-height:1.65;max-width:42ch;margin:0 auto}
+  .again{margin-top:22px;text-align:center}
+  .again button{background:transparent;border:none;color:rgba(221,201,142,.7);font-size:.8rem;cursor:pointer;text-decoration:underline;text-underline-offset:3px;font-weight:300;font-family:var(--body)}
 
   footer{background:var(--gold);color:#fff;padding:20px 28px;font-size:13px}
   footer .fwrap{max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
   footer .fbrand{font-family:var(--display);font-weight:600;font-size:.95rem;color:#fff}
   footer a{color:#fff}
 
-  @media(max-width:560px){
+  @media(max-width:600px){
     .stage{padding:36px 22px 30px}
     #intro h1{font-size:1.8rem}
     .qtext{font-size:1.2rem}
-    #reveal h1{font-size:1.8rem}
-    #result .rhero h1{font-size:1.7rem}
-    #intro .meta{gap:14px}
-    .pitch{padding:26px 20px}
-    .pitch h2{font-size:1.4rem}
+    #reveal h1{font-size:1.7rem}
+    .rband{padding:52px 20px}
+    .chips{grid-template-columns:1fr}
+    .movecard{padding:24px 22px}
   }
-  @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}.btn.pulse{animation:none}}
+  @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}.btn.pulse{animation:none}.rin{opacity:1;transform:none}}
 </style>
 </head>
 <body>
 
 <div class="topbar"><a class="brand" href="/">Feel Fully <b>You</b></a></div>
 
-<main>
+<main id="funnel">
   <div class="stage">
     <div class="glow"></div>
     <div class="inner">
 
-      <!-- INTRO -->
       <section id="intro">
         <div class="eyebrow">The Touch Reset Quiz</div>
         <h1>What's your <span class="it">Touch Pattern?</span></h1>
@@ -189,7 +207,6 @@
         <p class="note">Answer from your body, not your history. What's actually true, not what you wish were.</p>
       </section>
 
-      <!-- AUDIENCE -->
       <section id="audience">
         <div class="eyebrow">First</div>
         <h1>I'm reading this as&hellip;</h1>
@@ -200,7 +217,6 @@
         </div>
       </section>
 
-      <!-- QUIZ -->
       <section id="quiz" style="display:none">
         <span class="phase" id="phase"></span>
         <div class="proghead"><span class="l"></span><span class="eyebrow" id="prog">01 / 14</span><span class="l"></span></div>
@@ -210,7 +226,6 @@
         <button class="qback" id="back" hidden>go back</button>
       </section>
 
-      <!-- REVEAL (teaser + capture) -->
       <section id="reveal">
         <div class="kicker">Your reading</div>
         <h1 id="tHead"></h1>
@@ -228,81 +243,88 @@
         </form>
       </section>
 
-      <!-- RESULT -->
-      <section id="result">
-        <div class="rhero">
-          <div class="kicker">Your reading</div>
-          <h1 id="rHead"></h1>
-          <p class="rsub" id="rSub"></p>
-          <p class="affirm" id="rAffirm"></p>
-        </div>
-
-        <div class="inbox">
-          <span>&#9993;</span>
-          <span>This reading is also on its way to your inbox. If you don't see it in a few minutes, check spam or promotions and drag it to your main inbox.</span>
-        </div>
-
-        <div class="rblock">
-          <div class="rhead">Your erotic wiring</div>
-          <div class="rname" id="rPleasureName"></div>
-          <p class="rtext" id="rPleasureDesc"></p>
-          <ul class="rlist" id="rTurnons"></ul>
-        </div>
-
-        <div class="rblock">
-          <div class="rhead">Your touch pattern</div>
-          <div class="rname" id="rPatternName"></div>
-          <p class="rtext" id="rPatternLine"></p>
-        </div>
-
-        <div class="rblock">
-          <div class="rhead">Lead or receive</div>
-          <span class="badge" id="rOriBadge"></span>
-          <p class="rtext" id="rOriMeaning"></p>
-          <div class="edge">
-            <div class="el">Your growth edge</div>
-            <p class="rtext" id="rOriEdge"></p>
-          </div>
-        </div>
-
-        <div class="rblock">
-          <div class="rhead">What shuts you down</div>
-          <ul class="rlist" id="rBraces"></ul>
-        </div>
-
-        <div class="rblock">
-          <div class="tonight">
-            <div class="tl">Try this tonight</div>
-            <p class="rtext" id="rTonight"></p>
-            <div class="base">
-              <div class="bt">And your two-minute anchor: Touch Base&reg;</div>
-              <p class="rtext">Press your thumb to your forefinger and feel every ridge, slowly. Tell yourself, <strong>I am safe right now.</strong> Hold for two minutes. Reach for it the moment the brace comes up.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="pitch">
-          <div class="pl" id="pLine"></div>
-          <h2 id="pDoor"></h2>
-          <p class="blurb" id="pBlurb"></p>
-          <div class="foryou">
-            <div class="fyh">This is for you if&hellip;</div>
-            <ul id="pForyou"></ul>
-          </div>
-          <a class="btn pulse" id="pCta" href="#">Show me</a>
-        </div>
-
-        <div id="success" style="margin-top:26px">
-          <div class="big">It's on its way.</div>
-          <p>Read your reading slowly, somewhere you won't be interrupted. Your body already knows most of it.</p>
-        </div>
-
-        <div class="again"><button id="restart">start again</button></div>
-      </section>
-
     </div>
   </div>
 </main>
+
+<!-- FULL-WIDTH RESULT -->
+<div id="resultPage">
+
+  <section class="rband hero">
+    <div class="rin">
+      <div class="hero-eyebrow">Your Touch Reset reading</div>
+      <div class="emblem" id="emblem"></div>
+      <h1 class="idline" id="rHead"></h1>
+      <p class="idsub" id="rSub"></p>
+      <p class="idaffirm" id="rAffirm"></p>
+      <div class="inbox"><span>&#9993;</span><span>This is also on its way to your inbox. If it's not there in a few minutes, check spam or promotions and drag it across.</span></div>
+      <div class="scrollcue">Keep scrolling &darr;</div>
+    </div>
+  </section>
+
+  <section class="rband green">
+    <div class="rin">
+      <div class="reyebrow">Your erotic wiring</div>
+      <h2 class="bandhead" id="rPleasureName"></h2>
+      <p class="bandtext" id="rPleasureDesc"></p>
+      <div class="chip-h">What turns you on</div>
+      <div class="chips" id="rTurnons"></div>
+    </div>
+  </section>
+
+  <section class="rband dark">
+    <div class="rin">
+      <div class="reyebrow">Your touch pattern</div>
+      <h2 class="bandhead" id="rPatternName"></h2>
+      <p class="bandtext" id="rPatternLine"></p>
+      <div class="chip-h" style="margin-bottom:14px">What shuts you down</div>
+      <div class="chips shut" id="rBraces"></div>
+    </div>
+  </section>
+
+  <section class="rband ochre">
+    <div class="rin">
+      <div class="reyebrow dark">Lead or receive</div>
+      <div class="bigbadge" id="rOriBadge"></div>
+      <p class="bandtext dark" id="rOriMeaning"></p>
+      <div class="edgecard">
+        <div class="el">Your growth edge</div>
+        <p id="rOriEdge"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="rband green">
+    <div class="rin">
+      <div class="reyebrow">Try this tonight</div>
+      <div class="movecard">
+        <p class="moveline" id="rTonight"></p>
+      </div>
+      <div class="basecard">
+        <div class="bt">Your two-minute anchor &middot; Touch Base&reg;</div>
+        <p>Press your thumb to your forefinger and feel every ridge, slowly. Tell yourself, <strong>I am safe right now.</strong> Hold for two minutes. Reach for it the moment the brace comes up.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="rband dark">
+    <div class="rin">
+      <div class="pitch">
+        <div class="pl" id="pLine"></div>
+        <h2 id="pDoor"></h2>
+        <p class="blurb" id="pBlurb"></p>
+        <div class="foryou"><div class="fyh">This is for you if&hellip;</div><ul id="pForyou"></ul></div>
+        <a class="btn pulse" id="pCta" href="#">Show me</a>
+      </div>
+      <div id="success">
+        <div class="big">It's on its way.</div>
+        <p>Read your reading slowly, somewhere you won't be interrupted. Your body already knows most of it.</p>
+      </div>
+      <div class="again"><button id="restart">start again</button></div>
+    </div>
+  </section>
+
+</div>
 
 <footer>
   <div class="fwrap">
@@ -314,17 +336,13 @@
   </div>
 </footer>
 
-<!-- Google tag -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SY8NKELMNZ"></script>
-<script>
-window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SY8NKELMNZ');
-</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SY8NKELMNZ');</script>
 
 <script>
 (function(){
   "use strict";
 
-  /* ===================== KIT WIRING ===================== */
   var PATTERN_TAG={Holder:20988556,Flame:20988557,Armour:20988558,Signal:20988559,Current:20988560};
   var PATTERN_SEQ={Holder:2821038,Flame:2821039,Armour:2821040,Signal:2821041,Current:2821042};
   var PLEASURE_TAG={Sensual:20944034,Sexual:20944035,Energetic:20944036,Kinky:20944037,Shapeshifter:20944038};
@@ -341,23 +359,30 @@ window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);
       foryou:["You are polite, you co-parent, you share a bed","The reaching between you has stopped landing","You want the spark back, and the safety underneath it"]}
   };
 
-  /* ===================== CONTENT ===================== */
+  var EMBLEM={
+    Holder:'<svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="2.4"/><path d="M4 12a8 8 0 0 0 16 0"/></svg>',
+    Flame:'<svg viewBox="0 0 24 24"><path d="M12 3c.5 3.5 4.5 5 4.5 9.5A4.5 4.5 0 0 1 12 17a4.5 4.5 0 0 1-4.5-4.5c0-2.2 1.3-3.4 2.4-4.8.4 1.9 1.8 2 1.8.6C11.7 6.8 10.8 5.7 12 3Z"/></svg>',
+    Armour:'<svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6z"/></svg>',
+    Signal:'<svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="1.6"/><path d="M8.5 9.5a5 5 0 0 0 0 7M15.5 9.5a5 5 0 0 1 0 7M6 7a8.5 8.5 0 0 0 0 12M18 7a8.5 8.5 0 0 1 0 12"/></svg>',
+    Current:'<svg viewBox="0 0 24 24"><path d="M3 10c3-4 6-4 9 0s6 4 9 0M3 15c3-4 6-4 9 0s6 4 9 0"/></svg>'
+  };
+
   var PLEASURE={
     Sensual:{name:"The Sensual",
       desc:"You don't just feel touch. You absorb it. The flicker of candlelight, the smell of their skin, the texture of sheets against your thighs. Your body responds to beauty, to detail, to the slow unfolding of sensation. You don't just want connection. You want to be melted into, slowly.",
-      turnons:["A slow build, with no rushing to the finish","Beautiful settings: candlelight, scent, music, texture","Full-body touch, not a straight line to the destination","Being savoured, like you are being tasted","Anticipation stretched out until you can barely stand it"]},
+      turnons:["A slow build, no rushing to the finish","Candlelight, scent, music, texture","Full-body touch, not a straight line","Being savoured, like you're being tasted","Anticipation stretched until you can barely stand it"]},
     Sexual:{name:"The Sexual",
       desc:"Direct. Honest. No fluff, no performance. You don't need a long warm-up, you want to feel it now. Raw, real, unfiltered. You crave physical connection that does not apologise for its intensity, and you are not ashamed of wanting what you want. You just want it met.",
-      turnons:["Directness, no games, no guessing","Skin on skin, now","Being wanted openly, and told so","Heat and simplicity over elaborate staging","A partner who acts on desire the moment they feel it"]},
+      turnons:["Directness, no games","Skin on skin, now","Being wanted openly, and told so","Heat over elaborate staging","A partner who acts the moment they feel it"]},
     Energetic:{name:"The Energetic",
       desc:"You feel everything, even in stillness. Your arousal lives in the invisible: the pause, the pulse, the moment before contact. You don't need touch to feel lit up. You need space, presence, attunement. You are the blueprint of anticipation.",
-      turnons:["The charge before a single touch","Eye contact that says everything","Teasing, space, the delicious almost","Breath and presence, being felt from across a room","A partner who slows right down and tunes in"]},
+      turnons:["The charge before a single touch","Eye contact that says everything","Teasing, space, the delicious almost","Being felt from across a room","A partner who slows right down and tunes in"]},
     Kinky:{name:"The Kinky",
       desc:"This is not about performance. It is about permission. What turns you on is not only the act, it is the dynamic underneath: power, trust, tension, a little taboo. You come alive in the unknown, in the pause before the command. This wiring is not dangerous. It is devotional.",
-      turnons:["Power play, given or taken","Trust deep enough to hand over control","A little taboo, a little edge","Being told what to do, or telling them","Ritual, restraint, and the charge of the unknown"]},
+      turnons:["Power play, given or taken","Trust deep enough to hand over control","A little taboo, a little edge","Being told what to do, or telling them","Ritual, restraint, the charge of the unknown"]},
     Shapeshifter:{name:"The Shapeshifter",
       desc:"You are fluent in many languages of turn-on. You are not linear, you are layered. You want it all, and you can hold it: the tease, the tenderness, the rawness, the sacred, the unexpected. You don't want to choose. You want to be met in your full spectrum.",
-      turnons:["Variety, surprise, range","Tenderness one night, edge the next","A partner who can meet every side of you","Not being boxed into a single mode","The unexpected shift, mid-moment"]}
+      turnons:["Variety, surprise, range","Tenderness one night, edge the next","A partner who can meet every side of you","Never being boxed into one mode","The unexpected shift, mid-moment"]}
   };
 
   var PATTERN={
@@ -366,13 +391,13 @@ window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);
       braces:["Being handed all the responsibility","Affection that arrives like an invoice","Being needed but never quite seen","Nobody ever asking what you need"]},
     Flame:{name:"The Flame",short:"Flame",
       line:"You learned early that staying safe meant softening your fire, your tone, your hunger. You dim to stay wanted. Your ache is to be wanted without shrinking.",
-      braces:["Having to shrink so someone else stays comfortable","Being praised only for your softness","Being misread, and saying nothing","Desire that needs you smaller than you are"]},
+      braces:["Shrinking so someone else stays comfortable","Being praised only for your softness","Being misread, and saying nothing","Desire that needs you smaller than you are"]},
     Armour:{name:"The Armour",short:"Armour",
       line:"You did not shut down, you structured. Softness once meant exposure, so you lead with control and clarity. Your ache is to soften without collapsing.",
       braces:["A fast, unpredictable approach","Tenderness that feels like a tactic","Being led before it feels safe","Being told to 'just relax'"]},
     Signal:{name:"The Signal",short:"Signal",
       line:"You stayed legible. You curate your truth and share the polished version, and slowly stop being fully real. Your ache is to be met in the full mess of you.",
-      braces:["Having to translate yourself to be understood","Performing 'I'm fine'","Connection that only wants the tidy version","Being 'too much' the moment you are real"]},
+      braces:["Having to translate yourself to be understood","Performing 'I'm fine'","Connection that only wants the tidy version","Being 'too much' the moment you're real"]},
     Current:{name:"The Current",short:"Current",
       line:"You stay met by staying on. You bring the aliveness and keep the charge alive, even when it is not returned. Your ache is to be received without leading it all.",
       braces:["Being the only source of the spark","Silence read as a threat","Giving that is not returned","Carrying the aliveness alone"]}
@@ -393,8 +418,6 @@ window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);
       tonight:"Tonight, name your lane before you begin. “I want to lead” or “I want to be taken.” Choosing it out loud turns your flexibility into power, instead of adaptation."}
   };
 
-  /* ===================== QUESTIONS ===================== */
-  // Section 1: PATTERN  (keys H,F,A,S,C)
   var QPAT=[
     ["When someone offers to help you, your first instinct is to:",[["Wave it off. You are the one who helps.","H"],["Accept quietly, and make sure you are no trouble.","F"],["Politely decline. You have it handled.","A"],["Explain exactly what would and would not be useful.","S"],["Turn it into something warmer and bigger than the small thing offered.","C"]]],
     ["The hardest thing for you to receive is:",[["Care, with nothing expected back.","H"],["Full, undimmed desire or attention.","F"],["Tenderness that asks you to soften.","A"],["Being loved in a mess you have not tidied.","S"],["Aliveness you did not have to generate.","C"]]],
@@ -402,7 +425,6 @@ window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);
     ["The thing people rarely guess about you is:",[["How much you long to be held without having to earn it.","H"],["How much fire you keep turned down.","F"],["How much you want to soften, if it were ever safe enough.","A"],["How much of you they have never actually met.","S"],["How tired you are of being the one who brings the aliveness.","C"]]],
     ["In intimacy, you are most likely to:",[["Give with care, and receive best when you're the one in control.","H"],["Follow their lead and rarely name your own edge.","F"],["Lead and hold authority, and struggle to surrender.","A"],["Stay composed, rarely letting go fully into sensation.","S"],["Spark the aliveness and keep it moving, even when it isn't met.","C"]]]
   ];
-  // Section 2: PLEASURE  (keys Sensual,Sexual,Energetic,Kinky,Shapeshifter)
   var QPL=[
     ["I feel most alive when&hellip;",[["My body is slowly invited in, with texture, scent, and a soothing tone.","Sensual"],["They kiss me without hesitation. I want action, not warm-up.","Sexual"],["I can feel the space between us like a current: each breath, each pause, each glance.","Energetic"],["They look at me and say, “don't move.” That's where the thrill lives.","Kinky"],["It begins one way and unfolds into something else entirely. That shift wakes me up.","Shapeshifter"]]],
     ["I feel most satisfied when&hellip;",[["I'm courted through touch, scent, and softness.","Sensual"],["There's clear, embodied desire, and we don't overthink it when we go there.","Sexual"],["The tension builds slowly, through breath and gaze.","Energetic"],["They take control, tease, or give me instructions.","Kinky"],["We flow between desire, play, intensity, and presence.","Shapeshifter"]]],
@@ -410,7 +432,6 @@ window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);
     ["What keeps me open is&hellip;",[["Texture, scent, sound. When the details are right, my whole body says yes.","Sensual"],["A bold move. Clear want. No fluff.","Sexual"],["A pause before contact. That space lights everything up.","Energetic"],["The unexpected, when I can't predict what comes next.","Kinky"],["Freedom to move between it all, without being boxed.","Shapeshifter"]]],
     ["My body opens most when&hellip;",[["The lights dim, the scent lands, and they begin with a touch that lingers.","Sensual"],["There's no hesitation. I feel their want, and I want it too.","Sexual"],["There's real presence, breath, and the charge of being felt.","Energetic"],["There's real trust, a playful edge, and surprise.","Kinky"],["Nothing is off-limits. I feel free to bring every part of me.","Shapeshifter"]]]
   ];
-  // Section 3: LEAD / RECEIVE  (keys L,R,B)
   var QLR=[
     ["When desire is in the air, you tend to&hellip;",[["Make the first move, and set the tone.","L"],["Wait to be reached for, and melt when you are.","R"],["Read the moment, and flip either way.","B"]]],
     ["You're most turned on when&hellip;",[["You're orchestrating their pleasure.","L"],["Someone is devoted entirely to yours.","R"],["The lead passes back and forth between you.","B"]]],
@@ -419,13 +440,12 @@ window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);
   ];
 
   var ALL=[].concat(QPAT,QPL,QLR);
-  var TOTAL=ALL.length; // 14
+  var TOTAL=ALL.length;
   function phaseFor(idx){ if(idx<5)return"Part one · how you protect touch"; if(idx<10)return"Part two · how you're turned on"; return"Part three · lead or receive"; }
 
-  /* ===================== ENGINE ===================== */
   var i=0,answers=new Array(TOTAL).fill(null),locked=false,audience='woman';
   var $=function(id){return document.getElementById(id);};
-  var intro=$('intro'),audienceSec=$('audience'),quiz=$('quiz'),reveal=$('reveal'),resultSec=$('result');
+  var funnel=$('funnel'),intro=$('intro'),audienceSec=$('audience'),quiz=$('quiz'),reveal=$('reveal'),resultPage=$('resultPage');
   function pad(n){return n<10?'0'+n:''+n;}
 
   $('begin').addEventListener('click',function(){
@@ -466,19 +486,16 @@ window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);
   var result={pattern:'',pleasure:'',ori:''};
 
   function score(){
-    // pattern
     var pt={H:0,F:0,A:0,S:0,C:0};
     for(var a=0;a<5;a++){if(answers[a]!=null)pt[QPAT[a][1][answers[a]][1]]++;}
     var PM={H:'Holder',F:'Flame',A:'Armour',S:'Signal',C:'Current'};
     var pattern=PM[Object.keys(pt).sort(function(x,y){return pt[y]-pt[x];})[0]];
-    // pleasure
     var pl={Sensual:0,Sexual:0,Energetic:0,Kinky:0,Shapeshifter:0};
     for(var b=0;b<5;b++){var pi=answers[5+b];if(pi!=null)pl[QPL[b][1][pi][1]]++;}
     var prim=[['Sensual',pl.Sensual],['Sexual',pl.Sexual],['Energetic',pl.Energetic],['Kinky',pl.Kinky]].sort(function(x,y){return y[1]-x[1];});
     var spread=[pl.Sensual,pl.Sexual,pl.Energetic,pl.Kinky].filter(function(n){return n>=1;}).length;
     var isShift = pl.Shapeshifter>=2 || prim[0][1]<=1 || (spread>=4 && (prim[0][1]-prim[1][1])<=1) || (spread>=3 && prim[0][1]===prim[1][1]);
     var pleasure=isShift?'Shapeshifter':prim[0][0];
-    // lead / receive
     var lr={L:0,R:0,B:0};
     for(var c=0;c<4;c++){var li=answers[10+c];if(li!=null)lr[QLR[c][1][li][1]]++;}
     var ori;
@@ -488,40 +505,48 @@ window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);
     return {pattern:pattern,pleasure:pleasure,ori:ori};
   }
 
+  function headline(){
+    var pa=PATTERN[result.pattern],o=ORI[result.ori];
+    var art=/^[AEIOU]/i.test(result.pleasure)?'an':'a';
+    return "You're "+art+" "+result.pleasure+" "+pa.short+" who "+o.verb+".";
+  }
+
   function doReveal(){
     result=score();
-    var pl=PLEASURE[result.pleasure],pa=PATTERN[result.pattern],o=ORI[result.ori];
-    var art=/^[AEIOU]/i.test(result.pleasure)?'an':'a';
-    var head="You're "+art+" "+result.pleasure+" "+pa.short+" who "+o.verb+".";
-    $('tHead').textContent=head;
-    $('tSub').textContent=o.sub;
+    $('tHead').textContent=headline();
+    $('tSub').textContent=ORI[result.ori].sub;
     quiz.style.display='none';reveal.style.display='block';reveal.scrollIntoView({behavior:'smooth',block:'start'});
     if(typeof gtag==='function')gtag('event','quiz_complete',{quiz:'touch_reset',pattern:result.pattern,pleasure:result.pleasure,orientation:result.ori,audience:audience});
   }
 
-  function fillList(el,arr){el.innerHTML='';arr.forEach(function(t){var li=document.createElement('li');li.textContent=t;el.appendChild(li);});}
+  function fillList(el,arr,cls){el.innerHTML='';arr.forEach(function(t){var d=document.createElement('div');d.className=cls;d.textContent=t;el.appendChild(d);});}
+  function fillLi(el,arr){el.innerHTML='';arr.forEach(function(t){var li=document.createElement('li');li.textContent=t;el.appendChild(li);});}
 
   function paintResult(){
     var pl=PLEASURE[result.pleasure],pa=PATTERN[result.pattern],o=ORI[result.ori],a=AUD[audience];
-    var art=/^[AEIOU]/i.test(result.pleasure)?'an':'a';
-    $('rHead').textContent="You're "+art+" "+result.pleasure+" "+pa.short+" who "+o.verb+".";
+    var head=headline();
+    $('emblem').innerHTML=EMBLEM[result.pattern];
+    $('rHead').innerHTML=head.replace(result.pleasure+' '+pa.short,'<span class="g">'+result.pleasure+' '+pa.short+'</span>');
     $('rSub').textContent=o.sub;
     $('rAffirm').textContent="You've just named how your body actually works in touch and desire. None of it is a flaw. It is a set of brilliant adaptations, and every one of them can soften.";
     $('rPleasureName').textContent=pl.name;
     $('rPleasureDesc').textContent=pl.desc;
-    fillList($('rTurnons'),pl.turnons);
+    fillList($('rTurnons'),pl.turnons,'chip');
     $('rPatternName').textContent=pa.name;
     $('rPatternLine').textContent=pa.line;
+    fillList($('rBraces'),pa.braces,'chip');
     $('rOriBadge').textContent=o.badge;
     $('rOriMeaning').textContent=o.meaning;
     $('rOriEdge').textContent=o.edge;
-    fillList($('rBraces'),pa.braces);
     $('rTonight').textContent=o.tonight;
-    $('pLine').textContent=a.line;
-    $('pDoor').textContent=a.door;
-    $('pBlurb').textContent=a.blurb;
-    fillList($('pForyou'),a.foryou);
+    $('pLine').textContent=a.line;$('pDoor').textContent=a.door;$('pBlurb').textContent=a.blurb;
+    fillLi($('pForyou'),a.foryou);
     $('pCta').textContent=a.cta;$('pCta').href=a.href;
+  }
+
+  function revealBands(){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+    document.querySelectorAll('#resultPage .rin').forEach(function(el){io.observe(el);});
   }
 
   $('capForm').addEventListener('submit',function(e){
@@ -537,7 +562,8 @@ window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);
       .then(function(d){
         if(d&&d.ok){
           paintResult();
-          reveal.style.display='none';resultSec.style.display='block';resultSec.scrollIntoView({behavior:'smooth',block:'start'});
+          funnel.style.display='none';resultPage.style.display='block';
+          window.scrollTo(0,0);revealBands();
           if(typeof gtag==='function')gtag('event','quiz_optin',{quiz:'touch_reset',pattern:result.pattern,pleasure:result.pleasure,orientation:result.ori,audience:audience});
         }else{throw new Error('fail');}
       }).catch(function(){
@@ -548,10 +574,10 @@ window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);
 
   $('restart').addEventListener('click',function(){
     i=0;answers=new Array(TOTAL).fill(null);locked=false;
-    resultSec.style.display='none';reveal.style.display='none';
+    resultPage.style.display='none';funnel.style.display='flex';reveal.style.display='none';
     $('capForm').style.display='block';$('capForm').reset();$('msg').textContent='';
     $('sendBtn').disabled=false;$('sendBtn').textContent='Unlock my full reading';
-    intro.style.display='block';intro.scrollIntoView({behavior:'smooth',block:'start'});
+    intro.style.display='block';window.scrollTo(0,0);
   });
 })();
 </script>
