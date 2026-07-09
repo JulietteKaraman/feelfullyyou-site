@@ -94,7 +94,10 @@
   .hero-sub{display:none}
   .hero-cta{display:none}
   .hero-intro{padding:52px 28px 56px;background:var(--teal);text-align:center}
-  .hero-intro p{font-family:var(--display);font-size:clamp(17px,2.2vw,22px);font-style:italic;font-weight:500;color:var(--cream);max-width:580px;margin:0 auto 36px;line-height:1.5;opacity:.9}
+  .hero-intro .hi-eyebrow{font-family:var(--body);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-pale);font-weight:600;margin-bottom:18px}
+  .hero-intro .hi-lead{font-family:var(--display);font-weight:700;font-size:clamp(25px,4vw,42px);color:var(--cream);max-width:22ch;margin:0 auto 22px;line-height:1.12;letter-spacing:-.022em}
+  .hero-intro .hi-lead .gp{color:var(--gold-pale)}
+  .hero-intro p{font-family:var(--display);font-size:clamp(16px,2vw,20px);font-style:italic;font-weight:500;color:var(--cream);max-width:600px;margin:0 auto 34px;line-height:1.5;opacity:.85}
   .hero-intro .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
   .deliv-strip{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px 0;max-width:840px;margin:0 auto 34px}
   .deliv-strip span{font-family:var(--body);font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--gold-pale);font-weight:600;padding:2px 16px;border-right:1px solid rgba(168,133,56,.42);line-height:1.15}
@@ -464,7 +467,7 @@ gtag('config', 'G-SY8NKELMNZ');
   <div class="hero-content">
     <p class="hero-eyebrow">The Touch Reset for Women · 8-week live group</p>
     <h1 class="hero-title">THE ROOM™</h1>
-    <p class="hero-sub">Ready to feel scrumptious again? Alive, vibrant, fully in your own body. Eight weeks to take you from performing fine to feeling it all.</p>
+    <p class="hero-sub">Your body braced to keep you safe. The Room is 8 weeks to change that pattern, so you crave the touch you used to brace for, and feel scrumptious in your own skin again.</p>
     <div class="hero-cta">
       <a href="#pricing" class="btn">Join The Room</a>
       <a href="#what" class="btn ghost" style="border-color:rgba(254,252,250,.5);color:var(--cream)">What's inside</a>
@@ -474,7 +477,9 @@ gtag('config', 'G-SY8NKELMNZ');
 
 <!-- HERO INTRO BAND -->
 <div class="hero-intro">
-  <p>For the woman who loves him and cannot explain the distance. For the woman who performs fine and is quietly exhausted by it. For the woman who is ready to feel it all again. To feel scrumptious again.</p>
+  <div class="hi-eyebrow reveal">The Touch Reset for Women · 8-week live group</div>
+  <h2 class="hi-lead reveal">Your body braced to keep you safe. The Room changes that pattern in 8 weeks, so you crave the touch you used to brace for, and feel <span class="gp">scrumptious</span> in your own skin again.</h2>
+  <p>For the woman who loves him and cannot explain the distance. For the woman who performs fine and is quietly exhausted by it. For the woman ready to feel it all again.</p>
   <div class="deliv-strip reveal">
     <span>8 Live Calls With Juliette</span>
     <span>Your Touch Language, Named</span>
