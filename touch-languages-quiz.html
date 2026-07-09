@@ -783,21 +783,22 @@
     var audTag=(AUD[audience]||{}).tag;
     var tags=[PATTERN_TAG[result.pattern],PLEASURE_TAG[result.pleasure],LANG_TAG[result.language],ORI_TAG[result.ori],audTag,ID_TAG[identity]].filter(function(t){return t;});
     var stackFields={touch_pleasure:result.pleasure,touch_pattern:PATTERN[result.pattern].short,touch_language:TLANG[result.language].name.replace(' Touch',''),touch_orientation:ORI[result.ori].word.toLowerCase()};
-    fetch('/.netlify/functions/subscribe',{
-      method:'POST',headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({email:email,tagIds:tags,sequenceIds:[PATTERN_SEQ[result.pattern],2821695].filter(Boolean),fields:stackFields,website:$('capForm').website.value})
-    }).then(function(r){return r.json().catch(function(){return {};});})
-      .then(function(d){
-        if(d&&d.ok){
-          paintResult();
-          funnel.style.display='none';resultPage.style.display='block';
-          window.scrollTo(0,0);revealBands();
-          if(typeof gtag==='function')gtag('event','quiz_optin',{quiz:'touch_reset',pattern:result.pattern,language:result.language,pleasure:result.pleasure,orientation:result.ori,audience:audience});
-        }else{throw new Error('fail');}
-      }).catch(function(){
-        btn.disabled=false;btn.textContent='Reveal my stack';
-        msg.className='msg err';msg.textContent='Something went wrong. Please try again.';
-      });
+    var payload=JSON.stringify({email:email,tagIds:tags,sequenceIds:[PATTERN_SEQ[result.pattern],2821695].filter(Boolean),fields:stackFields,website:$('capForm').website.value});
+    function attempt(n){
+      return fetch('/.netlify/functions/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:payload})
+        .then(function(r){return r.json().catch(function(){return {};});})
+        .then(function(d){if(d&&d.ok)return d;throw new Error('fail');})
+        .catch(function(err){if(n>0){return new Promise(function(res){setTimeout(res,1400);}).then(function(){return attempt(n-1);});}throw err;});
+    }
+    attempt(1).then(function(){
+      try{paintResult();}catch(e){}
+      funnel.style.display='none';resultPage.style.display='block';
+      window.scrollTo(0,0);revealBands();
+      if(typeof gtag==='function')gtag('event','quiz_optin',{quiz:'touch_reset',pattern:result.pattern,language:result.language,pleasure:result.pleasure,orientation:result.ori,audience:audience});
+    }).catch(function(){
+      btn.disabled=false;btn.textContent='Reveal my stack';
+      msg.className='msg err';msg.textContent='Something went wrong. Please try again.';
+    });
   });
 
   $('restart').addEventListener('click',function(){
