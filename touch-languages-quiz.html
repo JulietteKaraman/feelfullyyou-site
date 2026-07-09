@@ -268,6 +268,12 @@
   #intro .ring{width:62px;height:62px;border-radius:50%;border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:600;font-size:1.3rem;color:var(--gold-deep);background:#fff;box-shadow:0 6px 18px -10px rgba(168,133,56,.6)}
   #intro .lc span{font-family:var(--body);font-weight:500;font-size:.82rem;color:var(--brown);text-align:center;line-height:1.25}
   #intro .note{margin-top:26px}
+  /* result layer number circles */
+  .lnum{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;border:1.5px solid var(--gold);color:var(--gold-deep);font-family:var(--display);font-weight:600;font-size:.82rem;flex:0 0 auto}
+  .reyebrow.num{gap:12px}
+  .reyebrow.num:before{content:none}
+  .rband.green .lnum{border-color:var(--gold-pale);color:var(--gold-pale)}
+  .reyebrow.dark .lnum{border-color:var(--teal-deep);color:var(--teal-deep)}
 </style>
 </head>
 <body>
@@ -294,13 +300,23 @@
         <p class="note">Answer from your body, not your history.</p>
       </section>
 
-      <section id="audience">
+      <section id="context">
         <div class="eyebrow">First</div>
-        <h1>I'm reading this as&hellip;</h1>
+        <h1>You're taking this&hellip;</h1>
         <div class="aud-opts">
-          <button class="aud" data-aud="woman">A woman<span>Coming home to my own body</span></button>
-          <button class="aud" data-aud="man">A man<span>Learning to reach and be felt</span></button>
-          <button class="aud" data-aud="couple">A couple<span>Finding our way back to each other</span></button>
+          <button class="aud" data-ctx="self">For myself<span>Coming home to my own body</span></button>
+          <button class="aud" data-ctx="partner">With my partner<span>Finding our way back to each other</span></button>
+        </div>
+      </section>
+
+      <section id="identity" style="display:none">
+        <div class="eyebrow">And</div>
+        <h1>You are&hellip;</h1>
+        <div class="aud-opts">
+          <button class="aud" data-id="woman">A woman</button>
+          <button class="aud" data-id="man">A man</button>
+          <button class="aud" data-id="nb">Non-binary</button>
+          <button class="aud" data-id="pref">Prefer not to say</button>
         </div>
       </section>
 
@@ -349,14 +365,24 @@
         <div class="srow"><span class="slabel">In touch, you</span><span class="sval" id="sOri"></span></div>
       </div>
       <p class="idaffirm">None of it is a flaw. It is a set of brilliant adaptations, and every one of them can soften.</p>
-      <div class="inbox"><span>&#9993;</span><span>This is also on its way to your inbox. If it's not there in a few minutes, check spam or promotions and drag it across.</span></div>
+      <div class="inbox"><span>&#9993;</span><span>Your reading is in your inbox now. This page gives you tonight's move; your <b>complete practice guide</b> for this exact stack is in the email. If it's not there in a few minutes, check spam or promotions.</span></div>
       <div class="scrollcue">Your layers, one by one &darr;</div>
+    </div>
+  </section>
+
+  <section class="rband ochre" id="shareBand" style="display:none">
+    <div class="rin" style="text-align:center">
+      <div class="reyebrow dark" style="justify-content:center">For the two of you</div>
+      <h2 class="bandhead" style="color:var(--teal-deep)">Now get your partner's stack.</h2>
+      <p class="bandtext dark" style="margin:0 auto 22px;max-width:48ch">The Touch Reset works best when you both know each other's wiring: what turns you on, what shuts you down, how you each need to be reached. Send them the quiz, then compare your stacks.</p>
+      <button class="btn" id="shareBtn" style="background:var(--teal-deep);color:var(--cream)">Copy the link to send</button>
+      <p id="shareMsg" style="font-size:.86rem;color:var(--teal-deep);margin-top:12px;min-height:1.2em;font-weight:500"></p>
     </div>
   </section>
 
   <section class="rband green">
     <div class="rin">
-      <div class="reyebrow">Layer one · your pleasure language</div>
+      <div class="reyebrow num"><span class="lnum">1</span>Your pleasure language</div>
       <h2 class="bandhead" id="rPleasureName"></h2>
       <p class="bandtext" id="rPleasureDesc"></p>
       <div class="chip-h">What turns you on</div>
@@ -366,7 +392,7 @@
 
   <section class="rband dark">
     <div class="rin">
-      <div class="reyebrow">Layer two · your touch pattern</div>
+      <div class="reyebrow num"><span class="lnum">2</span>Your touch pattern</div>
       <h2 class="bandhead" id="rPatternName"></h2>
       <p class="bandtext" id="rPatternLine"></p>
       <div class="chip-h" style="margin-bottom:14px">What shuts you down</div>
@@ -376,7 +402,7 @@
 
   <section class="rband green">
     <div class="rin">
-      <div class="reyebrow">Layer three · your touch language</div>
+      <div class="reyebrow num"><span class="lnum">3</span>Your touch language</div>
       <h2 class="bandhead" id="rLangName"></h2>
       <p class="bandtext" id="rLangReaches"></p>
       <div class="chip-h">What feeds it</div>
@@ -387,7 +413,7 @@
 
   <section class="rband ochre">
     <div class="rin">
-      <div class="reyebrow dark">Layer four · lead or receive</div>
+      <div class="reyebrow dark num"><span class="lnum">4</span>Lead or receive</div>
       <div class="bigbadge" id="rOriBadge"></div>
       <p class="bandtext dark" id="rOriMeaning"></p>
       <div class="edgecard">
@@ -412,7 +438,7 @@
 
   <section class="rband green">
     <div class="rin">
-      <div class="reyebrow">Your next step</div>
+      <div class="reyebrow">Your complete what-to-do &middot; free</div>
       <h2 class="bandhead" id="fTitle"></h2>
       <p class="bandtext" id="fBlurb"></p>
       <a class="btn pulse" id="fCta" href="#" style="margin-top:20px">Get it</a>
@@ -460,6 +486,7 @@
   var PLEASURE_TAG={Sensual:20944034,Sexual:20944035,Energetic:20944036,Kinky:20944037,Shapeshifter:20944038};
   var LANG_TAG={Emotional:20999648,Erotic:20999649,Energetic:20999650,Physical:20999651,Spiritual:20999652};
   var ORI_TAG={Leads:20994542,Receives:20994543,Switches:20994544};
+  var ID_TAG={woman:21000823,man:21000824,nb:21000825,pref:21000826};
   var AUD={
     woman:{tag:20994349,line:"The Touch Reset for Women",door:"The Room",href:"/the-room",cta:"Show me The Room",
       blurb:"My 8-week live group where women come home to their own body, their own sensation, and their own yes.",
@@ -472,7 +499,11 @@
     couple:{tag:20994351,line:"The Touch Reset for Couples",door:"The Beginning",href:"/the-beginning",cta:"Show me The Beginning",
       blurb:"My deep container for two people who love each other and lost the language to reach each other.",
       foryou:["You are polite, you co-parent, you share a bed","The reaching between you has stopped landing","You want the spark back, and the safety underneath it"],
-      free:{title:"The 10 Touch Rituals",blurb:"Ten small moments of touch that bring the two of you back to each other, one a day. Free.",href:"/10-touch-rituals",cta:"Get the 10 Touch Rituals"}}
+      free:{title:"The 10 Touch Rituals",blurb:"Ten small moments of touch that bring the two of you back to each other, one a day. Free.",href:"/10-touch-rituals",cta:"Get the 10 Touch Rituals"}},
+    self:{tag:21000827,line:"The Touch Reset",door:"Work with me",href:"/work-with-me",cta:"See where to start",
+      blurb:"One method, three doors: for women, for men, for couples. Wherever touch went quiet, this is the way back.",
+      foryou:["Touch has gone quiet, careful, or routine","You've done the courses and the therapy and it still hasn't landed","You want the work that reaches the body, not just the mind"],
+      free:{title:"The 10 Touch Rituals",blurb:"Ten small daily practices to put touch back into your days, starting with your own body. Free.",href:"/10-touch-rituals",cta:"Get the 10 Touch Rituals"}}
   };
 
   var EMBLEM={
@@ -582,20 +613,27 @@
   var TOTAL=ALL.length; // 15
   function phaseFor(idx){ if(idx<4)return"Part one · how you protect touch"; if(idx<8)return"Part two · how touch reaches you"; if(idx<12)return"Part three · how you're turned on"; return"Part four · lead or receive"; }
 
-  var i=0,answers=new Array(TOTAL).fill(null),locked=false,audience='woman';
+  var i=0,answers=new Array(TOTAL).fill(null),locked=false,audience='woman',context='self',identity='woman';
   var $=function(id){return document.getElementById(id);};
-  var funnel=$('funnel'),intro=$('intro'),audienceSec=$('audience'),quiz=$('quiz'),reveal=$('reveal'),resultPage=$('resultPage');
+  var funnel=$('funnel'),intro=$('intro'),contextSec=$('context'),identitySec=$('identity'),quiz=$('quiz'),reveal=$('reveal'),resultPage=$('resultPage');
   function pad(n){return n<10?'0'+n:''+n;}
 
   $('begin').addEventListener('click',function(){
-    intro.style.display='none';audienceSec.style.display='block';
+    intro.style.display='none';contextSec.style.display='block';
     if(typeof gtag==='function')gtag('event','quiz_start',{quiz:'touch_reset'});
   });
-  Array.prototype.forEach.call(document.querySelectorAll('.aud'),function(b){
+  Array.prototype.forEach.call(document.querySelectorAll('#context .aud'),function(b){
     b.addEventListener('click',function(){
-      audience=b.getAttribute('data-aud');
-      audienceSec.style.display='none';quiz.style.display='block';renderQ();
-      if(typeof gtag==='function')gtag('event','quiz_audience',{quiz:'touch_reset',audience:audience});
+      context=b.getAttribute('data-ctx');
+      contextSec.style.display='none';identitySec.style.display='block';
+    });
+  });
+  Array.prototype.forEach.call(document.querySelectorAll('#identity .aud'),function(b){
+    b.addEventListener('click',function(){
+      identity=b.getAttribute('data-id');
+      audience=(context==='partner')?'couple':(identity==='woman'?'woman':(identity==='man'?'man':'self'));
+      identitySec.style.display='none';quiz.style.display='block';renderQ();
+      if(typeof gtag==='function')gtag('event','quiz_audience',{quiz:'touch_reset',audience:audience,context:context,identity:identity});
     });
   });
 
@@ -682,7 +720,16 @@
     $('pLine').textContent="When you're ready to go deeper";$('pDoor').textContent=a.door;$('pBlurb').textContent=a.blurb;
     fillLi($('pForyou'),a.foryou);
     $('pCta').textContent=a.cta;$('pCta').href=a.href;
+    $('shareBand').style.display=(context==='partner')?'block':'none';
   }
+  var shareBtn=$('shareBtn');
+  if(shareBtn){shareBtn.addEventListener('click',function(){
+    var link='https://feelfullyyou.com/touch-reset-quiz';
+    var txt="I did the Touch Reset quiz and got my stack. Do yours so we can see each other's: "+link;
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(function(){$('shareMsg').textContent='Copied. Paste it to your partner.';},function(){$('shareMsg').textContent=link;});}
+    else{$('shareMsg').textContent=link;}
+    if(typeof gtag==='function')gtag('event','quiz_share',{quiz:'touch_reset'});
+  });}
 
   function revealBands(){
     var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
@@ -694,7 +741,7 @@
     var email=$('email').value.trim();var msg=$('msg');msg.className='msg';
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){msg.className='msg err';msg.textContent='Please enter a valid email.';return;}
     var btn=$('sendBtn');btn.disabled=true;btn.textContent='Revealing…';
-    var tags=[PATTERN_TAG[result.pattern],PLEASURE_TAG[result.pleasure],LANG_TAG[result.language],ORI_TAG[result.ori],AUD[audience].tag].filter(function(t){return t;});
+    var tags=[PATTERN_TAG[result.pattern],PLEASURE_TAG[result.pleasure],LANG_TAG[result.language],ORI_TAG[result.ori],AUD[audience].tag,ID_TAG[identity]].filter(function(t){return t;});
     fetch('/.netlify/functions/subscribe',{
       method:'POST',headers:{'Content-Type':'application/json'},
       body:JSON.stringify({email:email,tagIds:tags,sequenceId:PATTERN_SEQ[result.pattern]||null,website:$('capForm').website.value})
@@ -715,6 +762,7 @@
   $('restart').addEventListener('click',function(){
     i=0;answers=new Array(TOTAL).fill(null);locked=false;
     resultPage.style.display='none';funnel.style.display='flex';reveal.style.display='none';
+    contextSec.style.display='none';identitySec.style.display='none';
     $('capForm').style.display='block';$('capForm').reset();$('msg').textContent='';
     $('sendBtn').disabled=false;$('sendBtn').textContent='Reveal my stack';
     intro.style.display='block';window.scrollTo(0,0);
