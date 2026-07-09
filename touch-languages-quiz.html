@@ -4,17 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Touch Reset Quiz · What's Your Touch Pattern? | Juliette Karaman</title>
-<meta name="description" content="A five-minute mirror, not a score. Meet the pattern your body runs to keep touch safe, the language it's starving for, and your way back. For women, men and couples. By Juliette Karaman.">
+<meta name="description" content="A five-minute mirror, not a score. Your erotic wiring, your touch pattern, and whether you lead or receive, plus exactly what to do about it. For women, men and couples. By Juliette Karaman.">
 <link rel="canonical" href="https://feelfullyyou.com/touch-reset-quiz">
 <meta property="og:title" content="The Touch Reset Quiz · What's Your Touch Pattern?">
-<meta property="og:description" content="A five-minute mirror, not a score. Your Touch Pattern, the language your body is starving for, and your way back.">
+<meta property="og:description" content="Your erotic wiring, your touch pattern, and whether you lead or receive. Five minutes, not a score.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://feelfullyyou.com/touch-reset-quiz">
 <meta property="og:image" content="https://feelfullyyou.com/touch-languages-og.jpg">
 <meta property="og:site_name" content="Feel Fully You">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="The Touch Reset Quiz · What's Your Touch Pattern?">
-<meta name="twitter:description" content="A five-minute mirror, not a score. Your Touch Pattern and the language your body is starving for.">
+<meta name="twitter:description" content="Your erotic wiring, your touch pattern, and whether you lead or receive.">
 <meta name="twitter:image" content="https://feelfullyyou.com/touch-languages-og.jpg">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
@@ -34,7 +34,6 @@
   a{color:inherit}
   ::selection{background:var(--gold);color:#fff}
   .wgold{color:var(--gold-pale);font-weight:600}
-  .wbig{font-family:var(--display);font-weight:600;color:var(--gold-pale)}
 
   .topbar{background:var(--teal);height:60px;display:flex;align-items:center;justify-content:center;position:relative}
   .topbar .brand{font-family:var(--display);font-weight:600;font-size:15px;letter-spacing:.04em;color:var(--cream);text-decoration:none}
@@ -93,16 +92,9 @@
   /* reveal (teaser + capture) */
   #reveal{display:none;text-align:center}
   #reveal .kicker{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-pale);font-weight:400}
-  #reveal h1{font-size:2.4rem;margin:12px 0 0}
-  #reveal .epi{font-family:var(--display);font-style:italic;font-weight:300;color:rgba(221,201,142,.92);font-size:1.02rem;line-height:1.55;margin:16px auto 0;max-width:38ch}
-  #reveal .copy{color:rgba(254,252,250,.86);font-weight:300;font-size:1.0rem;line-height:1.78;margin:0 auto;max-width:46ch}
-  .langmap{background:rgba(254,252,250,.04);border:1px solid rgba(221,201,142,.22);border-radius:14px;padding:22px 24px;margin:24px auto 6px;max-width:44ch;text-align:left}
-  .langmap .row{display:flex;align-items:flex-start;gap:14px;padding:10px 0}
-  .langmap .row+.row{border-top:1px solid rgba(221,201,142,.14)}
-  .langmap .tag{flex:0 0 auto;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-pale);font-weight:500;width:70px;padding-top:3px}
-  .langmap .val b{font-family:var(--display);font-weight:500;color:var(--cream);font-size:1.04rem;display:block}
-  .langmap .val span{font-size:.85rem;color:rgba(254,252,250,.62);font-weight:300;line-height:1.5}
-
+  #reveal h1{font-size:2.1rem;margin:12px 0 0;line-height:1.14}
+  #reveal .sub{font-family:var(--display);font-style:italic;font-weight:300;color:rgba(221,201,142,.92);font-size:1.04rem;line-height:1.5;margin:14px auto 0;max-width:40ch}
+  #reveal .tease{color:rgba(254,252,250,.82);font-weight:300;font-size:.98rem;line-height:1.7;margin:0 auto;max-width:44ch}
   .capture{max-width:400px;margin:26px auto 0}
   .capture label{display:block;font-family:var(--display);font-weight:400;font-size:1.05rem;color:var(--cream);margin-bottom:6px}
   .capture .sublabel{font-size:.84rem;color:rgba(254,252,250,.6);font-weight:300;margin-bottom:14px;line-height:1.5}
@@ -114,24 +106,31 @@
   .msg{font-size:.85rem;margin-top:12px;min-height:1.2em}
   .msg.err{color:#e6b8b8}
 
-  /* result (rich, post-capture) */
+  /* result (rich) */
   #result{display:none}
   #result .rhero{text-align:center;margin-bottom:8px}
   #result .rhero .kicker{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-pale)}
-  #result .rhero h1{font-size:2.3rem;margin:10px 0 0}
+  #result .rhero h1{font-size:2rem;margin:10px 0 0;line-height:1.16}
+  #result .rhero .rsub{font-family:var(--display);font-style:italic;font-weight:300;color:rgba(221,201,142,.92);font-size:1.02rem;margin:12px auto 0;max-width:38ch;line-height:1.45}
   #result .rhero .affirm{color:rgba(254,252,250,.82);font-weight:300;font-size:1rem;line-height:1.75;margin:14px auto 0;max-width:46ch}
   .inbox{display:flex;gap:10px;align-items:flex-start;background:rgba(221,201,142,.1);border:1px solid rgba(221,201,142,.3);border-radius:12px;padding:14px 16px;margin:22px 0;font-size:.86rem;color:var(--gold-pale);font-weight:300;line-height:1.55}
-  .rblock{margin:26px 0}
-  .rhead{font-family:var(--body);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-pale);font-weight:600;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+  .rblock{margin:28px 0}
+  .rhead{font-family:var(--body);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-pale);font-weight:600;margin-bottom:6px;display:flex;align-items:center;gap:10px}
   .rhead:before{content:"";width:20px;height:1px;background:var(--gold)}
-  .rlist{list-style:none;display:flex;flex-direction:column;gap:0}
+  .rname{font-family:var(--display);font-weight:600;color:var(--cream);font-size:1.32rem;margin:6px 0 12px}
+  .rtext{font-size:.99rem;color:rgba(254,252,250,.85);font-weight:300;line-height:1.75}
+  .rtext strong{color:var(--cream);font-weight:600}
+  .rlist{list-style:none;margin-top:10px}
   .rlist li{position:relative;padding:11px 0 11px 24px;font-size:.98rem;color:rgba(254,252,250,.86);font-weight:300;line-height:1.5;border-bottom:1px solid rgba(221,201,142,.12)}
   .rlist li:last-child{border-bottom:none}
   .rlist li:before{content:"";position:absolute;left:0;top:19px;width:12px;height:2px;background:var(--gold)}
-  .rtext{font-size:.98rem;color:rgba(254,252,250,.84);font-weight:300;line-height:1.75}
-  .rtext strong{color:var(--cream);font-weight:600}
-  .base{background:rgba(254,252,250,.035);border:1px solid rgba(221,201,142,.28);border-top:3px solid var(--gold);border-radius:8px;padding:22px 24px}
-  .base .bt{font-family:var(--display);font-weight:600;color:var(--cream);font-size:1.05rem;margin-bottom:8px}
+  .badge{display:inline-block;font-family:var(--display);font-weight:600;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);background:var(--gold-pale);border-radius:99px;padding:6px 16px;margin-bottom:12px}
+  .edge{background:rgba(254,252,250,.035);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:16px 20px;margin-top:14px}
+  .edge .el{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-pale);font-weight:600;margin-bottom:6px}
+  .tonight{background:rgba(254,252,250,.035);border:1px solid rgba(221,201,142,.28);border-top:3px solid var(--gold);border-radius:8px;padding:22px 24px}
+  .tonight .tl{font-family:var(--display);font-weight:600;color:var(--cream);font-size:1.08rem;margin-bottom:8px}
+  .base{background:rgba(254,252,250,.035);border:1px solid rgba(221,201,142,.28);border-radius:8px;padding:20px 22px;margin-top:14px}
+  .base .bt{font-family:var(--display);font-weight:600;color:var(--gold-pale);font-size:.95rem;margin-bottom:6px}
 
   .pitch{background:var(--teal-deep);border:1px solid rgba(221,201,142,.34);border-top:3px solid var(--gold);border-radius:10px;padding:30px 28px;margin-top:30px;text-align:center}
   .pitch .pl{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-pale);font-weight:600;margin-bottom:10px}
@@ -158,7 +157,8 @@
     .stage{padding:36px 22px 30px}
     #intro h1{font-size:1.8rem}
     .qtext{font-size:1.2rem}
-    #reveal h1,#result .rhero h1{font-size:2rem}
+    #reveal h1{font-size:1.8rem}
+    #result .rhero h1{font-size:1.7rem}
     #intro .meta{gap:14px}
     .pitch{padding:26px 20px}
     .pitch h2{font-size:1.4rem}
@@ -179,14 +179,14 @@
       <section id="intro">
         <div class="eyebrow">The Touch Reset Quiz</div>
         <h1>What's your <span class="it">Touch Pattern?</span></h1>
-        <p class="sub">How do you let touch in, and what quietly shuts it down? Five minutes, not a score. Meet the pattern your body runs to keep touch safe, the language it's been starving for, and your way back. For women, men and couples.</p>
+        <p class="sub">In five minutes, three things your body already knows: how you're wired for turn-on, the pattern you run to keep touch safe, and whether you lead or receive. Then exactly what to do about it. For women, men and couples.</p>
         <div class="meta">
-          <span><b>13</b> questions</span>
+          <span><b>14</b> questions</span>
           <span><b>5</b> minutes</span>
           <span>Reading emailed to you</span>
         </div>
         <div style="margin-top:30px"><button class="btn pulse" id="begin">Begin</button></div>
-        <p class="note">Answer from your life as it actually is, not as you wish it were.</p>
+        <p class="note">Answer from your body, not your history. What's actually true, not what you wish were.</p>
       </section>
 
       <!-- AUDIENCE -->
@@ -202,8 +202,8 @@
 
       <!-- QUIZ -->
       <section id="quiz" style="display:none">
-        <span class="phase" id="phase">Part one · how you are wired</span>
-        <div class="proghead"><span class="l"></span><span class="eyebrow" id="prog">01 / 13</span><span class="l"></span></div>
+        <span class="phase" id="phase"></span>
+        <div class="proghead"><span class="l"></span><span class="eyebrow" id="prog">01 / 14</span><span class="l"></span></div>
         <div class="track"><div class="bar" id="bar"></div></div>
         <h2 class="qtext" id="question"></h2>
         <div class="opts" id="opts"></div>
@@ -212,26 +212,14 @@
 
       <!-- REVEAL (teaser + capture) -->
       <section id="reveal">
-        <div class="kicker">Your Touch Pattern</div>
-        <h1 id="patternName"></h1>
-        <p class="epi" id="patternEpi"></p>
+        <div class="kicker">Your reading</div>
+        <h1 id="tHead"></h1>
+        <p class="sub" id="tSub"></p>
         <div class="divider"></div>
-        <p class="copy" id="patternCopy"></p>
-
-        <div class="langmap">
-          <div class="row">
-            <div class="tag">Home</div>
-            <div class="val"><b id="homeLang"></b><span id="homeDesc"></span></div>
-          </div>
-          <div class="row">
-            <div class="tag">Starving</div>
-            <div class="val"><b id="starveLang"></b><span id="starveDesc"></span></div>
-          </div>
-        </div>
-
+        <p class="tease">What turns you on, what shuts you down, and your one move to make tonight, are one step away.</p>
         <form class="capture" id="capForm" autocomplete="on">
           <label for="email">Where shall I send your full reading?</label>
-          <p class="sublabel">Unlock the whole map, on this page and in your inbox: what lands for you, what braces you, your shadow, and your way back into the language you've been missing.</p>
+          <p class="sublabel">Unlock the whole thing, here on this page and in your inbox.</p>
           <input type="email" id="email" name="email" placeholder="you@email.com" required>
           <input type="text" class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
           <button type="submit" class="btn block pulse" id="sendBtn">Unlock my full reading</button>
@@ -240,48 +228,56 @@
         </form>
       </section>
 
-      <!-- RESULT (rich) -->
+      <!-- RESULT -->
       <section id="result">
         <div class="rhero">
-          <div class="kicker">Your Touch Pattern</div>
-          <h1 id="rName"></h1>
+          <div class="kicker">Your reading</div>
+          <h1 id="rHead"></h1>
+          <p class="rsub" id="rSub"></p>
           <p class="affirm" id="rAffirm"></p>
         </div>
 
         <div class="inbox">
           <span>&#9993;</span>
-          <span>Your full reading is also on its way to your inbox. If you don't see it in a few minutes, check your spam or promotions folder and drag it to your main inbox.</span>
+          <span>This reading is also on its way to your inbox. If you don't see it in a few minutes, check spam or promotions and drag it to your main inbox.</span>
         </div>
 
         <div class="rblock">
-          <div class="rhead">What lands for you</div>
-          <ul class="rlist" id="rLands"></ul>
+          <div class="rhead">Your erotic wiring</div>
+          <div class="rname" id="rPleasureName"></div>
+          <p class="rtext" id="rPleasureDesc"></p>
+          <ul class="rlist" id="rTurnons"></ul>
         </div>
 
         <div class="rblock">
-          <div class="rhead">What braces you</div>
-          <ul class="rlist" id="rBraces"></ul>
+          <div class="rhead">Your touch pattern</div>
+          <div class="rname" id="rPatternName"></div>
+          <p class="rtext" id="rPatternLine"></p>
         </div>
 
         <div class="rblock">
-          <div class="rhead">Your shadow, and what to do</div>
-          <p class="rtext" id="rShadow"></p>
-          <p class="rtext" id="rDo" style="margin-top:12px"></p>
-        </div>
-
-        <div class="rblock">
-          <div class="rhead">Your language map</div>
-          <div class="langmap" style="margin-top:0">
-            <div class="row"><div class="tag">Home</div><div class="val"><b id="rHome"></b><span id="rHomeDesc"></span></div></div>
-            <div class="row"><div class="tag">Starving</div><div class="val"><b id="rStarve"></b><span id="rStarveDesc"></span></div></div>
+          <div class="rhead">Lead or receive</div>
+          <span class="badge" id="rOriBadge"></span>
+          <p class="rtext" id="rOriMeaning"></p>
+          <div class="edge">
+            <div class="el">Your growth edge</div>
+            <p class="rtext" id="rOriEdge"></p>
           </div>
         </div>
 
         <div class="rblock">
-          <div class="rhead">Your two-minute way back</div>
-          <div class="base">
-            <div class="bt">Touch Base&reg;</div>
-            <p class="rtext">Press your thumb to your forefinger and feel every ridge, slowly. Tell yourself, <strong>I am safe right now.</strong> Hold for two minutes. This is the anchor I install first with every client. Reach for it the moment the brace comes up this week.</p>
+          <div class="rhead">What shuts you down</div>
+          <ul class="rlist" id="rBraces"></ul>
+        </div>
+
+        <div class="rblock">
+          <div class="tonight">
+            <div class="tl">Try this tonight</div>
+            <p class="rtext" id="rTonight"></p>
+            <div class="base">
+              <div class="bt">And your two-minute anchor: Touch Base&reg;</div>
+              <p class="rtext">Press your thumb to your forefinger and feel every ridge, slowly. Tell yourself, <strong>I am safe right now.</strong> Hold for two minutes. Reach for it the moment the brace comes up.</p>
+            </div>
           </div>
         </div>
 
@@ -328,12 +324,11 @@ window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);
 (function(){
   "use strict";
 
-  /* ============================================================
-     KIT WIRING
-     ============================================================ */
+  /* ===================== KIT WIRING ===================== */
   var PATTERN_TAG={Holder:20988556,Flame:20988557,Armour:20988558,Signal:20988559,Current:20988560};
   var PATTERN_SEQ={Holder:2821038,Flame:2821039,Armour:2821040,Signal:2821041,Current:2821042};
-  var CRAVE_TAG={Emotional:20988561,Erotic:20988562,Energetic:20988563,Physical:20988564,Spiritual:20988565};
+  var PLEASURE_TAG={Sensual:20944034,Sexual:20944035,Energetic:20944036,Kinky:20944037,Shapeshifter:20944038};
+  var ORI_TAG={Leads:20994542,Receives:20994543,Switches:20994544};
   var AUD={
     woman:{tag:20994349,line:"The Touch Reset for Women",door:"The Room",href:"/the-room",cta:"Show me The Room",
       blurb:"My 8-week live group where women come home to their own body, their own sensation, and their own yes.",
@@ -346,103 +341,88 @@ window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);
       foryou:["You are polite, you co-parent, you share a bed","The reaching between you has stopped landing","You want the spark back, and the safety underneath it"]}
   };
 
-  /* ============================================================
-     PATTERN CONTENT (Layer 2: how you are wired)
-     ============================================================ */
+  /* ===================== CONTENT ===================== */
+  var PLEASURE={
+    Sensual:{name:"The Sensual",
+      desc:"You don't just feel touch. You absorb it. The flicker of candlelight, the smell of their skin, the texture of sheets against your thighs. Your body responds to beauty, to detail, to the slow unfolding of sensation. You don't just want connection. You want to be melted into, slowly.",
+      turnons:["A slow build, with no rushing to the finish","Beautiful settings: candlelight, scent, music, texture","Full-body touch, not a straight line to the destination","Being savoured, like you are being tasted","Anticipation stretched out until you can barely stand it"]},
+    Sexual:{name:"The Sexual",
+      desc:"Direct. Honest. No fluff, no performance. You don't need a long warm-up, you want to feel it now. Raw, real, unfiltered. You crave physical connection that does not apologise for its intensity, and you are not ashamed of wanting what you want. You just want it met.",
+      turnons:["Directness, no games, no guessing","Skin on skin, now","Being wanted openly, and told so","Heat and simplicity over elaborate staging","A partner who acts on desire the moment they feel it"]},
+    Energetic:{name:"The Energetic",
+      desc:"You feel everything, even in stillness. Your arousal lives in the invisible: the pause, the pulse, the moment before contact. You don't need touch to feel lit up. You need space, presence, attunement. You are the blueprint of anticipation.",
+      turnons:["The charge before a single touch","Eye contact that says everything","Teasing, space, the delicious almost","Breath and presence, being felt from across a room","A partner who slows right down and tunes in"]},
+    Kinky:{name:"The Kinky",
+      desc:"This is not about performance. It is about permission. What turns you on is not only the act, it is the dynamic underneath: power, trust, tension, a little taboo. You come alive in the unknown, in the pause before the command. This wiring is not dangerous. It is devotional.",
+      turnons:["Power play, given or taken","Trust deep enough to hand over control","A little taboo, a little edge","Being told what to do, or telling them","Ritual, restraint, and the charge of the unknown"]},
+    Shapeshifter:{name:"The Shapeshifter",
+      desc:"You are fluent in many languages of turn-on. You are not linear, you are layered. You want it all, and you can hold it: the tease, the tenderness, the rawness, the sacred, the unexpected. You don't want to choose. You want to be met in your full spectrum.",
+      turnons:["Variety, surprise, range","Tenderness one night, edge the next","A partner who can meet every side of you","Not being boxed into a single mode","The unexpected shift, mid-moment"]}
+  };
+
   var PATTERN={
-    Holder:{
-      name:"The Holder",
-      epi:"You are not here to perform care. You are here to be met in it.",
-      copy:"You learned to connect by giving, and to stay safe by serving. You reach first, soothe first, hold everyone. The one thing you rarely let happen is to be touched without having to earn it. Your ache: to be held without earning it.",
-      affirm:"You've just named a pattern your body has run for years to keep connection safe. It is not a flaw. It is a brilliant adaptation, and it is ready to soften.",
-      lands:["Being received without earning it","Someone anticipating your needs for once","Care with nothing to repay","A yes you did not have to rehearse","Being held when you did not organise it"],
-      braces:["Being handed all the responsibility","Having to ask to be noticed","Affection that arrives like an invoice","Being needed but not seen","Nobody ever checking what you need"],
-      shadow:"You can mistake being needed for being loved, and feel unseen in the middle of over-giving. Underneath sits the fear that receiving would collapse the strength you are known for.",
-      todo:"For one week, receive one thing a day without giving anything back. A compliment. A cup of tea made for you. Notice the exact moment your body wants to even the score, and breathe there instead. That moment is the whole pattern, and it loosens every time you stay."
-    },
-    Flame:{
-      name:"The Flame",
-      epi:"You do not have to soften to be loved. Burn as you are.",
-      copy:"You learned early that staying safe meant softening. Your tone, your hunger, the signal just beneath your skin. Your flame never died. It waited. Your ache: to be wanted without shrinking.",
-      affirm:"There is nothing in you that needs repair. You are precise. You learned to survive intimacy by turning down the fire in your belly, and it is time to let it back up.",
-      lands:["Being wanted at full size","Someone who can hold your intensity","Being chosen before you dim","Your no honoured as holy","Heat that is never 'too much'"],
-      braces:["Having to shrink so someone else stays comfortable","Being praised only for your softness","Reading the room before you feel yourself","Being misread, and saying nothing","Desire that needs you smaller"],
-      shadow:"Brilliance dimmed and called emotional regulation. Truth withheld to stay sweet or wanted. A longing so attuned to rupture that it never fully asks.",
-      todo:"Once a day, take up your full size for ten seconds. The real opinion, said out loud. The whole laugh, not the polite half of it. The want, named before you have checked whether it is convenient. Watch what it does to the rest of the hour."
-    },
-    Armour:{
-      name:"The Armour",
-      epi:"You do not need to be disarmed. You need to be met with devotion.",
-      copy:"You did not shut down. You structured. Softness once meant exposure, so safety came through sovereignty and control. You touch from clarity, and rarely let touch lead you. Your ache: to soften without collapsing.",
-      affirm:"You are not cold. Safety simply had to come first. What kept you sovereign can stay, while the guard around your softness quietly comes down.",
-      lands:["Reverence, not force","Slowness your body can trust","Being met with precision","Surrender that turns out to be clarity, not collapse","Someone who earns the softness"],
-      braces:["A fast, unpredictable approach","Tenderness that feels like a tactic","Being led before it is safe","Being told to 'just relax'","Softness demanded rather than invited"],
-      shadow:"Strength that becomes a barrier instead of a bridge. Detachment mistaken for discernment. A real difficulty trusting any softness that cannot be contained.",
-      todo:"Let one small thing be imperfect and unmanaged today. Leave it visibly undone. The email unsent for an hour. Notice the discomfort rise, and notice too that the world holds without your grip on it. Safety was never only in the managing."
-    },
-    Signal:{
-      name:"The Signal",
-      epi:"The raw, unfiltered signal was always the portal.",
-      copy:"You stayed legible. You translated your emotions, filtered your truth, read the room before you spoke. You became easy to love, and slowly stopped being fully real. Your ache: to be met in the full mess of you.",
-      affirm:"The signal you send has been shaped for reception, never revelation. You are about to discover that being met does not require a performance.",
-      lands:["Being met in the full mess of you","Loved in process, not in proof","The unedited first draft, received","Silence that no one needs to manage","Being seen without having to control it"],
-      braces:["Having to translate yourself to be understood","Performing 'I'm fine'","Connection that only wants the polished version","Being 'too much' the moment you are real","Curating yourself to stay legible"],
-      shadow:"Truth polished until it is palatable. Intimacy offered in a form that never reaches the core. Precision used, quietly, to avoid being vulnerable.",
-      todo:"Answer one question today without editing for the listener. First draft, out loud, slightly wrong, slightly too much, in the wrong order. Watch whether the connection survives the mess. It does. That survival is the evidence your body has been waiting for."
-    },
-    Current:{
-      name:"The Current",
-      epi:"You do not need to keep creating the current. You are the current.",
-      copy:"You learned to stay met by staying on. You express, initiate, keep the aliveness moving, because when the charge drops you feel the disconnection instantly. Your ache: to be received without leading it all.",
-      affirm:"You are not too much. You are tired of being the one who brings the current to the room. It is time to feel it move toward you for once.",
-      lands:["Being received without leading it all","Aliveness that moves toward you","Someone who brings the charge too","Rest that is not read as disconnection","Being met, not managed"],
-      braces:["Being the only source of the spark","Silence read as a threat","Giving that is not returned","Having to perform presence","Carrying the aliveness alone"],
-      shadow:"Over-offering when you are not met. Confusing intimacy with responsibility. Leading too soon, before you are invited. Staying in motion to avoid the still.",
-      todo:"Rest in silence for two minutes with nothing in your hands and nothing to offer. Meet the emptiness you have been outrunning. It is two minutes wide, and on the far side of it is the discovery that you are still here, still alive, with the current switched off."
-    }
+    Holder:{name:"The Holder",short:"Holder",
+      line:"You connect by giving and stay safe by serving. You hold everyone, and rarely let yourself be touched without earning it first. Your ache is to be held without having to earn it.",
+      braces:["Being handed all the responsibility","Affection that arrives like an invoice","Being needed but never quite seen","Nobody ever asking what you need"]},
+    Flame:{name:"The Flame",short:"Flame",
+      line:"You learned early that staying safe meant softening your fire, your tone, your hunger. You dim to stay wanted. Your ache is to be wanted without shrinking.",
+      braces:["Having to shrink so someone else stays comfortable","Being praised only for your softness","Being misread, and saying nothing","Desire that needs you smaller than you are"]},
+    Armour:{name:"The Armour",short:"Armour",
+      line:"You did not shut down, you structured. Softness once meant exposure, so you lead with control and clarity. Your ache is to soften without collapsing.",
+      braces:["A fast, unpredictable approach","Tenderness that feels like a tactic","Being led before it feels safe","Being told to 'just relax'"]},
+    Signal:{name:"The Signal",short:"Signal",
+      line:"You stayed legible. You curate your truth and share the polished version, and slowly stop being fully real. Your ache is to be met in the full mess of you.",
+      braces:["Having to translate yourself to be understood","Performing 'I'm fine'","Connection that only wants the tidy version","Being 'too much' the moment you are real"]},
+    Current:{name:"The Current",short:"Current",
+      line:"You stay met by staying on. You bring the aliveness and keep the charge alive, even when it is not returned. Your ache is to be received without leading it all.",
+      braces:["Being the only source of the spark","Silence read as a threat","Giving that is not returned","Carrying the aliveness alone"]}
   };
 
-  /* ============================================================
-     LANGUAGE CONTENT (Layer 1: how life touches you)
-     ============================================================ */
-  var LANG={
-    Emotional:{name:"Emotional Touch",home:"Being heard all the way through. Met in what you feel, without being fixed.",starve:"You hold everyone's feelings and no one asks about yours. Seen, and still unmet inside."},
-    Erotic:{name:"Erotic Touch",home:"The current of aliveness and wanting. Desire that gets to be yours.",starve:"Everything's gone flat and dutiful. Desire feels like an old address you used to live at."},
-    Energetic:{name:"Energetic Touch",home:"How someone approaches you before a word. Presence that settles your body.",starve:"Contact keeps arriving at the wrong speed. Surrounded by people and permanently braced."},
-    Physical:{name:"Physical Touch",home:"Skin, weight, warmth, proximity. Contact with nothing owed.",starve:"Touch-hungry, or touched all day and starving underneath it. Affection that feels like an invoice."},
-    Spiritual:{name:"Spiritual Touch",home:"Awe, meaning, belonging. Being touched by something larger than you.",starve:"It all works on paper and means nothing. You keep asking, quietly, is this it?"}
+  var ORI={
+    Leads:{badge:"You lead",verb:"leads",sub:"You bring the charge, and secretly ache to be received.",
+      meaning:"You set the pace. You orchestrate the pleasure, read the room, make the moment happen. It is magnetic, and it is a lot to carry on your own.",
+      edge:"Your growth is receiving. Being devoted to, without directing it. The turn-on you have been missing is being taken, not being the one who always takes.",
+      tonight:"Tonight, hand over the lead. Ask your partner to run the whole thing while you do nothing but receive. Say it out loud: “tonight I am not leading.” Notice how hard, and how good, it is to simply be met."},
+    Receives:{badge:"You receive",verb:"receives",sub:"You melt beautifully, and you are ready to reach first.",
+      meaning:"You open, you soften, you let it wash over you. You receive beautifully, and you can wait a long time to be reached for.",
+      edge:"Your growth is leading, and asking. The turn-on you have been missing is naming what you want out loud and reaching first, instead of hoping they read your mind.",
+      tonight:"Tonight, make the first move. Say one specific thing you want, in plain words, before you are asked. Watch what happens when your desire gets to lead for once."},
+    Switches:{badge:"You switch",verb:"switches between the two",sub:"You move both ways, and now you get to choose on purpose.",
+      meaning:"You flip. You can lead with fire or surrender completely, depending on how safe you feel and who is across from you. Your range is your gift.",
+      edge:"Your growth is choosing on purpose, rather than only reacting to the room. Lead when you want to lead. Receive when you want to receive. Both by choice.",
+      tonight:"Tonight, name your lane before you begin. “I want to lead” or “I want to be taken.” Choosing it out loud turns your flexibility into power, instead of adaptation."}
   };
 
-  /* ============================================================
-     QUESTIONS  (Q1-7 pattern H/F/A/S/C · Q8-11 relief · Q12-13 ache)
-     ============================================================ */
-  var LANG_ORDER=["Emotional","Erotic","Energetic","Physical","Spiritual"];
-  var QP=[
-    ["When someone offers to help you, your first instinct is to:",[["Wave it off. You are the one who helps.","H"],["Accept quietly, and make sure you are no trouble.","F"],["Politely decline. You have it handled.","A"],["Explain, in detail, exactly what would and would not be useful.","S"],["Turn it into something warmer and bigger than the small thing offered.","C"]]],
-    ["In a silence with someone you love, you tend to:",[["Reach for something to give, do, or ask them.","H"],["Wonder if you have taken up too much space.","F"],["Feel more comfortable than in most conversation.","A"],["Start composing the right thing to say next.","S"],["Fill it, lift it, bring the energy back up.","C"]]],
+  /* ===================== QUESTIONS ===================== */
+  // Section 1: PATTERN  (keys H,F,A,S,C)
+  var QPAT=[
+    ["When someone offers to help you, your first instinct is to:",[["Wave it off. You are the one who helps.","H"],["Accept quietly, and make sure you are no trouble.","F"],["Politely decline. You have it handled.","A"],["Explain exactly what would and would not be useful.","S"],["Turn it into something warmer and bigger than the small thing offered.","C"]]],
     ["The hardest thing for you to receive is:",[["Care, with nothing expected back.","H"],["Full, undimmed desire or attention.","F"],["Tenderness that asks you to soften.","A"],["Being loved in a mess you have not tidied.","S"],["Aliveness you did not have to generate.","C"]]],
     ["Under stress, you:",[["Over-function. You hold everyone.","H"],["Shrink, smooth, keep the peace.","F"],["Take control, contain it, manage.","A"],["Get precise, explain, curate.","S"],["Do more, lead more, keep it moving.","C"]]],
-    ["When someone reaches for you before you're quite ready, your body:",[["Meets them anyway, and gives.","H"],["Softens and goes along, even if part of you wanted a moment.","F"],["Tenses. You need to see it coming.","A"],["Smiles and says the right thing while you catch up inside.","S"],["Rises to meet it and lifts the whole moment.","C"]]],
     ["The thing people rarely guess about you is:",[["How much you long to be held without having to earn it.","H"],["How much fire you keep turned down.","F"],["How much you want to soften, if it were ever safe enough.","A"],["How much of you they have never actually met.","S"],["How tired you are of being the one who brings the aliveness.","C"]]],
     ["In intimacy, you are most likely to:",[["Give with care, and receive best when you're the one in control.","H"],["Follow their lead and rarely name your own edge.","F"],["Lead and hold authority, and struggle to surrender.","A"],["Stay composed, rarely letting go fully into sensation.","S"],["Spark the aliveness and keep it moving, even when it isn't met.","C"]]]
   ];
-  var QL=[
-    ["When you imagine being truly met, it looks most like:",[["Someone staying with your feeling all the way to the end, without fixing it.","Emotional"],["Being wanted, slowly, and letting the wanting be yours.","Erotic"],["A presence that settles you before a single word is spoken.","Energetic"],["A hand that rests on you with nothing owed, and stays.","Physical"],["Being witnessed in front of something larger than both of you.","Spiritual"]]],
-    ["The moment that undoes you, in the best way, is:",[["A question that goes one layer deeper than politeness.","Emotional"],["A slow kiss that's complete in itself, going nowhere.","Erotic"],["The pause before contact, when you can feel them approach.","Energetic"],["A long hug, right at the second your body decides it's real.","Physical"],["Music, or a night sky, that quietly rearranges you.","Spiritual"]]],
-    ["You feel most safe when:",[["You can say the true thing and someone stays.","Emotional"],["You're desired without it turning into a demand.","Erotic"],["The approach is clean and unhurried, nothing needed back.","Energetic"],["There's warmth and weight, contact that isn't going anywhere.","Physical"],["The moment has meaning, and you're part of something.","Spiritual"]]],
-    ["Left to itself, life reaches you most through:",[["Words, attention, being heard.","Emotional"],["Appetite, beauty, the current of wanting.","Erotic"],["Atmosphere, resonance, the feeling in a room.","Energetic"],["Skin, warmth, closeness.","Physical"],["Awe, silence, the sense of the sacred.","Spiritual"]]]
+  // Section 2: PLEASURE  (keys Sensual,Sexual,Energetic,Kinky,Shapeshifter)
+  var QPL=[
+    ["I feel most alive when&hellip;",[["My body is slowly invited in, with texture, scent, and a soothing tone.","Sensual"],["They kiss me without hesitation. I want action, not warm-up.","Sexual"],["I can feel the space between us like a current: each breath, each pause, each glance.","Energetic"],["They look at me and say, “don't move.” That's where the thrill lives.","Kinky"],["It begins one way and unfolds into something else entirely. That shift wakes me up.","Shapeshifter"]]],
+    ["I feel most satisfied when&hellip;",[["I'm courted through touch, scent, and softness.","Sensual"],["There's clear, embodied desire, and we don't overthink it when we go there.","Sexual"],["The tension builds slowly, through breath and gaze.","Energetic"],["They take control, tease, or give me instructions.","Kinky"],["We flow between desire, play, intensity, and presence.","Shapeshifter"]]],
+    ["The moment I feel most turned on is&hellip;",[["When the lights are low, the music is soft, and I feel held.","Sensual"],["When they undress slowly and let me feel their full want.","Sexual"],["When the gaze softens and they breathe with me.","Energetic"],["When they say, “look at me. Keep still.” My whole body wakes up.","Kinky"],["When the moment shifts: unexpected, layered, and alive.","Shapeshifter"]]],
+    ["What keeps me open is&hellip;",[["Texture, scent, sound. When the details are right, my whole body says yes.","Sensual"],["A bold move. Clear want. No fluff.","Sexual"],["A pause before contact. That space lights everything up.","Energetic"],["The unexpected, when I can't predict what comes next.","Kinky"],["Freedom to move between it all, without being boxed.","Shapeshifter"]]],
+    ["My body opens most when&hellip;",[["The lights dim, the scent lands, and they begin with a touch that lingers.","Sensual"],["There's no hesitation. I feel their want, and I want it too.","Sexual"],["There's real presence, breath, and the charge of being felt.","Energetic"],["There's real trust, a playful edge, and surprise.","Kinky"],["Nothing is off-limits. I feel free to bring every part of me.","Shapeshifter"]]]
   ];
-  var QA=[
-    ["If you're honest, the thing you're most starving for is:",[["To be asked how you actually are, and be met in the answer.","Emotional"],["To feel that spark of aliveness that went quiet.","Erotic"],["To stop bracing, and trust the way someone comes toward you.","Energetic"],["Touch with nothing owed, in doses your body can trust.","Physical"],["For something to finally matter again, to actually register.","Spiritual"]]],
-    ["The absence you feel, even in a full life, sounds most like:",[["“I hold everyone. Nobody catches me.”","Emotional"],["“I function perfectly and feel almost nothing.”","Erotic"],["“I'm surrounded by people and permanently on guard.”","Energetic"],["“I'm touched all day and starving underneath it.”","Physical"],["“I have what I aimed for and keep asking, is this it?”","Spiritual"]]]
+  // Section 3: LEAD / RECEIVE  (keys L,R,B)
+  var QLR=[
+    ["When desire is in the air, you tend to&hellip;",[["Make the first move, and set the tone.","L"],["Wait to be reached for, and melt when you are.","R"],["Read the moment, and flip either way.","B"]]],
+    ["You're most turned on when&hellip;",[["You're orchestrating their pleasure.","L"],["Someone is devoted entirely to yours.","R"],["The lead passes back and forth between you.","B"]]],
+    ["Letting go in bed feels&hellip;",[["Hard. You'd rather run the show.","L"],["Natural. You love being taken.","R"],["It depends entirely on how safe you feel.","B"]]],
+    ["Partners would say you're&hellip;",[["The initiator, the one who leads.","L"],["The one who receives and responds.","R"],["Impossible to pin down. You switch.","B"]]]
   ];
-  var ALL=[].concat(QP,QL,QA);
-  var TOTAL=ALL.length;
-  var PART=["Part one · how you are wired","Part one · how you are wired","Part one · how you are wired","Part one · how you are wired","Part one · how you are wired","Part one · how you are wired","Part one · how you are wired","Part two · how life lands","Part two · how life lands","Part two · how life lands","Part two · how life lands","Part three · what you miss","Part three · what you miss"];
 
-  /* ============================================================
-     ENGINE
-     ============================================================ */
+  var ALL=[].concat(QPAT,QPL,QLR);
+  var TOTAL=ALL.length; // 14
+  function phaseFor(idx){ if(idx<5)return"Part one · how you protect touch"; if(idx<10)return"Part two · how you're turned on"; return"Part three · lead or receive"; }
+
+  /* ===================== ENGINE ===================== */
   var i=0,answers=new Array(TOTAL).fill(null),locked=false,audience='woman';
   var $=function(id){return document.getElementById(id);};
   var intro=$('intro'),audienceSec=$('audience'),quiz=$('quiz'),reveal=$('reveal'),resultSec=$('result');
@@ -462,70 +442,81 @@ window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);
 
   function renderQ(){
     locked=false;var q=ALL[i];
-    $('phase').textContent=PART[i];
-    $('question').textContent=q[0];
+    $('phase').textContent=phaseFor(i);
+    $('question').innerHTML=q[0];
     $('prog').textContent=pad(i+1)+' / '+TOTAL;
-    $('bar').style.width=Math.round((i)/TOTAL*100+6)+'%';
+    $('bar').style.width=Math.round((i)/TOTAL*100+5)+'%';
     $('back').hidden=(i===0);
     var box=$('opts');box.innerHTML='';
     q[1].forEach(function(opt,idx){
       var b=document.createElement('button');
       b.type='button';b.className='opt'+(answers[i]===idx?' sel':'');
-      b.textContent=opt[0];
+      b.innerHTML=opt[0];
       b.addEventListener('click',function(){
         if(locked)return;locked=true;
         Array.prototype.forEach.call(box.children,function(c){c.classList.remove('sel');});
         b.classList.add('sel');answers[i]=idx;
-        setTimeout(function(){if(i<TOTAL-1){i++;renderQ();}else{doReveal();}},320);
+        setTimeout(function(){if(i<TOTAL-1){i++;renderQ();}else{doReveal();}},300);
       });
       box.appendChild(b);
     });
   }
   $('back').addEventListener('click',function(){if(i>0){i--;renderQ();}});
 
-  var result={pattern:'',home:'',starve:''};
+  var result={pattern:'',pleasure:'',ori:''};
 
   function score(){
+    // pattern
     var pt={H:0,F:0,A:0,S:0,C:0};
-    for(var a=0;a<7;a++){if(answers[a]!=null)pt[QP[a][1][answers[a]][1]]++;}
-    var MAP={H:'Holder',F:'Flame',A:'Armour',S:'Signal',C:'Current'};
-    var pattern=MAP[Object.keys(pt).sort(function(x,y){return pt[y]-pt[x];})[0]];
-    var home={Emotional:0,Erotic:0,Energetic:0,Physical:0,Spiritual:0};
-    for(var b=0;b<4;b++){var ai=answers[7+b];if(ai!=null)home[QL[b][1][ai][1]]++;}
-    var homeLang=LANG_ORDER.slice().sort(function(x,y){return home[y]-home[x];})[0];
-    var ache={Emotional:0,Erotic:0,Energetic:0,Physical:0,Spiritual:0};
-    for(var c=0;c<2;c++){var aj=answers[11+c];if(aj!=null)ache[QA[c][1][aj][1]]++;}
-    var aMax=Math.max.apply(null,LANG_ORDER.map(function(k){return ache[k];}));
-    var top=LANG_ORDER.filter(function(k){return ache[k]===aMax;});
-    var starve=top.length===1?top[0]:top.slice().sort(function(x,y){return home[x]-home[y];})[0];
-    if(starve===homeLang){var alt=LANG_ORDER.slice().sort(function(x,y){return (home[x]-ache[x])-(home[y]-ache[y]);})[0];if(alt!==homeLang)starve=alt;}
-    return {pattern:pattern,home:homeLang,starve:starve};
+    for(var a=0;a<5;a++){if(answers[a]!=null)pt[QPAT[a][1][answers[a]][1]]++;}
+    var PM={H:'Holder',F:'Flame',A:'Armour',S:'Signal',C:'Current'};
+    var pattern=PM[Object.keys(pt).sort(function(x,y){return pt[y]-pt[x];})[0]];
+    // pleasure
+    var pl={Sensual:0,Sexual:0,Energetic:0,Kinky:0,Shapeshifter:0};
+    for(var b=0;b<5;b++){var pi=answers[5+b];if(pi!=null)pl[QPL[b][1][pi][1]]++;}
+    var prim=[['Sensual',pl.Sensual],['Sexual',pl.Sexual],['Energetic',pl.Energetic],['Kinky',pl.Kinky]].sort(function(x,y){return y[1]-x[1];});
+    var spread=[pl.Sensual,pl.Sexual,pl.Energetic,pl.Kinky].filter(function(n){return n>=1;}).length;
+    var isShift = pl.Shapeshifter>=2 || prim[0][1]<=1 || (spread>=4 && (prim[0][1]-prim[1][1])<=1) || (spread>=3 && prim[0][1]===prim[1][1]);
+    var pleasure=isShift?'Shapeshifter':prim[0][0];
+    // lead / receive
+    var lr={L:0,R:0,B:0};
+    for(var c=0;c<4;c++){var li=answers[10+c];if(li!=null)lr[QLR[c][1][li][1]]++;}
+    var ori;
+    if(lr.B>lr.L && lr.B>lr.R)ori='Switches';
+    else if(lr.L===lr.R)ori='Switches';
+    else ori=(lr.L>lr.R)?'Leads':'Receives';
+    return {pattern:pattern,pleasure:pleasure,ori:ori};
   }
 
   function doReveal(){
     result=score();
-    var P=PATTERN[result.pattern];
-    $('patternName').textContent=P.name;
-    $('patternEpi').textContent='“'+P.epi+'”';
-    $('patternCopy').textContent=P.copy;
-    $('homeLang').textContent=LANG[result.home].name;$('homeDesc').textContent=LANG[result.home].home;
-    $('starveLang').textContent=LANG[result.starve].name;$('starveDesc').textContent=LANG[result.starve].starve;
+    var pl=PLEASURE[result.pleasure],pa=PATTERN[result.pattern],o=ORI[result.ori];
+    var art=/^[AEIOU]/i.test(result.pleasure)?'an':'a';
+    var head="You're "+art+" "+result.pleasure+" "+pa.short+" who "+o.verb+".";
+    $('tHead').textContent=head;
+    $('tSub').textContent=o.sub;
     quiz.style.display='none';reveal.style.display='block';reveal.scrollIntoView({behavior:'smooth',block:'start'});
-    if(typeof gtag==='function')gtag('event','quiz_complete',{quiz:'touch_reset',pattern:result.pattern,home:result.home,starving:result.starve,audience:audience});
+    if(typeof gtag==='function')gtag('event','quiz_complete',{quiz:'touch_reset',pattern:result.pattern,pleasure:result.pleasure,orientation:result.ori,audience:audience});
   }
 
   function fillList(el,arr){el.innerHTML='';arr.forEach(function(t){var li=document.createElement('li');li.textContent=t;el.appendChild(li);});}
 
   function paintResult(){
-    var P=PATTERN[result.pattern],a=AUD[audience];
-    $('rName').textContent=P.name;
-    $('rAffirm').textContent=P.affirm;
-    fillList($('rLands'),P.lands);
-    fillList($('rBraces'),P.braces);
-    $('rShadow').textContent=P.shadow;
-    $('rDo').innerHTML='<strong>Try this:</strong> '+P.todo;
-    $('rHome').textContent=LANG[result.home].name;$('rHomeDesc').textContent=LANG[result.home].home;
-    $('rStarve').textContent=LANG[result.starve].name;$('rStarveDesc').textContent=LANG[result.starve].starve;
+    var pl=PLEASURE[result.pleasure],pa=PATTERN[result.pattern],o=ORI[result.ori],a=AUD[audience];
+    var art=/^[AEIOU]/i.test(result.pleasure)?'an':'a';
+    $('rHead').textContent="You're "+art+" "+result.pleasure+" "+pa.short+" who "+o.verb+".";
+    $('rSub').textContent=o.sub;
+    $('rAffirm').textContent="You've just named how your body actually works in touch and desire. None of it is a flaw. It is a set of brilliant adaptations, and every one of them can soften.";
+    $('rPleasureName').textContent=pl.name;
+    $('rPleasureDesc').textContent=pl.desc;
+    fillList($('rTurnons'),pl.turnons);
+    $('rPatternName').textContent=pa.name;
+    $('rPatternLine').textContent=pa.line;
+    $('rOriBadge').textContent=o.badge;
+    $('rOriMeaning').textContent=o.meaning;
+    $('rOriEdge').textContent=o.edge;
+    fillList($('rBraces'),pa.braces);
+    $('rTonight').textContent=o.tonight;
     $('pLine').textContent=a.line;
     $('pDoor').textContent=a.door;
     $('pBlurb').textContent=a.blurb;
@@ -538,7 +529,7 @@ window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);
     var email=$('email').value.trim();var msg=$('msg');msg.className='msg';
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){msg.className='msg err';msg.textContent='Please enter a valid email.';return;}
     var btn=$('sendBtn');btn.disabled=true;btn.textContent='Unlocking…';
-    var tags=[PATTERN_TAG[result.pattern],CRAVE_TAG[result.starve],AUD[audience].tag].filter(function(t){return t;});
+    var tags=[PATTERN_TAG[result.pattern],PLEASURE_TAG[result.pleasure],ORI_TAG[result.ori],AUD[audience].tag].filter(function(t){return t;});
     fetch('/.netlify/functions/subscribe',{
       method:'POST',headers:{'Content-Type':'application/json'},
       body:JSON.stringify({email:email,tagIds:tags,sequenceId:PATTERN_SEQ[result.pattern]||null,website:$('capForm').website.value})
@@ -547,7 +538,7 @@ window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);
         if(d&&d.ok){
           paintResult();
           reveal.style.display='none';resultSec.style.display='block';resultSec.scrollIntoView({behavior:'smooth',block:'start'});
-          if(typeof gtag==='function')gtag('event','quiz_optin',{quiz:'touch_reset',pattern:result.pattern,audience:audience});
+          if(typeof gtag==='function')gtag('event','quiz_optin',{quiz:'touch_reset',pattern:result.pattern,pleasure:result.pleasure,orientation:result.ori,audience:audience});
         }else{throw new Error('fail');}
       }).catch(function(){
         btn.disabled=false;btn.textContent='Unlock my full reading';
