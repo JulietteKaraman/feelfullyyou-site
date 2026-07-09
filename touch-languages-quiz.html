@@ -274,6 +274,16 @@
   .reyebrow.num:before{content:none}
   .rband.green .lnum{border-color:var(--gold-pale);color:var(--gold-pale)}
   .reyebrow.dark .lnum{border-color:var(--teal-deep);color:var(--teal-deep)}
+  /* readability + shadow + growth */
+  .rband.green .bandtext,.rband.green .aside{color:rgba(254,252,250,.95)}
+  .rband.green .chip{color:#fff}
+  .rband.ochre{background:var(--cream)}
+  .rband.ochre .bigbadge{color:var(--gold-deep)}
+  .growthline{font-family:var(--display);font-weight:600;color:var(--gold-deep);font-size:1.12rem;line-height:1.42;margin:8px 0 24px;padding-left:16px;border-left:3px solid var(--gold)}
+  .shadowbox{background:rgba(6,26,26,.32);border:1px solid rgba(221,201,142,.26);border-radius:12px;padding:20px 22px;margin-top:24px}
+  .shadowbox .sh-h{font-family:var(--display);font-weight:600;color:var(--gold-pale);font-size:1.02rem;margin-bottom:8px}
+  .shadowbox p{font-size:.99rem;color:rgba(254,252,250,.94);font-weight:300;line-height:1.7;margin:0}
+  .shadowbox .sh-more{font-size:.86rem;color:var(--gold-pale);font-style:italic;margin-top:12px}
 </style>
 </head>
 <body>
@@ -387,6 +397,11 @@
       <p class="bandtext" id="rPleasureDesc"></p>
       <div class="chip-h">What turns you on</div>
       <div class="chips" id="rTurnons"></div>
+      <div class="shadowbox">
+        <div class="sh-h">The shadow side</div>
+        <p id="rPleasureShadow"></p>
+        <p class="sh-more">The full read on your shadow, and the rituals that soften it, is in your report. Check your inbox.</p>
+      </div>
     </div>
   </section>
 
@@ -395,6 +410,7 @@
       <div class="reyebrow num"><span class="lnum">2</span>Your touch pattern</div>
       <h2 class="bandhead" id="rPatternName"></h2>
       <p class="bandtext" id="rPatternLine"></p>
+      <p class="growthline" id="rPatternGrowth"></p>
       <div class="chip-h" style="margin-bottom:14px">What shuts you down</div>
       <div class="chips shut" id="rBraces"></div>
     </div>
@@ -517,36 +533,46 @@
   var PLEASURE={
     Sensual:{name:"The Sensual",short:"Sensual",
       desc:"You don't just feel touch. You absorb it. The flicker of candlelight, the smell of their skin, the texture of sheets against your thighs. Your body responds to beauty, to detail, to the slow unfolding of sensation. You don't just want connection. You want to be melted into, slowly.",
-      turnons:["A slow build, no rushing to the finish","Candlelight, scent, music, texture","Full-body touch, not a straight line","Being savoured, like you're being tasted","Anticipation stretched until you can barely stand it"]},
+      turnons:["A slow build, no rushing to the finish","Candlelight, scent, music, texture","Full-body touch, not a straight line","Being savoured, like you're being tasted","Anticipation stretched until you can barely stand it"],
+      shadow:"You can need the conditions just right, the light, the mood, the time, before you'll let go. When it's rushed or plain, you quietly close, and desire ends up waiting for a stage that rarely gets set."},
     Sexual:{name:"The Sexual",short:"Sexual",
       desc:"Direct. Honest. No fluff, no performance. You don't need a long warm-up, you want to feel it now. Raw, real, unfiltered. You crave physical connection that does not apologise for its intensity, and you are not ashamed of wanting what you want. You just want it met.",
-      turnons:["Directness, no games","Skin on skin, now","Being wanted openly, and told so","Heat over elaborate staging","A partner who acts the moment they feel it"]},
+      turnons:["Directness, no games","Skin on skin, now","Being wanted openly, and told so","Heat over elaborate staging","A partner who acts the moment they feel it"],
+      shadow:"Your directness can get read as too much. And if a partner needs slow warmth first, you can take it as rejection, pull back, and stop reaching altogether."},
     Energetic:{name:"The Energetic",short:"Energetic",
       desc:"You feel everything, even in stillness. Your arousal lives in the invisible: the pause, the pulse, the moment before contact. You don't need touch to feel lit up. You need space, presence, attunement. You are the blueprint of anticipation.",
-      turnons:["The charge before a single touch","Eye contact that says everything","Teasing, space, the delicious almost","Being felt from across a room","A partner who slows right down and tunes in"]},
+      turnons:["The charge before a single touch","Eye contact that says everything","Teasing, space, the delicious almost","Being felt from across a room","A partner who slows right down and tunes in"],
+      shadow:"You feel every off-note too. The smallest misattunement makes you brace and disappear up into your head, right at the moment you most want to be reached."},
     Kinky:{name:"The Kinky",short:"Kinky",
       desc:"This is not about performance. It is about permission. What turns you on is not only the act, it is the dynamic underneath: power, trust, tension, a little taboo. You come alive in the unknown, in the pause before the command. This wiring is not dangerous. It is devotional.",
-      turnons:["Power play, given or taken","Trust deep enough to hand over control","A little taboo, a little edge","Being told what to do, or telling them","Ritual, restraint, the charge of the unknown"]},
+      turnons:["Power play, given or taken","Trust deep enough to hand over control","A little taboo, a little edge","Being told what to do, or telling them","Ritual, restraint, the charge of the unknown"],
+      shadow:"You can hide this whole part of yourself for fear of being judged, and settle for a version you never wanted, quietly starving for a charge you never let yourself ask for."},
     Shapeshifter:{name:"The Shapeshifter",short:"Shapeshifter",
       desc:"You are fluent in many languages of turn-on. You are not linear, you are layered. You want it all, and you can hold it: the tease, the tenderness, the rawness, the sacred, the unexpected. You don't want to choose. You want to be met in your full spectrum.",
-      turnons:["Variety, surprise, range","Tenderness one night, edge the next","A partner who can meet every side of you","Never being boxed into one mode","The unexpected shift, mid-moment"]}
+      turnons:["Variety, surprise, range","Tenderness one night, edge the next","A partner who can meet every side of you","Never being boxed into one mode","The unexpected shift, mid-moment"],
+      shadow:"You thrive on variety, so a partner with only one way in can leave you starving. And because you can meet anyone's flavour, you can lose track of what you actually want, and end up unmet in the shuffle."}
   };
 
   var PATTERN={
     Holder:{name:"The Holder",short:"Holder",
-      line:"You connect by giving and stay safe by serving. You hold everyone, and rarely let yourself be touched without earning it first. Your ache is to be held without having to earn it.",
+      line:"You connect by giving and stay safe by serving. You hold everyone, and rarely let yourself be touched without earning it first.",
+      growth:"Your edge: to be held as fully as you hold everyone else, without having to earn a thing.",
       braces:["Being handed all the responsibility","Affection that arrives like an invoice","Being needed but never quite seen","Nobody ever asking what you need"]},
     Flame:{name:"The Flame",short:"Flame",
-      line:"You learned early that staying safe meant softening your fire, your tone, your hunger. You dim to stay wanted. Your ache is to be wanted without shrinking.",
+      line:"You learned early that staying safe meant softening your fire, your tone, your hunger. You dim to stay wanted.",
+      growth:"Your edge: to be wanted at full brightness, and never dim a watt of yourself again.",
       braces:["Shrinking so someone else stays comfortable","Being praised only for your softness","Being misread, and saying nothing","Desire that needs you smaller than you are"]},
     Armour:{name:"The Armour",short:"Armour",
-      line:"You did not shut down, you structured. Softness once meant exposure, so you lead with control and clarity. Your ache is to soften without collapsing.",
+      line:"You did not shut down, you structured. Softness once meant exposure, so you lead with control and clarity, and it has kept you sovereign.",
+      growth:"Your edge: to soften on your own terms, without losing an ounce of your strength.",
       braces:["A fast, unpredictable approach","Tenderness that feels like a tactic","Being led before it feels safe","Being told to 'just relax'"]},
     Signal:{name:"The Signal",short:"Signal",
-      line:"You stayed legible. You curate your truth and share the polished version, and slowly stop being fully real. Your ache is to be met in the full mess of you.",
+      line:"You stayed legible. You curate your truth and share the polished version, and it has made you easy to love.",
+      growth:"Your edge: to be met in the full, unedited truth of you, and watch it only draw people closer.",
       braces:["Having to translate yourself to be understood","Performing 'I'm fine'","Connection that only wants the tidy version","Being 'too much' the moment you're real"]},
     Current:{name:"The Current",short:"Current",
-      line:"You stay met by staying on. You bring the aliveness and keep the charge alive, even when it is not returned. Your ache is to be received without leading it all.",
+      line:"You stay met by staying on. You bring the aliveness and keep the charge alive, and rooms come alive around you.",
+      growth:"Your edge: to be received as generously as you give, without carrying the current alone.",
       braces:["Being the only source of the spark","Silence read as a threat","Giving that is not returned","Carrying the aliveness alone"]}
   };
 
@@ -705,8 +731,10 @@
     $('rPleasureName').textContent=pl.name;
     $('rPleasureDesc').textContent=pl.desc;
     fillList($('rTurnons'),pl.turnons,'chip');
+    $('rPleasureShadow').textContent=pl.shadow;
     $('rPatternName').textContent=pa.name;
     $('rPatternLine').textContent=pa.line;
+    $('rPatternGrowth').textContent=pa.growth;
     fillList($('rBraces'),pa.braces,'chip');
     $('rLangName').textContent=lg.name;
     $('rLangReaches').textContent=lg.reaches;
