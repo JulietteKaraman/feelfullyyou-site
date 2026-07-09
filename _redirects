@@ -100,5 +100,9 @@
 /members                        /members.html                   200
 /membership                     /members.html                   200
 
+# Podcast show-notes links (Buzzsprout points here)
+/pick-a-card                    https://couplecards.netlify.app  302
+/touch-o-meter                  /touch-reset-quiz               301
+
 # 404 fallback
 /*                              /404.html                       404
