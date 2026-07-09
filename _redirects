@@ -40,7 +40,9 @@
 /cards-complete-deck            /cards-complete-deck.html       200
 /relationship-pattern-disruptor /relationship-pattern-disruptor.html 200
 /touch-languages                /touch-languages.html           200
+/touch-reset-quiz               /touch-languages-quiz.html      200
 /touch-languages-quiz           /touch-languages-quiz.html      200
+/touch-pattern-quiz             /touch-languages-quiz.html      200
 /touch-quiz                     /touch-languages-quiz.html      200
 /quiz                           /touch-languages-quiz.html      200
 /relationship-pattern-session   /pattern-session                301
