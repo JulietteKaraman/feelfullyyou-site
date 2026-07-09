@@ -227,17 +227,17 @@
       </section>
 
       <section id="reveal">
-        <div class="kicker">Your reading</div>
-        <h1 id="tHead"></h1>
-        <p class="sub" id="tSub"></p>
+        <div class="kicker">Your reading is ready</div>
+        <h1>Where shall I send it?</h1>
+        <p class="sub">Your Touch Pattern, your erotic wiring, whether you lead or receive, what turns you on, and your first move to make tonight.</p>
         <div class="divider"></div>
-        <p class="tease">What turns you on, what shuts you down, and your one move to make tonight, are one step away.</p>
+        <p class="tease">It all opens on the next screen, and lands in your inbox to keep.</p>
         <form class="capture" id="capForm" autocomplete="on">
-          <label for="email">Where shall I send your full reading?</label>
-          <p class="sublabel">Unlock the whole thing, here on this page and in your inbox.</p>
+          <label for="email">Your email</label>
+          <p class="sublabel">One step, and your full reading opens.</p>
           <input type="email" id="email" name="email" placeholder="you@email.com" required>
           <input type="text" class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <button type="submit" class="btn block pulse" id="sendBtn">Unlock my full reading</button>
+          <button type="submit" class="btn block pulse" id="sendBtn">Reveal my reading</button>
           <p class="consent">Your reading, then my letters on touch, intimacy and coming back to your body. Leave any time.</p>
           <div class="msg" id="msg"></div>
         </form>
@@ -309,6 +309,15 @@
 
   <section class="rband dark">
     <div class="rin">
+      <div class="reyebrow">Your next step</div>
+      <h2 class="bandhead" id="fTitle"></h2>
+      <p class="bandtext" id="fBlurb"></p>
+      <a class="btn pulse" id="fCta" href="#" style="margin-top:20px">Get it</a>
+    </div>
+  </section>
+
+  <section class="rband green">
+    <div class="rin">
       <div class="pitch">
         <div class="pl" id="pLine"></div>
         <h2 id="pDoor"></h2>
@@ -350,13 +359,16 @@
   var AUD={
     woman:{tag:20994349,line:"The Touch Reset for Women",door:"The Room",href:"/the-room",cta:"Show me The Room",
       blurb:"My 8-week live group where women come home to their own body, their own sensation, and their own yes.",
-      foryou:["Touch has gone quiet, careful, or routine","You feel less than you used to, and you want it back","You are ready to stop performing fine and actually land"]},
+      foryou:["Touch has gone quiet, careful, or routine","You feel less than you used to, and you want it back","You are ready to stop performing fine and actually land"],
+      free:{title:"The 10 Touch Rituals",blurb:"Ten small daily practices to put touch back into your days, starting with your own body. Free, and it's exactly where I'd have you begin.",href:"/10-touch-rituals",cta:"Get the 10 Touch Rituals"}},
     man:{tag:20994350,line:"The Touch Reset for Men",door:"Touch Point",href:"/touch-point",cta:"Show me Touch Point",
       blurb:"My membership for men who keep reaching and missing, learning to read her body and their own before the mind catches up.",
-      foryou:["She gets quieter and you don't know why","You have read the books and done the listening","You want your body to finally catch up to the effort"]},
+      foryou:["She gets quieter and you don't know why","You have read the books and done the listening","You want your body to finally catch up to the effort"],
+      free:{title:"When She Goes Quiet",blurb:"The free guide to what her withdrawal is really telling you, and the first moves that reach her again.",href:"/when-she-goes-quiet",cta:"Get the free guide"}},
     couple:{tag:20994351,line:"The Touch Reset for Couples",door:"The Beginning",href:"/the-beginning",cta:"Show me The Beginning",
       blurb:"My deep container for two people who love each other and lost the language to reach each other.",
-      foryou:["You are polite, you co-parent, you share a bed","The reaching between you has stopped landing","You want the spark back, and the safety underneath it"]}
+      foryou:["You are polite, you co-parent, you share a bed","The reaching between you has stopped landing","You want the spark back, and the safety underneath it"],
+      free:{title:"The 10 Touch Rituals",blurb:"Ten small moments of touch that bring the two of you back to each other, one a day. Free.",href:"/10-touch-rituals",cta:"Get the 10 Touch Rituals"}}
   };
 
   var EMBLEM={
@@ -426,17 +438,17 @@
     ["In intimacy, you are most likely to:",[["Give with care, and receive best when you're the one in control.","H"],["Follow their lead and rarely name your own edge.","F"],["Lead and hold authority, and struggle to surrender.","A"],["Stay composed, rarely letting go fully into sensation.","S"],["Spark the aliveness and keep it moving, even when it isn't met.","C"]]]
   ];
   var QPL=[
-    ["I feel most alive when&hellip;",[["My body is slowly invited in, with texture, scent, and a soothing tone.","Sensual"],["They kiss me without hesitation. I want action, not warm-up.","Sexual"],["I can feel the space between us like a current: each breath, each pause, each glance.","Energetic"],["They look at me and say, “don't move.” That's where the thrill lives.","Kinky"],["It begins one way and unfolds into something else entirely. That shift wakes me up.","Shapeshifter"]]],
-    ["I feel most satisfied when&hellip;",[["I'm courted through touch, scent, and softness.","Sensual"],["There's clear, embodied desire, and we don't overthink it when we go there.","Sexual"],["The tension builds slowly, through breath and gaze.","Energetic"],["They take control, tease, or give me instructions.","Kinky"],["We flow between desire, play, intensity, and presence.","Shapeshifter"]]],
-    ["The moment I feel most turned on is&hellip;",[["When the lights are low, the music is soft, and I feel held.","Sensual"],["When they undress slowly and let me feel their full want.","Sexual"],["When the gaze softens and they breathe with me.","Energetic"],["When they say, “look at me. Keep still.” My whole body wakes up.","Kinky"],["When the moment shifts: unexpected, layered, and alive.","Shapeshifter"]]],
-    ["What keeps me open is&hellip;",[["Texture, scent, sound. When the details are right, my whole body says yes.","Sensual"],["A bold move. Clear want. No fluff.","Sexual"],["A pause before contact. That space lights everything up.","Energetic"],["The unexpected, when I can't predict what comes next.","Kinky"],["Freedom to move between it all, without being boxed.","Shapeshifter"]]],
-    ["My body opens most when&hellip;",[["The lights dim, the scent lands, and they begin with a touch that lingers.","Sensual"],["There's no hesitation. I feel their want, and I want it too.","Sexual"],["There's real presence, breath, and the charge of being felt.","Energetic"],["There's real trust, a playful edge, and surprise.","Kinky"],["Nothing is off-limits. I feel free to bring every part of me.","Shapeshifter"]]]
+    ["Which scene would you most want to be in?",[["A candlelit bath, silk, and someone undressing you slowly.","Sensual"],["Pushed against the wall the second the door shuts.","Sexual"],["A long, charged look held across a crowded room.","Energetic"],["Hands pinned above your head, a whispered command.","Kinky"],["One that keeps changing: tender, then wild, then slow.","Shapeshifter"]]],
+    ["How do you most like to be kissed?",[["Slowly and softly, like you're being savoured.","Sensual"],["Deep and hungry, with no hesitation.","Sexual"],["Barely touching at first, all breath and almost.","Energetic"],["Held by the jaw, and told to keep still.","Kinky"],["Differently every time. Surprise me.","Shapeshifter"]]],
+    ["The text that would turn you on most:",[["“The bath's run and the candles are lit. Come home.”","Sensual"],["“I can't stop thinking about your body.”","Sexual"],["“I felt you the second you walked in tonight.”","Energetic"],["“Be ready when I get home. Do as you're told.”","Kinky"],["“Tonight could go so many different ways…”","Shapeshifter"]]],
+    ["What builds the heat for you?",[["Scent, texture, music, a slow unfolding.","Sensual"],["Directness, and someone who says what they want.","Sexual"],["The space and the tension before anything happens.","Energetic"],["Power, a little risk, the edge of the unknown.","Kinky"],["A mix that keeps shifting so you never quite settle.","Shapeshifter"]]],
+    ["Your body opens most when&hellip;",[["There's beauty, and a touch that lingers.","Sensual"],["There's no hesitation, and real, felt want.","Sexual"],["There's presence, breath, and being truly felt.","Energetic"],["There's deep trust, a playful edge, and surprise.","Kinky"],["Nothing is off-limits and you can bring every side of you.","Shapeshifter"]]]
   ];
   var QLR=[
-    ["When desire is in the air, you tend to&hellip;",[["Make the first move, and set the tone.","L"],["Wait to be reached for, and melt when you are.","R"],["Read the moment, and flip either way.","B"]]],
-    ["You're most turned on when&hellip;",[["You're orchestrating their pleasure.","L"],["Someone is devoted entirely to yours.","R"],["The lead passes back and forth between you.","B"]]],
-    ["Letting go in bed feels&hellip;",[["Hard. You'd rather run the show.","L"],["Natural. You love being taken.","R"],["It depends entirely on how safe you feel.","B"]]],
-    ["Partners would say you're&hellip;",[["The initiator, the one who leads.","L"],["The one who receives and responds.","R"],["Impossible to pin down. You switch.","B"]]]
+    ["When desire is in the air, you're the one who&hellip;",[["Makes the first move and sets the tone.","L"],["Waits to be reached for, and melts when you are.","R"],["Reads the moment and goes either way.","B"]]],
+    ["Your favourite version of sex is&hellip;",[["You driving, watching them come undone.","L"],["Being taken, not having to think at all.","R"],["Trading who's in charge back and forth.","B"]]],
+    ["Handing over control feels&hellip;",[["Hard. You'd rather hold the reins.","L"],["Like relief. Finally.","R"],["Fine, once the trust is really there.","B"]]],
+    ["In bed, in one word, you're&hellip;",[["The initiator.","L"],["The receiver.","R"],["A switch.","B"]]]
   ];
 
   var ALL=[].concat(QPAT,QPL,QLR);
@@ -494,7 +506,7 @@
     for(var b=0;b<5;b++){var pi=answers[5+b];if(pi!=null)pl[QPL[b][1][pi][1]]++;}
     var prim=[['Sensual',pl.Sensual],['Sexual',pl.Sexual],['Energetic',pl.Energetic],['Kinky',pl.Kinky]].sort(function(x,y){return y[1]-x[1];});
     var spread=[pl.Sensual,pl.Sexual,pl.Energetic,pl.Kinky].filter(function(n){return n>=1;}).length;
-    var isShift = pl.Shapeshifter>=2 || prim[0][1]<=1 || (spread>=4 && (prim[0][1]-prim[1][1])<=1) || (spread>=3 && prim[0][1]===prim[1][1]);
+    var isShift = pl.Shapeshifter>=2 || prim[0][1]<=1;
     var pleasure=isShift?'Shapeshifter':prim[0][0];
     var lr={L:0,R:0,B:0};
     for(var c=0;c<4;c++){var li=answers[10+c];if(li!=null)lr[QLR[c][1][li][1]]++;}
@@ -513,8 +525,6 @@
 
   function doReveal(){
     result=score();
-    $('tHead').textContent=headline();
-    $('tSub').textContent=ORI[result.ori].sub;
     quiz.style.display='none';reveal.style.display='block';reveal.scrollIntoView({behavior:'smooth',block:'start'});
     if(typeof gtag==='function')gtag('event','quiz_complete',{quiz:'touch_reset',pattern:result.pattern,pleasure:result.pleasure,orientation:result.ori,audience:audience});
   }
@@ -539,7 +549,8 @@
     $('rOriMeaning').textContent=o.meaning;
     $('rOriEdge').textContent=o.edge;
     $('rTonight').textContent=o.tonight;
-    $('pLine').textContent=a.line;$('pDoor').textContent=a.door;$('pBlurb').textContent=a.blurb;
+    var f=a.free;$('fTitle').textContent=f.title;$('fBlurb').textContent=f.blurb;$('fCta').textContent=f.cta;$('fCta').href=f.href;
+    $('pLine').textContent="When you're ready to go deeper";$('pDoor').textContent=a.door;$('pBlurb').textContent=a.blurb;
     fillLi($('pForyou'),a.foryou);
     $('pCta').textContent=a.cta;$('pCta').href=a.href;
   }
@@ -553,7 +564,7 @@
     e.preventDefault();
     var email=$('email').value.trim();var msg=$('msg');msg.className='msg';
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){msg.className='msg err';msg.textContent='Please enter a valid email.';return;}
-    var btn=$('sendBtn');btn.disabled=true;btn.textContent='Unlocking…';
+    var btn=$('sendBtn');btn.disabled=true;btn.textContent='Revealing…';
     var tags=[PATTERN_TAG[result.pattern],PLEASURE_TAG[result.pleasure],ORI_TAG[result.ori],AUD[audience].tag].filter(function(t){return t;});
     fetch('/.netlify/functions/subscribe',{
       method:'POST',headers:{'Content-Type':'application/json'},
@@ -567,7 +578,7 @@
           if(typeof gtag==='function')gtag('event','quiz_optin',{quiz:'touch_reset',pattern:result.pattern,pleasure:result.pleasure,orientation:result.ori,audience:audience});
         }else{throw new Error('fail');}
       }).catch(function(){
-        btn.disabled=false;btn.textContent='Unlock my full reading';
+        btn.disabled=false;btn.textContent='Reveal my reading';
         msg.className='msg err';msg.textContent='Something went wrong. Please try again.';
       });
   });
@@ -576,7 +587,7 @@
     i=0;answers=new Array(TOTAL).fill(null);locked=false;
     resultPage.style.display='none';funnel.style.display='flex';reveal.style.display='none';
     $('capForm').style.display='block';$('capForm').reset();$('msg').textContent='';
-    $('sendBtn').disabled=false;$('sendBtn').textContent='Unlock my full reading';
+    $('sendBtn').disabled=false;$('sendBtn').textContent='Reveal my reading';
     intro.style.display='block';window.scrollTo(0,0);
   });
 })();
