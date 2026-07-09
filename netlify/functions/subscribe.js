@@ -5,13 +5,14 @@ exports.handler = async function(event) {
     return { statusCode: 405, body: 'Method Not Allowed' };
   }
 
-  let email, firstName, tagIds, sequenceId, honeypot, fields;
+  let email, firstName, tagIds, sequenceId, sequenceIds, honeypot, fields;
   try {
     const body = JSON.parse(event.body);
     email = body.email;
     firstName = body.firstName || '';
     tagIds = Array.isArray(body.tagIds) ? body.tagIds : [];
     sequenceId = body.sequenceId || null;
+    sequenceIds = Array.isArray(body.sequenceIds) ? body.sequenceIds : (sequenceId ? [sequenceId] : []);
     fields = (body.fields && typeof body.fields === 'object') ? body.fields : null;
     // Anti-spam honeypot: add a hidden field named "website" to forms. Real users
     // leave it empty; bots fill every field. If it's filled, silently accept
@@ -63,9 +64,10 @@ exports.handler = async function(event) {
       });
     }
 
-    // 3. Enrol in sequence
-    if (sequenceId) {
-      await fetch(`${KIT_BASE}/sequences/${sequenceId}/subscribers`, {
+    // 3. Enrol in sequence(s)
+    for (const sid of sequenceIds) {
+      if (!sid) continue;
+      await fetch(`${KIT_BASE}/sequences/${sid}/subscribers`, {
         method: 'POST',
         headers,
         body: JSON.stringify({ email_address: email })

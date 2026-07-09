@@ -748,7 +748,7 @@
     $('pLine').textContent="When you're ready to go deeper";$('pDoor').textContent=a.door;$('pBlurb').textContent=a.blurb;
     fillLi($('pForyou'),a.foryou);
     $('pCta').textContent=a.cta;$('pCta').href=a.href;
-    $('shareBand').style.display=(context==='partner')?'block':'none';
+    $('shareBand').style.display='block';
   }
   var shareBtn=$('shareBtn');
   if(shareBtn){shareBtn.addEventListener('click',function(){
@@ -774,7 +774,7 @@
     var stackFields={touch_pleasure:result.pleasure,touch_pattern:PATTERN[result.pattern].short,touch_language:TLANG[result.language].name.replace(' Touch',''),touch_orientation:ORI[result.ori].word.toLowerCase()};
     fetch('/.netlify/functions/subscribe',{
       method:'POST',headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({email:email,tagIds:tags,sequenceId:PATTERN_SEQ[result.pattern]||null,fields:stackFields,website:$('capForm').website.value})
+      body:JSON.stringify({email:email,tagIds:tags,sequenceIds:[PATTERN_SEQ[result.pattern],2821695].filter(Boolean),fields:stackFields,website:$('capForm').website.value})
     }).then(function(r){return r.json().catch(function(){return {};});})
       .then(function(d){
         if(d&&d.ok){
