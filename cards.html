@@ -263,7 +263,11 @@ gtag('config', 'G-SY8NKELMNZ');
 </head>
 <body>
 
-<div class="topbar">
+<div id="promoBanner" style="display:none;position:fixed;top:0;left:0;right:0;z-index:10001;background:var(--gold);color:#fff;text-align:center;padding:11px 16px;font-family:var(--body);font-weight:600;font-size:14px;letter-spacing:.01em">
+  <span id="promoBannerText"></span>
+</div>
+
+<div class="topbar" id="topbarEl">
   <a href="/" class="brand">Feel Fully <b>You</b></a>
   <button class="ham" id="hamBtn" aria-label="Open menu" aria-expanded="false">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
@@ -297,7 +301,7 @@ gtag('config', 'G-SY8NKELMNZ');
   </nav>
 </div>
 <!-- BELIEF BAND -->
-<div class="belief">
+<div class="belief" id="beliefEl">
   <p>The conversations you have been waiting to have, without needing to be the one to start them.</p>
 </div>
 
@@ -500,10 +504,10 @@ gtag('config', 'G-SY8NKELMNZ');
       </div>
     </div>
 
-    <div class="deck-card reveal">
+    <div class="deck-card reveal" id="bundleCard">
       <p class="deck-eye">FULL BUNDLE</p>
       <h3>Trust &amp; Repair + Two Decks</h3>
-      <div class="price">£55</div>
+      <div class="price" id="bundlePrice">£55</div>
       <ul>
         <li>Trust &amp; Repair included</li>
         <li>Couples deck included</li>
@@ -692,6 +696,54 @@ document.addEventListener('click', function(e){
   else if (h.indexOf('instagram.com') > -1) gtag('event', 'instagram_click', {link_url: h, page_path: location.pathname});
   else if (h.indexOf('/files/') > -1 || h.indexOf('.pdf') > -1) gtag('event', 'freebie_download', {link_url: h, page_path: location.pathname});
 });
+</script>
+<script>
+(function(){
+  // Event / partner discount codes that carry through from a QR code or link
+  // (e.g. ?promo=SPARK25). Shows a banner, updates the Full Bundle price, and
+  // threads the code onto every buy link so it auto-applies at checkout.
+  var KNOWN_CODES = {
+    SPARK25:     { pct: 25, label: 'Spark attendees' },
+    JUSTWOMEN25: { pct: 25, label: 'Just Women Live' },
+    BIRTHBABE:   { pct: 20, label: 'your community' },
+    '6AMReset':  { pct: 20, label: 'your community' }
+  };
+
+  var promo = new URLSearchParams(location.search).get('promo');
+  if (!promo) return;
+
+  var banner = document.getElementById('promoBanner');
+  var bannerText = document.getElementById('promoBannerText');
+  var known = KNOWN_CODES[promo];
+
+  bannerText.textContent = known
+    ? 'Exclusively for ' + known.label + ' — ' + known.pct + '% off the Full Bundle, code ' + promo + ' is applied for you at checkout.'
+    : 'Code ' + promo + ' is applied for you at checkout.';
+
+  banner.style.display = 'block';
+
+  function pushDown(){
+    var h = banner.offsetHeight;
+    var topbar = document.getElementById('topbarEl');
+    var belief = document.getElementById('beliefEl');
+    if (topbar) topbar.style.top = h + 'px';
+    if (belief) belief.style.paddingTop = (78 + h) + 'px';
+  }
+  pushDown();
+  window.addEventListener('resize', pushDown);
+
+  if (known) {
+    var priceEl = document.getElementById('bundlePrice');
+    if (priceEl) {
+      var discounted = (55 * (1 - known.pct / 100)).toFixed(2).replace(/\.00$/, '');
+      priceEl.innerHTML = '<span style="text-decoration:line-through;opacity:.5;font-size:.7em;margin-right:8px">£55</span>£' + discounted;
+    }
+  }
+
+  document.querySelectorAll('a[href*="purchase/email"]').forEach(function(a){
+    a.href = a.href + (a.href.indexOf('?') > -1 ? '&' : '?') + 'promo=' + encodeURIComponent(promo);
+  });
+})();
 </script>
 </body>
 </html>
