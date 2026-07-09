@@ -263,9 +263,10 @@
   #intro .qtag{font-family:var(--display);font-style:italic;font-weight:400;color:var(--gold-deep);font-size:clamp(1.2rem,3.4vw,1.6rem);margin-top:16px}
   #intro .qlead{color:var(--brown);font-size:1.08rem;margin-top:30px;line-height:1.6}
   #intro .qlead b{color:var(--gold-deep);font-weight:700}
-  #intro .layerchips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:20px auto 0;max-width:440px}
-  #intro .layerchips span{font-family:var(--body);font-weight:300;font-size:.95rem;color:var(--brown);background:#fff;border:1px solid var(--gold-soft);border-radius:99px;padding:10px 18px}
-  #intro .layerchips b{color:var(--gold-deep);font-weight:600}
+  #intro .layercircles{display:flex;flex-wrap:wrap;justify-content:center;gap:22px 26px;margin:26px auto 0;max-width:470px}
+  #intro .lc{display:flex;flex-direction:column;align-items:center;gap:10px;width:92px}
+  #intro .ring{width:62px;height:62px;border-radius:50%;border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:600;font-size:1.3rem;color:var(--gold-deep);background:#fff;box-shadow:0 6px 18px -10px rgba(168,133,56,.6)}
+  #intro .lc span{font-family:var(--body);font-weight:500;font-size:.82rem;color:var(--brown);text-align:center;line-height:1.25}
   #intro .note{margin-top:26px}
 </style>
 </head>
@@ -283,11 +284,11 @@
         <h1 class="qtitle">The Touch <span class="g">Reset</span> Quiz</h1>
         <p class="qtag">What's your Touch Stack?</p>
         <p class="qlead">You are not one type. You're a <b>four-layer stack</b>:</p>
-        <div class="layerchips">
-          <span>your <b>turn-on</b></span>
-          <span>your <b>pattern</b></span>
-          <span>your <b>touch language</b></span>
-          <span><b>lead</b> or <b>receive</b></span>
+        <div class="layercircles">
+          <div class="lc"><div class="ring">1</div><span>Turn-on</span></div>
+          <div class="lc"><div class="ring">2</div><span>Pattern</span></div>
+          <div class="lc"><div class="ring">3</div><span>Touch language</span></div>
+          <div class="lc"><div class="ring">4</div><span>Lead / receive</span></div>
         </div>
         <div style="margin-top:34px"><button class="btn pulse" id="begin">Begin</button></div>
         <p class="note">Answer from your body, not your history.</p>
