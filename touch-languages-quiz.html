@@ -256,6 +256,17 @@
   .rband.green .btn{background:var(--gold-pale);color:var(--teal)}
   .rband.green .btn:hover{background:#e7d6a3}
   .rband.green .btn.pulse{animation:pulse 2.4s infinite}
+  /* intro: big title + popping layer words */
+  #intro .eyebrow{font-size:11px;letter-spacing:.2em}
+  #intro .qtitle{font-family:var(--display);font-weight:700;font-size:clamp(2.5rem,7vw,3.6rem);color:var(--ink);line-height:1.03;letter-spacing:-.024em;margin:14px 0 0}
+  #intro .qtitle .g{color:var(--gold-deep)}
+  #intro .qtag{font-family:var(--display);font-style:italic;font-weight:400;color:var(--gold-deep);font-size:clamp(1.2rem,3.4vw,1.6rem);margin-top:16px}
+  #intro .qlead{color:var(--brown);font-size:1.08rem;margin-top:30px;line-height:1.6}
+  #intro .qlead b{color:var(--gold-deep);font-weight:700}
+  #intro .layerchips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:20px auto 0;max-width:440px}
+  #intro .layerchips span{font-family:var(--body);font-weight:300;font-size:.95rem;color:var(--brown);background:#fff;border:1px solid var(--gold-soft);border-radius:99px;padding:10px 18px}
+  #intro .layerchips b{color:var(--gold-deep);font-weight:600}
+  #intro .note{margin-top:26px}
 </style>
 </head>
 <body>
@@ -268,16 +279,18 @@
     <div class="inner">
 
       <section id="intro">
-        <div class="eyebrow">The Touch Reset Quiz</div>
-        <h1>What's your <span class="it">Touch Stack?</span></h1>
-        <p class="sub">You are not one type. In five minutes, your four-layer stack: how you're wired for turn-on, the pattern you run to keep touch safe, the language touch actually reaches you in, and whether you lead or receive. Then what to do about it. For women, men and couples.</p>
-        <div class="meta">
-          <span><b>15</b> questions</span>
-          <span><b>4</b> layers</span>
-          <span>Reading emailed to you</span>
+        <div class="eyebrow">Free &middot; 5 minutes &middot; women, men &amp; couples</div>
+        <h1 class="qtitle">The Touch <span class="g">Reset</span> Quiz</h1>
+        <p class="qtag">What's your Touch Stack?</p>
+        <p class="qlead">You are not one type. You're a <b>four-layer stack</b>:</p>
+        <div class="layerchips">
+          <span>your <b>turn-on</b></span>
+          <span>your <b>pattern</b></span>
+          <span>your <b>touch language</b></span>
+          <span><b>lead</b> or <b>receive</b></span>
         </div>
-        <div style="margin-top:30px"><button class="btn pulse" id="begin">Begin</button></div>
-        <p class="note">Answer from your body, not your history. What's actually true, not what you wish were.</p>
+        <div style="margin-top:34px"><button class="btn pulse" id="begin">Begin</button></div>
+        <p class="note">Answer from your body, not your history.</p>
       </section>
 
       <section id="audience">
