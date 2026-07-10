@@ -307,10 +307,8 @@ function handleMc(e){
   fetch('/.netlify/functions/subscribe',{
     method:'POST',
     headers:{'Content-Type':'application/json'},
-    /* TAG: create a "Be Touched Masterclass" tag in Kit and paste its numeric id into tagIds.
-       SEQUENCE: create the masterclass reminder sequence in Kit and paste its id into sequenceId.
-       The page already subscribes the email to Kit without these; they only add tagging + reminders. */
-    body:JSON.stringify({email:email,firstName:name,tagIds:[],sequenceId:null})
+    /* Tag "Be Touched Masterclass — 26 Jul" (21027856) + confirmation sequence (2822605, delivers the Zoom link). */
+    body:JSON.stringify({email:email,firstName:name,tagIds:[21027856],sequenceId:2822605})
   }).finally(function(){window.location.href='/thankyou-be-touched-masterclass';});
 }
 (function(){
