@@ -44,18 +44,17 @@
   .topbar .brand{font-family:var(--display);font-weight:700;font-size:15px;color:#fff;letter-spacing:.02em;text-decoration:none}
   .topbar .brand b{color:var(--gold-pale)}
 
-  /* HERO — split, One Touch photo + teal panel */
-  .hero-split{display:grid;grid-template-columns:1fr 1fr;min-height:600px}
-  .hero-photo{background:url('/one-touch-hero.jpg') center / cover no-repeat;min-height:420px}
-  .hero-content{background:var(--teal);display:flex;flex-direction:column;justify-content:center;padding:64px 52px}
-  .hero-kicker{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-pale);font-weight:700;margin-bottom:18px}
-  .hero-content h1{font-family:var(--display);font-size:clamp(1.9rem,4vw,2.7rem);font-weight:700;color:#fff;line-height:1.1;letter-spacing:-.022em;margin-bottom:16px}
-  .hero-content .sub{font-family:var(--display);font-size:clamp(16px,1.8vw,19px);font-style:italic;font-weight:500;color:rgba(254,252,250,.75);margin-bottom:26px;line-height:1.5}
-  .value-line{display:flex;align-items:baseline;gap:10px;margin-bottom:30px}
-  .value-line .was{font-family:var(--display);font-weight:700;font-size:1.5rem;color:var(--gold-soft);text-decoration:line-through;opacity:.7}
-  .value-line .note{font-size:13px;color:var(--gold-pale);letter-spacing:.03em}
-  form{display:flex;gap:10px;flex-wrap:wrap}
-  input[type="email"]{flex:1;min-width:200px;padding:15px 18px;font-size:1rem;font-family:var(--body);border:1.5px solid rgba(255,255,255,.18);border-radius:2px;background:rgba(255,255,255,.06);color:#fff;outline:none;transition:border-color .2s}
+  /* INTRO */
+  .intro{background:var(--teal);padding:64px 28px 56px;text-align:center}
+  .intro-inner{max-width:640px;margin:0 auto}
+  .eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-pale);font-weight:700;margin-bottom:18px}
+  h1{font-family:var(--display);font-size:clamp(1.9rem,4.2vw,2.7rem);font-weight:700;color:#fff;line-height:1.14;letter-spacing:-.022em;margin-bottom:20px}
+  .sub{font-size:1.05rem;color:rgba(254,252,250,.8);line-height:1.7;margin-bottom:32px;max-width:48ch;margin-left:auto;margin-right:auto}
+  .value-line{display:flex;align-items:baseline;gap:10px;justify-content:center;margin-bottom:28px}
+  .value-line .was{font-family:var(--display);font-weight:700;font-size:1.4rem;color:var(--gold-soft);text-decoration:line-through;opacity:.75}
+  .value-line .note{font-size:13px;color:var(--gold-pale);letter-spacing:.02em}
+  form{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+  input[type="email"]{flex:1;min-width:220px;max-width:320px;padding:15px 18px;font-size:1rem;font-family:var(--body);border:1.5px solid rgba(255,255,255,.18);border-radius:2px;background:rgba(255,255,255,.06);color:#fff;outline:none;transition:border-color .2s}
   input[type="email"]::placeholder{color:rgba(255,255,255,.45)}
   input[type="email"]:focus{border-color:var(--gold-pale)}
   button{padding:15px 30px;background:var(--gold);color:#fff;font-family:var(--body);font-size:1rem;font-weight:700;border:none;border-radius:2px;cursor:pointer;transition:background .2s;white-space:nowrap}
@@ -63,18 +62,14 @@
   button:disabled{opacity:.65;cursor:not-allowed}
   .fine{font-size:12px;color:rgba(254,252,250,.5);margin-top:12px}
 
-  @media(max-width:780px){
-    .hero-split{grid-template-columns:1fr}
-    .hero-photo{order:-1;min-height:280px;max-height:280px}
-    .hero-content{padding:44px 24px}
-  }
-
   /* WHAT'S INCLUDED */
-  .included{padding:76px 28px 68px;background:var(--cream)}
-  .included-inner{max-width:1000px;margin:0 auto}
+  .included{padding:68px 28px 24px;background:var(--cream)}
+  .included-inner{max-width:1040px;margin:0 auto}
   .included h2{font-family:var(--display);font-weight:700;font-size:clamp(1.5rem,3vw,2.1rem);color:var(--ink);text-align:center;letter-spacing:-.02em;margin-bottom:44px}
   .stack{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-  .item-card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:30px 26px;text-align:center}
+  .item-card{background:#fff;border:1px solid var(--line);border-radius:6px;overflow:hidden;text-align:center}
+  .item-card .item-img{width:100%;height:200px;object-fit:cover;display:block;background:var(--teal)}
+  .item-card .item-body{padding:26px 24px}
   .item-card .tag{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep);font-weight:700;margin-bottom:14px}
   .item-card h3{font-family:var(--display);font-weight:700;font-size:1.2rem;color:var(--ink);margin-bottom:14px;letter-spacing:-.01em}
   .item-card .price{margin-bottom:14px}
@@ -83,12 +78,21 @@
   .item-card p{font-size:14px;color:var(--brown);line-height:1.6}
   @media(max-width:780px){.stack{grid-template-columns:1fr}}
 
-  .total-bar{max-width:1000px;margin:40px auto 0;background:var(--teal);border-radius:6px;padding:26px 32px;text-align:center}
+  .bonus{max-width:1040px;margin:22px auto 0}
+  .bonus-card{display:flex;align-items:center;gap:20px;background:var(--cream-2);border:1px dashed var(--gold-soft);border-radius:6px;padding:22px 26px}
+  .bonus-card .tag{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep);font-weight:700;margin-bottom:6px}
+  .bonus-card h4{font-family:var(--display);font-weight:700;font-size:1.05rem;color:var(--ink);margin-bottom:4px}
+  .bonus-card p{font-size:13.5px;color:var(--brown)}
+  .bonus-card .btn-bonus{margin-left:auto;flex-shrink:0;display:inline-block;background:var(--teal);color:#fff;font-weight:700;font-size:14px;padding:12px 22px;border-radius:2px;text-decoration:none;white-space:nowrap}
+  .bonus-card .btn-bonus:hover{background:var(--teal-deep)}
+  @media(max-width:640px){.bonus-card{flex-direction:column;text-align:center}.bonus-card .btn-bonus{margin-left:0}}
+
+  .total-bar{max-width:1040px;margin:32px auto 0;background:var(--teal);border-radius:6px;padding:26px 32px;text-align:center}
   .total-bar .label{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-pale);font-weight:700;margin-bottom:8px}
   .total-bar .line{font-family:var(--display);font-size:clamp(1.1rem,2.2vw,1.4rem);color:#fff;font-weight:600;letter-spacing:-.01em}
   .total-bar .line b{color:var(--gold-pale)}
 
-  .cta-repeat{text-align:center;margin-top:44px}
+  .cta-repeat{text-align:center;margin:44px 0 76px}
   .btn-repeat{display:inline-block;background:var(--gold);color:#fff;font-family:var(--body);font-weight:700;font-size:1rem;padding:16px 40px;border-radius:2px;text-decoration:none;transition:background .2s}
   .btn-repeat:hover{background:var(--gold-deep)}
 
@@ -112,12 +116,11 @@ gtag('config', 'G-SY8NKELMNZ');
   <a href="/" class="brand">Feel Fully <b>You</b></a>
 </div>
 
-<header class="hero-split">
-  <div class="hero-photo"></div>
-  <div class="hero-content">
-    <p class="hero-kicker">Summit guests only</p>
-    <h1>Three ways back into your body.</h1>
-    <p class="sub">One Touch. 10 Touch Rituals. Half off the cards app.</p>
+<section class="intro">
+  <div class="intro-inner">
+    <p class="eyebrow">Summit guests only</p>
+    <h1>Three ways back into your body, yours for showing up.</h1>
+    <p class="sub">A course that teaches your body to receive again. A guide of ten small touches for the ordinary days in between. And half off the deck that gets you both talking about the things you usually skip. Enter your email once and everything unlocks straight away, no waiting on a follow-up email.</p>
     <div class="value-line">
       <span class="was">£159</span>
       <span class="note">of real value, most of it free, today</span>
@@ -128,29 +131,49 @@ gtag('config', 'G-SY8NKELMNZ');
     </form>
     <p class="fine">No spam. Unsubscribe any time.</p>
   </div>
-</header>
+</section>
 
 <section class="included">
   <div class="included-inner">
     <h2>What's in the bundle</h2>
     <div class="stack">
       <div class="item-card">
-        <div class="tag">7-day course</div>
-        <h3>One Touch</h3>
-        <div class="price"><span class="was">£97</span><span class="now">Free</span></div>
-        <p>Your own hand, seven days, the start of receiving again.</p>
+        <img class="item-img" src="/one-touch-hero.jpg" alt="One Touch">
+        <div class="item-body">
+          <div class="tag">7-day course</div>
+          <h3>One Touch</h3>
+          <div class="price"><span class="was">£97</span><span class="now">Free</span></div>
+          <p>Your own hand, seven days, the start of receiving again.</p>
+        </div>
       </div>
       <div class="item-card">
-        <div class="tag">The guide</div>
-        <h3>10 Touch Rituals</h3>
-        <div class="price"><span class="was">£7</span><span class="now">Free</span></div>
-        <p>Ten small touches that teach your body reaching is safe.</p>
+        <img class="item-img" src="/media/6a2ff5bee5b9322bddd1ead5.png" alt="10 Touch Rituals">
+        <div class="item-body">
+          <div class="tag">The guide</div>
+          <h3>10 Touch Rituals</h3>
+          <div class="price"><span class="was">£7</span><span class="now">Free</span></div>
+          <p>Ten small touches that teach your body reaching is safe.</p>
+        </div>
       </div>
       <div class="item-card">
-        <div class="tag">Full bundle · 475 cards</div>
-        <h3>The Cards App</h3>
-        <div class="price"><span class="was">£55</span><span class="now">£27.50</span></div>
-        <p>Three decks: Couples, Family and Friends, Trust and Repair.</p>
+        <img class="item-img" src="/cards-in-hands.jpg" alt="The Cards App">
+        <div class="item-body">
+          <div class="tag">Full bundle · 475 cards</div>
+          <h3>The Cards App</h3>
+          <div class="price"><span class="was">£55</span><span class="now">£27.50</span></div>
+          <p>Three decks: Couples, Family and Friends, Trust and Repair.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bonus">
+      <div class="bonus-card">
+        <div>
+          <div class="tag">Free · 2 minutes</div>
+          <h4>Find your Touch Pattern</h4>
+          <p>A short quiz before you go, so you know exactly where to start.</p>
+        </div>
+        <a href="https://feelfullyyou.com/touch-reset-quiz" class="btn-bonus">Take the quiz &rarr;</a>
       </div>
     </div>
 
@@ -202,6 +225,7 @@ document.addEventListener('click', function(e){
   var h = a.href || '';
   var label = (a.textContent || '').trim().slice(0, 60);
   if (h.indexOf('stripe.com') > -1) gtag('event', 'begin_checkout', {link_url: h, link_text: label, page_path: location.pathname});
+  else if (h.indexOf('touch-reset-quiz') > -1) gtag('event', 'quiz_click', {link_url: h, page_path: location.pathname});
   else if (h.indexOf('tidycal.com') > -1) gtag('event', 'book_call_click', {link_url: h, link_text: label, page_path: location.pathname});
   else if (h.indexOf('instagram.com') > -1) gtag('event', 'instagram_click', {link_url: h, page_path: location.pathname});
   else if (h.indexOf('/files/') > -1 || h.indexOf('.pdf') > -1) gtag('event', 'freebie_download', {link_url: h, page_path: location.pathname});
