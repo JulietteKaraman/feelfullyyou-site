@@ -700,13 +700,13 @@ document.addEventListener('click', function(e){
 <script>
 (function(){
   // Event / partner discount codes that carry through from a QR code or link
-  // (e.g. ?promo=SPARK25). Shows a banner, updates the Full Bundle price, and
+  // (e.g. ?promo=SPARKFULL). Shows a banner, updates the Full Bundle price, and
   // threads the code onto every buy link so it auto-applies at checkout.
   var KNOWN_CODES = {
-    SPARK25:     { pct: 25, label: 'Spark attendees' },
-    JUSTWOMEN25: { pct: 25, label: 'Just Women Live' },
-    BIRTHBABE:   { pct: 20, label: 'your community' },
-    '6AMReset':  { pct: 20, label: 'your community' }
+    SPARKFULL:      { pct: 25, label: 'Spark attendees' },
+    JUSTWOMENFULL:  { pct: 25, label: 'Just Women Live' },
+    BIRTHBABE:      { pct: 20, label: 'your community' },
+    '6AMReset':     { pct: 20, label: 'your community' }
   };
 
   var promo = new URLSearchParams(location.search).get('promo');
