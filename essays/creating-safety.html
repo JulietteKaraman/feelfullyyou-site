@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creating Safety</title>
+<meta name="description" content="What becomes possible when the body finally believes it will not be punished for opening. Juliette Karaman, from a retreat in Lebanon.">
+<link rel="canonical" href="https://feelfullyyou.com/essays/creating-safety">
+<meta property="og:title" content="Creating Safety">
+<meta property="og:description" content="What becomes possible when the body finally believes it will not be punished for opening. Juliette Karaman, from a retreat in Lebanon.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://feelfullyyou.com/essays/creating-safety">
+<meta property="og:image" content="https://feelfullyyou.com/julietteherobarstools.jpg">
+<meta property="og:site_name" content="Feel Fully You">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Creating Safety">
+<meta name="twitter:description" content="What becomes possible when the body finally believes it will not be punished for opening. Juliette Karaman, from a retreat in Lebanon.">
+<meta name="twitter:image" content="https://feelfullyyou.com/julietteherobarstools.jpg">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SY8NKELMNZ"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-SY8NKELMNZ');
+</script>
+<style>
+  :root{
+    --cream:#fefcfa;--cream-2:#f6f4f1;--paper:#fdfbf8;
+    --ink:#1c1714;--brown:#5d4a33;
+    --gold:#a88538;--gold-deep:#99680c;--gold-soft:#b4a074;--gold-pale:#ddc98e;
+    --teal:#0d3535;--teal-deep:#061a1a;
+    --line:#e3dccf;--line-dark:#1d3a39;--max:1140px;
+    --display:'Poppins',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--brown);font-family:var(--body);font-size:1.0625rem;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  .eyebrow{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
+  .btn{display:inline-block;cursor:pointer;border:none;font-family:var(--body);font-weight:600;font-size:.94rem;letter-spacing:.01em;padding:14px 30px;border-radius:2px;background:var(--gold);color:#fff;transition:transform .25s,background .25s;text-decoration:none}
+  .btn:hover{background:var(--gold-deep);transform:translateY(-1px)}
+
+  /* NAV */
+  .topbar{position:fixed;top:0;left:0;right:0;z-index:9999;background:var(--teal);padding:0 28px;height:64px;display:flex;align-items:center;justify-content:space-between}
+  .topbar .brand{font-family:var(--display);font-weight:700;font-size:16px;letter-spacing:.02em;color:var(--cream)}
+  .topbar .brand b{color:var(--gold-pale)}
+  .topbar nav{display:flex;gap:26px;align-items:center}
+  .topbar nav a{font-size:14px;color:var(--cream);font-weight:500;transition:color .2s}
+  .topbar nav a:hover{color:var(--gold-pale)}
+  .topbar nav a.btn{background:var(--gold);color:#fff;padding:10px 20px;border-radius:2px;font-weight:600}
+  .topbar nav a.btn:hover{background:var(--gold-deep)}
+  @media(max-width:860px){.topbar nav > a:not(.btn){display:none}}
+  .more-wrap{position:relative;display:inline-flex;align-items:center}
+  .more-wrap > button{background:none;border:none;cursor:pointer;font-size:14px;color:var(--cream);font-weight:500;font-family:var(--body);display:flex;align-items:center;gap:5px;padding:0;transition:color .2s}
+  .more-wrap > button:hover{color:var(--gold-pale)}
+  .more-wrap > button svg{transition:transform .2s}
+  .more-wrap.open > button svg{transform:rotate(180deg)}
+  .dropdown{position:absolute;top:calc(100% + 10px);right:0;background:var(--teal-deep);border:1px solid var(--line-dark);border-radius:3px;min-width:180px;padding:6px 0;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .18s,transform .18s;z-index:9999}
+  .more-wrap.open .dropdown{opacity:1;pointer-events:all;transform:none}
+  @media(max-width:860px){.dropdown{position:fixed;top:56px;right:16px}}
+  .dropdown a{display:block;padding:10px 18px;font-size:13px;color:var(--cream);font-weight:500;transition:background .15s,color .15s}
+  .dropdown a:hover{background:var(--teal);color:var(--gold-pale)}
+
+  /* PROSE SECTIONS */
+  .prose{max-width:740px;margin:0 auto;padding:80px 28px}
+  .prose h2{font-family:var(--display);font-weight:700;font-size:clamp(1.6rem,3.2vw,2.2rem);color:var(--ink);letter-spacing:-.022em;line-height:1.1;margin-bottom:28px}
+  .prose p{color:var(--brown);margin-bottom:22px;font-size:1.0625rem;line-height:1.75}
+  .prose p:last-child{margin-bottom:0}
+  .prose strong{color:var(--ink);font-weight:600}
+  .prose em{font-style:italic;color:var(--gold-deep)}
+
+  footer{background:var(--gold);color:#fff;padding:22px 32px;font-size:13px}
+  footer .inner{max-width:var(--max);margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  footer .brand{font-family:var(--display);font-weight:700;font-size:.95rem}
+  footer a{color:rgba(255,255,255,.65)}
+  footer a.email{color:#fff;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(255,255,255,.4)}
+
+  /* MOBILE NAV */
+  .ham{display:none;background:none;border:none;cursor:pointer;padding:6px;color:var(--cream)}
+  .ham svg{display:block}
+  .mobile-nav{display:none;position:fixed;top:64px;left:0;right:0;background:var(--teal);z-index:9998;padding:16px 0;border-top:1px solid rgba(255,255,255,.1);flex-direction:column}
+  .mobile-nav a{display:block;padding:13px 28px;font-size:15px;color:var(--cream);font-weight:500;font-family:var(--body);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.07)}
+  .mobile-nav a:last-child{border-bottom:none}
+  .mobile-nav a.btn{margin:14px 28px 6px;display:block;background:var(--gold);color:#fff;padding:12px 20px;border-radius:2px;font-weight:600;text-align:center;border:none}
+  .mobile-nav.open{display:flex}
+  @media(max-width:860px){.ham{display:block}.topbar .more-wrap{display:none}.topbar nav > .btn{display:none}}
+</style>
+<style>
+  .essay-hero{background:var(--teal);padding:150px 28px 70px;text-align:center}
+  .essay-hero .eyebrow{color:var(--gold-pale);margin-bottom:18px}
+  .essay-hero h1{font-family:var(--display);font-weight:700;font-size:clamp(2rem,4.6vw,3.1rem);color:#fff;line-height:1.08;letter-spacing:-.025em;max-width:22ch;margin:0 auto 18px}
+  .essay-hero .sub{font-family:var(--display);font-style:italic;font-weight:500;font-size:clamp(1.05rem,2vw,1.3rem);color:#d7d0c4;max-width:52ch;margin:0 auto 26px;line-height:1.5}
+  .essay-hero .meta{font-size:.85rem;color:rgba(255,255,255,.55);letter-spacing:.04em}
+  .essay-hero .meta a{color:var(--gold-pale)}
+  .prose h2{margin-top:52px}
+  .prose h2:first-child{margin-top:0}
+  .signoff{font-family:var(--display);font-style:italic;color:var(--gold-deep);margin-top:44px}
+  .ways{background:var(--teal);padding:80px 28px}
+  .ways .inner{max-width:900px;margin:0 auto}
+  .ways h2{font-family:var(--display);font-weight:700;font-size:clamp(1.5rem,3vw,2rem);color:#fff;letter-spacing:-.02em;margin-bottom:36px;text-align:center}
+  .way{border:1px solid var(--line-dark);border-radius:4px;padding:26px 28px;margin-bottom:16px;background:rgba(255,255,255,.02)}
+  .way h3{font-family:var(--display);font-weight:600;font-size:1.05rem;color:var(--gold-pale);margin-bottom:8px}
+  .way p{color:#d7d0c4;font-size:.98rem;line-height:1.6;margin-bottom:14px}
+  .way a.btn{font-size:.88rem;padding:11px 22px}
+  .sources{background:var(--cream-2);border-top:1px solid var(--line)}
+  .sources .prose{padding:56px 28px}
+  .sources h2{font-size:1.15rem;margin-bottom:18px}
+  .sources p{font-size:.88rem;line-height:1.6;color:var(--brown);margin-bottom:10px;font-style:italic}
+  .sources p a{color:var(--gold-deep);text-decoration:underline;text-underline-offset:3px;font-style:normal}
+  .substack-note{text-align:center;padding:34px 28px;background:var(--cream);border-top:1px solid var(--line);font-size:.92rem;color:var(--brown)}
+  .substack-note a{color:var(--gold-deep);text-decoration:underline;text-underline-offset:3px}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Creating Safety",
+  "description": "What becomes possible when the body finally believes it will not be punished for opening. Juliette Karaman, from a retreat in Lebanon.",
+  "datePublished": "2026-04-08",
+  "author": {
+    "@type": "Person",
+    "name": "Juliette Karaman",
+    "jobTitle": "Relationship, Touch and Intimacy Expert",
+    "url": "https://feelfullyyou.com/about"
+  },
+  "publisher": {"@type": "Organization", "name": "Feel Fully You", "url": "https://feelfullyyou.com/"},
+  "mainEntityOfPage": "https://feelfullyyou.com/essays/creating-safety",
+  "image": "https://feelfullyyou.com/julietteherobarstools.jpg"
+}
+</script>
+</head>
+<body>
+<div class="topbar">
+  <a href="/" class="brand">Feel Fully <b>You</b></a>
+  <nav>
+    <a href="/">Home</a>
+    <div class="more-wrap" id="workWrap">
+      <a href="/work-with-me" style="font-size:14px;color:var(--cream);font-weight:500;transition:color .2s;text-decoration:none">Work With Me</a><button onclick="document.getElementById('workWrap').classList.toggle('open')" aria-label="Sub-pages" style="background:none;border:none;cursor:pointer;color:var(--cream);padding:0 0 0 5px;display:inline-flex;align-items:center;transition:color .2s"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg></button>
+      <div class="dropdown">
+        <a href="/for-her">For Her</a>
+        <a href="/for-him">For Him</a>
+        <a href="/for-both">For Both</a>
+      </div>
+    </div>
+    <a href="/cards">The Cards</a>
+    <a href="/shop">Shop</a>
+    <div class="more-wrap" id="moreWrap">
+      <button onclick="document.getElementById('moreWrap').classList.toggle('open')" aria-expanded="false">
+        More <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg>
+      </button>
+      <div class="dropdown">
+        <a href="/free-resources">Free Resources</a>
+        <a href="/essays/">Essays</a>
+        <a href="/questions/">Questions</a>
+        <a href="/podcast/">Podcast</a>
+        <a href="/about">About Juliette</a>
+        <a href="/grief-duality-process">Grief Process</a>
+        <a href="/media-and-pr">Media &amp; PR</a>
+        <a href="/contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+</div>
+
+
+<nav class="mobile-nav" id="mobileNav">
+  <a href="/">Home</a>
+  <a href="/work-with-me" style="font-weight:600;color:var(--gold-pale)">Work With Me</a>
+  <a href="/for-her" style="padding-left:44px;font-size:14px;opacity:.85">For Her</a>
+  <a href="/for-him" style="padding-left:44px;font-size:14px;opacity:.85">For Him</a>
+  <a href="/for-both" style="padding-left:44px;font-size:14px;opacity:.85">For Both</a>
+  <a href="/cards">The Cards</a>
+  <a href="/shop">Shop</a>
+  <a href="/about">About Juliette</a>
+  <a href="/free-resources">Free Resources</a>
+        <a href="/essays/">Essays</a>
+        <a href="/questions/">Questions</a>
+        <a href="/podcast/">Podcast</a>
+  <a href="/grief-duality-process">Grief Process</a>
+  <a href="/media-and-pr">Media &amp; PR</a>
+  <a href="/contact">Contact</a>
+</nav>
+
+<section class="essay-hero">
+  <p class="eyebrow">What the Body Knows &middot; Essays &middot; For her</p>
+  <h1>Creating Safety</h1>
+  <p class="sub">What becomes possible when the body finally believes it will not be punished for opening.</p>
+  <p class="meta">By <a href="/about">Juliette Karaman</a> &middot; 8 April 2026</p>
+</section>
+<article>
+<div class="prose">
+
+<h2>The arrival</h2>
+<p>They arrived one by one.</p>
+<p>By taxi. By driver. Up the mountain road to one of the most beautiful guest houses in Lebanon, the kind of place that holds its breath around you, that seems to know something about rest that the city has forgotten.</p>
+<p>Palestinian backgrounds, Syrian, Lebanese. Different histories of loss. Different relationships to what it means to slow down.</p>
+<p>I explained the container. What was going to happen. The slight noise of the water feature in the courtyard underneath my voice as I spoke.</p>
+<p>Then I asked them to turn their phones off.</p>
+<p>Mild panic moved across their faces.</p>
+<p><em>Trust me, my loves,</em> I said. <em>You will want to be present for this. You will not want to be interrupted.</em></p>
+<p>We negotiated. I told them they could take them out again at lunch.</p>
+<p><strong>That negotiation was already showing me their patterning.</strong> The reaching for the phone is the same movement as the reaching for anything that keeps the body from having to be fully here. The incoming message. The proof that something somewhere still requires attention. For women who have organised their entire nervous systems around being needed, the phone is the baseline. It is the evidence that they exist.</p>
+<p>Putting it down was the first act of the retreat.</p>
+<p>The autonomic nervous system scans continuously for signs of danger or safety. What it reads as safe is predictability: when the brain can anticipate what comes next, the vigilance load reduces. A nervous system organised around threat does not open on demand. <strong>It opens when the conditions are consistent enough, and trustworthy enough, that the body finally begins to believe it will not be punished for doing so.</strong></p>
+<p>The structure of the day was the safety. Every session built on the last. I told them exactly what would happen and when they would get the phones back. The system could relax into the known shape of the day.</p>
+
+<h2>How conditioned we are</h2>
+<p>I partnered them up. Simple embodiment exercises first: breath, movement, heel drops, proprioception and spatial awareness. I asked them to notice what they saw in each other. Value neutral. No judgement. Just observation.</p>
+<p>They laughed. They were delighted. When I asked how many had been judging themselves during the exercise, hands shot up immediately. Giggles around the room.</p>
+<p><em>Did you judge your partner?</em> I asked.</p>
+<p>Most said not really. They had been so afraid they were doing it wrong that they had barely seen the other person at all.</p>
+<p><strong>That tells you everything about patterning.</strong> In a simple, structured exercise, nothing to do with marriage, nothing to do with their relationships at home, they were already somewhere else. Already managing. Already monitoring whether they were getting it right. The partner in front of them, almost invisible.</p>
+<p>I made the observation. The courtyard went quiet as they recognised themselves in it.</p>
+<p>How much of their daily lives had looked exactly like that exercise. Present in body. Somewhere else entirely.</p>
+
+<h2>The cards</h2>
+<p>When I pulled out the cards my voice caught.</p>
+<p>My throat. Tears started welling up.</p>
+<p>I told them where it had come from.</p>
+<p>My sister had died and I could not write her eulogy. My coach called me. <em>"Tell me what you've withheld from me."</em> At first I was surface swimming. The pain of losing her. Then deeper. The anger at her. The anger at what could have been. Twenty minutes. One prompt. Until it all cleared out.</p>
+<p>I looked at them and could feel their emotions welling up as they understood the depth of what I was proposing they would do.</p>
+<p>I described it like deep diving. The first few times you answer a prompt, you surface swim. You give the safe answer, the manageable answer, the one that doesn't cost you anything. Like cleaning the pipes, like peeling an onion, with each repetition you go a little deeper. The question stays exactly the same. What changes is your willingness to go further into it, layer after layer after layer.</p>
+<p>As I handed each woman a block of multi-coloured post-it notes and a pen, they looked at me in bewilderment, as if waiting for more instructions, biting their lip, not quite knowing if they could go there.</p>
+<p>The music underneath. A cockerel somewhere in the distance, loud and unhurried. The smell of jasmine. My voice, asking the same question over and over.</p>
+<p><em>"Tell me what you desire."</em></p>
+<p>The women moved around the space. Writing their answers on coloured post-it notes. Putting them on the wall. Reading what others had written. Going back to write again. Some sat for a long time before they could write anything at all.</p>
+<p>Not thinking. Genuinely unable to answer.</p>
+<p><strong>The body that has spent years tracking threat, organising family, absorbing everyone else's requirements, that body has learned, slowly and thoroughly, that its own wanting is not the point.</strong> The first answers came out careful. Manageable. Surface level. Then the next round of the prompt. Then the next.</p>
+<p><em>"Tell me what you desire."</em></p>
+<p>The post-its went up one by one.</p>
+<p><em>I want to see my granddaughter.<br>I want my husband to love me again the way he used to.<br>I want to be able to be there for my mother before she passes.<br>I want women in my life who really care.<br>I want to know I matter.<br>I want us to be safe.</em></p>
+<p>Tears moved down faces. Not performed. The kind that come when something held for a very long time is finally allowed out, even on a post-it note, even on a wall, even for an afternoon.</p>
+<p>These were not grand desires. No one wrote <em>end the war.</em> No one asked for history to be undone. The granddaughter. The husband. The mother who is leaving. <strong>The simple, enormous knowledge of mattering.</strong></p>
+<p>The same desires, in different handwriting, from women who had arrived carrying different histories. On the wall, in that courtyard, none of that history required explanation. The desire was the desire.</p>
+<p>We stayed in it for thirty minutes. The retreat manager, me, the participants, all of us inside it together. Not holding the space from the outside. Inside it.</p>
+<p>Afterwards they shared how it had landed. How such a simple prompt could reach somewhere so deep. How the repetition had them go deeper each time. How they realised that often they surface swim. How they had not known that was in there. How they had not known they were allowed to say it.</p>
+
+<h2>The masks go back on</h2>
+<p>We ate. Phones came out.</p>
+<p>For the first half hour something shifted in how they used them. Voices lifted. Calls were made, to daughters, to husbands, to mothers. Several of the women told their loved ones they wanted to spend more time with them.</p>
+<p>One woman called her husband. She said she had realised she had been assuming she knew what he wanted for years. Organising his preferences, correcting them, speaking for him without ever asking. There had been no room for curiosity. No room for him to surprise her.</p>
+<p>She had not known that until she saw her own desire on the wall.</p>
+<p><strong>The desire had not stayed on the post-it. It had already started moving.</strong></p>
+
+<h2>The blindfold</h2>
+<p>I gave each of them a blindfold and asked them to take the feather from the toolkit I had prepared for each of them at the start of the day.</p>
+<p>I put on music. I led them through a guided self-touch experience.</p>
+<p>Here is what the blindfold actually does. When sight is removed, the brain stops processing the social field. It can no longer monitor the room, read other faces, or register whether it is being watched. <strong>Shame requires a witness.</strong> Without the visual field, the self-consciousness that keeps the body at arm's length from itself, the monitoring, the comparing, the perpetual question of whether you are doing it right, loses its foothold. The inward turn becomes available.</p>
+<p>Some of the women moved immediately. Others froze. Two sat completely still, feathers in their laps, hands not moving.</p>
+<p>For a body that has only ever touched itself functionally, to apply make-up, to dress, to cream the skin before bed, the invitation to touch with this much reverence, with this much slowness, lands somewhere unfamiliar. Sometimes the system simply stops.</p>
+<p>For those two women, I moved quietly behind each one and asked: <em>may I?</em></p>
+<p>They nodded.</p>
+<p>I guided a hand, gently, almost without pressure, to the inner wrist. A stroke so light it was barely there.</p>
+<p>The skin of the inner wrist and forearm contains a specific class of nerve fibres, C-tactile afferents, that respond to slow, light touch. When activated, they do not send signals to the part of the brain that processes ordinary sensation. They project directly to the insular cortex, the region associated with interoception, the felt sense of the body's internal state. Body ownership. Self-awareness. The sense of being alive from the inside. A gentle stroke at the right velocity does not just feel pleasant. <strong>It tells the nervous system: you are here. You exist. You are safe inside your own skin.</strong></p>
+<p><strong>The exhale that followed was audible. One of them sobbed.</strong> The kind of sound that comes when something has been held for so long that the release surprises even the person releasing it.</p>
+<p>I layered different sounds, different textures, guiding their attention: <em>is touch A or touch B more sensational for you right now?</em></p>
+<p>Seven minutes of self-touch. Spinal attunement woven through. Three minutes of grounding: eye movement, cross-body work, integration.</p>
+<p>Then I asked: <em>tell me what surprised you about self-touch.</em></p>
+<p>The shares were beautiful.</p>
+<p><em>I touch myself every day,</em> one woman said. <em>To put on make-up. My clothes. Maybe cream. But never like this. Never with this much awareness.</em></p>
+<p>Another said that soft scratches up her inner wrist had surprised her. She had not expected to like it. She got goosebumps all over her body.</p>
+<p>A third said her left arm was much more sensational than her right. She began explaining why. I stopped her.</p>
+<p><em>That was today,</em> I said. <em>Be curious about your body. Do this exact exercise again in a few days and see what is different.</em></p>
+<p>She looked at me for a moment. Then she nodded.</p>
+<p><strong>That is the whole practice, in one exchange. The curiosity over the explanation. The willingness to return to the body without already knowing the answer.</strong></p>
+<p>The afternoon continued with individual spinal attunement, work I trained in through Sigourney Belle's Soma Mystica lineage. One by one. Moving energy. Things that had been sitting in those bodies for years, for generations, that were ready to shift when the container was steady enough to hold them.</p>
+<p>We closed with a card.</p>
+<p><em>"Tell me a win, insight, or learning from today."</em></p>
+<p>The shares could not have been more beautiful.</p>
+
+<h2>What capacity actually means</h2>
+<p>Several of the women came to find me privately afterwards. Some in Beirut. Some on later visits. What had surfaced during the day had not finished moving; it rarely does after a day that goes this deep. They came to go further into what had started. One prompt on a post-it note in a mountain courtyard became a thread they followed for weeks.</p>
+<p>This is what I mean when I talk about capacity.</p>
+<p>The retreat was a door. A full day of structured work, the cards, the desires, the blindfolds, the attunement, the closing, built enough safety for things to move that had not been able to move before. But a door is not a practice. The practice is what comes after. The returning. The body learning, session by session, that it is allowed to stay open for longer each time.</p>
+<p><strong>The opening in that courtyard showed what is possible. What comes after it is the practice of learning to stay.</strong></p>
+<p><strong>The part you are afraid to say out loud, I have probably already worked with it.</strong></p>
+
+<p class="signoff">Still following the breadcrumbs.<br>Juliette</p>
+</div>
+</article>
+<section class="ways">
+  <div class="inner">
+    <h2>Ways in</h2>
+    <div class="way">
+      <h3>Try the Cards</h3>
+      <p>The prompt-and-share structure in this essay is built into the Intimacy and Communication Cards. Ten free to start.</p>
+      <a class="btn" href="https://couplecards.netlify.app/free" rel="noopener">Try 10 cards free</a> &nbsp; <a class="btn" href="/cards" style="background:transparent;border:1px solid var(--gold);">The full deck</a>
+    </div>
+    <div class="way">
+      <h3>The Room</h3>
+      <p>What comes after the opening is the practice of learning to stay. The private cohort for women ready to work with the body directly.</p>
+      <a class="btn" href="/the-room">The Room</a>
+    </div>
+  </div>
+</section>
+<section class="sources">
+  <div class="prose">
+    <h2>Sources</h2>
+    <p>Porges SW. The Polyvagal Theory: Neurophysiological Foundations of Emotions, Attachment, Communication, and Self-Regulation. Norton, 2011.</p>
+    <p>Olausson H et al. Unmyelinated tactile afferents signal touch and project to insular cortex. Nature Neuroscience, 2002.</p>
+    <p>McGlone F, Wessberg J, Olausson H. Discriminative and affective touch: sensing and feeling. Neuron, 2014.</p>
+    <p>Pennebaker JW. Writing about emotional experiences as a therapeutic process. Psychological Science, 1997.</p>
+    <p>Sigourney Belle, Soma Mystica, Spinal Attunement. <a href="http://somanystica.com" rel="noopener">somanystica.com</a>.</p>
+  </div>
+</section>
+<div class="substack-note">This essay first appeared on <a href="https://juliettekaraman.substack.com/p/creating-safety" rel="noopener">What the Body Knows</a>, Juliette's Substack. <a href="https://substack.com/@juliettekaraman" rel="noopener">Subscribe</a> to read new essays as they publish.</div>
+
+<footer>
+  <div class="inner">
+    <div class="brand">Feel Fully You
+  <button class="ham" id="hamBtn" aria-label="Open menu" aria-expanded="false">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+</div>
+    <div><a href="mailto:support@feelfullyyou.com" class="email">support@feelfullyyou.com</a></div>
+    <div style="display:flex;gap:14px">
+      <a href="https://www.instagram.com/juliettekaraman/" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+      <a href="https://www.facebook.com/juliette.karamanvanschaardenburg" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+      <a href="https://substack.com/@juliettekaraman" aria-label="Substack"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 17.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg></a>
+    </div>
+  </div>
+</footer>
+<script>
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.14,rootMargin:'0px 0px -6% 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  document.addEventListener('click',function(e){
+    ['moreWrap','workWrap'].forEach(function(id){var w=document.getElementById(id);if(w&&!w.contains(e.target))w.classList.remove('open');});
+  });
+</script>
+<script>
+(function(){
+  var btn=document.getElementById('hamBtn');
+  var nav=document.getElementById('mobileNav');
+  if(btn&&nav){btn.addEventListener('click',function(){nav.classList.toggle('open');btn.setAttribute('aria-expanded',nav.classList.contains('open'))});}
+})();
+</script>
+<script>
+document.addEventListener('click', function(e){
+  var a = e.target.closest('a'); if(!a || typeof gtag !== 'function') return;
+  var h = a.href || '';
+  var label = (a.textContent || '').trim().slice(0, 60);
+  if (h.indexOf('stripe.com') > -1) gtag('event', 'begin_checkout', {link_url: h, link_text: label, page_path: location.pathname});
+  else if (h.indexOf('tidycal.com') > -1) gtag('event', 'book_call_click', {link_url: h, link_text: label, page_path: location.pathname});
+  else if (h.indexOf('instagram.com') > -1) gtag('event', 'instagram_click', {link_url: h, page_path: location.pathname});
+  else if (h.indexOf('/files/') > -1 || h.indexOf('.pdf') > -1) gtag('event', 'freebie_download', {link_url: h, page_path: location.pathname});
+});
+</script>
+</body>
+</html>
