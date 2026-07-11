@@ -78,7 +78,7 @@ const PRODUCT_MAP = {
   },
   'price_1Tpr13CCw18geY15W6ooICYF': {
     tagId: 20794312,   // "one touch"
-    sequenceId: 2820368,  // "One Touch — Welcome" (draft email, needs publishing in Kit before this fires live)
+    sequenceId: 2820368,  // "One Touch — Welcome" — published + live, confirmed 8 Jul
     label: 'One Touch £97'
   },
   // ─── THE BEGINNING ──────────────────────────────────────────────────────────
