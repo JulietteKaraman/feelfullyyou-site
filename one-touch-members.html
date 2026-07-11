@@ -68,6 +68,19 @@
   .day-title{font-family:var(--display);font-weight:600;font-size:1rem;color:#fff;letter-spacing:-.01em}
   .day-body{padding:22px}
 
+  /* ── DRIP LOCK ── */
+  .lock-icon{display:none;width:16px;height:16px;stroke:var(--gold-pale);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;margin-left:auto;flex-shrink:0}
+  .day-card.locked .lock-icon{display:block}
+  .day-card.locked .day-header{opacity:.6}
+  .day-card.locked .day-body{display:none}
+  .day-locked-msg{display:none;padding:32px 22px;text-align:center;font-size:14px;color:var(--gold-soft);font-style:italic;line-height:1.6}
+  .day-card.locked .day-locked-msg{display:block}
+  .btn-complete{display:inline-block;margin-top:6px;background:var(--teal);color:#fff;font-family:var(--display);font-weight:600;font-size:14px;padding:13px 22px;border:none;border-radius:3px;cursor:pointer;transition:background .2s}
+  .btn-complete:hover{background:var(--teal-deep)}
+  .btn-complete.done{background:var(--gold-soft);cursor:default}
+  .btn-complete.done:hover{background:var(--gold-soft)}
+  .progress-note{font-size:13px;color:var(--gold-pale);letter-spacing:.03em;margin-top:16px;opacity:.85}
+
   /* ── VIDEO EMBED ── */
   .video-frame{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:3px;background:var(--teal);margin-bottom:16px}
   .video-frame iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none;border-radius:3px}
@@ -164,6 +177,7 @@ gtag('config', 'G-SY8NKELMNZ');
     <div class="eyebrow">Welcome to your programme</div>
     <h1>One Touch.</h1>
     <p class="sub">Seven days. Real practices. Start at your own pace — there is no wrong way to move through this.</p>
+    <p class="progress-note" id="progressNote"></p>
   </div>
 
   <!-- ════════════════════════════════════════════
@@ -173,7 +187,7 @@ gtag('config', 'G-SY8NKELMNZ');
     <div class="section-label">Before you begin</div>
     <div class="day-grid">
 
-      <div class="day-card">
+      <div class="day-card" data-day="0">
         <div class="day-header">
           <span class="day-num">Intro</span>
           <span class="day-title">Welcome to One Touch</span>
@@ -185,10 +199,11 @@ gtag('config', 'G-SY8NKELMNZ');
         </div>
       </div>
 
-      <div class="day-card">
+      <div class="day-card" data-day="1">
         <div class="day-header">
           <span class="day-num">Day 1</span>
           <span class="day-title">Your own touch</span>
+          <svg class="lock-icon" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
         </div>
         <div class="day-body">
           <div class="video-frame">
@@ -197,13 +212,16 @@ gtag('config', 'G-SY8NKELMNZ');
           <div class="prompt-card">
             <img src="https://drive.google.com/thumbnail?id=1zsHsn66XNowPvjh3H5j9TiSY_qs6ylSj&sz=w1000" alt="Day 1 prompt card">
           </div>
+          <button class="btn-complete" onclick="completeDay(1)">I've done today's practice — unlock Day 2 →</button>
         </div>
+        <div class="day-locked-msg">Complete Day 1 to unlock this.</div>
       </div>
 
-      <div class="day-card">
+      <div class="day-card" data-day="2">
         <div class="day-header">
           <span class="day-num">Day 2</span>
           <span class="day-title">Day 2</span>
+          <svg class="lock-icon" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
         </div>
         <div class="day-body">
           <div class="video-frame">
@@ -212,13 +230,16 @@ gtag('config', 'G-SY8NKELMNZ');
           <div class="prompt-card">
             <img src="https://drive.google.com/thumbnail?id=1XKyRBpkDHiRHGvdeRp0c_IzXVkFFRbVR&sz=w1000" alt="Day 2 prompt card">
           </div>
+          <button class="btn-complete" onclick="completeDay(2)">I've done today's practice — unlock Day 3 →</button>
         </div>
+        <div class="day-locked-msg">Complete Day 2 to unlock this.</div>
       </div>
 
-      <div class="day-card">
+      <div class="day-card" data-day="3">
         <div class="day-header">
           <span class="day-num">Day 3</span>
           <span class="day-title">Saying yes when your body said no</span>
+          <svg class="lock-icon" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
         </div>
         <div class="day-body">
           <div class="video-frame">
@@ -237,51 +258,63 @@ gtag('config', 'G-SY8NKELMNZ');
             </div>
             <a href="https://drive.google.com/file/d/1RVRhUZU8RTirAaNRQ0EN0xaKOpWdkA58/view?usp=drivesdk" target="_blank" rel="noopener" class="audio-link">Watch →</a>
           </div>
+          <button class="btn-complete" onclick="completeDay(3)">I've done today's practice — unlock Day 4 →</button>
         </div>
+        <div class="day-locked-msg">Complete Day 3 to unlock this.</div>
       </div>
 
-      <div class="day-card">
+      <div class="day-card" data-day="4">
         <div class="day-header">
           <span class="day-num">Day 4</span>
           <span class="day-title">What you've never dared ask for</span>
+          <svg class="lock-icon" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
         </div>
         <div class="day-body">
-          <div class="video-note">Video for Day 4 is on its way — for now, sit with today's prompt below.</div>
+          <div class="video-note">Video for Day 4 is on its way — for now, work with today's prompt below.</div>
           <div class="prompt-card">
             <img src="https://drive.google.com/thumbnail?id=1g4qZo1dMKioqIpdR6RxMzIm-XwXTZk_G&sz=w1000" alt="Day 4 prompt card">
           </div>
+          <button class="btn-complete" onclick="completeDay(4)">I've done today's practice — unlock Day 5 →</button>
         </div>
+        <div class="day-locked-msg">Complete Day 4 to unlock this.</div>
       </div>
 
-      <div class="day-card">
+      <div class="day-card" data-day="5">
         <div class="day-header">
           <span class="day-num">Day 5</span>
           <span class="day-title">Day 5</span>
+          <svg class="lock-icon" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
         </div>
         <div class="day-body">
-          <div class="video-note">Video for Day 5 is on its way — for now, sit with today's prompt below.</div>
+          <div class="video-note">Video for Day 5 is on its way — for now, work with today's prompt below.</div>
           <div class="prompt-card">
             <img src="https://drive.google.com/thumbnail?id=12KM0rpNcFG_edos0PZ3M64upVoGpBiJE&sz=w1000" alt="Day 5 prompt card">
           </div>
+          <button class="btn-complete" onclick="completeDay(5)">I've done today's practice — unlock Day 6 →</button>
         </div>
+        <div class="day-locked-msg">Complete Day 5 to unlock this.</div>
       </div>
 
-      <div class="day-card">
+      <div class="day-card" data-day="6">
         <div class="day-header">
           <span class="day-num">Day 6</span>
           <span class="day-title">Day 6</span>
+          <svg class="lock-icon" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
         </div>
         <div class="day-body">
           <div class="video-frame">
             <iframe src="https://drive.google.com/file/d/1heFMYPgEvIeh1fYaWdvEnGZlNjcfphCf/preview" allowfullscreen allow="autoplay"></iframe>
           </div>
+          <button class="btn-complete" onclick="completeDay(6)">I've done today's practice — unlock Day 7 →</button>
         </div>
+        <div class="day-locked-msg">Complete Day 6 to unlock this.</div>
       </div>
 
-      <div class="day-card">
+      <div class="day-card" data-day="7">
         <div class="day-header">
           <span class="day-num">Day 7</span>
           <span class="day-title">What surprises you about your own touch</span>
+          <svg class="lock-icon" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
         </div>
         <div class="day-body">
           <div class="prompt-card">
@@ -297,7 +330,9 @@ gtag('config', 'G-SY8NKELMNZ');
             </div>
             <a href="https://drive.google.com/file/d/1KL85owED0FUflliD1OtRGJyY1wFDU6ZL/view?usp=drivesdk" target="_blank" rel="noopener" class="audio-link">Listen →</a>
           </div>
+          <button class="btn-complete" onclick="completeDay(7)">Mark Day 7 complete</button>
         </div>
+        <div class="day-locked-msg">Complete Day 6 to unlock this.</div>
       </div>
 
     </div><!-- /day-grid -->
@@ -321,6 +356,7 @@ gtag('config', 'G-SY8NKELMNZ');
 <script>
   const PASSWORD = 'onetouch2026';
   const SESSION_KEY = 'ot_access';
+  const PROGRESS_KEY = 'ot_progress';
 
   function checkPassword() {
     const val = document.getElementById('pw-input').value.trim().toLowerCase();
@@ -344,6 +380,38 @@ gtag('config', 'G-SY8NKELMNZ');
   document.getElementById('pw-input').addEventListener('keydown', function(e) {
     if (e.key === 'Enter') checkPassword();
   });
+
+  // ── DRIP PROGRESS — Day 1 open by default, each next day unlocks once the one before it is marked done.
+  // Stored in localStorage (not sessionStorage) so progress survives closing the tab.
+  function getCompleted(){ return parseInt(localStorage.getItem(PROGRESS_KEY) || '0', 10); }
+  function setCompleted(n){ localStorage.setItem(PROGRESS_KEY, String(n)); }
+
+  function applyProgress(){
+    const completed = getCompleted();
+    document.querySelectorAll('.day-card[data-day]').forEach(function(card){
+      const day = parseInt(card.getAttribute('data-day'), 10);
+      if (day === 0) return; // Intro always open
+      card.classList.toggle('locked', day > completed + 1);
+      const btn = card.querySelector('.btn-complete');
+      if (btn && day <= completed) {
+        btn.textContent = '✓ Day ' + day + ' complete';
+        btn.classList.add('done');
+      }
+    });
+    const note = document.getElementById('progressNote');
+    if (note) {
+      note.textContent = completed >= 7 ? "You've completed all 7 days." : "You're on Day " + Math.min(completed + 1, 7) + ' of 7.';
+    }
+  }
+
+  function completeDay(n){
+    if (n > getCompleted()) setCompleted(n);
+    applyProgress();
+    const next = document.querySelector('.day-card[data-day="' + (n + 1) + '"]');
+    if (next) next.scrollIntoView({behavior:'smooth', block:'start'});
+  }
+
+  applyProgress();
 </script>
 <script>
 document.addEventListener('click', function(e){
