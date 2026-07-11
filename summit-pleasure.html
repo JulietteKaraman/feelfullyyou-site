@@ -7,24 +7,28 @@
 <link rel="canonical" href="https://feelfullyyou.com/summit-pleasure">
 <meta name="robots" content="noindex, nofollow">
 <meta property="og:title" content="The Pleasure Bundle · Feel Fully You">
-<meta property="og:description" content="One Touch, 10 Touch Rituals, and half off the cards app. Free for summit guests.">
+<meta property="og:description" content="One Touch, 10 Touch Rituals, and half off the cards app. £159 of value, most of it free for summit guests.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://feelfullyyou.com/summit-pleasure">
+<meta property="og:image" content="https://feelfullyyou.com/one-touch-hero.jpg">
 <meta property="og:site_name" content="Feel Fully You">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="The Pleasure Bundle · Feel Fully You">
-<meta name="twitter:description" content="One Touch, 10 Touch Rituals, and half off the cards app. Free for summit guests.">
-<meta name="description" content="One Touch, 10 Touch Rituals, and half off the cards app. Free for summit guests.">
+<meta name="twitter:description" content="One Touch, 10 Touch Rituals, and half off the cards app. £159 of value, most of it free for summit guests.">
+<meta name="twitter:image" content="https://feelfullyyou.com/one-touch-hero.jpg">
+<meta name="description" content="One Touch, 10 Touch Rituals, and half off the cards app. £159 of value, most of it free for summit guests.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
     --cream:#fefcfa;
+    --cream-2:#f7f1e8;
     --ink:#1c1714;
     --brown:#5d4a33;
     --gold:#a88538;
     --gold-deep:#99680c;
+    --gold-pale:#ddc98e;
     --gold-soft:#b4a074;
     --teal:#0d3535;
     --teal-deep:#061a1a;
@@ -33,36 +37,62 @@
     --body:'Inter',system-ui,sans-serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  body{background:var(--cream);color:var(--brown);font-family:var(--body);-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
+  body{background:var(--cream);color:var(--brown);font-family:var(--body);-webkit-font-smoothing:antialiased}
+  a{color:inherit}
 
-  .topbar{background:var(--teal);padding:0 28px;height:60px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-  .topbar .brand{font-family:var(--display);font-weight:700;font-size:15px;color:#fff;letter-spacing:.02em}
-  .topbar .brand b{color:#ddc98e}
+  .topbar{background:var(--teal);padding:0 28px;height:60px;display:flex;align-items:center;justify-content:center}
+  .topbar .brand{font-family:var(--display);font-weight:700;font-size:15px;color:#fff;letter-spacing:.02em;text-decoration:none}
+  .topbar .brand b{color:var(--gold-pale)}
 
-  .main{flex:1;display:flex;align-items:center;justify-content:center;padding:60px 28px}
-  .card{max-width:560px;width:100%;text-align:center}
-
-  .eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-deep);font-weight:700;margin-bottom:20px}
-  h1{font-family:var(--display);font-size:clamp(1.8rem,4.5vw,2.6rem);font-weight:700;color:var(--teal);line-height:1.14;letter-spacing:-.022em;margin-bottom:16px}
-  h1 em{font-style:italic;color:var(--gold)}
-  .sub{font-size:1.05rem;color:var(--brown);line-height:1.7;margin-bottom:36px;max-width:44ch;margin-left:auto;margin-right:auto}
-
-  .includes{display:flex;flex-direction:column;gap:12px;text-align:left;background:#fff;border:1px solid var(--line);border-radius:4px;padding:24px 28px;margin-bottom:36px}
-  .includes .row{display:flex;align-items:baseline;gap:10px;font-size:15px;color:var(--brown);line-height:1.5}
-  .includes .row b{color:var(--ink);font-weight:600}
-  .includes .row .was{color:var(--gold-soft);text-decoration:line-through;font-size:13px;margin-left:4px}
-
-  .form-label{font-family:var(--display);font-size:1.1rem;font-weight:600;color:var(--teal);margin-bottom:14px}
-  form{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
-  input[type="email"]{flex:1;min-width:220px;max-width:320px;padding:14px 18px;font-size:1rem;font-family:var(--body);border:1.5px solid var(--line);border-radius:2px;background:#fff;color:var(--ink);outline:none;transition:border-color .2s}
-  input[type="email"]::placeholder{color:var(--gold-soft)}
-  input[type="email"]:focus{border-color:var(--teal)}
-  button{padding:14px 28px;background:var(--gold);color:#fff;font-family:var(--body);font-size:1rem;font-weight:700;border:none;border-radius:2px;cursor:pointer;transition:background .2s;white-space:nowrap}
+  /* HERO — split, One Touch photo + teal panel */
+  .hero-split{display:grid;grid-template-columns:1fr 1fr;min-height:600px}
+  .hero-photo{background:url('/one-touch-hero.jpg') center / cover no-repeat;min-height:420px}
+  .hero-content{background:var(--teal);display:flex;flex-direction:column;justify-content:center;padding:64px 52px}
+  .hero-kicker{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-pale);font-weight:700;margin-bottom:18px}
+  .hero-content h1{font-family:var(--display);font-size:clamp(1.9rem,4vw,2.7rem);font-weight:700;color:#fff;line-height:1.1;letter-spacing:-.022em;margin-bottom:16px}
+  .hero-content .sub{font-family:var(--display);font-size:clamp(16px,1.8vw,19px);font-style:italic;font-weight:500;color:rgba(254,252,250,.75);margin-bottom:26px;line-height:1.5}
+  .value-line{display:flex;align-items:baseline;gap:10px;margin-bottom:30px}
+  .value-line .was{font-family:var(--display);font-weight:700;font-size:1.5rem;color:var(--gold-soft);text-decoration:line-through;opacity:.7}
+  .value-line .note{font-size:13px;color:var(--gold-pale);letter-spacing:.03em}
+  form{display:flex;gap:10px;flex-wrap:wrap}
+  input[type="email"]{flex:1;min-width:200px;padding:15px 18px;font-size:1rem;font-family:var(--body);border:1.5px solid rgba(255,255,255,.18);border-radius:2px;background:rgba(255,255,255,.06);color:#fff;outline:none;transition:border-color .2s}
+  input[type="email"]::placeholder{color:rgba(255,255,255,.45)}
+  input[type="email"]:focus{border-color:var(--gold-pale)}
+  button{padding:15px 30px;background:var(--gold);color:#fff;font-family:var(--body);font-size:1rem;font-weight:700;border:none;border-radius:2px;cursor:pointer;transition:background .2s;white-space:nowrap}
   button:hover{background:var(--gold-deep)}
   button:disabled{opacity:.65;cursor:not-allowed}
-  .fine{font-size:12px;color:var(--gold-soft);margin-top:12px}
+  .fine{font-size:12px;color:rgba(254,252,250,.5);margin-top:12px}
 
-  footer{padding:22px 28px;text-align:center;font-size:12px;color:var(--gold-soft);flex-shrink:0}
+  @media(max-width:780px){
+    .hero-split{grid-template-columns:1fr}
+    .hero-photo{order:-1;min-height:280px;max-height:280px}
+    .hero-content{padding:44px 24px}
+  }
+
+  /* WHAT'S INCLUDED */
+  .included{padding:76px 28px 68px;background:var(--cream)}
+  .included-inner{max-width:1000px;margin:0 auto}
+  .included h2{font-family:var(--display);font-weight:700;font-size:clamp(1.5rem,3vw,2.1rem);color:var(--ink);text-align:center;letter-spacing:-.02em;margin-bottom:44px}
+  .stack{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .item-card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:30px 26px;text-align:center}
+  .item-card .tag{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep);font-weight:700;margin-bottom:14px}
+  .item-card h3{font-family:var(--display);font-weight:700;font-size:1.2rem;color:var(--ink);margin-bottom:14px;letter-spacing:-.01em}
+  .item-card .price{margin-bottom:14px}
+  .item-card .price .was{font-size:15px;color:var(--gold-soft);text-decoration:line-through;margin-right:8px}
+  .item-card .price .now{font-family:var(--display);font-weight:700;font-size:1.7rem;color:var(--gold-deep)}
+  .item-card p{font-size:14px;color:var(--brown);line-height:1.6}
+  @media(max-width:780px){.stack{grid-template-columns:1fr}}
+
+  .total-bar{max-width:1000px;margin:40px auto 0;background:var(--teal);border-radius:6px;padding:26px 32px;text-align:center}
+  .total-bar .label{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-pale);font-weight:700;margin-bottom:8px}
+  .total-bar .line{font-family:var(--display);font-size:clamp(1.1rem,2.2vw,1.4rem);color:#fff;font-weight:600;letter-spacing:-.01em}
+  .total-bar .line b{color:var(--gold-pale)}
+
+  .cta-repeat{text-align:center;margin-top:44px}
+  .btn-repeat{display:inline-block;background:var(--gold);color:#fff;font-family:var(--body);font-weight:700;font-size:1rem;padding:16px 40px;border-radius:2px;text-decoration:none;transition:background .2s}
+  .btn-repeat:hover{background:var(--gold-deep)}
+
+  footer{padding:22px 28px;text-align:center;font-size:12px;color:var(--gold-soft)}
   footer a{color:inherit;text-decoration:underline;text-underline-offset:3px}
 </style>
 <link rel="icon" href="/favicon.ico" sizes="48x48">
@@ -82,26 +112,58 @@ gtag('config', 'G-SY8NKELMNZ');
   <a href="/" class="brand">Feel Fully <b>You</b></a>
 </div>
 
-<main class="main">
-  <div class="card">
-    <div class="eyebrow">Summit guests only</div>
-    <h1>Three ways back into your body. <em>Yours for showing up.</em></h1>
-    <p class="sub">Enter your email and the full bundle unlocks straight away, no waiting.</p>
-
-    <div class="includes">
-      <div class="row"><b>One Touch</b> &mdash; the 7-day course<span class="was">normally £97</span> &mdash; free</div>
-      <div class="row"><b>10 Touch Rituals</b> &mdash; the guide &mdash; free</div>
-      <div class="row"><b>The Cards App, Full Bundle</b> &mdash; <span class="was">£55</span> £27.50</div>
+<header class="hero-split">
+  <div class="hero-photo"></div>
+  <div class="hero-content">
+    <p class="hero-kicker">Summit guests only</p>
+    <h1>Three ways back into your body.</h1>
+    <p class="sub">One Touch. 10 Touch Rituals. Half off the cards app.</p>
+    <div class="value-line">
+      <span class="was">£159</span>
+      <span class="note">of real value, most of it free, today</span>
     </div>
-
-    <p class="form-label">Where do we send it?</p>
     <form id="signupForm">
       <input type="email" id="emailInput" name="email" placeholder="Your email address" required autocomplete="email">
       <button type="submit" id="submitBtn">Unlock the bundle</button>
     </form>
     <p class="fine">No spam. Unsubscribe any time.</p>
   </div>
-</main>
+</header>
+
+<section class="included">
+  <div class="included-inner">
+    <h2>What's in the bundle</h2>
+    <div class="stack">
+      <div class="item-card">
+        <div class="tag">7-day course</div>
+        <h3>One Touch</h3>
+        <div class="price"><span class="was">£97</span><span class="now">Free</span></div>
+        <p>Your own hand, seven days, the start of receiving again.</p>
+      </div>
+      <div class="item-card">
+        <div class="tag">The guide</div>
+        <h3>10 Touch Rituals</h3>
+        <div class="price"><span class="was">£7</span><span class="now">Free</span></div>
+        <p>Ten small touches that teach your body reaching is safe.</p>
+      </div>
+      <div class="item-card">
+        <div class="tag">Full bundle · 475 cards</div>
+        <h3>The Cards App</h3>
+        <div class="price"><span class="was">£55</span><span class="now">£27.50</span></div>
+        <p>Three decks: Couples, Family and Friends, Trust and Repair.</p>
+      </div>
+    </div>
+
+    <div class="total-bar">
+      <div class="label">Total value</div>
+      <div class="line"><b>£159</b> of real value. Free plus half off, just for showing up.</div>
+    </div>
+
+    <div class="cta-repeat">
+      <a href="#top" class="btn-repeat" id="scrollToForm">Unlock the bundle &rarr;</a>
+    </div>
+  </div>
+</section>
 
 <footer>
   <a href="/">feelfullyyou.com</a> &nbsp;&middot;&nbsp; <a href="mailto:support@feelfullyyou.com">support@feelfullyyou.com</a>
@@ -126,6 +188,12 @@ gtag('config', 'G-SY8NKELMNZ');
 
     await new Promise(r => setTimeout(r, 600));
     window.location.href = REDIRECT_URL;
+  });
+
+  document.getElementById('scrollToForm').addEventListener('click', function(e){
+    e.preventDefault();
+    document.getElementById('emailInput').scrollIntoView({behavior:'smooth', block:'center'});
+    document.getElementById('emailInput').focus();
   });
 </script>
 <script>
