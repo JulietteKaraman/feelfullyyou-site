@@ -34,6 +34,7 @@
 /trip-wire                      /trip-wire.html                 200
 /trip                           /trip-wire.html                 200
 /trip-wire-between-touches      /trip-wire-between-touches.html 200
+/free-10-rituals                 https://couplecards.netlify.app/api/touch-rituals-checkout?promo=FREERITUALS 301
 /pattern-session                /pattern-session.html           200
 /one-touch                      /one-touch.html                 200
 /cards-complete                 /cards-complete.html            200
