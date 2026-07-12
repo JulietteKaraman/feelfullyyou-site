@@ -118,7 +118,7 @@ gtag('config', 'G-SY8NKELMNZ');
     fetch('/.netlify/functions/subscribe', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({email, tagIds: [20896609], sequenceId: null /* was 2812534, deleted in Kit — wire new ID when Kiera creates it */})
+      body: JSON.stringify({email, tagIds: [20896609], sequenceId: null /* delivery runs off the tag above via a Kit automation; confirm that automation is live in Kit (do directly or hand the VA a step-by-step doc, not Kiera) */})
     }).catch(() => {});
 
     await new Promise(r => setTimeout(r, 600));

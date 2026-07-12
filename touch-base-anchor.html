@@ -168,7 +168,7 @@ function handleTb(e){
   fetch('/.netlify/functions/subscribe',{
     method:'POST',
     headers:{'Content-Type':'application/json'},
-    body:JSON.stringify({email:email,firstName:name,tagIds:[20896290],sequenceId:null /* was 2812534, deleted in Kit — wire new ID when Kiera creates it */})
+    body:JSON.stringify({email:email,firstName:name,tagIds:[20896290],sequenceId:null /* delivery runs off the tag above via a Kit automation; confirm that automation is live in Kit (do directly or hand the VA a step-by-step doc, not Kiera) */})
   }).finally(function(){window.location.href='/thankyou-touch-base';});
 }
 </script>
