@@ -60,6 +60,7 @@ PAGES=(
   "/thankyou-sacred-no"
   "/thankyou-repair-kit"
   "/touch-languages"
+  "/touch-reset-quiz"
 )
 
 echo "=== FFY Site Health Check — $(date) ==="
