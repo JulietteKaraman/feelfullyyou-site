@@ -118,7 +118,7 @@ gtag('config', 'G-SY8NKELMNZ');
     fetch('/.netlify/functions/subscribe', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({email, tagIds: [20896609], sequenceId: null /* delivery runs off the tag above via a Kit automation; confirm that automation is live in Kit (do directly or hand the VA a step-by-step doc, not Kiera) */})
+      body: JSON.stringify({email, tagIds: [20896609], sequenceId: 2825131 /* "Cards Free Taster — Welcome" sequence, built 13 Jul. Delivery email is a DRAFT in Kit — publish it (app.kit.com/sequences/2825131) to make email delivery live. Thank-you page already self-delivers the deck. */})
     }).catch(() => {});
 
     await new Promise(r => setTimeout(r, 600));
