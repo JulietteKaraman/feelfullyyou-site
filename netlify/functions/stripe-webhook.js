@@ -84,12 +84,12 @@ const PRODUCT_MAP = {
   // ─── THE BEGINNING ──────────────────────────────────────────────────────────
   'price_1Tp740CCw18geY15gg4z1oEg': {
     tagId: 20794305,   // "the beginning"
-    sequenceId: null,
+    sequenceId: 2825352,  // "The Beginning — Welcome" (booking links, wired 13 Jul)
     label: 'The Beginning £8,997 (full payment)'
   },
   'price_1Tp748CCw18geY15wQ4wP9CY': {
     tagId: 20794305,   // "the beginning"
-    sequenceId: null,
+    sequenceId: 2825352,  // "The Beginning — Welcome" (booking links, wired 13 Jul)
     label: 'The Beginning £4,499 x 2 (payment plan)'
   },
   // ─── PRACTITIONERS ──────────────────────────────────────────────────────────
