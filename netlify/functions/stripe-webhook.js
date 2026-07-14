@@ -68,8 +68,13 @@ const PRODUCT_MAP = {
   },
   'price_1TnwwmCCw18geY15egD5h7Fr': {
     tagId: 20794295,   // "the communication reboot kit"
-    sequenceId: null,  // no CRK sequence in Kit yet
+    sequenceId: 2826769,  // "Communication Reboot Kit — Welcome", wired 14 Jul
     label: 'Communication Reboot Kit £37'
+  },
+  'price_1TqqcmCCw18geY15FjLGqM2q': {
+    tagId: 20794295,   // "the communication reboot kit"
+    sequenceId: 2826769,  // "Communication Reboot Kit — Welcome", wired 14 Jul
+    label: 'Communication Reboot Kit £17 (When She Goes Quiet tripwire)'
   },
   'price_1To2MZCCw18geY15DzT0iv5A': {
     tagId: 20794287,   // "essence day sept 26"
@@ -127,7 +132,7 @@ const PRODUCT_MAP = {
   },
   'price_1TqA31CCw18geY15LHopiNWx': {
     tagId: 20913131,   // "womens-six-week-buyer"
-    sequenceId: null,
+    sequenceId: 2825355,  // "Women's Six-Week — Welcome" (booking link, wired 13 Jul)
     label: "Women's 6-Week Intensive £4,497"
   },
   'price_1TqA34CCw18geY15O4rXtodc': {
