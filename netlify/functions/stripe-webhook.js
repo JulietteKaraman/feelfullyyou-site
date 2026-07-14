@@ -208,10 +208,15 @@ const PRODUCT_MAP = {
     label: 'Cards Complete the Set £25 (email offer, single deck owners)'
   },
   // ─── CARDS APP CHECKOUT (couplecards.netlify.app in-app purchases) ──────────
+  'price_1TFAH4CCw18geY15TMvJo2Vv': {
+    tagId: 20911186,   // "cards-touch-languages"
+    sequenceId: 2817582,  // "Cards Buyer Welcome" — the live price the app's STRIPE_TOUCH_LANGUAGES_PRICE_ID points at, wired 14 Jul
+    label: 'Touch Languages deck £35 (app, live price)'
+  },
   'price_1TOJbnCCw18geY15CjoyXpdr': {
     tagId: 20911186,   // "cards-touch-languages"
-    sequenceId: null,
-    label: 'Touch Languages deck £35 (app)'
+    sequenceId: 2817582,  // "Cards Buyer Welcome"
+    label: 'Touch Languages deck £35 (app, old price)'
   },
   'price_1TOJaDCCw18geY15CKuWkE1z': {
     tagId: 20896674,   // "cards-one-deck"
