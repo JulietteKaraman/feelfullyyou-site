@@ -137,27 +137,27 @@ const PRODUCT_MAP = {
   },
   'price_1TqA34CCw18geY15O4rXtodc': {
     tagId: 20913132,   // "the-room-member"
-    sequenceId: null,
+    sequenceId: 2825351,  // "The Room — Welcome" (wired 13 Jul)
     label: 'The Room £3,000 (pay in full)'
   },
   'price_1TqA37CCw18geY15UVa15ctp': {
     tagId: 20913132,   // "the-room-member"
-    sequenceId: null,
+    sequenceId: 2825351,  // "The Room — Welcome" (wired 13 Jul)
     label: 'The Room £1,500 x 2 (payment plan — cancel sub after 2)'
   },
   'price_1TqA3BCCw18geY15myzAp0Xy': {
     tagId: 20913132,   // "the-room-member"
-    sequenceId: null,
+    sequenceId: 2825351,  // "The Room — Welcome" (wired 13 Jul)
     label: 'The Room £1,000 x 3 (payment plan — cancel sub after 3)'
   },
   'price_1TqAOtCCw18geY15eIBYrJnE': {
     tagId: 20913132,   // "the-room-member"
-    sequenceId: null,
+    sequenceId: 2825351,  // "The Room — Welcome" (wired 13 Jul)
     label: 'The Room: Held (VIP) £5,000 (pay in full)'
   },
   'price_1TqAOxCCw18geY157k8z790r': {
     tagId: 20913132,   // "the-room-member"
-    sequenceId: null,
+    sequenceId: 2825351,  // "The Room — Welcome" (wired 13 Jul)
     label: 'The Room: Held (VIP) £2,500 x 2 (payment plan — cancel sub after 2)'
   },
   // ─── SACRED NO + REPAIR KIT ─────────────────────────────────────────────────
