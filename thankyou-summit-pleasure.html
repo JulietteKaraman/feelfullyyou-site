@@ -52,6 +52,11 @@
   .value-strip{text-align:center;margin:0 0 36px;font-family:'Poppins',sans-serif}
   .value-strip .big{font-weight:700;font-size:clamp(1.15rem,3.5vw,1.5rem);color:var(--gold-deep);letter-spacing:-.01em}
   .value-strip .small{display:block;font-family:'Inter',sans-serif;font-size:13.5px;color:var(--brown);margin-top:4px;letter-spacing:.01em}
+  .offer-box.cards-box{display:flex;gap:22px;align-items:center}
+  .cards-shot{flex:0 0 168px}
+  .cards-shot img{width:100%;height:auto;display:block;border-radius:12px;border:1px solid rgba(255,255,255,.14);box-shadow:0 16px 36px -18px rgba(0,0,0,.6)}
+  .cards-copy{flex:1 1 auto;min-width:0}
+  @media(max-width:560px){.offer-box.cards-box{flex-direction:column} .cards-shot{flex:0 0 auto;max-width:190px;margin:0 auto}}
 </style>
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -110,13 +115,16 @@ gtag('config', 'G-SY8NKELMNZ');
       <a href="/body-confidence" target="_blank" rel="noopener" class="btn-download">Watch the practice &rarr;</a>
     </div>
 
-    <div class="offer-box">
-      <div class="label">Half off &middot; summit guests only</div>
-      <h2>The Cards App &middot; Full Bundle</h2>
-      <div class="price"><span class="was">£55</span><span class="now">£27.50</span></div>
-      <p>Pull 10 cards free before you spend a penny. Then open all 475 across three decks (Couples, Family and Friends, Trust and Repair) and watch the conversations you keep dancing around finally happen. Code PLEASURE halves it at checkout.</p>
-      <a href="https://feelfullyyou.com/cards?promo=PLEASURE" class="btn-download">Unlock all 475 for £27.50 &rarr;</a>
-      <a href="/cards-free-taster" target="_blank" rel="noopener" style="display:block;margin-top:14px;font-size:13.5px;color:var(--gold-pale);text-decoration:underline;text-underline-offset:3px">Want a taste first? Pull 10 cards free &rarr;</a>
+    <div class="offer-box cards-box">
+      <div class="cards-shot"><img src="cards-app-taster.jpg" alt="The Cards App, Art of Scrumptious Living deck"></div>
+      <div class="cards-copy">
+        <div class="label">Half off &middot; summit guests only</div>
+        <h2>The Cards App &middot; Full Bundle</h2>
+        <div class="price"><span class="was">£55</span><span class="now">£27.50</span></div>
+        <p>Pull 10 cards free before you spend a penny. Then open all 475 across three decks (Couples, Family and Friends, Trust and Repair) and watch the conversations you keep dancing around finally happen. Code PLEASURE halves it at checkout.</p>
+        <a href="https://feelfullyyou.com/cards?promo=PLEASURE" class="btn-download">Unlock all 475 for £27.50 &rarr;</a>
+        <a href="/cards-free-taster" target="_blank" rel="noopener" style="display:block;margin-top:14px;font-size:13.5px;color:var(--gold-pale);text-decoration:underline;text-underline-offset:3px">Want a taste first? Pull 10 cards free &rarr;</a>
+      </div>
     </div>
   </div>
 
