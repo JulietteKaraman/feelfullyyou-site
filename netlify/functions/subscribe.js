@@ -5,6 +5,23 @@ exports.handler = async function(event) {
     return { statusCode: 405, body: 'Method Not Allowed' };
   }
 
+  // Anti-bot: only accept signups that actually originate from our own site.
+  // List-bombing scripts POST straight at this endpoint with no matching
+  // Origin/Referer, so we reject anything that isn't feelfullyyou.com
+  // (or a Netlify preview deploy). Browsers always send Origin on a POST.
+  const h = event.headers || {};
+  const origin = h.origin || h.Origin || '';
+  const referer = h.referer || h.Referer || '';
+  const hostOk = (u) => {
+    try {
+      const host = new URL(u).hostname;
+      return host === 'feelfullyyou.com' || host.endsWith('.feelfullyyou.com') || host.endsWith('.netlify.app');
+    } catch { return false; }
+  };
+  if (!hostOk(origin) && !hostOk(referer)) {
+    return { statusCode: 403, body: JSON.stringify({ error: 'Forbidden' }) };
+  }
+
   let email, firstName, tagIds, sequenceId, sequenceIds, honeypot, fields;
   try {
     const body = JSON.parse(event.body);

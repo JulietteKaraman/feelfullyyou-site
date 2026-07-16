@@ -246,6 +246,7 @@ gtag('config', 'G-SY8NKELMNZ');
   <p class="sub reveal">Enter your details below and the process comes straight to you. No cost. No catch. Just the space your body has been asking for.</p>
   <div class="form-wrap">
     <form id="griefForm" onsubmit="handleGrief(event)">
+      <input type="text" name="website" id="grief_hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" />
       <input id="grief_name" type="text" placeholder="First name" required>
       <input id="grief_email" type="email" placeholder="Email address" required>
       <button type="submit" id="griefBtn">Send me the process →</button>
@@ -293,7 +294,7 @@ function handleGrief(e){
   fetch('/.netlify/functions/subscribe',{
     method:'POST',
     headers:{'Content-Type':'application/json'},
-    body:JSON.stringify({email:email,firstName:name,tagIds:[20896551],sequenceId:2817836})
+    body:JSON.stringify({email:email,firstName:name,website:document.getElementById('grief_hp').value,tagIds:[20896551],sequenceId:2817836})
   }).finally(function(){window.location.href='/thankyou-grief';});
 }
 </script>

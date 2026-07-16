@@ -127,6 +127,7 @@ gtag('config', 'G-SY8NKELMNZ');
       <span class="note">of real value, most of it free, today</span>
     </div>
     <form id="signupForm">
+      <input type="text" name="website" id="summit_hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" />
       <input type="email" id="emailInput" name="email" placeholder="Your email address" required autocomplete="email">
       <button type="submit" id="submitBtn">Unlock the bundle</button>
     </form>
@@ -208,7 +209,7 @@ gtag('config', 'G-SY8NKELMNZ');
     fetch('/.netlify/functions/subscribe', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({email, tagIds: [] /* placeholder — create Kit tag "summit-pleasure" + wire here once Kit reconnects */})
+      body: JSON.stringify({email, website: document.getElementById('summit_hp').value, tagIds: [] /* placeholder — create Kit tag "summit-pleasure" + wire here once Kit reconnects */})
     }).catch(() => {});
 
     await new Promise(r => setTimeout(r, 600));

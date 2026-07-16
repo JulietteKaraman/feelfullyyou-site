@@ -93,6 +93,7 @@ gtag('config', 'G-SY8NKELMNZ');
 
     <p class="form-label">Where do we send the taster deck?</p>
     <form id="signupForm">
+      <input type="text" name="website" id="cards_hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" />
       <input type="email" id="emailInput" name="email" placeholder="Your email address" required autocomplete="email">
       <button type="submit" id="submitBtn">Send it to me</button>
     </form>
@@ -118,7 +119,7 @@ gtag('config', 'G-SY8NKELMNZ');
     fetch('/.netlify/functions/subscribe', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({email, tagIds: [20896609], sequenceId: 2825131 /* "Cards Free Taster — Welcome" sequence, built 13 Jul. Delivery email is a DRAFT in Kit — publish it (app.kit.com/sequences/2825131) to make email delivery live. Thank-you page already self-delivers the deck. */})
+      body: JSON.stringify({email, website: document.getElementById('cards_hp').value, tagIds: [20896609], sequenceId: 2825131 /* "Cards Free Taster — Welcome" sequence, built 13 Jul. Delivery email is a DRAFT in Kit — publish it (app.kit.com/sequences/2825131) to make email delivery live. Thank-you page already self-delivers the deck. */})
     }).catch(() => {});
 
     await new Promise(r => setTimeout(r, 600));

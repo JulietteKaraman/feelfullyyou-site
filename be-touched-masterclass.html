@@ -207,6 +207,7 @@ gtag('config', 'G-SY8NKELMNZ');
 <div class="form-wrap" id="save">
   <span class="form-label">Save your seat</span>
   <form id="mcForm" onsubmit="handleMc(event)">
+    <input type="text" name="website" id="mc_hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" />
     <input id="mc_name" type="text" placeholder="First name" required autocomplete="given-name">
     <input id="mc_email" type="email" placeholder="Email address" required autocomplete="email">
     <button type="submit" class="btn" id="mcBtn">Save my seat</button>
@@ -310,7 +311,7 @@ function handleMc(e){
     method:'POST',
     headers:{'Content-Type':'application/json'},
     /* Tag "Be Touched Masterclass — 26 Jul" (21027856) + confirmation sequence (2822605, delivers the Zoom link). */
-    body:JSON.stringify({email:email,firstName:name,tagIds:[21027856],sequenceId:2822605})
+    body:JSON.stringify({email:email,firstName:name,website:document.getElementById('mc_hp').value,tagIds:[21027856],sequenceId:2822605})
   }).finally(function(){window.location.href='/thankyou-be-touched-masterclass';});
 }
 (function(){

@@ -168,6 +168,7 @@ gtag('config', 'G-SY8NKELMNZ');
     <p class="sub">Enter your details below and your rituals land in your inbox immediately.</p>
 
     <form id="form">
+      <input type="text" name="website" id="conf_hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" />
       <label for="firstName">First name</label>
       <input type="text" id="firstName" name="firstName" placeholder="Your first name" required>
 
@@ -200,6 +201,7 @@ gtag('config', 'G-SY8NKELMNZ');
           body: JSON.stringify({
             email,
             firstName,
+            website: document.getElementById('conf_hp').value,
             tagIds: [20895627, 20794257] // confidence-magazine-reader, 10touchrituals
           })
         });

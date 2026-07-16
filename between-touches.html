@@ -181,6 +181,7 @@ gtag('config', 'G-SY8NKELMNZ');
 <div class="form-wrap">
   <span class="form-label">Where should I send it?</span>
   <form id="btForm" onsubmit="handleBt(event)">
+    <input type="text" name="website" id="bt_hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" />
     <input id="bt_name" type="text" placeholder="First name" required autocomplete="given-name">
     <input id="bt_email" type="email" placeholder="Email address" required autocomplete="email">
     <div class="form-cta">
@@ -222,7 +223,7 @@ function handleBt(e){
   fetch('/.netlify/functions/subscribe',{
     method:'POST',
     headers:{'Content-Type':'application/json'},
-    body:JSON.stringify({email:email,firstName:name,tagIds:[20896291],sequenceId:2825129 /* "Between Touches — Welcome" sequence, built 13 Jul. Delivery email is a DRAFT in Kit — publish it (app.kit.com/sequences/2825129) to make email delivery live. Thank-you page already self-delivers the PDF. */})
+    body:JSON.stringify({email:email,firstName:name,website:document.getElementById('bt_hp').value,tagIds:[20896291],sequenceId:2825129 /* "Between Touches — Welcome" sequence, built 13 Jul. Delivery email is a DRAFT in Kit — publish it (app.kit.com/sequences/2825129) to make email delivery live. Thank-you page already self-delivers the PDF. */})
   }).finally(function(){window.location.href='/thankyou-between-touches-only';});
 }
 </script>

@@ -182,6 +182,7 @@ gtag('config', 'G-SY8NKELMNZ');
 <div class="form-wrap">
   <span class="form-label">Where should I send it?</span>
   <form id="wsqForm">
+    <input type="text" name="website" id="wsq_hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" />
     <input type="text" id="wsq_name" placeholder="First name" required autocomplete="given-name">
     <input type="email" id="wsq_email" placeholder="Email address" required autocomplete="email">
     <div class="form-cta">
@@ -201,7 +202,7 @@ document.getElementById('wsqForm').addEventListener('submit', function(e) {
   fetch('/.netlify/functions/subscribe', {
     method: 'POST',
     headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({email: email, firstName: name, tagIds: [20896289], sequenceId: 2817828 /* "When She Goes Quiet" — guide delivery sends immediately, follow-ups day 3 + 7 */})
+    body: JSON.stringify({email: email, firstName: name, website: document.getElementById('wsq_hp').value, tagIds: [20896289], sequenceId: 2817828 /* "When She Goes Quiet" — guide delivery sends immediately, follow-ups day 3 + 7 */})
   }).finally(function() {
     window.location.href = '/thankyou-when-she-goes-quiet';
   });
