@@ -49,8 +49,12 @@ for f in "${files[@]}"; do
     echo "FLAG  $f — og image '$img' not found in folder (broken preview)"; flags=$((flags+1)); continue
   fi
   read -r w h < <(dims "$img")
-  if [ -n "$w" ] && [ -n "$h" ] && [ "$h" -ge "$w" ]; then
-    echo "FLAG  $f — og image '$img' is PORTRAIT ${w}x${h} (crops badly; use landscape ~1.91:1)"; flags=$((flags+1))
+  if [ -n "$w" ] && [ -n "$h" ]; then
+    if [ "$h" -ge "$w" ]; then
+      echo "FLAG  $f — og image '$img' is PORTRAIT ${w}x${h} (crops badly; use landscape ~1.91:1)"; flags=$((flags+1))
+    elif awk -v w="$w" -v h="$h" 'BEGIN{exit !(w/h < 1.5)}'; then
+      echo "FLAG  $f — og image '$img' is too SQUARE ${w}x${h} (ratio $(awk -v w="$w" -v h="$h" 'BEGIN{printf "%.2f", w/h}')); use a wider ~1.91:1 image so it fills the preview card"; flags=$((flags+1))
+    fi
   fi
 done
 
