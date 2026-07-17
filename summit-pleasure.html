@@ -219,7 +219,13 @@ gtag('config', 'G-SY8NKELMNZ');
     fetch('/.netlify/functions/subscribe', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({email, website: document.getElementById('summit_hp').value, tagIds: [21249806], sequenceId: 2830741})
+      body: JSON.stringify({
+        email,
+        website: document.getElementById('summit_hp').value,
+        tagIds: [21249806],
+        sequenceId: 2830741,
+        fields: {lead_stage: 'Warm'}
+      })
     }).catch(() => {});
 
     await new Promise(r => setTimeout(r, 600));
