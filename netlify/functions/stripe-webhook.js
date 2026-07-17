@@ -59,7 +59,15 @@ const PRODUCT_MAP = {
   'price_1TghjICCw18geY15V4AkohbE': {
     tagId: 20794281,   // "touchpoint"
     sequenceId: 2812535,  // "Touch Point" — welcome (Telegram link) + live-session reminders + nurture, fixed 7 Jul
-    label: 'Touch Point Membership £97/mo'
+    label: 'Touch Point Membership £97/mo (grandfathered)'
+  },
+  // The CURRENT Touch Point price. Added 16 Jul 2026 — it was missing, so every
+  // £197 buyer fell through to the generic "purchased" fallback instead of being
+  // tagged touchpoint. Existing members stay on the £97 price above for life.
+  'price_1TrYixCCw18geY15CL2uxb6v': {
+    tagId: 20794281,   // "touchpoint"
+    sequenceId: 2812535,  // "Touch Point"
+    label: 'Touch Point Membership £197/mo'
   },
   'price_1TnxAqCCw18geY153w22a2Ye': {
     tagId: 20794292,   // "the unspoken distance"
@@ -259,6 +267,44 @@ const PRODUCT_MAP = {
     tagId: 20912673,   // "candles-buyer"
     sequenceId: null,
     label: 'Pleasure Candle £35'
+  },
+  // ─── ADDED 16 Jul 2026 — live prices that existed in Stripe but were missing
+  // from this map, so their buyers were landing on the generic "purchased" tag.
+  'price_1Tqs53CCw18geY15u8MDw3OW': {
+    tagId: 20913133,   // "sacred-no-buyer"
+    sequenceId: null,
+    label: 'The Sacred No £27'
+  },
+  'price_1TqqjCCCw18geY15dCXrlEjD': {
+    tagId: 20794225,   // "31 daily touch points"
+    sequenceId: null,
+    label: '31 Daily Touch Points £31 (full price)'
+  },
+  'price_1TpppKCCw18geY15ZS2JxY4R': {
+    tagId: 20895627,   // "confidence-magazine-reader"
+    sequenceId: null,
+    label: 'Free — Confidence Magazine readers'
+  },
+  // Older Room prices still active in Stripe alongside the current set above.
+  'price_1TglgLCCw18geY15NHxSd4BM': {
+    tagId: 20913132,   // "the-room-member"
+    sequenceId: 2825351,
+    label: 'The Room £1,500 x 2 (legacy price)'
+  },
+  'price_1TglgLCCw18geY15kXKqpkt1': {
+    tagId: 20913132,
+    sequenceId: 2825351,
+    label: 'The Room £1,500 x 2 (legacy price)'
+  },
+  'price_1Tglg9CCw18geY151y8VmYyv': {
+    tagId: 20913132,
+    sequenceId: 2825351,
+    label: 'The Room £1,000 x 3 (legacy price)'
+  },
+  'price_1Tglg9CCw18geY15UroD3o1s': {
+    tagId: 20913132,
+    sequenceId: 2825351,
+    label: 'The Room £1,500 x 2 (legacy price)'
   }
 };
 
@@ -324,6 +370,43 @@ exports.handler = async function(event) {
     stripeEvent = JSON.parse(rawBody);
   } catch {
     return { statusCode: 400, body: 'Invalid JSON' };
+  }
+
+  // ─── SUBSCRIPTIONS (added 16 Jul 2026) ──────────────────────────────────────
+  // Subscription sign-ups and renewals do NOT arrive as checkout.session.completed
+  // with readable price metadata, so members were never getting tagged — that is why
+  // active Touch Point subscribers sat with no `touchpoint` tag. invoice.paid carries
+  // BOTH the customer email and the price, so we handle it here.
+  // Tag on every invoice (Kit tagging is idempotent), but only enrol in the welcome
+  // sequence on the FIRST invoice — never re-send the welcome on a monthly renewal.
+  //
+  // NOTE: `invoice.paid` must be enabled on the webhook endpoint in the Stripe
+  // dashboard, otherwise Stripe never delivers it here.
+  if (stripeEvent.type === 'invoice.paid') {
+    const inv = stripeEvent.data?.object;
+    const invEmail = inv?.customer_email || '';
+    const invFirstName = (inv?.customer_name || '').split(' ')[0];
+    const line = inv?.lines?.data?.[0];
+    // Stripe moved the price location between API versions — check both shapes.
+    const invPriceId = line?.price?.id || line?.pricing?.price_details?.price || '';
+    const invProduct = PRODUCT_MAP[invPriceId];
+
+    if (!invEmail) {
+      console.error('No customer_email on invoice — skipped');
+      return { statusCode: 200, body: 'No email on invoice — skipped' };
+    }
+
+    const isFirstInvoice = inv?.billing_reason === 'subscription_create';
+
+    if (!invProduct) {
+      console.log(`Unknown subscription price "${invPriceId}" for ${invEmail} — tagging as purchased`);
+      await addToKit(invEmail, invFirstName, 20794289, null, apiSecret); // "purchased"
+      return { statusCode: 200, body: JSON.stringify({ ok: true, note: 'unknown subscription price, tagged as purchased' }) };
+    }
+
+    console.log(`${invProduct.label} invoice paid (${inv?.billing_reason}) — tagging ${invEmail}`);
+    await addToKit(invEmail, invFirstName, invProduct.tagId, isFirstInvoice ? invProduct.sequenceId : null, apiSecret);
+    return { statusCode: 200, body: JSON.stringify({ ok: true, product: invProduct.label, first_invoice: isFirstInvoice }) };
   }
 
   // Only act on completed checkouts
