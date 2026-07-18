@@ -263,6 +263,8 @@
   #intro .qtag{font-family:var(--display);font-style:italic;font-weight:400;color:var(--gold-deep);font-size:clamp(1.2rem,3.4vw,1.6rem);margin-top:16px}
   #intro .qlead{color:var(--brown);font-size:1.08rem;margin-top:30px;line-height:1.6}
   #intro .qlead b{color:var(--gold-deep);font-weight:700}
+  #intro .spine{font-family:var(--display);font-style:italic;font-weight:400;color:var(--gold-deep);font-size:1.02rem;line-height:1.55;margin:16px auto 0;max-width:38ch}
+  #intro .partpill{display:inline-block;font-family:var(--body);font-weight:600;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);background:#f6edda;border:1px solid var(--gold-soft);border-radius:20px;padding:6px 16px;margin-top:16px}
   #intro .layercircles{display:flex;flex-wrap:wrap;justify-content:center;gap:22px 26px;margin:26px auto 0;max-width:470px}
   #intro .lc{display:flex;flex-direction:column;align-items:center;gap:10px;width:92px}
   #intro .ring{width:62px;height:62px;border-radius:50%;border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:600;font-size:1.3rem;color:var(--gold-deep);background:#fff;box-shadow:0 6px 18px -10px rgba(168,133,56,.6)}
@@ -300,8 +302,10 @@
       <section id="intro">
         <div class="intro-photo"></div>
         <div class="eyebrow">Free &middot; 5 minutes &middot; women, men &amp; couples</div>
+        <p class="spine">Intimacy doesn't come back through spontaneity. It comes back through structure.</p>
         <h1 class="qtitle">The Touch <span class="g">Reset</span> Quiz</h1>
         <p class="qtag">What's your Touch Stack?</p>
+        <p class="partpill">Part 1 of 4 &middot; Meet your wiring</p>
         <p class="qlead">You are not one type. You're a <b>four-layer stack</b>:</p>
         <div class="layercircles">
           <div class="lc"><div class="ring">1</div><span>Turn-on</span></div>
@@ -330,6 +334,16 @@
           <button class="aud" data-id="man">A man</button>
           <button class="aud" data-id="nb">Non-binary</button>
           <button class="aud" data-id="pref">Prefer not to say</button>
+        </div>
+      </section>
+
+      <section id="stage" style="display:none">
+        <div class="eyebrow">One more thing, before we find your stack</div>
+        <h1>Where does this feel true right now?</h1>
+        <div class="aud-opts">
+          <button class="aud" data-stage="quiet">Touch still happens. Something about it just feels flat.<span>Nothing dramatic. Just quiet.</span></button>
+          <button class="aud" data-stage="brace">The brace comes before I even decide to. A half-second, and I've already tensed.<span>My body knows before my mind does.</span></button>
+          <button class="aud" data-stage="gone">The reaching stopped a while ago. It doesn't even feel strange anymore.<span>This is just how things are now.</span></button>
         </div>
       </section>
 
@@ -448,6 +462,18 @@
     </div>
   </section>
 
+  <section class="rband dark" id="stageBand">
+    <div class="rin">
+      <div class="reyebrow" id="rStageKicker"></div>
+      <h2 class="bandhead" id="rStageName"></h2>
+      <p class="bandtext" id="rStageDesc"></p>
+      <div class="movecard" style="margin-top:24px">
+        <p class="moveline" id="rStagePart"></p>
+      </div>
+      <p class="aside" id="rStageCaution"></p>
+    </div>
+  </section>
+
   <div class="photoband" style="background-image:url('https://feelfullyyou.com/touch-sponge.jpg')"></div>
 
   <section class="rband dark">
@@ -514,6 +540,7 @@
   var LANG_TAG={Emotional:20999648,Erotic:20999649,Energetic:20999650,Physical:20999651,Spiritual:20999652};
   var ORI_TAG={Leads:20994542,Receives:20994543,Switches:20994544};
   var ID_TAG={woman:21000823,man:21000824,nb:21000825,pref:21000826};
+  var STAGE_TAG={quiet:21270730,brace:21270733,gone:21270734};
   var AUD={
     woman:{tag:20994349,line:"The Touch Reset for Women",door:"The Room",href:"/the-room",cta:"Show me The Room",
       blurb:"My 8-week live group where women come home to their own body, their own sensation, and their own yes.",
@@ -621,6 +648,22 @@
       tonight:"Tonight, name your lane before you begin. “I want to lead” or “I want to be taken.” Choosing it out loud turns your flexibility into a choice you make, not just a reflex you fall into."}
   };
 
+  var STAGE={
+    quiet:{name:"The Quiet",kicker:"Where you are right now",
+      desc:"Touch is still happening between you. Nothing dramatic has broken. But something about it has gone flat, like you're moving past each other rather than toward each other. Usually this is a mismatch: you're reaching in a language the other person can't quite receive, and neither of you knew the languages existed.",
+      part:"Your stack above is Part 1 of The Touch Reset: meet your wiring. For The Quiet, that's often enough on its own. Read it together, and let it do the work.",
+      pitchLine:"Whenever you're ready to go deeper"},
+    brace:{name:"The Brace",kicker:"Where you are right now",
+      desc:"The half-second before contact, your jaw sets, your back tightens, you already know how this goes before it's even started. Your body has learned to anticipate. This is the stage where you can look present from the outside and be somewhere else entirely on the inside.",
+      part:"Knowing your stack (Part 1) isn't enough here on its own. Structured communication comes next, Part 2: a container where you can say what's true without either of you having to fix it. Touch dates and rituals follow once that's in place.",
+      pitchLine:"Start here: structured communication first"},
+    gone:{name:"The Gone",kicker:"Where you are right now",
+      desc:"No single decision was made. Somewhere along the way your body made a quiet agreement, and nobody interrupted it in time. The distance has started to feel like the relationship itself, and there's grief underneath it, even if neither of you says the word.",
+      part:"This calls for all four parts of The Touch Reset, in order, with support: your stack, structured communication, structured touch dates, and daily rituals. It's recoverable. It's just not a one-part fix.",
+      pitchLine:"This is where all four parts meet, with support"}
+  };
+  var STAGE_CAUTION="The tool has to match the stage. A Stage 1 fix, a date night, a holiday, one good conversation, applied to a Stage 2 or 3 situation is usually what makes couples give up on each other.";
+
   /* QUESTIONS: pattern(4) H/F/A/S/C · touch language(4) · pleasure(4) · lead/receive(3) */
   var QPAT=[
     ["When someone offers to help you, your first instinct is to:",[["Wave it off. You are the one who helps.","H"],["Accept quietly, and make sure you are no trouble.","F"],["Politely decline. You have it handled.","A"],["Explain exactly what would and would not be useful.","S"],["Turn it into something warmer and bigger than the small thing offered.","C"]]],
@@ -650,9 +693,9 @@
   var TOTAL=ALL.length; // 15
   function phaseFor(idx){ if(idx<4)return"Part one · how you protect touch"; if(idx<8)return"Part two · how touch reaches you"; if(idx<12)return"Part three · how you're turned on"; return"Part four · lead or receive"; }
 
-  var i=0,answers=new Array(TOTAL).fill(null),locked=false,audience='woman',context='self',identity='woman';
+  var i=0,answers=new Array(TOTAL).fill(null),locked=false,audience='woman',context='self',identity='woman',stage='quiet';
   var $=function(id){return document.getElementById(id);};
-  var funnel=$('funnel'),intro=$('intro'),contextSec=$('context'),identitySec=$('identity'),quiz=$('quiz'),reveal=$('reveal'),resultPage=$('resultPage');
+  var funnel=$('funnel'),intro=$('intro'),contextSec=$('context'),identitySec=$('identity'),stageSec=$('stage'),quiz=$('quiz'),reveal=$('reveal'),resultPage=$('resultPage');
   function pad(n){return n<10?'0'+n:''+n;}
 
   $('begin').addEventListener('click',function(){
@@ -669,8 +712,15 @@
     b.addEventListener('click',function(){
       identity=b.getAttribute('data-id');
       audience=(context==='partner')?'couple':(identity==='woman'?'woman':(identity==='man'?'man':'self'));
-      identitySec.style.display='none';quiz.style.display='block';renderQ();
+      identitySec.style.display='none';stageSec.style.display='block';
       if(typeof gtag==='function')gtag('event','quiz_audience',{quiz:'touch_reset',audience:audience,context:context,identity:identity});
+    });
+  });
+  Array.prototype.forEach.call(document.querySelectorAll('#stage .aud'),function(b){
+    b.addEventListener('click',function(){
+      stage=b.getAttribute('data-stage');
+      stageSec.style.display='none';quiz.style.display='block';renderQ();
+      if(typeof gtag==='function')gtag('event','quiz_stage',{quiz:'touch_reset',stage:stage});
     });
   });
 
@@ -726,7 +776,7 @@
   function doReveal(){
     result=score();
     quiz.style.display='none';reveal.style.display='block';reveal.scrollIntoView({behavior:'smooth',block:'start'});
-    if(typeof gtag==='function')gtag('event','quiz_complete',{quiz:'touch_reset',pattern:result.pattern,language:result.language,pleasure:result.pleasure,orientation:result.ori,audience:audience});
+    if(typeof gtag==='function')gtag('event','quiz_complete',{quiz:'touch_reset',pattern:result.pattern,language:result.language,pleasure:result.pleasure,orientation:result.ori,audience:audience,stage:stage});
   }
 
   function fillList(el,arr,cls){el.innerHTML='';arr.forEach(function(t){var d=document.createElement('div');d.className=cls;d.textContent=t;el.appendChild(d);});}
@@ -756,7 +806,15 @@
     $('rOriEdge').textContent=o.edge;
     $('rTonight').textContent=o.tonight;
     var f=a.free;$('fTitle').textContent=f.title;$('fBlurb').textContent=f.blurb;$('fCta').textContent=f.cta;$('fCta').href=f.href;
-    $('pLine').textContent="When you're ready to go deeper";$('pDoor').textContent=a.door;$('pBlurb').textContent=a.blurb;
+    var st=STAGE[stage];
+    $('rStageKicker').textContent=st.kicker;
+    $('rStageName').textContent=st.name;
+    $('rStageDesc').textContent=st.desc;
+    $('rStagePart').textContent=st.part;
+    var cautionEl=$('rStageCaution');
+    if(stage==='brace'||stage==='gone'){cautionEl.textContent=STAGE_CAUTION;cautionEl.style.display='block';}
+    else{cautionEl.textContent='';cautionEl.style.display='none';}
+    $('pLine').textContent=st.pitchLine;$('pDoor').textContent=a.door;$('pBlurb').textContent=a.blurb;
     fillLi($('pForyou'),a.foryou);
     $('pCta').textContent=a.cta;$('pCta').href=a.href;
     $('shareBand').style.display='block';
@@ -781,8 +839,8 @@
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){msg.className='msg err';msg.textContent='Please enter a valid email.';return;}
     var btn=$('sendBtn');btn.disabled=true;btn.textContent='Revealing…';
     var audTag=(AUD[audience]||{}).tag;
-    var tags=[PATTERN_TAG[result.pattern],PLEASURE_TAG[result.pleasure],LANG_TAG[result.language],ORI_TAG[result.ori],audTag,ID_TAG[identity]].filter(function(t){return t;});
-    var stackFields={touch_pleasure:result.pleasure,touch_pattern:PATTERN[result.pattern].short,touch_language:TLANG[result.language].name.replace(' Touch',''),touch_orientation:ORI[result.ori].word.toLowerCase()};
+    var tags=[PATTERN_TAG[result.pattern],PLEASURE_TAG[result.pleasure],LANG_TAG[result.language],ORI_TAG[result.ori],audTag,ID_TAG[identity],STAGE_TAG[stage]].filter(function(t){return t;});
+    var stackFields={touch_pleasure:result.pleasure,touch_pattern:PATTERN[result.pattern].short,touch_language:TLANG[result.language].name.replace(' Touch',''),touch_orientation:ORI[result.ori].word.toLowerCase(),touch_stage:STAGE[stage].name};
     var payload=JSON.stringify({email:email,tagIds:tags,sequenceIds:[PATTERN_SEQ[result.pattern],2821695].filter(Boolean),fields:stackFields,website:$('capForm').website.value});
     function attempt(n){
       return fetch('/.netlify/functions/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:payload})
@@ -804,7 +862,7 @@
   $('restart').addEventListener('click',function(){
     i=0;answers=new Array(TOTAL).fill(null);locked=false;
     resultPage.style.display='none';funnel.style.display='flex';reveal.style.display='none';
-    contextSec.style.display='none';identitySec.style.display='none';
+    contextSec.style.display='none';identitySec.style.display='none';stageSec.style.display='none';
     $('capForm').style.display='block';$('capForm').reset();$('msg').textContent='';
     $('sendBtn').disabled=false;$('sendBtn').textContent='Reveal my stack';
     intro.style.display='block';window.scrollTo(0,0);
