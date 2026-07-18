@@ -233,7 +233,7 @@
   <url><loc>https://feelfullyyou.com/privacy</loc></url>
   <url>
     <loc>https://feelfullyyou.com/essays/</loc>
-    <lastmod>2026-07-07</lastmod>
+    <lastmod>2026-07-18</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -308,8 +308,13 @@
   </url>
   <url>
     <loc>https://feelfullyyou.com/podcast/</loc>
-    <lastmod>2026-07-07</lastmod>
+    <lastmod>2026-07-18</lastmod>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://feelfullyyou.com/podcast/s2-ep34-why-can-i-feel-it-with-someone-else-but-not-the-man-i-love</loc>
+    <lastmod>2026-07-17</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://feelfullyyou.com/podcast/s2-ep33-the-moment-my-body-knew-my-marriage-was-over-with-juliette</loc>
@@ -1084,6 +1089,11 @@
   <url>
     <loc>https://feelfullyyou.com/essays/when-the-air-has-changed</loc>
     <lastmod>2026-07-08</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://feelfullyyou.com/essays/what-i-witnessed-in-lebanon</loc>
+    <lastmod>2026-07-15</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
