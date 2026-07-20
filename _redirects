@@ -8,9 +8,9 @@
 /the-beginning                  /the-beginning.html             200
 /couples-intensive              /couples-intensive.html         200
 /womens-intensive               /womens-intensive.html          200
-/womens-six-week-intensive      /womens-six-week-intensive.html 200
+/womens-six-week-intensive      /the-2-month-intensive          301
 /mens-intensive                 /mens-intensive.html            200
-/mens-six-week-intensive        /mens-six-week-intensive.html   200
+/mens-six-week-intensive        /the-2-month-intensive          301
 /the-unspoken-distance          /the-unspoken-distance.html     200
 /10-touch-rituals               /10-touch-rituals.html          200
 /31-daily-touch-points          /31-daily-touch-points.html     200
@@ -74,7 +74,7 @@
 /payment-4108                   https://shop.feelfullyyou.com/payment-4108                   301
 /payment-2838                   https://shop.feelfullyyou.com/payment-2838                   301
 /payment-6weeks                 https://shop.feelfullyyou.com/payment-6weeks                 301
-/payment-6weeks-5194            /mens-six-week-intensive        301
+/payment-6weeks-5194            /the-2-month-intensive          301
 /7-day-no-challenge             /sacred-no                      301
 /the-romantic-relationship-repair-kit-177535 /romantic-relationship-repair-kit 301
 /couples-intensive785342        https://shop.feelfullyyou.com/couples-intensive785342        301
@@ -112,8 +112,6 @@
 
 /the-2-month-intensive          /the-2-month-intensive.html     200
 /2-month-intensive              /the-2-month-intensive          301
-/womens-six-week-intensive      /the-2-month-intensive          301
-/mens-six-week-intensive        /the-2-month-intensive          301
 
 # 404 fallback
 /*                              /404.html                       404
