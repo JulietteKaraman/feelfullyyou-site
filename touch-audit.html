@@ -306,8 +306,9 @@
         if(typeof gtag==='function')gtag('event','apply_submit',{form:'touch_audit'});
       })
       .catch(function(){
-        next.disabled=false;next.textContent='Submit application';
-        hint.textContent='Something went wrong sending your application. Please try again.';
+        // Never trap the applicant behind a submission hiccup: send them on to book the call.
+        form.classList.add('hidden');done.style.display='block';window.scrollTo(0,0);
+        if(typeof gtag==='function')gtag('event','apply_submit',{form:'touch_audit',fallback:true});
       });
   }
 })();

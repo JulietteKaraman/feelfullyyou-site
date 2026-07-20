@@ -94,8 +94,8 @@
 /be-touched                     https://findthetouch.live/      301
 /terms                          /terms.html                     200
 /pleasure-languages             /pleasure-languages.html        200
-/apply                          https://tidycal.com/juliette2/in-touch-audit    302!
-/touch-audit                    https://tidycal.com/juliette2/in-touch-audit    302!
+/apply                          /touch-audit.html               200
+/touch-audit                    /touch-audit.html               200
 /the-room-members               /the-room-members.html          200
 /room-members                   /the-room-members.html          200
 /sacred-no-quiz                 /sacred-no-quiz.html            200
