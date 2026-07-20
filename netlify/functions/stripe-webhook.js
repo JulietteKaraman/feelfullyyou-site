@@ -48,12 +48,12 @@ const PRODUCT_MAP = {
   },
   'price_1TlpvDCCw18geY15wlpzVg4f': {
     tagId: 20794225,   // "31 daily touch points"
-    sequenceId: null,  // seq 2817543 is a PLACEHOLDER ("Write a compelling subject...") — wire when real emails pasted
+    sequenceId: 2817543,  // "31 Daily Touch Points" delivery (subject fixed + wired 18 Jul 2026)
     label: '31 Daily Touch Points £19 (tripwire)'
   },
   'price_1TiBhLCCw18geY15dLECqNFr': {
     tagId: 20794225,   // "31 daily touch points"
-    sequenceId: null,  // seq 2817543 is a PLACEHOLDER — wire when real emails pasted
+    sequenceId: 2817543,  // "31 Daily Touch Points" delivery, wired 18 Jul 2026
     label: '31 Daily Touch Points £27 (standalone)'
   },
   'price_1TghjICCw18geY15V4AkohbE': {
@@ -277,7 +277,7 @@ const PRODUCT_MAP = {
   },
   'price_1TqqjCCCw18geY15dCXrlEjD': {
     tagId: 20794225,   // "31 daily touch points"
-    sequenceId: null,
+    sequenceId: 2817543,  // "31 Daily Touch Points" delivery, wired 18 Jul 2026
     label: '31 Daily Touch Points £31 (full price)'
   },
   'price_1TpppKCCw18geY15ZS2JxY4R': {
