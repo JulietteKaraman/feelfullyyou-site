@@ -114,5 +114,27 @@
 /the-2-month-intensive          /the-2-month-intensive.html     200
 /2-month-intensive              /the-2-month-intensive          301
 
+# AI-visibility Touch hub (pretty URLs -> files, match page canonicals)
+/touch                          /touch-hub.html                 200
+/touch-that-lands               /touch-that-lands.html          200
+/touch-base                     /touch-base.html                200
+/structured-touch               /structured-touch.html          200
+/safety-and-intimacy            /safety.html                    200
+/touch-reset                    /touch-reset.html               200
+/why-we-stop-touching           /why-touch-stops.html           200
+/what-her-body-is-telling-you   /what-her-body-is-telling-you.html 200
+/intimacy-after-trauma          /intimacy-after-trauma.html     200
+/touch-languages/emotional      /tl-emotional.html              200
+/touch-languages/energetic      /tl-energetic.html              200
+/touch-languages/erotic         /tl-erotic.html                 200
+/touch-languages/physical       /tl-physical.html               200
+/touch-languages/spiritual      /tl-spiritual.html              200
+/touch-states                   /tl-touch-states.html           200
+/structured-intimacy            /structured-intimacy.html       200
+/structured-touch-dates         /structured-touch-dates.html    200
+/structured-communication       /structured-communication.html  200
+/structured-time-limit          /structured-time-limit.html     200
+/stages-of-touch                /stages-of-touch.html           200
+
 # 404 fallback
 /*                              /404.html                       404
