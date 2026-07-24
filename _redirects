@@ -138,6 +138,7 @@
 /structured-time-limit          /structured-time-limit.html     200
 /stages-of-touch                /stages-of-touch.html           200
 /press                          /press.html                     200
+/essays                         /essays.html                    200
 
 # 404 fallback
 /*                              /404.html                       404
