@@ -85,6 +85,8 @@
 
   /* HERO */
   .hero-intro{padding:118px 28px 60px;background:var(--teal);text-align:center}
+  .hero-cover{width:100%;max-width:320px;margin:0 auto 30px;border:1px solid var(--line-dark);border-radius:8px;box-shadow:0 22px 60px rgba(0,0,0,.34);display:block}
+  @media(max-width:600px){.hero-cover{max-width:240px;margin-bottom:24px}}
   .hero-intro .hi-eyebrow{font-family:var(--body);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-pale);font-weight:600;margin-bottom:18px}
   .hero-intro h1{font-size:clamp(30px,6vw,58px);color:var(--cream);max-width:16ch;margin:0 auto 8px;line-height:1.08}
   .hero-intro h1 .gp{color:var(--gold-pale)}
@@ -163,6 +165,7 @@
 </nav>
 
 <header class="hero-intro">
+  <img class="hero-cover" src="scrumptious-woman-cover.jpg" alt="The Scrumptious Woman podcast with Juliette Karaman" width="600" height="600">
   <div class="hi-eyebrow">The Podcast</div>
   <h1>The <span class="gp">Scrumptious</span> Woman</h1>
   <div class="reg">A Feel Fully You Podcast</div>

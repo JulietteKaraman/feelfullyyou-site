@@ -6,7 +6,9 @@
 <title>What the Body Knows: Essays | Juliette Karaman</title>
 <meta name="description" content="The index of every published essay from What the Body Knows, Juliette Karaman's Substack. Two streams: the personal writing and the methodology. Each essay links out to read in full.">
 <link rel="canonical" href="https://feelfullyyou.com/essays">
-<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <script type="application/ld+json">
@@ -62,47 +64,62 @@
 }
 </script>
 <style>
-  :root{--cream:#FAF8F5;--dark:#1C1A18;--warm:#8B6F5E;--soft:#C4A898;--light:#F0EBE6;--text:#2E2926;--muted:#7A6B63;}
+  :root{
+    --cream:#fefcfa;--cream-2:#f6f4f1;--paper:#fdfbf8;--ink:#1c1714;--brown:#5d4a33;
+    --gold:#a88538;--gold-deep:#99680c;--gold-soft:#b4a074;--gold-pale:#ddc98e;
+    --teal:#0d3535;--teal-deep:#061a1a;--line:#e3dccf;--line-dark:#1d3a39;--max:1080px;
+    --display:'Poppins',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;
+  }
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-  html{font-size:18px;}
-  body{background:var(--cream);color:var(--text);font-family:'Georgia',serif;line-height:1.7;}
-  a{color:var(--warm);text-decoration:none;}
-  a:hover{text-decoration:underline;}
-  nav{background:var(--dark);padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
-  nav .logo{color:var(--cream);font-size:0.85rem;letter-spacing:0.15em;text-transform:uppercase;}
-  nav .logo span{color:var(--soft);}
-  nav ul{list-style:none;display:flex;gap:1.5rem;flex-wrap:wrap;}
-  nav ul a{color:rgba(250,248,245,0.75);font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;}
-  nav ul a:hover{color:var(--soft);text-decoration:none;}
-  .hero{background:var(--dark);color:var(--cream);padding:5rem 2rem 4rem;text-align:center;}
-  .hero .eyebrow{font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--soft);margin-bottom:1.5rem;}
-  .hero h1{font-size:clamp(2rem,5vw,3.8rem);font-weight:normal;line-height:1.2;max-width:820px;margin:0 auto 1.5rem;}
-  .hero h1 em{color:var(--soft);font-style:italic;}
-  .hero p{font-size:1.05rem;color:rgba(250,248,245,0.78);max-width:640px;margin:0 auto;}
-  .section{padding:4rem 2rem;}
-  .section-inner{max-width:1080px;margin:0 auto;}
-  .section.alt{background:var(--light);}
-  .label{font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--warm);margin-bottom:0.75rem;display:block;}
-  h2{font-size:clamp(1.3rem,2.8vw,1.9rem);font-weight:normal;margin-bottom:2rem;color:var(--dark);}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.2rem;}
-  .card{background:var(--cream);padding:1.8rem;border-left:3px solid var(--soft);}
-  .section.alt .card{background:white;}
-  .card h3{font-size:1.02rem;font-weight:normal;color:var(--dark);margin-bottom:0.5rem;line-height:1.4;}
-  .card h3 a{color:var(--dark);}
-  .card h3 a:hover{color:var(--warm);text-decoration:none;}
-  .card p{font-size:0.88rem;color:var(--muted);margin-bottom:0.75rem;line-height:1.6;}
-  .card .read{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--warm);}
-  .card .rel{display:block;margin-top:0.6rem;font-size:0.72rem;letter-spacing:0.06em;color:var(--muted);}
-  .card .rel a{color:var(--warm);}
-  .startcard{max-width:1080px;margin:0 auto;background:var(--light);padding:1.6rem 1.8rem;border-left:3px solid var(--warm);}
-  .startcard .label{margin-bottom:0.4rem;}
-  .startcard h3{font-size:1.05rem;font-weight:normal;color:var(--dark);margin-bottom:0.4rem;line-height:1.4;}
-  .startcard p{font-size:0.9rem;color:var(--muted);margin-bottom:0.6rem;}
-  .startcard .read{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--warm);}
-  footer{background:var(--dark);color:rgba(250,248,245,0.6);padding:3rem 2rem;text-align:center;font-size:0.82rem;line-height:2;}
-  footer a{color:var(--soft);}
-  footer .ft-name{color:var(--cream);font-size:0.9rem;margin-bottom:0.5rem;}
-  @media(max-width:600px){.hero{padding:3.5rem 1.5rem 3rem;}}
+  html{scroll-behavior:smooth;}
+  body{background:var(--cream);color:var(--brown);font-family:var(--body);font-size:1.0625rem;line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden;letter-spacing:-.003em;}
+  ::selection{background:var(--gold);color:#fff;}
+  a{color:inherit;text-decoration:none;}
+  a:hover{color:var(--gold-deep);}
+  img{max-width:100%;height:auto;display:block;}
+  h1,h2,h3{font-family:var(--display);color:var(--ink);}
+
+  nav{background:var(--teal);padding:0 28px;height:64px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+  nav .logo{font-family:var(--display);color:var(--cream);font-size:16px;font-weight:700;letter-spacing:.02em;}
+  nav .logo span{color:var(--gold-pale);font-weight:600;}
+  nav ul{list-style:none;display:flex;gap:26px;align-items:center;flex-wrap:wrap;}
+  nav ul a{color:var(--cream);font-size:14px;font-weight:500;transition:color .2s;}
+  nav ul a:hover{color:var(--gold-pale);}
+  @media(max-width:640px){nav{height:auto;padding:14px 20px;}nav ul{gap:16px;}}
+
+  .hero{background:var(--teal);color:var(--cream);padding:96px 28px 72px;text-align:center;}
+  .hero-cover{max-width:560px;width:100%;margin:0 auto 34px;border:1px solid var(--line-dark);border-radius:6px;box-shadow:0 22px 60px rgba(0,0,0,.34);}
+  .hero .eyebrow{font-family:var(--body);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-pale);font-weight:600;margin-bottom:20px;}
+  .hero h1{font-size:clamp(2rem,5vw,3.4rem);font-weight:700;line-height:1.08;letter-spacing:-.022em;color:var(--cream);max-width:820px;margin:0 auto 20px;}
+  .hero h1 em{color:var(--gold-pale);font-style:italic;}
+  .hero p{font-size:clamp(15px,2vw,18px);color:rgba(254,252,250,.82);max-width:640px;margin:0 auto;line-height:1.6;}
+
+  .section{padding:72px 28px;}
+  .section-inner{max-width:var(--max);margin:0 auto;}
+  .section.alt{background:var(--cream-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .label{font-family:var(--body);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:12px;display:block;}
+  h2{font-size:clamp(1.6rem,3.6vw,2.3rem);font-weight:700;letter-spacing:-.02em;line-height:1.1;margin-bottom:32px;color:var(--ink);}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;}
+  .card{background:var(--paper);padding:24px 26px;border:1px solid var(--line);border-left:3px solid var(--gold-soft);border-radius:2px;}
+  .section.alt .card{background:#fff;}
+  .card h3{font-family:var(--display);font-size:1.05rem;font-weight:600;color:var(--ink);margin-bottom:8px;line-height:1.3;}
+  .card h3 a{color:var(--ink);}
+  .card h3 a:hover{color:var(--gold-deep);}
+  .card p{font-family:var(--body);font-size:0.92rem;color:var(--brown);margin-bottom:14px;line-height:1.55;}
+  .card .read{font-family:var(--body);font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--gold-deep);}
+  .card .read:hover{color:var(--gold);}
+  .card .rel{display:block;margin-top:12px;font-family:var(--body);font-size:12px;letter-spacing:.04em;color:var(--brown);}
+  .card .rel a{color:var(--gold-deep);font-weight:600;}
+  .startcard{max-width:var(--max);margin:0 auto;background:var(--cream-2);padding:24px 26px;border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:2px;}
+  .startcard .label{margin-bottom:8px;}
+  .startcard h3{font-family:var(--display);font-size:1.1rem;font-weight:600;color:var(--ink);margin-bottom:8px;line-height:1.35;}
+  .startcard p{font-family:var(--body);font-size:0.94rem;color:var(--brown);margin-bottom:12px;}
+  .startcard .read{font-family:var(--body);font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--gold-deep);}
+  footer{background:var(--teal);color:rgba(254,252,250,.7);padding:48px 28px;text-align:center;font-size:0.82rem;line-height:2;}
+  footer a{color:var(--gold-pale);}
+  footer a:hover{color:var(--cream);}
+  footer .ft-name{font-family:var(--display);color:var(--cream);font-size:0.95rem;font-weight:700;margin-bottom:0.5rem;}
+  @media(max-width:600px){.hero{padding:64px 20px 52px;}.section{padding:52px 20px;}}
 </style>
 </head>
 <body>
@@ -118,6 +135,7 @@
 </nav>
 
 <section class="hero">
+  <img class="hero-cover" src="whatthebodyknows-cover.png" alt="What the Body Knows, essays by Juliette Karaman" width="1200" height="628">
   <p class="eyebrow">Juliette Karaman · What the Body Knows · Feel Fully You</p>
   <h1>The essays behind the work. What the body knows, written <em>long-form</em>.</h1>
   <p>This is the index of every published essay from What the Body Knows, Juliette's Substack. Two streams run through it: the personal writing, and the methodology. Each one links out to read in full.</p>
