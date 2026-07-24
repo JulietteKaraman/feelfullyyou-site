@@ -15,7 +15,7 @@
     + "#trq-pop a.trq-cta:hover{background:#0a2a2a}\n"
     + "#trq-pop .trq-dismiss{display:block;margin:14px auto 0;background:none;border:none;color:#99680C;font-size:.8rem;text-decoration:underline;cursor:pointer;font-family:'Inter',system-ui,sans-serif}\n";
 
-  var EXCLUDED = ['/touch-reset-quiz', '/touch-languages-quiz', '/links', '/404'];
+  var EXCLUDED = ['/touch-reset-quiz', '/touch-languages-quiz', '/links', '/404', '/connect-with-essence'];
   var path = window.location.pathname.replace(/\/$/, '').replace(/\.html$/, '');
   for (var i = 0; i < EXCLUDED.length; i++) {
     if (path === EXCLUDED[i] || path === '') { if (path === '') break; return; }
