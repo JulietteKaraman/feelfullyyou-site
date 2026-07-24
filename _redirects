@@ -140,6 +140,10 @@
 /press                          /press.html                     200
 /essays                         /essays.html                    200
 /podcast                        /podcast.html                   200
+/intimacy-into-pleasure         /podcast-intimacy-into-pleasure.html    200
+/power-of-presence              /podcast-power-of-presence.html         200
+/the-moment-my-body-knew        /podcast-the-moment-my-body-knew.html   200
+/feel-it-with-someone-else      /podcast-feel-it-with-someone-else.html 200
 
 # 404 fallback
 /*                              /404.html                       404
