@@ -107,6 +107,8 @@
 /members                        /members.html                   200
 /membership                     /members.html                   200
 
+/confidence                     /confidence.html                200
+
 # Podcast show-notes links (Buzzsprout points here)
 /pick-a-card                    https://couplecards.netlify.app  302
 /touch-o-meter                  /touch-reset-quiz               301
@@ -135,6 +137,7 @@
 /structured-communication       /structured-communication.html  200
 /structured-time-limit          /structured-time-limit.html     200
 /stages-of-touch                /stages-of-touch.html           200
+/press                          /press.html                     200
 
 # 404 fallback
 /*                              /404.html                       404
