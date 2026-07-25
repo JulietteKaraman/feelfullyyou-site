@@ -44,7 +44,7 @@ nav ul a:hover { color: var(--soft); text-decoration: none; }
 .callout { background: var(--dark); color: var(--cream); padding: 2.5rem; margin: 3rem 0; }
 .callout p { color: rgba(250,248,245,0.85); margin-bottom: 0.75rem; font-size: 0.95rem; }
 .callout p:last-child { margin-bottom: 0; }
-.callout strong { color: var(--soft); }
+.article .callout strong, .callout strong { color: var(--soft); }
 
 .related { background: var(--light); padding: 4rem 2rem; }
 .related-inner { max-width: 720px; margin: 0 auto; }
