@@ -29,6 +29,11 @@ function verifyStripeSignature(rawBody, sigHeader, secret) {
 
 const KIT_V4 = 'https://api.kit.com/v4';
 
+// Applied to EVERY purchase on top of the product tag, so "who has paid" is one
+// clean tag + custom field instead of 20-plus separate buyer tags. Backfilled once
+// for existing buyers; from here it stays current automatically.
+const BUYER_TAG_ID = 21472382;   // "Buyer"
+
 // ─── PRODUCT MAP ─────────────────────────────────────────────────────────────
 // Map Stripe price_id → Kit tag ID + sequence ID
 //
@@ -315,11 +320,11 @@ async function addToKit(email, firstName, tagId, sequenceId, apiKey) {
     'Accept': 'application/json'
   };
 
-  // 1. Ensure subscriber exists
+  // 1. Ensure subscriber exists + stamp lead stage as Buyer (top of the CRM ladder)
   await fetch(`${KIT_V4}/subscribers`, {
     method: 'POST',
     headers,
-    body: JSON.stringify({ email_address: email, first_name: firstName || '' })
+    body: JSON.stringify({ email_address: email, first_name: firstName || '', fields: { lead_stage: 'Buyer' } })
   });
 
   // 2. Apply product tag
@@ -330,6 +335,13 @@ async function addToKit(email, firstName, tagId, sequenceId, apiKey) {
       body: JSON.stringify({ email_address: email })
     });
   }
+
+  // 2b. Apply the rolled-up Buyer tag on every purchase (product tag stays too)
+  await fetch(`${KIT_V4}/tags/${BUYER_TAG_ID}/subscribers`, {
+    method: 'POST',
+    headers,
+    body: JSON.stringify({ email_address: email })
+  });
 
   // 3. Enrol in welcome sequence
   if (sequenceId) {
