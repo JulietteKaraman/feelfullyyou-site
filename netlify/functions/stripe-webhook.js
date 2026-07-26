@@ -290,6 +290,21 @@ const PRODUCT_MAP = {
     sequenceId: null,
     label: 'Free — Confidence Magazine readers'
   },
+  // ─── THE ROOM SPECIAL PRICE £2,000 (until 2 Aug 2026) — no discount code, fixed-price ─
+  // Pay-in-full (one-time): tags via checkout.session.completed, so the payment link MUST
+  // have metadata.price_id set to this id, otherwise it falls through to "purchased".
+  'price_1Tw2JzCCw18geY157VQof2ka': {
+    tagId: 20913132,   // "the-room-member"
+    sequenceId: 2825351,  // "The Room — Welcome"
+    label: 'The Room £2,000 SPECIAL (pay in full, until 2 Aug)'
+  },
+  // Split 2 x £1,000 (subscription): tags via invoice.paid, which reads the price off the
+  // invoice line directly, so this works with or without link metadata. Guard caps at 2.
+  'price_1Tw2K3CCw18geY15qSzUUHar': {
+    tagId: 20913132,   // "the-room-member"
+    sequenceId: 2825351,  // "The Room — Welcome"
+    label: 'The Room £2,000 SPECIAL (2 x £1,000 split, until 2 Aug)'
+  },
   // Older Room prices still active in Stripe alongside the current set above.
   'price_1TglgLCCw18geY15NHxSd4BM': {
     tagId: 20913132,   // "the-room-member"
@@ -313,18 +328,22 @@ const PRODUCT_MAP = {
   }
 };
 
-async function addToKit(email, firstName, tagId, sequenceId, apiKey) {
+async function addToKit(email, firstName, tagId, sequenceId, apiKey, phone) {
   const headers = {
     'X-Kit-Api-Key': apiKey,
     'Content-Type': 'application/json',
     'Accept': 'application/json'
   };
 
-  // 1. Ensure subscriber exists + stamp lead stage as Buyer (top of the CRM ladder)
+  // 1. Ensure subscriber exists + stamp lead stage as Buyer (top of the CRM ladder).
+  // Phone (collected at Stripe checkout) is written to the Kit "phone" custom field
+  // when present — never blanked when absent, so a renewal without phone can't wipe it.
+  const fields = { lead_stage: 'Buyer' };
+  if (phone) fields.phone = phone;
   await fetch(`${KIT_V4}/subscribers`, {
     method: 'POST',
     headers,
-    body: JSON.stringify({ email_address: email, first_name: firstName || '', fields: { lead_stage: 'Buyer' } })
+    body: JSON.stringify({ email_address: email, first_name: firstName || '', fields })
   });
 
   // 2. Apply product tag
@@ -398,6 +417,7 @@ exports.handler = async function(event) {
     const inv = stripeEvent.data?.object;
     const invEmail = inv?.customer_email || '';
     const invFirstName = (inv?.customer_name || '').split(' ')[0];
+    const invPhone = inv?.customer_phone || '';
     const line = inv?.lines?.data?.[0];
     // Stripe moved the price location between API versions — check both shapes.
     const invPriceId = line?.price?.id || line?.pricing?.price_details?.price || '';
@@ -412,12 +432,12 @@ exports.handler = async function(event) {
 
     if (!invProduct) {
       console.log(`Unknown subscription price "${invPriceId}" for ${invEmail} — tagging as purchased`);
-      await addToKit(invEmail, invFirstName, 20794289, null, apiSecret); // "purchased"
+      await addToKit(invEmail, invFirstName, 20794289, null, apiSecret, invPhone); // "purchased"
       return { statusCode: 200, body: JSON.stringify({ ok: true, note: 'unknown subscription price, tagged as purchased' }) };
     }
 
     console.log(`${invProduct.label} invoice paid (${inv?.billing_reason}) — tagging ${invEmail}`);
-    await addToKit(invEmail, invFirstName, invProduct.tagId, isFirstInvoice ? invProduct.sequenceId : null, apiSecret);
+    await addToKit(invEmail, invFirstName, invProduct.tagId, isFirstInvoice ? invProduct.sequenceId : null, apiSecret, invPhone);
     return { statusCode: 200, body: JSON.stringify({ ok: true, product: invProduct.label, first_invoice: isFirstInvoice }) };
   }
 
@@ -429,6 +449,7 @@ exports.handler = async function(event) {
   const session = stripeEvent.data?.object;
   const email = session?.customer_details?.email || '';
   const firstName = (session?.customer_details?.name || '').split(' ')[0];
+  const phone = session?.customer_details?.phone || '';
 
   if (!email) {
     console.error('No email in Stripe webhook payload');
@@ -441,7 +462,7 @@ exports.handler = async function(event) {
 
   if (product) {
     console.log(`${product.label} purchase — adding ${email} to Kit`);
-    await addToKit(email, firstName, product.tagId, product.sequenceId, apiSecret);
+    await addToKit(email, firstName, product.tagId, product.sequenceId, apiSecret, phone);
     return { statusCode: 200, body: JSON.stringify({ ok: true, product: product.label }) };
   }
 
@@ -458,12 +479,12 @@ exports.handler = async function(event) {
   const amountMatch = session?.currency === 'gbp' ? AMOUNT_MAP[session?.amount_total] : null;
   if (amountMatch) {
     console.log(`${amountMatch.label} — adding ${email} to Kit`);
-    await addToKit(email, firstName, amountMatch.tagId, null, apiSecret);
+    await addToKit(email, firstName, amountMatch.tagId, null, apiSecret, phone);
     return { statusCode: 200, body: JSON.stringify({ ok: true, product: amountMatch.label }) };
   }
 
   // Fallback: tag as unknown purchaser so nobody is lost
   console.log(`Unknown price_id "${priceId}" for ${email} — tagging as purchased`);
-  await addToKit(email, firstName, 20794289, null, apiSecret); // "purchased" tag
+  await addToKit(email, firstName, 20794289, null, apiSecret, phone); // "purchased" tag
   return { statusCode: 200, body: JSON.stringify({ ok: true, note: 'unknown product, tagged as purchased' }) };
 };
