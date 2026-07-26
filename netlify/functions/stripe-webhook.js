@@ -305,6 +305,22 @@ const PRODUCT_MAP = {
     sequenceId: 2825351,  // "The Room — Welcome"
     label: 'The Room £2,000 SPECIAL (2 x £1,000 split, until 2 Aug)'
   },
+  // ─── THE ROOM: HELD (VIP) SPECIAL £4,000 (until 2 Aug 2026) — no discount code ─
+  // Both one-time links: tag via checkout.session.completed. Each payment link has
+  // metadata.price_id set to its own price id (set 26 Jul in the dashboard).
+  // £4,000 pay in full → https://buy.stripe.com/4gM8w07m391671H32B0co1F
+  'price_1TxS3jCCw18geY15uf5hUeNy': {
+    tagId: 20913132,   // "the-room-member"
+    sequenceId: 2825351,  // "The Room — Welcome"
+    label: 'The Room: Held (VIP) £4,000 SPECIAL (pay in full, until 2 Aug)'
+  },
+  // £1,500 deposit (one-time). Balance £2,500 sent as a separate invoice for month 2.
+  // → https://buy.stripe.com/00w28q2lJ0uAbhXbz70co1G
+  'price_1TxS9KCCw18geY15Xejq8vzw': {
+    tagId: 20913132,   // "the-room-member"
+    sequenceId: 2825351,  // "The Room — Welcome"
+    label: 'The Room: Held (VIP) £1,500 deposit SPECIAL (until 2 Aug; £2,500 balance invoiced)'
+  },
   // Older Room prices still active in Stripe alongside the current set above.
   'price_1TglgLCCw18geY15NHxSd4BM': {
     tagId: 20913132,   // "the-room-member"
