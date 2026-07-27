@@ -356,22 +356,7 @@
         <button class="qback" id="back" hidden>go back</button>
       </section>
 
-      <section id="reveal">
-        <div class="kicker">Your stack is ready</div>
-        <h1>Where shall I send it?</h1>
-        <p class="sub">All four layers, what turns you on, what shuts you down, and your first move to make tonight.</p>
-        <div class="divider"></div>
-        <p class="tease">It all opens on the next screen, and lands in your inbox to keep.</p>
-        <form class="capture" id="capForm" autocomplete="on">
-          <label for="email">Your email</label>
-          <p class="sublabel">One step, and your full stack opens here. A more in-depth report, the deeper read on your pattern and your practices, lands in your inbox.</p>
-          <input type="email" id="email" name="email" placeholder="you@email.com" required>
-          <input type="text" class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <button type="submit" class="btn block pulse" id="sendBtn">Reveal my stack</button>
-          <p class="consent">Your reading, then my letters on touch, intimacy and coming back to your body. Leave any time.</p>
-          <div class="msg" id="msg"></div>
-        </form>
-      </section>
+      <section id="reveal" style="display:none"></section>
 
     </div>
   </div>
@@ -392,8 +377,37 @@
         <div class="srow"><span class="slabel">In touch, you</span><span class="sval" id="sOri"></span></div>
       </div>
       <p class="idaffirm">None of it is a flaw. It is a set of brilliant adaptations, and every one of them can soften.</p>
-      <div class="inbox"><span>&#9993;</span><span>Your <b>in-depth report</b> is on its way to your inbox: the deeper read on the layer running your whole stack, plus your full set of practices. If it's not there in a few minutes, check spam or promotions.</span></div>
-      <div class="scrollcue">Your layers, one by one &darr;</div>
+      <div class="inbox"><span>&#9993;</span><span>Your full stack is right here, no email needed. Want the <b>in-depth report</b> too, the deeper read on the layer running your whole stack plus your full set of practices? Grab it a little further down.</span></div>
+      <div class="scrollcue">First, one thing to do right now &darr;</div>
+    </div>
+  </section>
+
+  <section class="rband dark" id="videoBand">
+    <div class="rin" style="text-align:center">
+      <div class="reyebrow" style="justify-content:center">Do this now</div>
+      <h2 class="bandhead">Your two-minute touch</h2>
+      <p class="bandtext" style="margin:0 auto 22px;max-width:44ch">Before you read another word, do this with me. Two minutes, your own hands. This is where it starts to land in the body, not only the head.</p>
+      <div style="max-width:300px;margin:0 auto;aspect-ratio:9/16;border-radius:14px;overflow:hidden;box-shadow:0 18px 44px -22px rgba(0,0,0,.55);background:#000">
+        <iframe src="https://player.vimeo.com/video/1213257476" style="width:100%;height:100%;border:0;display:block" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" referrerpolicy="strict-origin-when-cross-origin" title="Your two-minute touch"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="rband green" id="reportBand">
+    <div class="rin" style="text-align:center">
+      <div class="reyebrow" style="justify-content:center">Your in-depth report</div>
+      <h2 class="bandhead">Want the deeper read?</h2>
+      <p class="bandtext" style="margin:0 auto 18px;max-width:46ch">The full read on the layer running your whole stack, plus your complete set of practices, sent to your inbox to keep.</p>
+      <form class="capture" id="capForm" autocomplete="on" style="max-width:420px;margin:0 auto;text-align:left">
+        <input type="email" id="email" name="email" placeholder="you@email.com" required>
+        <input type="text" class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button type="submit" class="btn block pulse" id="sendBtn">Send me the full report</button>
+        <p class="consent">Your reading, then my letters on touch, intimacy and coming back to your body. Leave any time.</p>
+        <div class="msg" id="msg"></div>
+      </form>
+      <div id="reportSent" style="display:none">
+        <div class="big">On its way. Check your inbox.</div>
+      </div>
     </div>
   </section>
 
@@ -506,10 +520,6 @@
         <p class="blurb" id="pBlurb"></p>
         <div class="foryou"><div class="fyh">This is for you if&hellip;</div><ul id="pForyou"></ul></div>
         <a class="btn pulse" id="pCta" href="#">Show me</a>
-      </div>
-      <div id="success">
-        <div class="big">Your fuller report is on its way by email.</div>
-        <p>The deeper read on your pattern, and your full set of practices, is landing in your inbox now. Read it slowly, somewhere you won't be interrupted.</p>
       </div>
       <div class="again"><button id="restart">start again</button></div>
     </div>
@@ -775,7 +785,9 @@
 
   function doReveal(){
     result=score();
-    quiz.style.display='none';reveal.style.display='block';reveal.scrollIntoView({behavior:'smooth',block:'start'});
+    try{paintResult();}catch(e){}
+    quiz.style.display='none';funnel.style.display='none';
+    resultPage.style.display='block';window.scrollTo(0,0);revealBands();
     if(typeof gtag==='function')gtag('event','quiz_complete',{quiz:'touch_reset',pattern:result.pattern,language:result.language,pleasure:result.pleasure,orientation:result.ori,audience:audience,stage:stage});
   }
 
@@ -849,12 +861,11 @@
         .catch(function(err){if(n>0){return new Promise(function(res){setTimeout(res,1400);}).then(function(){return attempt(n-1);});}throw err;});
     }
     attempt(1).then(function(){
-      try{paintResult();}catch(e){}
-      funnel.style.display='none';resultPage.style.display='block';
-      window.scrollTo(0,0);revealBands();
+      var form=$('capForm');if(form)form.style.display='none';
+      var sent=$('reportSent');if(sent)sent.style.display='block';
       if(typeof gtag==='function')gtag('event','quiz_optin',{quiz:'touch_reset',pattern:result.pattern,language:result.language,pleasure:result.pleasure,orientation:result.ori,audience:audience});
     }).catch(function(){
-      btn.disabled=false;btn.textContent='Reveal my stack';
+      btn.disabled=false;btn.textContent='Send me the full report';
       msg.className='msg err';msg.textContent='Something went wrong. Please try again.';
     });
   });
@@ -863,8 +874,9 @@
     i=0;answers=new Array(TOTAL).fill(null);locked=false;
     resultPage.style.display='none';funnel.style.display='flex';reveal.style.display='none';
     contextSec.style.display='none';identitySec.style.display='none';stageSec.style.display='none';
+    var rs=$('reportSent');if(rs)rs.style.display='none';
     $('capForm').style.display='block';$('capForm').reset();$('msg').textContent='';
-    $('sendBtn').disabled=false;$('sendBtn').textContent='Reveal my stack';
+    $('sendBtn').disabled=false;$('sendBtn').textContent='Send me the full report';
     intro.style.display='block';window.scrollTo(0,0);
   });
 })();
