@@ -186,7 +186,7 @@ gtag('config', 'G-SY8NKELMNZ');
   <div class="hero">
     <div class="eyebrow">Welcome to your programme</div>
     <h1>One Touch.</h1>
-    <p class="sub">Seven days. Real practices. Start at your own pace, there is no wrong way to move through this.</p>
+    <p class="sub">Eight days. Real practices. Start at your own pace, there is no wrong way to move through this.</p>
     <p class="progress-note" id="progressNote"></p>
   </div>
 
@@ -204,7 +204,7 @@ gtag('config', 'G-SY8NKELMNZ');
         </div>
         <div class="day-body">
           <div class="video-frame">
-            <iframe src="https://drive.google.com/file/d/1KB1nlwF1Td_lHAM8kk8SrKaTx0m7EMA8/preview" allowfullscreen allow="autoplay"></iframe>
+            <iframe src="https://player.vimeo.com/video/1213912895" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
           </div>
           <details class="practice"><summary>the welcome</summary><div class="practice-body">
             <p>Hello, my loves, and welcome to One Touch. Over the next seven days we dig deeply, but softly, into the conditioning that may have kept you from touch that lands. So many of us live in our heads, disconnected from the body.</p>
@@ -409,9 +409,24 @@ gtag('config', 'G-SY8NKELMNZ');
             <p>Seven days ago, many of you barely knew this body. Now you have a map. You know what has you sigh, what has you soften, what it's been starving for, and how to give it to yourself. This is just the beginning, and it's yours forever. You are, at last, the one who touches yourself like you're precious, because you are.</p>
             <p>If you want to go deeper, take the Touch Reset Quiz to notice your pattern and start building your own Touch Map, your yeses and your nos. All the prompts these seven days I made especially for One Touch, keep asking them of yourself, or with a partner. Much love.</p>
           </div></details>
-          <button class="btn-complete" onclick="completeDay(7)">Mark Day 7 complete</button>
+          <button class="btn-complete" onclick="completeDay(7)">I've done today's practice, unlock Day 8 →</button>
         </div>
         <div class="day-locked-msg">Complete Day 6 to unlock this.</div>
+      </div>
+
+      <div class="day-card" data-day="8">
+        <div class="day-header">
+          <span class="day-num">Day 8</span>
+          <span class="day-title">The original session</span>
+          <svg class="lock-icon" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+        </div>
+        <div class="day-body">
+          <div class="video-frame">
+            <iframe src="https://player.vimeo.com/video/1213913562" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <button class="btn-complete" onclick="completeDay(8)">Mark Day 8 complete</button>
+        </div>
+        <div class="day-locked-msg">Complete Day 7 to unlock this.</div>
       </div>
 
     </div><!-- /day-grid -->
@@ -479,7 +494,7 @@ gtag('config', 'G-SY8NKELMNZ');
     });
     const note = document.getElementById('progressNote');
     if (note) {
-      note.textContent = completed >= 7 ? "You've completed all 7 days." : "You're on Day " + Math.min(completed + 1, 7) + ' of 7.';
+      note.textContent = completed >= 8 ? "You've completed all 8 days." : "You're on Day " + Math.min(completed + 1, 8) + ' of 8.';
     }
   }
 
