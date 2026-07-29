@@ -186,7 +186,7 @@ gtag('config', 'G-SY8NKELMNZ');
   <div class="hero">
     <div class="eyebrow">Welcome to your programme</div>
     <h1>One Touch.</h1>
-    <p class="sub">Eight days. Real practices. Start at your own pace, there is no wrong way to move through this.</p>
+    <p class="sub">Seven days, plus a bonus session. Real practices. Start at your own pace, there is no wrong way to move through this.</p>
     <p class="progress-note" id="progressNote"></p>
   </div>
 
@@ -475,15 +475,15 @@ gtag('config', 'G-SY8NKELMNZ');
 
       <div class="day-card" data-day="8">
         <div class="day-header">
-          <span class="day-num">Day 8</span>
-          <span class="day-title">The original session</span>
+          <span class="day-num">Bonus</span>
+          <span class="day-title">A session to go deeper</span>
           <svg class="lock-icon" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
         </div>
         <div class="day-body">
           <div class="video-frame">
             <iframe src="https://player.vimeo.com/video/1213913562" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
           </div>
-          <button class="btn-complete" onclick="completeDay(8)">Mark Day 8 complete</button>
+          <button class="btn-complete" onclick="completeDay(8)">Mark the bonus complete</button>
         </div>
         <div class="day-locked-msg">Complete Day 7 to unlock this.</div>
       </div>
@@ -547,13 +547,15 @@ gtag('config', 'G-SY8NKELMNZ');
       card.classList.toggle('locked', day > completed + 1);
       const btn = card.querySelector('.btn-complete');
       if (btn && day <= completed) {
-        btn.textContent = '✓ Day ' + day + ' complete';
+        btn.textContent = day === 8 ? '✓ Bonus complete' : '✓ Day ' + day + ' complete';
         btn.classList.add('done');
       }
     });
     const note = document.getElementById('progressNote');
     if (note) {
-      note.textContent = completed >= 8 ? "You've completed all 8 days." : "You're on Day " + Math.min(completed + 1, 8) + ' of 8.';
+      if (completed >= 8) note.textContent = "You've done all seven days and the bonus. Beautiful.";
+      else if (completed >= 7) note.textContent = "You've finished the seven days. Your bonus session is open.";
+      else note.textContent = "You're on Day " + (completed + 1) + ' of 7.';
     }
   }
 
