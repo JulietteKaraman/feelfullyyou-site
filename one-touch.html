@@ -171,11 +171,15 @@
   .proof-quote blockquote{font-family:var(--display);font-size:clamp(16px,2.2vw,20px);font-style:italic;font-weight:500;color:var(--cream);line-height:1.65;margin-bottom:20px}
   .proof-quote cite{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-pale);font-style:normal;font-weight:600}
   .proof .wide{max-width:var(--max);margin:0 auto;padding:0 28px}
-  .quotes3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:44px}
-  .quotes3 .q{background:var(--paper);padding:28px 26px}
-  .quotes3 .q p{font-family:var(--display);font-style:italic;font-weight:500;font-size:16px;line-height:1.6;color:var(--ink);margin-bottom:16px;max-width:none}
-  .quotes3 .q cite{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-deep);font-style:normal;font-weight:600}
-  @media(max-width:800px){.quotes3{grid-template-columns:1fr}}
+  .quotes-head{text-align:center;margin-top:12px}
+  .quotes-head .eyebrow{display:block;margin-bottom:8px}
+  .quotes-head h3{font-size:clamp(1.5rem,3.2vw,2rem);color:var(--ink);max-width:20ch;margin:0 auto}
+  .quotes3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;margin-top:36px}
+  .quotes3 .q{position:relative;background:#fff;border-left:4px solid var(--gold);border-radius:5px;padding:44px 30px 30px;box-shadow:0 18px 46px rgba(13,53,53,.17)}
+  .quotes3 .q::before{content:"\201C";position:absolute;top:10px;left:22px;font-family:var(--display);font-weight:700;font-size:4.6rem;line-height:1;color:var(--gold-pale)}
+  .quotes3 .q p{font-family:var(--display);font-style:italic;font-weight:500;font-size:17px;line-height:1.62;color:var(--ink);margin:0 0 20px;max-width:none;position:relative}
+  .quotes3 .q cite{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-deep);font-style:normal;font-weight:700}
+  @media(max-width:800px){.quotes3{grid-template-columns:1fr;gap:18px}}
   .itv-wrap{margin-top:60px}
   .itv-wrap .eyebrow{display:block;text-align:center;margin-bottom:10px}
   .itv-wrap .lede{text-align:center;max-width:54ch;margin:0 auto 24px;color:var(--brown);font-size:var(--t-md);line-height:1.6}
@@ -444,6 +448,10 @@ gtag('config', 'G-SY8NKELMNZ');
   </div>
 
   <div class="wide">
+    <div class="quotes-head reveal">
+      <span class="eyebrow">In their words</span>
+      <h3>People who learned to feel again</h3>
+    </div>
     <div class="quotes3 reveal">
       <div class="q"><p>"This is what I had been searching for my entire career."</p><cite>Deidre</cite></div>
       <div class="q"><p>"It is like being loved from the inside out. She listens to my body's needs better than I can, guiding me to release what I didn't even realise I was holding."</p><cite>Marc Q · Computer Analyst, Turkey</cite></div>
