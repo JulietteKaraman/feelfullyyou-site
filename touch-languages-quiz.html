@@ -506,15 +506,19 @@
   <section class="rband green">
     <div class="rin">
       <div class="reyebrow">Where I'd have you start</div>
-      <h2 class="bandhead" id="fTitle"></h2>
-      <p class="bandtext" id="fBlurb"></p>
-      <a class="btn pulse" id="fCta" href="#" style="margin-top:20px">Get it</a>
+      <h2 class="bandhead">Now you know your stack. One Touch is where you learn to read it in your own body.</h2>
+      <p class="bandtext">The quiz just showed you your four-layer stack: your touch pattern, your pleasure language, your touch language, and whether you lead or receive. One Touch is the 7-day structured programme that teaches you to feel all four layers in your body, not just know them in your head.</p>
+      <p class="bandtext">You'll learn the safety anchor (Touch Base), map what opens and what braces, and start to read the pleasure language that's actually your way in. Plus two bonuses: the Bonus Call (a longer, deeper session) and the One Touch Cards.</p>
+      <p class="bandtext">If you can't read your own body, you can't read what's happening between you and someone else. This is where that literacy begins.</p>
+      <p class="bandtext"><strong>One Touch &middot; 7 days + 2 bonuses &middot; &pound;97</strong></p>
+      <a class="btn pulse" href="/one-touch" style="margin-top:20px">Start One Touch</a>
     </div>
   </section>
 
   <section class="rband dark">
     <div class="rin">
       <div class="pitch">
+        <p class="bandtext" style="margin-bottom:22px">One Touch teaches you to read your body. The Touch Reset is where we change the pattern.</p>
         <div class="pl" id="pLine"></div>
         <h2 id="pDoor"></h2>
         <p class="blurb" id="pBlurb"></p>
@@ -817,7 +821,7 @@
     $('rOriMeaning').textContent=o.meaning;
     $('rOriEdge').textContent=o.edge;
     $('rTonight').textContent=o.tonight;
-    var f=a.free;$('fTitle').textContent=f.title;$('fBlurb').textContent=f.blurb;$('fCta').textContent=f.cta;$('fCta').href=f.href;
+    /* first-step section is now hardcoded to One Touch for all audiences */
     var st=STAGE[stage];
     $('rStageKicker').textContent=st.kicker;
     $('rStageName').textContent=st.name;
