@@ -182,7 +182,12 @@ const PRODUCT_MAP = {
   'price_1TqA3HCCw18geY15tlkswswP': {
     tagId: 20913134,   // "repair-kit-buyer"
     sequenceId: 2820134,  // "Repair Kit — Welcome" (portal link + access word repair2026), wired 8 Jul
-    label: 'Romantic Relationship Repair Kit £27'
+    label: 'Romantic Relationship Repair Kit £27 (archived price)'
+  },
+  'price_1TytXjCCw18geY154fo0Aof0': {
+    tagId: 20913134,   // "repair-kit-buyer"
+    sequenceId: 2820134,  // "Repair Kit — Welcome"
+    label: 'Romantic Relationship Repair Kit £31'
   },
   // ─── CARDS DIGITAL ──────────────────────────────────────────────────────────
   'price_1TOxLhCCw18geY15bLrNioHw': {
