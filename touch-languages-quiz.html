@@ -69,6 +69,9 @@
   .aud:hover{border-color:var(--gold-pale);background:rgba(221,201,142,.09);transform:translateY(-1px)}
   .aud span{display:block;font-family:var(--body);font-weight:300;font-size:.82rem;color:rgba(254,252,250,.6);margin-top:3px}
 
+  .qrings{display:flex;justify-content:center;gap:12px;margin-bottom:20px}
+  .qrings .ring{width:32px;height:32px;font-size:.82rem;opacity:.35;transition:opacity .3s,transform .3s,background .3s,color .3s}
+  .qrings .ring.active{opacity:1;transform:scale(1.14)}
   .proghead{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:12px}
   .proghead .l{width:24px;height:1px;background:rgba(221,201,142,.4)}
   .phase{display:block;text-align:center;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:rgba(221,201,142,.65);margin-bottom:16px;font-weight:400}
@@ -132,6 +135,13 @@
   .idaffirm{color:rgba(254,252,250,.78);font-weight:300;font-size:1rem;line-height:1.7;margin:22px auto 0;max-width:44ch}
   .inbox{display:inline-flex;gap:10px;align-items:flex-start;text-align:left;background:rgba(221,201,142,.12);border:1px solid rgba(221,201,142,.34);border-radius:12px;padding:13px 16px;margin:22px auto 0;font-size:.84rem;color:var(--gold-pale);font-weight:300;line-height:1.55;max-width:46ch}
   .scrollcue{margin-top:26px;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(221,201,142,.7);font-weight:400}
+
+  .tstack{margin-top:26px;display:flex;flex-direction:column;gap:16px;text-align:left}
+  .trow{background:rgba(254,252,250,.06);border:1px solid rgba(221,201,142,.28);border-radius:14px;padding:18px 20px}
+  .trow .thead{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+  .trow .tname{font-family:var(--display);font-weight:600;color:#fff;font-size:1.08rem;margin-bottom:2px}
+  .trow .tlabel{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-pale);font-weight:600}
+  .trow p{font-size:.95rem;line-height:1.62;color:rgba(254,252,250,.88);font-weight:300;margin:0}
 
   .chip-h{font-family:var(--display);font-weight:600;color:var(--gold-pale);font-size:1.05rem;margin:24px 0 14px}
   .chips{display:grid;grid-template-columns:1fr 1fr;gap:12px}
@@ -219,8 +229,8 @@
   .capture input[type=email]{background:#fff;border-color:#e7dfce;color:var(--ink)}
   .capture input[type=email]::placeholder{color:#b9b1a2}
   .consent{color:#9a917f}
-  /* result: dark bands become light */
-  .rband.dark{background:var(--cream)}
+  /* result: dark bands stay genuinely dark (teal-deep) for real color rhythm against the cream body + teal bands */
+  .rband.dark{background:var(--teal-deep)}
   .rband.hero{background:linear-gradient(180deg,#fbf2e2 0%,var(--cream) 62%);background-color:var(--cream)}
   .rband.hero .hero-eyebrow,.rband.hero .scrollcue{color:var(--gold-deep)}
   .rband.hero .idline{color:var(--ink)}
@@ -233,25 +243,15 @@
   .slabel{color:var(--gold-deep)}
   .sval{color:var(--teal)}
   .inbox{background:#f6edda;border-color:var(--gold-soft);color:var(--gold-deep)}
-  .rband.dark .reyebrow{color:var(--gold-deep)}
-  .rband.dark .reyebrow:before{background:var(--gold)}
-  .rband.dark .bandhead{color:var(--ink)}
-  .rband.dark .bandtext{color:var(--brown)}
-  .rband.dark .chip-h{color:var(--gold-deep)}
-  .rband.dark .chips.shut .chip{background:#fff;border-color:#e7dfce;color:var(--brown)}
-  .rband.dark .chips.shut .chip:before{border-color:var(--gold-soft)}
-  .rband.dark .aside{color:var(--brown);border-color:var(--gold-soft)}
-  .rband.dark .basecard{background:#faf4e8;border-color:#e7dfce}
-  .rband.dark .basecard .bt{color:var(--gold-deep)}
-  .rband.dark .basecard p{color:var(--brown)}
-  .rband.dark .basecard strong{color:var(--ink)}
-  .rband.dark .pitch{background:#fff;border-color:var(--gold-soft)}
-  .rband.dark .pitch .pl{color:var(--gold-deep)}
-  .rband.dark .pitch h2{color:var(--ink)}
-  .rband.dark .pitch .blurb,.rband.dark .pitch .foryou li{color:var(--brown)}
-  .rband.dark #success .big{color:var(--ink)}
-  .rband.dark #success p{color:var(--brown)}
-  .rband.dark .again button{color:var(--gold-deep)}
+  .rband.dark .reyebrow{color:var(--gold-pale)}
+  .rband.dark .reyebrow:before{background:var(--gold-pale)}
+  .rband.dark .bandhead{color:var(--cream)}
+  .rband.dark .bandtext{color:rgba(254,252,250,.88)}
+  .rband.dark .pitch{background:rgba(254,252,250,.04);border-color:rgba(221,201,142,.35)}
+  .rband.dark .pitch .pl{color:var(--gold-pale)}
+  .rband.dark .pitch h2{color:var(--cream)}
+  .rband.dark .pitch .blurb,.rband.dark .pitch .foryou li{color:rgba(254,252,250,.85)}
+  .rband.dark .again button{color:var(--gold-pale)}
   /* buttons on green accent bands pop in gold */
   .rband.green .btn{background:var(--gold-pale);color:var(--teal)}
   .rband.green .btn:hover{background:#e7d6a3}
@@ -267,7 +267,9 @@
   #intro .partpill{display:inline-block;font-family:var(--body);font-weight:600;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);background:#f6edda;border:1px solid var(--gold-soft);border-radius:20px;padding:6px 16px;margin-top:16px}
   #intro .layercircles{display:flex;flex-wrap:wrap;justify-content:center;gap:22px 26px;margin:26px auto 0;max-width:470px}
   #intro .lc{display:flex;flex-direction:column;align-items:center;gap:10px;width:92px}
-  #intro .ring{width:62px;height:62px;border-radius:50%;border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:600;font-size:1.3rem;color:var(--gold-deep);background:#fff;box-shadow:0 6px 18px -10px rgba(168,133,56,.6)}
+  .ring{border-radius:50%;border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:600;color:var(--gold-deep);background:#fff;box-shadow:0 6px 18px -10px rgba(168,133,56,.6)}
+  #intro .ring{width:62px;height:62px;font-size:1.3rem}
+  .qrings .ring.active{background:var(--teal);border-color:var(--teal);color:#fff}
   #intro .lc span{font-family:var(--body);font-weight:500;font-size:.82rem;color:var(--brown);text-align:center;line-height:1.25}
   #intro .note{margin-top:26px}
   /* result layer number circles */
@@ -279,13 +281,8 @@
   /* readability + shadow + growth */
   .rband.green .bandtext,.rband.green .aside{color:rgba(254,252,250,.95)}
   .rband.green .chip{color:#fff}
-  .rband.ochre{background:var(--cream)}
+  .rband.ochre{background:linear-gradient(180deg,#f8ecd4 0%,var(--cream) 100%)}
   .rband.ochre .bigbadge{color:var(--gold-deep)}
-  .growthline{font-family:var(--display);font-weight:600;color:var(--gold-deep);font-size:1.12rem;line-height:1.42;margin:8px 0 24px;padding-left:16px;border-left:3px solid var(--gold)}
-  .shadowbox{background:rgba(6,26,26,.32);border:1px solid rgba(221,201,142,.26);border-radius:12px;padding:20px 22px;margin-top:24px}
-  .shadowbox .sh-h{font-family:var(--display);font-weight:600;color:var(--gold-pale);font-size:1.02rem;margin-bottom:8px}
-  .shadowbox p{font-size:.99rem;color:rgba(254,252,250,.94);font-weight:300;line-height:1.7;margin:0}
-  .shadowbox .sh-more{font-size:.86rem;color:var(--gold-pale);font-style:italic;margin-top:12px}
   .photoband{width:100%;height:clamp(120px,20vw,220px);background-size:cover;background-position:center;background-repeat:no-repeat}
   #intro .intro-photo{display:block;width:100%;height:clamp(180px,38vw,240px);border-radius:12px;background:url('https://feelfullyyou.com/touch-reset-quiz.jpg') center 42%/cover no-repeat;margin:0 0 26px;box-shadow:0 12px 30px -18px rgba(13,53,53,.45)}
 </style>
@@ -348,6 +345,9 @@
       </section>
 
       <section id="quiz" style="display:none">
+        <div class="qrings" id="qrings">
+          <div class="ring" data-p="0">1</div><div class="ring" data-p="1">2</div><div class="ring" data-p="2">3</div><div class="ring" data-p="3">4</div>
+        </div>
         <span class="phase" id="phase"></span>
         <div class="proghead"><span class="l"></span><span class="eyebrow" id="prog">01 / 15</span><span class="l"></span></div>
         <div class="track"><div class="bar" id="bar"></div></div>
@@ -393,11 +393,22 @@
     </div>
   </section>
 
-  <section class="rband green" id="reportBand">
+  <section class="rband green">
+    <div class="rin" style="text-align:center">
+      <div class="reyebrow" style="justify-content:center">Your stack, up close</div>
+      <h2 class="bandhead">A first look at each layer.</h2>
+      <div class="tstack" id="teaserStack"></div>
+      <p class="bandtext" id="rStageLine" style="text-align:center;font-style:italic;margin-top:22px;max-width:46ch;margin-left:auto;margin-right:auto"></p>
+    </div>
+  </section>
+
+  <div class="photoband" style="background-image:url('https://feelfullyyou.com/touch-chest.jpg')"></div>
+
+  <section class="rband dark" id="reportBand">
     <div class="rin" style="text-align:center">
       <div class="reyebrow" style="justify-content:center">Your in-depth report</div>
-      <h2 class="bandhead">Want the deeper read?</h2>
-      <p class="bandtext" style="margin:0 auto 18px;max-width:46ch">The full read on the layer running your whole stack, plus your complete set of practices, sent to your inbox to keep.</p>
+      <h2 class="bandhead">Want the full read?</h2>
+      <p class="bandtext" style="margin:0 auto 18px;max-width:48ch">Your shadow side, where the pattern comes from, how it softens, and your practices for the week ahead &mdash; sent to your inbox to keep.</p>
       <form class="capture" id="capForm" autocomplete="on" style="max-width:420px;margin:0 auto;text-align:left">
         <input type="email" id="email" name="email" placeholder="you@email.com" required>
         <input type="text" class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
@@ -411,8 +422,6 @@
     </div>
   </section>
 
-  <div class="photoband" style="background-image:url('https://feelfullyyou.com/touch-cloth.jpg')"></div>
-
   <section class="rband ochre" id="shareBand" style="display:none">
     <div class="rin" style="text-align:center">
       <div class="reyebrow dark" style="justify-content:center">For the two of you</div>
@@ -423,106 +432,27 @@
     </div>
   </section>
 
-  <section class="rband green">
-    <div class="rin">
-      <div class="reyebrow num"><span class="lnum">1</span>Your pleasure language</div>
-      <h2 class="bandhead" id="rPleasureName"></h2>
-      <p class="bandtext" id="rPleasureDesc"></p>
-      <div class="chip-h">What turns you on</div>
-      <div class="chips" id="rTurnons"></div>
-      <div class="shadowbox">
-        <div class="sh-h">The shadow side</div>
-        <p id="rPleasureShadow"></p>
-        <p class="sh-more">The full read on your shadow, and the rituals that soften it, is in your report. Check your inbox.</p>
-      </div>
-    </div>
-  </section>
-
-  <div class="photoband" style="background-image:url('https://feelfullyyou.com/touch-chest.jpg')"></div>
-
-  <section class="rband dark">
-    <div class="rin">
-      <div class="reyebrow num"><span class="lnum">2</span>Your touch pattern</div>
-      <h2 class="bandhead" id="rPatternName"></h2>
-      <p class="bandtext" id="rPatternLine"></p>
-      <p class="growthline" id="rPatternGrowth"></p>
-      <div class="chip-h" style="margin-bottom:14px">What shuts you down</div>
-      <div class="chips shut" id="rBraces"></div>
-    </div>
-  </section>
-
-  <div class="photoband" style="background-image:url('https://feelfullyyou.com/touch-bw.jpg')"></div>
+  <div class="photoband" style="background-image:url('https://feelfullyyou.com/touch-cloth.jpg')"></div>
 
   <section class="rband green">
-    <div class="rin">
-      <div class="reyebrow num"><span class="lnum">3</span>Your touch language</div>
-      <h2 class="bandhead" id="rLangName"></h2>
-      <p class="bandtext" id="rLangReaches"></p>
-      <div class="chip-h">What feeds it</div>
-      <div class="chips" id="rLangFeed"></div>
-      <p class="aside" id="rLangLow"></p>
-    </div>
-  </section>
-
-  <section class="rband ochre">
-    <div class="rin">
-      <div class="reyebrow dark num"><span class="lnum">4</span>Lead or receive</div>
-      <div class="bigbadge" id="rOriBadge"></div>
-      <p class="bandtext dark" id="rOriMeaning"></p>
-      <div class="edgecard">
-        <div class="el">Your growth edge</div>
-        <p id="rOriEdge"></p>
-      </div>
-    </div>
-  </section>
-
-  <section class="rband dark" id="stageBand">
-    <div class="rin">
-      <div class="reyebrow" id="rStageKicker"></div>
-      <h2 class="bandhead" id="rStageName"></h2>
-      <p class="bandtext" id="rStageDesc"></p>
-      <div class="movecard" style="margin-top:24px">
-        <p class="moveline" id="rStagePart"></p>
-      </div>
-      <p class="aside" id="rStageCaution"></p>
-    </div>
-  </section>
-
-  <div class="photoband" style="background-image:url('https://feelfullyyou.com/touch-sponge.jpg')"></div>
-
-  <section class="rband dark">
-    <div class="rin">
-      <div class="reyebrow">Try this tonight</div>
-      <div class="movecard">
-        <p class="moveline" id="rTonight"></p>
-      </div>
-      <div class="basecard">
-        <div class="bt">Your two-minute anchor &middot; Touch Base&reg;</div>
-        <p>Press your thumb to your forefinger and feel every ridge, slowly. Tell yourself, <strong>I am safe right now.</strong> Hold for two minutes. Reach for it the moment the brace comes up.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="rband green">
-    <div class="rin">
-      <div class="reyebrow">Where I'd have you start</div>
-      <h2 class="bandhead">Now you know your stack. One Touch is where you learn to read it in your own body.</h2>
-      <p class="bandtext">The quiz just showed you your four-layer stack: your touch pattern, your pleasure language, your touch language, and whether you lead or receive. One Touch is the 7-day structured programme that teaches you to feel all four layers in your body, not just know them in your head.</p>
-      <p class="bandtext">You'll learn the safety anchor (Touch Base), map what opens and what braces, and start to read the pleasure language that's actually your way in. Plus two bonuses: the Bonus Call (a longer, deeper session) and the One Touch Cards.</p>
-      <p class="bandtext">If you can't read your own body, you can't read what's happening between you and someone else. This is where that literacy begins.</p>
-      <p class="bandtext"><strong>One Touch &middot; 7 days + 2 bonuses &middot; &pound;97</strong></p>
-      <a class="btn pulse" href="/one-touch" style="margin-top:20px">Start One Touch</a>
+    <div class="rin" style="text-align:center">
+      <div class="reyebrow" style="justify-content:center">Where I'd have you start</div>
+      <div style="width:100%;height:clamp(160px,30vw,220px);border-radius:12px;background:url('https://feelfullyyou.com/one-touch-hero.jpg') center 30%/cover no-repeat;margin:0 0 22px;box-shadow:0 12px 30px -18px rgba(13,53,53,.45)"></div>
+      <h2 class="bandhead">Now you know your stack. One Touch is where you learn to read it in your body.</h2>
+      <p class="bandtext" style="margin:0 auto 18px;max-width:48ch">Seven days to feel your four layers, not just know them: the safety anchor that opens every session, what opens you and what braces you, plus the Bonus Call and the One Touch Cards.</p>
+      <p class="bandtext" style="margin:0 auto 18px"><strong>One Touch &middot; 7 days + 2 bonuses &middot; &pound;97</strong></p>
+      <a class="btn pulse" href="/one-touch" style="margin-top:6px">Start One Touch</a>
     </div>
   </section>
 
   <section class="rband dark">
     <div class="rin">
       <div class="pitch">
-        <p class="bandtext" style="margin-bottom:22px">One Touch teaches you to read your body. The Touch Reset is where we change the pattern.</p>
+        <p class="bandtext" id="pIntro" style="margin-bottom:22px"></p>
         <div class="pl" id="pLine"></div>
         <h2 id="pDoor"></h2>
         <p class="blurb" id="pBlurb"></p>
-        <div class="foryou"><div class="fyh">This is for you if&hellip;</div><ul id="pForyou"></ul></div>
+        <div class="foryou" id="pForyouWrap"><div class="fyh">This is for you if&hellip;</div><ul id="pForyou"></ul></div>
         <a class="btn pulse" id="pCta" href="#">Show me</a>
       </div>
       <div class="again"><button id="restart">start again</button></div>
@@ -677,6 +607,9 @@
       pitchLine:"This is where all four parts meet, with support"}
   };
   var STAGE_CAUTION="The tool has to match the stage. A Stage 1 fix, a date night, a holiday, one good conversation, applied to a Stage 2 or 3 situation is usually what makes couples give up on each other.";
+  var STAGE_TAGLINE={quiet:"Nothing dramatic. Just quiet.",brace:"My body knows before my mind does.",gone:"This is just how things are now."};
+  var FREE_INTRO="One Touch teaches you to read your body. Start here, at your own pace.";
+  var PAID_INTRO="One Touch teaches you to read your body. The Touch Reset is where we change the pattern.";
 
   /* QUESTIONS: pattern(4) H/F/A/S/C · touch language(4) · pleasure(4) · lead/receive(3) */
   var QPAT=[
@@ -741,6 +674,8 @@
   function renderQ(){
     locked=false;var q=ALL[i];
     $('phase').textContent=phaseFor(i);
+    var pIdx=i<4?0:(i<8?1:(i<12?2:3));
+    Array.prototype.forEach.call(document.querySelectorAll('#qrings .ring'),function(r,ri){r.classList.toggle('active',ri===pIdx);});
     $('question').innerHTML=q[0];
     $('prog').textContent=pad(i+1)+' / '+TOTAL;
     $('bar').style.width=Math.round((i)/TOTAL*100+5)+'%';
@@ -798,41 +733,55 @@
   function fillList(el,arr,cls){el.innerHTML='';arr.forEach(function(t){var d=document.createElement('div');d.className=cls;d.textContent=t;el.appendChild(d);});}
   function fillLi(el,arr){el.innerHTML='';arr.forEach(function(t){var li=document.createElement('li');li.textContent=t;el.appendChild(li);});}
 
+  function buildTeaserStack(pl,pa,lg,o){
+    var rows=[
+      {label:'Pleasure Language',name:pl.name,text:pl.desc},
+      {label:'Touch Pattern',name:pa.name,text:pa.line},
+      {label:'Touch Language',name:lg.name,text:lg.reaches},
+      {label:'In touch, you',name:o.badge,text:o.meaning}
+    ];
+    var wrap=$('teaserStack');wrap.innerHTML='';
+    rows.forEach(function(r,idx){
+      var d=document.createElement('div');d.className='trow';
+      var head=document.createElement('div');head.className='thead';
+      var num=document.createElement('span');num.className='lnum';num.textContent=String(idx+1);
+      var lab=document.createElement('span');lab.className='tlabel';lab.textContent=r.label;
+      head.appendChild(num);head.appendChild(lab);
+      var nm=document.createElement('div');nm.className='tname';nm.textContent=r.name;
+      var p=document.createElement('p');p.textContent=r.text;
+      d.appendChild(head);d.appendChild(nm);d.appendChild(p);
+      wrap.appendChild(d);
+    });
+  }
+
+  function paintPitch(a,st){
+    var useFree=(audience==='woman'||audience==='couple');
+    $('pIntro').textContent=useFree?FREE_INTRO:PAID_INTRO;
+    $('pLine').textContent=st.pitchLine;
+    if(useFree&&a.free){
+      $('pDoor').textContent=a.free.title;
+      $('pBlurb').textContent=a.free.blurb;
+      $('pForyouWrap').style.display='none';
+      $('pCta').textContent=a.free.cta;$('pCta').href=a.free.href;
+    }else{
+      $('pDoor').textContent=a.door;
+      $('pBlurb').textContent=a.blurb;
+      $('pForyouWrap').style.display='block';
+      fillLi($('pForyou'),a.foryou);
+      $('pCta').textContent=a.cta;$('pCta').href=a.href;
+    }
+  }
+
   function paintResult(){
-    var pl=PLEASURE[result.pleasure],pa=PATTERN[result.pattern],lg=TLANG[result.language],o=ORI[result.ori],a=AUD[audience]||AUD.woman;
+    var pl=PLEASURE[result.pleasure],pa=PATTERN[result.pattern],lg=TLANG[result.language],o=ORI[result.ori],a=AUD[audience]||AUD.woman,st=STAGE[stage];
     $('emblem').innerHTML=EMBLEM[result.pattern];
     $('sPleasure').textContent=pl.short;
     $('sPattern').textContent=pa.short;
     $('sLanguage').textContent=lg.name.replace(' Touch','');
     $('sOri').textContent=o.word;
-    $('rPleasureName').textContent=pl.name;
-    $('rPleasureDesc').textContent=pl.desc;
-    fillList($('rTurnons'),pl.turnons,'chip');
-    $('rPleasureShadow').textContent=pl.shadow;
-    $('rPatternName').textContent=pa.name;
-    $('rPatternLine').textContent=pa.line;
-    $('rPatternGrowth').textContent=pa.growth;
-    fillList($('rBraces'),pa.braces,'chip');
-    $('rLangName').textContent=lg.name;
-    $('rLangReaches').textContent=lg.reaches;
-    fillList($('rLangFeed'),lg.feed,'chip');
-    $('rLangLow').textContent="And the one that's been waiting for you: "+TLANG[result.languageLow].name.replace(' Touch','')+". Underneath, you are quietly starving for "+LANG_LOW[result.languageLow]+".";
-    $('rOriBadge').textContent=o.badge;
-    $('rOriMeaning').textContent=o.meaning;
-    $('rOriEdge').textContent=o.edge;
-    $('rTonight').textContent=o.tonight;
-    /* first-step section is now hardcoded to One Touch for all audiences */
-    var st=STAGE[stage];
-    $('rStageKicker').textContent=st.kicker;
-    $('rStageName').textContent=st.name;
-    $('rStageDesc').textContent=st.desc;
-    $('rStagePart').textContent=st.part;
-    var cautionEl=$('rStageCaution');
-    if(stage==='brace'||stage==='gone'){cautionEl.textContent=STAGE_CAUTION;cautionEl.style.display='block';}
-    else{cautionEl.textContent='';cautionEl.style.display='none';}
-    $('pLine').textContent=st.pitchLine;$('pDoor').textContent=a.door;$('pBlurb').textContent=a.blurb;
-    fillLi($('pForyou'),a.foryou);
-    $('pCta').textContent=a.cta;$('pCta').href=a.href;
+    buildTeaserStack(pl,pa,lg,o);
+    $('rStageLine').textContent="Right now: "+st.name+" — "+STAGE_TAGLINE[stage];
+    paintPitch(a,st);
     $('shareBand').style.display='block';
   }
   var shareBtn=$('shareBtn');
