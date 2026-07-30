@@ -140,6 +140,22 @@
   .why-works h2{color:#fff;max-width:22ch;margin-bottom:30px}
   .why-works p{color:rgba(254,252,250,.82);max-width:60ch;margin-bottom:18px;font-size:var(--t-md);line-height:1.72}
   .why-works .closer{font-family:var(--display);font-weight:700;color:#fff;font-size:clamp(20px,3vw,28px);max-width:30ch;margin-top:34px;line-height:1.2;letter-spacing:-.02em}
+  .why-works .fails{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 4px}
+  .why-works .fails span{font-family:var(--body);font-size:14px;font-weight:500;color:rgba(254,252,250,.72);border:1px solid rgba(254,252,250,.22);border-radius:99px;padding:8px 16px;background:rgba(254,252,250,.05)}
+  .layers{max-width:600px;margin:36px 0}
+  .layer{border-radius:8px;padding:22px 26px}
+  .layer .lbl{font-family:var(--display);font-weight:700;font-size:1.06rem;letter-spacing:-.01em;margin-bottom:4px}
+  .layer .sub{font-size:14px;line-height:1.5;max-width:none}
+  .layer.top{background:rgba(254,252,250,.07);border:1px solid rgba(254,252,250,.18)}
+  .layer.top .lbl{color:rgba(254,252,250,.9)}
+  .layer.top .sub{color:rgba(254,252,250,.58)}
+  .layer-gap{display:flex;align-items:center;gap:12px;padding:12px 2px;color:var(--gold-pale);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+  .layer-gap::before,.layer-gap::after{content:"";height:1px;flex:1;background:rgba(168,133,56,.45)}
+  .layer.bottom{background:var(--gold);border:1px solid var(--gold-pale)}
+  .layer.bottom .lbl{color:#fff}
+  .layer.bottom .sub{color:rgba(255,255,255,.9)}
+  .why-works .callout{border-left:3px solid var(--gold-pale);padding:4px 0 4px 24px;margin:30px 0}
+  .why-works .callout p{color:#fff;font-size:clamp(18px,2.4vw,22px);font-family:var(--display);font-weight:500;line-height:1.5;margin:0;max-width:52ch}
 
   /* WHY JULIETTE */
   .why{padding:0;border-top:1px solid var(--line);background:var(--paper)}
@@ -226,6 +242,10 @@
   .pricing .price-big sub{font-size:.26em;color:var(--gold-pale);vertical-align:baseline;font-weight:400}
   .pricing .price-note{color:rgba(254,252,250,.5);font-size:14px;margin-bottom:14px;font-style:italic}
   .pricing .flow-note{max-width:44ch;margin:0 auto 36px;color:rgba(254,252,250,.72);font-size:16px;line-height:1.7}
+  .pricing .includes{max-width:400px;margin:10px auto 30px;text-align:left}
+  .pricing .includes li{list-style:none;display:flex;gap:14px;align-items:flex-start;padding:13px 2px;border-bottom:1px solid rgba(254,252,250,.13);color:rgba(254,252,250,.92);font-size:16px;line-height:1.45}
+  .pricing .includes li:last-child{border-bottom:none}
+  .pricing .includes li::before{content:"";flex:none;width:8px;height:8px;margin-top:7px;border-radius:50%;background:var(--gold-pale)}
   .pricing .btn{font-size:16px;padding:16px 42px;margin-bottom:14px}
   .pricing .couples-note{font-size:14px;color:rgba(254,252,250,.38);margin-top:16px}
   .pricing .couples-note a{color:var(--gold-pale);text-decoration:underline;text-underline-offset:3px}
@@ -486,9 +506,23 @@ gtag('config', 'G-SY8NKELMNZ');
   <div class="narrow">
     <span class="eyebrow reveal">Underneath the conversation</span>
     <h2 class="reveal">Why this works when everything else missed</h2>
-    <p class="reveal">Most of the fixes you have tried stayed in your head. Talk therapy, books, understanding the pattern with your mind. Or they asked you to perform: toys, techniques, trying harder, when your body was braced the whole time, and performing only taught it to brace harder.</p>
+    <p class="lead reveal">Most of the fixes you have tried stayed in your head. Or they asked you to perform, when your body was braced the whole time, and performing only taught it to brace harder.</p>
+    <div class="fails reveal">
+      <span>Talk therapy</span><span>Books</span><span>Insight</span><span>Toys</span><span>Techniques</span><span>Trying harder</span>
+    </div>
+    <div class="layers reveal">
+      <div class="layer top">
+        <div class="lbl">The mind. Thought, talk, insight.</div>
+        <div class="sub">Where all of that landed. None of it could reach lower.</div>
+      </div>
+      <div class="layer-gap">insight cannot reach this far down</div>
+      <div class="layer bottom">
+        <div class="lbl">The nervous system. Felt experience.</div>
+        <div class="sub">Where the shutdown actually lives, and where One Touch works.</div>
+      </div>
+    </div>
     <p class="reveal">One Touch works because it goes underneath the conversation. You are not talking about the pattern, you are feeling it. You are not being touched by someone else while you brace, you are touching yourself, which is the only way the body learns it is safe again.</p>
-    <p class="reveal">This is why therapy did not reach it. This is why trying harder made it worse. The pattern lives in your nervous system, underneath thought, in a place insight cannot reach. Your nervous system changes through felt experience, nothing else.</p>
+    <div class="callout reveal"><p>This is why therapy did not reach it. This is why trying harder made it worse. Your nervous system changes through felt experience, nothing else.</p></div>
     <p class="reveal">The things that failed were not wrong. They simply were not working at the layer where the shutdown actually lives. One Touch meets you there.</p>
     <p class="closer reveal">Seven days. Your own hands. The part of you that went quiet, waking back up.</p>
   </div>
@@ -528,7 +562,13 @@ gtag('config', 'G-SY8NKELMNZ');
   <p class="flow-note reveal" style="margin:6px auto 0">The quiz told you what pattern you are running. One Touch teaches you to read it.</p>
   <div class="price-big reveal"><sub>£</sub>97</div>
   <p class="price-note">One-time payment. Instant access.</p>
-  <p class="flow-note reveal">Seven days of structured self-touch plus a bonus day, the safety anchor Touch Base®, the One Touch Cards, and the start of your Touch Map. Your private members area lands the moment you join.</p>
+  <ul class="includes reveal">
+    <li>Seven days of structured self-touch, plus a bonus day</li>
+    <li>Touch Base®, your safety anchor</li>
+    <li>The One Touch Cards</li>
+    <li>The start of your Touch Map</li>
+  </ul>
+  <p class="flow-note reveal">Your private members area lands the moment you join.</p>
   <a href="https://buy.stripe.com/8x2dR8bCj4KQ2Lr8mV0co0O" class="btn reveal" target="_blank" rel="noopener">Start One Touch · £97</a>
   <p class="reveal" style="font-family:'Poppins',sans-serif;font-weight:700;color:var(--gold-pale);font-size:clamp(18px,2.4vw,24px);letter-spacing:-.01em;margin-top:20px">Your body braced. Patterns can be changed.</p>
 </section>
