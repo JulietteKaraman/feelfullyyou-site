@@ -34,12 +34,19 @@ exports.handler = async function(event) {
     // Anti-spam honeypot: add a hidden field named "website" to forms. Real users
     // leave it empty; bots fill every field. If it's filled, silently accept
     // (return 200 so the bot sees success) but do nothing.
-    honeypot = body.website || '';
+    // Accept either field name — "website" for the older forms already using it,
+    // "hp_field" for forms (like the quiz) moved to a less autofill-prone name.
+    honeypot = body.website || body.hp_field || '';
   } catch {
     return { statusCode: 400, body: JSON.stringify({ error: 'Invalid JSON' }) };
   }
 
   if (honeypot) {
+    // Logged so we can actually see how often this fires — if it's catching real
+    // users (password-manager/autofill engines sometimes fill hidden fields named
+    // things like "website" despite autocomplete="off"), that shows up here instead
+    // of silently vanishing as an untraceable gap between GA's optin event and Kit.
+    console.warn('Honeypot triggered, no subscriber created:', email || '(no email in body)');
     return { statusCode: 200, body: JSON.stringify({ ok: true }) };
   }
 
@@ -72,23 +79,33 @@ exports.handler = async function(event) {
     }
     const subscriberId = subData?.subscriber?.id;
 
-    // 2. Apply tags
+    // 2. Apply tags. Subscriber already exists at this point (step 1 succeeded) —
+    // a failure here means they're a real Kit contact but missing their pattern
+    // tag, which is a different, quieter failure than "never became a subscriber":
+    // it means their personalised report email never fires. Log it so it's
+    // diagnosable instead of silently swallowed.
     for (const tagId of tagIds) {
-      await fetch(`${KIT_BASE}/tags/${tagId}/subscribers`, {
+      const tagRes = await fetch(`${KIT_BASE}/tags/${tagId}/subscribers`, {
         method: 'POST',
         headers,
         body: JSON.stringify({ email_address: email })
       });
+      if (!tagRes.ok) {
+        console.error('Kit tag apply failed:', tagId, email, tagRes.status);
+      }
     }
 
-    // 3. Enrol in sequence(s)
+    // 3. Enrol in sequence(s) — same reasoning: log failures instead of dropping them.
     for (const sid of sequenceIds) {
       if (!sid) continue;
-      await fetch(`${KIT_BASE}/sequences/${sid}/subscribers`, {
+      const seqRes = await fetch(`${KIT_BASE}/sequences/${sid}/subscribers`, {
         method: 'POST',
         headers,
         body: JSON.stringify({ email_address: email })
       });
+      if (!seqRes.ok) {
+        console.error('Kit sequence enrol failed:', sid, email, seqRes.status);
+      }
     }
 
     return {

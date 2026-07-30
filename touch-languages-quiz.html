@@ -411,7 +411,7 @@
       <p class="bandtext" style="margin:0 auto 18px;max-width:48ch">Your shadow side, where the pattern comes from, how it softens, and your practices for the week ahead &mdash; sent to your inbox to keep.</p>
       <form class="capture" id="capForm" autocomplete="on" style="max-width:420px;margin:0 auto;text-align:left">
         <input type="email" id="email" name="email" placeholder="you@email.com" required>
-        <input type="text" class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <input type="text" class="hp" name="hp_field" tabindex="-1" autocomplete="off" aria-hidden="true">
         <button type="submit" class="btn block pulse" id="sendBtn">Send me the full report</button>
         <p class="consent">Your reading, then my letters on touch, intimacy and coming back to your body. Leave any time.</p>
         <div class="msg" id="msg"></div>
@@ -808,7 +808,7 @@
     var audTag=(AUD[audience]||{}).tag;
     var tags=[PATTERN_TAG[result.pattern],PLEASURE_TAG[result.pleasure],LANG_TAG[result.language],ORI_TAG[result.ori],audTag,ID_TAG[identity],STAGE_TAG[stage]].filter(function(t){return t;});
     var stackFields={touch_pleasure:result.pleasure,touch_pattern:PATTERN[result.pattern].short,touch_language:TLANG[result.language].name.replace(' Touch',''),touch_orientation:ORI[result.ori].word.toLowerCase(),touch_stage:STAGE[stage].name};
-    var payload=JSON.stringify({email:email,tagIds:tags,sequenceIds:[PATTERN_SEQ[result.pattern],2821695].filter(Boolean),fields:stackFields,website:$('capForm').website.value});
+    var payload=JSON.stringify({email:email,tagIds:tags,sequenceIds:[PATTERN_SEQ[result.pattern],2821695].filter(Boolean),fields:stackFields,hp_field:$('capForm').hp_field.value});
     function attempt(n){
       return fetch('/.netlify/functions/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:payload})
         .then(function(r){return r.json().catch(function(){return {};});})
