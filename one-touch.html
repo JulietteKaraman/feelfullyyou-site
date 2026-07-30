@@ -186,9 +186,11 @@
   .why .story p{margin-bottom:12px;color:var(--brown);font-size:17px;max-width:none}
   .why .story .ask{font-family:var(--body);font-style:italic;font-weight:500;color:var(--gold-deep)}
   .why .needed{font-family:var(--display);font-weight:600;font-size:clamp(19px,2.6vw,24px);color:var(--ink);margin:6px 0 32px;max-width:30ch;line-height:1.22;letter-spacing:-.015em}
-  .press{display:flex;gap:24px;flex-wrap:wrap;align-items:center;margin:32px 0;padding:24px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .press span{font-family:var(--display);font-size:17px;color:var(--gold-soft)}
-  .press .pod{font-style:italic;color:var(--gold-deep)}
+  .press-label{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-top:30px;margin-bottom:2px}
+  .press{display:flex;gap:18px 32px;flex-wrap:wrap;align-items:center;margin:12px 0 8px;padding:22px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .press img{height:23px;width:auto;max-width:106px;object-fit:contain;filter:brightness(0) opacity(.46);transition:filter .25s}
+  .press img:hover{filter:brightness(0) opacity(.72)}
+  .press .pod{flex-basis:100%;font-family:var(--display);font-size:15px;font-style:italic;color:var(--gold-deep);margin-top:2px}
   .why .last{font-size:17px;max-width:58ch;color:var(--brown);line-height:1.7}
   @media(max-width:940px){
     .why .split{grid-template-columns:1fr}
@@ -397,7 +399,7 @@ gtag('config', 'G-SY8NKELMNZ');
       <div>
         <div class="eyebrow reveal">What this is</div>
         <h2 class="reveal">A structured return to sensation, seven days at a time.</h2>
-        <p class="reveal">Your Touch Pattern is not abstract. It is physical. One Touch teaches you to feel it: where you brace, where you open, what state you land in, and the Pleasure Language that is your actual way in.</p>
+        <p class="reveal">Your Touch Pattern is not abstract. <strong>It is physical.</strong> One Touch teaches you to feel it: where you brace, where you open, what state you land in, and the Pleasure Language that is your actual way in.</p>
         <p class="reveal">This is self-touch and body-based work, not talk therapy and not a relationship course. No partner is required. No group calls. No one watching. Just you, your body, and seven days of practice built to bring you back into contact with yourself.</p>
         <p class="reveal">Each day builds on the one before it. A short audio practice guides you through the touch itself. You move at your own pace, in your own space, as many times as you need to.</p>
         <p class="reveal">This works because it is worked through the body, not around it. Your body has been running an old pattern on automatic, bracing before touch even lands. Talking about that pattern does not move it. Practicing safety, structured and repeated, does.</p>
@@ -481,14 +483,15 @@ gtag('config', 'G-SY8NKELMNZ');
 
       <p class="needed reveal" style="max-width:34ch">I know what your body has been protecting you from. I know exactly where to begin.</p>
 
+      <div class="press-label reveal">As featured in</div>
       <div class="press reveal">
-        <span>Forbes</span>
-        <span>The Times</span>
-        <span>Telegraph</span>
-        <span>ITV</span>
-        <span>Marie Claire</span>
-        <span>Newsweek</span>
-        <span class="pod">The Scrumptious Woman, top 2.5% globally</span>
+        <img src="/press/forbes.png" alt="Forbes" loading="lazy" decoding="async">
+        <img src="/press/times.png" alt="The Times" loading="lazy" decoding="async">
+        <img src="/press/telegraph.png" alt="The Telegraph" loading="lazy" decoding="async">
+        <img src="/press/itv.png" alt="ITV" loading="lazy" decoding="async">
+        <img src="/press/marieclaire.png" alt="Marie Claire" loading="lazy" decoding="async">
+        <img src="/press/newsweek.png" alt="Newsweek" loading="lazy" decoding="async">
+        <span class="pod">Host of The Scrumptious Woman, top 2.5% of podcasts globally.</span>
       </div>
 
       <p class="last reveal"><strong>I have spent 27 years learning what the body needs to feel safe enough to receive again.</strong> That is not theory. That is what happens when the work is specific, gentle, and done in the body rather than just the mind.</p>
