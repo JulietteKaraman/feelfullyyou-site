@@ -47,9 +47,17 @@
   .topbar nav a.btn{background:var(--gold);color:#fff;padding:10px 20px;border-radius:2px;font-weight:600}
   .topbar nav a.btn:hover{background:var(--gold-deep)}
   @media(max-width:860px){.topbar nav > a:not(.btn){display:none}}
-  .hero{padding-top:64px;background:var(--teal);padding:80px 28px 72px;text-align:center}
-  .hero-cover{max-width:320px;margin:0 auto 40px;border-radius:4px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.35)}
+  .hero{padding-top:64px;background:var(--teal);padding:80px 28px 72px}
+  .hero-inner{max-width:1100px;margin:0 auto;display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px}
+  .hero-cover{max-width:320px;width:100%;margin:0 auto 24px;border-radius:4px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.35)}
   .hero-cover img{width:100%;height:auto;display:block}
+  @media(min-width:861px){
+    .hero-inner{flex-direction:row;align-items:center;text-align:left;gap:64px}
+    .hero-inner .hero-cover{flex:0 0 320px;margin:0}
+    .hero-inner .hero-copy{flex:1}
+    .hero-inner .hero-copy h1{margin-left:0;margin-right:0}
+    .hero-inner .hero-copy .sub,.hero-inner .hero-copy .sub-pop,.hero-inner .hero-copy .format-line{margin-left:0;margin-right:0}
+  }
   .hero .eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-pale);font-weight:600;margin-bottom:20px}
   .hero h1{font-family:'Poppins',sans-serif;font-weight:700;font-size:clamp(2rem,5vw,3.2rem);color:#fff;line-height:1.06;letter-spacing:-.024em;margin-bottom:24px;max-width:18ch;margin-left:auto;margin-right:auto}
   .hero .sub{font-size:18px;color:#c9c2b4;max-width:44ch;margin:0 auto 20px;line-height:1.55}
@@ -239,17 +247,21 @@ gtag('config', 'G-SY8NKELMNZ');
 </nav>
 
 <div class="hero">
-  <div class="hero-cover">
-    <img src="https://feelfullyyou.com/10-touch-rituals-og.png" alt="The 10 Touch Rituals">
+  <div class="hero-inner">
+    <div class="hero-cover">
+      <img src="https://feelfullyyou.com/10-touch-rituals-og.png" alt="The 10 Touch Rituals">
+    </div>
+    <div class="hero-copy">
+      <div class="eyebrow">For couples. Digital guide.</div>
+      <h1>The 10 Touch Rituals</h1>
+      <p class="format-line">A PDF with the ten written practices, plus instant access to the jaw trace video itself, the one that has quietly passed a million views.</p>
+      <p class="sub">You love the person in front of you and cannot find the door back in.</p>
+      <p class="sub-pop">Ten non-sexual touch practices, a few minutes each, the way back into the same room.</p>
+      <div class="price-pill">£7</div>
+      <br>
+      <a href="https://buy.stripe.com/cNi9AS49Relq1Hn9qZ0co0y" class="btn light">Get instant access</a>
+    </div>
   </div>
-  <div class="eyebrow">For couples. Digital guide.</div>
-  <h1>The 10 Touch Rituals</h1>
-  <p class="format-line">A PDF with the ten written practices, plus instant access to the jaw trace video itself, the one that has quietly passed a million views.</p>
-  <p class="sub">You love the person in front of you and cannot find the door back in.</p>
-  <p class="sub-pop">Ten non-sexual touch practices, a few minutes each, the way back into the same room.</p>
-  <div class="price-pill">£7</div>
-  <br>
-  <a href="https://buy.stripe.com/cNi9AS49Relq1Hn9qZ0co0y" class="btn light">Get instant access</a>
 </div>
 
 <div class="proof">
