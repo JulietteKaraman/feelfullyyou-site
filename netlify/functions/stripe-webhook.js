@@ -1,11 +1,95 @@
 // Stripe → Kit webhook handler
 // Fires when a Stripe payment completes → tags subscriber in Kit → sequence starts
+// Also grants real-account access in the Feel Fully You App for products
+// that live there (10 Touch Rituals as of 31 Jul 2026) — see
+// grantPracticeAppEntitlement() below. specs/practice-app-accounts.md R3.
 //
 // ENV VARS NEEDED (Netlify → Site Settings → Environment Variables):
 //   KIT_API_KEY           — Kit v4 API key (same one subscribe.js uses)
 //   STRIPE_WEBHOOK_SECRET — from Stripe → Developers → Webhooks (starts with whsec_)
+//   SUPABASE_URL              — same Supabase project the cards app + practice-app use
+//   SUPABASE_SERVICE_ROLE_KEY — Supabase → Project Settings → API → service_role secret
+//                                (NOT set yet as of this deploy — the practice-app grant
+//                                 silently no-ops until this is added; Kit tagging above
+//                                 is unaffected either way, see the try/catch around it)
 
 const crypto = require('crypto');
+
+// Products in PRODUCT_MAP whose content lives in the Feel Fully You App
+// (app.feelfullyyou.com) get a real account + entitlement granted here,
+// in addition to the existing Kit tag/sequence. Add an entry per product
+// as each one is migrated into that app — a new deck_type string is all
+// that's needed, no new webhook logic. Must stay in sync with
+// PRICE_ID_TO_DECK_TYPE in practice-app/lib/entitlements/config.ts.
+const PRACTICE_APP_DECK_TYPES = {
+  'price_1Tlpu0CCw18geY15b8J3jlBW': 'ten-touch-rituals', // 10 Touch Rituals, £7
+  'price_1TzO4DCCw18geY15u7X9j7iw': 'unspoken-distance', // The Unspoken Distance, £77
+};
+
+async function grantPracticeAppEntitlement(email, deckType, stripeSessionId) {
+  const supabaseUrl = process.env.SUPABASE_URL;
+  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (!supabaseUrl || !serviceKey) {
+    console.error('grantPracticeAppEntitlement: SUPABASE_URL / SUPABASE_SERVICE_ROLE_KEY not set — skipped (Kit tagging above still succeeded)');
+    return;
+  }
+
+  const authHeaders = {
+    apikey: serviceKey,
+    Authorization: `Bearer ${serviceKey}`,
+    'Content-Type': 'application/json',
+  };
+  const normalizedEmail = String(email).toLowerCase().trim();
+
+  try {
+    // 1. Find an existing auth user by email, or create one (no password,
+    // pre-confirmed) — same shape as lib/entitlements/grant.ts in the
+    // practice-app, reimplemented here via raw REST since this function
+    // has no npm dependencies to install a Supabase SDK into.
+    let userId = null;
+    const listRes = await fetch(`${supabaseUrl}/auth/v1/admin/users?email=${encodeURIComponent(normalizedEmail)}`, {
+      headers: authHeaders,
+    });
+    if (listRes.ok) {
+      const listData = await listRes.json();
+      const found = (listData.users || []).find((u) => (u.email || '').toLowerCase() === normalizedEmail);
+      if (found) userId = found.id;
+    }
+
+    if (!userId) {
+      const createRes = await fetch(`${supabaseUrl}/auth/v1/admin/users`, {
+        method: 'POST',
+        headers: authHeaders,
+        body: JSON.stringify({ email: normalizedEmail, email_confirm: true }),
+      });
+      if (!createRes.ok) {
+        console.error('grantPracticeAppEntitlement: failed to create user', await createRes.text());
+        return;
+      }
+      const created = await createRes.json();
+      userId = created.id;
+    }
+
+    // 2. Upsert the entitlement row.
+    const grantRes = await fetch(`${supabaseUrl}/rest/v1/user_decks?on_conflict=user_id,deck_type`, {
+      method: 'POST',
+      headers: { ...authHeaders, Prefer: 'resolution=merge-duplicates' },
+      body: JSON.stringify({
+        user_id: userId,
+        deck_type: deckType,
+        purchased_at: new Date().toISOString(),
+        stripe_checkout_session_id: stripeSessionId,
+      }),
+    });
+    if (!grantRes.ok) {
+      console.error('grantPracticeAppEntitlement: failed to grant entitlement', await grantRes.text());
+      return;
+    }
+    console.log(`grantPracticeAppEntitlement: granted ${deckType} to ${normalizedEmail}`);
+  } catch (err) {
+    console.error('grantPracticeAppEntitlement: unexpected error', err);
+  }
+}
 
 function verifyStripeSignature(rawBody, sigHeader, secret) {
   const parts = sigHeader.split(',').reduce((acc, part) => {
@@ -77,7 +161,13 @@ const PRODUCT_MAP = {
   'price_1TnxAqCCw18geY153w22a2Ye': {
     tagId: 20794292,   // "the unspoken distance"
     sequenceId: 2817577,  // "The Unspoken Distance"
-    label: 'Unspoken Distance £97'
+    label: 'Unspoken Distance £97 (old price, kept in case old links are live)'
+  },
+  // CURRENT price, changed to £77 (31 Jul 2026), new Payment Link.
+  'price_1TzO4DCCw18geY15u7X9j7iw': {
+    tagId: 20794292,   // "the unspoken distance"
+    sequenceId: 2817577,  // "The Unspoken Distance"
+    label: 'Unspoken Distance £77'
   },
   'price_1TnwwmCCw18geY15egD5h7Fr': {
     tagId: 20794295,   // "the communication reboot kit"
@@ -484,6 +574,20 @@ exports.handler = async function(event) {
   if (product) {
     console.log(`${product.label} purchase — adding ${email} to Kit`);
     await addToKit(email, firstName, product.tagId, product.sequenceId, apiSecret, phone);
+
+    // Grant real-account access in the Feel Fully You App, if this product's
+    // content lives there. Deliberately AFTER and independent of the Kit
+    // call above and wrapped so a failure here can never affect the Kit
+    // tag/sequence that already succeeded (spec R3 / E3).
+    const deckType = PRACTICE_APP_DECK_TYPES[priceId];
+    if (deckType) {
+      try {
+        await grantPracticeAppEntitlement(email, deckType, session.id);
+      } catch (err) {
+        console.error('Practice app entitlement grant failed (Kit tagging above is unaffected):', err);
+      }
+    }
+
     return { statusCode: 200, body: JSON.stringify({ ok: true, product: product.label }) };
   }
 
