@@ -135,6 +135,14 @@
   .test-card p{font-size:15px;color:var(--brown);line-height:1.6;margin:0}
   .test-card .name{font-family:'Poppins',sans-serif;font-weight:700;font-size:15px;color:var(--gold-deep);margin:0;letter-spacing:.01em}
   @media(max-width:820px){.test-grid{grid-template-columns:1fr}}
+  .app-preview{background:#f6f4f1;padding:80px 28px;text-align:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .app-preview .eye{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:16px}
+  .app-preview h2{font-family:'Poppins',sans-serif;font-weight:700;font-size:clamp(1.5rem,3vw,2rem);color:var(--ink);line-height:1.2;letter-spacing:-.02em;margin-bottom:40px;max-width:20ch;margin-left:auto;margin-right:auto}
+  .phone-frame{position:relative;width:260px;margin:0 auto;background:#0c0c0c;border-radius:42px;padding:14px 11px;box-shadow:0 40px 80px -24px rgba(0,0,0,.4)}
+  .phone-frame::before{content:"";position:absolute;top:28px;left:50%;transform:translateX(-50%);width:64px;height:6px;border-radius:99px;background:#000;z-index:3}
+  .phone-screen{border-radius:30px;overflow:hidden;position:relative}
+  .phone-screen img{width:100%;display:block}
+  .app-preview .cap{font-size:14.5px;color:var(--brown);margin-top:28px;max-width:36ch;margin-left:auto;margin-right:auto;line-height:1.6}
   .why-me{padding:0;background:var(--cream);border-top:1px solid var(--line)}
   .why-split{display:grid;grid-template-columns:.9fr 1.1fr;align-items:stretch;max-width:none}
   .why-photo{overflow:hidden;display:flex;align-items:stretch}
@@ -396,6 +404,17 @@ gtag('config', 'G-SY8NKELMNZ');
       <li><div class="dot"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div><span>Sixteen prompts from the Intimacy and Communication Cards: how to talk about what touch brings up, without it turning into a fight.</span></li>
     </ul>
   </div>
+</div>
+
+<div class="app-preview">
+  <div class="eye">Inside the app</div>
+  <h2>This is exactly what opens on your phone.</h2>
+  <div class="phone-frame">
+    <div class="phone-screen">
+      <img src="https://feelfullyyou.com/media/app-library-screenshot.jpg" alt="The 10 Touch Rituals inside the app, your library screen">
+    </div>
+  </div>
+  <p class="cap">Your library. Use them in any order, out of order, or one a week.</p>
 </div>
 
 <div class="why-me">
