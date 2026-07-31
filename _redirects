@@ -14,7 +14,7 @@
 /mens-six-week-intensive        /the-2-month-intensive          301
 /the-unspoken-distance          /the-unspoken-distance.html     200
 /10-touch-rituals               /10-touch-rituals.html          200
-/31-daily-touch-points          /31-daily-touch-points.html     200
+/31-daily-touch-points          /10-touch-rituals               301
 /touch-point                    /touch-point.html               200
 /touch-point-live               /touch-point-live.html          200
 /7-days-scrumptiousness         /7-days-scrumptiousness.html    200
@@ -36,7 +36,7 @@
 /landing                        /landing.html                   200
 /trip-wire                      /trip-wire.html                 200
 /trip                           /trip-wire.html                 200
-/trip-wire-between-touches      /trip-wire-between-touches.html 200
+/trip-wire-between-touches      /                               301
 /free-10-rituals                 https://couplecards.netlify.app/api/touch-rituals-checkout?promo=FREERITUALS 301
 /summit-pleasure                 /summit-pleasure.html           200
 /thankyou-summit-pleasure        /thankyou-summit-pleasure.html  200
