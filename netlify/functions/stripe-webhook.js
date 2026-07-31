@@ -23,7 +23,8 @@ const crypto = require('crypto');
 // PRICE_ID_TO_DECK_TYPE in practice-app/lib/entitlements/config.ts.
 const PRACTICE_APP_DECK_TYPES = {
   'price_1Tlpu0CCw18geY15b8J3jlBW': 'ten-touch-rituals', // 10 Touch Rituals, £7
-  'price_1TzO4DCCw18geY15u7X9j7iw': 'unspoken-distance', // The Unspoken Distance, £77
+  'price_1TzO4DCCw18geY15u7X9j7iw': 'unspoken-distance', // The Unspoken Distance, £77 (current)
+  'price_1TnxAqCCw18geY153w22a2Ye': 'unspoken-distance', // The Unspoken Distance, £97 (old price)
 };
 
 async function grantPracticeAppEntitlement(email, deckType, stripeSessionId) {
