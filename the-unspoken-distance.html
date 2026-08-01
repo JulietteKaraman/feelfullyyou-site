@@ -249,6 +249,16 @@
   .mobile-nav a.btn{margin:14px 28px 6px;display:block;background:var(--gold);color:#fff;padding:12px 20px;border-radius:2px;font-weight:600;text-align:center;border:none}
   .mobile-nav.open{display:flex}
   @media(max-width:860px){.ham{display:block}.topbar .more-wrap{display:none}.topbar nav > .btn{display:none}}
+
+  /* APP PREVIEW */
+  .app-preview{background:var(--paper);padding:80px 28px;text-align:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .app-preview .eye{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:16px}
+  .app-preview h2{font-family:'Poppins',sans-serif;font-weight:700;font-size:clamp(1.5rem,3vw,2rem);color:var(--ink);line-height:1.2;letter-spacing:-.02em;margin-bottom:40px;max-width:20ch;margin-left:auto;margin-right:auto}
+  .phone-frame{position:relative;width:260px;margin:0 auto;background:#0c0c0c;border-radius:42px;padding:14px 11px;box-shadow:0 40px 80px -24px rgba(0,0,0,.4)}
+  .phone-frame::before{content:"";position:absolute;top:28px;left:50%;transform:translateX(-50%);width:64px;height:6px;border-radius:99px;background:#000;z-index:3}
+  .phone-screen{border-radius:30px;overflow:hidden;position:relative}
+  .phone-screen img{width:100%;display:block}
+  .app-preview .cap{font-size:14.5px;color:var(--brown);margin-top:28px;max-width:36ch;margin-left:auto;margin-right:auto;line-height:1.6}
 </style>
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -401,14 +411,26 @@ gtag('config', 'G-SY8NKELMNZ');
     </div>
 
     <div class="pinned reveal">
-      <div class="ph">Also included</div>
+      <div class="ph">Also included, in the app</div>
       <div class="guide">
         <div class="t">The 10 Touch Rituals</div>
-        <p>The non-sexual touch practices that stopped 500,000 scrolls and sent hundreds of men into Juliette's DMs with one word: TOUCH.</p>
+        <p>The non-sexual touch practices that stopped 500,000 scrolls and sent hundreds of men into Juliette's DMs with one word: TOUCH. Bundled in, delivered in the same app as the guide.</p>
       </div>
     </div>
   </div>
 </section>
+
+<!-- APP PREVIEW -->
+<div class="app-preview">
+  <div class="eye">Not a PDF</div>
+  <h2>This is exactly what opens on your phone.</h2>
+  <div class="phone-frame">
+    <div class="phone-screen">
+      <img src="https://feelfullyyou.com/media/app-unspoken-distance-library.jpg" alt="The Unspoken Distance inside the app, your library screen">
+    </div>
+  </div>
+  <p class="cap">Nine parts, real videos, guided audio, diagrams, and the 10 Touch Rituals bonus, all in one app on your phone.</p>
+</div>
 
 <!-- CREDIBILITY -->
 <section class="why">
