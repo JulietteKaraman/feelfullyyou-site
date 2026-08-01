@@ -7,10 +7,14 @@ buyers only, so the two audiences never cross.
 
 ## New tag: `one-touch-197` (id 21778330)
 ## New sequence: "One Touch £197 — Welcome + Room Funnel" (id 2846629)
-## Status: all 4 emails created as DRAFTS (published: false), header banner + Juliette's
-signature photo + bio line + unsubscribe footer now match the existing published One Touch
-email exactly (fixed 1 Aug, first pass was missing all of it). Nothing sends until Juliette
-reviews + publishes each one in Kit, AND the webhook is wired (see below).
+## Status: all 4 emails created as DRAFTS (published: false). Header banner + Juliette's
+signature photo + bio line + unsubscribe footer match the existing published One Touch email
+(fixed 1 Aug, first pass was missing all of it). Then a second fix same day: the hero photo
+was wrong (defaulting to something that read as 10 Touch Rituals) because email_template_id
+was never linked — found the real "One Touch" starting-point template in Kit (id 5389005,
+hero image asset pVgL4P2dnkcqydKXgG3C86) and rebuilt all 4 with that exact hero photo pulled
+in via allow_starting_point. Nothing sends until Juliette reviews + publishes each one in
+Kit, AND the webhook is wired (see below).
 
 Review link: https://app.kit.com/sequences/2846629
 
