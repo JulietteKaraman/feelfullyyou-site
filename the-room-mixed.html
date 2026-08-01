@@ -75,7 +75,7 @@
 
   /* HERO */
   .hero{position:relative;overflow:hidden;padding-top:64px}
-  .hero-img{width:100%;height:auto;display:block}
+  .hero-img{width:100%;height:auto;max-height:560px;object-fit:cover;display:block}
   .hero-content{display:none}
   .hero-intro{padding:52px 28px 56px;background:var(--teal);text-align:center}
   .hero-intro .hi-eyebrow{font-family:var(--body);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-pale);font-weight:600;margin-bottom:18px}
@@ -97,7 +97,7 @@
 
   /* PHOTO BREAK */
   .photo-break{width:100%;overflow:hidden;line-height:0}
-  .photo-break img{width:100%;height:auto;display:block}
+  .photo-break img{width:100%;height:auto;max-height:420px;object-fit:cover;display:block}
 
   /* THREE SITUATIONS */
   .recog{padding:0;border-top:1px solid var(--line)}
@@ -203,7 +203,7 @@
   @media(max-width:640px){
     .includes-grid{grid-template-columns:1fr}
     .pay-options{flex-direction:column;align-items:center}
-    .hero-img{width:100%;height:auto;display:block}
+    .hero-img{width:100%;height:auto;max-height:560px;object-fit:cover;display:block}
     .photo-break img{width:100%}
     .sticky-buy{padding:10px 14px;gap:8px}
     .sticky-buy .pr{display:none}
@@ -396,10 +396,10 @@
       <h2 class="reveal">From the people who did the work.</h2>
     </div>
     <div class="screenshots-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;align-items:start;max-width:900px;margin:32px auto 0">
-      <div class="reveal" style="box-shadow:0 14px 44px rgba(13,53,53,.18);border-radius:4px;overflow:hidden"><img src="testimonial-kate.jpeg" alt="" style="width:100%;display:block" loading="lazy" decoding="async"></div>
-      <div class="reveal" style="box-shadow:0 14px 44px rgba(13,53,53,.18);border-radius:4px;overflow:hidden"><img src="jennytestimonialtulum.jpg" alt="" style="width:100%;display:block" loading="lazy" decoding="async"></div>
-      <div class="reveal" style="box-shadow:0 14px 44px rgba(13,53,53,.18);border-radius:4px;overflow:hidden"><img src="testimonial-sueann.jpeg" alt="" style="width:100%;display:block" loading="lazy" decoding="async"></div>
-      <div class="reveal" style="box-shadow:0 14px 44px rgba(13,53,53,.18);border-radius:4px;overflow:hidden"><img src="testimonial-karen.jpeg" alt="" style="width:100%;display:block" loading="lazy" decoding="async"></div>
+      <div class="reveal" style="box-shadow:0 14px 44px rgba(13,53,53,.18);border-radius:4px;overflow:hidden"><img src="testimonial-kate.jpeg" alt="" style="width:100%;aspect-ratio:3/4;object-fit:cover;display:block" loading="lazy" decoding="async"></div>
+      <div class="reveal" style="box-shadow:0 14px 44px rgba(13,53,53,.18);border-radius:4px;overflow:hidden"><img src="jennytestimonialtulum.jpg" alt="" style="width:100%;aspect-ratio:3/4;object-fit:cover;display:block" loading="lazy" decoding="async"></div>
+      <div class="reveal" style="box-shadow:0 14px 44px rgba(13,53,53,.18);border-radius:4px;overflow:hidden"><img src="testimonial-sueann.jpeg" alt="" style="width:100%;aspect-ratio:3/4;object-fit:cover;display:block" loading="lazy" decoding="async"></div>
+      <div class="reveal" style="box-shadow:0 14px 44px rgba(13,53,53,.18);border-radius:4px;overflow:hidden"><img src="testimonial-karen.jpeg" alt="" style="width:100%;aspect-ratio:3/4;object-fit:cover;display:block" loading="lazy" decoding="async"></div>
     </div>
   </div>
 </section>
