@@ -7,7 +7,9 @@ buyers only, so the two audiences never cross.
 
 ## New tag: `one-touch-197` (id 21778330)
 ## New sequence: "One Touch £197 — Welcome + Room Funnel" (id 2846629)
-## Status: all 4 emails created as DRAFTS (published: false). Nothing sends until Juliette
+## Status: all 4 emails created as DRAFTS (published: false), header banner + Juliette's
+signature photo + bio line + unsubscribe footer now match the existing published One Touch
+email exactly (fixed 1 Aug, first pass was missing all of it). Nothing sends until Juliette
 reviews + publishes each one in Kit, AND the webhook is wired (see below).
 
 Review link: https://app.kit.com/sequences/2846629
