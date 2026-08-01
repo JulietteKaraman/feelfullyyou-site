@@ -125,8 +125,9 @@ const BUYER_TAG_ID = 21472382;   // "Buyer"
 // IMPORTANT — each Stripe payment link also needs metadata set:
 //   Stripe → Payment Links → click link → Metadata → add key: price_id, value: <price_id below>
 //
-// One Touch: product exists (prod_TMpi5kaSnhGD1d) but has NO price yet.
-//   → Create a £97 price in Stripe → Products → One Touch, then add it here.
+// One Touch: two prices live side by side on purpose. £97 is the old price
+// (existing buyers + Pleasure Bundle recipients), £197 is current. Both stay
+// mapped so old links still work.
 const PRODUCT_MAP = {
   // SEQUENCE IDs REWIRED 6 July PM: Kit's original template sequences (2812532/33/34/91)
   // were deleted or repurposed during the paste-in. Nulls below = no sequence exists in
@@ -188,7 +189,14 @@ const PRODUCT_MAP = {
   'price_1Tpr13CCw18geY15W6ooICYF': {
     tagId: 20794312,   // "one touch"
     sequenceId: 2820368,  // "One Touch — Welcome" — published + live, confirmed 8 Jul
-    label: 'One Touch £97'
+    label: 'One Touch £97 (old price, existing buyers + Pleasure Bundle stay on this sequence, untouched)'
+  },
+  // NEW price, added 1 Aug 2026. Separate tag + separate sequence so £97 and £197
+  // buyers never share an email experience.
+  'price_1TzdQNCCw18geY15eh9S2uOe': {
+    tagId: 21778330,   // "one-touch-197"
+    sequenceId: 2846629,  // "One Touch £197 — Welcome + Room Funnel"
+    label: 'One Touch £197'
   },
   // ─── THE BEGINNING ──────────────────────────────────────────────────────────
   'price_1Tp740CCw18geY15gg4z1oEg': {
