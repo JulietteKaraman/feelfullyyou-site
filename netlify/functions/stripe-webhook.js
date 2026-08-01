@@ -27,6 +27,14 @@ const PRACTICE_APP_DECK_TYPES = {
   'price_1TnxAqCCw18geY153w22a2Ye': 'unspoken-distance', // The Unspoken Distance, £97 (old price)
 };
 
+// The Unspoken Distance sales page promises "10 Touch Rituals — included
+// from day one." Must stay in sync with BONUS_DECK_TYPES in
+// practice-app/lib/entitlements/config.ts.
+const PRACTICE_APP_BONUS_DECK_TYPES = {
+  'price_1TzO4DCCw18geY15u7X9j7iw': ['ten-touch-rituals'], // Distance, £77 (current)
+  'price_1TnxAqCCw18geY153w22a2Ye': ['ten-touch-rituals'], // Distance, £97 (old price)
+};
+
 async function grantPracticeAppEntitlement(email, deckType, stripeSessionId) {
   const supabaseUrl = process.env.SUPABASE_URL;
   const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
@@ -582,10 +590,13 @@ exports.handler = async function(event) {
     // tag/sequence that already succeeded (spec R3 / E3).
     const deckType = PRACTICE_APP_DECK_TYPES[priceId];
     if (deckType) {
-      try {
-        await grantPracticeAppEntitlement(email, deckType, session.id);
-      } catch (err) {
-        console.error('Practice app entitlement grant failed (Kit tagging above is unaffected):', err);
+      const deckTypesToGrant = [deckType, ...(PRACTICE_APP_BONUS_DECK_TYPES[priceId] || [])];
+      for (const dt of deckTypesToGrant) {
+        try {
+          await grantPracticeAppEntitlement(email, dt, session.id);
+        } catch (err) {
+          console.error('Practice app entitlement grant failed (Kit tagging above is unaffected):', err);
+        }
       }
     }
 
