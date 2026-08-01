@@ -27,6 +27,20 @@ Review link: https://app.kit.com/sequences/2846629
   (https://tidycal.com/juliette2/the-room-consultation). No price stated — matches the
   live the-room.html page, which is call-gated and doesn't disclose price publicly either.
 
+## RESOLVED 1 Aug 2026, end to end
+Full chain now proven live: real £197 checkout (100% off via test promo code) completed,
+landed on /thankyou-one-touch, webhook fired, subscriber tagged Buyer. The one gap found
+was Payment Link metadata (key `price_id`, value `price_1TzdQNCCw18geY15eh9S2uOe`) was
+never set, so the product-specific tag/sequence never applied automatically, backfilled
+manually for that one test subscriber (jckaraman@me.com) — metadata is now added, so every
+future purchase on this link should tag + enrol on its own.
+
+**Also learned, worth remembering for next time:** Stripe won't complete a checkout at an
+exact £0.00 total by default. There's an account-level setting that has to be turned on to
+allow zero-amount completions — Juliette found and enabled it but couldn't pin down exactly
+which settings page it lived on. If a 100%-off test code ever "won't work" again with no
+visible cause, check this first before burning hours on coupon/promo-code debugging again.
+
 ## STILL OPEN before this can go live
 1. **stripe-webhook.js PRODUCT_MAP** still only maps the OLD £97 price_id
    (`price_1Tpr13CCw18geY15W6ooICYF`) to tag 20794312 / sequence 2820368. The new £197
