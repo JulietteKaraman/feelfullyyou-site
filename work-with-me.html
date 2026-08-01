@@ -4,17 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Work With Juliette Karaman · Coaching &amp; Intensives</title>
-<meta name="description" content="Every way to work with Juliette Karaman. Private sessions, intensives, memberships and the Cards. Find your way in.">
+<meta name="description" content="Every way to work with Juliette Karaman. Start on your own, come home to your body, or go all the way together. One method, many ways in.">
 <link rel="canonical" href="https://feelfullyyou.com/work-with-me">
 <meta property="og:title" content="Work With Juliette Karaman · Coaching & Intensives">
-<meta property="og:description" content="Every way to work with Juliette Karaman. Private sessions, intensives, memberships and the Cards. Find your way in.">
+<meta property="og:description" content="Every way to work with Juliette Karaman. Start on your own, come home to your body, or go all the way together. One method, many ways in.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://feelfullyyou.com/work-with-me">
 <meta property="og:image" content="https://feelfullyyou.com/julietteherobarstools.jpg">
 <meta property="og:site_name" content="Feel Fully You">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Work With Juliette Karaman · Coaching & Intensives">
-<meta name="twitter:description" content="Every way to work with Juliette Karaman. Private sessions, intensives, memberships and the Cards. Find your way in.">
+<meta name="twitter:description" content="Every way to work with Juliette Karaman. Start on your own, come home to your body, or go all the way together. One method, many ways in.">
 <meta name="twitter:image" content="https://feelfullyyou.com/julietteherobarstools.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -66,17 +66,20 @@
     .hero-text{padding:48px 28px}
   }
 
-  /* AUDIENCE SECTION */
+  /* TIER SECTION */
   .audience{padding:80px 28px;border-bottom:1px solid var(--line)}
   .audience.her{background:#ddeaf0}
   .audience.couples{background:var(--gold)}
   .audience.him{background:#ffffff}
 
-  .audience-head{max-width:var(--max);margin:0 auto 48px;display:flex;align-items:baseline;gap:20px}
-  .audience-head .label{font-family:var(--display);font-weight:800;font-size:clamp(1.8rem,4vw,2.8rem);color:var(--ink);letter-spacing:-.03em;line-height:1}
-  .audience-head .line{flex:1;height:1px;background:var(--line)}
-  /* FOR BOTH — light ochre background */
+  .audience-head{max-width:var(--max);margin:0 auto 12px}
+  .audience-head .label{font-family:var(--display);font-weight:800;font-size:clamp(1.7rem,3.6vw,2.6rem);color:var(--ink);letter-spacing:-.03em;line-height:1.05}
+  .audience-head .sub{font-size:15px;color:var(--brown);margin-top:8px;max-width:52ch;line-height:1.55}
+  .audience-head .line{height:1px;background:var(--line);margin-top:22px}
+  .audience .card-grid{margin-top:34px}
+  /* FOR BOTH — gold background */
   .audience.couples .audience-head .label{color:#fff}
+  .audience.couples .audience-head .sub{color:rgba(255,255,255,.9)}
   .audience.couples .audience-head .line{background:rgba(255,255,255,.35)}
   .audience.couples .card{background:var(--paper);border-color:var(--line)}
   .audience.couples .card .cat{color:var(--teal)}
@@ -91,24 +94,9 @@
   .audience.couples .card.featured .price{color:var(--gold-pale)}
   .audience.couples .card.featured p{color:#c8c0b4}
   .audience.couples .card.featured .btn{background:var(--gold);color:#fff}
-  /* FOR HIM — white background */
-  .audience.him .audience-head .label{color:var(--ink)}
-  .audience.him .audience-head .line{background:var(--line)}
-  .audience.him .card{background:var(--paper);border-color:var(--line)}
-  .audience.him .card .cat{color:var(--teal)}
-  .audience.him .card h3{color:var(--ink)}
-  .audience.him .card .price{color:var(--gold-deep)}
-  .audience.him .card p{color:var(--brown)}
-  .audience.him .card .btn{background:var(--teal);color:#fff}
-  .audience.him .card .btn:hover{background:var(--teal-deep)}
-  .audience.him .card.featured{background:var(--ink);border-color:var(--ink)}
-  .audience.him .card.featured .cat{color:var(--gold-pale)}
-  .audience.him .card.featured h3{color:#fff}
-  .audience.him .card.featured .price{color:var(--gold-pale)}
-  .audience.him .card.featured p{color:#c8c0b4}
-  .audience.him .card.featured .btn{background:var(--gold);color:#fff}
 
   .card-grid{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .card-grid.two{max-width:740px;grid-template-columns:repeat(2,1fr)}
   .card{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:28px 26px;display:flex;flex-direction:column}
   .card .cat{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--teal);font-weight:600;margin-bottom:12px}
   .card h3{font-family:var(--display);font-size:1.15rem;font-weight:700;color:var(--ink);letter-spacing:-.015em;line-height:1.18;margin-bottom:8px}
@@ -145,8 +133,7 @@
 
   @media(max-width:900px){.card-grid{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:580px){
-    .card-grid{grid-template-columns:1fr}
-      .audience-head{margin-bottom:32px}
+    .card-grid,.card-grid.two{grid-template-columns:1fr}
   }
   @media(prefers-reduced-motion:reduce){*{transition:none!important}.reveal{opacity:1;transform:none}}
   /* More dropdown */
@@ -155,7 +142,7 @@
   .more-wrap > button:hover{color:var(--gold-pale)}
   .more-wrap > button svg{transition:transform .2s}
   .more-wrap.open > button svg{transform:rotate(180deg)}
-  .dropdown{position:absolute;top:calc(100% + 10px);right:0;background:var(--teal-deep);border:1px solid var(--line-dark);border-radius:3px;min-width:180px;padding:6px 0;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .18s,transform .18s;z-index:9999}
+  .dropdown{position:absolute;top:calc(100% + 10px);right:0;background:var(--teal-deep);border:1px solid var(--line-dark);border-radius:3px;min-width:190px;padding:6px 0;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .18s,transform .18s;z-index:9999}
   .more-wrap.open .dropdown{opacity:1;pointer-events:all;transform:none}
   @media(max-width:860px){.dropdown{position:fixed;top:56px;right:16px}}
   .dropdown a{display:block;padding:10px 18px;font-size:13px;color:var(--cream);font-weight:500;transition:background .15s,color .15s}
@@ -195,9 +182,9 @@ gtag('config', 'G-SY8NKELMNZ');
     <div class="more-wrap" id="workWrap">
       <a href="/work-with-me" style="font-size:14px;color:var(--cream);font-weight:500;transition:color .2s;text-decoration:none">Work With Me</a><button onclick="document.getElementById('workWrap').classList.toggle('open')" aria-label="Sub-pages" style="background:none;border:none;cursor:pointer;color:var(--cream);padding:0 0 0 5px;display:inline-flex;align-items:center;transition:color .2s"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg></button>
       <div class="dropdown">
-        <a href="/for-her">For Her</a>
-        <a href="/for-him">For Him</a>
-        <a href="/for-both">For Both</a>
+        <a href="/one-touch">One Touch</a>
+        <a href="/the-room">The Room</a>
+        <a href="/the-beginning">The Beginning</a>
         <a href="/private-sessions">Private 1:1 Sessions</a>
       </div>
     </div>
@@ -223,9 +210,9 @@ gtag('config', 'G-SY8NKELMNZ');
 <nav class="mobile-nav" id="mobileNav">
   <a href="/">Home</a>
   <a href="/work-with-me" style="font-weight:600;color:var(--gold-pale)">Work With Me</a>
-  <a href="/for-her" style="padding-left:44px;font-size:14px;opacity:.85">For Her</a>
-  <a href="/for-him" style="padding-left:44px;font-size:14px;opacity:.85">For Him</a>
-  <a href="/for-both" style="padding-left:44px;font-size:14px;opacity:.85">For Both</a>
+  <a href="/one-touch" style="padding-left:44px;font-size:14px;opacity:.85">One Touch</a>
+  <a href="/the-room" style="padding-left:44px;font-size:14px;opacity:.85">The Room</a>
+  <a href="/the-beginning" style="padding-left:44px;font-size:14px;opacity:.85">The Beginning</a>
   <a href="/private-sessions" style="padding-left:44px;font-size:14px;opacity:.85">Private 1:1 Sessions</a>
   <a href="/cards">The Cards</a>
   <a href="/shop">Shop</a>
@@ -241,9 +228,9 @@ gtag('config', 'G-SY8NKELMNZ');
 <!-- HERO -->
 <header class="hero">
   <div class="hero-text">
-    <div class="eyebrow reveal">The Touch Reset &middot; one method, three doors</div>
+    <div class="eyebrow reveal">The Touch Reset &middot; one method, many ways in</div>
     <h1 class="reveal">Choose where you want to begin.</h1>
-    <p class="sub reveal">Everything here is The Touch Reset: the work I teach to bring touch back to a body that learned to brace. For women, for men, for couples. Whether you come alone or bring someone you love, there is a door sized for where you are right now.</p>
+    <p class="sub reveal">Everything here is The Touch Reset: the work I teach to bring touch back to a body that learned to brace. For women and for men, on your own or with someone you love. There is a door sized for where you are right now.</p>
     <p class="sub reveal" style="margin-top:14px">This is for someone who loves the person in front of them and cannot find the door back in.</p>
     <p class="sub reveal" style="margin-top:14px">You were told The Spontaneity Lie: that real closeness arrives on its own, and anything built on purpose is not the real thing. It does not arrive on its own. It is built.</p>
   </div>
@@ -252,28 +239,57 @@ gtag('config', 'G-SY8NKELMNZ');
   </div>
 </header>
 
-<!-- FOR HER -->
-<section class="audience her">
+<!-- TIER 1 START HERE -->
+<section class="audience">
   <div class="audience-head reveal">
-    <div class="label">For Her</div>
+    <div class="label">Start here</div>
+    <p class="sub">Free and simple. The gentlest way in, on your own, tonight.</p>
     <div class="line"></div>
   </div>
   <div class="card-grid">
 
     <div class="card reveal">
-      <div class="cat">Retreat · 25 Sep 2026 · London</div>
-      <h3>CONNECT With Essence</h3>
-      <div class="price">£247</div>
-      <p>A full day with Juliette, Liz, and Natasha. Body-based practices, honest conversation, and Ottolenghi lunch. For the woman ready to come back to herself.</p>
-      <a href="/connect-with-essence" class="btn">Find out more →</a>
+      <div class="cat">Free · 2 minutes</div>
+      <h3>The Touch Reset Quiz</h3>
+      <div class="price">Free</div>
+      <p>Find your Touch Pattern, your Pleasure Language, and how touch actually reaches you. The door to everything else.</p>
+      <a href="/touch-reset-quiz" class="btn">Take the quiz →</a>
     </div>
 
+    <div class="card reveal">
+      <div class="cat">In the app · Start tonight</div>
+      <h3>10 Touch Rituals</h3>
+      <div class="price">£7</div>
+      <p>Ten touch practices, a few minutes each. The simplest way to bring touch back into the room.</p>
+      <a href="/10-touch-rituals" class="btn">Get →</a>
+    </div>
+
+    <div class="card reveal">
+      <div class="cat">App · 475 cards</div>
+      <h3>Intimacy &amp; Communication Cards</h3>
+      <div class="price">From £15</div>
+      <p>475 cards to reach each other again. Read one aloud, answer from the heart, one answer at a time. Go deeper than you have in years.</p>
+      <a href="/cards" class="btn">Explore →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- TIER 2 COME HOME TO YOUR OWN BODY -->
+<section class="audience her">
+  <div class="audience-head reveal">
+    <div class="label">Come home to your own body</div>
+    <p class="sub">Before you ask anyone else to meet you, you learn to meet yourself.</p>
+    <div class="line"></div>
+  </div>
+  <div class="card-grid">
+
     <div class="card reveal featured">
-      <div class="cat">Group · 8 Weeks</div>
-      <h3>The Room</h3>
-      <div class="price">£3,000 &nbsp;·&nbsp; VIP £5,000</div>
-      <p>Eight weeks inside a group of women learning to be touched: in their bodies, their relationships, their lives.</p>
-      <a href="/the-room" class="btn">Find out more →</a>
+      <div class="cat">Solo · 7 days · for both</div>
+      <h3>One Touch</h3>
+      <div class="price">£97</div>
+      <p>Seven days, your own hands, entirely private. Learn to feel your own Touch Pattern in your body before you ask anyone else to meet it. For men and women.</p>
+      <a href="/one-touch" class="btn">Start One Touch →</a>
     </div>
 
     <div class="card reveal">
@@ -284,74 +300,40 @@ gtag('config', 'G-SY8NKELMNZ');
       <a href="/private-sessions" class="btn">See private sessions →</a>
     </div>
 
+    <div class="card reveal">
+      <div class="cat">Women's retreat · 25 Sep 2026 · London</div>
+      <h3>CONNECT With Essence</h3>
+      <div class="price">£247</div>
+      <p>A full day with Juliette, Liz, and Natasha. Body-based practices, honest conversation, and Ottolenghi lunch. For the woman ready to come back to herself.</p>
+      <a href="/connect-with-essence" class="btn">Find out more →</a>
+    </div>
+
   </div>
 </section>
 
-<!-- FOR COUPLES -->
+<!-- TIER 3 GO ALL THE WAY TOGETHER -->
 <section class="audience couples">
   <div class="audience-head reveal">
-    <div class="label">For Both</div>
+    <div class="label">Go all the way, together</div>
+    <p class="sub">When you are ready to rewrite the whole pattern, in a group or in private.</p>
     <div class="line"></div>
   </div>
-  <div class="card-grid">
-
-    <div class="card reveal">
-      <div class="cat">Digital · Start tonight</div>
-      <h3>10 Touch Rituals</h3>
-      <div class="price">£7</div>
-      <p>Ten non-sexual touch practices. A few minutes each. The simplest way to begin reaching each other again.</p>
-      <a href="/10-touch-rituals" class="btn">Get →</a>
-    </div>
-
-    <div class="card reveal">
-      <div class="cat">App · 475 Cards</div>
-      <h3>Intimacy &amp; Communication Cards</h3>
-      <div class="price">From £15</div>
-      <p>475 cards to reach each other again. Read one aloud, answer from the heart, one answer at a time. Go deeper than you have in years.</p>
-      <a href="/cards" class="btn">Explore →</a>
-    </div>
+  <div class="card-grid two">
 
     <div class="card reveal featured">
+      <div class="cat">Group · 8 weeks · for both</div>
+      <h3>The Room</h3>
+      <div class="price">£3,000 &nbsp;·&nbsp; VIP £5,000</div>
+      <p>Eight weeks inside a held group, learning to be touched: in your body, your relationship, your life. Now for women and men.</p>
+      <a href="/the-room" class="btn">Find out more →</a>
+    </div>
+
+    <div class="card reveal">
       <div class="cat">Private · Couples</div>
       <h3>The Beginning</h3>
       <div class="price">From £8,997</div>
       <p>The most immersive container Juliette offers. For the couple who is ready to completely rewrite the pattern.</p>
       <a href="/the-beginning" class="btn">See the full programme →</a>
-    </div>
-
-  </div>
-</section>
-
-<!-- FOR HIM -->
-<section class="audience him">
-  <div class="audience-head reveal">
-    <div class="label">For Him</div>
-    <div class="line"></div>
-  </div>
-  <div class="card-grid">
-
-    <div class="card reveal">
-      <div class="cat">Digital Guide</div>
-      <h3>The Unspoken Distance</h3>
-      <div class="price">£77</div>
-      <p>Nine parts. What the distance is made of, why it keeps showing up, and what to do about it. For the man who knows something is off but doesn't know what.</p>
-      <a href="/the-unspoken-distance" class="btn">Get the guide →</a>
-    </div>
-
-    <div class="card reveal featured">
-      <div class="cat">Membership · Monthly</div>
-      <h3>Touch Point</h3>
-      <div class="price">£197/month</div>
-      <p>Private Telegram group. Weekly coaching audio. Monthly live session. For the man who wants ongoing access, not a one-off.</p>
-      <a href="/touch-point" class="btn">Join →</a>
-    </div>
-
-    <div class="card reveal">
-      <div class="cat">Private · 1:1 with Juliette</div>
-      <h3>Private 1:1 Sessions</h3>
-      <div class="price">From £497</div>
-      <p>Prefer to work privately? One session, one day, or two months. Fully confidential. All the private ways to work with Juliette, on one page.</p>
-      <a href="/private-sessions" class="btn">See private sessions →</a>
     </div>
 
   </div>
