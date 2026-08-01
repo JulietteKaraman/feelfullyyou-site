@@ -8,9 +8,10 @@
 /work-with-me                   /work-with-me.html              200
 /the-beginning                  /the-beginning.html             200
 /couples-intensive              /couples-intensive.html         200
-/womens-intensive               /womens-intensive.html          200
+/womens-intensive               /the-intensive                  301
 /womens-six-week-intensive      /the-2-month-intensive          301
-/mens-intensive                 /mens-intensive.html            200
+/the-intensive                  /the-intensive.html             200
+/mens-intensive                 /the-intensive                  301
 /mens-six-week-intensive        /the-2-month-intensive          301
 /the-unspoken-distance          /the-unspoken-distance.html     200
 /10-touch-rituals               /10-touch-rituals.html          200
