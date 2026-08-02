@@ -431,9 +431,13 @@ strong { font-weight: 700; color: var(--ink); }
 }
 .about .photo img { width: 100%; height: auto; display: block; object-fit: contain; object-position: bottom center; }
 .about .copy { padding: 88px 56px; }
-.about h2 { font-size: clamp(1.8rem, 3.6vw, 2.4rem); }
+.about h2 { font-weight: 800; font-style: italic; font-size: clamp(2.1rem, 4.4vw, 3.2rem); color: var(--gold-deep); letter-spacing: -.03em; }
 .about h2 .it { font-style: italic; color: var(--gold-deep); }
-.about p { color: var(--brown); margin: 18px 0; max-width: 60ch; }
+.about .opener { font-family: var(--display); font-weight: 600; font-style: italic; font-size: clamp(1.2rem, 2.2vw, 1.5rem); color: var(--ink); line-height: 1.4; max-width: 30ch; margin: 18px 0; }
+.about p { color: var(--brown); margin: 18px 0; max-width: 60ch; line-height: 1.8; }
+.about p strong { color: var(--ink); }
+.about p em { font-style: italic; color: var(--gold-deep); font-weight: 600; }
+.trname { font-weight: 800; color: var(--gold-deep); font-size: 1.4em; letter-spacing: -.015em; }
 .about .methods { display: flex; flex-direction: column; gap: 2px; margin: 24px 0; border-top: 1px solid var(--line); }
 .about .m { padding: 16px 0; border-bottom: 1px solid var(--line); }
 .about .m b { font-family: var(--display); font-weight: 600; color: var(--ink); font-size: 1.05rem; }
@@ -441,11 +445,14 @@ strong { font-weight: 700; color: var(--ink); }
 .about .close {
   font-family: var(--display);
   font-weight: 700;
-  font-size: 1.3rem;
-  color: var(--ink);
+  font-style: italic;
+  font-size: clamp(1.3rem, 2.4vw, 1.7rem);
+  color: var(--gold-deep);
   letter-spacing: -.015em;
   margin-top: 24px;
-  line-height: 1.25;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  line-height: 1.35;
 }
 .about .stand-q {
   font-family: var(--display);
