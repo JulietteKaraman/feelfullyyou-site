@@ -10,12 +10,12 @@
 <meta property="og:description" content="Juliette Karaman is an intimacy and touch expert.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://feelfullyyou.com/about">
-<meta property="og:image" content="https://feelfullyyou.com/julietteherobarstools.jpg">
+<meta property="og:image" content="https://feelfullyyou.com/about-hero-plain.jpg">
 <meta property="og:site_name" content="Feel Fully You">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="About Juliette Karaman · Intimacy & Touch Expert">
 <meta name="twitter:description" content="Juliette Karaman is an intimacy and touch expert.">
-<meta name="twitter:image" content="https://feelfullyyou.com/julietteherobarstools.jpg">
+<meta name="twitter:image" content="https://feelfullyyou.com/about-hero-plain.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -61,23 +61,28 @@
   .dropdown a:hover{background:var(--teal);color:var(--gold-pale)}
 
   /* HERO */
-  .hero{position:relative;background:var(--teal);text-align:center;min-height:88vh;display:flex;flex-direction:column;padding-top:64px}
-  .hero-img{width:100%;height:88vh;object-fit:cover;object-position:center 20%;display:block}
-  .hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(7,7,7,.18) 0%,rgba(13,53,53,.72) 65%,rgba(13,53,53,.92) 100%)}
-  .hero-text{position:absolute;bottom:0;left:0;right:0;padding:0 28px 72px;text-align:center}
-  .hero .eyebrow{color:var(--gold-pale);margin-bottom:20px}
-  .hero h1{font-family:var(--display);font-weight:700;font-size:clamp(2.2rem,5vw,3.6rem);color:#fff;line-height:1.05;letter-spacing:-.028em;max-width:18ch;margin:0 auto 24px}
-  .hero h1 em{font-style:italic;color:var(--gold-pale)}
-  .hero .open{font-family:var(--display);font-weight:500;font-style:italic;font-size:clamp(1.1rem,2.2vw,1.4rem);color:#d7d0c4;max-width:52ch;margin:0 auto;line-height:1.5}
-  @media(max-width:700px){.hero-img{object-position:center 30%}}
+  .hero{position:relative;background:var(--teal);padding-top:64px}
+  .hero-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:0 64px;max-width:1180px;margin:0 auto;align-items:center;min-height:calc(88vh - 64px)}
+  .hero-photo{order:-1}
+  .hero-copy{padding:56px 28px 56px 0;text-align:left}
+  .hero-copy .eyebrow{color:var(--gold-pale);margin-bottom:24px;display:block;font-size:.72rem;letter-spacing:.26em}
+  .hero-copy h1{margin-bottom:32px}
+  .hero-copy h1 .lead{display:block;font-family:var(--display);font-weight:600;font-size:clamp(1.15rem,1.8vw,1.4rem);color:#fff;opacity:.8;letter-spacing:-.008em;margin-bottom:8px}
+  .hero-copy h1 .punch{display:block;font-family:var(--display);font-weight:800;font-style:italic;font-size:clamp(3rem,7vw,5.6rem);line-height:.98;color:var(--gold-pale);letter-spacing:-.032em}
+  .hero-copy .open{font-family:var(--display);font-weight:500;font-style:italic;font-size:.95rem;color:#a9a294;line-height:1.7;margin-bottom:16px;max-width:36ch}
+  .hero-photo{width:100%;aspect-ratio:752/1203;overflow:hidden;border-radius:3px;box-shadow:0 24px 64px rgba(0,0,0,.28)}
+  .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center 15%;display:block}
+  @media(max-width:860px){.hero-grid{grid-template-columns:1fr;min-height:auto;gap:32px}.hero-photo{order:0}.hero-copy{padding:48px 28px 8px;text-align:center}.hero-copy .open{margin-left:auto;margin-right:auto}.hero-photo{max-width:340px;margin:0 auto 48px}}
 
   /* PROSE SECTIONS */
   .prose{max-width:740px;margin:0 auto;padding:80px 28px}
-  .prose h2{font-family:var(--display);font-weight:700;font-size:clamp(1.6rem,3.2vw,2.2rem);color:var(--ink);letter-spacing:-.022em;line-height:1.1;margin-bottom:28px}
-  .prose p{color:var(--brown);margin-bottom:22px;font-size:1.0625rem;line-height:1.75}
+  .prose h2, .popH2{font-family:var(--display);font-weight:800;font-style:italic;font-size:clamp(2.3rem,4.8vw,3.6rem);color:var(--gold-deep);letter-spacing:-.03em;line-height:1.04;margin-bottom:40px}
+  .prose p{color:var(--brown);margin-bottom:30px;font-size:1.0625rem;line-height:1.85}
   .prose p:last-child{margin-bottom:0}
-  .prose strong{color:var(--ink);font-weight:600}
-  .prose em{font-style:italic;color:var(--gold-deep)}
+  .prose strong, .origin-copy strong, .karim-copy strong{color:var(--ink);font-weight:700}
+  .prose em, .origin-copy em, .karim-copy em{font-style:italic;color:var(--gold-deep);font-weight:600}
+  .pullline{font-family:var(--display);font-weight:800;font-style:italic;font-size:clamp(1.7rem,3.4vw,2.5rem);color:var(--gold-deep);letter-spacing:-.02em;line-height:1.15;margin:44px 0 !important;padding-top:36px;border-top:1px solid var(--line)}
+  .beat{font-family:var(--display);font-weight:700;font-size:clamp(1.3rem,2.4vw,1.7rem);color:var(--ink);letter-spacing:-.015em;margin-bottom:26px !important}
 
   /* MODALITY PILLS */
   .pills{display:flex;flex-wrap:wrap;gap:8px;margin:28px 0 8px}
@@ -104,7 +109,7 @@
   /* WHAT SHE STANDS FOR */
   .stand{background:var(--teal);padding:80px 28px;text-align:center}
   .stand .eyebrow{color:var(--gold-pale);margin-bottom:20px}
-  .stand h2{font-family:var(--display);font-weight:700;font-size:clamp(1.6rem,3vw,2.2rem);color:#fff;letter-spacing:-.022em;margin-bottom:16px}
+  .stand h2{font-family:var(--display);font-weight:800;font-style:italic;font-size:clamp(1.9rem,3.8vw,2.9rem);color:var(--gold-pale);letter-spacing:-.026em;line-height:1.1;max-width:20ch;margin:0 auto 20px}
   .stand .intro{color:#d7d0c4;font-size:1.0625rem;max-width:48ch;margin:0 auto 48px;line-height:1.65}
   .stand-list{display:grid;grid-template-columns:1fr 1fr;gap:0;max-width:800px;margin:0 auto 52px;text-align:left}
   .stand-item{display:flex;align-items:flex-start;gap:14px;padding:18px 20px;border-bottom:1px solid rgba(255,255,255,.1)}
@@ -220,13 +225,16 @@ gtag('config', 'G-SY8NKELMNZ');
 
 <!-- HERO -->
 <section class="hero">
-  <img src="/julietteherobarstools.jpg" alt="Juliette Karaman" class="hero-img">
-  <div class="hero-overlay"></div>
-  <div class="hero-text">
-    <p class="eyebrow reveal">About Juliette</p>
-    <h1 class="reveal">Touch base with yourself. <em>Be touched by life.</em></h1>
-    <p class="open reveal">This isn't self-help. It's a full-body remembrance of softness and strength. Of what's always been yours.</p>
-    <p class="open reveal" style="margin-top:14px">This is for someone who loves the person in front of them and cannot find the door back in.</p>
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow reveal">About Juliette</p>
+      <h1 class="reveal"><span class="lead">Touch base with yourself.</span><span class="punch">Be touched by life.</span></h1>
+      <p class="open reveal">This isn't self-help. It's a full-body remembrance of softness and strength. Of what's always been yours.</p>
+      <p class="open reveal">This is for someone who loves the person in front of them and cannot find the door back in.</p>
+    </div>
+    <div class="hero-photo reveal">
+      <img src="/about-hero-plain.jpg" alt="Juliette Karaman">
+    </div>
   </div>
 </section>
 
@@ -235,13 +243,13 @@ gtag('config', 'G-SY8NKELMNZ');
   <div class="prose">
     <p class="eyebrow reveal" style="color:var(--gold-deep);margin-bottom:20px">Where this began</p>
     <h2 class="reveal">Sensation over strategy. Presence over performance.</h2>
-    <p class="reveal">Before I worked with couples, visionaries, and women reclaiming themselves, I was a SENCO, supporting children on the autism spectrum to feel, regulate, and trust what they sensed but couldn't speak. That is where this work began. In those rooms, I learned something that has shaped everything since: the body already knows. It always has.</p>
-    <p class="reveal">I created The Touch Reset, my method for taking you from performing fine to landing in your own body, built on Touch Base® and Touch Languages™. There is a way in for women and for men, alone or with someone you love. All of it from lived experience, not textbooks, in the rooms where people stop performing and start feeling. I'm the author of The Touch Languages™, the book that carries the full framework.</p>
+    <p class="reveal">Before I worked with couples, visionaries, and women reclaiming themselves, I was a SENCO, supporting children on the autism spectrum to feel, regulate, and trust what they sensed but couldn't speak. That is where this work began. In those rooms, I learned something that has shaped everything since: <em>the body already knows.</em> It always has.</p>
+    <p class="reveal">I created <strong>The Touch Reset</strong>, my method for taking you from performing fine to landing in your own body, built on <strong>Touch Base®</strong> and <strong>Touch Languages™</strong>. There is a way in for women and for men, alone or with someone you love. All of it from <em>lived experience, not textbooks</em>, in the rooms where people stop performing and start feeling. I'm the author of <strong>The Touch Languages™</strong>, the book that carries the full framework.</p>
     <div class="pills reveal">
       <span>Author</span><span>EMDR</span><span>Hypnotherapy</span><span>Touch Base®</span><span>Touch Languages™</span><span>Somatic experiencing</span><span>Spinal attunement</span><span>Energy work</span><span>Deep PEAT</span><span>Aspectics</span><span>Soma Mystica</span><span>RRRR®</span><span>Erotic Blueprints</span>
     </div>
-    <p class="reveal" style="margin-top:20px;font-family:var(--display);font-weight:700;font-size:1.2rem;color:var(--gold-deep);letter-spacing:-.01em;font-style:italic">I did not collect these. I needed every single one.</p>
-    <p class="reveal" style="margin-top:20px">You were told The Spontaneity Lie: that real closeness arrives on its own, and anything built on purpose is not the real thing. It does not arrive on its own. It is built.</p>
+    <p class="reveal pullline">I did not collect these. I needed every single one.</p>
+    <p class="reveal">You were told <strong>The Spontaneity Lie</strong>: that real closeness arrives on its own, and anything built on purpose is not the real thing. It does not arrive on its own. <em>It is built.</em></p>
   </div>
 </section>
 
@@ -255,12 +263,12 @@ gtag('config', 'G-SY8NKELMNZ');
   <div class="origin-grid">
     <div class="origin-copy">
       <p class="eyebrow reveal" style="color:var(--gold-deep);margin-bottom:20px">Her story</p>
-      <h2 class="reveal" style="font-family:var(--display);font-weight:700;font-size:clamp(1.6rem,3.2vw,2.2rem);color:var(--ink);letter-spacing:-.022em;line-height:1.1;margin-bottom:28px">The life that looked perfect on the outside.</h2>
-      <p class="reveal" style="color:var(--brown);margin-bottom:22px;font-size:1.0625rem;line-height:1.75">I built a life that looked extraordinary. Four children of my own. A relationship with a man who had three. Seven children, two homes, different cultures, one family woven together with love and sheer will. I was devoted. I overgave. I held it all: the harmony, the logistics, the emotional weight of everyone around me, while quietly carrying my own in the body.</p>
-      <p class="reveal" style="color:var(--brown);margin-bottom:22px;font-size:1.0625rem;line-height:1.75">Then my body stopped me.</p>
-      <p class="reveal" style="color:var(--brown);margin-bottom:22px;font-size:1.0625rem;line-height:1.75">Nine months of illness. Fainting. Hospitals. A body that refused to keep going until I listened. I had become a shell of the woman I used to be, performing strength, managing everyone's safety, holding a smile over what I actually felt. My body knew before I did: this was not sustainable. This was not living.</p>
-      <p class="reveal" style="color:var(--brown);margin-bottom:16px;font-size:1.0625rem;line-height:1.75">That nine months changed everything. It forced me to choose myself for the first time, with full permission.</p>
-      <p class="reveal" style="font-family:var(--display);font-weight:700;font-size:1.2rem;color:var(--gold-deep);letter-spacing:-.01em;font-style:italic;line-height:1.45">That terrifying, liberating choice became the root of everything I now teach.</p>
+      <h2 class="reveal popH2">The life that looked perfect on the outside.</h2>
+      <p class="reveal" style="color:var(--brown);margin-bottom:22px;font-size:1.0625rem;line-height:1.85">I built a life that looked extraordinary. <strong>Four children of my own.</strong> A relationship with a man who had three. Seven children, two homes, different cultures, one family woven together with love and sheer will. I was devoted. I overgave. I held it all: the harmony, the logistics, the emotional weight of everyone around me, while quietly carrying my own in the body.</p>
+      <p class="reveal beat">Then my body stopped me.</p>
+      <p class="reveal" style="color:var(--brown);margin-bottom:22px;font-size:1.0625rem;line-height:1.85">Nine months of illness. Fainting. Hospitals. A body that refused to keep going until I listened. I had become a shell of the woman I used to be, performing strength, managing everyone's safety, holding a smile over what I actually felt. My body knew before I did: <em>this was not sustainable. This was not living.</em></p>
+      <p class="reveal" style="color:var(--brown);margin-bottom:16px;font-size:1.0625rem;line-height:1.85">That nine months changed everything. It forced me to choose myself for the first time, with full permission.</p>
+      <p class="reveal pullline">That terrifying, liberating choice became the root of everything I now teach.</p>
     </div>
     <div class="origin-photo reveal">
       <img src="/about-middle.jpg" alt="Juliette Karaman">
@@ -270,19 +278,19 @@ gtag('config', 'G-SY8NKELMNZ');
 
 <!-- KARIM WITH PHOTO -->
 <section class="karim" style="padding:0">
-  <div class="reveal" style="width:100%;overflow:hidden;max-height:676px">
-    <img src="/familyxmas.jpg" alt="Juliette with family at Christmas" style="width:100%;height:676px;object-fit:cover;object-position:center 20%;display:block" loading="lazy" decoding="async">
-  </div>
   <div class="karim-grid" style="grid-template-columns:1fr;max-width:740px;margin:0 auto">
-    <div class="karim-copy" style="padding:60px 28px">
+    <div class="karim-copy" style="padding:72px 28px 48px">
       <p class="eyebrow reveal" style="color:var(--gold-deep);margin-bottom:20px">What became possible</p>
-      <h2 class="reveal" style="font-family:var(--display);font-weight:700;font-size:clamp(1.6rem,3.2vw,2.2rem);color:var(--ink);letter-spacing:-.022em;line-height:1.1;margin-bottom:28px">Our children never had to choose.</h2>
-      <p class="reveal" style="margin-bottom:20px">When my relationship with Karim ended, we sat down together, before any lawyers, and decided everything.</p>
-      <p class="reveal" style="margin-bottom:20px">How our children would spend time with each of us. What happened to the houses, the money, the life we'd built. By the time we reached the lawyers, there was nothing left to fight over.</p>
-      <p class="reveal" style="margin-bottom:20px">Fifteen years later, Karim and I spend Christmas together. Birthdays together. We're each other's closest friends, just no longer married.</p>
-      <p class="reveal" style="margin-bottom:28px">Every time we're at a table together, someone pulls me aside and asks: <span class="ask">how did you do that?</span></p>
-      <p class="reveal" style="font-family:var(--display);font-weight:700;font-size:clamp(1.15rem,2.4vw,1.5rem);color:var(--gold-deep);letter-spacing:-.01em;font-style:italic;line-height:1.45;padding-top:16px;border-top:1px solid var(--line)">That is the work. That is what becomes possible when you stop performing safety and start building it from the inside.</p>
+      <h2 class="reveal popH2">Our children never had to choose.</h2>
+      <p class="reveal" style="margin-bottom:20px;line-height:1.85">When my relationship with Karim ended, we sat down together, <em>before any lawyers</em>, and decided everything.</p>
+      <p class="reveal" style="margin-bottom:20px;line-height:1.85">How our children would spend time with each of us. What happened to the houses, the money, the life we'd built. By the time we reached the lawyers, <strong>there was nothing left to fight over.</strong></p>
+      <p class="reveal beat">Fifteen years later, we still spend Christmas together.</p>
+      <p class="reveal" style="margin-bottom:28px;line-height:1.85">Birthdays together. We're each other's closest friends, just no longer married. Every time we're at a table together, someone pulls me aside and asks: <span class="ask">how did you do that?</span></p>
+      <p class="reveal pullline">That is the work. That is what becomes possible when you stop performing safety and start building it from the inside.</p>
     </div>
+  </div>
+  <div class="reveal" style="width:100%;overflow:hidden;max-height:520px;margin-top:56px">
+    <img src="/familyxmas.jpg" alt="Juliette with family at Christmas" style="width:100%;height:520px;object-fit:cover;object-position:center 20%;display:block" loading="lazy" decoding="async">
   </div>
 </section>
 
