@@ -1,6 +1,6 @@
 #!/bin/bash
 # FFY site health check — runs against live feelfullyyou.com
-# Set up as a cron job: crontab -e  →  0 8,20 * * * /Users/julietteckaraman/Desktop/feelfullyyou-site/check-site.sh
+# Set up as a cron job: crontab -e  →  0 8,20 * * * "/Users/julietteckaraman/Desktop/Site & Dev Files/feelfullyyou-site/check-site.sh"
 
 BASE="https://feelfullyyou.com"
 FAILED=()
