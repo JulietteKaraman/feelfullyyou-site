@@ -138,7 +138,7 @@
   .scrollcue{margin-top:26px;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(221,201,142,.7);font-weight:400}
 
   .tstack{margin-top:26px;display:flex;flex-direction:column;gap:16px;text-align:left}
-  .trow{background:rgba(254,252,250,.06);border:1px solid rgba(221,201,142,.28);border-radius:14px;padding:18px 20px}
+  .trow{background:rgba(254,252,250,.13);border:1px solid rgba(221,201,142,.32);border-left:3px solid var(--gold-pale);border-radius:14px;padding:18px 20px}
   .trow .thead{display:flex;align-items:center;gap:10px;margin-bottom:8px}
   .trow .tname{font-family:var(--display);font-weight:600;color:#fff;font-size:1.08rem;margin-bottom:2px}
   .trow .tlabel{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-pale);font-weight:600}
@@ -232,23 +232,13 @@
   .consent{color:#9a917f}
   /* result: dark bands stay genuinely dark (teal-deep) for real color rhythm against the cream body + teal bands */
   .rband.dark{background:var(--teal-deep)}
-  .rband.hero{background:linear-gradient(180deg,#fbf2e2 0%,var(--cream) 62%);background-color:var(--cream)}
-  .rband.hero .hero-eyebrow,.rband.hero .scrollcue{color:var(--gold-deep)}
-  .rband.hero .idline{color:var(--ink)}
-  .rband.hero .idline .g{color:var(--gold-deep)}
-  .rband.hero .idsub,.rband.hero .idaffirm{color:var(--brown)}
-  .emblem{border-color:var(--gold);background:#fff;box-shadow:0 0 40px -12px rgba(168,133,56,.5)}
-  .emblem svg{stroke:var(--gold-deep)}
-  .stack{background:#fff;border-color:#e7dfce}
-  .srow+.srow{border-color:#efe7d6}
-  .slabel{color:var(--gold-deep)}
-  .sval{color:var(--teal)}
-  .inbox{background:#f6edda;border-color:var(--gold-soft);color:var(--gold-deep)}
+  /* .rband.hero keeps its own photo + dark overlay from the base rule above,
+     with the pale gold/cream text built for it, on purpose, not part of the
+     cream light theme, the photo is the point of this band. */
   .rband.dark .reyebrow{color:var(--gold-pale)}
   .rband.dark .reyebrow:before{background:var(--gold-pale)}
   .rband.dark .bandhead{color:var(--cream)}
   .rband.dark .bandtext{color:rgba(254,252,250,.88)}
-  .rband.dark .pitch{background:rgba(254,252,250,.04);border-color:rgba(221,201,142,.35)}
   .rband.dark .pitch .pl{color:var(--gold-pale)}
   .rband.dark .pitch h2{color:var(--cream)}
   .rband.dark .pitch .blurb,.rband.dark .pitch .foryou li{color:rgba(254,252,250,.85)}
@@ -843,6 +833,9 @@
     answers=answers.map(function(_,idx){return idx%3;});
     intro.style.display='none';contextSec.style.display='none';identitySec.style.display='none';stageSec.style.display='none';quiz.style.display='none';
     doReveal();
+    // skip the scroll-triggered fade-in, show everything already settled since
+    // there's no real scrolling to trigger it on a straight jump like this
+    document.querySelectorAll('.reveal, .rin').forEach(function(el){el.classList.add('in');});
   }
 })();
 </script>
