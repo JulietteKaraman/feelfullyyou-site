@@ -53,6 +53,10 @@
   .btn.ghost:hover{background:var(--cream);color:var(--teal)}
   .btn.dark{background:var(--teal);color:var(--cream)}
   .btn.dark:hover{background:#0a2a2a}
+  .btn.promo{background:var(--cream);color:var(--teal)}
+  .btn.promo:hover{background:#fff}
+  .btn.promo-pulse{position:relative;box-shadow:0 0 0 0 rgba(254,252,250,.5);animation:btnPulse 2.2s infinite}
+  @keyframes btnPulse{0%{box-shadow:0 0 0 0 rgba(254,252,250,.5)}70%{box-shadow:0 0 0 14px rgba(254,252,250,0)}100%{box-shadow:0 0 0 0 rgba(254,252,250,0)}}
 
   /* NAV */
   .topbar{position:fixed;top:0;left:0;right:0;z-index:9999;background:var(--teal);padding:0 28px;height:64px;display:flex;align-items:center;justify-content:space-between}
@@ -513,7 +517,7 @@ gtag('config', 'G-SY8NKELMNZ');
         <li>Friends &amp; Family deck included</li>
         <li>Everything in one app</li>
       </ul>
-      <a href="https://couplecards.netlify.app/purchase/email?product=full-set" class="btn">Get Access</a>
+      <a href="https://couplecards.netlify.app/purchase/email?product=full-set" class="btn" id="bundleCta">Get Access</a>
     </div>
 
   </div>
@@ -708,7 +712,8 @@ document.addEventListener('click', function(e){
     BIRTHBABE:      { pct: 20, label: 'your community' },
     '6AMReset':     { pct: 20, label: 'your community' },
     PLEASURE:       { pct: 50, label: 'summit guests' },
-    PROUD50:        { pct: 50, label: 'Insider Touch readers' }
+    PROUD50:        { pct: 50, label: 'Insider Touch readers' },
+    CARDSVIP:       { pct: 100, label: 'VIP' }
   };
 
   var promo = new URLSearchParams(location.search).get('promo');
@@ -717,9 +722,12 @@ document.addEventListener('click', function(e){
   var banner = document.getElementById('promoBanner');
   var bannerText = document.getElementById('promoBannerText');
   var known = KNOWN_CODES[promo];
+  var isFree = known && known.pct >= 100;
 
   bannerText.textContent = known
-    ? 'Exclusively for ' + known.label + ' · ' + known.pct + '% off the Full Bundle, code ' + promo + ' is applied for you at checkout.'
+    ? (isFree
+        ? 'Exclusively for ' + known.label + ' · the Full Bundle below is free, code ' + promo + ' is applied for you at checkout.'
+        : 'Exclusively for ' + known.label + ' · ' + known.pct + '% off the Full Bundle below, code ' + promo + ' is applied for you at checkout.')
     : 'Code ' + promo + ' is applied for you at checkout.';
 
   banner.style.display = 'block';
@@ -736,9 +744,18 @@ document.addEventListener('click', function(e){
 
   if (known) {
     var priceEl = document.getElementById('bundlePrice');
+    var discounted = (55 * (1 - known.pct / 100)).toFixed(2).replace(/\.00$/, '');
     if (priceEl) {
-      var discounted = (55 * (1 - known.pct / 100)).toFixed(2).replace(/\.00$/, '');
-      priceEl.innerHTML = '<span style="text-decoration:line-through;opacity:.5;font-size:.7em;margin-right:8px">£55</span>£' + discounted;
+      priceEl.innerHTML = isFree
+        ? '<span style="text-decoration:line-through;opacity:.5;font-size:.7em;margin-right:8px">£55</span>FREE'
+        : '<span style="text-decoration:line-through;opacity:.5;font-size:.7em;margin-right:8px">£55</span>£' + discounted;
+    }
+    // Make it unmistakable which button to click, put the price right on it
+    // and give it a colour + pulse the other two decks don't have.
+    var cta = document.getElementById('bundleCta');
+    if (cta) {
+      cta.textContent = isFree ? 'Get Access · Free for you' : 'Get Access · £' + discounted;
+      cta.classList.add('promo', 'promo-pulse');
     }
   }
 
