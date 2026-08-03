@@ -66,8 +66,9 @@
   #audience{text-align:center;display:none}
   #audience h1{font-size:1.7rem;margin-top:12px}
   #audience .aud-opts{display:flex;flex-direction:column;gap:11px;margin-top:26px}
-  .aud{font-family:var(--display);font-weight:500;text-align:center;width:100%;background:rgba(254,252,250,.04);border:1px solid rgba(221,201,142,.3);border-radius:12px;padding:18px;font-size:1.05rem;color:var(--cream);cursor:pointer;transition:border-color .18s,background .18s,transform .18s}
-  .aud:hover{border-color:var(--gold-pale);background:rgba(221,201,142,.09);transform:translateY(-1px)}
+  .aud{font-family:var(--display);font-weight:500;text-align:center;width:100%;background:rgba(254,252,250,.04);border:1px solid rgba(221,201,142,.3);border-radius:12px;padding:18px;font-size:1.05rem;color:var(--cream);cursor:pointer;box-shadow:0 1px 2px rgba(0,0,0,.2);transition:border-color .18s ease,background .18s ease,transform .16s cubic-bezier(.23,1,.32,1),box-shadow .18s ease}
+  @media (hover:hover) and (pointer:fine){.aud:hover{border-color:var(--gold-pale);background:rgba(221,201,142,.09);transform:translateY(-2px);box-shadow:0 10px 24px -10px rgba(0,0,0,.4)}}
+  .aud:active{transform:scale(.97);transition-duration:.1s}
   .aud span{display:block;font-family:var(--body);font-weight:300;font-size:.82rem;color:rgba(254,252,250,.6);margin-top:3px}
 
   .qrings{display:flex;justify-content:center;gap:12px;margin-bottom:20px}
@@ -75,15 +76,17 @@
   .qrings .ring.active{opacity:1;transform:scale(1.14)}
   .proghead{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:12px}
   .proghead .l{width:24px;height:1px;background:rgba(221,201,142,.4)}
-  .phase{display:block;text-align:center;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:rgba(221,201,142,.65);margin-bottom:16px;font-weight:400}
+  .phase{display:block;text-align:center;font-family:var(--display);font-size:1.05rem;letter-spacing:-.01em;color:var(--gold-pale);margin-bottom:4px;font-weight:700}
+  .phaseSub{display:block;text-align:center;font-size:.86rem;font-style:italic;font-weight:300;color:rgba(254,252,250,.62);margin-bottom:18px;max-width:38ch;margin-left:auto;margin-right:auto;line-height:1.4}
   .track{height:2px;background:rgba(254,252,250,.1);border-radius:2px;overflow:hidden}
   .track .bar{height:100%;width:0;background:var(--gold);transition:width .35s}
 
   .qtext{font-family:var(--display);color:var(--cream);font-size:1.34rem;font-weight:500;line-height:1.34;text-align:center;margin:22px 0 24px}
   .opts{display:flex;flex-direction:column;gap:9px}
-  .opt{font-family:var(--body);text-align:left;width:100%;background:rgba(254,252,250,.035);border:1px solid rgba(221,201,142,.26);border-radius:11px;padding:15px 18px;font-size:.96rem;color:rgba(254,252,250,.84);line-height:1.5;cursor:pointer;transition:border-color .18s,background .18s,color .18s;font-weight:300}
-  .opt:hover{border-color:rgba(221,201,142,.6);background:rgba(221,201,142,.07)}
-  .opt.sel{border-color:var(--gold-pale);border-width:1.5px;background:rgba(221,201,142,.14);color:var(--cream)}
+  .opt{font-family:var(--body);text-align:left;width:100%;background:rgba(254,252,250,.035);border:1px solid rgba(221,201,142,.26);border-radius:11px;padding:15px 18px;font-size:.96rem;color:rgba(254,252,250,.84);line-height:1.5;cursor:pointer;box-shadow:0 1px 2px rgba(0,0,0,.18);transition:border-color .18s ease,background .18s ease,color .18s ease,transform .16s cubic-bezier(.23,1,.32,1),box-shadow .18s ease;font-weight:300}
+  @media (hover:hover) and (pointer:fine){.opt:hover{border-color:rgba(221,201,142,.6);background:rgba(221,201,142,.07);transform:translateY(-2px);box-shadow:0 10px 24px -10px rgba(0,0,0,.4)}}
+  .opt:active{transform:scale(.97);transition-duration:.1s}
+  .opt.sel{border-color:var(--gold-pale);border-width:1.5px;background:rgba(221,201,142,.14);color:var(--cream);box-shadow:0 10px 28px -12px rgba(221,201,142,.4)}
   .qback{display:block;margin:18px auto 0;background:none;border:none;color:rgba(221,201,142,.7);font-size:.78rem;cursor:pointer;font-family:var(--body);font-weight:300;text-decoration:underline;text-underline-offset:3px}
   .qback[hidden]{display:none}
 
@@ -213,16 +216,17 @@
   .btn{background:var(--teal);color:var(--cream)}
   .btn:hover{background:#0a2a2a}
   .btn.pulse{animation:pulseL 2.4s infinite}
-  .aud{background:var(--cream-2);border-color:var(--line);border-left:3px solid var(--gold-soft);color:var(--ink)}
-  .aud:hover{border-color:var(--gold);border-left-color:var(--gold);background:#faf4e8}
+  .aud{background:var(--cream-2);border-color:var(--line);border-left:3px solid var(--gold-soft);color:var(--ink);box-shadow:0 2px 6px -2px rgba(93,74,51,.2)}
+  @media (hover:hover) and (pointer:fine){.aud:hover{border-color:var(--gold);border-left-color:var(--gold);background:#faf4e8;transform:translateY(-2px);box-shadow:0 12px 26px -12px rgba(93,74,51,.3)}}
   .aud span{color:var(--brown)}
   .phase{color:var(--gold-deep)}
+  .phaseSub{color:var(--brown)}
   .proghead .l{background:#e7dfce}
   .track{background:#ece5d7}
   .qtext{color:var(--ink)}
-  .opt{background:var(--cream-2);border-color:var(--line);border-left:3px solid var(--gold-soft);color:var(--brown)}
-  .opt:hover{border-color:var(--gold);border-left-color:var(--gold);background:#faf4e8}
-  .opt.sel{border-color:var(--gold);border-left-color:var(--gold);background:#f6edda;color:var(--ink)}
+  .opt{background:var(--cream-2);border-color:var(--line);border-left:3px solid var(--gold-soft);color:var(--brown);box-shadow:0 2px 6px -2px rgba(93,74,51,.2)}
+  @media (hover:hover) and (pointer:fine){.opt:hover{border-color:var(--gold);border-left-color:var(--gold);background:#faf4e8;transform:translateY(-2px);box-shadow:0 12px 26px -12px rgba(93,74,51,.3)}}
+  .opt.sel{border-color:var(--gold);border-left-color:var(--gold);background:#f6edda;color:var(--ink);box-shadow:0 12px 30px -14px rgba(168,133,56,.4)}
   .qback{color:var(--gold-deep)}
   #reveal .kicker,#reveal .sub{color:var(--gold-deep)}
   #reveal .tease{color:var(--brown)}
@@ -342,6 +346,7 @@
           <div class="ring" data-p="0">1</div><div class="ring" data-p="1">2</div><div class="ring" data-p="2">3</div><div class="ring" data-p="3">4</div>
         </div>
         <span class="phase" id="phase"></span>
+        <span class="phaseSub" id="phaseSub"></span>
         <div class="proghead"><span class="l"></span><span class="eyebrow" id="prog">01 / 15</span><span class="l"></span></div>
         <div class="track"><div class="bar" id="bar"></div></div>
         <h2 class="qtext" id="question"></h2>
@@ -634,6 +639,12 @@
   var ALL=[].concat(QPAT,QTL,QPL,QLR);
   var TOTAL=ALL.length; // 15
   function phaseFor(idx){ if(idx<4)return"Part one · how you protect touch"; if(idx<8)return"Part two · how touch reaches you"; if(idx<12)return"Part three · how you're turned on"; return"Part four · lead or receive"; }
+  function phaseExplain(idx){
+    if(idx<4)return"What you do first, before you even decide to, when touch or care comes your way.";
+    if(idx<8)return"The channel that actually lands when someone tries to reach you.";
+    if(idx<12)return"What lights up your body's own yes.";
+    return"Whether you drive the moment, or let it be driven.";
+  }
 
   var i=0,answers=new Array(TOTAL).fill(null),locked=false,audience='woman',context='self',identity='woman',stage='quiet';
   var $=function(id){return document.getElementById(id);};
@@ -669,6 +680,7 @@
   function renderQ(){
     locked=false;var q=ALL[i];
     $('phase').textContent=phaseFor(i);
+    $('phaseSub').textContent=phaseExplain(i);
     var pIdx=i<4?0:(i<8?1:(i<12?2:3));
     Array.prototype.forEach.call(document.querySelectorAll('#qrings .ring'),function(r,ri){r.classList.toggle('active',ri===pIdx);});
     $('question').innerHTML=q[0];
