@@ -171,6 +171,7 @@
   .deck-card ul li{font-size:var(--t-sm);color:#c9c2b4;padding-left:18px;position:relative;line-height:1.5}
   .deck-card ul li::before{content:'—';position:absolute;left:0;color:var(--gold-pale)}
   .deck-card .btn{align-self:stretch;text-align:center;margin-top:8px}
+  .deck-card .deck-note{font-size:12px;color:var(--gold-pale);opacity:.8;text-align:center;margin:-4px 0 0}
   @media(max-width:820px){.deck-grid{grid-template-columns:1fr;max-width:480px}}
 
   /* MECHANIC BAND */
@@ -754,9 +755,30 @@ document.addEventListener('click', function(e){
     // and give it a colour + pulse the other two decks don't have.
     var cta = document.getElementById('bundleCta');
     if (cta) {
-      cta.textContent = isFree ? 'Get Access · Free for you' : 'Get Access · £' + discounted;
+      cta.textContent = isFree ? 'Get Access · Free for you' : 'Discount Applied · £' + discounted;
       cta.classList.add('promo', 'promo-pulse');
     }
+
+    // The "MOST POPULAR" badge is the first thing the eye hits on this card —
+    // for someone arriving on a promo link, "this is popular" is a wasted
+    // sentence, "your discount is already applied" is the one they need.
+    var badge = document.querySelector('#bundleCard .badge');
+    if (badge) {
+      badge.textContent = isFree ? 'FREE FOR YOU' : known.pct + '% OFF APPLIED';
+    }
+
+    // Juliette 3 Aug 2026: a partial-off code (PROUD50) reading "Get Access ·
+    // £27.50" on the bundle button wasn't enough on its own — nothing told
+    // someone glancing at the OTHER two cards that the code doesn't touch
+    // them, so it read as unclear which deck(s) the offer was actually for.
+    // Label the two non-bundle cards as full price, only while a promo is
+    // live, so the scope is stated right where the confusion would happen.
+    document.querySelectorAll('.deck-card:not(.featured)').forEach(function(card){
+      var note = document.createElement('p');
+      note.className = 'deck-note';
+      note.textContent = 'Full price — this offer is for the Full Bundle only';
+      card.appendChild(note);
+    });
   }
 
   document.querySelectorAll('a[href*="purchase/email"]').forEach(function(a){
