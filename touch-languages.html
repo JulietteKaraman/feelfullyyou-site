@@ -30,7 +30,12 @@
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{background:var(--cream);color:var(--brown);font-family:var(--body);font-size:var(--t-base);font-weight:400;line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden;letter-spacing:-.003em}
+  /* padding-bottom: the sticky buy bar (.sticky-buy, fixed to the bottom)
+     stays visible for the whole rest of the page once you scroll past the
+     hero photo, so without this the last ~100px of every section below it
+     (including the Digital card's own buy button) sits directly underneath
+     the bar and gets covered by it, this is that clearance */
+  body{background:var(--cream);color:var(--brown);font-family:var(--body);font-size:var(--t-base);font-weight:400;line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden;letter-spacing:-.003em;padding-bottom:100px}
   ::selection{background:var(--gold);color:#fff}
   a{color:inherit}img{max-width:100%;display:block}p{max-width:62ch}
   .wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
