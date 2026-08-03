@@ -115,10 +115,19 @@
   .startcard h3{font-family:var(--display);font-size:1.1rem;font-weight:600;color:var(--ink);margin-bottom:8px;line-height:1.35;}
   .startcard p{font-family:var(--body);font-size:0.94rem;color:var(--brown);margin-bottom:12px;}
   .startcard .read{font-family:var(--body);font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--gold-deep);}
-  footer{background:var(--teal);color:rgba(254,252,250,.7);padding:48px 28px;text-align:center;font-size:0.82rem;line-height:2;}
-  footer a{color:var(--gold-pale);}
-  footer a:hover{color:var(--cream);}
-  footer .ft-name{font-family:var(--display);color:var(--cream);font-size:0.95rem;font-weight:700;margin-bottom:0.5rem;}
+  .final-cta{background:var(--teal);color:var(--cream);padding:72px 28px;text-align:center}
+  .final-cta .label{color:var(--gold-pale)}
+  .final-cta p.big{font-family:var(--display);font-weight:700;font-style:italic;font-size:clamp(1.3rem,2.8vw,1.9rem);color:#fff;max-width:26ch;margin:16px auto 28px;line-height:1.32;letter-spacing:-.015em}
+  .final-cta .btn{display:inline-block;background:var(--gold);color:#fff;font-family:var(--body);font-weight:600;font-size:.94rem;padding:14px 30px;border-radius:2px;text-decoration:none;transition:background .2s,transform .2s}
+  .final-cta .btn:hover{background:var(--gold-deep);color:#fff;transform:translateY(-1px)}
+  .final-cta .also{margin-top:18px;font-size:.85rem}
+  .final-cta .also a{color:var(--gold-pale)}
+  footer{background:var(--gold);color:rgba(255,255,255,.85);padding:22px 32px;font-size:13px;text-align:center}
+  footer .ft-name{font-family:var(--display);color:#fff;font-size:.95rem;font-weight:700;margin-bottom:10px}
+  footer p{margin-bottom:6px;font-size:.8rem}
+  footer p:last-child{margin-bottom:0;opacity:.75;font-size:.72rem;margin-top:10px}
+  footer a{color:#fff;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(255,255,255,.5)}
+  footer a:hover{color:#fff;opacity:.85}
   @media(max-width:600px){.hero{padding:64px 20px 52px;}.section{padding:52px 20px;}}
 </style>
 </head>
@@ -307,17 +316,19 @@
   </div>
 </section>
 
-<section style="background:#0d3535;color:#fefcfa;padding:44px 32px;text-align:center">
-  <p style="max-width:620px;margin:0 auto 18px;font-size:1.06rem;line-height:1.6">Want to feel this in your own body? Start with the free Touch Reset Quiz. It shows you where your touch has gone quiet, and the first step back.</p>
-  <p style="margin:0;font-size:1rem"><a href="https://feelfullyyou.com/touch-reset-quiz" style="color:#ddc98e;font-weight:600;text-decoration:none">Take the free Touch Reset Quiz &rarr;</a> &nbsp; · &nbsp; <a href="https://www.instagram.com/juliettekaraman/" style="color:#ddc98e;font-weight:600;text-decoration:none">Follow on Instagram @juliettekaraman</a></p>
+<section class="final-cta">
+  <span class="label eyebrow">Want to feel this, not just read it?</span>
+  <p class="big">Start with the free Touch Reset Quiz. It shows you where your touch has gone quiet, and the first step back.</p>
+  <a href="https://feelfullyyou.com/touch-reset-quiz" class="btn">Take the free Touch Reset Quiz →</a>
+  <p class="also">Or follow along on Instagram <a href="https://www.instagram.com/juliettekaraman/">@juliettekaraman</a></p>
 </section>
 
 <footer>
   <p class="ft-name">Juliette Karaman · Feel Fully You</p>
   <p>Trauma-Informed Intimacy Expert · Creator of Touch Base® · The Touch Languages™ · Structured Touch Dates</p>
   <p>Pleasure by Design Ltd · <a href="https://feelfullyyou.com">feelfullyyou.com</a> · <a href="https://www.instagram.com/juliettekaraman/">@juliettekaraman</a> · <a href="https://substack.com/@juliettekaraman">Substack</a></p>
-  <p style="margin-top:1rem;font-size:0.75rem;">Read the method → <a href="/touch">feelfullyyou.com/touch</a> · Press → <a href="/press">feelfullyyou.com/press</a> · Podcast → <a href="/podcast">feelfullyyou.com/podcast</a></p>
-  <p style="margin-top:0.5rem;font-size:0.72rem;">Touch Base® · Feel Fully You® · The Scrumptious Woman® · The Touch Languages®, registered trademarks of Pleasure by Design Ltd</p>
+  <p>Read the method → <a href="/touch">feelfullyyou.com/touch</a> · Press → <a href="/press">feelfullyyou.com/press</a> · Podcast → <a href="/podcast">feelfullyyou.com/podcast</a></p>
+  <p>Touch Base® · Feel Fully You® · The Scrumptious Woman® · The Touch Languages®, registered trademarks of Pleasure by Design Ltd</p>
 </footer>
 
 </body>
