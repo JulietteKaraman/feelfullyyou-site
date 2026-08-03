@@ -131,17 +131,19 @@
   .stack{max-width:440px;margin:26px auto 0;text-align:left;background:rgba(6,26,26,.42);border:1px solid rgba(221,201,142,.34);border-radius:14px;overflow:hidden}
   .srow{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:15px 22px}
   .srow+.srow{border-top:1px solid rgba(221,201,142,.16)}
-  .slabel{font-family:var(--body);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-pale);font-weight:500}
+  .slabel{font-family:var(--body);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-pale);font-weight:700}
+  .termname{color:var(--gold-pale);font-weight:700}
+  .rband.ochre .termname,.bandtext.dark .termname{color:var(--gold-deep)}
   .sval{font-family:var(--display);font-weight:600;color:#fff;font-size:1.18rem;text-align:right}
   .idaffirm{color:rgba(254,252,250,.78);font-weight:300;font-size:1rem;line-height:1.7;margin:22px auto 0;max-width:44ch}
   .inbox{display:inline-flex;gap:10px;align-items:flex-start;text-align:left;background:rgba(221,201,142,.12);border:1px solid rgba(221,201,142,.34);border-radius:12px;padding:13px 16px;margin:22px auto 0;font-size:.84rem;color:var(--gold-pale);font-weight:300;line-height:1.55;max-width:46ch}
-  .scrollcue{margin-top:26px;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(221,201,142,.7);font-weight:400}
+  .scrollcue{margin-top:26px;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-pale);font-weight:700}
 
   .tstack{margin-top:26px;display:flex;flex-direction:column;gap:16px;text-align:left}
   .trow{background:rgba(254,252,250,.13);border:1px solid rgba(221,201,142,.32);border-left:3px solid var(--gold-pale);border-radius:14px;padding:18px 20px}
   .trow .thead{display:flex;align-items:center;gap:10px;margin-bottom:8px}
   .trow .tname{font-family:var(--display);font-weight:600;color:#fff;font-size:1.08rem;margin-bottom:2px}
-  .trow .tlabel{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-pale);font-weight:600}
+  .trow .tlabel{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-pale);font-weight:700}
   .trow p{font-size:.95rem;line-height:1.62;color:rgba(254,252,250,.88);font-weight:300;margin:0}
 
   .chip-h{font-family:var(--display);font-weight:600;color:var(--gold-pale);font-size:1.05rem;margin:24px 0 14px}
@@ -417,7 +419,7 @@
     <div class="rin" style="text-align:center">
       <div class="reyebrow dark" style="justify-content:center">For the two of you</div>
       <h2 class="bandhead" style="color:var(--teal-deep)">Now get your partner's stack.</h2>
-      <p class="bandtext dark" style="margin:0 auto 22px;max-width:48ch">The Touch Reset works best when you both know each other's wiring: what turns you on, what shuts you down, how you each need to be reached. Send them the quiz, then compare your stacks.</p>
+      <p class="bandtext dark" style="margin:0 auto 22px;max-width:48ch"><span class="termname">The Touch Reset</span> works best when you both know each other's wiring: what turns you on, what shuts you down, how you each need to be reached. Send them the quiz, then compare your stacks.</p>
       <button class="btn" id="shareBtn" style="background:var(--teal-deep);color:var(--cream)">Copy the link to send</button>
       <p id="shareMsg" style="font-size:.86rem;color:var(--teal-deep);margin-top:12px;min-height:1.2em;font-weight:500"></p>
     </div>
@@ -429,9 +431,9 @@
     <div class="rin" style="text-align:center">
       <div class="reyebrow" style="justify-content:center">Where I'd have you start</div>
       <div style="width:100%;height:clamp(160px,30vw,220px);border-radius:12px;background:url('https://feelfullyyou.com/one-touch-hero.jpg') center 30%/cover no-repeat;margin:0 0 22px;box-shadow:0 12px 30px -18px rgba(13,53,53,.45)"></div>
-      <h2 class="bandhead">Now you know your stack. One Touch is where you learn to read it in your body.</h2>
-      <p class="bandtext" style="margin:0 auto 18px;max-width:48ch">Seven days to feel your four layers, not just know them: the safety anchor that opens every session, what opens you and what braces you, plus the Bonus Call and the One Touch Cards.</p>
-      <p class="bandtext" style="margin:0 auto 18px"><strong>One Touch &middot; 7 days + 2 bonuses &middot; &pound;197</strong></p>
+      <h2 class="bandhead">Now you know your stack. <span class="termname">One Touch</span> is where you learn to read it in your body.</h2>
+      <p class="bandtext" style="margin:0 auto 18px;max-width:48ch">Seven days to feel your four layers, not just know them: the safety anchor that opens every session, what opens you and what braces you, plus the Bonus Call and the <span class="termname">One Touch</span> Cards.</p>
+      <p class="bandtext" style="margin:0 auto 18px"><strong><span class="termname">One Touch</span> &middot; 7 days + 2 bonuses &middot; &pound;197</strong></p>
       <a class="btn pulse" href="/one-touch" style="margin-top:6px">Start One Touch</a>
     </div>
   </section>
@@ -439,7 +441,7 @@
   <section class="rband dark">
     <div class="rin">
       <div class="reyebrow" style="justify-content:center">The full picture</div>
-      <p class="bandtext" style="text-align:center;max-width:52ch;margin:14px auto 30px">This quiz mapped your Touch Pattern, your Pleasure Language, your Touch Language, and how you lead or receive. Two more layers only show up live: your Touch States, moment to moment, and your Touch Map&trade;, exactly where each touch lands on your body. The Touch Reset is where you learn the whole system.</p>
+      <p class="bandtext" style="text-align:center;max-width:52ch;margin:14px auto 30px">This quiz mapped your <span class="termname">Touch Pattern</span>, your <span class="termname">Pleasure Language</span>, your <span class="termname">Touch Language</span>, and how you lead or receive. Two more layers only show up live: your <span class="termname">Touch States</span>, moment to moment, and your <span class="termname">Touch Map&trade;</span>, exactly where each touch lands on your body. The Touch Reset is where you learn the whole system.</p>
       <div class="pitch">
         <p class="bandtext" id="pIntro" style="margin-bottom:22px"></p>
         <div class="pl" id="pLine"></div>
@@ -601,8 +603,8 @@
   };
   var STAGE_CAUTION="The tool has to match the stage. A Stage 1 fix, a date night, a holiday, one good conversation, applied to a Stage 2 or 3 situation is usually what makes couples give up on each other.";
   var STAGE_TAGLINE={quiet:"Nothing dramatic. Just quiet.",brace:"My body knows before my mind does.",gone:"This is just how things are now."};
-  var FREE_INTRO="One Touch teaches you to read your body. Start here, at your own pace.";
-  var PAID_INTRO="One Touch teaches you to read your body. The Touch Reset is where we change the pattern.";
+  var FREE_INTRO="<span class=\"termname\">One Touch</span> teaches you to read your body. Start here, at your own pace.";
+  var PAID_INTRO="<span class=\"termname\">One Touch</span> teaches you to read your body. <span class=\"termname\">The Touch Reset</span> is where we change the pattern.";
 
   /* QUESTIONS: pattern(4) H/F/A/S/C · Touch Language(4) · pleasure(4) · lead/receive(3) */
   var QPAT=[
@@ -749,7 +751,7 @@
 
   function paintPitch(a,st){
     var useFree=(audience==='woman'||audience==='couple');
-    $('pIntro').textContent=useFree?FREE_INTRO:PAID_INTRO;
+    $('pIntro').innerHTML=useFree?FREE_INTRO:PAID_INTRO;
     $('pLine').textContent=st.pitchLine;
     if(useFree&&a.free){
       $('pDoor').textContent=a.free.title;
