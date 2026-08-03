@@ -835,6 +835,15 @@
     $('sendBtn').disabled=false;$('sendBtn').textContent='Send me the full report';
     intro.style.display='block';window.scrollTo(0,0);
   });
+
+  // Quiet preview shortcut, add ?preview=1 to the URL to jump straight to a sample
+  // results screen without retaking the quiz. Not linked anywhere, review use only.
+  if(new URLSearchParams(location.search).get('preview')){
+    audience='woman';identity='woman';context='self';stage='quiet';
+    answers=answers.map(function(_,idx){return idx%3;});
+    intro.style.display='none';contextSec.style.display='none';identitySec.style.display='none';stageSec.style.display='none';quiz.style.display='none';
+    doReveal();
+  }
 })();
 </script>
 </body>
