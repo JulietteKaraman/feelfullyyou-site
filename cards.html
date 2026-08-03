@@ -478,17 +478,17 @@ gtag('config', 'G-SY8NKELMNZ');
   </div>
   <div class="deck-grid">
 
-    <div class="deck-card reveal">
+    <div class="deck-card reveal" id="trustRepairCard">
       <p class="deck-eye">START HERE</p>
       <h3>Trust &amp; Repair</h3>
-      <div class="price">£15</div>
+      <div class="price" id="trustRepairPrice">£15</div>
       <ul>
         <li>50 cards for relationship rupture</li>
         <li>For the conversations that stalled</li>
         <li>Gentle entry point into the method</li>
         <li>Instant app access</li>
       </ul>
-      <a href="https://couplecards.netlify.app/purchase/email?product=trust-repair" class="btn">Get Access</a>
+      <a href="https://couplecards.netlify.app/purchase/email?product=trust-repair" class="btn" id="trustRepairCta">Get Access</a>
     </div>
 
     <div class="deck-card reveal">
@@ -714,7 +714,11 @@ document.addEventListener('click', function(e){
     '6AMReset':     { pct: 20, label: 'your community' },
     PLEASURE:       { pct: 50, label: 'summit guests' },
     PROUD50:        { pct: 50, label: 'Insider Touch readers' },
-    CARDSVIP:       { pct: 100, label: 'VIP' }
+    CARDSVIP:       { pct: 100, label: 'VIP' },
+    // Confidence Magazine reader gift, 3 Aug 2026 — this one targets the
+    // Trust & Repair card specifically, not the Full Bundle, so it needs its
+    // own element ids and base price rather than the bundle defaults below.
+    CONFIDENCE:     { pct: 100, label: 'Confidence Magazine readers', target: 'trust-repair', basePrice: 15, dealName: 'Trust & Repair deck' }
   };
 
   var promo = new URLSearchParams(location.search).get('promo');
@@ -724,11 +728,14 @@ document.addEventListener('click', function(e){
   var bannerText = document.getElementById('promoBannerText');
   var known = KNOWN_CODES[promo];
   var isFree = known && known.pct >= 100;
+  var target = known && known.target; // unset = Full Bundle, the original behaviour
+  var dealName = (known && known.dealName) || 'Full Bundle';
+  var basePrice = (known && known.basePrice) || 55;
 
   bannerText.textContent = known
     ? (isFree
-        ? 'Exclusively for ' + known.label + ' · the Full Bundle below is free, code ' + promo + ' is applied for you at checkout.'
-        : 'Exclusively for ' + known.label + ' · ' + known.pct + '% off the Full Bundle below, code ' + promo + ' is applied for you at checkout.')
+        ? 'Exclusively for ' + known.label + ' · the ' + dealName + ' below is free, code ' + promo + ' is applied for you at checkout.'
+        : 'Exclusively for ' + known.label + ' · ' + known.pct + '% off the ' + dealName + ' below, code ' + promo + ' is applied for you at checkout.')
     : 'Code ' + promo + ' is applied for you at checkout.';
 
   banner.style.display = 'block';
@@ -744,39 +751,54 @@ document.addEventListener('click', function(e){
   window.addEventListener('resize', pushDown);
 
   if (known) {
-    var priceEl = document.getElementById('bundlePrice');
-    var discounted = (55 * (1 - known.pct / 100)).toFixed(2).replace(/\.00$/, '');
+    var cardElId = target === 'trust-repair' ? 'trustRepairCard' : 'bundleCard';
+    var priceEl = document.getElementById(target === 'trust-repair' ? 'trustRepairPrice' : 'bundlePrice');
+    var discounted = (basePrice * (1 - known.pct / 100)).toFixed(2).replace(/\.00$/, '');
     if (priceEl) {
+      // Juliette 3 Aug 2026: the old price and the new one were both the
+      // card's default white, so a comped price didn't read as different
+      // from a normal one. The new price now gets its own gold colour so
+      // it is unmistakable at a glance which number is the real one.
       priceEl.innerHTML = isFree
-        ? '<span style="text-decoration:line-through;opacity:.5;font-size:.7em;margin-right:8px">£55</span>FREE'
-        : '<span style="text-decoration:line-through;opacity:.5;font-size:.7em;margin-right:8px">£55</span>£' + discounted;
+        ? '<span style="text-decoration:line-through;opacity:.5;font-size:.7em;margin-right:8px">£' + basePrice + '</span><span style="color:var(--gold-pale);font-weight:800">FREE</span>'
+        : '<span style="text-decoration:line-through;opacity:.5;font-size:.7em;margin-right:8px">£' + basePrice + '</span><span style="color:var(--gold-pale);font-weight:800">£' + discounted + '</span>';
     }
     // Make it unmistakable which button to click, put the price right on it
-    // and give it a colour + pulse the other two decks don't have.
-    var cta = document.getElementById('bundleCta');
+    // and give it a colour + pulse the other decks don't have.
+    var cta = document.getElementById(target === 'trust-repair' ? 'trustRepairCta' : 'bundleCta');
     if (cta) {
       cta.textContent = isFree ? 'Get Access · Free for you' : 'Discount Applied · £' + discounted;
       cta.classList.add('promo', 'promo-pulse');
     }
 
-    // The "MOST POPULAR" badge is the first thing the eye hits on this card —
-    // for someone arriving on a promo link, "this is popular" is a wasted
-    // sentence, "your discount is already applied" is the one they need.
-    var badge = document.querySelector('#bundleCard .badge');
+    // The "MOST POPULAR" badge is the first thing the eye hits on the bundle
+    // card — for someone arriving on a promo link, "this is popular" is a
+    // wasted sentence, "your discount is already applied" is the one they
+    // need. Trust & Repair has no existing badge, so build one instead.
+    var badge = document.querySelector('#' + cardElId + ' .badge');
     if (badge) {
       badge.textContent = isFree ? 'FREE FOR YOU' : known.pct + '% OFF APPLIED';
+    } else {
+      var cardEl = document.getElementById(cardElId);
+      if (cardEl) {
+        var newBadge = document.createElement('p');
+        newBadge.className = 'badge';
+        newBadge.textContent = isFree ? 'FREE FOR YOU' : known.pct + '% OFF APPLIED';
+        cardEl.appendChild(newBadge);
+      }
     }
 
     // Juliette 3 Aug 2026: a partial-off code (PROUD50) reading "Get Access ·
     // £27.50" on the bundle button wasn't enough on its own — nothing told
-    // someone glancing at the OTHER two cards that the code doesn't touch
-    // them, so it read as unclear which deck(s) the offer was actually for.
-    // Label the two non-bundle cards as full price, only while a promo is
-    // live, so the scope is stated right where the confusion would happen.
-    document.querySelectorAll('.deck-card:not(.featured)').forEach(function(card){
+    // someone glancing at the OTHER cards that the code doesn't touch them,
+    // so it read as unclear which deck(s) the offer was actually for.
+    // Label every other card as full price, only while a promo is live, so
+    // the scope is stated right where the confusion would happen.
+    document.querySelectorAll('.deck-card').forEach(function(card){
+      if (card.id === cardElId) return;
       var note = document.createElement('p');
       note.className = 'deck-note';
-      note.textContent = 'Full price. This offer is for the Full Bundle only';
+      note.textContent = 'Full price. This offer is for the ' + dealName + ' only';
       card.appendChild(note);
     });
   }
