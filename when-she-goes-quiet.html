@@ -203,7 +203,7 @@ document.getElementById('wsqForm').addEventListener('submit', function(e) {
     headers: {'Content-Type': 'application/json'},
     body: JSON.stringify({email: email, firstName: name, website: document.getElementById('wsq_hp').value, tagIds: [20896289], sequenceId: 2817828 /* "When She Goes Quiet" — guide delivery sends immediately, follow-ups day 3 + 7 */})
   }).finally(function() {
-    window.location.href = '/thankyou-when-she-goes-quiet';
+    window.location.href = '/thankyou-when-she-goes-quiet?email=' + encodeURIComponent(email);
   });
 });
 </script>

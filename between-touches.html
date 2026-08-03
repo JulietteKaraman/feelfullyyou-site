@@ -223,7 +223,7 @@ function handleBt(e){
     method:'POST',
     headers:{'Content-Type':'application/json'},
     body:JSON.stringify({email:email,firstName:name,website:document.getElementById('bt_hp').value,tagIds:[20896291],sequenceId:2825129 /* "Between Touches — Welcome" sequence, built 13 Jul. Delivery email is a DRAFT in Kit — publish it (app.kit.com/sequences/2825129) to make email delivery live. Thank-you page already self-delivers the PDF. */})
-  }).finally(function(){window.location.href='/thankyou-between-touches-only';});
+  }).finally(function(){window.location.href='/thankyou-between-touches-only?email='+encodeURIComponent(email);});
 }
 </script>
 <script>

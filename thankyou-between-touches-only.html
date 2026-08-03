@@ -67,7 +67,7 @@ gtag('config', 'G-SY8NKELMNZ');
 </head>
 <body>
 
-<div class="topbar"><span>FEEL FULLY <b>YOU</b></span><button class="ham" id="hamBtn" aria-label="Open menu" aria-expanded="false">
+<div class="topbar"><span class="brand">FEEL FULLY <b>YOU</b></span><button class="ham" id="hamBtn" aria-label="Open menu" aria-expanded="false">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
   </button></div>
 <nav class="mobile-nav" id="mobileNav">
@@ -80,13 +80,15 @@ gtag('config', 'G-SY8NKELMNZ');
   </div>
   <div class="eyebrow">You're all set</div>
   <h1>Here's your guide.</h1>
-  <p class="sub">Click below to open Between Touches. Save it somewhere you'll return to.</p>
+  <p class="sub">Click below to open Between Touches, right in your library. Save it somewhere you'll return to.</p>
 
   <div class="download-box">
     <div class="label">Your free guide</div>
     <h2>Between Touches</h2>
     <p>What keeps connection alive in the space between the big moments. Read it slowly. There's no rush.</p>
-    <a href="https://drive.google.com/file/d/1Niby-UmY4R8wFwB1qAE7O89XfLC9S1C8/view?usp=sharing" target="_blank" rel="noopener" class="btn-download">Open your guide →</a>
+    <a href="https://app.feelfullyyou.com" id="openAppLink" class="btn-download">Open the app &rarr;</a>
+    <p id="openAppHint" style="font-size:13px;color:var(--brown);margin-top:12px">Sign in with the email you just used, no password needed.</p>
+    <p style="font-size:13px;color:var(--brown);margin-top:10px">Prefer to read it as a PDF instead? <a href="https://drive.google.com/file/d/1Niby-UmY4R8wFwB1qAE7O89XfLC9S1C8/view?usp=sharing" style="color:var(--gold-deep)" target="_blank" rel="noopener">Open the guide &rarr;</a></p>
   </div>
 
   <div class="next">
@@ -119,6 +121,22 @@ document.addEventListener('click', function(e){
   else if (h.indexOf('instagram.com') > -1) gtag('event', 'instagram_click', {link_url: h, page_path: location.pathname});
   else if (h.indexOf('/files/') > -1 || h.indexOf('.pdf') > -1) gtag('event', 'freebie_download', {link_url: h, page_path: location.pathname});
 });
+</script>
+<script>
+// If we arrived with ?email= (the address just typed into the signup form),
+// point "Open the app" straight at the app's login with that email
+// prefilled — it auto-sends the magic link on load, so there's no second
+// "sign up" step. Falls back to the plain app link if there's no email.
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  var email = params.get('email');
+  var link = document.getElementById('openAppLink');
+  var hint = document.getElementById('openAppHint');
+  if (email && link) {
+    link.href = 'https://app.feelfullyyou.com/login?email=' + encodeURIComponent(email);
+    if (hint) hint.textContent = "We'll send your link straight to " + email + ".";
+  }
+})();
 </script>
 <script src="quiz-popup.js" defer></script>
 </body>
