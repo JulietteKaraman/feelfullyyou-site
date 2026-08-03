@@ -172,8 +172,8 @@ gtag('config', 'G-SY8NKELMNZ');
         <p>Now with my voice underneath every ritual, real audio and real video, not just words on a page. Read them, watch them, listen to them, right on your phone.</p>
       </div>
     </div>
-    <a href="https://app.feelfullyyou.com" class="btn-download" target="_blank">Open the app &rarr;</a>
-    <p style="font-size:14px;color:var(--brown);margin-top:4px">Password: <strong>rituals2026</strong></p>
+    <a href="https://app.feelfullyyou.com" id="openAppLink" class="btn-download" target="_blank">Open the app &rarr;</a>
+    <p id="openAppHint" style="font-size:13px;color:var(--brown);margin-top:4px">Sign in with the email you just used, no password needed.</p>
     <p style="font-size:13px;color:var(--brown);margin-top:14px">Prefer to read it as a PDF instead? <a href="/files/10-touch-rituals.pdf" style="color:var(--gold-deep)" target="_blank">Open the guide &rarr;</a></p>
   </div>
 </div>
@@ -215,6 +215,23 @@ document.addEventListener('click', function(e){
   else if (h.indexOf('instagram.com') > -1) gtag('event', 'instagram_click', {link_url: h, page_path: location.pathname});
   else if (h.indexOf('/files/') > -1 || h.indexOf('.pdf') > -1) gtag('event', 'freebie_download', {link_url: h, page_path: location.pathname});
 });
+</script>
+<script>
+// If we arrived with ?email= (passed through from Stripe checkout via
+// /api/rituals-success), point "Open the app" straight at the app's login
+// with that email prefilled — the app auto-sends the magic link on load,
+// so there's no second "sign up" step. Falls back to the plain app link
+// untouched if there's no email (bookmark, direct nav, etc).
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  var email = params.get('email');
+  var link = document.getElementById('openAppLink');
+  var hint = document.getElementById('openAppHint');
+  if (email && link) {
+    link.href = 'https://app.feelfullyyou.com/login?email=' + encodeURIComponent(email);
+    if (hint) hint.textContent = "We'll send your link straight to " + email + ".";
+  }
+})();
 </script>
 <script src="quiz-popup.js" defer></script>
 </body>
