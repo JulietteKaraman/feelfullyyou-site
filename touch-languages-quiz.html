@@ -253,10 +253,10 @@
   .rband.dark .pitch h2{color:var(--cream)}
   .rband.dark .pitch .blurb,.rband.dark .pitch .foryou li{color:rgba(254,252,250,.85)}
   .rband.dark .again button{color:var(--gold-pale)}
-  /* buttons on green accent bands pop in gold */
-  .rband.green .btn{background:var(--gold-pale);color:var(--teal)}
-  .rband.green .btn:hover{background:#e7d6a3}
-  .rband.green .btn.pulse{animation:pulse 2.4s infinite}
+  /* buttons on green and dark accent bands pop in gold, not teal-on-teal */
+  .rband.green .btn,.rband.dark .btn{background:var(--gold-pale);color:var(--teal)}
+  .rband.green .btn:hover,.rband.dark .btn:hover{background:#e7d6a3}
+  .rband.green .btn.pulse,.rband.dark .btn.pulse{animation:pulse 2.4s infinite}
   /* intro: big title + popping layer words */
   #intro .eyebrow{font-size:11px;letter-spacing:.2em}
   #intro .qtitle{font-family:var(--display);font-weight:700;font-size:clamp(2.5rem,7vw,3.6rem);color:var(--ink);line-height:1.03;letter-spacing:-.024em;margin:14px 0 0}
