@@ -222,6 +222,17 @@ gtag('config', 'G-SY8NKELMNZ');
   .photo-break img{width:100%;height:auto;border-radius:6px;box-shadow:0 18px 50px rgba(29,26,20,.22)}
   .photo-break p{text-align:center;font-size:.85rem;color:var(--brown);margin-top:14px;font-style:italic}
 </style>
+<style>
+  .keep-exploring{background:var(--cream-2);border-top:1px solid var(--line);padding:70px 28px}
+  .keep-exploring .inner{max-width:820px;margin:0 auto}
+  .keep-exploring h2{font-family:var(--display);font-weight:700;font-size:clamp(1.3rem,2.4vw,1.6rem);color:var(--ink);letter-spacing:-.02em;margin-bottom:26px;text-align:center}
+  .explore-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .explore-card{display:block;background:#fff;border:1px solid var(--line);border-left:3px solid var(--gold-soft);border-radius:0 4px 4px 0;padding:20px 22px;transition:transform .25s,box-shadow .25s,border-color .25s}
+  .explore-card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(29,26,20,.08);border-left-color:var(--gold)}
+  .explore-card .label{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:8px;display:block}
+  .explore-card h3{font-family:var(--display);font-weight:600;font-size:1rem;color:var(--ink);line-height:1.32;letter-spacing:-.01em}
+  @media(max-width:700px){.explore-grid{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
 <div class="topbar">
@@ -231,14 +242,7 @@ gtag('config', 'G-SY8NKELMNZ');
   </button>
   <nav>
     <a href="/">Home</a>
-    <div class="more-wrap" id="workWrap">
-      <a href="/work-with-me" style="font-size:14px;color:var(--cream);font-weight:500;transition:color .2s;text-decoration:none">Work With Me</a><button onclick="document.getElementById('workWrap').classList.toggle('open')" aria-label="Sub-pages" style="background:none;border:none;cursor:pointer;color:var(--cream);padding:0 0 0 5px;display:inline-flex;align-items:center;transition:color .2s"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg></button>
-      <div class="dropdown">
-        <a href="/for-her">For Her</a>
-        <a href="/for-him">For Him</a>
-        <a href="/for-both">For Both</a>
-      </div>
-    </div>
+    <a href="/work-with-me">Work With Me</a>
     <a href="/cards">The Cards</a>
     <a href="/shop">Shop</a>
     <div class="more-wrap" id="moreWrap">
@@ -251,6 +255,7 @@ gtag('config', 'G-SY8NKELMNZ');
         <a href="/questions/">Questions</a>
         <a href="/podcast/">Podcast</a>
         <a href="/about">About Juliette</a>
+        <a href="/touch-reset-quiz">The Touch Reset Quiz</a>
         <a href="/media-and-pr">Media &amp; PR</a>
         <a href="/contact">Contact</a>
       </div>
@@ -262,12 +267,10 @@ gtag('config', 'G-SY8NKELMNZ');
 <nav class="mobile-nav" id="mobileNav">
   <a href="/">Home</a>
   <a href="/work-with-me" style="font-weight:600;color:var(--gold-pale)">Work With Me</a>
-  <a href="/for-her" style="padding-left:44px;font-size:14px;opacity:.85">For Her</a>
-  <a href="/for-him" style="padding-left:44px;font-size:14px;opacity:.85">For Him</a>
-  <a href="/for-both" style="padding-left:44px;font-size:14px;opacity:.85">For Both</a>
   <a href="/cards">The Cards</a>
   <a href="/shop">Shop</a>
   <a href="/about">About Juliette</a>
+  <a href="/touch-reset-quiz">The Touch Reset Quiz</a>
   <a href="/free-resources">Free Resources</a>
         <a href="/essays/">Essays</a>
         <a href="/questions/">Questions</a>
@@ -333,6 +336,17 @@ gtag('config', 'G-SY8NKELMNZ');
       <h3>Be Touched, the free masterclass</h3>
       <p>How a guarded body comes home to itself. For the woman whose body went quiet first.</p>
       <a class="btn" href="/be-touched-masterclass">Save your seat</a>
+    </div>
+  </div>
+</section>
+
+<section class="keep-exploring">
+  <div class="inner">
+    <h2>Keep exploring</h2>
+    <div class="explore-grid">
+      <a class="explore-card" href="/questions/partner-thinks-cards-are-stupid"><span class="label">Related question</span><h3>My Partner Thinks Intimacy Cards Are Stupid. What Now?</h3></a>
+      <a class="explore-card" href="/questions/do-conversation-cards-actually-work"><span class="label">Related question</span><h3>Do Conversation Cards for Couples Actually Work?</h3></a>
+      <a class="explore-card" href="/questions/what-are-the-touch-languages"><span class="label">Related question</span><h3>What Are the Touch Languages™?</h3></a>
     </div>
   </div>
 </section>

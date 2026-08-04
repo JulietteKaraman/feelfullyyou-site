@@ -1,8 +1,5 @@
 # Pretty URLs — strip .html extension
-/for-her                        /for-her.html                   200
-/for-him                        /for-him.html                   200
 /men                            /for-him.html                   200
-/for-both                       /for-both.html                  200
 /cards                          /cards.html                     200
 /content-only                   /content-only.html              200
 /work-with-me                   /work-with-me.html              200
@@ -19,6 +16,12 @@
 /touch-point                    /one-touch                      301!
 /touch-point.html               /one-touch                      301!
 /touch-point-live               /one-touch                      301!
+/for-her                        /touch-reset-quiz               301!
+/for-her.html                   /touch-reset-quiz               301!
+/for-him                        /touch-reset-quiz               301!
+/for-him.html                   /touch-reset-quiz               301!
+/for-both                       /touch-reset-quiz               301!
+/for-both.html                  /touch-reset-quiz               301!
 /7-days-scrumptiousness         /7-days-scrumptiousness.html    200
 /sacred-no                      /sacred-no.html                 200
 /communication-reboot-kit       /communication-reboot-kit.html  200
