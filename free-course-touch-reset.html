@@ -26,7 +26,7 @@
   .topbar .progress{font-size:13px;color:var(--gold-pale);font-family:var(--body)}
 
   .deck{position:relative;width:100%;height:100%}
-  .slide{position:absolute;inset:0;padding:56px 28px 100px;display:flex;flex-direction:column;align-items:center;justify-content:center;opacity:0;visibility:hidden;transform:translateY(14px);transition:opacity .45s ease,transform .45s ease;overflow-y:auto}
+  .slide{position:absolute;inset:0;padding:56px 28px 100px;display:flex;flex-direction:column;align-items:center;justify-content:center;justify-content:safe center;opacity:0;visibility:hidden;transform:translateY(14px);transition:opacity .45s ease,transform .45s ease;overflow-y:auto}
   .slide.active{opacity:1;visibility:visible;transform:translateY(0)}
   .slide-inner{max-width:760px;width:100%;margin:auto;text-align:center}
 
@@ -235,6 +235,7 @@
     dots[current].classList.remove('active');
     current = i;
     slides[current].classList.add('active');
+    slides[current].scrollTop = 0;
     dots[current].classList.add('active');
     progressLabel.textContent = (current + 1) + ' / ' + slides.length;
     prevBtn.disabled = current === 0;
