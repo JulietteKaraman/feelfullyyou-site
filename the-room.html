@@ -75,6 +75,9 @@
   .hero{position:relative;overflow:hidden;padding-top:64px}
   .hero-img{width:100%;height:auto;max-height:640px;object-fit:cover;object-position:center top;display:block}
   .hero-content{display:none}
+  .hero-photo-overlay{position:absolute;left:0;right:0;bottom:0;padding:64px 28px 40px;background:linear-gradient(to top,rgba(7,7,7,.72),rgba(7,7,7,0));text-align:center;pointer-events:none}
+  .hero-photo-overlay span{font-family:var(--display);font-weight:700;font-size:clamp(28px,5vw,54px);color:#fff;letter-spacing:-.01em;text-transform:uppercase}
+  @media(max-width:640px){.hero-photo-overlay{padding:48px 20px 28px}}
   .hero-intro{padding:52px 28px 56px;background:var(--teal);text-align:center}
   .hero-intro .hi-eyebrow{font-family:var(--body);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-pale);font-weight:600;margin-bottom:18px}
   .hero-intro .hi-lead{font-family:var(--display);font-weight:700;font-size:clamp(25px,4vw,42px);color:var(--cream);max-width:22ch;margin:0 auto 22px;line-height:1.12;letter-spacing:-.022em}
@@ -359,6 +362,7 @@
 <!-- HERO -->
 <header class="hero">
   <img class="hero-img" src="https://feelfullyyou.com/media/6a3e9bb95aefbd076b96d5ce.jpg" alt="The Room. Juliette Karaman">
+  <div class="hero-photo-overlay"><span>The Touch Reset</span></div>
   <div class="hero-content">
     <h1>THE ROOM</h1>
     <p>An 8-week live group for anyone whose body has stopped meeting them where touch is concerned.</p>
