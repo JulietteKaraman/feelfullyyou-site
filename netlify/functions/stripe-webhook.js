@@ -163,13 +163,13 @@ const PRODUCT_MAP = {
   'price_1TnxAqCCw18geY153w22a2Ye': {
     tagId: 20794292,   // "the unspoken distance"
     sequenceId: 2817577,  // "The Unspoken Distance"
-    label: 'Unspoken Distance £97 (old price, kept in case old links are live)'
+    label: 'Unspoken Distance £97 (CURRENT, confirmed by Juliette 7 Aug 2026)'
   },
   // CURRENT price, changed to £77 (31 Jul 2026), new Payment Link.
   'price_1TzO4DCCw18geY15u7X9j7iw': {
     tagId: 20794292,   // "the unspoken distance"
     sequenceId: 2817577,  // "The Unspoken Distance"
-    label: 'Unspoken Distance £77'
+    label: 'Unspoken Distance £77 (DEAD, lived about an hour on 31 Jul-1 Aug 2026)'
   },
   'price_1TnwwmCCw18geY15egD5h7Fr': {
     tagId: 20794295,   // "the communication reboot kit"
