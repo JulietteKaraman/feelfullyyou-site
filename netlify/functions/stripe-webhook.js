@@ -504,6 +504,50 @@ async function addToKit(email, firstName, tagId, sequenceId, apiKey, phone) {
 // can never break the payment flow — same pattern as grantPracticeAppEntitlement.
 // If Telegram is down or the env vars are missing, the buyer is still tagged
 // and still enrolled; this function only ever logs, never throws.
+//
+// warm-leads-crm.md R6: for identified purchases, look up whether this email
+// already has a Warm=true row in the Warm Leads CRM Notion database. If so,
+// the buyer was already warm before this purchase — that's the "Andrea
+// insight" (found out days later that a buyer had already taken the quiz).
+// Wrapped exactly like the rest of this function: on any failure, the
+// message still sends, just without the extra line.
+const WARM_LEADS_DB_ID = '2c0d25b0-f844-494a-9e46-9d1031666a4f';
+
+async function lookupWarmStatus(email) {
+  const notionKey = process.env.NOTION_API_KEY;
+  if (!notionKey) return null;
+  try {
+    const res = await fetch(`https://api.notion.com/v1/databases/${WARM_LEADS_DB_ID}/query`, {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${notionKey}`,
+        'Notion-Version': '2022-06-28',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        filter: { property: 'Email', rich_text: { equals: email } },
+        page_size: 1,
+      }),
+    });
+    if (!res.ok) return null;
+    const data = await res.json();
+    const page = data?.results?.[0];
+    if (!page) return null;
+    const isWarm = page.properties?.Warm?.checkbox === true;
+    if (!isWarm) return null;
+    const pattern = page.properties?.Pattern?.select?.name || null;
+    const lastOpened = page.properties?.['Last email opened']?.date?.start || null;
+    let daysSinceOpen = null;
+    if (lastOpened) {
+      daysSinceOpen = Math.max(0, Math.floor((Date.now() - new Date(lastOpened).getTime()) / 86400000));
+    }
+    return { pattern, daysSinceOpen };
+  } catch (err) {
+    console.error('lookupWarmStatus: unexpected error (notification still sends without it)', err);
+    return null;
+  }
+}
+
 async function notifyPayment({ label, amountPence, currency, email, firstName, kind, identified, priceId }) {
   try {
     const botToken = process.env.TELEGRAM_BOT_TOKEN;
@@ -535,6 +579,16 @@ async function notifyPayment({ label, amountPence, currency, email, firstName, k
       // kind === 'purchase' or 'first invoice'
       const line = kind === 'first invoice' ? 'First invoice, new member' : 'New purchase';
       text = `${amount} · ${label}\n${who}\n${line}`;
+
+      // warm-leads-crm.md R6
+      const warm = await lookupWarmStatus(email);
+      if (warm) {
+        const patternPart = warm.pattern ? `, Pattern: ${warm.pattern}` : '';
+        const openPart = warm.daysSinceOpen !== null
+          ? `, last opened an email ${warm.daysSinceOpen === 0 ? 'today' : warm.daysSinceOpen + ' day' + (warm.daysSinceOpen === 1 ? '' : 's') + ' ago'}`
+          : '';
+        text += `\nWas warm — took the quiz${patternPart}${openPart}.`;
+      }
     }
 
     const res = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
