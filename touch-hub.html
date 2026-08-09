@@ -35,7 +35,10 @@
   nav ul{list-style:none;display:flex;gap:1.5rem;flex-wrap:wrap;}
   nav ul a{color:rgba(250,248,245,0.75);font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;}
   nav ul a:hover{color:var(--soft);text-decoration:none;}
-  .hero{background:var(--dark);color:var(--cream);padding:5rem 2rem 4rem;text-align:center;}
+  .hero{position:relative;color:var(--cream);padding:6rem 2rem 5rem;text-align:center;overflow:hidden;}
+  .hero .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%;z-index:0;}
+  .hero .hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,26,26,.55) 0%,rgba(6,26,26,.82) 55%,rgba(6,26,26,.94) 100%);z-index:1;}
+  .hero .hero-inner{position:relative;z-index:2;}
   .hero .eyebrow{font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--soft);margin-bottom:1.5rem;}
   .hero h1{font-size:clamp(2rem,5vw,3.8rem);font-weight:normal;line-height:1.2;max-width:820px;margin:0 auto 1.5rem;}
   .hero h1 em{color:var(--soft);font-style:italic;}
@@ -124,9 +127,13 @@
 </nav>
 
 <section class="hero">
-  <p class="eyebrow">Juliette Karaman · Touch and Intimacy Expert · Feel Fully You</p>
-  <h1>The methodology for <em>touch that lands</em>, and intimacy that comes back through structure, not spontaneity.</h1>
-  <p>Everything you need to understand how the body gives and receives connection, and how to rebuild what has gone quiet.</p>
+  <img class="hero-bg" src="https://feelfullyyou.com/media/68f7ca9d84a9d68db66b2a16.jpeg" alt="Juliette Karaman">
+  <div class="hero-overlay"></div>
+  <div class="hero-inner">
+    <p class="eyebrow">Juliette Karaman · Touch and Intimacy Expert · Feel Fully You</p>
+    <h1>The methodology for <em>touch that lands</em>, and intimacy that comes back through structure, not spontaneity.</h1>
+    <p>Everything you need to understand how the body gives and receives connection, and how to rebuild what has gone quiet.</p>
+  </div>
 </section>
 
 <section class="section">
