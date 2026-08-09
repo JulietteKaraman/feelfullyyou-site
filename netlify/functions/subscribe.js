@@ -79,6 +79,30 @@ exports.handler = async function(event) {
     }
     const subscriberId = subData?.subscriber?.id;
 
+    // 1b. Lead Stage (CRM field, id 1314740, key lead_stage: Lead -> Engaged -> Warm -> Buyer).
+    // A free opt-in is a real signal of warmth, not nothing — added 9 Aug 2026, Juliette:
+    // "these are all probably warm leads at one point." Bump blank/Lead subscribers up to
+    // Engaged. NEVER downgrade — a subscriber already at Warm or Buyer who happens to grab a
+    // freebie later stays exactly where they are; this only ever moves someone forward.
+    if (subscriberId) {
+      try {
+        const currentStage = subData?.subscriber?.fields?.lead_stage;
+        if (!currentStage || currentStage === 'Lead') {
+          const stageRes = await fetch(`${KIT_BASE}/subscribers/${subscriberId}`, {
+            method: 'PUT',
+            headers,
+            body: JSON.stringify({ fields: { lead_stage: 'Engaged' } })
+          });
+          if (!stageRes.ok) {
+            console.error('Kit lead_stage bump failed:', subscriberId, email, stageRes.status);
+          }
+        }
+      } catch (stageErr) {
+        // Never let a CRM-field hiccup break the actual signup — log and continue.
+        console.error('Kit lead_stage bump error:', email, stageErr);
+      }
+    }
+
     // 2. Apply tags. Subscriber already exists at this point (step 1 succeeded) —
     // a failure here means they're a real Kit contact but missing their pattern
     // tag, which is a different, quieter failure than "never became a subscriber":
