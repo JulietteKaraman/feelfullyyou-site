@@ -1,5 +1,7 @@
 # One Touch £197 — Kit Delivery + Room Funnel (built 1 Aug 2026)
 
+> **SUPERSEDED 8 Aug 2026:** the price reverted from £197 back to £97. This sequence (tag `one-touch-197`, id 21778330; sequence 2846629) is now RETIRED, tied to a deactivated Stripe price, no new subscribers will land here. Real current buyers go through the original £97 sequence (tag `one touch`, id 20794312, sequence 2820368) referenced below. This file stays as accurate history of what was built 1 Aug, not rewritten. Full detail: `~/.claude/projects/-Users-julietteckaraman-Documents-APP-builds/memory/project_one_touch_price_revert_to_97_8aug2026.md`.
+
 Built alongside the One Touch price change (£97 -> £197, new Stripe link). Old £97 / Pleasure
 Bundle buyers stay on the original sequence untouched — see `one-touch-welcome-email.md`
 (tag `one touch`, id 20794312, sequence 2820368). This is a SEPARATE, NEW sequence for £197
