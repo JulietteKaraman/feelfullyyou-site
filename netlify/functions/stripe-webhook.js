@@ -12,6 +12,9 @@
 //                                (NOT set yet as of this deploy — the practice-app grant
 //                                 silently no-ops until this is added; Kit tagging above
 //                                 is unaffected either way, see the try/catch around it)
+//   TELEGRAM_BOT_TOKEN — for notifyPayment() below, specs/stripe-payment-notifications.md.
+//                        If missing, notifyPayment logs and returns quietly (R5).
+//   TELEGRAM_CHAT_ID   — same spec, the chat to send payment notifications to.
 
 const crypto = require('crypto');
 
@@ -492,6 +495,62 @@ async function addToKit(email, firstName, tagId, sequenceId, apiKey, phone) {
   }
 }
 
+// ─── PAYMENT NOTIFICATIONS ──────────────────────────────────────────────────
+// specs/stripe-payment-notifications.md. Tells Juliette what a payment IS the
+// moment it lands, via Telegram, instead of Stripe's default "£97.00, no
+// context" receipt email.
+//
+// R3: called AFTER the Kit work above has already completed, wrapped so it
+// can never break the payment flow — same pattern as grantPracticeAppEntitlement.
+// If Telegram is down or the env vars are missing, the buyer is still tagged
+// and still enrolled; this function only ever logs, never throws.
+async function notifyPayment({ label, amountPence, currency, email, firstName, kind, identified, priceId }) {
+  try {
+    const botToken = process.env.TELEGRAM_BOT_TOKEN;
+    const chatId = process.env.TELEGRAM_CHAT_ID;
+    if (!botToken || !chatId) {
+      console.log('notifyPayment: TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID not set — skipped');
+      return;
+    }
+
+    const amount = `£${(Number(amountPence || 0) / 100).toFixed(2)}`;
+    const who = `${firstName || ''} · ${email}`.trim().replace(/^·\s*/, '');
+
+    let text;
+    if (!identified) {
+      // R4: unidentified, deliberately loud — names the fix, because this is
+      // the message that needs acting on.
+      text =
+        `⚠️ ${amount} · UNIDENTIFIED\n` +
+        `${who}\n` +
+        `Tagged "purchased" only. No product tag, no sequence.\n` +
+        `price_id: ${priceId || '(empty)'}\n` +
+        `Fix: add metadata.price_id to that payment link, or add the price to PRODUCT_MAP.`;
+    } else if (kind === 'renewal') {
+      text =
+        `${amount} · ${label}\n` +
+        `${who}\n` +
+        `Renewal, not a new member`;
+    } else {
+      // kind === 'purchase' or 'first invoice'
+      const line = kind === 'first invoice' ? 'First invoice, new member' : 'New purchase';
+      text = `${amount} · ${label}\n${who}\n${line}`;
+    }
+
+    const res = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ chat_id: chatId, text }),
+    });
+    if (!res.ok) {
+      console.error('notifyPayment: Telegram send failed', await res.text());
+    }
+  } catch (err) {
+    // R3: never let a notification failure affect the payment flow.
+    console.error('notifyPayment: unexpected error (Kit tagging above is unaffected)', err);
+  }
+}
+
 exports.handler = async function(event) {
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: 'Method Not Allowed' };
@@ -553,11 +612,24 @@ exports.handler = async function(event) {
     if (!invProduct) {
       console.log(`Unknown subscription price "${invPriceId}" for ${invEmail} — tagging as purchased`);
       await addToKit(invEmail, invFirstName, 20794289, null, apiSecret, invPhone); // "purchased"
+      // Exit point 2 (row 2 of the spec's table): invoice.paid, price NOT in map — blind.
+      await notifyPayment({
+        amountPence: inv?.amount_paid, currency: inv?.currency, email: invEmail, firstName: invFirstName,
+        identified: false, priceId: invPriceId,
+      });
       return { statusCode: 200, body: JSON.stringify({ ok: true, note: 'unknown subscription price, tagged as purchased' }) };
     }
 
     console.log(`${invProduct.label} invoice paid (${inv?.billing_reason}) — tagging ${invEmail}`);
     await addToKit(invEmail, invFirstName, invProduct.tagId, isFirstInvoice ? invProduct.sequenceId : null, apiSecret, invPhone);
+    // Exit point 1 (row 1): invoice.paid, price in map — labelled. R6: first
+    // invoice reads as a new member, anything else on the subscription is a
+    // renewal, so a £97 renewal never reads as a £97 sale.
+    await notifyPayment({
+      label: invProduct.label, amountPence: inv?.amount_paid, currency: inv?.currency,
+      email: invEmail, firstName: invFirstName, identified: true,
+      kind: isFirstInvoice ? 'first invoice' : 'renewal',
+    });
     return { statusCode: 200, body: JSON.stringify({ ok: true, product: invProduct.label, first_invoice: isFirstInvoice }) };
   }
 
@@ -597,6 +669,12 @@ exports.handler = async function(event) {
       }
     }
 
+    // Exit point 3 (row 3): checkout.session.completed, metadata.price_id in map — labelled.
+    await notifyPayment({
+      label: product.label, amountPence: session?.amount_total, currency: session?.currency,
+      email, firstName, identified: true, kind: 'purchase',
+    });
+
     return { statusCode: 200, body: JSON.stringify({ ok: true, product: product.label }) };
   }
 
@@ -614,11 +692,21 @@ exports.handler = async function(event) {
   if (amountMatch) {
     console.log(`${amountMatch.label} — adding ${email} to Kit`);
     await addToKit(email, firstName, amountMatch.tagId, null, apiSecret, phone);
+    // Exit point 4 (row 4): checkout.session.completed, matched on amount (cards app) — labelled.
+    await notifyPayment({
+      label: amountMatch.label, amountPence: session?.amount_total, currency: session?.currency,
+      email, firstName, identified: true, kind: 'purchase',
+    });
     return { statusCode: 200, body: JSON.stringify({ ok: true, product: amountMatch.label }) };
   }
 
   // Fallback: tag as unknown purchaser so nobody is lost
   console.log(`Unknown price_id "${priceId}" for ${email} — tagging as purchased`);
   await addToKit(email, firstName, 20794289, null, apiSecret, phone); // "purchased" tag
+  // Exit point 5 (row 5): checkout.session.completed, price unknown — blind.
+  await notifyPayment({
+    amountPence: session?.amount_total, currency: session?.currency, email, firstName,
+    identified: false, priceId,
+  });
   return { statusCode: 200, body: JSON.stringify({ ok: true, note: 'unknown product, tagged as purchased' }) };
 };
