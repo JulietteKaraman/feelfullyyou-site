@@ -94,6 +94,21 @@
   .deliv-strip span:last-child{border-right:none}
   .founding .scarcity{display:inline-block;font-family:var(--body);font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--teal);font-weight:700;background:var(--gold-pale);padding:7px 17px;border-radius:99px;margin-bottom:20px}
 
+  /* FOR / NOT FOR */
+  .fit{padding:92px 0;border-top:1px solid var(--line);background:var(--cream-2)}
+  .fit-head{text-align:center;margin-bottom:8px}
+  .fit-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:24px}
+  .fit-col{background:var(--paper);padding:36px 32px}
+  .fit-col h3{margin-bottom:22px}
+  .fit-col.no h3{color:var(--gold-soft)}
+  .fit-col ul{list-style:none}
+  .fit-col li{padding:13px 0 13px 28px;position:relative;font-size:16px;line-height:1.5;border-bottom:1px solid var(--line);max-width:none}
+  .fit-col li:last-child{border-bottom:none}
+  .fit-col.yes li::before{content:"";position:absolute;left:0;top:18px;width:14px;height:2px;background:var(--gold)}
+  .fit-col.no li{color:var(--gold-soft)}
+  .fit-col.no li::before{content:"";position:absolute;left:2px;top:16px;width:9px;height:9px;border:1px solid var(--gold-soft);border-radius:50%}
+  @media(max-width:640px){.fit-grid{grid-template-columns:1fr}}
+
   /* FAQ */
   .faq{background:var(--cream-2);padding:90px 28px;border-top:1px solid var(--line)}
   .faq .inner{max-width:760px;margin:0 auto}
@@ -593,7 +608,7 @@
         <span>The Dinner Table</span>
         <span>Every room after</span>
       </div>
-      <p class="wr-close reveal" style="text-align:left;margin:24px 0 0;max-width:none">Your <strong class="wr-gold">Touch Language</strong>, known. Your <em class="wr-blueprint">Pleasure Language</em>, known. A nervous system that stays open instead of bracing. You stop performing. You start inhabiting.<br><br><strong>Twenty-seven years of this work, the last fifteen with couples and trauma, compressed into eight weeks. A shortcut, yes. <span style="color:#e8c96a">One that leads somewhere you have never been before.</span></strong></p>
+      <p class="wr-close reveal" style="text-align:left;margin:24px 0 0;max-width:none">Your <strong class="wr-gold">Touch Language</strong>, known. Your <em class="wr-blueprint">Pleasure Language</em>, known. A nervous system that stays open instead of bracing. You stop performing. You start inhabiting.<br><br><strong>Twenty-seven years of this work, the last fifteen with couples and trauma, compressed into eight weeks. A shortcut, yes.</strong><span class="wr-big">One that leads somewhere you have never been before.</span></p>
     </div>
   </div>
 </section>
@@ -715,6 +730,19 @@
   </div>
 </section>
 
+<!-- JENNY VIDEO TESTIMONIAL -->
+<section style="padding:80px 0;background:var(--cream-2);border-top:1px solid var(--line)">
+  <div class="narrow" style="text-align:center">
+    <div class="eyebrow reveal" style="margin-bottom:28px">From the people who did the work</div>
+    <div class="reveal" style="max-width:320px;margin:0 auto">
+      <div style="position:relative;padding-bottom:177.78%;height:0;border-radius:12px;overflow:hidden;box-shadow:0 12px 48px rgba(13,53,53,.25)">
+        <iframe src="https://www.youtube.com/embed/HkDU9Y8goyc" title="Jenny, why The Room changed everything" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border:none"></iframe>
+      </div>
+    </div>
+    <p class="reveal" style="margin-top:36px;font-size:22px;color:var(--brown);max-width:46ch;margin-left:auto;margin-right:auto;line-height:1.6">Eight weeks. <strong style="color:var(--ink)">A body you actually live in for the rest of your life.</strong> You have tried the other things. <strong style="color:var(--ink)">This is the thing that works.</strong></p>
+  </div>
+</section>
+
 <!-- TESTIMONIALS: real text quotes, same box pattern as touch-point.html. No real photo testimonials exist yet for men, text only, not styled as a lesser version -->
 <section class="tcard-section">
   <div class="narrow">
@@ -748,6 +776,21 @@
         <div style="font-family:var(--display);font-size:5rem;line-height:0.5;color:var(--gold);margin-bottom:24px">"</div>
         <p style="font-family:var(--display);font-size:1.12rem;line-height:1.65;color:var(--ink);margin:0 0 24px;font-style:italic">I wanted to create something meaningful, not just for her, but for us. Your guidance gave me confidence. I stopped second-guessing. For the first time in years, I knew what she needed. Watching her soften, open, and receive was everything.</p>
         <p style="font-size:0.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin:0">Ben Shapiro</p>
+      </div>
+      <div class="reveal" style="background:#d8dfe1;border-left:4px solid var(--gold);padding:36px 32px">
+        <div style="font-family:var(--display);font-size:5rem;line-height:0.5;color:var(--gold);margin-bottom:24px">"</div>
+        <p style="font-family:var(--display);font-size:1.12rem;line-height:1.65;color:var(--ink);margin:0 0 24px;font-style:italic">I have had the most magical 24 hours. He really really held me so kindly and strongly last night when I had a crazy scary moment. Thank you so much.</p>
+        <p style="font-size:0.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin:0">Deidre A.</p>
+      </div>
+      <div class="reveal" style="background:#d8dfe1;border-left:4px solid var(--gold);padding:36px 32px">
+        <div style="font-family:var(--display);font-size:5rem;line-height:0.5;color:var(--gold);margin-bottom:24px">"</div>
+        <p style="font-family:var(--display);font-size:1.12rem;line-height:1.65;color:var(--ink);margin:0 0 24px;font-style:italic">Yes you're an energetic match to millions, and anyone who is touched by you is blessed beyond measure. You go, you Scrumptious-Mighty-Woman-You!</p>
+        <p style="font-size:0.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin:0">Sue-Ann MacCara</p>
+      </div>
+      <div class="reveal" style="background:#d8dfe1;border-left:4px solid var(--gold);padding:36px 32px">
+        <div style="font-family:var(--display);font-size:5rem;line-height:0.5;color:var(--gold);margin-bottom:24px">"</div>
+        <p style="font-family:var(--display);font-size:1.12rem;line-height:1.65;color:var(--ink);margin:0 0 24px;font-style:italic">A powerful healer with such incredible stories and life experiences. Gentle and loving and yet so powerful in how she offers feedback and guidance. I loved learning from her and receiving her gifts.</p>
+        <p style="font-size:0.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin:0">Karen McMullen</p>
       </div>
     </div>
   </div>
@@ -787,6 +830,16 @@
   </div>
 </section>
 
+<!-- ITV VIDEO -->
+<div style="background:var(--paper);padding:52px 24px;border-top:1px solid var(--line)">
+  <div class="narrow" style="max-width:720px">
+    <p style="font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:16px;text-align:center">As seen on ITV, with Ferne McCann</p>
+    <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:2px">
+      <iframe src="https://www.youtube.com/embed/G8t_IDKMBrQ" title="Juliette Karaman on ITV with Ferne McCann" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%"></iframe>
+    </div>
+  </div>
+</div>
+
 <!-- PRICING -->
 <section class="founding" id="pricing">
   <div class="narrow">
@@ -797,6 +850,36 @@
     <p class="sub-price reveal">Founding cohort, only 12 spots. Book a call to talk it through and see if it's the right fit.</p>
     <div class="pay-options reveal">
       <a href="https://tidycal.com/juliette2/the-room-consultation" class="btn">Book a Call</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOR / NOT FOR -->
+<section class="fit">
+  <div class="wrap">
+    <div class="fit-head"><div class="eyebrow reveal">Be honest with yourself</div></div>
+    <div class="fit-grid">
+      <div class="fit-col yes reveal">
+        <h3>This is for you if</h3>
+        <ul>
+          <li>You're in a relationship where love is present, even if touch is not.</li>
+          <li>You're between relationships and can feel the old pattern coming back.</li>
+          <li>You want sex but it never quite lands the way you actually want it, and you're exhausted by the performance of it.</li>
+          <li>You're ready to open again, and you want to do it differently this time.</li>
+          <li>You've tried therapy, courses, retreats. You're done with theory.</li>
+          <li>You're willing to show up, do the practices, ask for help.</li>
+        </ul>
+      </div>
+      <div class="fit-col no reveal">
+        <h3>This is not for you if</h3>
+        <ul>
+          <li>You want to understand the pattern but aren't ready to feel it move.</li>
+          <li>You're looking for a reason to leave the relationship rather than find your way back into your body.</li>
+          <li>You want a quick technique rather than eight weeks of real work.</li>
+          <li>You won't show up, to the calls, the practices, the group.</li>
+          <li>You believe this is someone else's pattern to fix, not yours to change.</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
