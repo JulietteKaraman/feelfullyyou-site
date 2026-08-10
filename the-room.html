@@ -288,6 +288,9 @@
   .touch-split h2{font-size:clamp(30px,4.6vw,46px);margin-bottom:18px}
   .touch-split p{font-size:var(--t-md);max-width:52ch;color:var(--brown);line-height:1.6}
   @media(max-width:860px){.touch-split .split{grid-template-columns:1fr}.touch-split .photo{min-height:0;aspect-ratio:4/5}.touch-split .copy{padding:56px 28px}}
+  .touch-split.alt .split{grid-template-columns:.85fr 1.15fr}
+  .touch-split.alt .photo{order:-1}
+  @media(max-width:860px){.touch-split.alt .photo{order:0}}
 
   /* PATTERNS, WHY THE ROOM, METHOD, copied from the-room-women-original.html */
   .patterns{background:var(--teal);color:var(--cream);padding:90px 28px;border-top:1px solid var(--line-dark)}
@@ -616,6 +619,18 @@
   </div>
 </section>
 
+<!-- TOUCH SPLIT 2: the live call, practised together -->
+<section class="touch-split alt">
+  <div class="split">
+    <div class="photo reveal" style="background-image:url('touch-neck-demo.jpg')"></div>
+    <div class="copy">
+      <div class="eyebrow reveal">The live call</div>
+      <h2 class="reveal">Practised <span class="wgold">together</span>, in real time.</h2>
+      <p class="reveal">The videos teach it. The weekly call is where it becomes real, in your body, with me and the room watching, adjusting, catching what you can't feel on your own yet.</p>
+    </div>
+  </div>
+</section>
+
 <!-- WEEK BY WEEK -->
 <section class="spine" id="weeks">
   <div class="narrow">
@@ -659,6 +674,9 @@
     </div>
   </div>
 </section>
+
+<!-- PHOTO BREAK: texture, hands -->
+<div class="photo-break"><img src="touch-sequin-arm.jpg" alt="Structured touch, hands" loading="lazy" decoding="async" style="object-position:center"></div>
 
 <!-- TESTIMONIALS: real photo screenshots, same pattern as the-room.html -->
 <section style="padding:72px 0;background:#c8d8dc;border-top:1px solid rgba(13,53,53,.12)">
