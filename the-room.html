@@ -279,6 +279,16 @@
   .why .last{font-size:18px;max-width:60ch;color:var(--brown)}
   @media(max-width:860px){.why .split{grid-template-columns:1fr}.why .photo{min-height:0;aspect-ratio:4/5}.why .copy{padding:56px 28px}}
 
+  /* TOUCH SPLIT: same pattern as WHY ME, photo on the right instead of left */
+  .touch-split{padding:0;border-top:1px solid var(--line);background:var(--paper)}
+  .touch-split .split{display:grid;grid-template-columns:1.15fr .85fr;align-items:stretch}
+  .touch-split .photo{background-size:cover;background-position:center;min-height:560px}
+  .touch-split .copy{padding:88px 56px;display:flex;flex-direction:column;justify-content:center}
+  .touch-split .eyebrow{margin-bottom:16px}
+  .touch-split h2{font-size:clamp(30px,4.6vw,46px);margin-bottom:18px}
+  .touch-split p{font-size:var(--t-md);max-width:52ch;color:var(--brown);line-height:1.6}
+  @media(max-width:860px){.touch-split .split{grid-template-columns:1fr}.touch-split .photo{min-height:0;aspect-ratio:4/5}.touch-split .copy{padding:56px 28px}}
+
   /* PATTERNS, WHY THE ROOM, METHOD, copied from the-room-women-original.html */
   .patterns{background:var(--teal);color:var(--cream);padding:90px 28px;border-top:1px solid var(--line-dark)}
   .patterns .inner{max-width:var(--max);margin:0 auto}
@@ -594,8 +604,17 @@
   </div>
 </section>
 
-<!-- PHOTO BREAK: hands, touch -->
-<div class="photo-break"><img src="touch-grey-cloth.jpg" alt="Structured touch, hands" loading="lazy" decoding="async" style="object-position:center"></div>
+<!-- TOUCH SPLIT: real touch, hands-on -->
+<section class="touch-split">
+  <div class="split">
+    <div class="copy">
+      <div class="eyebrow reveal">Real touch, taught hands-on</div>
+      <h2 class="reveal">Not theory. <span class="wgold">Practice.</span></h2>
+      <p class="reveal">Every week, a real mechanic, demonstrated, then practised. Not described in a book, not talked about in theory. Felt, in your own body, in the room.</p>
+    </div>
+    <div class="photo reveal" style="background-image:url('touch-grey-cloth.jpg')"></div>
+  </div>
+</section>
 
 <!-- WEEK BY WEEK -->
 <section class="spine" id="weeks">
