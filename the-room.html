@@ -296,6 +296,18 @@
   .touch-split.dark h2{color:#fff}
   .touch-split.dark p{color:rgba(254,252,250,.82)}
   .touch-split.dark .wgold{color:var(--gold-pale)}
+  /* Every text colour below is explicit on purpose. These lines went black-on-green once already
+     because their colour lived on a parent class that got renamed. Never let that happen again:
+     every child element in a dark split gets its own explicit light colour, no inheritance bets. */
+  .touch-split.dark strong{color:#fff}
+  .touch-split.dark em{color:var(--gold-pale)}
+  .touch-split.dark .wr-statement{color:#fff;font-weight:700}
+  .touch-split.dark .wr-rooms span{color:var(--gold-pale);font-family:var(--display);font-weight:700}
+  .touch-split.dark .wr-close{color:rgba(254,252,250,.82)}
+  .touch-split.dark .wr-close strong{color:#fff}
+  .touch-split.dark .wr-gold{color:#e8c96a;font-style:italic;font-weight:700}
+  .touch-split.dark .wr-blueprint{color:#fff;font-style:italic;font-weight:700}
+  .touch-split.dark .wr-big{color:#e8c96a;display:block;margin-top:14px}
 
   /* PATTERNS, WHY THE ROOM, METHOD, copied from the-room-women-original.html */
   .patterns{background:var(--teal);color:var(--cream);padding:90px 28px;border-top:1px solid var(--line-dark)}
@@ -426,7 +438,7 @@
 <div class="hero-intro">
   <div class="hi-eyebrow reveal">The Room, The Touch Reset · 8-week live group</div>
   <h2 class="hi-lead reveal">Your body braces. Shuts down. Performs.</h2>
-  <p class="hp-payoff">This is how you train the wanting back in.</p>
+  <p class="hp-payoff">This is how scrumptious touch comes back.</p>
   <div class="deliv-strip reveal">
     <span>8 Weeks</span>
     <span>One Topic Weekly</span>
@@ -477,9 +489,13 @@
       </div>
     </div>
     <p class="thread reveal">Any of those, this is for you.<span class="thread-pop">You don't need a partner to start.</span></p>
-    <p class="reveal" style="margin-top:20px;max-width:60ch">If you've already tried therapy, tantra, or a retreat, and nothing quite reached this, that's not you doing it wrong. All of that works on the mind or the conversation. None of it reaches the body itself, which is the only place this pattern actually lives.</p>
+    <p class="reveal" style="margin-top:20px;max-width:60ch">If you've already tried therapy, tantra, or a retreat, and nothing quite reached this, that's not you doing it wrong. All of that works on the mind or the conversation.</p>
+    <p class="reveal" style="font-family:var(--display);font-weight:700;font-size:clamp(21px,3vw,28px);color:var(--ink);max-width:32ch;margin-top:18px;line-height:1.25;letter-spacing:-.015em">None of it reaches the body itself, which is the only place this pattern actually lives.</p>
   </div>
 </section>
+
+<!-- PHOTO BREAK: full width, splits Who This Is For from The Patterns -->
+<div class="photo-break"><img src="touch-lace-bw.jpg" alt="The Room, structured touch" loading="lazy" decoding="async"></div>
 
 <!-- FIVE PATTERNS -->
 <section class="patterns">
@@ -558,9 +574,6 @@
     <div class="pcta reveal"><a href="#book" class="btn">Show me inside The Room</a></div>
   </div>
 </section>
-
-<!-- PHOTO BREAK -->
-<div class="photo-break"><img src="touch-lace-bw.jpg" alt="The Room, structured touch" loading="lazy" decoding="async"></div>
 
 <!-- WHY THE ROOM -->
 <section class="touch-split dark alt">
@@ -648,8 +661,9 @@
 </section>
 
 <!-- WHERE IT GETS GOOD -->
-<section class="touch-split dark">
+<section class="touch-split dark alt">
   <div class="split">
+    <div class="photo reveal" style="background-image:url('touch-blindfold.jpg');background-position:center 30%"></div>
     <div class="copy" style="padding:88px 56px">
       <div class="eyebrow reveal" style="margin-bottom:20px">The first weeks build the container</div>
       <h2 class="reveal" style="font-size:clamp(26px,3.6vw,36px);line-height:1.28">Safety, recognition, structured communication and touch. Once that's real, this is where it gets good.</h2>
@@ -657,7 +671,6 @@
       <p class="reveal" style="max-width:none;margin-top:16px">Yes, sex gets better. That's real, and it was never the starting point. Most people who come to me have lost that too. Non-sexual touch comes first, always, the actual physical intimacy sex was supposed to be built on top of. Once that's real, what's built on top of it gets to be real as well.</p>
       <p class="reveal" style="font-family:var(--display);font-weight:700;font-style:italic;font-size:20px;color:var(--gold-pale);letter-spacing:-.01em;margin-top:20px">Novelty doesn't come from spontaneity. It comes from safety, and then it comes back louder than before.</p>
     </div>
-    <div class="photo reveal" style="background-image:url('touch-blindfold.jpg');background-position:center 30%"></div>
   </div>
 </section>
 
