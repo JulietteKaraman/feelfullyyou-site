@@ -291,6 +291,11 @@
   .touch-split.alt .split{grid-template-columns:.85fr 1.15fr}
   .touch-split.alt .photo{order:-1}
   @media(max-width:860px){.touch-split.alt .photo{order:0}}
+  .touch-split.dark{background:var(--teal);border-top:1px solid var(--line-dark)}
+  .touch-split.dark .eyebrow{color:var(--gold-pale)}
+  .touch-split.dark h2{color:#fff}
+  .touch-split.dark p{color:rgba(254,252,250,.82)}
+  .touch-split.dark .wgold{color:var(--gold-pale)}
 
   /* PATTERNS, WHY THE ROOM, METHOD, copied from the-room-women-original.html */
   .patterns{background:var(--teal);color:var(--cream);padding:90px 28px;border-top:1px solid var(--line-dark)}
@@ -558,22 +563,25 @@
 <div class="photo-break"><img src="touch-lace-bw.jpg" alt="The Room, structured touch" loading="lazy" decoding="async"></div>
 
 <!-- WHY THE ROOM -->
-<section class="why-room">
-  <div class="narrow">
-    <div class="eyebrow reveal">Why it's called The Room</div>
-    <h2 class="reveal">Every mentor says the same thing. Get in the room.</h2>
-    <div class="wr-body">
-      <p class="reveal" style="font-family:var(--display);font-weight:700;font-size:clamp(21px,3vw,30px);color:var(--gold-pale);letter-spacing:-.02em;line-height:1.15">They are right, and it is not enough.</p>
-      <p class="reveal">You can be in the room and still freeze. Perform beautifully, say the right things, go home empty. Proximity does not rewire a nervous system. The moment arrives, and your body does the one thing it always does. It braces.</p>
+<section class="touch-split dark alt">
+  <div class="split">
+    <div class="photo reveal" style="background-image:url('touch-scarf-silk.jpg');background-position:center 20%"></div>
+    <div class="copy" style="padding:88px 56px">
+      <div class="eyebrow reveal">Why it's called The Room</div>
+      <h2 class="reveal" style="font-size:clamp(28px,4vw,42px)">Every mentor says the same thing. Get in the room.</h2>
+      <div class="wr-body">
+        <p class="reveal" style="font-family:var(--display);font-weight:700;font-size:clamp(19px,2.6vw,26px);color:var(--gold-pale);letter-spacing:-.02em;line-height:1.15;max-width:none">They are right, and it is not enough.</p>
+        <p class="reveal" style="max-width:none">You can be in the room and still freeze. Perform beautifully, say the right things, go home empty. Proximity does not rewire a nervous system. The moment arrives, and your body does the one thing it always does. It braces.</p>
+      </div>
+      <p class="wr-statement reveal" style="text-align:left;margin:24px 0">The Room gives you the one thing you take into every room after it. Your own blueprint. Your own signal. Yours for life.</p>
+      <div class="wr-rooms reveal" style="justify-content:flex-start;text-align:left">
+        <span>The Bedroom</span>
+        <span>The Boardroom</span>
+        <span>The Dinner Table</span>
+        <span>Every room after</span>
+      </div>
+      <p class="wr-close reveal" style="text-align:left;margin:24px 0 0;max-width:none">Your <strong class="wr-gold">Touch Language</strong>, known. Your <em class="wr-blueprint">Pleasure Language</em>, known. A nervous system that stays open instead of bracing. You stop performing. You start inhabiting.<br><br><strong>Twenty-seven years of this work, the last fifteen with couples and trauma, compressed into eight weeks. A shortcut, yes. <span style="color:#e8c96a">One that leads somewhere you have never been before.</span></strong></p>
     </div>
-    <p class="wr-statement reveal">The Room gives you the one thing you take into every room after it. Your own blueprint. Your own signal. Yours for life.</p>
-    <div class="wr-rooms reveal">
-      <span>The Bedroom</span>
-      <span>The Boardroom</span>
-      <span>The Dinner Table</span>
-      <span>Every room after</span>
-    </div>
-    <p class="wr-close reveal">Your <strong class="wr-gold">Touch Language</strong>, known. Your <em class="wr-blueprint">Pleasure Language</em>, known. A nervous system that stays open instead of bracing. You stop performing. You start inhabiting. Your body already knows what to do.<span class="wr-big">It just needed the structure to get there.</span><br><br><strong>Twenty-seven years of this work, the last fifteen with couples and trauma, compressed into eight weeks. A shortcut, yes. <span style="color:#e8c96a">One that leads somewhere you have never been before.</span></strong></p>
   </div>
 </section>
 
@@ -619,18 +627,6 @@
   </div>
 </section>
 
-<!-- TOUCH SPLIT 2: the live call, practised together -->
-<section class="touch-split alt">
-  <div class="split">
-    <div class="photo reveal" style="background-image:url('touch-blindfold.jpg');background-position:center 30%"></div>
-    <div class="copy">
-      <div class="eyebrow reveal">The live call</div>
-      <h2 class="reveal">Practised <span class="wgold">together</span>, in real time.</h2>
-      <p class="reveal">The videos teach it. The weekly call is where it becomes real, in your body, with me and the room watching, adjusting, catching what you can't feel on your own yet.</p>
-    </div>
-  </div>
-</section>
-
 <!-- WEEK BY WEEK -->
 <section class="spine" id="weeks">
   <div class="narrow">
@@ -652,13 +648,16 @@
 </section>
 
 <!-- WHERE IT GETS GOOD -->
-<section style="padding:100px 0;background:var(--teal);color:var(--cream);text-align:center">
-  <div class="narrow" style="max-width:640px;margin:0 auto">
-    <div class="eyebrow reveal" style="color:var(--gold-pale);margin-bottom:20px">The first weeks build the container</div>
-    <p class="reveal" style="font-family:var(--display);font-weight:700;font-size:clamp(26px,4vw,38px);line-height:1.28;letter-spacing:-.02em;color:#fff;margin-bottom:28px">Safety, recognition, structured communication and touch. Once that's real, this is where it gets good.</p>
-    <p class="reveal" style="font-family:var(--display);font-size:19px;line-height:1.65;color:rgba(254,252,250,.85);max-width:54ch;margin:0 auto 20px">Mapping what you're wired for. Your Pleasure Language, your Erotic Language, your Blueprint. The way into pleasure. Your wiring into turn on.</p>
-    <p class="reveal" style="font-family:var(--display);font-size:19px;line-height:1.65;color:rgba(254,252,250,.85);max-width:54ch;margin:0 auto 20px">Yes, sex gets better. That's real, and it was never the starting point. Most people who come to me have lost that too. Non-sexual touch comes first, always, the actual physical intimacy sex was supposed to be built on top of. Once that's real, what's built on top of it gets to be real as well.</p>
-    <p class="reveal" style="font-family:var(--display);font-weight:700;font-style:italic;font-size:22px;color:var(--gold-pale);letter-spacing:-.01em">Novelty doesn't come from spontaneity. It comes from safety, and then it comes back louder than before.</p>
+<section class="touch-split dark">
+  <div class="split">
+    <div class="copy" style="padding:88px 56px">
+      <div class="eyebrow reveal" style="margin-bottom:20px">The first weeks build the container</div>
+      <h2 class="reveal" style="font-size:clamp(26px,3.6vw,36px);line-height:1.28">Safety, recognition, structured communication and touch. Once that's real, this is where it gets good.</h2>
+      <p class="reveal" style="max-width:none">Mapping what you're wired for. Your Pleasure Language, your Erotic Language, your Blueprint. The way into pleasure. Your wiring into turn on.</p>
+      <p class="reveal" style="max-width:none;margin-top:16px">Yes, sex gets better. That's real, and it was never the starting point. Most people who come to me have lost that too. Non-sexual touch comes first, always, the actual physical intimacy sex was supposed to be built on top of. Once that's real, what's built on top of it gets to be real as well.</p>
+      <p class="reveal" style="font-family:var(--display);font-weight:700;font-style:italic;font-size:20px;color:var(--gold-pale);letter-spacing:-.01em;margin-top:20px">Novelty doesn't come from spontaneity. It comes from safety, and then it comes back louder than before.</p>
+    </div>
+    <div class="photo reveal" style="background-image:url('touch-blindfold.jpg');background-position:center 30%"></div>
   </div>
 </section>
 
@@ -675,8 +674,17 @@
   </div>
 </section>
 
-<!-- PHOTO BREAK: texture, hands -->
-<div class="photo-break"><img src="touch-sequin-arm.jpg" alt="Structured touch, hands" loading="lazy" decoding="async" style="object-position:center"></div>
+<!-- TOUCH SPLIT: texture, hands -->
+<section class="touch-split">
+  <div class="split">
+    <div class="copy">
+      <div class="eyebrow reveal">In your own hands</div>
+      <h2 class="reveal">This is what it <span class="wgold">feels</span> like.</h2>
+      <p class="reveal">Not a memory of eight weeks. A practice you keep, in your own body, long after the cohort ends.</p>
+    </div>
+    <div class="photo reveal" style="background-image:url('touch-sequin-arm.jpg');background-position:center 25%"></div>
+  </div>
+</section>
 
 <!-- TESTIMONIALS: real photo screenshots, same pattern as the-room.html -->
 <section style="padding:72px 0;background:#c8d8dc;border-top:1px solid rgba(13,53,53,.12)">
