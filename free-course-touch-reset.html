@@ -53,12 +53,18 @@
   .video-caption{font-size:14px;color:var(--gold-deep);margin-top:12px;font-weight:600}
 
   /* SLIDE 4: PATTERNS */
-  .pattern-grid{display:grid;grid-template-columns:1fr;gap:14px;text-align:left;max-width:640px;margin:0 auto}
-  .pattern-card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:16px 20px}
+  .pattern-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;text-align:left;max-width:900px;margin:0 auto}
+  .pattern-card{background:#fff;border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:6px;padding:18px 20px;transition:transform .2s,box-shadow .2s}
+  .pattern-card:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(13,53,53,.12)}
+  .pattern-card .picon{width:38px;height:38px;margin-bottom:10px;opacity:.88}
   .pattern-card .pname{font-family:var(--display);font-weight:700;font-size:16px;color:var(--ink)}
-  .pattern-card .pstrat{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:6px}
-  .pattern-card p{font-size:14.5px;color:var(--brown);line-height:1.55;margin-top:4px}
-  .pattern-card .ache{color:var(--gold-deep);font-style:italic;font-weight:600;margin-top:6px}
+  .pattern-card .pstrat{font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:6px}
+  .pattern-card p{font-size:14px;color:var(--brown);line-height:1.5;margin-top:4px}
+  .pattern-card .slabel{font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--gold-deep);font-weight:600;margin:10px 0 4px;border-top:1px solid var(--line);padding-top:10px}
+  .pattern-card .signals{list-style:none;margin:0 0 8px;padding:0}
+  .pattern-card .signals li{font-size:12.5px;color:var(--brown);line-height:1.45;margin-bottom:5px;padding-left:12px;position:relative}
+  .pattern-card .signals li::before{content:"\00B7";position:absolute;left:0;color:var(--gold-deep);font-weight:700}
+  .pattern-card .ache{color:var(--gold-deep);font-style:italic;font-weight:600;margin-top:8px;font-size:13.5px}
 
   /* SLIDE 5: TOUCH BASE */
   .tb-logo{max-width:180px;margin:0 auto 22px}
@@ -149,33 +155,48 @@
       <h2>Which of the five is actually running the show?</h2>
       <div class="pattern-grid">
         <div class="pattern-card">
+          <img class="picon" src="quiz-icons/pattern-holder.png" alt="" loading="lazy">
           <div class="pname">The Holder</div>
           <div class="pstrat">Give to stay connected</div>
           <p>You reach first, you hold everyone, and quietly wonder why no one ever thinks to hold you. With touch, you give easily and receive awkwardly, bracing the second a hand lands without you earning it.</p>
+          <p class="slabel">You'll recognise it when</p>
+          <ul class="signals"><li>Someone asks what you need and you go blank.</li><li>You initiated every touch today.</li></ul>
           <p class="ache">"I want to be held without having to earn it."</p>
         </div>
         <div class="pattern-card">
+          <img class="picon" src="quiz-icons/pattern-flame.png" alt="" loading="lazy">
           <div class="pname">The Flame</div>
           <div class="pstrat">Dim to stay digestible</div>
           <p>There is fire in you. You learned to turn it down to stay wanted, and now you are quietly starving to be met at full heat. With touch, you only let it in once you have dimmed for it.</p>
+          <p class="slabel">You'll recognise it when</p>
+          <ul class="signals"><li>You've got good at enjoying what arrives instead of asking for what you actually want.</li><li>Your laugh sometimes gets smaller halfway through.</li></ul>
           <p class="ache">"I want to be wanted without shrinking."</p>
         </div>
         <div class="pattern-card">
+          <img class="picon" src="quiz-icons/pattern-armour.png" alt="" loading="lazy">
           <div class="pname">The Armour</div>
           <div class="pstrat">Contain to stay safe</div>
           <p>You stay composed and in control, because softness once cost you too much. With touch, you tense a beat before contact, and would rather give on your terms than be caught receiving.</p>
+          <p class="slabel">You'll recognise it when</p>
+          <ul class="signals"><li>Compliments slide off. "You look amazing." "Thank you, yes." Already gone.</li><li>Someone tries to get close and you suddenly find a reason to be busy.</li></ul>
           <p class="ache">"I want to soften without collapsing."</p>
         </div>
         <div class="pattern-card">
+          <img class="picon" src="quiz-icons/pattern-signal.png" alt="" loading="lazy">
           <div class="pname">The Signal</div>
           <div class="pstrat">Curate to stay legible</div>
           <p>You stay readable. You translate and filter yourself so well that no one ever meets the raw, unedited you. With touch, yours is graceful and curated, and you disconnect a beat before it can sink in.</p>
+          <p class="slabel">You'll recognise it when</p>
+          <ul class="signals"><li>You've already worked out how to say it before you say it.</li><li>Being truly received feels both wanted and slightly terrifying.</li></ul>
           <p class="ache">"I want to be met in the full mess of me."</p>
         </div>
         <div class="pattern-card">
+          <img class="picon" src="quiz-icons/pattern-current.png" alt="" loading="lazy">
           <div class="pname">The Current</div>
           <div class="pstrat">Express to stay met</div>
           <p>You bring the aliveness, you keep the charge even when no one meets you there, and being the source is quietly exhausting you. With touch, you give generously instead of letting yourself be received.</p>
+          <p class="slabel">You'll recognise it when</p>
+          <ul class="signals"><li>You feel the exact moment the energy drops, and instinctively pick it back up.</li><li>Relief. That's the word for when someone else holds the current.</li></ul>
           <p class="ache">"I want to be received without leading it all."</p>
         </div>
       </div>
