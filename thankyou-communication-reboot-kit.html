@@ -124,16 +124,17 @@ gtag('config', 'G-SY8NKELMNZ');
   </div>
   <div class="eyebrow">Payment confirmed</div>
   <h1>Your Communication Reboot Kit is ready.</h1>
-  <p class="hero-sub">Everything is below. Open it now and start with the first section. You don't need to read it all at once.</p>
+  <p class="hero-sub">It's waiting for you in the app now. Open it and start with the first section. You don't need to get through it all at once.</p>
 </div>
 
 <!-- GUIDE CARD -->
 <div class="guide-wrap">
   <div class="guide-card">
     <div class="label">Communication Reboot Kit</div>
-    <h2>The complete guide</h2>
-    <p>The practices, prompts, and frameworks for couples who have stopped being able to reach each other. Structured, body-based, and designed to be used together.</p>
-    <a href="https://docs.google.com/document/d/1-BlkZq0vsCDPGOgDutt5h_a2Bar201dVkpI9jFtkFdw/copy" class="btn-download" target="_blank" rel="noopener">Open your kit →</a>
+    <h2>Open it in the app</h2>
+    <p>The videos, the 46 prompts, the Soft Start scripts, your 31-day tracker, and your reflection journal. All in one place, and it stays there for you.</p>
+    <a href="https://app.feelfullyyou.com" id="openAppLink" class="btn-download" target="_blank" rel="noopener">Open the app →</a>
+    <p id="openAppHint" style="font-size:13px;color:rgba(255,255,255,.75);margin-top:14px">Sign in with the email you just used, no password needed.</p>
   </div>
 </div>
 
@@ -229,6 +230,23 @@ document.addEventListener('click', function(e){
   else if (h.indexOf('instagram.com') > -1) gtag('event', 'instagram_click', {link_url: h, page_path: location.pathname});
   else if (h.indexOf('/files/') > -1 || h.indexOf('.pdf') > -1) gtag('event', 'freebie_download', {link_url: h, page_path: location.pathname});
 });
+</script>
+<script>
+// If we arrived with ?email= (the address just used at checkout), point
+// "Open the app" straight at the app's login with that email prefilled,
+// it auto-sends the magic link on load, so there's no second "sign up"
+// step. Falls back to the plain app link if there's no email. Same
+// pattern as thankyou-when-she-goes-quiet.html.
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  var email = params.get('email');
+  var link = document.getElementById('openAppLink');
+  var hint = document.getElementById('openAppHint');
+  if (email && link) {
+    link.href = 'https://app.feelfullyyou.com/login?email=' + encodeURIComponent(email);
+    if (hint) hint.textContent = "We'll send your link straight to " + email + ".";
+  }
+})();
 </script>
 <script src="quiz-popup.js" defer></script>
 </body>
