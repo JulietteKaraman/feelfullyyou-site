@@ -348,6 +348,11 @@ const PRODUCT_MAP = {
     sequenceId: 2817582,  // "Cards Buyer Welcome"
     label: 'Cards Full Set £75 (app, old price still active)'
   },
+  'price_1U2Y1pCCw18geY15Z86eCGRp': {
+    tagId: 22390236,   // "cards-holiday-survival"
+    sequenceId: 2817582,  // "Cards Buyer Welcome"
+    label: 'Holiday Survival Kit £12 (app)'
+  },
   // ─── PHYSICAL CARDS (shipped) ───────────────────────────────────────────────
   'price_1Tq9COCCw18geY15l19M8pis': {
     tagId: 20912672,   // "physical-cards-buyer"
