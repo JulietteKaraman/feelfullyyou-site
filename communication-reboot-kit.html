@@ -46,12 +46,12 @@ em{font-style:italic}strong{font-weight:700;color:var(--ink)}
 @media(max-width:860px){.topbar nav > a:not(.btn){display:none}}
 .btn{display:inline-block;text-decoration:none;cursor:pointer;border:none;font-family:var(--body);font-weight:600;font-size:var(--t-sm);letter-spacing:.01em;padding:13px 26px;border-radius:2px;background:var(--gold);color:#fff;transition:transform .25s,background .25s;white-space:nowrap}
 .btn:hover{background:var(--gold-deep);transform:translateY(-1px)}.btn.ghost{background:transparent;border:1px solid var(--gold);color:var(--gold-deep)}.btn.ghost:hover{background:var(--gold);color:#fff}.topbar .btn{padding:10px 20px}
-.hero{padding-top:64px;padding:0;background:var(--cream)}.hero .grid{display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch;min-height:600px}.hero .copy-col{padding:140px 54px 70px 28px;display:flex;flex-direction:column;justify-content:center;gap:24px}.hero .photo-col{background-size:cover;background-position:center top;min-height:600px}
+.hero{padding-top:64px;background:var(--cream)}.hero .banner{width:100%;display:block}.hero .copy-col{max-width:680px;margin:0 auto;padding:54px 28px 70px;display:flex;flex-direction:column;justify-content:center;gap:24px;text-align:center}.hero .teal-card{margin:0 auto}
 .jbio{border-top:1px solid var(--line)}.jbio .grid{display:grid;grid-template-columns:480px 1fr;gap:0;align-items:stretch}.jbio .jphoto{background-size:cover;background-position:center;min-height:480px}.jbio .jcopy{padding:72px 60px;background:var(--paper)}.jbio .jcopy .eyebrow{margin-bottom:16px}.jbio .jcopy h2{max-width:24ch;margin-bottom:22px}.jbio .jcopy p{max-width:54ch;margin-bottom:18px;color:var(--brown);font-size:var(--t-md);line-height:1.6}
-@media(max-width:880px){.hero .grid{grid-template-columns:1fr}.hero .photo-col{min-height:360px}.hero .copy-col{padding:120px 28px 60px}.jbio .grid{grid-template-columns:1fr}.jbio .jphoto{min-height:340px}}
+@media(max-width:880px){.hero .copy-col{padding:36px 24px 50px}.jbio .grid{grid-template-columns:1fr}.jbio .jphoto{min-height:340px}}
 .hero .teal-card{border-radius:4px;padding:40px;background:var(--teal);box-shadow:0 30px 70px -30px rgba(0,0,0,.5)}.hero .teal-card .card-eyebrow{font-family:var(--body);font-size:var(--t-xs);letter-spacing:.18em;text-transform:uppercase;color:var(--gold-pale);font-weight:600;margin-bottom:16px}
 .hero .teal-card h1{font-family:var(--display);font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700;color:var(--cream);line-height:1.08;letter-spacing:-.022em;margin-bottom:16px}.hero .teal-card .card-sub{font-style:italic;color:rgba(254,252,250,.72);font-size:var(--t-sm);line-height:1.6;max-width:none}
-.hero .tag{font-family:var(--display);font-weight:600;font-size:clamp(1.4rem,2.6vw,2rem);letter-spacing:-.02em;line-height:1.22;color:var(--ink)}.hero .price-line{margin-top:30px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}.hero .price-line .p{font-family:var(--display);font-weight:700;font-size:1.7rem;color:var(--ink);letter-spacing:-.01em}.hero .price-line .p span{font-weight:400;font-size:.6em;color:var(--gold-deep)}.hero-cta{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
+.hero .tag{font-family:var(--display);font-weight:600;font-size:clamp(1.4rem,2.6vw,2rem);letter-spacing:-.02em;line-height:1.22;color:var(--ink)}.hero .price-line{margin-top:30px;display:flex;align-items:baseline;justify-content:center;gap:14px;flex-wrap:wrap}.hero .price-line .p{font-family:var(--display);font-weight:700;font-size:1.7rem;color:var(--ink);letter-spacing:-.01em}.hero .price-line .p span{font-weight:400;font-size:.6em;color:var(--gold-deep)}.hero-cta{margin-top:30px;display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
 .thesis{padding:92px 0;border-top:1px solid var(--line)}.thesis h2{max-width:20ch}.thesis p{max-width:60ch;margin-bottom:18px;color:var(--brown);font-size:var(--t-md);line-height:1.6}.thesis .closer{font-family:var(--display);font-weight:700;font-size:clamp(22px,3.4vw,32px);color:var(--ink);max-width:28ch;margin-top:30px;line-height:1.18;letter-spacing:-.02em}
 .recog{padding:80px 0;background:var(--cream-2);border-top:1px solid var(--line)}.recog .eyebrow{margin-bottom:22px}.recog h2{max-width:24ch}.maybe-list{border-left:2px solid var(--gold-soft);margin:30px 0}.maybe{padding:16px 0 16px 24px;position:relative;color:var(--brown);font-size:18px;line-height:1.5}.maybe::before{content:"";position:absolute;left:-2px;top:50%;width:2px;height:0;background:var(--gold);transition:height .6s ease;transform:translateY(-50%)}.maybe.in::before{height:64%}.recog .note{margin-top:32px;font-size:18px;color:var(--brown);max-width:60ch}.recog .qline{font-family:var(--display);font-weight:600;font-size:clamp(21px,3vw,27px);color:var(--ink);margin-top:26px;line-height:1.22;letter-spacing:-.015em;max-width:32ch}
 .method{padding:80px 0;border-top:1px solid var(--line);background:var(--cream)}.method h2{max-width:22ch}.method p{max-width:60ch;margin-bottom:18px;color:var(--brown);font-size:var(--t-md);line-height:1.6}.method .closer{font-family:var(--display);font-weight:600;font-size:clamp(19px,2.6vw,24px);color:var(--ink);max-width:36ch;margin-top:10px;line-height:1.22;letter-spacing:-.015em}
@@ -73,7 +73,7 @@ footer{padding:46px 0 58px;background:var(--gold);color:rgba(255,255,255,.85)}fo
 @media(max-width:860px){.dropdown{position:fixed;top:56px;right:16px}}
 .dropdown a{display:block;padding:10px 18px;font-size:13px;color:var(--cream);font-weight:500;transition:background .15s,color .15s}
 .dropdown a:hover{background:var(--teal);color:var(--gold-pale)}
-@media(max-width:880px){.hero .grid{grid-template-columns:1fr;gap:34px}}@media(max-width:720px){.fit-grid{grid-template-columns:1fr}.arrives{grid-template-columns:1fr}.sticky-buy .info .sub{display:none}.topbar .brand{font-size:12px;letter-spacing:.16em}}@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}.reveal{opacity:1;transform:none}}
+@media(max-width:720px){.fit-grid{grid-template-columns:1fr}.arrives{grid-template-columns:1fr}.sticky-buy .info .sub{display:none}.topbar .brand{font-size:12px;letter-spacing:.16em}}@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}.reveal{opacity:1;transform:none}}
 
   /* MOBILE NAV */
   .ham{display:none;background:none;border:none;cursor:pointer;padding:6px;color:var(--cream)}
@@ -155,25 +155,23 @@ gtag('config', 'G-SY8NKELMNZ');
 
 <!-- hero -->
 <section class="hero">
-  <div class="grid">
-    <div class="copy-col">
-      <div class="teal-card reveal">
-        <div class="card-eyebrow">FOR COUPLES + INDIVIDUALS</div>
-        <h1>The Communication Reboot Kit</h1>
-        <p class="card-sub">Words that open what has been quietly waiting to be said.</p>
+  <img class="banner reveal" src="https://feelfullyyou.com/media/communication-reboot-kit-banner.png" alt="The Communication & Intimacy Reboot Kit">
+  <div class="copy-col">
+    <div class="teal-card reveal">
+      <div class="card-eyebrow">FOR COUPLES + INDIVIDUALS</div>
+      <h1>The Communication Reboot Kit</h1>
+      <p class="card-sub">Words that open what has been quietly waiting to be said.</p>
+    </div>
+    <div class="reveal">
+      <p class="tag">"One conversation. Then another. That is how it starts."</p>
+      <div class="price-line">
+        <div class="p">£37 <span>one-time</span></div>
       </div>
-      <div class="reveal">
-        <p class="tag">"One conversation. Then another. That is how it starts."</p>
-        <div class="price-line">
-          <div class="p">£37 <span>one-time</span></div>
-        </div>
-        <div class="hero-cta">
-          <a href="#buy" class="btn">GET THE KIT · £37</a>
-          <a href="#what" class="btn ghost">What's inside</a>
-        </div>
+      <div class="hero-cta">
+        <a href="#buy" class="btn">GET THE KIT · £37</a>
+        <a href="#what" class="btn ghost">What's inside</a>
       </div>
     </div>
-    <div class="photo-col" style="background-image:url('https://feelfullyyou.com/media/communication-reboot-kit-juliette.png')"></div>
   </div>
 </section>
 
@@ -270,7 +268,7 @@ gtag('config', 'G-SY8NKELMNZ');
 <!-- juliette photo -->
 <section class="jbio">
   <div class="grid">
-    <div class="jphoto" style="background-image:url('https://feelfullyyou.com/media/communication-reboot-kit-juliette.png')"></div>
+    <div class="jphoto" style="background-image:url('https://feelfullyyou.com/juliettekingsxaboutmesalespages.jpg')"></div>
     <div class="jcopy">
       <div class="eyebrow">ABOUT JULIETTE</div>
       <h2>Twenty-seven years of this work, the last fifteen in the room with couples at exactly this moment.</h2>
