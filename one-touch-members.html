@@ -100,7 +100,14 @@
   /* ── PROMPT CARD IMAGE ── */
   .prompt-card{border-radius:3px;overflow:hidden;margin-bottom:16px;border:1px solid var(--line)}
   .prompt-card img{width:100%;display:block}
+  .prompt-card.hidden-card{display:none}
   .video-note{font-size:13px;color:var(--gold-soft);margin-bottom:16px;padding:14px 16px;background:#f7f2ea;border-radius:3px}
+
+  /* ── CARD REVEAL GATE — the card is the integration, it only shows once the video's been watched ── */
+  .card-gate{background:#f7f2ea;border:1px dashed var(--line);border-radius:3px;padding:22px;text-align:center;margin-bottom:16px}
+  .card-gate p{font-size:13px;color:var(--gold-soft);margin-bottom:14px;line-height:1.5}
+  .btn-reveal{display:inline-block;background:var(--gold);color:#fff;font-family:var(--display);font-weight:600;font-size:14px;padding:13px 22px;border:none;border-radius:3px;cursor:pointer;transition:background .2s}
+  .btn-reveal:hover{background:var(--gold-deep)}
 
   /* ── READ THE PRACTICE (written script) ── */
   .practice{margin:2px 0 16px;border:1px solid var(--line);border-radius:4px;overflow:hidden}
@@ -239,7 +246,11 @@ gtag('config', 'G-SY8NKELMNZ');
           <div class="video-frame">
             <iframe src="https://player.vimeo.com/video/1217025640" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
           </div>
-          <div class="prompt-card">
+          <div class="card-gate" id="card-gate-1">
+            <p>Watch the video first. The card is the integration.</p>
+            <button class="btn-reveal" onclick="revealCard(1)">I've watched this, show my card →</button>
+          </div>
+          <div class="prompt-card hidden-card" id="prompt-card-1">
             <img src="https://drive.google.com/thumbnail?id=1zsHsn66XNowPvjh3H5j9TiSY_qs6ylSj&sz=w1000" alt="Day 1 prompt card">
           </div>
           <details class="practice"><summary>Transcript</summary><div class="practice-body">
@@ -272,7 +283,11 @@ gtag('config', 'G-SY8NKELMNZ');
           <div class="video-frame">
             <iframe src="https://drive.google.com/file/d/1FqsEyFqhumwclL0gyaubVlLQkDCLz2wB/preview" allowfullscreen allow="autoplay"></iframe>
           </div>
-          <div class="prompt-card">
+          <div class="card-gate" id="card-gate-2">
+            <p>Watch the video first. The card is the integration.</p>
+            <button class="btn-reveal" onclick="revealCard(2)">I've watched this, show my card →</button>
+          </div>
+          <div class="prompt-card hidden-card" id="prompt-card-2">
             <img src="https://drive.google.com/thumbnail?id=1XKyRBpkDHiRHGvdeRp0c_IzXVkFFRbVR&sz=w1000" alt="Day 2 prompt card">
           </div>
           <details class="practice"><summary>Transcript</summary><div class="practice-body">
@@ -309,7 +324,11 @@ gtag('config', 'G-SY8NKELMNZ');
           <div class="video-frame">
             <iframe src="https://player.vimeo.com/video/1217025637" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
           </div>
-          <div class="prompt-card">
+          <div class="card-gate" id="card-gate-3">
+            <p>Watch the video first. The card is the integration.</p>
+            <button class="btn-reveal" onclick="revealCard(3)">I've watched this, show my card →</button>
+          </div>
+          <div class="prompt-card hidden-card" id="prompt-card-3">
             <img src="https://drive.google.com/thumbnail?id=1a6W6xpmm_77hsKGZ2Nu09BaLqRL_no0J&sz=w1000" alt="Day 3 prompt card">
           </div>
           <div class="audio-row" style="border-bottom:none;padding-top:0">
@@ -351,7 +370,11 @@ gtag('config', 'G-SY8NKELMNZ');
           <div class="video-frame">
             <iframe src="https://player.vimeo.com/video/1217026064" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
           </div>
-          <div class="prompt-card">
+          <div class="card-gate" id="card-gate-4">
+            <p>Watch the video first. The card is the integration.</p>
+            <button class="btn-reveal" onclick="revealCard(4)">I've watched this, show my card →</button>
+          </div>
+          <div class="prompt-card hidden-card" id="prompt-card-4">
             <img src="https://drive.google.com/thumbnail?id=180k17FrizdhdplWawrEOCBFvhohEnY10&sz=w1000" alt="Day 4 prompt card">
           </div>
           <details class="practice"><summary>Transcript</summary><div class="practice-body">
@@ -388,7 +411,11 @@ gtag('config', 'G-SY8NKELMNZ');
           <div class="video-frame">
             <iframe src="https://player.vimeo.com/video/1217026730" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
           </div>
-          <div class="prompt-card">
+          <div class="card-gate" id="card-gate-5">
+            <p>Watch the video first. The card is the integration.</p>
+            <button class="btn-reveal" onclick="revealCard(5)">I've watched this, show my card →</button>
+          </div>
+          <div class="prompt-card hidden-card" id="prompt-card-5">
             <img src="https://drive.google.com/thumbnail?id=1GAjqXAEVOEp1D5YRDU6P0WVJ2Wzg6LR2&sz=w1000" alt="Day 5 prompt card">
           </div>
           <details class="practice"><summary>Transcript</summary><div class="practice-body">
@@ -457,7 +484,11 @@ gtag('config', 'G-SY8NKELMNZ');
           <div class="video-frame">
             <iframe src="https://player.vimeo.com/video/1217026911" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
           </div>
-          <div class="prompt-card">
+          <div class="card-gate" id="card-gate-7">
+            <p>Watch the video first. The card is the integration.</p>
+            <button class="btn-reveal" onclick="revealCard(7)">I've watched this, show my card →</button>
+          </div>
+          <div class="prompt-card hidden-card" id="prompt-card-7">
             <img src="https://drive.google.com/thumbnail?id=13hjTMFTzY2TxYYOm_VGlNWrmPWM6YR_W&sz=w1000" alt="Day 7 prompt card">
           </div>
           <details class="practice"><summary>Transcript</summary><div class="practice-body">
@@ -614,6 +645,14 @@ gtag('config', 'G-SY8NKELMNZ');
     applyProgress();
     const next = document.querySelector('.day-card[data-day="' + (n + 1) + '"]');
     if (next) next.scrollIntoView({behavior:'smooth', block:'start'});
+  }
+
+  // ── CARD REVEAL — the card is the integration, it stays hidden under the video until they say they've watched it.
+  function revealCard(n){
+    const gate = document.getElementById('card-gate-' + n);
+    const card = document.getElementById('prompt-card-' + n);
+    if (gate) gate.style.display = 'none';
+    if (card) card.classList.remove('hidden-card');
   }
 
   applyProgress();
