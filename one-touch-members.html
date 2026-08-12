@@ -70,11 +70,8 @@
 
   /* ── DRIP LOCK ── */
   .lock-icon{display:none;width:16px;height:16px;stroke:var(--gold-pale);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;margin-left:auto;flex-shrink:0}
-  .day-card.locked .lock-icon{display:block}
-  .day-card.locked .day-header{opacity:.6}
-  .day-card.locked .day-body{display:none}
-  .day-locked-msg{display:none;padding:32px 22px;text-align:center;font-size:14px;color:var(--gold-soft);font-style:italic;line-height:1.6}
-  .day-card.locked .day-locked-msg{display:block}
+  .day-card.locked{display:none}
+  .day-locked-msg{display:none}
   .btn-complete{display:inline-block;margin-top:6px;background:var(--teal);color:#fff;font-family:var(--display);font-weight:600;font-size:14px;padding:13px 22px;border:none;border-radius:3px;cursor:pointer;transition:background .2s}
   .btn-complete:hover{background:var(--teal-deep)}
   .btn-complete.done{background:var(--gold-soft);cursor:default}
@@ -228,6 +225,7 @@ gtag('config', 'G-SY8NKELMNZ');
             <p>Each day is a short embodiment practice, and I'll teach you Touch Base, a simple anchor that quiets the fight, the flight and the fear, so your body can feel safe. It always brings people back to calm.</p>
             <p>One thing: please don't skip ahead. These days are sequential, each one built on the one before, like a Lego tower. Without the foundation, you can't go higher. Start when you're ready.</p>
           </div></details>
+          <button class="btn-complete" onclick="completeDay(0)">I've watched the welcome, start Day 1 →</button>
         </div>
       </div>
 
@@ -584,20 +582,21 @@ gtag('config', 'G-SY8NKELMNZ');
     if (e.key === 'Enter') checkPassword();
   });
 
-  // ── DRIP PROGRESS — Day 1 open by default, each next day unlocks once the one before it is marked done.
+  // ── DRIP PROGRESS — one step at a time. Intro is step 0: it's the only thing open on arrival.
+  // Finishing the intro opens Day 1, finishing Day 1 opens Day 2, and so on. Nothing further ahead
+  // is ever visible, not even as a locked placeholder, until the step before it is marked done.
   // Stored in localStorage (not sessionStorage) so progress survives closing the tab.
-  function getCompleted(){ return parseInt(localStorage.getItem(PROGRESS_KEY) || '0', 10); }
+  function getCompleted(){ return parseInt(localStorage.getItem(PROGRESS_KEY) || '-1', 10); }
   function setCompleted(n){ localStorage.setItem(PROGRESS_KEY, String(n)); }
 
   function applyProgress(){
     const completed = getCompleted();
     document.querySelectorAll('.day-card[data-day]').forEach(function(card){
       const day = parseInt(card.getAttribute('data-day'), 10);
-      if (day === 0) return; // Intro always open
       card.classList.toggle('locked', day > completed + 1);
       const btn = card.querySelector('.btn-complete');
       if (btn && day <= completed) {
-        btn.textContent = day === 8 ? '✓ Bonus complete' : '✓ Day ' + day + ' complete';
+        btn.textContent = day === 0 ? '✓ Welcome complete' : (day === 8 ? '✓ Bonus complete' : '✓ Day ' + day + ' complete');
         btn.classList.add('done');
       }
     });
@@ -605,6 +604,7 @@ gtag('config', 'G-SY8NKELMNZ');
     if (note) {
       if (completed >= 8) note.textContent = "You've done all seven days and the bonus. Beautiful.";
       else if (completed >= 7) note.textContent = "You've finished the seven days. Your bonus session is open.";
+      else if (completed < 0) note.textContent = "Start with the welcome below.";
       else note.textContent = "You're on Day " + (completed + 1) + ' of 7.';
     }
   }
