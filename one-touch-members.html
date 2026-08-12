@@ -590,6 +590,14 @@ gtag('config', 'G-SY8NKELMNZ');
   const SESSION_KEY = 'ot_access';
   const PROGRESS_KEY = 'ot_progress';
 
+  // Testing helper: open this page with ?reset=1 on the end of the URL to wipe your
+  // own saved progress and see the page exactly as a brand new member would. No
+  // console, no dev tools. Example:
+  // https://feelfullyyou.com/one-touch-members.html?reset=1
+  if (new URLSearchParams(location.search).get('reset') === '1') {
+    localStorage.removeItem(PROGRESS_KEY);
+  }
+
   function checkPassword() {
     const val = document.getElementById('pw-input').value.trim().toLowerCase();
     if (val === PASSWORD) {
