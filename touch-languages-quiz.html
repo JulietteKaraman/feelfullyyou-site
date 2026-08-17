@@ -102,7 +102,7 @@
   .capture input[type=email]::placeholder{color:rgba(254,252,250,.4)}
   .capture input[type=email]:focus{outline:none;border-color:var(--gold-pale)}
   .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
-  .consent{font-size:.74rem;color:rgba(254,252,250,.45);font-weight:300;margin-top:12px;line-height:1.5}
+  .consent{font-size:.92rem;color:#fff;font-weight:300;margin-top:12px;line-height:1.55}
   .msg{font-size:.85rem;margin-top:12px;min-height:1.2em}
   .msg.err{color:#e6b8b8}
 
@@ -122,9 +122,13 @@
   .bandtext{font-size:1.05rem;color:rgba(254,252,250,.86);font-weight:300;line-height:1.78;max-width:60ch}
   .bandtext.dark{color:rgba(6,26,26,.86)}
 
-  .rband.hero{padding:66px 24px 60px;text-align:center;background:linear-gradient(180deg,rgba(6,26,26,.28) 0%,rgba(6,26,26,.5) 40%,rgba(6,26,26,.9) 100%),url('https://feelfullyyou.com/touch-cloth.jpg') center 30%/cover no-repeat;background-color:var(--teal-deep)}
+  .rband.hero{padding:66px 24px 60px;text-align:center;background:linear-gradient(180deg,rgba(6,26,26,.58) 0%,rgba(6,26,26,.68) 40%,rgba(6,26,26,.92) 100%),url('https://feelfullyyou.com/touch-cloth.jpg') center 30%/cover no-repeat;background-color:var(--teal-deep)}
   .rband.hero .rin{opacity:1;transform:none}
-  .hero-eyebrow{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-pale);font-weight:500}
+  /* eyebrow + row labels here are plain white on purpose, not gold, this band
+     sits on a real photo, not a flat colour, and gold-on-photo reads as
+     illegible or "too much yellow" depending on the photo underneath it.
+     Keep gold reserved for the one accent word + the CTA button only. */
+  .hero-eyebrow{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#fff;font-weight:500}
   .emblem{width:88px;height:88px;margin:20px auto 4px;border-radius:50%;border:1px solid rgba(221,201,142,.55);display:flex;align-items:center;justify-content:center;background:rgba(6,26,26,.35);box-shadow:0 0 40px -8px rgba(168,133,56,.55)}
   .emblem svg{width:42px;height:42px;stroke:var(--gold-pale);fill:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
   .idline{font-family:var(--display);font-weight:600;color:#fff;font-size:clamp(2.1rem,7vw,3.2rem);line-height:1.06;letter-spacing:-.02em;margin:14px auto 0}
@@ -134,7 +138,7 @@
   .stack{max-width:440px;margin:26px auto 0;text-align:left;background:rgba(6,26,26,.42);border:1px solid rgba(221,201,142,.34);border-radius:14px;overflow:hidden}
   .srow{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:15px 22px}
   .srow+.srow{border-top:1px solid rgba(221,201,142,.16)}
-  .slabel{font-family:var(--body);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-pale);font-weight:700}
+  .slabel{font-family:var(--body);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(254,252,250,.85);font-weight:700}
   .termname{color:var(--gold-pale);font-weight:700}
   .rband.ochre .termname,.bandtext.dark .termname{color:var(--gold-deep)}
   .sval{font-family:var(--display);font-weight:600;color:#fff;font-size:1.18rem;text-align:right}
@@ -235,7 +239,12 @@
   .capture .sublabel{color:var(--brown)}
   .capture input[type=email]{background:#fff;border-color:#e7dfce;color:var(--ink)}
   .capture input[type=email]::placeholder{color:#b9b1a2}
-  .consent{color:#9a917f}
+  /* a second .consent{color:#9a917f} rule used to sit here, a leftover from an
+     old light-theme capture form that no longer exists on this page. Same
+     class, later in the cascade, so it silently beat the real dark-theme
+     .consent rule above and made the email consent text unreadable against
+     the hero photo. Removed for good, never redefine .consent a second time
+     without scoping it, this exact silent-override bug is the one to avoid. */
   /* result: dark bands stay genuinely dark (teal-deep) for real color rhythm against the cream body + teal bands */
   .rband.dark{background:var(--teal-deep)}
   /* .rband.hero keeps its own photo + dark overlay from the base rule above,
