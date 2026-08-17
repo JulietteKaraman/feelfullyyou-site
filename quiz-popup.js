@@ -20,11 +20,8 @@
     + "#trq-pop a.trq-cta:active{transform:scale(.97)}\n"
     + "#trq-pop .trq-dismiss{display:block;margin:14px auto 0;background:none;border:none;color:#99680C;font-size:.8rem;text-decoration:underline;cursor:pointer;font-family:'Inter',system-ui,sans-serif}\n";
 
-  var EXCLUDED = ['/touch-reset-quiz', '/touch-languages-quiz', '/links', '/404', '/connect-with-essence'];
   var path = window.location.pathname.replace(/\/$/, '').replace(/\.html$/, '');
-  for (var i = 0; i < EXCLUDED.length; i++) {
-    if (path === EXCLUDED[i] || path === '') { if (path === '') break; return; }
-  }
+  if (path !== '' && path !== '/index') return;
 
   function build(){
     var styleEl = document.createElement('style');
@@ -40,7 +37,7 @@
       + '<div id="trq-pop-body">'
       + '<p class="trq-eyebrow">Free &middot; 5 minutes</p>'
       + '<h3>What&rsquo;s your Touch Stack?</h3>'
-      + '<p>Intimacy doesn&rsquo;t come back through spontaneity. It comes back through structure. Meet the four-layer stack your body is already running.</p>'
+      + '<p>Intimacy doesn&rsquo;t come back through spontaneity. It comes back through structure. Meet the stack your body is already running.</p>'
       + '<a class="trq-cta" href="https://feelfullyyou.com/touch-reset-quiz">Take the Touch Reset Quiz</a>'
       + '<button class="trq-dismiss">No thanks</button>'
       + '</div>'
