@@ -122,7 +122,7 @@
   .bandtext{font-size:1.05rem;color:rgba(254,252,250,.86);font-weight:300;line-height:1.78;max-width:60ch}
   .bandtext.dark{color:rgba(6,26,26,.86)}
 
-  .rband.hero{padding:66px 24px 60px;text-align:center;background:linear-gradient(180deg,rgba(6,26,26,.28) 0%,rgba(6,26,26,.5) 40%,rgba(6,26,26,.9) 100%),url('https://feelfullyyou.com/dyad-pomegranates.jpg') center 30%/cover no-repeat;background-color:var(--teal-deep)}
+  .rband.hero{padding:66px 24px 60px;text-align:center;background:linear-gradient(180deg,rgba(6,26,26,.28) 0%,rgba(6,26,26,.5) 40%,rgba(6,26,26,.9) 100%),url('https://feelfullyyou.com/touch-cloth.jpg') center 30%/cover no-repeat;background-color:var(--teal-deep)}
   .rband.hero .rin{opacity:1;transform:none}
   .hero-eyebrow{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-pale);font-weight:500}
   .emblem{width:88px;height:88px;margin:20px auto 4px;border-radius:50%;border:1px solid rgba(221,201,142,.55);display:flex;align-items:center;justify-content:center;background:rgba(6,26,26,.35);box-shadow:0 0 40px -8px rgba(168,133,56,.55)}
@@ -347,6 +347,20 @@
         <button class="qback" id="back" hidden>go back</button>
       </section>
 
+      <section id="vision" style="display:none">
+        <span class="phase">One last thing</span>
+        <span class="phaseSub">Not scored. Just for you.</span>
+        <h2 class="qtext">What do you think might make you enjoy touch more than you do now?</h2>
+        <div class="opts" id="visionOpts">
+          <button type="button" class="opt" data-vision="understood">If my partner actually understood what I need.</button>
+          <button type="button" class="opt" data-vision="release">If I could let go without my mind running the whole time.</button>
+          <button type="button" class="opt" data-vision="closeness">If there was more emotional closeness underneath it.</button>
+          <button type="button" class="opt" data-vision="specific">If I could ask for the specific touch I want.</button>
+          <button type="button" class="opt" data-vision="variety">If it wasn't the same thing, every time.</button>
+        </div>
+        <button class="qback" id="visionBack">go back</button>
+      </section>
+
       <section id="reveal" style="display:none"></section>
 
     </div>
@@ -386,6 +400,7 @@
         <div class="srow"><span class="slabel">In touch, you</span><span class="sval" id="sOri"></span></div>
       </div>
       <p class="idaffirm">None of it is a flaw. It is a set of brilliant adaptations, and every one of them can soften.</p>
+      <p class="idaffirm" id="visionEcho" style="display:none"></p>
       <div class="scrollcue" id="reportSent">Check your inbox, it's on its way. First, one thing to do right now &darr;</div>
     </div>
   </section>
@@ -613,10 +628,17 @@
     return"Whether you drive the moment, or let it be driven.";
   }
 
-  var i=0,answers=new Array(TOTAL).fill(null),locked=false,audience='woman',context='self',identity='woman',stage='quiet';
+  var i=0,answers=new Array(TOTAL).fill(null),locked=false,audience='woman',context='self',identity='woman',stage='quiet',visionAnswer=null;
   var $=function(id){return document.getElementById(id);};
-  var funnel=$('funnel'),intro=$('intro'),contextSec=$('context'),identitySec=$('identity'),stageSec=$('stage'),quiz=$('quiz'),reveal=$('reveal'),resultPage=$('resultPage');
+  var funnel=$('funnel'),intro=$('intro'),contextSec=$('context'),identitySec=$('identity'),stageSec=$('stage'),quiz=$('quiz'),visionSec=$('vision'),reveal=$('reveal'),resultPage=$('resultPage');
   function pad(n){return n<10?'0'+n:''+n;}
+  var VISION={
+    understood:{key:'understood',echo:"it would help most if your partner actually understood what you need"},
+    release:{key:'release',echo:"it would help most if you could let go without your mind running the whole time"},
+    closeness:{key:'closeness',echo:"it would help most if there was more emotional closeness underneath it"},
+    specific:{key:'specific',echo:"it would help most if you could ask for the specific touch you want"},
+    variety:{key:'variety',echo:"it would help most if it wasn't the same thing, every time"}
+  };
 
   $('begin').addEventListener('click',function(){
     intro.style.display='none';contextSec.style.display='block';
@@ -663,12 +685,22 @@
         if(locked)return;locked=true;
         Array.prototype.forEach.call(box.children,function(c){c.classList.remove('sel');});
         b.classList.add('sel');answers[i]=idx;
-        setTimeout(function(){if(i<TOTAL-1){i++;renderQ();}else{doReveal();}},300);
+        setTimeout(function(){if(i<TOTAL-1){i++;renderQ();}else{quiz.style.display='none';visionSec.style.display='block';}},300);
       });
       box.appendChild(b);
     });
   }
   $('back').addEventListener('click',function(){if(i>0){i--;renderQ();}});
+  Array.prototype.forEach.call(document.querySelectorAll('#visionOpts .opt'),function(b){
+    b.addEventListener('click',function(){
+      visionAnswer=b.getAttribute('data-vision');
+      Array.prototype.forEach.call(document.querySelectorAll('#visionOpts .opt'),function(c){c.classList.remove('sel');});
+      b.classList.add('sel');
+      if(typeof gtag==='function')gtag('event','quiz_vision',{quiz:'touch_reset',vision:visionAnswer});
+      setTimeout(function(){visionSec.style.display='none';doReveal();},300);
+    });
+  });
+  $('visionBack').addEventListener('click',function(){visionSec.style.display='none';quiz.style.display='block';i=TOTAL-1;renderQ();});
 
   var result={pattern:'',pleasure:'',ori:''};
 
@@ -747,6 +779,12 @@
     $('sOri').textContent=o.word;
     buildTeaserStack(pl,pa,o);
     $('rStageLine').textContent="Right now: "+st.name+" — "+STAGE_TAGLINE[stage];
+    var ve=$('visionEcho');
+    if(ve){
+      var v=VISION[visionAnswer];
+      if(v){ve.textContent="Earlier you told us "+v.echo+". Keep that. It's exactly where this starts.";ve.style.display='block';}
+      else{ve.style.display='none';}
+    }
     paintPitch(a,st);
     $('shareBand').style.display='block';
   }
@@ -771,7 +809,7 @@
     var btn=$('sendBtn');btn.disabled=true;btn.textContent='Revealing…';
     var audTag=(AUD[audience]||{}).tag;
     var tags=[PATTERN_TAG[result.pattern],PLEASURE_TAG[result.pleasure],ORI_TAG[result.ori],audTag,ID_TAG[identity],STAGE_TAG[stage]].filter(function(t){return t;});
-    var stackFields={touch_pleasure:result.pleasure,touch_pattern:PATTERN[result.pattern].short,touch_orientation:ORI[result.ori].word.toLowerCase(),touch_stage:STAGE[stage].name};
+    var stackFields={touch_pleasure:result.pleasure,touch_pattern:PATTERN[result.pattern].short,touch_orientation:ORI[result.ori].word.toLowerCase(),touch_stage:STAGE[stage].name,touch_vision:visionAnswer||''};
     var payload=JSON.stringify({email:email,tagIds:tags,sequenceIds:[PATTERN_SEQ[result.pattern],2821695].filter(Boolean),fields:stackFields,hp_field:$('capForm').hp_field.value});
     function attempt(n){
       return fetch('/.netlify/functions/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:payload})
@@ -792,9 +830,9 @@
   });
 
   $('restart').addEventListener('click',function(){
-    i=0;answers=new Array(TOTAL).fill(null);locked=false;
+    i=0;answers=new Array(TOTAL).fill(null);locked=false;visionAnswer=null;
     resultPage.style.display='none';funnel.style.display='flex';reveal.style.display='none';
-    contextSec.style.display='none';identitySec.style.display='none';stageSec.style.display='none';
+    contextSec.style.display='none';identitySec.style.display='none';stageSec.style.display='none';visionSec.style.display='none';
     var unlocked=$('unlockedContent');if(unlocked)unlocked.style.display='none';
     $('capForm').style.display='block';$('capForm').reset();$('msg').textContent='';
     $('sendBtn').disabled=false;$('sendBtn').textContent='Reveal my stack';
@@ -804,7 +842,7 @@
   // Quiet preview shortcut, add ?preview=1 to the URL to jump straight to a sample
   // results screen without retaking the quiz. Not linked anywhere, review use only.
   if(new URLSearchParams(location.search).get('preview')){
-    audience='woman';identity='woman';context='self';stage='quiet';
+    audience='woman';identity='woman';context='self';stage='quiet';visionAnswer='specific';
     answers=answers.map(function(_,idx){return idx%3;});
     intro.style.display='none';contextSec.style.display='none';identitySec.style.display='none';stageSec.style.display='none';quiz.style.display='none';
     doReveal();
