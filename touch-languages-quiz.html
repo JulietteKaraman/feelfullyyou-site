@@ -4,17 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Touch Reset Quiz · What's Your Touch Pattern? | Juliette Karaman</title>
-<meta name="description" content="The Touch Reset Quiz reveals your four-layer stack: Pleasure Language, Touch Pattern, Touch Language, and whether you lead or receive. Plus what to do about it.">
+<meta name="description" content="The Touch Reset Quiz reveals your Touch Pattern, your Pleasure Language, and whether you lead or receive. Plus what to do about it.">
 <link rel="canonical" href="https://feelfullyyou.com/touch-reset-quiz">
 <meta property="og:title" content="The Touch Reset Quiz · What's Your Touch Pattern?">
-<meta property="og:description" content="Your four-layer touch stack: Pleasure Language, Touch Pattern, Touch Language, and whether you lead or receive.">
+<meta property="og:description" content="Your Touch Pattern, your Pleasure Language, and whether you lead or receive.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://feelfullyyou.com/touch-reset-quiz">
 <meta property="og:image" content="https://feelfullyyou.com/touch-reset-quiz-og.jpg">
 <meta property="og:site_name" content="Feel Fully You">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="The Touch Reset Quiz · What's Your Touch Pattern?">
-<meta name="twitter:description" content="Your four-layer touch stack, not another single-type result.">
+<meta name="twitter:description" content="Your Touch Pattern, your Pleasure Language, and whether you lead or receive.">
 <meta name="twitter:image" content="https://feelfullyyou.com/touch-reset-quiz-og.jpg">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
@@ -336,11 +336,11 @@
 
       <section id="quiz" style="display:none">
         <div class="qrings" id="qrings">
-          <div class="ring" data-p="0">1</div><div class="ring" data-p="1">2</div><div class="ring" data-p="2">3</div><div class="ring" data-p="3">4</div>
+          <div class="ring" data-p="0">1</div><div class="ring" data-p="1">2</div><div class="ring" data-p="2">3</div>
         </div>
         <span class="phase" id="phase"></span>
         <span class="phaseSub" id="phaseSub"></span>
-        <div class="proghead"><span class="l"></span><span class="eyebrow" id="prog">01 / 15</span><span class="l"></span></div>
+        <div class="proghead"><span class="l"></span><span class="eyebrow" id="prog">01 / 11</span><span class="l"></span></div>
         <div class="track"><div class="bar" id="bar"></div></div>
         <h2 class="qtext" id="question"></h2>
         <div class="opts" id="opts"></div>
@@ -358,18 +358,35 @@
   <section class="rband hero">
     <div class="rin">
       <div class="hero-eyebrow">Your Touch Reset stack</div>
+      <h1 class="idline">Your <span class="g">stack</span> is ready.</h1>
+      <p class="idsub">Three layers your body runs at once. No one else has this exact combination.</p>
+      <div class="stack">
+        <div class="srow"><span class="slabel">Pleasure Language</span><span class="sval">&middot;&middot;&middot;&middot;&middot;&middot;</span></div>
+        <div class="srow"><span class="slabel">Touch Pattern</span><span class="sval">&middot;&middot;&middot;&middot;&middot;&middot;</span></div>
+        <div class="srow"><span class="slabel">In touch, you</span><span class="sval">&middot;&middot;&middot;&middot;&middot;&middot;</span></div>
+      </div>
+      <form class="capture" id="capForm" autocomplete="on" style="max-width:420px;margin:26px auto 0;text-align:left">
+        <input type="email" id="email" name="email" placeholder="you@email.com" required>
+        <input type="text" class="hp" name="hp_field" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button type="submit" class="btn block pulse" id="sendBtn">Reveal my stack</button>
+        <p class="consent">Your shadow side, where the pattern comes from, and your practices for the week ahead, sent to your inbox to keep. Then my letters on touch, intimacy and coming back to your body. Leave any time.</p>
+        <div class="msg" id="msg"></div>
+      </form>
+    </div>
+  </section>
+
+  <div id="unlockedContent" style="display:none">
+
+  <section class="rband hero" style="padding-top:6px">
+    <div class="rin">
       <div class="emblem" id="emblem"></div>
-      <h1 class="idline">This is your <span class="g">stack</span>.</h1>
-      <p class="idsub">Four layers your body runs at once. No one else has this exact combination.</p>
       <div class="stack">
         <div class="srow"><span class="slabel">Pleasure Language</span><span class="sval" id="sPleasure"></span></div>
         <div class="srow"><span class="slabel">Touch Pattern</span><span class="sval" id="sPattern"></span></div>
-        <div class="srow"><span class="slabel">Touch Language</span><span class="sval" id="sLanguage"></span></div>
         <div class="srow"><span class="slabel">In touch, you</span><span class="sval" id="sOri"></span></div>
       </div>
       <p class="idaffirm">None of it is a flaw. It is a set of brilliant adaptations, and every one of them can soften.</p>
-      <div class="inbox"><span>&#9993;</span><span>Your full stack is right here, no email needed. Want the <b>in-depth report</b> too, the deeper read on the layer running your whole stack plus your full set of practices? Grab it a little further down.</span></div>
-      <div class="scrollcue">First, one thing to do right now &darr;</div>
+      <div class="scrollcue" id="reportSent">Check your inbox, it's on its way. First, one thing to do right now &darr;</div>
     </div>
   </section>
 
@@ -395,24 +412,6 @@
 
   <div class="photoband" style="background-image:url('https://feelfullyyou.com/touch-chest.jpg')"></div>
 
-  <section class="rband dark" id="reportBand">
-    <div class="rin" style="text-align:center">
-      <div class="reyebrow" style="justify-content:center">Your in-depth report</div>
-      <h2 class="bandhead">Want the full read?</h2>
-      <p class="bandtext" style="margin:0 auto 18px;max-width:48ch">Your shadow side, where the pattern comes from, how it softens, and your practices for the week ahead &mdash; sent to your inbox to keep.</p>
-      <form class="capture" id="capForm" autocomplete="on" style="max-width:420px;margin:0 auto;text-align:left">
-        <input type="email" id="email" name="email" placeholder="you@email.com" required>
-        <input type="text" class="hp" name="hp_field" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <button type="submit" class="btn block pulse" id="sendBtn">Send me the full report</button>
-        <p class="consent">Your reading, then my letters on touch, intimacy and coming back to your body. Leave any time.</p>
-        <div class="msg" id="msg"></div>
-      </form>
-      <div id="reportSent" style="display:none">
-        <div class="big">On its way. Check your inbox.</div>
-      </div>
-    </div>
-  </section>
-
   <section class="rband ochre" id="shareBand" style="display:none">
     <div class="rin" style="text-align:center">
       <div class="reyebrow dark" style="justify-content:center">For the two of you</div>
@@ -430,7 +429,7 @@
       <div class="reyebrow" style="justify-content:center">Where I'd have you start</div>
       <div style="width:100%;height:clamp(160px,30vw,220px);border-radius:12px;background:url('https://feelfullyyou.com/one-touch-hero.jpg') center 30%/cover no-repeat;margin:0 0 22px;box-shadow:0 12px 30px -18px rgba(13,53,53,.45)"></div>
       <h2 class="bandhead">Now you know your stack. <span class="termname">One Touch</span> is where you learn to read it in your body.</h2>
-      <p class="bandtext" style="margin:0 auto 18px;max-width:48ch">Seven days to feel your four layers, not just know them: the safety anchor that opens every session, what opens you and what braces you, plus the Bonus Call and the <span class="termname">One Touch</span> Cards.</p>
+      <p class="bandtext" style="margin:0 auto 18px;max-width:48ch">Seven days to feel these layers, not just know them: the safety anchor that opens every session, what opens you and what braces you, plus the Bonus Call and the <span class="termname">One Touch</span> Cards.</p>
       <p class="bandtext" style="margin:0 auto 18px"><strong><span class="termname">One Touch</span> &middot; 7 days + 2 bonuses &middot; &pound;97</strong></p>
       <a class="btn pulse" href="/one-touch" style="margin-top:6px">Start One Touch</a>
     </div>
@@ -439,7 +438,7 @@
   <section class="rband dark">
     <div class="rin">
       <div class="reyebrow" style="justify-content:center">The full picture</div>
-      <p class="bandtext" style="text-align:center;max-width:52ch;margin:14px auto 30px">This quiz mapped your <span class="termname">Touch Pattern</span>, your <span class="termname">Pleasure Language</span>, your <span class="termname">Touch Language</span>, and how you lead or receive. Two more layers only show up live: your <span class="termname">Touch States</span>, moment to moment, and your <span class="termname">Touch Map&trade;</span>, exactly where each touch lands on your body. <span class="termname">The Touch Reset</span> is where you learn the whole system.</p>
+      <p class="bandtext" style="text-align:center;max-width:52ch;margin:14px auto 30px">This quiz mapped your <span class="termname">Touch Pattern</span>, your <span class="termname">Pleasure Language</span>, and how you lead or receive. Two more layers only show up live: your <span class="termname">Touch States</span>, moment to moment, and your <span class="termname">Touch Map&trade;</span>, exactly where each touch lands on your body. <span class="termname">The Touch Reset</span> is where you learn the whole system.</p>
       <div class="pitch">
         <p class="bandtext" id="pIntro" style="margin-bottom:22px"></p>
         <div class="pl" id="pLine"></div>
@@ -451,6 +450,8 @@
       <div class="again"><button id="restart">start again</button></div>
     </div>
   </section>
+
+  </div><!-- /unlockedContent -->
 
 </div>
 
@@ -474,7 +475,6 @@
   var PATTERN_TAG={Holder:20988556,Flame:20988557,Armour:20988558,Signal:20988559,Current:20988560};
   var PATTERN_SEQ={Holder:2821038,Flame:2821039,Armour:2821040,Signal:2821041,Current:2821042};
   var PLEASURE_TAG={Sensual:20944034,Sexual:20944035,Energetic:20944036,Kinky:20944037,Shapeshifter:20944038};
-  var LANG_TAG={Emotional:20999648,Erotic:20999649,Energetic:20999650,Physical:20999651,Spiritual:20999652};
   var ORI_TAG={Leads:20994542,Receives:20994543,Switches:20994544};
   var ID_TAG={woman:21000823,man:21000824,nb:21000825,pref:21000826};
   var STAGE_TAG={quiet:21270730,brace:21270733,gone:21270734};
@@ -551,25 +551,6 @@
       braces:["Being the only source of the spark","Silence read as a threat","Giving that is not returned","Carrying the aliveness alone"]}
   };
 
-  var TLANG={
-    Emotional:{name:"Emotional Touch",
-      reaches:"Touch reaches you through words, attention and being heard all the way through. You feel met when someone stays with what you feel, without reaching to fix it.",
-      feed:["A question that goes one layer deeper","Being listened to without being managed","Your feelings named back to you","Someone who stays while you feel something"]},
-    Erotic:{name:"Erotic Touch",
-      reaches:"Touch reaches you through the current of wanting: spark, desire, appetite, aliveness. You feel met when your own desire is allowed to be yours.",
-      feed:["Slowness and anticipation","Being wanted with no demand attached","Play, flirtation, appetite","Desire that gets to move at your pace"]},
-    Energetic:{name:"Energetic Touch",
-      reaches:"Touch reaches you before a word, in how someone approaches you. You feel met when the presence is clean and the approach can be trusted.",
-      feed:["An unhurried approach, nothing needed back","Attention that rests on you without pressure","Being felt from across a room","Slowness that lets your body choose the contact"]},
-    Physical:{name:"Physical Touch",
-      reaches:"Touch reaches you through skin, weight, warmth and proximity. You feel met by contact that is going nowhere and owes nothing.",
-      feed:["A long hug held past the point you relax","A hand that rests instead of asks","Warmth and weight, no agenda","Slow, unhurried, full-bodied contact"]},
-    Spiritual:{name:"Spiritual Touch",
-      reaches:"Touch reaches you through awe, meaning and belonging, being moved by something larger than you. You feel met when the moment has real weight.",
-      feed:["Shared silence in front of something beautiful","Ritual, the same small sacred thing repeated","Being witnessed, not just seen","Meaning that lands in the body"]}
-  };
-  var LANG_LOW={Emotional:"being asked how you actually are, and met in the answer",Erotic:"the spark of aliveness that went quiet",Energetic:"the safety to stop bracing and trust how someone comes toward you",Physical:"contact with nothing owed, in doses your body can trust",Spiritual:"something that now matters, that actually registers"};
-
   var ORI={
     Leads:{badge:"You lead",word:"Lead",
       meaning:"You set the pace. You orchestrate the pleasure, read the room, make the moment happen. It is magnetic, and it is a lot to carry on your own.",
@@ -604,18 +585,12 @@
   var FREE_INTRO="<span class=\"termname\">One Touch</span> teaches you to read your body. Start here, at your own pace.";
   var PAID_INTRO="<span class=\"termname\">One Touch</span> teaches you to read your body. <span class=\"termname\">The Touch Reset</span> is where we change the pattern.";
 
-  /* QUESTIONS: pattern(4) H/F/A/S/C · Touch Language(4) · pleasure(4) · lead/receive(3) */
+  /* QUESTIONS: pattern(4) H/F/A/S/C · pleasure(4) · lead/receive(3) */
   var QPAT=[
     ["When someone offers to help you, your first instinct is to:",[["Wave it off. You are the one who helps.","H"],["Accept quietly, and make sure you are no trouble.","F"],["Politely decline. You have it handled.","A"],["Explain exactly what would and would not be useful.","S"],["Turn it into something warmer and bigger than the small thing offered.","C"]]],
     ["The hardest thing for you to receive is:",[["Care, with nothing expected back.","H"],["Full, undimmed desire or attention.","F"],["Tenderness that asks you to soften.","A"],["Being loved in a mess you have not tidied.","S"],["Aliveness you did not have to generate.","C"]]],
     ["Under stress, you:",[["Over-function. You hold everyone.","H"],["Shrink, smooth, keep the peace.","F"],["Take control, contain it, manage.","A"],["Get precise, explain, curate.","S"],["Do more, lead more, keep it moving.","C"]]],
     ["In intimacy, you are most likely to:",[["Give with care, and receive best when you're the one in control.","H"],["Follow their lead and rarely name your own edge.","F"],["Lead and hold authority, and struggle to surrender.","A"],["Stay composed, rarely letting go fully into sensation.","S"],["Spark the aliveness and keep it moving, even when it isn't met.","C"]]]
-  ];
-  var QTL=[
-    ["When you imagine being truly met, it looks most like:",[["Someone staying with your feeling all the way to the end, without fixing it.","Emotional"],["Being wanted, slowly, and letting the wanting be yours.","Erotic"],["A presence that settles you before a single word is spoken.","Energetic"],["A hand that rests on you with nothing owed, and stays.","Physical"],["Being witnessed in front of something larger than both of you.","Spiritual"]]],
-    ["The moment that lands deepest is:",[["A question that goes one layer past politeness.","Emotional"],["A slow kiss that's complete in itself, going nowhere.","Erotic"],["The pause before contact, when you feel them approach.","Energetic"],["A long hug, right at the second your body decides it's real.","Physical"],["Music, or a night sky, that quietly rearranges you.","Spiritual"]]],
-    ["You feel most safe when:",[["You can say the true thing and someone stays.","Emotional"],["You're desired without it turning into a demand.","Erotic"],["The approach is clean and unhurried, nothing needed back.","Energetic"],["There's warmth and weight, contact that isn't going anywhere.","Physical"],["The moment has meaning, and you're part of something.","Spiritual"]]],
-    ["Left to itself, touch reaches you most through:",[["Words, attention, being heard.","Emotional"],["Appetite, beauty, the current of wanting.","Erotic"],["Atmosphere, resonance, the feeling in a room.","Energetic"],["Skin, warmth, closeness.","Physical"],["Awe, silence, the sense of the sacred.","Spiritual"]]]
   ];
   var QPL=[
     ["Which scene would you most want to be in?",[["A candlelit bath, silk, and someone undressing you slowly.","Sensual"],["Pushed against the wall the second the door shuts.","Sexual"],["A long, charged look held across a crowded room.","Energetic"],["Hands pinned above your head, a whispered command.","Kinky"],["One that keeps changing: tender, then wild, then slow.","Shapeshifter"]]],
@@ -629,13 +604,12 @@
     ["Handing over control feels&hellip;",[["Hard. You'd rather hold the reins.","L"],["Like relief. Finally.","R"],["Fine, once the trust is really there.","B"]]]
   ];
 
-  var ALL=[].concat(QPAT,QTL,QPL,QLR);
-  var TOTAL=ALL.length; // 15
-  function phaseFor(idx){ if(idx<4)return"Part one · how you protect touch"; if(idx<8)return"Part two · how touch reaches you"; if(idx<12)return"Part three · how you're turned on"; return"Part four · lead or receive"; }
+  var ALL=[].concat(QPAT,QPL,QLR);
+  var TOTAL=ALL.length; // 11
+  function phaseFor(idx){ if(idx<4)return"Part one · how you protect touch"; if(idx<8)return"Part two · how you're turned on"; return"Part three · lead or receive"; }
   function phaseExplain(idx){
     if(idx<4)return"What you do first, before you even decide to, when touch or care comes your way.";
-    if(idx<8)return"The channel that actually lands when someone tries to reach you.";
-    if(idx<12)return"What lights up your body's own yes.";
+    if(idx<8)return"What lights up your body's own yes.";
     return"Whether you drive the moment, or let it be driven.";
   }
 
@@ -674,7 +648,7 @@
     locked=false;var q=ALL[i];
     $('phase').textContent=phaseFor(i);
     $('phaseSub').textContent=phaseExplain(i);
-    var pIdx=i<4?0:(i<8?1:(i<12?2:3));
+    var pIdx=i<4?0:(i<8?1:2);
     Array.prototype.forEach.call(document.querySelectorAll('#qrings .ring'),function(r,ri){r.classList.toggle('active',ri===pIdx);});
     $('question').innerHTML=q[0];
     $('prog').textContent=pad(i+1)+' / '+TOTAL;
@@ -696,48 +670,41 @@
   }
   $('back').addEventListener('click',function(){if(i>0){i--;renderQ();}});
 
-  var result={pattern:'',language:'',languageLow:'',pleasure:'',ori:''};
+  var result={pattern:'',pleasure:'',ori:''};
 
   function score(){
     var pt={H:0,F:0,A:0,S:0,C:0};
     for(var a=0;a<4;a++){if(answers[a]!=null)pt[QPAT[a][1][answers[a]][1]]++;}
     var PM={H:'Holder',F:'Flame',A:'Armour',S:'Signal',C:'Current'};
     var pattern=PM[Object.keys(pt).sort(function(x,y){return pt[y]-pt[x];})[0]];
-    var TLO=["Emotional","Erotic","Energetic","Physical","Spiritual"];
-    var tl={Emotional:0,Erotic:0,Energetic:0,Physical:0,Spiritual:0};
-    for(var b=0;b<4;b++){var ti=answers[4+b];if(ti!=null)tl[QTL[b][1][ti][1]]++;}
-    var tlSorted=TLO.slice().sort(function(x,y){return tl[y]-tl[x];});
-    var language=tlSorted[0],languageLow=tlSorted[tlSorted.length-1];
     var pl={Sensual:0,Sexual:0,Energetic:0,Kinky:0,Shapeshifter:0};
-    for(var c=0;c<4;c++){var pi=answers[8+c];if(pi!=null)pl[QPL[c][1][pi][1]]++;}
+    for(var c=0;c<4;c++){var pi=answers[4+c];if(pi!=null)pl[QPL[c][1][pi][1]]++;}
     var prim=[['Sensual',pl.Sensual],['Sexual',pl.Sexual],['Energetic',pl.Energetic],['Kinky',pl.Kinky]].sort(function(x,y){return y[1]-x[1];});
     var isShift = pl.Shapeshifter>=2 || prim[0][1]<=1;
     var pleasure=isShift?'Shapeshifter':prim[0][0];
     var lr={L:0,R:0,B:0};
-    for(var d=0;d<3;d++){var li=answers[12+d];if(li!=null)lr[QLR[d][1][li][1]]++;}
+    for(var d=0;d<3;d++){var li=answers[8+d];if(li!=null)lr[QLR[d][1][li][1]]++;}
     var ori;
     if(lr.B>lr.L && lr.B>lr.R)ori='Switches';
     else if(lr.L===lr.R)ori='Switches';
     else ori=(lr.L>lr.R)?'Leads':'Receives';
-    return {pattern:pattern,language:language,languageLow:languageLow,pleasure:pleasure,ori:ori};
+    return {pattern:pattern,pleasure:pleasure,ori:ori};
   }
 
   function doReveal(){
     result=score();
-    try{paintResult();}catch(e){}
     quiz.style.display='none';funnel.style.display='none';
-    resultPage.style.display='block';window.scrollTo(0,0);revealBands();
-    if(typeof gtag==='function')gtag('event','quiz_complete',{quiz:'touch_reset',pattern:result.pattern,language:result.language,pleasure:result.pleasure,orientation:result.ori,audience:audience,stage:stage});
+    resultPage.style.display='block';window.scrollTo(0,0);
+    if(typeof gtag==='function')gtag('event','quiz_complete',{quiz:'touch_reset',pattern:result.pattern,pleasure:result.pleasure,orientation:result.ori,audience:audience,stage:stage});
   }
 
   function fillList(el,arr,cls){el.innerHTML='';arr.forEach(function(t){var d=document.createElement('div');d.className=cls;d.textContent=t;el.appendChild(d);});}
   function fillLi(el,arr){el.innerHTML='';arr.forEach(function(t){var li=document.createElement('li');li.textContent=t;el.appendChild(li);});}
 
-  function buildTeaserStack(pl,pa,lg,o){
+  function buildTeaserStack(pl,pa,o){
     var rows=[
       {label:'Pleasure Language',name:pl.name,text:pl.desc},
       {label:'Touch Pattern',name:pa.name,text:pa.line},
-      {label:'Touch Language',name:lg.name,text:lg.reaches},
       {label:'In touch, you',name:o.badge,text:o.meaning}
     ];
     var wrap=$('teaserStack');wrap.innerHTML='';
@@ -773,13 +740,12 @@
   }
 
   function paintResult(){
-    var pl=PLEASURE[result.pleasure],pa=PATTERN[result.pattern],lg=TLANG[result.language],o=ORI[result.ori],a=AUD[audience]||AUD.woman,st=STAGE[stage];
+    var pl=PLEASURE[result.pleasure],pa=PATTERN[result.pattern],o=ORI[result.ori],a=AUD[audience]||AUD.woman,st=STAGE[stage];
     $('emblem').innerHTML=EMBLEM[result.pattern];
     $('sPleasure').textContent=pl.short;
     $('sPattern').textContent=pa.short;
-    $('sLanguage').textContent=lg.name.replace(' Touch','');
     $('sOri').textContent=o.word;
-    buildTeaserStack(pl,pa,lg,o);
+    buildTeaserStack(pl,pa,o);
     $('rStageLine').textContent="Right now: "+st.name+" — "+STAGE_TAGLINE[stage];
     paintPitch(a,st);
     $('shareBand').style.display='block';
@@ -804,8 +770,8 @@
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){msg.className='msg err';msg.textContent='Please enter a valid email.';return;}
     var btn=$('sendBtn');btn.disabled=true;btn.textContent='Revealing…';
     var audTag=(AUD[audience]||{}).tag;
-    var tags=[PATTERN_TAG[result.pattern],PLEASURE_TAG[result.pleasure],LANG_TAG[result.language],ORI_TAG[result.ori],audTag,ID_TAG[identity],STAGE_TAG[stage]].filter(function(t){return t;});
-    var stackFields={touch_pleasure:result.pleasure,touch_pattern:PATTERN[result.pattern].short,touch_language:TLANG[result.language].name.replace(' Touch',''),touch_orientation:ORI[result.ori].word.toLowerCase(),touch_stage:STAGE[stage].name};
+    var tags=[PATTERN_TAG[result.pattern],PLEASURE_TAG[result.pleasure],ORI_TAG[result.ori],audTag,ID_TAG[identity],STAGE_TAG[stage]].filter(function(t){return t;});
+    var stackFields={touch_pleasure:result.pleasure,touch_pattern:PATTERN[result.pattern].short,touch_orientation:ORI[result.ori].word.toLowerCase(),touch_stage:STAGE[stage].name};
     var payload=JSON.stringify({email:email,tagIds:tags,sequenceIds:[PATTERN_SEQ[result.pattern],2821695].filter(Boolean),fields:stackFields,hp_field:$('capForm').hp_field.value});
     function attempt(n){
       return fetch('/.netlify/functions/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:payload})
@@ -814,11 +780,13 @@
         .catch(function(err){if(n>0){return new Promise(function(res){setTimeout(res,1400);}).then(function(){return attempt(n-1);});}throw err;});
     }
     attempt(1).then(function(){
+      paintResult();
+      var unlocked=$('unlockedContent');if(unlocked)unlocked.style.display='block';
       var form=$('capForm');if(form)form.style.display='none';
-      var sent=$('reportSent');if(sent)sent.style.display='block';
-      if(typeof gtag==='function')gtag('event','quiz_optin',{quiz:'touch_reset',pattern:result.pattern,language:result.language,pleasure:result.pleasure,orientation:result.ori,audience:audience});
+      window.scrollTo(0,0);revealBands();
+      if(typeof gtag==='function')gtag('event','quiz_optin',{quiz:'touch_reset',pattern:result.pattern,pleasure:result.pleasure,orientation:result.ori,audience:audience});
     }).catch(function(){
-      btn.disabled=false;btn.textContent='Send me the full report';
+      btn.disabled=false;btn.textContent='Reveal my stack';
       msg.className='msg err';msg.textContent='Something went wrong. Please try again.';
     });
   });
@@ -827,9 +795,9 @@
     i=0;answers=new Array(TOTAL).fill(null);locked=false;
     resultPage.style.display='none';funnel.style.display='flex';reveal.style.display='none';
     contextSec.style.display='none';identitySec.style.display='none';stageSec.style.display='none';
-    var rs=$('reportSent');if(rs)rs.style.display='none';
+    var unlocked=$('unlockedContent');if(unlocked)unlocked.style.display='none';
     $('capForm').style.display='block';$('capForm').reset();$('msg').textContent='';
-    $('sendBtn').disabled=false;$('sendBtn').textContent='Send me the full report';
+    $('sendBtn').disabled=false;$('sendBtn').textContent='Reveal my stack';
     intro.style.display='block';window.scrollTo(0,0);
   });
 
@@ -840,6 +808,10 @@
     answers=answers.map(function(_,idx){return idx%3;});
     intro.style.display='none';contextSec.style.display='none';identitySec.style.display='none';stageSec.style.display='none';quiz.style.display='none';
     doReveal();
+    // preview mode skips the email gate too, review only, never linked anywhere
+    paintResult();
+    var unlocked=$('unlockedContent');if(unlocked)unlocked.style.display='block';
+    var form=$('capForm');if(form)form.style.display='none';
     // skip the scroll-triggered fade-in, show everything already settled since
     // there's no real scrolling to trigger it on a straight jump like this
     document.querySelectorAll('.reveal, .rin').forEach(function(el){el.classList.add('in');});
