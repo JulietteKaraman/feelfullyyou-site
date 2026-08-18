@@ -62,13 +62,14 @@
   @media(max-width:860px){.topbar nav > a:not(.btn){display:none}}
 
   .hero{padding-top:66px;background:var(--teal);overflow:hidden}
-  .hero-inner{display:grid;grid-template-columns:1.1fr .9fr;align-items:end;max-width:var(--max);margin:0 auto;padding:0 28px}
+  .hero-inner{display:grid;grid-template-columns:.9fr 1.3fr;align-items:end;max-width:var(--max);margin:0 auto;padding:0 28px}
   .hero .copy{padding:64px 56px 72px 0}
   .hero .eyebrow{color:var(--gold-pale);margin-bottom:18px}
   .hero h1{font-size:clamp(2rem,4.2vw,3.2rem);color:#fff;letter-spacing:-.028em;line-height:1.05;margin-bottom:24px}
   .hero h1 em{font-style:italic;color:var(--gold-pale)}
-  .hero .sub{font-size:18px;color:#d7d0c4;max-width:40ch;line-height:1.55;margin-bottom:36px}
-  .hero .photo-col img{width:100%;height:auto;aspect-ratio:1600/650;object-fit:cover;object-position:center top;display:block}
+  .hero .sub{font-size:18px;color:#d7d0c4;max-width:40ch;line-height:1.55;margin-bottom:20px}
+  .hero .payoff{font-family:var(--display);font-style:italic;font-weight:600;font-size:clamp(20px,2.6vw,28px);color:var(--gold-pale);max-width:38ch;line-height:1.35;margin-bottom:36px}
+  .hero .photo-col img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center top;display:block}
   @media(max-width:860px){.hero-inner{grid-template-columns:1fr}.hero .copy{padding:48px 0 36px}}
 
   .belief{padding:72px 0;background:#99680c;border-top:1px solid var(--line);text-align:center}
@@ -192,8 +193,9 @@
   .filter-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-top:36px}
   .filter h3{font-size:1.1rem;font-weight:700;margin-bottom:20px}
   .filter-list{list-style:none;display:flex;flex-direction:column;gap:12px}
-  .filter-list li{font-size:16px;color:var(--brown);line-height:1.55;padding-left:18px;position:relative}
-  .filter-list li::before{content:"";position:absolute;left:0;top:10px;width:6px;height:6px;border-radius:50%;background:var(--gold-soft)}
+  .filter-list li{font-size:16px;color:var(--brown);line-height:1.55;padding-left:34px;position:relative}
+  .filter-yes .filter-list li::before{content:"\2713";position:absolute;left:0;top:-2px;font-size:20px;font-weight:700;line-height:1;color:var(--teal)}
+  .filter-no .filter-list li::before{content:"\2715";position:absolute;left:0;top:-2px;font-size:18px;font-weight:700;line-height:1;color:var(--ink)}
   @media(max-width:700px){.filter-grid{grid-template-columns:1fr}}
 
   .cta-section{padding:100px 0;background:var(--teal);border-top:1px solid var(--line-dark);text-align:center}
@@ -319,9 +321,10 @@ gtag('config', 'G-SY8NKELMNZ');
 <header class="hero">
   <div class="hero-inner">
     <div class="copy">
-      <div class="eyebrow reveal">The Touch Reset for Couples · 8-Week Programme</div>
+      <div class="eyebrow reveal">The Touch Reset for Couples · 12-Week Programme</div>
       <h1 class="reveal">Touch that feels like<br><em>coming home.</em></h1>
-      <p class="sub reveal">A completely private 8-week programme for two people who love each other and cannot find the door back in to each other. Structure that ends the guessing. Presence that actually lands.</p>
+      <p class="sub reveal">A completely private 12-week programme for two people who love each other and cannot find the door back in to each other.</p>
+      <p class="payoff reveal">Structure that ends the guessing. Presence that actually lands.</p>
       <div style="display:flex;gap:14px;flex-wrap:wrap">
         <a href="https://tidycal.com/juliette2/the-beginning-clarity-call" class="btn reveal">Book a clarity call</a>
         <a href="#included" class="btn ghost reveal">See what's included</a>
@@ -451,11 +454,10 @@ gtag('config', 'G-SY8NKELMNZ');
   <div class="content">
     <h2 class="reveal">When there is structure,<br>there is less guessing.</h2>
     <p class="reveal">The Beginning gives you both a clear role, one leads, one receives, and a progression that builds week by week. Not scripts. Not advice. A real practice that changes what happens when you reach for each other.</p>
-    <p class="reveal" style="opacity:.9;font-size:16px">Each partner gets their own membership portal. Their own learning path. Their own individual coaching calls. She does not know what he is learning. He does not know what she is learning. Because the skills are different.</p>
   </div>
 </div>
 
-<!-- 8-WEEK SPINE -->
+<!-- 12-WEEK SPINE -->
 <section class="spine">
   <div class="wrap">
     <div class="eyebrow reveal" style="margin-bottom:18px">How it unfolds</div>
@@ -491,29 +493,22 @@ gtag('config', 'G-SY8NKELMNZ');
   <div class="wrap">
     <div class="eyebrow reveal">Everything you receive</div>
     <h2 class="reveal">Built for two. Held completely privately.</h2>
-    <p class="lede reveal">Separate portals. Individual calls. One shared couple call. Weekly check-ins. Everything structured so you each show up fully, without your partner in the room until it matters.</p>
+    <p class="lede reveal">Individual calls and a couple call, every month. Weekly check-ins. Everything structured so you each show up fully, without your partner in the room until it matters.</p>
     <div class="included-feature reveal">
       <img src="https://feelfullyyou.com/media/698b15e7a41b874f9942ff6c.png" alt="What's included in The Beginning" loading="lazy" decoding="async">
     </div>
     <div class="checklist">
       <div class="check-item reveal">
-        <img src="https://feelfullyyou.com/media/69da9c0c81ed6d1ab1e178ac.png" alt="" loading="lazy" decoding="async">
-        <div>
-          <div class="ctitle">Access to dedicated portal</div>
-          <div class="cdesc">Lifetime access. Separate from your partner's. Your own space for your own process.</div>
-        </div>
-      </div>
-      <div class="check-item reveal">
         <img src="https://feelfullyyou.com/media/6a0d9a99ca9579c76ba217cb.png" alt="" loading="lazy" decoding="async">
         <div>
-          <div class="ctitle">8 Weekly Calls</div>
-          <div class="cdesc">Individual calls for him, individual calls for her. Tailored to your role, leading or receiving.</div>
+          <div class="ctitle">Monthly Individual Calls</div>
+          <div class="cdesc">Tailored to your role, leading or receiving.</div>
         </div>
       </div>
       <div class="check-item reveal">
         <img src="https://feelfullyyou.com/media/6a08a4abdbe569a25d7a1dba.png" alt="" loading="lazy" decoding="async">
         <div>
-          <div class="ctitle">One private call as a couple</div>
+          <div class="ctitle">Monthly Couple Call</div>
           <div class="cdesc">A dedicated couple call where both of you are held together, timed for when it will matter most.</div>
         </div>
       </div>
@@ -527,7 +522,7 @@ gtag('config', 'G-SY8NKELMNZ');
       <div class="check-item reveal">
         <img src="https://feelfullyyou.com/media/69da9c0d019dc508d34b9d7f.png" alt="" loading="lazy" decoding="async">
         <div>
-          <div class="ctitle">7 Progressive Touch Dates</div>
+          <div class="ctitle">Progressive Touch Dates</div>
           <div class="cdesc">Structured home practices that build week by week. Real experiences designed to shift what happens between you.</div>
         </div>
       </div>
@@ -535,7 +530,7 @@ gtag('config', 'G-SY8NKELMNZ');
         <img src="https://feelfullyyou.com/media/69da9c0c019dc508d34b9d5f.png" alt="" loading="lazy" decoding="async">
         <div>
           <div class="ctitle">Your Bespoke 30-Min Guided Touch Audio</div>
-          <div class="cdesc">Personalised for your couple from everything learned across the 8 weeks. Yours to return to.</div>
+          <div class="cdesc">Personalised for your couple from everything learned across the 12 weeks. Yours to return to.</div>
         </div>
       </div>
       <div class="check-item reveal">
@@ -549,7 +544,7 @@ gtag('config', 'G-SY8NKELMNZ');
         <img src="https://feelfullyyou.com/media/69da9c0ca4e6aa34cbd22267.png" alt="" loading="lazy" decoding="async">
         <div>
           <div class="ctitle">Bonus</div>
-          <div class="cdesc">Post-experience integration pack, so what opened in the 8 weeks keeps moving after the programme closes.</div>
+          <div class="cdesc">Post-experience integration pack, so what opened in the 12 weeks keeps moving after the programme closes.</div>
         </div>
       </div>
     </div>
@@ -606,7 +601,7 @@ gtag('config', 'G-SY8NKELMNZ');
       <h2 class="reveal">I'm <em style="font-style:italic;color:var(--gold-deep)">Juliette.</em></h2>
       <p class="intro reveal">For twenty-seven years I have worked with people and their bodies, the last fifteen with couples who love each other and live full lives, and still find themselves losing connection when touch begins. I know this threshold exactly. The moment one partner reaches and the other is not quite there.</p>
       <p class="intro reveal">I work with the body directly. I don't give advice about intimacy. I create the conditions where the body remembers what intimacy actually feels like. Where touch stops being a performance and starts being a return.</p>
-      <p class="intro reveal">The Beginning is the structure I built for couples who needed more than a session. Eight weeks of real practice, held privately, built around you.</p>
+      <p class="intro reveal">The Beginning is the structure I built for couples who needed more than a session. Twelve weeks of real practice, held privately, built around you.</p>
       <div class="modalities reveal">
         <span>Touch Languages™</span><span>EMDR</span><span>Somatic experiencing</span><span>Hypnotherapy</span><span>Spinal attunement</span><span>Deep PEAT</span><span>Aspectics</span><span>Rapid Release Rewire Restore®</span><span>Erotic Blueprints</span>
       </div>
@@ -651,17 +646,17 @@ gtag('config', 'G-SY8NKELMNZ');
     <div class="eyebrow reveal" style="margin-bottom:18px">Is this for you?</div>
     <h2 class="reveal">Who The Beginning is for, and who it isn't.</h2>
     <div class="filter-grid">
-      <div class="reveal">
+      <div class="reveal filter-yes">
         <h3>This is for you if</h3>
         <ul class="filter-list">
           <li>You still love each other and want the body to catch up</li>
           <li>You have tried talking, therapy, or books, and nothing has changed in the body</li>
           <li>You want clear structure, not more advice</li>
-          <li>Both of you are willing to show up for 8 weeks</li>
+          <li>Both of you are willing to show up for 12 weeks</li>
           <li>You want to stop guessing and stop performing intimacy</li>
         </ul>
       </div>
-      <div class="reveal">
+      <div class="reveal filter-no">
         <h3>This is not for you if</h3>
         <ul class="filter-list">
           <li>Only one partner is willing</li>
@@ -680,12 +675,12 @@ gtag('config', 'G-SY8NKELMNZ');
     <div class="eyebrow reveal">Investment</div>
     <h2 class="reveal">The Beginning. The Ultimate Touch Reset</h2>
     <p class="price-note reveal">Two couples per month · Start within 4 weeks of booking</p>
-    <p class="cta-sub reveal">Eight weeks. Completely private. Built for your relationship, not a cohort. One clarity call to make sure this is right for both of you.</p>
+    <p class="cta-sub reveal">Twelve weeks. Completely private. One clarity call to make sure this is right for both of you.</p>
     <div class="cta-buttons">
       <a href="https://tidycal.com/juliette2/the-beginning-clarity-call" class="btn reveal">Book a Clarity Call</a>
     </div>
     <div class="arrives reveal">
-      <div><b>To start</b>Your portals open. Individual calls begin.</div>
+      <div><b>To start</b>Individual calls begin.</div>
       <div><b>Along the way</b>Progressive touch dates. Weekly check-ins.</div>
       <div><b>At the end</b>Culmination. Your bespoke audio delivered.</div>
     </div>
@@ -700,11 +695,7 @@ gtag('config', 'G-SY8NKELMNZ');
     <div class="faq-list">
       <div class="faq-item reveal">
         <h3>Do we do the calls together?</h3>
-        <p>No, your calls are individual. Him with Juliette. Her with Juliette. Each tailored to your role. The one couple call happens at the right moment in the programme, when both of you are ready to be held together.</p>
-      </div>
-      <div class="faq-item reveal">
-        <h3>What are the 7 progressive touch dates?</h3>
-        <p>Structured practices you do at home together, one per week, building in depth and presence. Not exercises. Real experiences designed to shift what happens between you in the moments that have been hardest.</p>
+        <p>Yes. There are individual calls each month, tailored to your role, and a couple call each month too, where you're held together.</p>
       </div>
       <div class="faq-item reveal">
         <h3>Is this therapy?</h3>
@@ -719,8 +710,8 @@ gtag('config', 'G-SY8NKELMNZ');
         <p>Yes. The calls are scheduled individually, so different time zones are no barrier. The programme works online globally.</p>
       </div>
       <div class="faq-item reveal">
-        <h3>What happens after the 8 weeks?</h3>
-        <p>Your portal access is lifetime. Your bespoke audio is yours to keep. Many couples continue with bespoke mentorship or the Couples Intensive. The Beginning sets a foundation, not a ceiling.</p>
+        <h3>What happens after the 12 weeks?</h3>
+        <p>You have access to this material for a lifetime, and your bespoke audio is yours to keep. Many couples continue with bespoke mentorship or the Couples Intensive. The Beginning sets a foundation, not a ceiling.</p>
       </div>
       <div class="faq-item reveal">
         <h3>What is your refund policy?</h3>
