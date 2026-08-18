@@ -97,8 +97,10 @@
 /the-communication-kit-order-page /communication-reboot-kit        301
 /links                          /links.html                     200
 /connect-with-essence           /connect-with-essence.html      200
-/the-room                       /the-room.html                  200
-/the-room-mixed                 /the-room                       301
+/the-touch-reset                /the-touch-reset.html           200
+/the-room                       /the-touch-reset                301!
+/the-room.html                  /the-touch-reset                301!
+/the-room-mixed                 /the-touch-reset                301
 /the-room-women-original        /the-room-women-original.html   200
 /thankyou-grief                 /thankyou-grief.html            200
 /be-touched                     https://findthetouch.live/      301
