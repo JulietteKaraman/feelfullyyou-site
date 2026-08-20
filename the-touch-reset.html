@@ -295,7 +295,7 @@
   .press img{height:26px;width:auto;max-width:110px;object-fit:contain;filter:brightness(0) opacity(.4);transition:filter .25s}
   .press img:hover{filter:brightness(0) opacity(.7)}
   .why .last{font-size:18px;max-width:60ch;color:var(--brown)}
-  @media(max-width:860px){.why .split{grid-template-columns:1fr}.why .photo{min-height:0;aspect-ratio:4/5}.why .copy{padding:56px 28px}}
+  @media(max-width:860px){.why .split{grid-template-columns:1fr}.why .photo{min-height:0;aspect-ratio:4/5;min-width:0}.why .copy{padding:56px 28px;min-width:0}}
 
   /* TOUCH SPLIT: same pattern as WHY ME, photo on the right instead of left */
   .touch-split{padding:0;border-top:1px solid var(--line);background:var(--paper)}
@@ -305,7 +305,7 @@
   .touch-split .eyebrow{margin-bottom:16px}
   .touch-split h2{font-size:clamp(30px,4.6vw,46px);margin-bottom:18px}
   .touch-split p{font-size:var(--t-md);max-width:52ch;color:var(--brown);line-height:1.6}
-  @media(max-width:860px){.touch-split .split{grid-template-columns:1fr}.touch-split .photo{min-height:0;aspect-ratio:4/5}.touch-split .copy{padding:56px 28px}}
+  @media(max-width:860px){.touch-split .split{grid-template-columns:1fr}.touch-split .photo{min-height:0;aspect-ratio:4/5;min-width:0}.touch-split .copy{padding:56px 28px;min-width:0}}
   .touch-split.alt .split{grid-template-columns:.85fr 1.15fr}
   .touch-split.alt .photo{order:-1}
   @media(max-width:860px){.touch-split.alt .photo{order:0}}
