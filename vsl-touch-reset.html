@@ -48,14 +48,28 @@
 
   .pattern-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;text-align:left;max-width:900px;margin:0 auto}
   .pattern-card{background:#fff;border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:6px;padding:18px 20px}
+  .pattern-card .picon{width:34px;height:34px;margin-bottom:8px;opacity:.88}
   .pattern-card .pname{font-family:var(--display);font-weight:700;font-size:16px;color:var(--ink)}
   .pattern-card .pstrat{font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:6px}
-  .pattern-card .ache{color:var(--gold-deep);font-style:italic;font-weight:600;margin-top:8px;font-size:13.5px}
+  .pattern-card p{font-size:13px;color:var(--brown);line-height:1.45;margin-top:4px}
+  .pattern-card .slabel{font-size:10px;text-transform:uppercase;letter-spacing:.07em;color:var(--gold-deep);font-weight:600;margin:8px 0 4px;border-top:1px solid var(--line);padding-top:8px}
+  .pattern-card .signals{list-style:none;margin:0 0 6px;padding:0}
+  .pattern-card .signals li{font-size:11.5px;color:var(--brown);line-height:1.4;margin-bottom:4px;padding-left:11px;position:relative}
+  .pattern-card .signals li::before{content:"\00B7";position:absolute;left:0;color:var(--gold-deep);font-weight:700}
+  .pattern-card .ache{color:var(--gold-deep);font-style:italic;font-weight:600;margin-top:6px;font-size:12.5px}
 
-  .states-row{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:22px 0}
-  .state-pill{background:#fff;border:1px solid var(--line);border-radius:30px;padding:10px 20px;font-size:14px;font-weight:600;color:var(--brown)}
+  .states-row{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin:22px 0}
+  .state-pill{background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px 18px;font-size:13px;font-weight:600;color:var(--brown);display:flex;flex-direction:column;align-items:center;gap:8px;min-width:90px}
+  .state-pill img{width:32px;height:32px}
   .state-pill.melted{border-color:var(--gold);color:var(--gold-deep)}
 
+  .cover-hero{width:100%;max-width:560px;border-radius:6px;overflow:hidden;margin:0 auto 24px;box-shadow:0 20px 50px rgba(13,53,53,.22)}
+  .cover-hero img{width:100%;display:block;object-fit:cover;max-height:300px}
+  .bonus-photo{width:100%;max-width:480px;border-radius:6px;overflow:hidden;margin:20px auto 0;box-shadow:0 16px 40px rgba(13,53,53,.18)}
+  .bonus-photo img{width:100%;display:block}
+
+  .tb-logo{max-width:150px;margin:0 auto 18px}
+  .tb-logo img{width:100%;display:block}
   .tb-steps{max-width:520px;margin:0 auto;text-align:left;background:#fff;border:1px solid var(--line);border-radius:6px;padding:22px 26px}
   .tb-steps p{margin-bottom:10px;font-size:16px}
   .tb-steps p:last-child{margin-bottom:0}
@@ -106,6 +120,7 @@
 
   <section class="slide active" data-index="0">
     <div class="slide-inner">
+      <div class="cover-hero"><img src="touch-reset-hero-branded.jpg" alt="The Touch Reset"></div>
       <div class="eyebrow">The Touch Reset</div>
       <h1>Why Your Body Braces at Touch, and How to Actually Want It Again</h1>
       <p class="sub">Not another book that explains it and changes nothing. The twelve week method, in the order the body actually changes.</p>
@@ -189,11 +204,11 @@
       <div class="eyebrow">The Check-In Language</div>
       <h2>Touch States</h2>
       <div class="states-row">
-        <div class="state-pill">Braced</div>
-        <div class="state-pill">Withheld</div>
-        <div class="state-pill">Performing</div>
-        <div class="state-pill">Present</div>
-        <div class="state-pill melted">Melted</div>
+        <div class="state-pill"><img src="quiz-icons/state-braced.svg" alt="">Braced</div>
+        <div class="state-pill"><img src="quiz-icons/state-withheld.svg" alt="">Withheld</div>
+        <div class="state-pill"><img src="quiz-icons/state-performing.svg" alt="">Performing</div>
+        <div class="state-pill"><img src="quiz-icons/state-present.svg" alt="">Present</div>
+        <div class="state-pill melted"><img src="quiz-icons/state-melted.svg" alt="">Melted</div>
       </div>
       <p class="sub">There's nothing to fix. Just where you are, named honestly, before every practice.</p>
     </div>
@@ -204,11 +219,51 @@
       <div class="eyebrow">Which One Is Actually Running the Show</div>
       <h2>The Five Patterns</h2>
       <div class="pattern-grid">
-        <div class="pattern-card"><div class="pname">The Holder</div><div class="pstrat">Give to stay connected</div><p class="ache">"Who holds you?"</p></div>
-        <div class="pattern-card"><div class="pname">The Flame</div><div class="pstrat">Dim to stay digestible</div><p class="ache">"Turn down the heat."</p></div>
-        <div class="pattern-card"><div class="pname">The Armour</div><div class="pstrat">Contain to stay safe</div><p class="ache">"Softness feels dangerous."</p></div>
-        <div class="pattern-card"><div class="pname">The Signal</div><div class="pstrat">Curate to stay legible</div><p class="ache">"Lose track of what's true."</p></div>
-        <div class="pattern-card"><div class="pname">The Current</div><div class="pstrat">Express to stay met</div><p class="ache">"What happens when you stop performing?"</p></div>
+        <div class="pattern-card">
+          <img class="picon" src="quiz-icons/pattern-holder.png" alt="" loading="lazy">
+          <div class="pname">The Holder</div>
+          <div class="pstrat">Give to stay connected</div>
+          <p>You reach first, you hold everyone, and quietly wonder why no one ever thinks to hold you.</p>
+          <p class="slabel">You'll recognise it when</p>
+          <ul class="signals"><li>Someone asks what you need and you go blank.</li><li>You initiated every touch today.</li></ul>
+          <p class="ache">"You're the one everyone comes to, but who holds you?"</p>
+        </div>
+        <div class="pattern-card">
+          <img class="picon" src="quiz-icons/pattern-flame.png" alt="" loading="lazy">
+          <div class="pname">The Flame</div>
+          <div class="pstrat">Dim to stay digestible</div>
+          <p>There is fire in you. You learned to turn it down to stay wanted, and now you are quietly starving to be met at full heat.</p>
+          <p class="slabel">You'll recognise it when</p>
+          <ul class="signals"><li>You've got good at enjoying what arrives instead of asking for what you actually want.</li><li>Your laugh sometimes gets smaller halfway through.</li></ul>
+          <p class="ache">"You have fire inside but learned to turn down the heat."</p>
+        </div>
+        <div class="pattern-card">
+          <img class="picon" src="quiz-icons/pattern-armour.png" alt="" loading="lazy">
+          <div class="pname">The Armour</div>
+          <div class="pstrat">Contain to stay safe</div>
+          <p>You stay composed and in control, because softness once cost you too much.</p>
+          <p class="slabel">You'll recognise it when</p>
+          <ul class="signals"><li>Compliments slide off. "You look amazing." "Thank you, yes." Already gone.</li><li>Someone tries to get close and you suddenly find a reason to be busy.</li></ul>
+          <p class="ache">"You can handle anything, but softness feels dangerous."</p>
+        </div>
+        <div class="pattern-card">
+          <img class="picon" src="quiz-icons/pattern-signal.png" alt="" loading="lazy">
+          <div class="pname">The Signal</div>
+          <div class="pstrat">Curate to stay legible</div>
+          <p>You stay readable. You translate and filter yourself so well that no one ever meets the raw, unedited you.</p>
+          <p class="slabel">You'll recognise it when</p>
+          <ul class="signals"><li>You've already worked out how to say it before you say it.</li><li>Being truly received feels both wanted and slightly terrifying.</li></ul>
+          <p class="ache">"You work so hard to be clear that you lose track of what's true."</p>
+        </div>
+        <div class="pattern-card">
+          <img class="picon" src="quiz-icons/pattern-current.png" alt="" loading="lazy">
+          <div class="pname">The Current</div>
+          <div class="pstrat">Express to stay met</div>
+          <p>You bring the aliveness, you keep the charge even when no one meets you there, and being the source is quietly exhausting you.</p>
+          <p class="slabel">You'll recognise it when</p>
+          <ul class="signals"><li>You feel the exact moment the energy drops, and instinctively pick it back up.</li><li>Relief. That's the word for when someone else holds the current.</li></ul>
+          <p class="ache">"You bring the energy, but what happens when you stop performing?"</p>
+        </div>
       </div>
     </div>
   </section>
@@ -216,6 +271,7 @@
   <section class="slide" data-index="12">
     <div class="slide-inner">
       <div class="eyebrow">The One Real Practice</div>
+      <div class="tb-logo"><img src="touch-base-logo.jpg" alt="Touch Base logo"></div>
       <h2>Touch Base®</h2>
       <div class="tb-steps">
         <p>Press thumb to forefinger.</p>
@@ -285,6 +341,7 @@
     <div class="slide-inner">
       <div class="eyebrow">What's Included</div>
       <p class="sub">A real community, held space, weekly touch-ins, people doing this exact work alongside you. And a real guarantee: eighty percent shown up, eighty percent done, still not there, thirty more days, free.</p>
+      <div class="bonus-photo"><img src="touch-reset-bonuses-collage.jpg" alt="The Touch Reset bonuses"></div>
     </div>
   </section>
 
