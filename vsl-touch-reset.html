@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Touch Reset — VSL · Feel Fully You</title>
+<meta name="description" content="Why your body braces at touch, how the Touch Reset actually works, and how to book your Touch Audit.">
+<meta name="robots" content="noindex,nofollow">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fefcfa;--ink:#1c1714;--brown:#5d4a33;
+    --gold:#a88538;--gold-deep:#99680c;--gold-pale:#ddc98e;--gold-soft:#b4a074;
+    --teal:#0d3535;--teal-deep:#061a1a;--line:#e3dccf;
+    --display:'Poppins',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{background:var(--cream);color:var(--brown);font-family:var(--body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow:hidden}
+  a{color:inherit;text-decoration:none}
+  strong{color:var(--ink);font-weight:600}
+
+  .topbar{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--teal);padding:0 24px;height:56px;display:flex;align-items:center;justify-content:space-between}
+  .topbar .brand{font-family:var(--display);font-weight:700;font-size:15px;letter-spacing:.02em;color:var(--cream)}
+  .topbar .brand b{color:var(--gold-pale)}
+  .topbar .progress{font-size:13px;color:var(--gold-pale);font-family:var(--body)}
+
+  .deck{position:relative;width:100%;height:100%}
+  .slide{position:absolute;inset:0;padding:56px 28px 100px;display:flex;flex-direction:column;align-items:center;justify-content:center;justify-content:safe center;opacity:0;visibility:hidden;transform:translateY(14px);transition:opacity .45s ease,transform .45s ease;overflow-y:auto}
+  .slide.active{opacity:1;visibility:visible;transform:translateY(0)}
+  .slide-inner{max-width:760px;width:100%;margin:auto;text-align:center}
+
+  .eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:16px}
+  h1{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,4.6vw,3rem);color:var(--ink);line-height:1.1;letter-spacing:-.022em;margin-bottom:18px}
+  h2{font-family:var(--display);font-weight:700;font-size:clamp(1.6rem,3.6vw,2.3rem);color:var(--ink);line-height:1.15;letter-spacing:-.02em;margin-bottom:16px}
+  .sub{font-size:18px;color:var(--brown);max-width:60ch;margin:0 auto;line-height:1.65}
+  .divider{width:44px;height:2px;background:var(--gold-pale);margin:28px auto}
+
+  .cover-photo{width:100%;max-width:420px;border-radius:6px;overflow:hidden;margin:0 auto 28px;box-shadow:0 20px 50px rgba(13,53,53,.22)}
+  .cover-photo img{width:100%;display:block;object-fit:cover;max-height:340px}
+
+  .stats-row{display:flex;justify-content:center;gap:36px;flex-wrap:wrap;margin:24px 0 20px}
+  .stat{text-align:center}
+  .stat b{display:block;font-family:var(--display);font-weight:700;font-size:clamp(24px,3.4vw,32px);color:var(--gold-deep)}
+  .stat span{font-size:13px;color:var(--brown)}
+  .press-row{display:flex;justify-content:center;align-items:center;gap:22px;flex-wrap:wrap;margin:22px 0 30px;opacity:.82}
+  .press-row img{height:22px;width:auto;filter:grayscale(1)}
+
+  .pattern-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;text-align:left;max-width:900px;margin:0 auto}
+  .pattern-card{background:#fff;border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:6px;padding:18px 20px}
+  .pattern-card .pname{font-family:var(--display);font-weight:700;font-size:16px;color:var(--ink)}
+  .pattern-card .pstrat{font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:6px}
+  .pattern-card .ache{color:var(--gold-deep);font-style:italic;font-weight:600;margin-top:8px;font-size:13.5px}
+
+  .states-row{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:22px 0}
+  .state-pill{background:#fff;border:1px solid var(--line);border-radius:30px;padding:10px 20px;font-size:14px;font-weight:600;color:var(--brown)}
+  .state-pill.melted{border-color:var(--gold);color:var(--gold-deep)}
+
+  .tb-steps{max-width:520px;margin:0 auto;text-align:left;background:#fff;border:1px solid var(--line);border-radius:6px;padding:22px 26px}
+  .tb-steps p{margin-bottom:10px;font-size:16px}
+  .tb-steps p:last-child{margin-bottom:0}
+
+  .stage-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;text-align:left;max-width:920px;margin:20px auto 0}
+  .stage-card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:18px 20px}
+  .stage-card .snum{font-family:var(--display);font-weight:700;color:var(--gold-deep);font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+  .stage-card h3{font-family:var(--display);font-size:17px;color:var(--ink);margin:6px 0 8px}
+  .stage-card p{font-size:13.5px;color:var(--brown);line-height:1.5}
+
+  .quote-card{background:#fff;border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:6px;padding:22px 26px;max-width:560px;margin:0 auto 16px;text-align:left}
+  .quote-card p{font-size:16px;color:var(--ink);font-style:italic;margin-bottom:8px}
+  .quote-card span{font-size:13px;color:var(--gold-deep);font-weight:600}
+
+  .not-for-list, .for-list{max-width:560px;margin:20px auto 0;text-align:left}
+  .not-for-list li, .for-list li{font-size:16px;margin-bottom:12px;padding-left:26px;position:relative;color:var(--brown)}
+  .not-for-list li::before{content:"—";position:absolute;left:0;color:var(--brown)}
+  .for-list li::before{content:"✓";position:absolute;left:0;color:var(--gold-deep);font-weight:700}
+
+  .btn{display:inline-block;background:var(--gold);color:#fff;font-family:var(--body);font-weight:700;font-size:16px;padding:16px 40px;border-radius:2px;letter-spacing:.01em;transition:background .2s,transform .2s;margin-top:8px}
+  .btn:hover{background:var(--gold-deep);transform:translateY(-2px)}
+
+  .placeholder{background:rgba(168,133,56,.08);border:1.5px dashed var(--gold-soft);border-radius:6px;padding:18px 22px;font-size:14px;color:var(--gold-deep);max-width:520px;margin:18px auto 0}
+
+  .controls{position:fixed;bottom:0;left:0;right:0;z-index:50;background:var(--teal);height:64px;display:flex;align-items:center;justify-content:center;gap:22px}
+  .navbtn{background:transparent;border:1.5px solid var(--gold-pale);color:var(--cream);width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer}
+  .navbtn:hover:not(:disabled){background:rgba(255,255,255,.08)}
+  .navbtn:disabled{opacity:.3;cursor:default}
+  .dots{display:flex;gap:9px;flex-wrap:wrap;max-width:60%;justify-content:center}
+  .dot{width:8px;height:8px;border-radius:50%;background:rgba(254,252,250,.28);cursor:pointer;border:none}
+  .dot.active{background:var(--gold-pale);transform:scale(1.3)}
+
+  @media(max-width:640px){
+    .slide{padding:48px 20px 100px}
+    .stats-row{gap:22px}
+    .press-row img{height:18px}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="/" class="brand">Feel Fully <b>You</b></a>
+  <div class="progress" id="progressLabel">1 / 20</div>
+</div>
+
+<div class="deck" id="deck">
+
+  <section class="slide active" data-index="0">
+    <div class="slide-inner">
+      <div class="eyebrow">The Touch Reset</div>
+      <h1>Why Your Body Braces at Touch, and How to Actually Want It Again</h1>
+      <p class="sub">Not another book that explains it and changes nothing. The twelve week method, in the order the body actually changes.</p>
+    </div>
+  </section>
+
+  <section class="slide" data-index="1">
+    <div class="slide-inner">
+      <div class="cover-photo"><img src="https://feelfullyyou.com/media/68f7ca9d84a9d68db66b2a16.jpeg" alt="Juliette Karaman"></div>
+      <div class="eyebrow">Who I Am</div>
+      <h2>Juliette Karaman</h2>
+      <p class="sub">27 years in this work, since my own children sent me into it. 20 years as a SENCO. Trainer of trainers at the Rapid Coherence Institute. EMDR, hypnotherapy, Orgasmic Meditation, all of it built to reach the body, not just the mind.</p>
+    </div>
+  </section>
+
+  <section class="slide" data-index="2">
+    <div class="slide-inner">
+      <div class="eyebrow">My Mission</div>
+      <h2>Move people from bracing at touch to actually wanting it again</h2>
+      <p class="sub">Received, not performed. Felt in the body, not just believed in the head.</p>
+    </div>
+  </section>
+
+  <section class="slide" data-index="3">
+    <div class="slide-inner">
+      <div class="eyebrow">Where This Started</div>
+      <h2>I spent years chasing</h2>
+      <p class="sub">Chasing to be a better parent. A place on the PTA. More toys, more intensity, more experiences. Chasing anything except actually feeling what my own body needed.</p>
+      <p class="sub" style="margin-top:14px">If you'd told me back then that I was bracing at touch, I'd have laughed at you. I'd have said, I love sex, there's no way I don't feel it. That's the actual trap. Wanting more, bigger, different isn't the same as being able to receive it. I didn't know the difference. Most people don't.</p>
+    </div>
+  </section>
+
+  <section class="slide" data-index="4">
+    <div class="slide-inner">
+      <div class="eyebrow">The Pivot</div>
+      <div class="placeholder">Open. Needs Juliette's real, dated turning point, the specific moment this actually started changing, not a general timeline.</div>
+    </div>
+  </section>
+
+  <section class="slide" data-index="5">
+    <div class="slide-inner">
+      <div class="eyebrow">What I Went Looking For</div>
+      <h2>Orgasmic Meditation. Training at the Rapid Coherence Institute. EMDR. Hypnotherapy.</h2>
+      <p class="sub">Because mindset work alone was never going to reach this. It had to be worked in the body, not just talked about.</p>
+    </div>
+  </section>
+
+  <section class="slide" data-index="6">
+    <div class="slide-inner">
+      <div class="eyebrow">Where It Got Hard</div>
+      <div class="placeholder">Open. Needs Juliette's real, honest reversal, where the work got hard again even after she was already deep into it.</div>
+    </div>
+  </section>
+
+  <section class="slide" data-index="7">
+    <div class="slide-inner">
+      <div class="eyebrow">Something Was Missing</div>
+      <h2>Pleasure Language wasn't the whole picture</h2>
+      <p class="sub">I went deep into Erotic Blueprint work, and found how much it matters to know your own pleasure language. But it opened something bigger, pleasure is only one of the ways life touches you. That's where Touch Languages came from, mine, built from what the deeper work was still missing.</p>
+    </div>
+  </section>
+
+  <section class="slide" data-index="8">
+    <div class="slide-inner">
+      <div class="eyebrow">The Real Problem</div>
+      <h2>Most people layer technique onto a body that isn't responsive yet</h2>
+      <p class="sub">It's like teaching someone to dance on a leg that's still numb. The technique was never the missing piece. The body's ability to actually receive touch was.</p>
+    </div>
+  </section>
+
+  <section class="slide" data-index="9">
+    <div class="slide-inner">
+      <div class="eyebrow">Meet the Brace</div>
+      <h2>Your body braces at touch. That is not a choice, and it is not a flaw.</h2>
+      <p class="sub">It is a trained-in reflex. Spontaneity was never going to fix a reflex. Waiting is the lie.</p>
+    </div>
+  </section>
+
+  <section class="slide" data-index="10">
+    <div class="slide-inner">
+      <div class="eyebrow">The Check-In Language</div>
+      <h2>Touch States</h2>
+      <div class="states-row">
+        <div class="state-pill">Braced</div>
+        <div class="state-pill">Withheld</div>
+        <div class="state-pill">Performing</div>
+        <div class="state-pill">Present</div>
+        <div class="state-pill melted">Melted</div>
+      </div>
+      <p class="sub">There's nothing to fix. Just where you are, named honestly, before every practice.</p>
+    </div>
+  </section>
+
+  <section class="slide" data-index="11">
+    <div class="slide-inner">
+      <div class="eyebrow">Which One Is Actually Running the Show</div>
+      <h2>The Five Patterns</h2>
+      <div class="pattern-grid">
+        <div class="pattern-card"><div class="pname">The Holder</div><div class="pstrat">Give to stay connected</div><p class="ache">"Who holds you?"</p></div>
+        <div class="pattern-card"><div class="pname">The Flame</div><div class="pstrat">Dim to stay digestible</div><p class="ache">"Turn down the heat."</p></div>
+        <div class="pattern-card"><div class="pname">The Armour</div><div class="pstrat">Contain to stay safe</div><p class="ache">"Softness feels dangerous."</p></div>
+        <div class="pattern-card"><div class="pname">The Signal</div><div class="pstrat">Curate to stay legible</div><p class="ache">"Lose track of what's true."</p></div>
+        <div class="pattern-card"><div class="pname">The Current</div><div class="pstrat">Express to stay met</div><p class="ache">"What happens when you stop performing?"</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" data-index="12">
+    <div class="slide-inner">
+      <div class="eyebrow">The One Real Practice</div>
+      <h2>Touch Base®</h2>
+      <div class="tb-steps">
+        <p>Press thumb to forefinger.</p>
+        <p>Keep rubbing, slowly, soft like melted chocolate.</p>
+        <p>Say to yourself: <strong>I am safe right now.</strong></p>
+        <p>Keep rubbing for the full two minutes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" data-index="13">
+    <div class="slide-inner">
+      <div class="eyebrow">Built on Structure, Not Spontaneity</div>
+      <h2>The Trifecta</h2>
+      <p class="sub">Structured communication. A structured time limit, to build capacity instead of overwhelming it. Structured touch dates, starting with self-touch, then with a partner. Every single week, never just once.</p>
+    </div>
+  </section>
+
+  <section class="slide" data-index="14">
+    <div class="slide-inner">
+      <div class="eyebrow">Four Stages, in the Order the Body Actually Changes</div>
+      <div class="stage-grid">
+        <div class="stage-card"><div class="snum">Stage 1</div><h3>Regulate Your Nervous System</h3><p>Touch Base®, the two minute anchor. The Dyad, structured communication, from day one.</p></div>
+        <div class="stage-card"><div class="snum">Stage 2</div><h3>Rewire Your Beliefs About Touch</h3><p>RRRR®. The Full Stop™. The mirror work, what we notice, then thankfulness for the body.</p></div>
+        <div class="stage-card"><div class="snum">Stage 3</div><h3>Build Capacity, Reconnect to Your Body</h3><p>Your own hands first. Your Touch Language and Pleasure Language, named. Your own Touch Map™.</p></div>
+        <div class="stage-card"><div class="snum">Stage 4</div><h3>Find Your Way Into Turn-On</h3><p>Asked for directly. Then, only then, play.</p></div>
+      </div>
+      <p class="sub" style="margin-top:20px">Three minutes in week one. Thirty by week twelve. Every previous attempt failed by asking for too much too fast. This doesn't.</p>
+    </div>
+  </section>
+
+  <section class="slide" data-index="15">
+    <div class="slide-inner">
+      <div class="eyebrow">This Isn't Theory</div>
+      <div class="quote-card"><p>"I feel softer and more relaxed, less hardened. It's weird. I was on high alert and braced and had forgotten I'd stayed that way."</p><span>Sarah, worked together with her husband for three months</span></div>
+      <div class="quote-card"><p>"Oh my God, you have given me the biggest gift. You have given me back my body. I now use it as a compass."</p><span>Deidre, after her husband and I worked together</span></div>
+      <div class="quote-card"><p>"You have rewired that trauma. I came in holding a lot of it, and I left feeling lighter."</p><span>Linda</span></div>
+    </div>
+  </section>
+
+  <section class="slide" data-index="16">
+    <div class="slide-inner">
+      <div class="eyebrow">More Proof</div>
+      <p class="sub" style="font-size:19px;color:var(--ink)">A couple hadn't had sex in twenty-three years. We took sex off the table for six weeks. By week four, the homework was exactly the thing they couldn't do. They went on to have sex for the first time in twenty-three years, and they cried.</p>
+      <p class="sub" style="margin-top:18px;font-size:19px;color:var(--ink)">Phoebe was nineteen, carrying massive anxiety, unable to attend a normal school. A year of work, and she now has a boyfriend, and an intimate life she didn't have before.</p>
+    </div>
+  </section>
+
+  <section class="slide" data-index="17">
+    <div class="slide-inner">
+      <div class="eyebrow">This Isn't for Everyone</div>
+      <ul class="not-for-list">
+        <li>Not for anyone waiting for spontaneity to fix it on its own</li>
+        <li>Not for anyone who wants a peak experience instead of a maintained pattern</li>
+        <li>Not for anyone unwilling to give twelve real weeks to something that took years to build</li>
+      </ul>
+      <div class="divider"></div>
+      <ul class="for-list">
+        <li>Women, men, and couples whose bodies brace at touch, partnered or not</li>
+        <li>Anyone who's tried therapy, tantra, or talk, and found the pattern still there underneath</li>
+        <li>Anyone ready to build real capacity, not just understand the problem better</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="slide" data-index="18">
+    <div class="slide-inner">
+      <div class="eyebrow">What's Included</div>
+      <p class="sub">A real community, held space, weekly touch-ins, people doing this exact work alongside you. And a real guarantee: eighty percent shown up, eighty percent done, still not there, thirty more days, free.</p>
+    </div>
+  </section>
+
+  <section class="slide" data-index="19">
+    <div class="slide-inner">
+      <div class="eyebrow">The Invitation</div>
+      <h2>Book Your Touch Audit</h2>
+      <p class="sub">A real conversation, not a pitch, to see if this is the right fit for you.</p>
+      <a href="/apply" class="btn">Book Your Touch Audit</a>
+    </div>
+  </section>
+
+</div>
+
+<div class="controls">
+  <button class="navbtn" id="prevBtn" aria-label="Previous">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+  </button>
+  <div class="dots" id="dots"></div>
+  <button class="navbtn" id="nextBtn" aria-label="Next">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+  </button>
+</div>
+
+<script>
+(function(){
+  var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
+  var dotsWrap = document.getElementById('dots');
+  var progressLabel = document.getElementById('progressLabel');
+  var prevBtn = document.getElementById('prevBtn');
+  var nextBtn = document.getElementById('nextBtn');
+  var current = 0;
+
+  slides.forEach(function(_, i){
+    var d = document.createElement('button');
+    d.className = 'dot' + (i === 0 ? ' active' : '');
+    d.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+    d.addEventListener('click', function(){ goTo(i); });
+    dotsWrap.appendChild(d);
+  });
+  var dots = Array.prototype.slice.call(dotsWrap.children);
+
+  function goTo(i){
+    if (i < 0 || i >= slides.length) return;
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = i;
+    slides[current].classList.add('active');
+    slides[current].scrollTop = 0;
+    dots[current].classList.add('active');
+    progressLabel.textContent = (current + 1) + ' / ' + slides.length;
+    prevBtn.disabled = current === 0;
+    nextBtn.disabled = current === slides.length - 1;
+  }
+
+  prevBtn.addEventListener('click', function(){ goTo(current - 1); });
+  nextBtn.addEventListener('click', function(){ goTo(current + 1); });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'ArrowRight') goTo(current + 1);
+    if (e.key === 'ArrowLeft') goTo(current - 1);
+  });
+  goTo(0);
+})();
+</script>
+
+</body>
+</html>
