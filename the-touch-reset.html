@@ -305,8 +305,9 @@
   .touch-split .eyebrow{margin-bottom:16px}
   .touch-split h2{font-size:clamp(30px,4.6vw,46px);margin-bottom:18px}
   .touch-split p{font-size:var(--t-md);max-width:52ch;color:var(--brown);line-height:1.6}
-  @media(max-width:860px){.touch-split .split{grid-template-columns:1fr}.touch-split .photo{min-height:0;aspect-ratio:4/5;min-width:0}.touch-split .copy{padding:56px 28px;min-width:0}}
+  @media(max-width:860px){.touch-split .split,.touch-split.alt .split{grid-template-columns:1fr}.touch-split .photo{min-height:0;aspect-ratio:4/5;min-width:0}.touch-split .copy{padding:56px 28px;min-width:0}}
   .touch-split.alt .split{grid-template-columns:.85fr 1.15fr}
+  @media(max-width:860px){.touch-split.alt .split{grid-template-columns:1fr}}
   .touch-split.alt .photo{order:-1}
   @media(max-width:860px){.touch-split.alt .photo{order:0}}
   .touch-split.dark{background:var(--teal);border-top:1px solid var(--line-dark)}
