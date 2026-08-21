@@ -26,15 +26,15 @@
   .topbar .progress{font-size:13px;color:var(--gold-pale);font-family:var(--body)}
 
   .deck{position:relative;width:100%;height:100%}
-  .slide{position:absolute;inset:0;padding:56px 28px 100px;display:flex;flex-direction:column;align-items:center;justify-content:center;justify-content:safe center;opacity:0;visibility:hidden;transform:translateY(14px);transition:opacity .45s ease,transform .45s ease;overflow-y:auto}
+  .slide{position:absolute;inset:0;padding:24px 24px 76px;display:flex;flex-direction:column;align-items:center;justify-content:center;justify-content:safe center;opacity:0;visibility:hidden;transform:translateY(14px);transition:opacity .45s ease,transform .45s ease;overflow-y:auto}
   .slide.active{opacity:1;visibility:visible;transform:translateY(0)}
   .slide-inner{max-width:760px;width:100%;margin:auto;text-align:center}
 
-  .eyebrow{font-size:17px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-deep);font-weight:700;margin-bottom:16px}
-  .pop{color:var(--gold-deep);font-weight:700;font-size:1.15em;max-width:56ch;margin:16px auto 0;line-height:1.5}
-  h1{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,4.6vw,3rem);color:var(--ink);line-height:1.1;letter-spacing:-.022em;margin-bottom:18px}
-  h2{font-family:var(--display);font-weight:700;font-size:clamp(1.6rem,3.6vw,2.3rem);color:var(--ink);line-height:1.15;letter-spacing:-.02em;margin-bottom:16px}
-  .sub{font-size:18px;color:var(--brown);max-width:60ch;margin:0 auto;line-height:1.65}
+  .eyebrow{font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-deep);font-weight:700;margin-bottom:10px}
+  .pop{color:var(--gold-deep);font-weight:700;font-size:1.05em;max-width:56ch;margin:10px auto 0;line-height:1.35}
+  h1{font-family:var(--display);font-weight:700;font-size:clamp(1.5rem,3.6vw,2.3rem);color:var(--ink);line-height:1.1;letter-spacing:-.022em;margin-bottom:10px}
+  h2{font-family:var(--display);font-weight:700;font-size:clamp(1.3rem,2.8vw,1.8rem);color:var(--ink);line-height:1.15;letter-spacing:-.02em;margin-bottom:10px}
+  .sub{font-size:15px;color:var(--brown);max-width:60ch;margin:0 auto;line-height:1.45}
   .divider{width:44px;height:2px;background:var(--gold-pale);margin:28px auto}
 
   .cover-photo{width:100%;max-width:420px;border-radius:6px;overflow:hidden;margin:0 auto 28px;box-shadow:0 20px 50px rgba(13,53,53,.22)}
@@ -47,11 +47,12 @@
   .press-row{display:flex;justify-content:center;align-items:center;gap:20px 32px;flex-wrap:wrap;margin:22px 0 30px}
   .press-row img{height:26px;width:auto;max-width:110px;object-fit:contain;filter:brightness(0) opacity(.55)}
 
-  .pattern-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;text-align:left;max-width:900px;margin:0 auto}
-  .pattern-card{background:#fff;border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:6px;padding:18px 20px}
-  .pattern-card .picon{width:34px;height:34px;margin-bottom:8px;opacity:.88}
-  .pattern-card .pname{font-family:var(--display);font-weight:700;font-size:16px;color:var(--ink)}
-  .pattern-card .pstrat{font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:6px}
+  .pattern-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;text-align:left;max-width:960px;margin:0 auto}
+  .pattern-card{background:#fff;border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:6px;padding:12px 10px;min-width:0}
+  .pattern-card .picon{width:24px;height:24px;margin-bottom:6px;opacity:.88}
+  .pattern-card .pname{font-family:var(--display);font-weight:700;font-size:12.5px;color:var(--ink)}
+  .pattern-card .pstrat{font-size:9px;letter-spacing:.04em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:6px}
+  @media(max-width:700px){.pattern-grid{grid-template-columns:repeat(2,1fr)}}
   .pattern-card p{font-size:13px;color:var(--brown);line-height:1.45;margin-top:4px}
   .pattern-card .slabel{font-size:10px;text-transform:uppercase;letter-spacing:.07em;color:var(--gold-deep);font-weight:600;margin:8px 0 4px;border-top:1px solid var(--line);padding-top:8px}
   .pattern-card .signals{list-style:none;margin:0 0 6px;padding:0}
@@ -67,10 +68,10 @@
   .cover-hero{width:100%;max-width:340px;border-radius:6px;overflow:hidden;margin:0 auto 24px;box-shadow:0 20px 50px rgba(13,53,53,.22)}
   .cover-hero img{width:100%;display:block}
 
-  .tf-item{max-width:520px;margin:0 auto 14px;text-align:left;background:#fff;border:1px solid var(--line);border-radius:6px;padding:16px 20px}
-  .tf-item h3{font-family:var(--display);font-size:15px;color:var(--ink);margin-bottom:4px}
-  .tf-item p{font-size:14px;color:var(--brown);line-height:1.5}
-  .tf-cards{width:100%;max-width:220px;border-radius:6px;display:block;margin:0 auto 10px}
+  .tf-item{max-width:560px;margin:0 auto 8px;text-align:left;background:#fff;border:1px solid var(--line);border-radius:6px;padding:8px 16px}
+  .tf-item h3{font-family:var(--display);font-size:13px;color:var(--ink);margin-bottom:2px}
+  .tf-item p{font-size:12px;color:var(--brown);line-height:1.35}
+  .tf-cards{width:100%;max-width:110px;border-radius:6px;display:block;margin:0 auto 6px}
   .bonus-photo{width:100%;max-width:480px;border-radius:6px;overflow:hidden;margin:20px auto 0;box-shadow:0 16px 40px rgba(13,53,53,.18)}
   .bonus-photo img{width:100%;display:block}
 
@@ -80,7 +81,8 @@
   .media-item span{font-size:12px;color:var(--brown);line-height:1.4;display:block}
   .media-item b{display:block;color:var(--gold-deep);font-size:12px}
 
-  .slide-photo{width:100%;max-width:380px;border-radius:6px;overflow:hidden;margin:20px auto 0;box-shadow:0 16px 40px rgba(13,53,53,.18)}
+  .slide-photo{width:100%;max-width:220px;border-radius:6px;overflow:hidden;margin:10px auto 0;box-shadow:0 16px 40px rgba(13,53,53,.18)}
+  .slide-photo img{max-height:200px;object-fit:cover}
   .slide-photo img{width:100%;display:block;max-height:420px;object-fit:cover}
 
   .tb-logo{max-width:150px;margin:0 auto 18px}
@@ -95,9 +97,11 @@
   .stage-card h3{font-family:var(--display);font-size:17px;color:var(--ink);margin:6px 0 8px}
   .stage-card p{font-size:13.5px;color:var(--brown);line-height:1.5}
 
-  .quote-card{background:#fff;border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:6px;padding:22px 26px;max-width:560px;margin:0 auto 16px;text-align:left}
-  .quote-card p{font-size:16px;color:var(--ink);font-style:italic;margin-bottom:8px}
-  .quote-card span{font-size:13px;color:var(--gold-deep);font-weight:600}
+  .quote-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:920px;margin:16px auto 0}
+  .quote-card{background:#fff;border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:6px;padding:14px 16px;text-align:left}
+  .quote-card p{font-size:12.5px;line-height:1.4;margin-bottom:6px;color:var(--ink);font-style:italic}
+  .quote-card span{font-size:10px;color:var(--gold-deep);font-weight:600}
+  @media(max-width:760px){.quote-grid{grid-template-columns:1fr 1fr}}
 
   .not-for-list, .for-list{max-width:560px;margin:20px auto 0;text-align:left;list-style:none}
   .not-for-list li, .for-list li{font-size:16px;margin-bottom:12px;padding-left:26px;position:relative;color:var(--brown)}
@@ -259,7 +263,8 @@
     <div class="slide-inner">
       <div class="eyebrow">Meet the Brace</div>
       <h2>Your body braces at touch. That is not a choice, and it is not a flaw.</h2>
-      <p class="sub">It is a trained-in reflex. Spontaneity was never going to fix a reflex. Waiting is the lie.</p>
+      <p class="sub">It is a trained-in reflex. Spontaneity was never going to fix a reflex.</p>
+      <p class="pop">Waiting is the lie.</p>
       <div class="slide-photo"><img src="brace.jpg" alt="The brace, literally"></div>
     </div>
   </section>
@@ -289,46 +294,31 @@
           <img class="picon" src="quiz-icons/pattern-holder.png" alt="" loading="lazy">
           <div class="pname">The Holder</div>
           <div class="pstrat">Give to stay connected</div>
-          <p>You reach first, you hold everyone, and quietly wonder why no one ever thinks to hold you.</p>
-          <p class="slabel">You'll recognise it when</p>
-          <ul class="signals"><li>Someone asks what you need and you go blank.</li><li>You initiated every touch today.</li></ul>
-          <p class="ache">"You're the one everyone comes to, but who holds you?"</p>
+          <p class="ache">"Who holds you?"</p>
         </div>
         <div class="pattern-card">
           <img class="picon" src="quiz-icons/pattern-flame.png" alt="" loading="lazy">
           <div class="pname">The Flame</div>
           <div class="pstrat">Dim to stay digestible</div>
-          <p>There is fire in you. You learned to turn it down to stay wanted, and now you are quietly starving to be met at full heat.</p>
-          <p class="slabel">You'll recognise it when</p>
-          <ul class="signals"><li>You've got good at enjoying what arrives instead of asking for what you actually want.</li><li>Your laugh sometimes gets smaller halfway through.</li></ul>
-          <p class="ache">"You have fire inside but learned to turn down the heat."</p>
+          <p class="ache">"Turn down the heat."</p>
         </div>
         <div class="pattern-card">
           <img class="picon" src="quiz-icons/pattern-armour.png" alt="" loading="lazy">
           <div class="pname">The Armour</div>
           <div class="pstrat">Contain to stay safe</div>
-          <p>You stay composed and in control, because softness once cost you too much.</p>
-          <p class="slabel">You'll recognise it when</p>
-          <ul class="signals"><li>Compliments slide off. "You look amazing." "Thank you, yes." Already gone.</li><li>Someone tries to get close and you suddenly find a reason to be busy.</li></ul>
-          <p class="ache">"You can handle anything, but softness feels dangerous."</p>
+          <p class="ache">"Softness feels dangerous."</p>
         </div>
         <div class="pattern-card">
           <img class="picon" src="quiz-icons/pattern-signal.png" alt="" loading="lazy">
           <div class="pname">The Signal</div>
           <div class="pstrat">Curate to stay legible</div>
-          <p>You stay readable. You translate and filter yourself so well that no one ever meets the raw, unedited you.</p>
-          <p class="slabel">You'll recognise it when</p>
-          <ul class="signals"><li>You've already worked out how to say it before you say it.</li><li>Being truly received feels both wanted and slightly terrifying.</li></ul>
-          <p class="ache">"You work so hard to be clear that you lose track of what's true."</p>
+          <p class="ache">"Lose track of what's true."</p>
         </div>
         <div class="pattern-card">
           <img class="picon" src="quiz-icons/pattern-current.png" alt="" loading="lazy">
           <div class="pname">The Current</div>
           <div class="pstrat">Express to stay met</div>
-          <p>You bring the aliveness, you keep the charge even when no one meets you there, and being the source is quietly exhausting you.</p>
-          <p class="slabel">You'll recognise it when</p>
-          <ul class="signals"><li>You feel the exact moment the energy drops, and instinctively pick it back up.</li><li>Relief. That's the word for when someone else holds the current.</li></ul>
-          <p class="ache">"You bring the energy, but what happens when you stop performing?"</p>
+          <p class="ache">"What happens when you stop performing?"</p>
         </div>
       </div>
     </div>
@@ -387,11 +377,13 @@
   <section class="slide" data-index="15">
     <div class="slide-inner">
       <div class="eyebrow">This Isn't Theory</div>
-      <div class="quote-card"><p>"I feel softer and more relaxed, less hardened. It's weird. I was on high alert and braced and had forgotten I'd stayed that way."</p><span>Sarah, worked together with her husband for three months</span></div>
-      <div class="quote-card"><p>"Oh my God, you have given me the biggest gift. You have given me back my body. I now use it as a compass."</p><span>Deidre, after her husband and I worked together</span></div>
-      <div class="quote-card"><p>"You have rewired that trauma. I came in holding a lot of it, and I left feeling lighter."</p><span>Linda</span></div>
-      <div class="quote-card"><p>"After our sessions, a lot more of my feelings about sexuality came up. Connecting my habit of joking about sex to childhood trauma brought tears, but also profound insight. For the first time, sex feels integrated with who I am, not just a set of activities."</p><span>Miki, Coach, Canada</span></div>
-      <div class="quote-card"><p>"Working with Juliette changed how I see what's possible in a relationship. Her ability to hold space and stand alongside me allowed for deep, lasting work. When she told me you will never forget who you are, I simply believed her."</p><span>Christine Borschneck, Coach & Trauma Specialist, Canada</span></div>
+      <div class="quote-grid">
+        <div class="quote-card"><p>"I feel softer and more relaxed, less hardened. It's weird. I was on high alert and braced and had forgotten I'd stayed that way."</p><span>Sarah</span></div>
+        <div class="quote-card"><p>"Oh my God, you have given me the biggest gift. You have given me back my body. I now use it as a compass."</p><span>Deidre</span></div>
+        <div class="quote-card"><p>"You have rewired that trauma. I came in holding a lot of it, and I left feeling lighter."</p><span>Linda</span></div>
+        <div class="quote-card"><p>"For the first time, sex feels integrated with who I am, not just a set of activities."</p><span>Miki, Coach, Canada</span></div>
+        <div class="quote-card"><p>"When she told me you will never forget who you are, I simply believed her."</p><span>Christine Borschneck, Coach & Trauma Specialist</span></div>
+      </div>
     </div>
   </section>
 
