@@ -47,18 +47,18 @@
   .press-row{display:flex;justify-content:center;align-items:center;gap:20px 32px;flex-wrap:wrap;margin:22px 0 30px}
   .press-row img{height:26px;width:auto;max-width:110px;object-fit:contain;filter:brightness(0) opacity(.55)}
 
-  .pattern-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;text-align:left;max-width:960px;margin:0 auto}
-  .pattern-card{background:#fff;border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:6px;padding:12px 10px;min-width:0}
-  .pattern-card .picon{width:24px;height:24px;margin-bottom:6px;opacity:.88}
-  .pattern-card .pname{font-family:var(--display);font-weight:700;font-size:12.5px;color:var(--ink)}
-  .pattern-card .pstrat{font-size:9px;letter-spacing:.04em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:6px}
+  .pattern-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;text-align:center;max-width:1020px;margin:0 auto;align-items:stretch}
+  .pattern-card{background:#fff;border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:8px;padding:16px 12px;min-width:0;display:flex;flex-direction:column;align-items:center}
+  .pattern-card .picon{width:30px;height:30px;margin-bottom:8px;opacity:.88}
+  .pattern-card .pname{font-family:var(--display);font-weight:700;font-size:14px;color:var(--ink)}
+  .pattern-card .pstrat{font-size:9.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin:6px 0;padding-top:6px;border-top:1px solid var(--line);width:100%}
   @media(max-width:700px){.pattern-grid{grid-template-columns:repeat(2,1fr)}}
   .pattern-card p{font-size:13px;color:var(--brown);line-height:1.45;margin-top:4px}
   .pattern-card .slabel{font-size:10px;text-transform:uppercase;letter-spacing:.07em;color:var(--gold-deep);font-weight:600;margin:8px 0 4px;border-top:1px solid var(--line);padding-top:8px}
   .pattern-card .signals{list-style:none;margin:0 0 6px;padding:0}
   .pattern-card .signals li{font-size:11.5px;color:var(--brown);line-height:1.4;margin-bottom:4px;padding-left:11px;position:relative}
   .pattern-card .signals li::before{content:"\00B7";position:absolute;left:0;color:var(--gold-deep);font-weight:700}
-  .pattern-card .ache{color:var(--gold-deep);font-style:italic;font-weight:600;margin-top:6px;font-size:12.5px}
+  .pattern-card .ache{color:var(--gold-deep);font-style:italic;font-weight:600;margin-top:auto;font-size:12px;padding-top:6px}
 
   .states-row{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin:22px 0}
   .state-pill{background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px 18px;font-size:13px;font-weight:600;color:var(--brown);display:flex;flex-direction:column;align-items:center;gap:8px;min-width:90px}
@@ -91,16 +91,17 @@
   .tb-steps p{margin-bottom:10px;font-size:16px}
   .tb-steps p:last-child{margin-bottom:0}
 
-  .stage-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;text-align:left;max-width:920px;margin:20px auto 0}
-  .stage-card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:18px 20px}
-  .stage-card .snum{font-family:var(--display);font-weight:700;color:var(--gold-deep);font-size:13px;letter-spacing:.08em;text-transform:uppercase}
-  .stage-card h3{font-family:var(--display);font-size:17px;color:var(--ink);margin:6px 0 8px}
-  .stage-card p{font-size:13.5px;color:var(--brown);line-height:1.5}
+  .stage-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;text-align:left;max-width:1000px;margin:16px auto 0;align-items:stretch}
+  .stage-card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:14px 14px;min-width:0}
+  .stage-card .snum{font-family:var(--display);font-weight:700;color:var(--gold-deep);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase}
+  .stage-card h3{font-family:var(--display);font-size:13.5px;color:var(--ink);margin:5px 0 6px;line-height:1.2}
+  .stage-card p{font-size:11px;color:var(--brown);line-height:1.35}
+  @media(max-width:700px){.stage-grid{grid-template-columns:repeat(2,1fr)}}
 
-  .quote-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:920px;margin:16px auto 0}
-  .quote-card{background:#fff;border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:6px;padding:14px 16px;text-align:left}
-  .quote-card p{font-size:12.5px;line-height:1.4;margin-bottom:6px;color:var(--ink);font-style:italic}
-  .quote-card span{font-size:10px;color:var(--gold-deep);font-weight:600}
+  .quote-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:1040px;margin:14px auto 0}
+  .quote-card{background:#fff;border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:6px;padding:16px 18px;text-align:left;display:flex;flex-direction:column;justify-content:space-between}
+  .quote-card p{font-size:14px;line-height:1.45;margin-bottom:8px;color:var(--ink);font-style:italic}
+  .quote-card span{font-size:11.5px;color:var(--gold-deep);font-weight:600}
   @media(max-width:760px){.quote-grid{grid-template-columns:1fr 1fr}}
 
   .not-for-list, .for-list{max-width:560px;margin:20px auto 0;text-align:left;list-style:none}
@@ -439,7 +440,7 @@
       <div class="eyebrow">What's Included</div>
       <p class="sub">A real community, held space, weekly touch-ins, people doing this exact work alongside you.</p>
       <div class="bonus-photo"><img src="touch-reset-bonuses-collage.jpg" alt="The Touch Reset bonuses"></div>
-      <p class="pop">A real guarantee: eighty percent shown up, eighty percent done, still not there, thirty more days, free.</p>
+      <p class="pop">A real guarantee: eighty percent shown up, eighty percent done, still not in touch with your body and desire, continue for thirty more days, free.</p>
     </div>
   </section>
 
