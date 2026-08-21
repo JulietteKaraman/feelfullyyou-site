@@ -72,7 +72,7 @@
   .tf-item h3{font-family:var(--display);font-size:13px;color:var(--ink);margin-bottom:2px}
   .tf-item p{font-size:12px;color:var(--brown);line-height:1.35}
   .tf-cards{width:100%;max-width:110px;border-radius:6px;display:block;margin:0 auto 6px}
-  .bonus-photo{width:100%;max-width:480px;border-radius:6px;overflow:hidden;margin:20px auto 0;box-shadow:0 16px 40px rgba(13,53,53,.18)}
+  .bonus-photo{width:100%;max-width:260px;border-radius:6px;overflow:hidden;margin:14px auto 0;box-shadow:0 16px 40px rgba(13,53,53,.18)}
   .bonus-photo img{width:100%;display:block}
 
   .media-row{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin:18px 0 8px}
@@ -97,6 +97,13 @@
   .stage-card h3{font-family:var(--display);font-size:13.5px;color:var(--ink);margin:5px 0 6px;line-height:1.2}
   .stage-card p{font-size:11px;color:var(--brown);line-height:1.35}
   @media(max-width:700px){.stage-grid{grid-template-columns:repeat(2,1fr)}}
+
+  .bonus-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;text-align:left;max-width:1000px;margin:18px auto 0}
+  .bonus-card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:12px 14px;min-width:0}
+  .bonus-card .blabel{font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-deep);font-weight:600}
+  .bonus-card h3{font-family:var(--display);font-size:13px;color:var(--ink);margin:4px 0 4px;line-height:1.2}
+  .bonus-card p{font-size:10.5px;color:var(--brown);line-height:1.3}
+  @media(max-width:700px){.bonus-grid{grid-template-columns:repeat(2,1fr)}}
 
   .quote-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:1040px;margin:14px auto 0}
   .quote-card{background:#fff;border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:6px;padding:16px 18px;text-align:left;display:flex;flex-direction:column;justify-content:space-between}
@@ -439,7 +446,15 @@
     <div class="slide-inner">
       <div class="eyebrow">What's Included</div>
       <p class="sub">A real community, held space, weekly touch-ins, people doing this exact work alongside you.</p>
-      <div class="bonus-photo"><img src="touch-reset-bonuses-collage.jpg" alt="The Touch Reset bonuses"></div>
+      <div class="bonus-grid">
+        <div class="bonus-card"><div class="blabel">Bonus</div><h3>Ritual Guide</h3><p>For building touch into a weekly ritual, not a task.</p></div>
+        <div class="bonus-card"><div class="blabel">Bonus</div><h3>The Cards</h3><p>475+ real prompts for communication and intimacy.</p></div>
+        <div class="bonus-card"><div class="blabel">Bonus</div><h3>Weekly Touch-In</h3><p>Not a check-in. A few minutes, every week, together.</p></div>
+        <div class="bonus-card"><div class="blabel">Bonus</div><h3>50 Touch Date Ideas</h3><p>Fun, creative, ready whenever you need one.</p></div>
+        <div class="bonus-card"><div class="blabel">Bonus</div><h3>Curated Touch Menu</h3><p>A menu of touch to choose from, no guessing.</p></div>
+        <div class="bonus-card"><div class="blabel">Bonus</div><h3>Curated Playlists</h3><p>The soundtrack, already chosen for you.</p></div>
+        <div class="bonus-card"><div class="blabel">Bonus</div><h3>Your Touch Map&trade;</h3><p>Yours from Phase Two, to keep and return to whenever you need it.</p></div>
+      </div>
       <p class="pop">A real guarantee: eighty percent shown up, eighty percent done, still not in touch with your body and desire, continue for thirty more days, free.</p>
     </div>
   </section>
