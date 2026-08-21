@@ -47,28 +47,14 @@
   .press-row{display:flex;justify-content:center;align-items:center;gap:20px 32px;flex-wrap:wrap;margin:22px 0 30px}
   .press-row img{height:26px;width:auto;max-width:110px;object-fit:contain;filter:brightness(0) opacity(.55)}
 
-  .pattern-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;text-align:center;max-width:1020px;margin:0 auto;align-items:stretch}
-  .pattern-card{background:#fff;border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:8px;padding:16px 12px;min-width:0;display:flex;flex-direction:column;align-items:center}
-  .pattern-card .picon{width:30px;height:30px;margin-bottom:8px;opacity:.88}
-  .pattern-card .pname{font-family:var(--display);font-weight:700;font-size:14px;color:var(--ink)}
-  .pattern-card .pstrat{font-size:9.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin:6px 0;padding-top:6px;border-top:1px solid var(--line);width:100%}
+  .pattern-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;text-align:center;max-width:1180px;margin:16px auto 0;align-items:stretch}
+  .pattern-card{background:#fff;border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:8px;padding:18px 14px;min-width:0;display:flex;flex-direction:column;align-items:center}
+  .pattern-card .picon{width:34px;height:34px;margin-bottom:9px;opacity:.88}
+  .pattern-card .pname{font-family:var(--display);font-weight:700;font-size:16.5px;color:var(--ink)}
+  .pattern-card .pstrat{font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin:7px 0;padding-top:7px;border-top:1px solid var(--line);width:100%}
+  .pattern-card .pdesc{font-size:13px;color:var(--brown);line-height:1.42;margin-top:2px}
+  .pattern-card .ache{color:var(--gold-deep);font-style:italic;font-weight:600;margin-top:auto;padding-top:10px;font-size:13px}
   @media(max-width:700px){.pattern-grid{grid-template-columns:repeat(2,1fr)}}
-  .pattern-card p{font-size:13px;color:var(--brown);line-height:1.45;margin-top:4px}
-  .pattern-card .slabel{font-size:10px;text-transform:uppercase;letter-spacing:.07em;color:var(--gold-deep);font-weight:600;margin:8px 0 4px;border-top:1px solid var(--line);padding-top:8px}
-  .pattern-card .signals{list-style:none;margin:0 0 6px;padding:0}
-  .pattern-card .signals li{font-size:11.5px;color:var(--brown);line-height:1.4;margin-bottom:4px;padding-left:11px;position:relative}
-  .pattern-card .signals li::before{content:"\00B7";position:absolute;left:0;color:var(--gold-deep);font-weight:700}
-  .pattern-card .ache{color:var(--gold-deep);font-style:italic;font-weight:600;margin-top:auto;font-size:12px;padding-top:6px}
-
-  .pattern-list{display:flex;flex-direction:column;gap:8px;max-width:1000px;margin:16px auto 0;text-align:left}
-  .pattern-row{display:flex;align-items:center;gap:16px;background:#fff;border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:8px;padding:10px 18px}
-  .pattern-row .picon{width:26px;height:26px;flex:0 0 auto;opacity:.85}
-  .pattern-row .pinfo{flex:0 0 148px}
-  .pattern-row .pname{font-family:var(--display);font-weight:700;font-size:14.5px;color:var(--ink)}
-  .pattern-row .pstrat{font-size:9px;letter-spacing:.03em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-top:2px;line-height:1.3}
-  .pattern-row .pdesc{flex:1;font-size:12px;color:var(--brown);line-height:1.35}
-  .pattern-row .ache{flex:0 0 168px;color:var(--gold-deep);font-style:italic;font-weight:600;font-size:11.5px;text-align:right;line-height:1.3}
-  @media(max-width:900px){.pattern-row{flex-wrap:wrap}.pattern-row .ache{flex:1 1 100%;text-align:left;margin-top:6px}}
 
   .states-row{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin:22px 0}
   .state-pill{background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px 18px;font-size:13px;font-weight:600;color:var(--brown);display:flex;flex-direction:column;align-items:center;gap:8px;min-width:90px}
@@ -313,38 +299,43 @@
   </section>
 
   <section class="slide" data-index="11">
-    <div class="slide-inner" style="max-width:1000px">
+    <div class="slide-inner" style="max-width:1220px">
       <div class="eyebrow">Which One Is Actually Running the Show</div>
       <h2>The Five Patterns</h2>
-      <div class="pattern-list">
-        <div class="pattern-row">
+      <div class="pattern-grid">
+        <div class="pattern-card">
           <img class="picon" src="quiz-icons/pattern-holder.png" alt="" loading="lazy">
-          <div class="pinfo"><div class="pname">The Holder</div><div class="pstrat">Give to stay connected</div></div>
-          <p class="pdesc">You reach first, you hold everyone, and quietly wonder why no one thinks to hold you. You give touch easily and receive it awkwardly, bracing the second a hand lands without you earning it.</p>
+          <div class="pname">The Holder</div>
+          <div class="pstrat">Give to stay connected</div>
+          <p class="pdesc">You reach first, hold everyone, and quietly wonder why no one thinks to hold you. You give touch easily, receive it awkwardly, bracing before a hand even lands.</p>
           <p class="ache">"Who holds you?"</p>
         </div>
-        <div class="pattern-row">
+        <div class="pattern-card">
           <img class="picon" src="quiz-icons/pattern-flame.png" alt="" loading="lazy">
-          <div class="pinfo"><div class="pname">The Flame</div><div class="pstrat">Dim to stay digestible</div></div>
-          <p class="pdesc">There's fire in you. You learned to turn it down to stay wanted, and now you're quietly starving to be met at full heat. You only let touch in once you've already dimmed for it.</p>
+          <div class="pname">The Flame</div>
+          <div class="pstrat">Dim to stay digestible</div>
+          <p class="pdesc">There's fire in you, but you learned to turn it down to stay wanted. Now you're quietly starving to be met at full heat.</p>
           <p class="ache">"Turn down the heat."</p>
         </div>
-        <div class="pattern-row">
+        <div class="pattern-card">
           <img class="picon" src="quiz-icons/pattern-armour.png" alt="" loading="lazy">
-          <div class="pinfo"><div class="pname">The Armour</div><div class="pstrat">Contain to stay safe</div></div>
-          <p class="pdesc">You stay composed and in control, because softness once cost you too much. You tense a beat before contact, and would rather give on your terms than be caught receiving.</p>
+          <div class="pname">The Armour</div>
+          <div class="pstrat">Contain to stay safe</div>
+          <p class="pdesc">You stay composed and in control, because softness once cost you too much. You tense before contact, and would rather give than be caught receiving.</p>
           <p class="ache">"Softness feels dangerous."</p>
         </div>
-        <div class="pattern-row">
+        <div class="pattern-card">
           <img class="picon" src="quiz-icons/pattern-signal.png" alt="" loading="lazy">
-          <div class="pinfo"><div class="pname">The Signal</div><div class="pstrat">Curate to stay legible</div></div>
-          <p class="pdesc">You stay readable, translating and filtering yourself so well that no one ever meets the raw, unedited you. Touch is graceful and curated, and you disconnect a beat before it can sink in.</p>
+          <div class="pname">The Signal</div>
+          <div class="pstrat">Curate to stay legible</div>
+          <p class="pdesc">You stay so readable, so filtered, that no one ever meets the raw, unedited you. You disconnect a beat before touch can sink in.</p>
           <p class="ache">"Lose track of what's true."</p>
         </div>
-        <div class="pattern-row">
+        <div class="pattern-card">
           <img class="picon" src="quiz-icons/pattern-current.png" alt="" loading="lazy">
-          <div class="pinfo"><div class="pname">The Current</div><div class="pstrat">Express to stay met</div></div>
-          <p class="pdesc">You bring the aliveness and keep the charge even when no one meets you there, and being the source is quietly exhausting you. You give generously instead of letting yourself be received.</p>
+          <div class="pname">The Current</div>
+          <div class="pstrat">Express to stay met</div>
+          <p class="pdesc">You bring the aliveness and keep the charge even when no one meets you there. Being the source is quietly exhausting you.</p>
           <p class="ache">"What happens when you stop performing?"</p>
         </div>
       </div>
