@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What Scar Tissue Remembers</title>
+<meta name="description" content="The body keeps the record where the mind cannot reach. This is where I work.">
+<link rel="canonical" href="https://feelfullyyou.com/essays/what-scar-tissue-remembers">
+<meta property="og:title" content="What Scar Tissue Remembers">
+<meta property="og:description" content="The body keeps the record where the mind cannot reach. This is where I work.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://feelfullyyou.com/essays/what-scar-tissue-remembers">
+<meta property="og:image" content="https://feelfullyyou.com/julietteherobarstools.jpg">
+<meta property="og:site_name" content="Feel Fully You">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="What Scar Tissue Remembers">
+<meta name="twitter:description" content="The body keeps the record where the mind cannot reach. This is where I work.">
+<meta name="twitter:image" content="https://feelfullyyou.com/julietteherobarstools.jpg">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SY8NKELMNZ"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-SY8NKELMNZ');
+</script>
+<style>
+  :root{
+    --cream:#fefcfa;--cream-2:#f6f4f1;--paper:#fdfbf8;
+    --ink:#1c1714;--brown:#5d4a33;
+    --gold:#a88538;--gold-deep:#99680c;--gold-soft:#b4a074;--gold-pale:#ddc98e;
+    --teal:#0d3535;--teal-deep:#061a1a;
+    --line:#e3dccf;--line-dark:#1d3a39;--max:1140px;
+    --display:'Poppins',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--brown);font-family:var(--body);font-size:1.0625rem;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  .eyebrow{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
+  .btn{display:inline-block;cursor:pointer;border:none;font-family:var(--body);font-weight:600;font-size:.94rem;letter-spacing:.01em;padding:14px 30px;border-radius:2px;background:var(--gold);color:#fff;transition:transform .25s,background .25s;text-decoration:none}
+  .btn:hover{background:var(--gold-deep);transform:translateY(-1px)}
+
+  /* NAV */
+  .topbar{position:fixed;top:0;left:0;right:0;z-index:9999;background:var(--teal);padding:0 28px;height:64px;display:flex;align-items:center;justify-content:space-between}
+  .topbar .brand{font-family:var(--display);font-weight:700;font-size:16px;letter-spacing:.02em;color:var(--cream)}
+  .topbar .brand b{color:var(--gold-pale)}
+  .topbar nav{display:flex;gap:26px;align-items:center}
+  .topbar nav a{font-size:14px;color:var(--cream);font-weight:500;transition:color .2s}
+  .topbar nav a:hover{color:var(--gold-pale)}
+  .topbar nav a.btn{background:var(--gold);color:#fff;padding:10px 20px;border-radius:2px;font-weight:600}
+  .topbar nav a.btn:hover{background:var(--gold-deep)}
+  @media(max-width:860px){.topbar nav > a:not(.btn){display:none}}
+  .more-wrap{position:relative;display:inline-flex;align-items:center}
+  .more-wrap > button{background:none;border:none;cursor:pointer;font-size:14px;color:var(--cream);font-weight:500;font-family:var(--body);display:flex;align-items:center;gap:5px;padding:0;transition:color .2s}
+  .more-wrap > button:hover{color:var(--gold-pale)}
+  .more-wrap > button svg{transition:transform .2s}
+  .more-wrap.open > button svg{transform:rotate(180deg)}
+  .dropdown{position:absolute;top:calc(100% + 10px);right:0;background:var(--teal-deep);border:1px solid var(--line-dark);border-radius:3px;min-width:180px;padding:6px 0;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .18s,transform .18s;z-index:9999}
+  .more-wrap.open .dropdown{opacity:1;pointer-events:all;transform:none}
+  @media(max-width:860px){.dropdown{position:fixed;top:56px;right:16px}}
+  .dropdown a{display:block;padding:10px 18px;font-size:13px;color:var(--cream);font-weight:500;transition:background .15s,color .15s}
+  .dropdown a:hover{background:var(--teal);color:var(--gold-pale)}
+
+  /* PROSE SECTIONS */
+  .prose{max-width:740px;margin:0 auto;padding:80px 28px}
+  .prose h2{font-family:var(--display);font-weight:700;font-size:clamp(1.6rem,3.2vw,2.2rem);color:var(--ink);letter-spacing:-.022em;line-height:1.1;margin-bottom:28px}
+  .prose p{color:var(--brown);margin-bottom:22px;font-size:1.0625rem;line-height:1.75}
+  .prose p:last-child{margin-bottom:0}
+  .prose strong{color:var(--ink);font-weight:600}
+  .prose em{font-style:italic;color:var(--gold-deep)}
+  .prose hr{border:none;border-top:1px solid var(--line);margin:36px 0}
+  .prose .caption{font-size:.85rem;color:var(--gold-deep);font-style:italic;margin:-8px 0 22px}
+
+  footer{background:var(--gold);color:#fff;padding:22px 32px;font-size:13px}
+  footer .inner{max-width:var(--max);margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  footer .brand{font-family:var(--display);font-weight:700;font-size:.95rem}
+  footer a{color:rgba(255,255,255,.65)}
+  footer a.email{color:#fff;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(255,255,255,.4)}
+
+  /* MOBILE NAV */
+  .ham{display:none;background:none;border:none;cursor:pointer;padding:6px;color:var(--cream)}
+  .ham svg{display:block}
+  .mobile-nav{display:none;position:fixed;top:64px;left:0;right:0;background:var(--teal);z-index:9998;padding:16px 0;border-top:1px solid rgba(255,255,255,.1);flex-direction:column}
+  .mobile-nav a{display:block;padding:13px 28px;font-size:15px;color:var(--cream);font-weight:500;font-family:var(--body);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.07)}
+  .mobile-nav a:last-child{border-bottom:none}
+  .mobile-nav a.btn{margin:14px 28px 6px;display:block;background:var(--gold);color:#fff;padding:12px 20px;border-radius:2px;font-weight:600;text-align:center;border:none}
+  .mobile-nav.open{display:flex}
+  @media(max-width:860px){.ham{display:block}.topbar .more-wrap{display:none}.topbar nav > .btn{display:none}}
+</style>
+<style>
+  .essay-hero{background:var(--teal);padding:150px 28px 70px;text-align:center}
+  .essay-hero .eyebrow{color:var(--gold-pale);margin-bottom:18px}
+  .essay-hero h1{font-family:var(--display);font-weight:700;font-size:clamp(2rem,4.6vw,3.1rem);color:#fff;line-height:1.08;letter-spacing:-.025em;max-width:24ch;margin:0 auto 18px}
+  .essay-hero .sub{font-family:var(--display);font-style:italic;font-weight:500;font-size:clamp(1.05rem,2vw,1.3rem);color:#d7d0c4;max-width:52ch;margin:0 auto 26px;line-height:1.5}
+  .essay-hero .meta{font-size:.85rem;color:rgba(255,255,255,.55);letter-spacing:.04em}
+  .essay-hero .meta a{color:var(--gold-pale)}
+  .prose h2{margin-top:52px}
+  .prose h2:first-child{margin-top:0}
+  .signoff{font-family:var(--display);font-style:italic;color:var(--gold-deep);margin-top:44px}
+  .ways{background:var(--teal);padding:80px 28px}
+  .ways .inner{max-width:900px;margin:0 auto}
+  .ways h2{font-family:var(--display);font-weight:700;font-size:clamp(1.5rem,3vw,2rem);color:#fff;letter-spacing:-.02em;margin-bottom:36px;text-align:center}
+  .way{border:1px solid var(--line-dark);border-radius:4px;padding:26px 28px;margin-bottom:16px;background:rgba(255,255,255,.02)}
+  .way h3{font-family:var(--display);font-weight:600;font-size:1.05rem;color:var(--gold-pale);margin-bottom:8px}
+  .way p{color:#d7d0c4;font-size:.98rem;line-height:1.6;margin-bottom:14px}
+  .way a.btn{font-size:.88rem;padding:11px 22px}
+  .sources{background:var(--cream-2);border-top:1px solid var(--line)}
+  .sources .prose{padding:56px 28px}
+  .sources h2{font-size:1.15rem;margin-bottom:18px}
+  .sources p{font-size:.88rem;line-height:1.6;color:var(--brown);margin-bottom:10px;font-style:italic}
+  .sources p a{color:var(--gold-deep);text-decoration:underline;text-underline-offset:3px;font-style:normal}
+  .substack-note{text-align:center;padding:34px 28px;background:var(--cream);border-top:1px solid var(--line);font-size:.92rem;color:var(--brown)}
+  .substack-note a{color:var(--gold-deep);text-decoration:underline;text-underline-offset:3px}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "What Scar Tissue Remembers",
+  "description": "The body keeps the record where the mind cannot reach. This is where I work.",
+  "datePublished": "2026-08-16",
+  "author": {
+    "@type": "Person",
+    "name": "Juliette Karaman",
+    "jobTitle": "Intimacy & Touch Expert",
+    "url": "https://feelfullyyou.com/about"
+  },
+  "publisher": {"@type": "Organization", "name": "Feel Fully You", "url": "https://feelfullyyou.com/"},
+  "mainEntityOfPage": "https://feelfullyyou.com/essays/what-scar-tissue-remembers",
+  "image": "https://feelfullyyou.com/julietteherobarstools.jpg"
+}
+</script>
+</head>
+<body>
+<div class="topbar">
+  <a href="/" class="brand">Feel Fully <b>You</b></a>
+  <button class="ham" id="hamBtn" aria-label="Open menu" aria-expanded="false">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/work-with-me">Work With Me</a>
+    <a href="/cards">The Cards</a>
+    <a href="/shop">Shop</a>
+    <div class="more-wrap" id="moreWrap">
+      <button onclick="document.getElementById('moreWrap').classList.toggle('open')" aria-expanded="false">
+        More <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg>
+      </button>
+      <div class="dropdown">
+        <a href="/touch-reset-quiz">The Touch Reset Quiz</a>
+        <a href="/free-resources">Free Resources</a>
+        <a href="/essays/">Essays</a>
+        <a href="/questions/">Questions</a>
+        <a href="/podcast/">Podcast</a>
+        <a href="/about">About Juliette</a>
+        <a href="/press">Press</a>
+        <a href="/media-and-pr">Media &amp; PR</a>
+        <a href="/touch">The Method</a>
+        <a href="/contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+</div>
+
+
+<nav class="mobile-nav" id="mobileNav">
+  <a href="/">Home</a>
+  <a href="/work-with-me" style="font-weight:600;color:var(--gold-pale)">Work With Me</a>
+  <a href="/cards">The Cards</a>
+  <a href="/shop">Shop</a>
+  <a href="/about">About Juliette</a>
+  <a href="/touch-reset-quiz">The Touch Reset Quiz</a>
+  <a href="/free-resources">Free Resources</a>
+        <a href="/essays/">Essays</a>
+        <a href="/questions/">Questions</a>
+        <a href="/podcast/">Podcast</a>
+  <a href="/press">Press</a>
+  <a href="/media-and-pr">Media &amp; PR</a>
+  <a href="/touch">The Method</a>
+  <a href="/contact">Contact</a>
+</nav>
+
+<section class="essay-hero">
+  <p class="eyebrow">What the Body Knows &middot; Essays</p>
+  <h1>What Scar Tissue Remembers</h1>
+  <p class="sub">The body keeps the record where the mind cannot reach. This is where I work.</p>
+  <p class="meta">By <a href="/about">Juliette Karaman</a> &middot; 16 August 2026</p>
+</section>
+<article>
+<div class="prose">
+
+<p><strong>She was lying on the table when it happened.</strong></p>
+<p>We had been working for forty minutes. Slow breath. Light contact along her sacrum.</p>
+<p>The kind of pace most sessions need before anything moves.</p>
+<p>She had come to me because she could no longer feel her partner's hand on her body in the way she once had.</p>
+<p>She knew, in some pre-verbal way, that the loss was not about him.</p>
+<p>Her caesarean scar was sixteen years old.</p>
+<p>A thin silver line, barely visible, the kind of mark she had stopped noticing in the mirror years ago.</p>
+<p>When my hand drew close to it, her whole pelvis lifted off the table.</p>
+<p>She did not lift it on purpose. She did not know it had happened until I told her.</p>
+<p><strong>Her body had moved before her mind caught up.</strong></p>
+<p>That is where I work.</p>
+<p><strong>In the gap between what the tissue remembers and what the woman has been told to forget.</strong></p>
+
+<h2>Part One: What Scar Tissue Actually Does</h2>
+<p>Most people think of a scar as a closed chapter. The wound healed. The line is faint. The story is over.</p>
+<p><strong>The body does not agree.</strong></p>
+<p>When tissue is cut, torn, or ruptured, the body lays down collagen to close the gap.</p>
+<p>It does this fast and it does it densely, in a disorganised pattern that bears no resemblance to the original tissue's architecture.</p>
+<p>The fibres run in random directions. They adhere to whatever is nearby, fascia, muscle, nerve, organ.</p>
+<p>They thicken. They tether.</p>
+<p>They restrict the natural glide between layers that the body relies on for movement, for blood flow, for sensation.</p>
+<p><strong>A scar is not a line on the surface, it is a knot that runs through.</strong></p>
+<p>Tom Myers, the anatomist behind <em>Anatomy Trains</em>, has spent decades mapping fascia as a continuous network through the entire body.</p>
+<p>Pull one corner of a sweater and the whole shoulder shifts. The body works the same way.</p>
+<p>A scar in one location is not local, it is a tether on a system that is meant to glide.</p>
+<p>Robert Schleip's research at the Fascia Research Project in Ulm has shown that fascia is not passive packing material.</p>
+<p>Fascia is contractile, innervated, and rich with sensory receptors. It senses pressure, temperature, position, and pain.</p>
+<p>When fascia is scarred, it sends altered signals to the central nervous system.</p>
+<p>The body receives garbled information from a region it is supposed to know intimately.</p>
+<p>Ida Rolf, who developed Rolfing in the 1950s, said it plainly: <strong>where the body cannot move, the body cannot feel.</strong></p>
+<p>In neural therapy, the framework developed by the Huneke brothers in mid-twentieth-century Germany, scars are described as interference fields.</p>
+<p>Zones that produce abnormal electrical signals through the autonomic nervous system.</p>
+<p><strong>Those signals do not stay near the scar. They travel.</strong></p>
+<p>A caesarean scar can shut down pelvic sensation. An episiotomy scar can blunt arousal.</p>
+<p>A childhood appendix scar can run a holding pattern through the diaphragm that nobody connects to anything for forty years.</p>
+<p>In Traditional Chinese Medicine, this is called a dam in the river.</p>
+<p>Qi, the body's vital current, runs along meridians that recent research suggests may correspond to the fascial network itself.</p>
+<p>A scar is a point where the current cannot pass cleanly.</p>
+<p>The body builds around it. The dam holds. <strong>The river slows everywhere downstream.</strong></p>
+<p><strong>This is what the woman on the table was carrying. Not a memory of her caesarean.</strong></p>
+<p><strong>The active, ongoing electrical and mechanical effect of a scar that had been quietly running her pelvis for sixteen years.</strong></p>
+
+<h2>Part Two: Why The Scars Matter</h2>
+<p>The scars I see in my work, again and again: caesarean. Episiotomy. Hysterectomy.</p>
+<p>The cervical biopsy a woman barely remembers having at twenty-three. The abdominal surgery in childhood.</p>
+<p>The injury from sexual assault that nobody ever called an injury.</p>
+<p>The tear from a forceps birth that healed without stitches and was never mentioned again.</p>
+<p>Each one is a real wound.</p>
+<p>Each one was treated as an incidental detail of a life, something to recover from, then move past.</p>
+<p><strong>The body did not move past it.</strong></p>
+<p>A caesarean cuts through seven layers of tissue. Skin, subcutaneous fat, two layers of fascia, muscle, peritoneum, uterus.</p>
+<p>The scar is rarely visible after a few years. The internal adhesions can persist for decades.</p>
+<p>Women carrying caesarean scars commonly report numbness across the lower belly, reduced sensation across the vulva, pain during deep penetration, a sense that the lower body has gone quiet.</p>
+<p><strong>The medical record says: healed without complication. The body says something else.</strong></p>
+<p>Episiotomy scars are smaller and more devastating in their effects on sensation.</p>
+<p>The cut runs through tissue that is densely innervated, designed for arousal, and meant to be supple.</p>
+<p>When that tissue heals into a tight cord of collagen, the wiring of pleasure runs through a dense knot of restricted fibre.</p>
+<p>Women describe it as: <strong>I can't feel what I used to feel. I do not know whose body this is.</strong></p>
+<p>Trauma scars hold differently.</p>
+<p>The body that was pinned, held down, penetrated against its will lays down a different kind of holding.</p>
+<p>The tissue is not always cut. The bracing pattern that the body produced in the moment never fully released.</p>
+<p><strong>The pelvic floor learned to lock. The cervix learned to retreat. The vaginal canal learned to clamp on contact.</strong></p>
+<p>Years later, the woman tries to relax in her partner's arms and her body refuses, and she does not know why, and she begins to believe there is something wrong with her.</p>
+<p><strong>There is nothing wrong with her.</strong></p>
+<p><strong>Her body is doing exactly what it learned to do to keep her alive.</strong></p>
+
+<h2>Part Three: Internal Dearmourring</h2>
+<p><strong>The work of releasing this tissue is called internal dearmourring.</strong></p>
+<p>I want to use that word carefully because it carries weight.</p>
+<p>The term armour comes from Wilhelm Reich, the Austrian psychoanalyst who, in the 1930s and 40s, was the first Western clinician to write seriously about chronic muscular contraction as the body's way of binding emotion that had nowhere else to go.</p>
+<p>He called it character armour.</p>
+<p>He described how, over years, the muscles of the jaw, the throat, the diaphragm, the pelvic floor learn to hold what the psyche cannot bear to feel.</p>
+<p>The armour is protective. <strong>The armour is also what eventually walls a person off from their own life.</strong></p>
+<p>Internal dearmourring is the slow, conscious release of that armour from the inside.</p>
+<p>For women, the work happens in the pelvic tissues.</p>
+<p>The vaginal canal, the cervix, the pelvic floor, the deep muscles that surround them.</p>
+<p>These tissues hold tension, scar adhesion, and unprocessed memory in a way that surface bodywork cannot reach.</p>
+<p><strong>The cervix in particular acts as a magnet for stored experience.</strong></p>
+<p>Boundary violations. Sexual shame. Births that did not go the way she wanted.</p>
+<p>Moments her body said no and was overridden.</p>
+<p><strong>The cervix collects them.</strong></p>
+<p>The work itself is precise. Slow, conscious internal touch combined with breath, sound, and witnessing.</p>
+<p>I locate the points where the tissue is contracted, numb, hypersensitive, or scarred.</p>
+<p>I apply gentle, sustained pressure on each point and wait. The tissue softens at its own pace.</p>
+<p><strong>The body does the releasing. I create the conditions.</strong></p>
+<p>For men, the work happens through the anus, the anal canal, the pelvic floor, and the prostate.</p>
+<p><strong>The anatomy is different. The principle is the same.</strong></p>
+<p>Stored fear, shame, suppressed grief, sexual trauma, and the long fatigue of armouring the body against feeling.</p>
+<p>When that tissue softens, men describe a return of capacity that they had stopped expecting.</p>
+<p>This is clinical work. Trauma-informed. Held within explicit consent at every stage.</p>
+<p>Surgical gloves. Lubricant. Verbal check-ins at every turn.</p>
+<p><strong>The container is everything.</strong></p>
+<p><strong>Without the container, the work cannot happen. With the container, the work happens almost on its own.</strong></p>
+<p><strong>I was trained in this work because I needed it first.</strong></p>
+<p>Every modality I hold, I found because something in me required it.</p>
+<p>Internal dearmourring is one of the modalities that gave my own body back to me after years of carrying what it had been carrying.</p>
+
+<h2>Part Four: What Comes Up</h2>
+<p><strong>When the tissue releases, things surface.</strong></p>
+<p>Sometimes it is sensation. Heat moving down the legs. A wash of cold through the chest.</p>
+<p>Trembling that begins in the pelvis and travels up through the spine.</p>
+<p>The classic markers of a held charge completing its arc.</p>
+<p>Sometimes it is emotion. Grief that had no story attached. Rage that did not know whose face to wear.</p>
+<p>Relief so deep the woman cries for an hour with nothing to say.</p>
+<p>I have stayed with all of it. I am not shocked by any of it.</p>
+<p><strong>That matters more than the modality.</strong></p>
+<p>Sometimes it is a specific memory.</p>
+<p>The scar releases, the tissue softens, and the moment that produced the bracing returns.</p>
+<p>A childhood surgery the woman thought she had forgotten. A first sexual experience she had quietly filed under fine.</p>
+<p>The birth where she was held down.</p>
+<p><strong>The body had been carrying the full record. The release lets it speak.</strong></p>
+<p>Sometimes it is something older than her own story.</p>
+<p>Family constellation work, which I trained in alongside the other modalities, names this systemic entanglement.</p>
+<p>A woman releases her pelvic armour and what surfaces is grief that does not feel like hers.</p>
+<p>A miscarriage her grandmother never spoke about. A great-aunt who died in childbirth in a country nobody mentions anymore.</p>
+<p><strong>The pelvic floor is one of the body's primary storage centres for inherited pattern.</strong></p>
+<p>Sometimes the dearmourring releases what was hers. Sometimes it releases what was passed down to her along the maternal line.</p>
+<p><strong>The body keeps the record. All of it.</strong></p>
+
+<h2>Part Five: The Woman On The Table</h2>
+<p>I will tell you what happened with the woman whose pelvis lifted off the table.</p>
+<p>I waited. I did not move toward the scar. I let her body settle.</p>
+<p>I told her, quietly, what I had observed. Her pelvis lifted when my hand approached this line. Tell me what you noticed.</p>
+<p>She said: I did not feel anything.</p>
+<p><strong>I said: that is information.</strong></p>
+<p>We worked slowly across three sessions. Surface bodywork at the scar first. Light touch along the line.</p>
+<p>Then the layers underneath. Then, when her body had told me it was ready, the internal work.</p>
+<p>She was clothed from the waist up. The container was held.</p>
+<p>Her breath was steady. Her consent was checked at every turn.</p>
+<p>When I located the point inside her that corresponded to where the surgical incision had crossed her uterus, her body did three things at once.</p>
+<p>The pelvis softened completely for the first time in our work together.</p>
+<p>Her breath caught. Tears rolled sideways into her hair without her face moving.</p>
+<p>She said, without any prompting: <strong>I never let myself notice that I lost her.</strong></p>
+<p>She had had twins. One had not survived. The caesarean had been an emergency.</p>
+<p>She had been told her surviving daughter was healthy and that the right response was gratitude. She had been grateful.</p>
+<p>She had also been carrying, in the seven layers of tissue that had been cut to deliver her children, the grief for the one who was not delivered alive.</p>
+<p><strong>Sixteen years.</strong></p>
+<p>Her partner's hand on her belly had been touching the edge of that grief every time.</p>
+<p>Her body had been pulling away to protect her from feeling something she had not had permission to feel.</p>
+<p>After three more sessions of internal dearmourring and grief work woven together, she came in one day and said: <strong>he touched me last night and I felt it. I felt his hand. I cried because I felt it, not the grief.</strong></p>
+<p>That is what the work does.</p>
+<p><strong>It gives the woman her body back, with everything it has been holding now able to move through and out.</strong></p>
+
+<h2>Part Six: What Becomes Possible</h2>
+<p>The question peers ask me, and the question clients eventually ask me, is the same question, asked from different angles.</p>
+<p>Peers ask: what does your evidence base look like.</p>
+<p>Clients ask: what does my life look like after.</p>
+<p><strong>The answers are connected.</strong></p>
+<p>Capacity for sensation returns. Areas that had gone numb come back online, often in the first or second session.</p>
+<p>Pleasure becomes available where it had been quietly unreachable.</p>
+<p>Pain during intercourse, which conventional medicine often treats as something structural that needs surgery, frequently resolves through this body-based work alone.</p>
+<p>Pelvic floor tension, which is one of the most undertreated drivers of urinary dysfunction, lower back pain, and chronic anxiety, releases when the underlying armour releases.</p>
+<p><strong>The wider effects are quieter and more important.</strong></p>
+<p>The woman who could not let her partner reach for her without bracing finds herself reaching back.</p>
+<p>The woman who had organised her life around avoiding sensation begins to want to feel again.</p>
+<p>The man who had been numb from the waist down for two decades comes back to himself in stages.</p>
+<p><strong>The proof is in the bodies. Not in the studies, though the studies are catching up.</strong></p>
+<p><strong>In what becomes possible when the tissue lets go of what it has been holding for the body's sake.</strong></p>
+<p>Close to a thousand women. 650 couples. Over 20 countries. All of it learned over the last 27 years.</p>
+<p>I started as a SENCO, teaching children on the autism spectrum to feel what was happening in their own bodies.</p>
+<p>I am still doing the same work. The territory has changed. <strong>The principle has not.</strong></p>
+<p><strong>The body is a compass. Scar tissue interferes with that compass.</strong></p>
+<p>The work is to clear the interference so the body can speak again.</p>
+<p>The framework is the easy part to hand you.</p>
+<p><strong>What I offer is what I found in my own body first, the part no framework reaches on its own.</strong></p>
+
+<hr>
+
+<p class="signoff">Still following the breadcrumbs.<br>Juliette</p>
+</div>
+</article>
+<section class="ways">
+  <div class="inner">
+    <h2>Ways in</h2>
+    <div class="way">
+      <h3>Start here</h3>
+      <p>The Touch Reset Quiz shows you which pattern your body runs to keep you safe, in about three minutes. Free.</p>
+      <a class="btn" href="/touch-reset-quiz">Take the quiz</a>
+    </div>
+    <div class="way">
+      <h3>Work at the level of the tissue</h3>
+      <p>One Touch is where the bracing pattern gets met directly, in your own body, rather than talked about.</p>
+      <a class="btn" href="/one-touch">One Touch</a>
+    </div>
+    <div class="way">
+      <h3>Work with me privately</h3>
+      <p>If what you just read is describing something you are carrying, this is what I do one to one. The door is an application and a conversation.</p>
+      <a class="btn" href="/apply">Apply</a>
+    </div>
+  </div>
+</section>
+<section class="sources">
+  <div class="prose">
+    <h2>Sources</h2>
+    <p>Tom Myers, Anatomy Trains: Myofascial Meridians for Manual and Movement Therapists. Elsevier, 4th edition 2020. The continuous fascial network through the body. <a href="https://anatomytrains.com" rel="noopener">anatomytrains.com</a></p>
+    <p>Robert Schleip et al., Fascia: The Tensional Network of the Human Body. Churchill Livingstone, 2012. The contractile, innervated nature of fascia and its role in pain and proprioception. <a href="https://fasciaresearch.de" rel="noopener">fasciaresearch.de</a></p>
+    <p>Ida P. Rolf, Rolfing: Reestablishing the Natural Alignment and Structural Integration of the Human Body for Vitality and Well-Being. Healing Arts Press, 1989.</p>
+    <p>Wilhelm Reich, Character Analysis. Farrar, Straus and Giroux, originally published 1933. The original articulation of body armour.</p>
+    <p>Ferdinand and Walter Huneke, neural therapy and the interference field concept. Documented in: Dosch, Manual of Neural Therapy According to Huneke. Thieme, 2006.</p>
+    <p>Peter A. Levine, Waking the Tiger: Healing Trauma. North Atlantic Books, 1997. The body-based completion of incomplete defensive responses, foundational to all internal dearmourring practice.</p>
+    <p>Bessel van der Kolk, The Body Keeps the Score. Viking, 2014.</p>
+    <p>Jaiya, Your Blueprint for Pleasure. Union Square &amp; Co., 2023. The body's relationship to sensation and the wiring of arousal. <a href="https://missjaiya.com" rel="noopener">missjaiya.com</a></p>
+    <p><strong style="color:var(--ink);font-style:normal">A note on how I use AI.</strong> I give it all my stories, in multiple conversations, and AI organises it, and then the dance starts of rewriting and reshaping it.</p>
+  </div>
+</section>
+<div class="substack-note">This essay first appeared on <a href="https://juliettekaraman.substack.com/p/what-scar-tissue-remembers" rel="noopener">What the Body Knows</a>, Juliette's Substack. <a href="https://substack.com/@juliettekaraman" rel="noopener">Subscribe</a> to read new essays as they publish.</div>
+
+<footer>
+  <div class="inner">
+    <div class="brand">Feel Fully You</div>
+    <div><a href="mailto:support@feelfullyyou.com" class="email">support@feelfullyyou.com</a></div>
+    <div style="display:flex;gap:14px">
+      <a href="https://www.instagram.com/juliettekaraman/" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+      <a href="https://www.facebook.com/juliette.karamanvanschaardenburg" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+      <a href="https://substack.com/@juliettekaraman" aria-label="Substack"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 17.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg></a>
+    </div>
+  </div>
+</footer>
+<script>
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.14,rootMargin:'0px 0px -6% 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  document.addEventListener('click',function(e){
+    ['moreWrap','workWrap'].forEach(function(id){var w=document.getElementById(id);if(w&&!w.contains(e.target))w.classList.remove('open');});
+  });
+</script>
+<script>
+(function(){
+  var btn=document.getElementById('hamBtn');
+  var nav=document.getElementById('mobileNav');
+  if(btn&&nav){btn.addEventListener('click',function(){nav.classList.toggle('open');btn.setAttribute('aria-expanded',nav.classList.contains('open'))});}
+})();
+</script>
+<script>
+document.addEventListener('click', function(e){
+  var a = e.target.closest('a'); if(!a || typeof gtag !== 'function') return;
+  var h = a.href || '';
+  var label = (a.textContent || '').trim().slice(0, 60);
+  if (h.indexOf('stripe.com') > -1) gtag('event', 'begin_checkout', {link_url: h, link_text: label, page_path: location.pathname});
+  else if (h.indexOf('tidycal.com') > -1) gtag('event', 'book_call_click', {link_url: h, link_text: label, page_path: location.pathname});
+  else if (h.indexOf('instagram.com') > -1) gtag('event', 'instagram_click', {link_url: h, page_path: location.pathname});
+  else if (h.indexOf('/files/') > -1 || h.indexOf('.pdf') > -1) gtag('event', 'freebie_download', {link_url: h, page_path: location.pathname});
+});
+</script>
+<script src="../quiz-popup.js" defer></script>
+</body>
+</html>
