@@ -4,17 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The 10 Touch Rituals. Feel Fully You</title>
-<meta name="description" content="The 10 Touch Rituals, £7 from Juliette Karaman. Ten small moments of touch that bring a couple back to each other, now in one app.">
+<meta name="description" content="The 10 Touch Rituals, free from Juliette Karaman. Ten small moments of touch that bring a couple back to each other, now in one app.">
 <link rel="canonical" href="https://feelfullyyou.com/10-touch-rituals">
 <meta property="og:title" content="The 10 Touch Rituals. Feel Fully You">
-<meta property="og:description" content="The 10 Touch Rituals, £7 from Juliette Karaman. Ten small moments of touch that bring a couple back to each other, now in one app.">
+<meta property="og:description" content="The 10 Touch Rituals, free from Juliette Karaman. Ten small moments of touch that bring a couple back to each other, now in one app.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://feelfullyyou.com/10-touch-rituals">
 <meta property="og:image" content="https://feelfullyyou.com/10-touch-rituals-og.png">
 <meta property="og:site_name" content="Feel Fully You">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="The 10 Touch Rituals. Feel Fully You">
-<meta name="twitter:description" content="The 10 Touch Rituals, £7 from Juliette Karaman. Ten small moments of touch that bring a couple back to each other, now in one app.">
+<meta name="twitter:description" content="The 10 Touch Rituals, free from Juliette Karaman. Ten small moments of touch that bring a couple back to each other, now in one app.">
 <meta name="twitter:image" content="https://feelfullyyou.com/10-touch-rituals-og.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -285,9 +285,9 @@ gtag('config', 'G-SY8NKELMNZ');
       <p class="sub-pop">We still love each other. We just don't touch anymore.</p>
       <p class="sub">A peck on the cheek before bed. A hand on the shoulder that doesn't linger. We've become roommates who happen to sleep in the same bed.</p>
       <p class="format-line">A complete kit, now in your pocket: ten structured practices, two video walkthroughs, two guided audios, and sixteen card prompts. All in one app, on your phone, always there when you need it.</p>
-      <div class="price-pill">£7</div>
+      <div class="price-pill">Free</div>
       <br>
-      <a href="https://buy.stripe.com/cNi9AS49Relq1Hn9qZ0co0y" class="btn light">Get instant access</a>
+      <a href="#get" class="btn light">Get the rituals, free</a>
     </div>
   </div>
 </div>
@@ -450,11 +450,33 @@ gtag('config', 'G-SY8NKELMNZ');
 </div>
 
 <div class="cta">
-  <div class="eye">Get instant access</div>
+  <div class="eye" id="get">Free, in the app</div>
   <h2>The 10 Touch Rituals</h2>
-  <div class="price">£7</div>
-  <p class="tagline">Instant access, all in one app. Non-refundable once purchased.</p>
-  <a href="https://buy.stripe.com/cNi9AS49Relq1Hn9qZ0co0y" class="btn teal">GET THE 10 RITUALS · £7</a>
+  <p class="tagline">Ten structured practices, two video walkthroughs, two guided audios and sixteen card prompts. All in the app, on your phone. Everything else I give away opens at the same time.</p>
+  <form id="ttrForm" style="max-width:420px;margin:0 auto 12px">
+    <input type="text" name="website" id="ttr_hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+    <input type="text" id="ttr_name" placeholder="First name" required autocomplete="given-name" style="width:100%;padding:15px 18px;margin-bottom:10px;border:1px solid var(--line);border-radius:2px;font-family:'Inter',sans-serif;font-size:16px;color:var(--ink);background:#fff">
+    <input type="email" id="ttr_email" placeholder="Email address" required autocomplete="email" style="width:100%;padding:15px 18px;margin-bottom:16px;border:1px solid var(--line);border-radius:2px;font-family:'Inter',sans-serif;font-size:16px;color:var(--ink);background:#fff">
+    <button type="submit" class="btn teal" id="ttrBtn" style="border:none;cursor:pointer;width:100%">SEND ME THE 10 RITUALS</button>
+  </form>
+  <p class="tagline" style="margin-bottom:0">No spam. Just the rituals, and occasional letters from Juliette.</p>
+  <script>
+  document.getElementById('ttrForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var btn = document.getElementById('ttrBtn');
+    btn.textContent = 'One moment...';
+    btn.disabled = true;
+    var email = document.getElementById('ttr_email').value.trim();
+    var name = document.getElementById('ttr_name').value.trim();
+    fetch('/.netlify/functions/subscribe', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({email: email, firstName: name, website: document.getElementById('ttr_hp').value, tagIds: [20794257], sequenceId: 2818643})
+    }).finally(function() {
+      window.location.href = '/thankyou-10rituals?email=' + encodeURIComponent(email);
+    });
+  });
+  </script>
   <p class="reveal" style="font-family:'Poppins',sans-serif;font-weight:700;color:var(--gold-deep);font-size:clamp(18px,2.4vw,24px);letter-spacing:-.01em;margin-top:20px">Your body braced. Patterns can be changed.</p>
 </div>
 
