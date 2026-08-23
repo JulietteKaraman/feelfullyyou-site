@@ -176,8 +176,9 @@
   .filter-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-top:36px}
   .filter h3{font-size:1.1rem;font-weight:700;margin-bottom:20px}
   .filter-list{list-style:none;display:flex;flex-direction:column;gap:12px}
-  .filter-list li{font-size:16px;color:var(--brown);line-height:1.55;padding-left:18px;position:relative}
-  .filter-list li::before{content:"";position:absolute;left:0;top:10px;width:6px;height:6px;border-radius:50%;background:var(--gold-soft)}
+  .filter-list li{font-size:16px;color:var(--brown);line-height:1.55;padding-left:30px;position:relative}
+  .filter-list.yes li::before{content:"\2713";position:absolute;left:0;top:-1px;font-weight:700;font-size:16px;color:var(--teal)}
+  .filter-list.no li::before{content:"\2715";position:absolute;left:0;top:-1px;font-weight:700;font-size:16px;color:var(--gold-deep)}
   @media(max-width:700px){.filter-grid{grid-template-columns:1fr}}
 
   /* CTA */
@@ -190,10 +191,13 @@
   .faq{padding:80px 0;background:var(--cream-2);border-top:1px solid var(--line)}
   .faq h2{max-width:24ch;margin-bottom:40px}
   .faq-list{max-width:680px}
-  .faq-item{border-bottom:1px solid var(--line);padding:24px 0}
-  .faq-item:first-child{border-top:1px solid var(--line)}
-  .faq-item h3{font-size:1.05rem;color:var(--ink);margin-bottom:10px;font-weight:600}
-  .faq-item p{font-size:15px;color:var(--brown);line-height:1.65;max-width:none}
+  .faq-list details{border-bottom:1px solid var(--line);padding:0}
+  .faq-list details:first-child{border-top:1px solid var(--line)}
+  .faq-list summary{list-style:none;cursor:pointer;padding:24px 40px 24px 0;position:relative;font-size:1.05rem;color:var(--ink);font-weight:600;line-height:1.35}
+  .faq-list summary::-webkit-details-marker{display:none}
+  .faq-list summary::after{content:"+";position:absolute;right:4px;top:22px;font-weight:400;font-size:26px;color:var(--gold);line-height:1;transition:transform .2s}
+  .faq-list details[open] summary::after{content:"\2013"}
+  .faq-list details p{font-size:15px;color:var(--brown);line-height:1.65;max-width:none;margin:0 0 24px}
 
   /* FOOTER */
   footer{padding:56px 0 48px;background:var(--gold);color:rgba(255,255,255,.85);border-top:1px solid var(--line-dark)}
@@ -329,7 +333,7 @@ gtag('config', 'G-SY8NKELMNZ');
     <p class="reveal">You brace slightly when they reach for you. Not dramatically. A small internal preparation you have stopped noticing you do.</p>
     <p class="reveal">You sat in the sessions. You had the insights. You felt something shift in the room.</p>
     <p class="reveal">Then you went home, and the same pattern reran. Slightly different. Same root.</p>
-    <p class="reveal">You were told <span style="color:var(--gold-deep);font-weight:600">The Spontaneity Lie</span>: that a real yes arrives on its own. So each time your body braced, you read it as proof. It was a pattern no one had reached yet.</p>
+    <p class="reveal">Somewhere you learned a real yes is supposed to <span style="color:var(--gold-deep);font-weight:600">feel effortless</span>. So when your body braced, you read it as proof. It was not proof of anything. It was a pattern no one had reached yet.</p>
     <div class="pull reveal">The work has never gone where the pattern actually lives. This is what the two months are for.</div>
     <div class="pain client-q reveal">
       <div class="mark">"</div>
@@ -378,8 +382,8 @@ gtag('config', 'G-SY8NKELMNZ');
 <section class="integration">
   <div class="narrow">
     <div class="eyebrow reveal" style="margin-bottom:18px">The Touch Map™ intensive</div>
-    <h2 class="reveal">Two months does the excavation.<br>The three-hour Touch Map™ intensive does the installation.</h2>
-    <p class="reveal">By then the body is mapped and the pattern has moved. In those three hours I build your Touch Map™: the same place, two different ways, until your body shows us which one lands. You leave with an exact map of how you are wired for pleasure, where your yes lives, your real way in, and the last of what was held, cleared.</p>
+    <h2 class="reveal">Two months does the excavation.<br>The Touch Map™ intensive does the installation.</h2>
+    <p class="reveal">By then the body is mapped and the pattern has moved. In that time I build your Touch Map™: the same place, two different ways, until your body shows us which one lands. You leave with an exact map of how you are wired for pleasure, where your yes lives, your real way in, and the last of what was held, cleared.</p>
     <p class="reveal">A new baseline. Not something you manage. Something you inhabit.</p>
     <div class="bold-close reveal">Something real you can return to again and again.</div>
   </div>
@@ -395,8 +399,7 @@ gtag('config', 'G-SY8NKELMNZ');
     <p class="reveal">She came to me online. Divorcing. New relationship. Running her business at full pace, juggling everything and pushing through all of it.</p>
     <p class="reveal">The weekly work came first. Patterns surfaced that no amount of expertise had reached, things her body had carried since early childhood.</p>
     <p class="reveal">Then the integration day. The body was ready. We cleared the last of it.</p>
-    <p class="reveal">She has since written a children's book on body consent and a book for adults on burnout and fertility.</p>
-    <div class="closer reveal">Weeks of work first. Then half a day. That is the sequence that makes it possible.</div>
+    <p class="reveal"><strong>She has since written a children's book on body consent and a book for adults on burnout and fertility.</strong></p>
   </div>
 </section>
 
@@ -435,9 +438,11 @@ gtag('config', 'G-SY8NKELMNZ');
       <div class="scarcity">Two spots · Two months, 1:1 · Option to extend · Online via Zoom</div>
       <ul class="offer-list">
         <li>Six 1:1 sessions over two months using Rapid Release Rewire Restore®</li>
-        <li>Three-hour online Touch Map™ intensive</li>
+        <li>Online Touch Map™ intensive</li>
         <li>WhatsApp support throughout. I am there when it lands, not a week later</li>
-        <li>Bespoke homework after every session</li>
+        <li>Bespoke meditations</li>
+        <li>Access to any of my online programs that may benefit you</li>
+        <li>The full set of Intimacy and Communication Cards</li>
         <li>In-person VIP day available on request (travel costs apply)</li>
       </ul>
       <a href="/apply" class="btn teal">Apply to begin · £2,500 a month</a>
@@ -481,7 +486,7 @@ gtag('config', 'G-SY8NKELMNZ');
     <div class="filter-grid">
       <div class="reveal">
         <h3>This is for you if</h3>
-        <ul class="filter-list">
+        <ul class="filter-list yes">
           <li>You have invested seriously in yourself and the pattern still runs</li>
           <li>You can name what is happening but the body hasn't caught up</li>
           <li>You are an entrepreneur, coach, therapist, or high performer ready for something to move</li>
@@ -491,11 +496,11 @@ gtag('config', 'G-SY8NKELMNZ');
       </div>
       <div class="reveal">
         <h3>This is not for you if</h3>
-        <ul class="filter-list">
+        <ul class="filter-list no">
           <li>You are looking for more information or a new framework to understand</li>
           <li>You are in acute crisis or need weekly clinical support</li>
-          <li>You want to move slowly and see how it feels</li>
-          <li>You need a refund policy to feel safe</li>
+          <li>You want to move slowly as a reason not to actually show up</li>
+          <li>You are looking for someone to blame instead of looking at yourself</li>
         </ul>
       </div>
     </div>
@@ -518,30 +523,34 @@ gtag('config', 'G-SY8NKELMNZ');
   <div class="narrow">
     <h2 class="reveal">Frequently asked</h2>
     <div class="faq-list">
-      <div class="faq-item reveal">
-        <h3>Is this therapy?</h3>
-        <p>No. I bring everything I have. EMDR, hypnotherapy, somatic experiencing, spinal attunement, and my own method Rapid Release Rewire Restore®, to move what is held in the body. You also get the Intimacy and Communication Cards, which give you a structure for connection outside the sessions. Think of it this way: we use whatever the moment needs, not a fixed protocol. You will not spend two months talking about your past. You will spend two months actually shifting it.</p>
-      </div>
-      <div class="faq-item reveal">
-        <h3>What if I've already done a lot of work on myself?</h3>
+      <details class="reveal">
+        <summary>Is this therapy?</summary>
+        <p>No. I bring everything I have, moving what is held in the body through my own method, Rapid Release Rewire Restore®. You also get the Intimacy and Communication Cards, which give you a structure for connection outside the sessions. We use whatever the moment needs, not a fixed protocol. You will not spend two months talking about your past. You will spend two months actually shifting it.</p>
+      </details>
+      <details class="reveal">
+        <summary>What if I've already done a lot of work on myself?</summary>
         <p>Good. This is not more information. This is where the body finally catches up with everything you already know.</p>
-      </div>
-      <div class="faq-item reveal">
-        <h3>Where do sessions take place?</h3>
-        <p>Online via Zoom, including the three-hour Touch Map™ intensive. In-person VIP day available on request, travel costs apply.</p>
-      </div>
-      <div class="faq-item reveal">
-        <h3>Is this confidential?</h3>
+      </details>
+      <details class="reveal">
+        <summary>Where do sessions take place?</summary>
+        <p>Online via Zoom, including the Touch Map™ intensive. In-person VIP day available on request, travel costs apply.</p>
+      </details>
+      <details class="reveal">
+        <summary>Can we do this as a couple?</summary>
+        <p>No, this is one to one work, just you and me. If you want to do this together, <a href="/the-beginning" style="color:var(--gold-deep);text-decoration:underline">The Beginning</a> is where couples come to reset.</p>
+      </details>
+      <details class="reveal">
+        <summary>Is this confidential?</summary>
         <p>Everything is held in complete confidence.</p>
-      </div>
-      <div class="faq-item reveal">
-        <h3>What is your refund policy?</h3>
+      </details>
+      <details class="reveal">
+        <summary>What is your refund policy?</summary>
         <p>This is bespoke, personal work. All sales are final. Book when your yes is clear.</p>
-      </div>
-      <div class="faq-item reveal">
-        <h3>Can I add a full in-person VIP day?</h3>
+      </details>
+      <details class="reveal">
+        <summary>Can I add a full in-person VIP day?</summary>
         <p>Yes, once you are in the work. Reach out and we will find the right option for you.</p>
-      </div>
+      </details>
     </div>
   </div>
 </section>
