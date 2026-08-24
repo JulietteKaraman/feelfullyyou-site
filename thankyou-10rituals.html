@@ -160,8 +160,17 @@ gtag('config', 'G-SY8NKELMNZ');
         <p>Now with my voice underneath every ritual, real audio and real video, not just words on a page. Read them, watch them, listen to them, right on your phone.</p>
       </div>
     </div>
-    <a href="https://app.feelfullyyou.com" class="btn" target="_blank">Open the app →</a>
-    <p style="font-size:14px;color:var(--brown);margin-top:10px">Password: <strong>rituals2026</strong></p>
+    <a href="https://app.feelfullyyou.com" id="openApp" class="btn" target="_blank">Open the app &rarr;</a>
+    <p style="font-size:14px;color:var(--brown);margin-top:10px">No password. Put your email in and the app sends you a link. Everything else I give away opens at the same time.</p>
+    <script>
+    (function() {
+      var email = new URLSearchParams(window.location.search).get('email');
+      if (email) {
+        document.getElementById('openApp').href =
+          'https://app.feelfullyyou.com/login?email=' + encodeURIComponent(email);
+      }
+    })();
+    </script>
     <p style="font-size:13px;color:var(--brown);margin-top:18px">Prefer to read it as a PDF instead? <a href="/files/10-touch-rituals.pdf" style="color:var(--gold-deep)" target="_blank">Open the guide →</a></p>
   </div>
 </div>
