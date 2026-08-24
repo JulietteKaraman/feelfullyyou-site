@@ -56,7 +56,7 @@
     .hero-inner .hero-cover{flex:0 0 380px;margin:0}
     .hero-inner .hero-copy{flex:1}
     .hero-inner .hero-copy h1{margin-left:0;margin-right:0}
-    .hero-inner .hero-copy .sub,.hero-inner .hero-copy .sub-pop,.hero-inner .hero-copy .format-line{margin-left:0;margin-right:0}
+    .hero-inner .hero-copy .sub,.hero-inner .hero-copy .sub-pop,.hero-inner .hero-copy .format-line,.hero-inner .hero-copy .hero-form,.hero-inner .hero-copy .hero-note{margin-left:0;margin-right:0}
   }
   .hero .eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-pale);font-weight:600;margin-bottom:20px}
   .hero h1{font-family:'Poppins',sans-serif;font-weight:700;font-size:clamp(2rem,5vw,3.2rem);color:#fff;line-height:1.06;letter-spacing:-.024em;margin-bottom:24px;max-width:18ch;margin-left:auto;margin-right:auto}
@@ -280,14 +280,18 @@ gtag('config', 'G-SY8NKELMNZ');
       <img src="https://feelfullyyou.com/10-touch-rituals-og.png" alt="The 10 Touch Rituals">
     </div>
     <div class="hero-copy">
-      <div class="eyebrow">For couples. Now in app.</div>
+      <div class="eyebrow">Free · For couples · In the app</div>
       <h1>The 10 Touch Rituals</h1>
       <p class="sub-pop">We still love each other. We just don't touch anymore.</p>
       <p class="sub">A peck on the cheek before bed. A hand on the shoulder that doesn't linger. We've become roommates who happen to sleep in the same bed.</p>
       <p class="format-line">A complete kit, now in your pocket: ten structured practices, two video walkthroughs, two guided audios, and sixteen card prompts. All in one app, on your phone, always there when you need it.</p>
-      <div class="price-pill">Free</div>
-      <br>
-      <a href="#get" class="btn light">Get the rituals, free</a>
+      <form id="ttrHero" class="hero-form" style="max-width:400px;margin:0 auto 14px">
+        <input type="text" name="website" id="ttrh_hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+        <input type="text" id="ttrh_name" placeholder="First name" required autocomplete="given-name" style="width:100%;padding:15px 18px;margin-bottom:10px;border:none;border-radius:2px;font-family:'Inter',sans-serif;font-size:16px;color:#1c1714;background:#fff">
+        <input type="email" id="ttrh_email" placeholder="Email address" required autocomplete="email" style="width:100%;padding:15px 18px;margin-bottom:14px;border:none;border-radius:2px;font-family:'Inter',sans-serif;font-size:16px;color:#1c1714;background:#fff">
+        <button type="submit" class="btn light" id="ttrhBtn" style="border:none;cursor:pointer;width:100%">SEND ME THE 10 RITUALS</button>
+      </form>
+      <p class="hero-note" style="font-size:15px;color:#c9c2b4;max-width:400px;margin:0 auto;line-height:1.5">Free. Put your email in and it opens in the app on your phone, along with everything else I give away.</p>
     </div>
   </div>
 </div>
@@ -461,19 +465,25 @@ gtag('config', 'G-SY8NKELMNZ');
   </form>
   <p class="tagline" style="margin-bottom:0">No spam. Just the rituals, and occasional letters from Juliette.</p>
   <script>
-  document.getElementById('ttrForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    var btn = document.getElementById('ttrBtn');
-    btn.textContent = 'One moment...';
-    btn.disabled = true;
-    var email = document.getElementById('ttr_email').value.trim();
-    var name = document.getElementById('ttr_name').value.trim();
-    fetch('/.netlify/functions/subscribe', {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({email: email, firstName: name, website: document.getElementById('ttr_hp').value, tagIds: [20794257], sequenceId: 2818643})
-    }).finally(function() {
-      window.location.href = '/thankyou-10rituals?email=' + encodeURIComponent(email);
+  ['ttrHero','ttrForm'].forEach(function(formId) {
+    var f = document.getElementById(formId);
+    if (!f) return;
+    var pre = formId === 'ttrHero' ? 'ttrh_' : 'ttr_';
+    var btnId = formId === 'ttrHero' ? 'ttrhBtn' : 'ttrBtn';
+    f.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var btn = document.getElementById(btnId);
+      btn.textContent = 'One moment...';
+      btn.disabled = true;
+      var email = document.getElementById(pre + 'email').value.trim();
+      var name = document.getElementById(pre + 'name').value.trim();
+      fetch('/.netlify/functions/subscribe', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({email: email, firstName: name, website: document.getElementById(pre + 'hp').value, tagIds: [20794257], sequenceId: 2818643})
+      }).finally(function() {
+        window.location.href = '/thankyou-10rituals?email=' + encodeURIComponent(email);
+      });
     });
   });
   </script>
