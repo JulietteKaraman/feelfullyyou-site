@@ -28,7 +28,8 @@ h2{font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gol
 h3{font-size:21px;color:var(--ink);margin:0 0 3px;letter-spacing:-.018em;font-weight:700}
 h4{font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold);margin:0 0 8px;font-weight:600}
 .when{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:600;margin:0 0 12px}
-.r{margin:0 0 34px}
+.r{margin:0 0 34px;padding-bottom:30px;border-bottom:1px solid var(--line)}
+.r:last-child{border-bottom:none}
 .r p{margin:0 0 11px}
 .r ul{margin:11px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
 .r ul li{padding-left:18px;position:relative}
@@ -50,6 +51,11 @@ audio{width:100%;margin:12px 0}
 .turn{background:var(--panel);padding:32px;border-radius:3px}
 .turn p{margin:0 0 13px;font-size:17.5px}
 .turn p:last-child{margin:0}
+.pillars{display:flex;flex-direction:column;gap:14px;margin:16px 0 20px}
+.pillar{background:var(--panel);border-left:3px solid var(--gold);padding:14px 18px;border-radius:0 3px 3px 0;font-size:16px}
+.pillar b{color:var(--gold);display:block;margin-bottom:3px;font-size:15px}
+.pnum{display:none}
+.pop{font-family:var(--sans);font-weight:700;font-size:22px;color:var(--ink);background:var(--panel);border-left:3px solid var(--ink);padding:14px 18px;margin:18px 0}
 .cta{display:block;text-align:center;background:var(--ink);color:var(--ground);text-decoration:none;font-weight:700;font-size:16px;letter-spacing:.03em;padding:20px 28px;margin:22px 0 12px}
 .small{font-size:14px;text-align:center;margin:0}
 .small a{color:var(--gold)}
@@ -112,12 +118,13 @@ audio{width:100%;margin:12px 0}
 <section>
 <h2>Everything, at a glance</h2>
 <table><thead><tr><th>Ritual</th><th>When</th><th>How long</th></tr></thead><tbody>
-<tr><td>The Landing</td><td>Daily</td><td>90 seconds</td></tr>
 <tr><td>The Six-Second Kiss</td><td>Daily</td><td>6 to 20 seconds</td></tr>
-<tr><td>Touch Base&reg;</td><td>Daily</td><td>2 minutes</td></tr>
+<tr><td>The Homecoming</td><td>Daily</td><td>a few seconds</td></tr>
 <tr><td>The Name</td><td>Daily</td><td>10 seconds</td></tr>
-<tr><td>The Handshake of Gratitude</td><td>Daily</td><td>2 minutes</td></tr>
 <tr><td>The Three Breath Hold</td><td>Daily</td><td>1 minute</td></tr>
+<tr><td>The Landing</td><td>Daily</td><td>90 seconds</td></tr>
+<tr><td>Touch Base&reg;</td><td>Daily</td><td>2 minutes</td></tr>
+<tr><td>The Handshake of Gratitude</td><td>Daily</td><td>2 minutes</td></tr>
 <tr><td>The 60-Second Hug</td><td>Weekly</td><td>1 minute</td></tr>
 <tr><td>The Trace Ritual</td><td>Weekly</td><td>2 minutes</td></tr>
 <tr><td>The 3-Minute Touch Reset</td><td>Weekly</td><td>3 minutes</td></tr>
@@ -127,7 +134,7 @@ audio{width:100%;margin:12px 0}
 <tr><td>Date Morning: Somewhere Else</td><td>Weekly</td><td>75 minutes</td></tr>
 <tr><td>The Monthly Check-In</td><td>Monthly</td><td>30 minutes</td></tr>
 <tr><td>The Breath Bridge</td><td>Monthly</td><td>3 minutes</td></tr>
-<tr><td>The Touch Map</td><td>Monthly</td><td>30 minutes</td></tr>
+<tr><td>The Touch Map: Yes, Maybe, No</td><td>Monthly</td><td>30 minutes</td></tr>
 <tr><td>The Approach</td><td>Monthly</td><td>10 minutes</td></tr>
 <tr><td>Try Something New</td><td>Monthly</td><td>an afternoon</td></tr>
 <tr><td>The Year in the Body</td><td>Yearly</td><td>1 hour</td></tr>
@@ -139,7 +146,7 @@ audio{width:100%;margin:12px 0}
 <span class="tag">Daily</span>
 <h2>Daily</h2>
 <p class="tierwhy">Small enough that your worst day cannot take them from you. That is the only kind that holds.</p>
-<article class="r"><h3>The Landing</h3><p class="when">90 seconds &middot; before phones, before speaking</p><p>Most couples start the day already managing it. Phones, children, logistics, the mental list. Two bodies in the same room, neither of them arrived.</p><ul><li>Stand or sit close enough to feel each other&rsquo;s warmth.</li><li>Look at each other. In through the nose, out through the mouth.</li><li>Three times, together. Watch what happens between you.</li><li>ONE SAYS <B>&ldquo;I&rsquo;M HERE.&rdquo;</B> THE OTHER RECEIVES IT AND SAYS <B>&ldquo;I FEEL YOU.&rdquo;</B></li></ul><p>Nothing else is required.</p></article><article class="r"><h3>The Six-Second Kiss</h3><p class="when">Daily &middot; before they leave, and the moment they are back</p><p>John Gottman spent forty years studying what actually separates couples who stay connected from couples who quietly drift, and it came down to moments this small: how you say goodbye, and how you say hello again.</p><ul><li><b>Before they leave.</b> A real kiss, not a peck aimed at the door. Then stay in it. Let yourself melt into their arms for a few seconds after.</li><li><b>The moment they are back.</b> Go and find them. Not a shouted hello from another room. Walk to where they are, the way you would if you had missed them, because you did.</li></ul><p>Gottman's own number is <b>at least six seconds</b> for the kiss, long enough to register as real rather than routine. The oxytocin research on hugging goes further: twenty seconds is where a hug does its full work, five is the floor for it to count as contact at all.</p><p>So longer helps. There is no ceiling to stay under. A few seconds melting into each other is already real. Given a little more, the body gives back more.</p><p>These two moments happen anyway, every single day. The only thing that changes is whether you are actually in them.</p></article><article class="r"><h3>Touch Base&reg;</h3><p class="when">2 minutes &middot; anywhere, and nobody can see you doing it</p><img class="logo" src="/touch-rituals-assets/touch-base-logo.png" alt="Touch Base"><p>Your body is always scanning. One loaded moment is enough. A look, a brush, a hand that lingered where it should not have. Your system registered it. You may not remember when. Your body does, and it braces.</p><p>Even in loving relationships, that is why touch does not land. Your body is still armoured, just in case.</p><ul><li>Press your thumb to your forefinger.</li><li>Move the top finger slowly enough to feel every single ridge.</li><li>Slower than you think slow is. Like honey. Slower than that.</li><li>Notice where you want to speed up. Let the thoughts pass.</li></ul><div class="say">There is no tiger in the room. I am safe right now.</div><div class="vid"><iframe src="https://www.youtube.com/embed/qWaZ3rk0His" title="Touch Base" allowfullscreen loading="lazy"></iframe></div><div class="aud"><p>Follow along with me, 5 minutes</p><iframe src="https://drive.google.com/file/d/1-7kHzl2T-kBXJIae6uk-3u_KMeDV9Mks/preview" loading="lazy" title="Follow along with me, 5 minutes"></iframe></div><p>This is the foundation of everything else here.</p></article><article class="r"><h3>The Name</h3><p class="when">10 seconds &middot; once a day</p><p>Their actual name. The one they were given. Not love, not babe, not darling.</p><ul><li>At any moment in the day, turn to face them.</li><li>Say their name. Once. Slowly. With your full attention behind it.</li></ul><div class="aud"><p>Listen along as I do this</p><iframe src="https://drive.google.com/file/d/10cpRCfdR5AOlKQFVuBo5nnjf9PQj23ie/preview" loading="lazy" title="Listen along as I do this"></iframe></div><p>A name said with presence says what no endearment can. I see you specifically. Not the role you are playing, not the version of you I have grown used to. You, as you actually are, right now.</p></article><article class="r"><h3>The Handshake of Gratitude</h3><p class="when">2 minutes &middot; before sleep</p><p>Each of you names one physical moment from the day where you felt close. Sensory and specific, never &ldquo;you were kind.&rdquo; The way they reached for your hand. The moment they turned toward you in the kitchen. The thirty seconds they stopped what they were doing and looked at you.</p><ul><li>One of you names the moment.</li><li>The other receives it. No response required. Just received.</li><li>Switch.</li></ul><div class="aud"><p>Follow along, audio</p><iframe src="https://drive.google.com/file/d/1KeZfIiJ_NV3idc8WTKL4f_6aecjTtgg_/preview" loading="lazy" title="Follow along, audio"></iframe></div><p>Specificity teaches the body what to reach for more of. Over time you stop missing each other while you are still in the room.</p></article><article class="r"><h3>The Three Breath Hold</h3><p class="when">1 minute &middot; whenever one of you is overwhelmed</p><p>The instinct is to help. To fix. To find the right thing to say. Sometimes the body only needs to know it is not alone.</p><ul><li>Reach for their hand. Do not speak.</li><li>Three slow breaths together. In through the nose, out through the mouth.</li></ul><p>That is all. It is presence rather than a solution, and it says: I am staying.</p></article></section>
+<article class="r"><h3>The Six-Second Kiss</h3><p class="when">6 to 20 seconds &middot; before they leave</p><p>John Gottman spent forty years studying what actually separates couples who stay connected from couples who quietly drift, and it came down to moments this small: how you say goodbye, and how you say hello again.</p><ul><li>A real kiss, not a peck aimed at the door.</li><li>Then stay in it. Let yourself melt into their arms for a few seconds after.</li></ul><p>Gottman's own number is <b>at least six seconds</b>, long enough to register as real rather than routine. So longer helps. There is no ceiling to stay under.</p></article><article class="r"><h3>The Homecoming</h3><p class="when">A few seconds &middot; the moment they are back</p><p>The other half of the same practice, and the one couples lose first. Not a shouted hello from another room.</p><ul><li>Go and find them. Walk to where they are, the way you would if you had missed them, because you did.</li><li>The same kiss, the same melting into it, that you gave them at the door.</li></ul><p>The oxytocin research on hugging goes further than the kiss alone: twenty seconds is where a hug does its full work, five is the floor for it to count as contact at all.</p><p>These two moments happen anyway, every single day. The only thing that changes is whether you are actually in them.</p></article><article class="r"><h3>The Name</h3><p class="when">10 seconds &middot; once a day</p><p>Their actual name. The one they were given. Not love, not babe, not darling.</p><ul><li>At any moment in the day, turn to face them.</li><li>Say their name. Once. Slowly. With your full attention behind it.</li></ul><div class="aud"><p>Listen along as I do this</p><iframe src="https://drive.google.com/file/d/10cpRCfdR5AOlKQFVuBo5nnjf9PQj23ie/preview" loading="lazy" title="Listen along as I do this"></iframe></div><p>A name said with presence says what no endearment can. I see you specifically. Not the role you are playing, not the version of you I have grown used to. You, as you actually are, right now.</p></article><article class="r"><h3>The Three Breath Hold</h3><p class="when">1 minute &middot; whenever one of you is overwhelmed</p><p>The instinct is to help. To fix. To find the right thing to say. Sometimes the body only needs to know it is not alone.</p><ul><li>Reach for their hand. Do not speak.</li><li>Three slow breaths together. In through the nose, out through the mouth.</li></ul><p>That is all. It is presence rather than a solution, and it says: I am staying.</p></article><article class="r"><h3>The Landing</h3><p class="when">90 seconds &middot; before phones, before speaking</p><p>Most couples start the day already managing it. Phones, children, logistics, the mental list. Two bodies in the same room, neither of them arrived.</p><ul><li>Stand or sit close enough to feel each other&rsquo;s warmth.</li><li>Look at each other. In through the nose, out through the mouth.</li><li>Three times, together. Watch what happens between you.</li><li>ONE SAYS <B>&ldquo;I&rsquo;M HERE.&rdquo;</B> THE OTHER RECEIVES IT AND SAYS <B>&ldquo;I FEEL YOU.&rdquo;</B></li></ul><p>Nothing else is required.</p></article><article class="r"><h3>Touch Base&reg;</h3><p class="when">2 minutes &middot; anywhere, and nobody can see you doing it</p><img class="logo" src="/touch-rituals-assets/touch-base-logo.png" alt="Touch Base"><p>Your body is always scanning. One loaded moment is enough. A look, a brush, a hand that lingered where it should not have. Your system registered it. You may not remember when. Your body does, and it braces.</p><p>Even in loving relationships, that is why touch does not land. Your body is still armoured, just in case.</p><ul><li>Press your thumb to your forefinger.</li><li>Move the top finger slowly enough to feel every single ridge.</li><li>Slower than you think slow is. Like honey. Slower than that.</li><li>Notice where you want to speed up. Let the thoughts pass.</li></ul><div class="say">There is no tiger in the room. I am safe right now.</div><div class="vid"><iframe src="https://www.youtube.com/embed/qWaZ3rk0His" title="Touch Base" allowfullscreen loading="lazy"></iframe></div><div class="aud"><p>Follow along with me, 5 minutes</p><iframe src="https://drive.google.com/file/d/1-7kHzl2T-kBXJIae6uk-3u_KMeDV9Mks/preview" loading="lazy" title="Follow along with me, 5 minutes"></iframe></div><p>This is the foundation of everything else here.</p></article><article class="r"><h3>The Handshake of Gratitude</h3><p class="when">2 minutes &middot; before sleep</p><p>Each of you names one physical moment from the day where you felt close. Sensory and specific, never &ldquo;you were kind.&rdquo; The way they reached for your hand. The moment they turned toward you in the kitchen. The thirty seconds they stopped what they were doing and looked at you.</p><ul><li>One of you names the moment.</li><li>The other receives it. No response required. Just received.</li><li>Switch.</li></ul><div class="aud"><p>Follow along, audio</p><iframe src="https://drive.google.com/file/d/1KeZfIiJ_NV3idc8WTKL4f_6aecjTtgg_/preview" loading="lazy" title="Follow along, audio"></iframe></div><p>Specificity teaches the body what to reach for more of. Over time you stop missing each other while you are still in the room.</p></article></section>
 
 <section class="tier t-weekly">
 <span class="tag">Weekly</span>
@@ -210,13 +217,15 @@ audio{width:100%;margin:12px 0}
 <p>You now have every ritual I use. Nothing held back, nothing behind a price.</p>
 <p>Here is the honest part. These practices work on what happens <em>after</em> you decide to reach. They cannot reach the thing that fires before you decide anything: the half-second where a hand arrives and something in you closes, and you were never consulted.</p>
 <p>That is move one holding everything else up. If your body is still bracing, moves two, three and four cannot land on it, and you will conclude you tried and it did not work.</p>
-<p><b>That is not you failing. That is the wrong order.</b></p>
+<p class="pop">That is not you failing. That is the wrong order.</p>
 <p>Moves two, three and four need a room. Beliefs get rewired out loud with someone who can hear what you actually say. Capacity gets built with hands, not paragraphs. Turn-on gets mapped and spoken, and almost nobody does that alone.</p>
 <p>That reflex was learned in contact, and it changes in contact. The Touch Reset goes in the order the body and mind actually change.</p>
-<p><b>Regulate your nervous system.</b> You cannot want touch if your body still thinks it is under threat. This comes first, before anything else, every time.</p>
-<p><b>Rewire your beliefs about touch.</b> What you were told touch and sex meant, examined and updated, not assumed.</p>
-<p><b>Build your capacity for pleasure, reconnect to your body.</b> Your own hand first. Your own Touch Map&trade;. You cannot receive what you have not learned to feel.</p>
-<p><b>Find your way into turn-on.</b> Your Pleasure Language, mapped and spoken out loud. Last, because everything before it determines whether it lands.</p>
+<div class="pillars">
+<div class="pillar"><span class="pnum">1</span><b>Regulate your nervous system.</b> You cannot want touch if your body still thinks it is under threat. This comes first, before anything else, every time.</div>
+<div class="pillar"><span class="pnum">2</span><b>Rewire your beliefs about touch.</b> What you were told touch and sex meant, examined and updated, not assumed.</div>
+<div class="pillar"><span class="pnum">3</span><b>Build your capacity for pleasure, reconnect to your body.</b> Your own hand first. Your own Touch Map&trade;. You cannot receive what you have not learned to feel.</div>
+<div class="pillar"><span class="pnum">4</span><b>Find your way into turn-on.</b> Your Pleasure Language, mapped and spoken out loud. Last, because everything before it determines whether it lands.</div>
+</div>
 <p>One topic a week. One live call a week where we practise it together. People in there daily in between, so nothing waits for the next call. Fifteen in the founding cohort.</p>
 <p>It starts with a call, with me and not my team, and if it is not right for you I will tell you on that call.</p>
 <h4 style="margin:26px 0 14px">From people who did the work</h4>
@@ -230,10 +239,10 @@ audio{width:100%;margin:12px 0}
 </section>
 
 <section class="tier">
-<h2>Who is in the room with you</h2>
+<h2>Meet Juliette</h2>
+<img class="shot" src="/touch-rituals-assets/juliette-portrait.jpg" alt="Juliette Karaman">
 <p>I began as a SENCO, teaching children on the autism spectrum to feel safe in their own skin before they had words for any of it. That taught me more about the nervous system than anything that came after. Fifteen years with couples and trauma followed.</p>
 <p>I teach The Touch Reset, for people who love someone and cannot find the door back in.</p>
-<img class="shot" src="/touch-rituals-assets/tst-jenny.png" alt="The Intimacy and Communication Cards app">
 <p>The rituals here use prompts from the Intimacy and Communication Cards, four decks across couples, family and friends, and a deck for couples navigating a rupture. They live in an app and as physical decks, and they run in the same structure as the Dyad.</p>
 </section>
 
