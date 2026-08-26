@@ -57,6 +57,19 @@
   .dot{width:8px;height:8px;border-radius:50%;background:rgba(254,252,250,.28);cursor:pointer;border:none}
   .dot.active{background:var(--gold-pale);transform:scale(1.3)}
 
+  .bonus-photo{width:100%;max-width:190px;border-radius:6px;overflow:hidden;margin:10px auto 4px;box-shadow:0 16px 40px rgba(13,53,53,.18)}
+  .bonus-photo img{width:100%;display:block}
+  .bonus-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;text-align:left;max-width:1000px;margin:18px auto 0}
+  .bonus-card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:12px 14px;min-width:0}
+  .bonus-card .blabel{font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-deep);font-weight:600}
+  .bonus-card h3{font-family:var(--display);font-size:13px;color:var(--ink);margin:4px 0 4px;line-height:1.2}
+  .bonus-card p{font-size:10.5px;color:var(--brown);line-height:1.3}
+  @media(max-width:700px){.bonus-grid{grid-template-columns:repeat(2,1fr)}}
+
+  .quote-card{background:#fff;border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:6px;padding:18px 22px;text-align:left;max-width:520px;margin:18px auto 0}
+  .quote-card p{font-size:16px;line-height:1.5;margin-bottom:8px;color:var(--ink);font-style:italic}
+  .quote-card span{font-size:12.5px;color:var(--gold-deep);font-weight:600}
+
   @media(max-width:640px){
     .slide{padding:48px 20px 100px}
   }
@@ -75,7 +88,7 @@
     <div class="slide-inner">
       <div class="eyebrow">Before We Begin</div>
       <h1>Thank you for signing up.</h1>
-      <p class="sub">Your training, How to Want Touch Again in Two Minutes, is already on its way to your inbox.</p>
+      <p class="sub">That training is already on its way to your inbox.</p>
       <p class="pop">Before you get there, I want to explain why I do this work, and why touch goes quiet in the first place.</p>
     </div>
   </section>
@@ -95,13 +108,14 @@
       <div class="cover-photo"><img src="https://feelfullyyou.com/media/68f7ca9d84a9d68db66b2a16.jpeg" alt="Juliette Karaman"></div>
       <div class="eyebrow">Who I Am</div>
       <h2>I'm Juliette Karaman. I'm a touch expert.</h2>
+      <p class="pop">Why touch goes quiet, and what actually brings it back.</p>
     </div>
   </section>
 
   <section class="slide" data-index="3">
     <div class="slide-inner">
-      <div class="eyebrow">The Moment</div>
-      <h2>You're lying awake at 2am thinking, why don't I want this anymore.</h2>
+      <div class="eyebrow">2am</div>
+      <h2>You're thinking: why don't I want this anymore.</h2>
       <p class="sub">You love him. You love her. You're not looking for anyone else, and somewhere along the way, touch went quiet.</p>
       <p class="sub" style="margin-top:14px">You've tried the things you're supposed to try. Date night. A weekend away. Therapy. Talking about it, again. For a few days something shifts. Then Tuesday comes back and so does the silence.</p>
       <div class="slide-photo"><img src="touchfingers.JPG" alt="Touch Base, thumb to forefinger"></div>
@@ -111,7 +125,7 @@
   <section class="slide" data-index="4">
     <div class="slide-inner">
       <div class="eyebrow">The Why</div>
-      <h2>Here's what nobody told you. Your body isn't waiting for the right mood. It's bracing.</h2>
+      <h2>Your body isn't waiting for the right mood. It's bracing.</h2>
       <p class="sub">That's a reflex, trained in by every unequal, unsafe, or unsatisfying experience you've ever had with touch.</p>
       <p class="pop">A University of Toronto study found this is exactly why up to 55% of women lose desire, and it's developmental, not hormonal. Learned. Which means it can be unlearned.</p>
       <div class="slide-photo"><img src="brace.jpg" alt="The brace, literally"></div>
@@ -122,52 +136,71 @@
     <div class="slide-inner">
       <div class="eyebrow">The Turn</div>
       <h2>Everyone sells you spontaneity. It won't work.</h2>
-      <p class="sub">Recreate the mood, get away together, and the spark will come back. Spontaneity asks a braced body to leap. A braced body doesn't leap. It waits to see if this is safe.</p>
-      <p class="sub" style="margin-top:14px">When spontaneity fails, the next thing everyone reaches for is technique. More moves, more effort, more variety, layered onto a body that isn't responsive yet. That's teaching someone to dance on a leg that's still numb. Technique was never the missing piece.</p>
-      <p class="pop">I don't sell spark, and I don't sell technique. I teach you to work with what's actually present in your body right now, not what should be there. Just what is. From there, it only gets better.</p>
+      <p class="sub">Spontaneity asks a braced body to leap. A braced body doesn't leap. It waits to see if this is safe.</p>
+      <p class="sub" style="margin-top:14px">When spontaneity fails, the next thing everyone reaches for is technique. More moves, more effort, more variety, layered onto a body that isn't responsive yet. That's teaching someone to dance on a leg that's still numb.</p>
+      <p class="pop">I don't sell spark, and I don't sell technique. I teach you to work with what's actually present in your body right now. Just what is. From there, it only gets better.</p>
       <div class="slide-photo"><img src="karentouch.JPG" alt="Real session work"></div>
     </div>
   </section>
 
   <section class="slide" data-index="6">
     <div class="slide-inner">
-      <div class="eyebrow">The What</div>
-      <h2>That container is the Touch Reset.</h2>
-      <p class="sub">Four parts, always in this order: know your own wiring first, then structured conversation, then structured touch dates starting with the non-sexual kind, then the rituals that keep it alive.</p>
-      <p class="pop">Structure, not spontaneity. Safety before pleasure, every time, because a nervous system that's still bracing can't feel much of anything else. Play and pleasure aren't step one. They're what becomes possible once your body trusts the room.</p>
+      <div class="eyebrow">The Method</div>
+      <h2>Four parts, always in this order.</h2>
+      <p class="sub">Know your own wiring first. Then structured conversation. Then structured touch dates, starting with the non-sexual kind. Then the rituals that keep it alive.</p>
+      <p class="pop">Structure, not spontaneity. Safety before pleasure, every time, because a nervous system that's still bracing can't feel much of anything else.</p>
+      <div class="slide-photo"><img src="juliettestage.JPG" alt="Juliette speaking"></div>
     </div>
   </section>
 
   <section class="slide" data-index="7">
     <div class="slide-inner">
-      <div class="eyebrow">The Reboot</div>
+      <div class="eyebrow">Why Twelve Weeks</div>
       <h2>Think of it like rebooting a phone that's slowed to a crawl.</h2>
       <p class="sub">Somewhere along the way you were loaded with instructions about touch, about sex, about how a relationship is supposed to work. All of it running in the background. None of it actually yours.</p>
-      <p class="sub" style="margin-top:14px">Twelve weeks clears the cache. It empties out what got crammed in and restarts from what's actually true for your body.</p>
-      <p class="pop">That becomes the foundation for everything after. The skills you build here, you use for life. With your partner. With yourself. With the people around you. With your children.</p>
+      <p class="pop" style="margin-top:14px">Twelve weeks clears the cache. It empties out what got crammed in and restarts from what's actually true for your body. That becomes the foundation for everything after. With your partner. With yourself. With the people around you. With your children.</p>
+      <div class="slide-photo"><img src="faceflogger.JPG" alt="Real session work"></div>
     </div>
   </section>
 
   <section class="slide" data-index="8">
     <div class="slide-inner">
-      <div class="eyebrow">Twenty-Seven Years</div>
-      <h2>I've spent twenty-seven years building this, since it started with my own body giving out on me before I finally listened to it.</h2>
-      <div class="slide-photo"><img src="touchsofalondon.JPG" alt="Real session work, London"></div>
+      <div class="eyebrow">You're Not Doing This Alone</div>
+      <div class="bonus-photo"><img src="touch-reset-bonuses-collage.jpg" alt="The Touch Reset bonuses"></div>
+      <div class="bonus-grid">
+        <div class="bonus-card"><div class="blabel">Bonus</div><h3>Ritual Guide</h3><p>For building touch into a weekly ritual, not a task.</p></div>
+        <div class="bonus-card"><div class="blabel">Bonus</div><h3>The Cards</h3><p>475+ real prompts for communication and intimacy.</p></div>
+        <div class="bonus-card"><div class="blabel">Bonus</div><h3>Weekly Touch-In</h3><p>A few minutes, every week, together.</p></div>
+        <div class="bonus-card"><div class="blabel">Bonus</div><h3>Your Touch Map</h3><p>Yours to keep, and return to whenever you need it.</p></div>
+      </div>
     </div>
   </section>
 
   <section class="slide" data-index="9">
     <div class="slide-inner">
-      <div class="eyebrow">This Isn't Theory</div>
-      <p class="sub" style="font-size:19px;color:var(--ink)">A couple came to me after twenty-three years without sex. We took sex off the table for six weeks and rebuilt the container first. They went on to have sex again, and they cried.</p>
-      <p class="sub" style="margin-top:18px;font-size:19px;color:var(--ink)">Sarah told me she'd forgotten she'd been braced for years until she finally felt herself soften.</p>
+      <div class="eyebrow">Where This Came From</div>
+      <h2>I built this after my own body gave out on me.</h2>
+      <p class="pop">Twenty-seven years in this work, since it started with my own body finally making me listen.</p>
+      <div class="slide-photo"><img src="touchsofalondon.JPG" alt="Real session work, London"></div>
     </div>
   </section>
 
   <section class="slide" data-index="10">
     <div class="slide-inner">
+      <div class="eyebrow">This Isn't Theory</div>
+      <div class="quote-card">
+        <p>"I feel softer and more relaxed. I'd forgotten I'd been braced for years, until I finally felt myself soften."</p>
+        <span>Sarah</span>
+      </div>
+      <p class="sub" style="margin-top:20px;font-size:17px;color:var(--ink)">A couple came to me after twenty-three years without sex. We took sex off the table for six weeks and rebuilt the container first. They went on to have sex again, and they cried.</p>
+      <div class="slide-photo"><img src="ropeslyndsay.JPG" alt="Real session work"></div>
+    </div>
+  </section>
+
+  <section class="slide" data-index="11">
+    <div class="slide-inner">
       <div class="eyebrow">The Invitation</div>
-      <h2>If any of this already landed in your body while you were listening, that's the container starting to work.</h2>
+      <h2>If any of this already landed in your body, that's the container starting to work.</h2>
       <p class="sub">Book your Touch Reset Call. A real conversation, not a pitch, to see if this is the right fit.</p>
       <a href="https://tidycal.com/juliette2/the-touch-reset-clarity-call" class="btn">Book Your Touch Reset Call</a>
     </div>
