@@ -76,22 +76,31 @@
   .reboot-icon{margin:6px auto 4px}
 
   .opening-row{display:flex;align-items:center;gap:44px;text-align:left}
-  .opening-preview{width:320px;flex-shrink:0;border-radius:8px;overflow:hidden;box-shadow:0 20px 50px rgba(13,53,53,.25);background:var(--cream)}
-  .preview-bar{background:var(--teal);color:var(--cream);font-family:var(--display);font-weight:700;font-size:11px;padding:8px 12px}
-  .preview-bar b{color:var(--gold-pale)}
-  .preview-body{padding:16px 16px 14px}
-  .preview-eyebrow{font-size:8.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-deep);font-weight:700;margin-bottom:6px}
-  .preview-title{font-family:var(--display);font-weight:700;font-size:15px;color:var(--ink);line-height:1.2;margin-bottom:12px}
-  .preview-video{background:var(--teal);border-radius:4px;aspect-ratio:16/10;display:flex;align-items:center;justify-content:center}
-  .preview-play{width:34px;height:34px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center}
+  .opening-preview{width:420px;flex-shrink:0;border-radius:8px;overflow:hidden;box-shadow:0 20px 50px rgba(13,53,53,.25);background:var(--cream)}
+  .opening-preview img{width:100%;display:block}
   .opening-text{flex:1}
   .opening-text h1{margin-bottom:8px}
   .opening-text .sub{margin:0 0 10px;max-width:none}
   .opening-text .pop{margin:0;max-width:none}
 
+  .photo-row{display:flex;align-items:center;gap:40px;text-align:left}
+  .photo-row.reverse{flex-direction:row-reverse}
+  .photo-row .row-photo{width:300px;flex-shrink:0;border-radius:8px;overflow:hidden;box-shadow:0 20px 50px rgba(13,53,53,.22)}
+  .photo-row .row-photo img{width:100%;display:block;aspect-ratio:4/5;object-fit:cover}
+  .photo-row .row-text{flex:1;min-width:0}
+  .photo-row .row-text .sub{margin:10px 0 0;max-width:none}
+  .photo-row .row-text .sub:first-of-type{margin-top:0}
+  .photo-row .row-text .pop{margin:10px 0 0;max-width:none}
+  .photo-row .row-text .method-list{margin:16px 0 0;max-width:none}
+  .photo-row .row-text .quote-card{margin:10px 0 0;max-width:none}
+
   @media(max-width:760px){
     .opening-row{flex-direction:column;text-align:center}
-    .opening-preview{width:100%;max-width:320px}
+    .opening-preview{width:100%;max-width:420px}
+    .photo-row,.photo-row.reverse{flex-direction:column;text-align:center}
+    .photo-row .row-photo{width:100%;max-width:300px}
+    .photo-row .row-text .sub,.photo-row .row-text .pop{text-align:center;max-width:56ch;margin-left:auto;margin-right:auto}
+    .photo-row .row-text .method-list{margin-left:auto;margin-right:auto;text-align:left}
   }
 
   @media(max-width:640px){
@@ -109,14 +118,7 @@
     <div class="slide-inner" style="max-width:960px">
       <div class="opening-row">
         <div class="opening-preview">
-          <div class="preview-bar">Feel Fully <b>You</b></div>
-          <div class="preview-body">
-            <div class="preview-eyebrow">A Free Teaching From Juliette Karaman</div>
-            <div class="preview-title">How to Want Touch Again, in 2 Minutes</div>
-            <div class="preview-video">
-              <div class="preview-play"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="#fefcfa"/></svg></div>
-            </div>
-          </div>
+          <img src="vsl-opening-screenshot.jpg" alt="How to Want Touch Again, in 2 Minutes, the free training on its way to your inbox">
         </div>
         <div class="opening-text">
           <div class="eyebrow">Before We Begin</div>
@@ -160,49 +162,66 @@
   </section>
 
   <section class="slide" data-index="3">
-    <div class="slide-inner">
-      <div class="eyebrow">2am</div>
-      <h2>You're thinking: why don't I want this anymore.</h2>
-      <p class="sub">You love him. You love her. You're not looking for anyone else, and somewhere along the way, touch went quiet.</p>
-      <p class="sub" style="margin-top:14px">You've tried the things you're supposed to try. <strong>Date night. A weekend away. Therapy. Talking about it, again.</strong> For a few days something shifts. Then Tuesday comes back and so does the silence.</p>
-      <div class="slide-photo"><img src="touchfingers.JPG" alt="Touch Base, thumb to forefinger"></div>
+    <div class="slide-inner" style="max-width:920px">
+      <div class="photo-row">
+        <div class="row-photo"><img src="touchfingers.JPG" alt="Touch Base, thumb to forefinger"></div>
+        <div class="row-text">
+          <div class="eyebrow">2am</div>
+          <h2>You're thinking: why don't I want this anymore.</h2>
+          <p class="sub">You love him. You love her. You're not looking for anyone else, and somewhere along the way, touch went quiet.</p>
+          <p class="sub" style="margin-top:14px">You've tried the things you're supposed to try. <strong>Date night. A weekend away. Therapy. Talking about it, again.</strong> For a few days something shifts. Then Tuesday comes back and so does the silence.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="slide" data-index="4">
-    <div class="slide-inner">
-      <div class="eyebrow">The Why</div>
-      <h2>Your body isn't waiting for the right mood. It's bracing.</h2>
-      <p class="sub">That's a reflex, trained in by every unequal, unsafe, or unsatisfying experience you've ever had with touch.</p>
-      <p class="pop">A University of Toronto study found this is exactly why up to 55% of women lose desire, and it's developmental, not hormonal. Learned. Which means it can be unlearned.</p>
-      <div class="slide-photo"><img src="brace.jpg" alt="The brace, literally"></div>
+    <div class="slide-inner" style="max-width:920px">
+      <div class="photo-row reverse">
+        <div class="row-photo"><img src="brace.jpg" alt="The brace, literally"></div>
+        <div class="row-text">
+          <div class="eyebrow">The Why</div>
+          <h2>Your body isn't waiting for the right mood. It's bracing.</h2>
+          <p class="sub">That's a reflex, trained in by every unequal, unsafe, or unsatisfying experience you've ever had with touch.</p>
+          <p class="pop">A University of Toronto study found this is exactly why up to 55% of women lose desire, and it's developmental, not hormonal. Learned. Which means it can be unlearned.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="slide" data-index="5">
-    <div class="slide-inner">
-      <div class="eyebrow">The Turn</div>
-      <h2>Everyone sells you spontaneity. It won't work.</h2>
-      <p class="sub">Spontaneity asks a braced body to leap. A braced body doesn't leap. It waits to see if this is safe.</p>
-      <p class="sub" style="margin-top:14px">When spontaneity fails, the next thing everyone reaches for is technique. More moves, more effort, more variety, layered onto a body that isn't responsive yet. That's teaching someone to dance on a leg that's still numb.</p>
-      <p class="pop">I don't sell spark, and I don't sell technique. I teach you to work with what's actually present in your body right now. Just what is. From there, it only gets better.</p>
-      <div class="slide-photo"><img src="karentouch.JPG" alt="Real session work"></div>
+    <div class="slide-inner" style="max-width:920px">
+      <div class="photo-row">
+        <div class="row-photo"><img src="karentouch.JPG" alt="Real session work"></div>
+        <div class="row-text">
+          <div class="eyebrow">The Turn</div>
+          <h2>Everyone sells you spontaneity. It won't work.</h2>
+          <p class="sub">Spontaneity asks a braced body to leap. A braced body doesn't leap. It waits to see if this is safe.</p>
+          <p class="sub" style="margin-top:14px">When spontaneity fails, the next thing everyone reaches for is technique. More moves, more effort, more variety, layered onto a body that isn't responsive yet. That's teaching someone to dance on a leg that's still numb.</p>
+          <p class="pop">I don't sell spark, and I don't sell technique. I teach you to work with what's actually present in your body right now. Just what is. From there, it only gets better.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="slide" data-index="6">
-    <div class="slide-inner">
-      <div class="eyebrow">The Method</div>
-      <h2>Four parts, always in this order.</h2>
-      <ol class="method-list">
-        <li><span class="mnum">1</span> Know your own wiring first</li>
-        <li><span class="mnum">2</span> Structured conversation</li>
-        <li><span class="mnum">3</span> Structured touch dates, starting with the non-sexual kind</li>
-        <li><span class="mnum">4</span> The rituals that keep it alive</li>
-      </ol>
-      <p class="sub" style="margin-top:16px">Structure, not spontaneity.</p>
-      <h2 style="margin-top:6px">Safety before pleasure, every time.</h2>
-      <p class="sub">Because a nervous system that's still bracing can't feel much of anything else.</p>
+    <div class="slide-inner" style="max-width:920px">
+      <div class="photo-row">
+        <div class="row-photo"><img src="touch-neck-demo.jpg" alt="Structured touch, real practice"></div>
+        <div class="row-text">
+          <div class="eyebrow">The Method</div>
+          <h2>Four parts, always in this order.</h2>
+          <ol class="method-list">
+            <li><span class="mnum">1</span> Know your own wiring first</li>
+            <li><span class="mnum">2</span> Structured conversation</li>
+            <li><span class="mnum">3</span> Structured touch dates, starting with the non-sexual kind</li>
+            <li><span class="mnum">4</span> The rituals that keep it alive</li>
+          </ol>
+          <p class="sub" style="margin-top:16px">Structure, not spontaneity.</p>
+          <h2 style="margin-top:6px">Safety before pleasure, every time.</h2>
+          <p class="sub">Because a nervous system that's still bracing can't feel much of anything else.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -238,23 +257,31 @@
   </section>
 
   <section class="slide" data-index="9">
-    <div class="slide-inner">
-      <div class="eyebrow">Where This Came From</div>
-      <h2>I built this after my own body gave out on me.</h2>
-      <p class="pop">Twenty-seven years in this work, since it started with my own body finally making me listen.</p>
-      <div class="slide-photo"><img src="touchsofalondon.JPG" alt="Real session work, London"></div>
+    <div class="slide-inner" style="max-width:920px">
+      <div class="photo-row reverse">
+        <div class="row-photo"><img src="touchsofalondon.JPG" alt="Real session work, London"></div>
+        <div class="row-text">
+          <div class="eyebrow">Where This Came From</div>
+          <h2>I built this after my own body gave out on me.</h2>
+          <p class="pop">Twenty-seven years in this work, since it started with my own body finally making me listen.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="slide" data-index="10">
-    <div class="slide-inner">
-      <div class="eyebrow">This Isn't Theory</div>
-      <div class="quote-card">
-        <p>"I feel softer and more relaxed. I'd forgotten I'd been braced for years, until I finally felt myself soften."</p>
-        <span>Sarah</span>
+    <div class="slide-inner" style="max-width:920px">
+      <div class="photo-row">
+        <div class="row-photo"><img src="ropeslyndsay.JPG" alt="Real session work"></div>
+        <div class="row-text">
+          <div class="eyebrow">This Isn't Theory</div>
+          <div class="quote-card">
+            <p>"I feel softer and more relaxed. I'd forgotten I'd been braced for years, until I finally felt myself soften."</p>
+            <span>Sarah</span>
+          </div>
+          <p class="sub" style="margin-top:20px;font-size:17px;color:var(--ink)">A couple came to me after twenty-three years without sex. We took sex off the table for six weeks and rebuilt the container first. They went on to have sex again, and they cried.</p>
+        </div>
       </div>
-      <p class="sub" style="margin-top:20px;font-size:17px;color:var(--ink)">A couple came to me after twenty-three years without sex. We took sex off the table for six weeks and rebuilt the container first. They went on to have sex again, and they cried.</p>
-      <div class="slide-photo"><img src="ropeslyndsay.JPG" alt="Real session work"></div>
     </div>
   </section>
 
