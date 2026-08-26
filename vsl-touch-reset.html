@@ -20,13 +20,10 @@
   a{color:inherit;text-decoration:none}
   strong{color:var(--ink);font-weight:600}
 
-  .topbar{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--teal);padding:0 24px;height:56px;display:flex;align-items:center;justify-content:space-between}
-  .topbar .brand{font-family:var(--display);font-weight:700;font-size:15px;letter-spacing:.02em;color:var(--cream)}
-  .topbar .brand b{color:var(--gold-pale)}
-  .topbar .progress{font-size:13px;color:var(--gold-pale);font-family:var(--body)}
+  .corner-progress{position:fixed;top:16px;right:20px;z-index:50;font-size:12px;color:var(--gold-deep);font-family:var(--body);opacity:.65}
 
   .deck{position:relative;width:100%;height:100%}
-  .slide{position:absolute;inset:0;padding:24px 24px 76px;display:flex;flex-direction:column;align-items:center;justify-content:center;justify-content:safe center;opacity:0;visibility:hidden;transform:translateY(14px);transition:opacity .45s ease,transform .45s ease;overflow-y:auto}
+  .slide{position:absolute;inset:0;padding:40px 24px 76px;display:flex;flex-direction:column;align-items:center;justify-content:center;justify-content:safe center;opacity:0;visibility:hidden;transform:translateY(14px);transition:opacity .45s ease,transform .45s ease;overflow-y:auto}
   .slide.active{opacity:1;visibility:visible;transform:translateY(0)}
   .slide-inner{max-width:760px;width:100%;margin:auto;text-align:center}
 
@@ -104,10 +101,7 @@
 </head>
 <body>
 
-<div class="topbar">
-  <a href="/" class="brand">Feel Fully <b>You</b></a>
-  <div class="progress" id="progressLabel">1 / 11</div>
-</div>
+<div class="corner-progress" id="progressLabel">1 / 12</div>
 
 <div class="deck" id="deck">
 
