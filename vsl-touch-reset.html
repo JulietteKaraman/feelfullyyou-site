@@ -78,6 +78,25 @@
 
   .reboot-icon{margin:6px auto 4px}
 
+  .opening-row{display:flex;align-items:center;gap:44px;text-align:left}
+  .opening-preview{width:320px;flex-shrink:0;border-radius:8px;overflow:hidden;box-shadow:0 20px 50px rgba(13,53,53,.25);background:var(--cream)}
+  .preview-bar{background:var(--teal);color:var(--cream);font-family:var(--display);font-weight:700;font-size:11px;padding:8px 12px}
+  .preview-bar b{color:var(--gold-pale)}
+  .preview-body{padding:16px 16px 14px}
+  .preview-eyebrow{font-size:8.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-deep);font-weight:700;margin-bottom:6px}
+  .preview-title{font-family:var(--display);font-weight:700;font-size:15px;color:var(--ink);line-height:1.2;margin-bottom:12px}
+  .preview-video{background:var(--teal);border-radius:4px;aspect-ratio:16/10;display:flex;align-items:center;justify-content:center}
+  .preview-play{width:34px;height:34px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center}
+  .opening-text{flex:1}
+  .opening-text h1{margin-bottom:8px}
+  .opening-text .sub{margin:0 0 10px;max-width:none}
+  .opening-text .pop{margin:0;max-width:none}
+
+  @media(max-width:760px){
+    .opening-row{flex-direction:column;text-align:center}
+    .opening-preview{width:100%;max-width:320px}
+  }
+
   @media(max-width:640px){
     .slide{padding:48px 20px 100px}
   }
@@ -93,11 +112,25 @@
 <div class="deck" id="deck">
 
   <section class="slide active" data-index="0">
-    <div class="slide-inner">
-      <div class="eyebrow">Before We Begin</div>
-      <h1>Thank you for signing up.</h1>
-      <p class="sub">That training is already on its way to your inbox.</p>
-      <p class="pop">Before you get there, I want to explain why I do this work, and why touch goes quiet in the first place.</p>
+    <div class="slide-inner" style="max-width:960px">
+      <div class="opening-row">
+        <div class="opening-preview">
+          <div class="preview-bar">Feel Fully <b>You</b></div>
+          <div class="preview-body">
+            <div class="preview-eyebrow">A Free Teaching From Juliette Karaman</div>
+            <div class="preview-title">How to Want Touch Again, in 2 Minutes</div>
+            <div class="preview-video">
+              <div class="preview-play"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="#fefcfa"/></svg></div>
+            </div>
+          </div>
+        </div>
+        <div class="opening-text">
+          <div class="eyebrow">Before We Begin</div>
+          <h1>Thank you for signing up.</h1>
+          <p class="sub">That training is already on its way to your inbox.</p>
+          <p class="pop">Before you get there, I want to explain why I do this work, and why touch goes quiet in the first place.</p>
+        </div>
+      </div>
     </div>
   </section>
 
