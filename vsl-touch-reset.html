@@ -6,330 +6,224 @@
 <title>The Touch Reset · VSL · Feel Fully You</title>
 <meta name="description" content="Why your body braces at touch, how the Touch Reset actually works, and how to book your Touch Reset Call.">
 <meta name="robots" content="noindex,nofollow">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Inter:wght@400;500;600&family=Jost:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --cream:#fefcfa;
-    --black:#070707;
-    --green:#0d3535;
-    --gold:#a88538;
-    --green-15: rgba(13,53,53,0.08);
+    --cream:#fefcfa;--ink:#1c1714;--brown:#5d4a33;
+    --gold:#a88538;--gold-deep:#99680c;--gold-pale:#ddc98e;--gold-soft:#b4a074;
+    --teal:#0d3535;--teal-deep:#061a1a;--line:#e3dccf;
+    --display:'Poppins',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;
   }
-  *{box-sizing:border-box;}
-  html,body{
-    margin:0; padding:0; height:100%; width:100%;
-    background:var(--cream);
-    overflow:hidden;
-    font-family:'Inter', sans-serif;
-  }
-  .deck{ position:relative; height:100vh; width:100vw; }
-  .slide{
-    position:absolute; inset:0;
-    display:flex; flex-direction:column; align-items:center; justify-content:center;
-    padding: 6vh 8vw;
-    opacity:0; transform: translateY(18px); pointer-events:none;
-    transition: opacity 0.7s ease, transform 0.7s ease;
-  }
-  .slide.active{ opacity:1; transform:translateY(0); pointer-events:auto; }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{background:var(--cream);color:var(--brown);font-family:var(--body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow:hidden}
+  a{color:inherit;text-decoration:none}
+  strong{color:var(--ink);font-weight:600}
 
-  .glow{
-    position:absolute; top:50%; left:50%; width:70vmin; height:70vmin;
-    transform:translate(-50%,-50%); border-radius:50%;
-    background: radial-gradient(circle, var(--green-15) 0%, rgba(13,53,53,0) 68%);
-    pointer-events:none; z-index:0; animation: breathe 7s ease-in-out infinite;
-  }
-  @keyframes breathe{
-    0%,100%{ transform:translate(-50%,-50%) scale(0.94); opacity:0.55; }
-    50%{ transform:translate(-50%,-50%) scale(1.06); opacity:0.95; }
-  }
+  .topbar{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--teal);padding:0 24px;height:56px;display:flex;align-items:center;justify-content:space-between}
+  .topbar .brand{font-family:var(--display);font-weight:700;font-size:15px;letter-spacing:.02em;color:var(--cream)}
+  .topbar .brand b{color:var(--gold-pale)}
+  .topbar .progress{font-size:13px;color:var(--gold-pale);font-family:var(--body)}
 
-  .eyebrow{
-    font-family:'Jost', sans-serif; font-weight:600; letter-spacing:0.28em; text-transform:uppercase;
-    font-size:0.72rem; color:var(--gold); margin-bottom:1.6rem; z-index:1;
-  }
-  .content{ max-width:900px; text-align:center; z-index:1; }
-  .content.with-photo{ max-width:1000px; display:flex; flex-direction:column; align-items:center; }
-  h1, h2{ font-family:'Marcellus', serif; font-weight:400; color:var(--green); line-height:1.28; margin:0 0 1.2rem 0; }
-  h1{ font-size: clamp(1.7rem, 3.8vw, 2.9rem); }
-  p{ font-size: clamp(0.98rem, 1.4vw, 1.15rem); color: var(--black); line-height:1.7; margin: 0 0 1rem 0; font-weight:400; }
-  .quote{ font-family:'Marcellus', serif; font-style:italic; color:var(--green); font-size: clamp(1.05rem, 1.6vw, 1.3rem); }
-  .attrib{ font-family:'Jost', sans-serif; font-size:0.85rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--gold); margin-top:0.3rem; }
+  .deck{position:relative;width:100%;height:100%}
+  .slide{position:absolute;inset:0;padding:24px 24px 76px;display:flex;flex-direction:column;align-items:center;justify-content:center;justify-content:safe center;opacity:0;visibility:hidden;transform:translateY(14px);transition:opacity .45s ease,transform .45s ease;overflow-y:auto}
+  .slide.active{opacity:1;visibility:visible;transform:translateY(0)}
+  .slide-inner{max-width:760px;width:100%;margin:auto;text-align:center}
 
-  .photo{ border-radius:2px; object-fit:cover; box-shadow: 0 20px 50px rgba(7,7,7,0.25); }
-  .photo-round{ border-radius:50%; object-fit:cover; box-shadow: 0 20px 50px rgba(7,7,7,0.25); }
-  .logo-strip{ display:flex; gap:2.2rem; justify-content:center; align-items:center; flex-wrap:wrap; margin-top:2rem; opacity:0.75; }
-  .logo-strip img{ height:22px; width:auto; filter: brightness(0) invert(1); opacity:0.85; }
+  .eyebrow{font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-deep);font-weight:700;margin-bottom:10px}
+  .pop{color:var(--gold-deep);font-weight:700;font-size:1.05em;max-width:56ch;margin:10px auto 0;line-height:1.35}
+  h1{font-family:var(--display);font-weight:700;font-size:clamp(1.5rem,3.6vw,2.3rem);color:var(--ink);line-height:1.1;letter-spacing:-.022em;margin-bottom:10px}
+  h2{font-family:var(--display);font-weight:700;font-size:clamp(1.3rem,2.8vw,1.8rem);color:var(--ink);line-height:1.15;letter-spacing:-.02em;margin-bottom:10px}
+  .sub{font-size:15px;color:var(--brown);max-width:60ch;margin:0 auto;line-height:1.45}
+  .divider{width:44px;height:2px;background:var(--gold-pale);margin:28px auto}
 
-  .slide.cover{ background: var(--green); }
-  .slide.cover .glow{ background: radial-gradient(circle, rgba(168,133,56,0.16) 0%, rgba(168,133,56,0) 68%); }
-  .slide.cover h1{ color:var(--cream); }
-  .slide.cover .eyebrow{ color:var(--gold); }
-  .slide.cover .sub{ font-family:'Jost', sans-serif; color:var(--cream); opacity:0.75; letter-spacing:0.1em; text-transform:uppercase; font-size:0.82rem; margin-top:0.5rem; }
-  .slide.cover .photo{ width:260px; height:260px; margin-bottom:1.6rem; }
+  .cover-photo{width:100%;max-width:420px;border-radius:6px;overflow:hidden;margin:0 auto 28px;box-shadow:0 20px 50px rgba(13,53,53,.22)}
+  .cover-photo img{width:100%;display:block;object-fit:cover;max-height:340px}
 
-  .slide.cta{ background: var(--green); }
-  .slide.cta .glow{ background: radial-gradient(circle, rgba(168,133,56,0.18) 0%, rgba(168,133,56,0) 68%); }
-  .slide.cta h1{ color:var(--cream); }
-  .slide.cta p{ color:var(--cream); opacity:0.92; }
-  .cta-button{
-    display:inline-block; margin-top:1.4rem; padding: 0.9rem 2.3rem; background:var(--gold); color:var(--black);
-    font-family:'Jost', sans-serif; font-weight:600; letter-spacing:0.05em; text-transform:uppercase; font-size:0.85rem;
-    border-radius:2px; text-decoration:none; transition: transform 0.25s ease, box-shadow 0.25s ease;
-  }
-  .cta-button:hover{ transform:translateY(-2px); box-shadow:0 10px 24px rgba(168,133,56,0.35); }
+  .cover-hero{width:100%;max-width:340px;border-radius:6px;overflow:hidden;margin:0 auto 24px;box-shadow:0 20px 50px rgba(13,53,53,.22)}
+  .cover-hero img{width:100%;display:block}
 
-  .included-grid{ display:grid; grid-template-columns: 1fr 1fr; gap: 0.6rem 2.5rem; margin-top:1.2rem; text-align:left; max-width:640px; }
-  .included-item{ font-size:0.98rem; color:var(--black); }
-  .included-item b{ color:var(--green); font-family:'Jost',sans-serif; font-size:0.78rem; letter-spacing:0.06em; text-transform:uppercase; display:block; margin-bottom:0.15rem; }
+  .slide-photo{width:100%;max-width:220px;border-radius:6px;overflow:hidden;margin:10px auto 0;box-shadow:0 16px 40px rgba(13,53,53,.18)}
+  .slide-photo img{width:100%;display:block;max-height:260px;object-fit:cover}
 
-  .dots{ position:fixed; bottom: 4vh; left:50%; transform:translateX(-50%); display:flex; gap:9px; z-index:20; }
-  .dot{ width:8px; height:8px; border-radius:50%; background: rgba(13,53,53,0.25); cursor:pointer; transition: background 0.3s ease, transform 0.3s ease; }
-  .dot.on-dark{ background: rgba(254,252,250,0.32); }
-  .dot.active{ background: var(--gold); transform: scale(1.3); }
+  .btn{display:inline-block;background:var(--gold);color:#fff;font-family:var(--body);font-weight:700;font-size:16px;padding:16px 40px;border-radius:2px;letter-spacing:.01em;transition:background .2s,transform .2s;margin-top:8px}
+  .btn:hover{background:var(--gold-deep);transform:translateY(-2px)}
 
-  .counter{ position:fixed; top:3.5vh; right:5vw; font-family:'Jost', sans-serif; font-size:0.75rem; letter-spacing:0.12em; color: var(--green); z-index:20; opacity:0.7; }
-  .counter.on-dark{ color: var(--cream); }
+  .controls{position:fixed;bottom:0;left:0;right:0;z-index:50;background:var(--teal);height:64px;display:flex;align-items:center;justify-content:center;gap:22px}
+  .navbtn{background:transparent;border:1.5px solid var(--gold-pale);color:var(--cream);width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer}
+  .navbtn:hover:not(:disabled){background:rgba(255,255,255,.08)}
+  .navbtn:disabled{opacity:.3;cursor:default}
+  .dots{display:flex;gap:9px;flex-wrap:wrap;max-width:60%;justify-content:center}
+  .dot{width:8px;height:8px;border-radius:50%;background:rgba(254,252,250,.28);cursor:pointer;border:none}
+  .dot.active{background:var(--gold-pale);transform:scale(1.3)}
 
-  .clickzone{ position:fixed; top:0; bottom:0; width:14%; z-index:15; cursor:pointer; }
-  .clickzone.left{ left:0; } .clickzone.right{ right:0; }
-
-  @media (max-width:700px){
-    .slide{ padding:5vh 6vw; }
-    .clickzone{ width:10%; }
-    .included-grid{ grid-template-columns: 1fr; }
+  @media(max-width:640px){
+    .slide{padding:48px 20px 100px}
   }
 </style>
 </head>
 <body>
 
+<div class="topbar">
+  <a href="/" class="brand">Feel Fully <b>You</b></a>
+  <div class="progress" id="progressLabel">1 / 11</div>
+</div>
+
 <div class="deck" id="deck">
 
-  <!-- 1 OPENING FRAME -->
-  <section class="slide cover">
-    <div class="glow"></div>
-    <div class="eyebrow">Before We Begin</div>
-    <div class="content with-photo">
-      <div style="width:340px; max-width:78vw; border-radius:4px; overflow:hidden; box-shadow:0 20px 50px rgba(7,7,7,0.35); margin-bottom:1.6rem; background:var(--cream);">
-        <div style="position:relative; width:100%; aspect-ratio:16/9; background:linear-gradient(135deg, #16504f, #0d3535); display:flex; align-items:center; justify-content:center;">
-          <div style="width:56px; height:56px; border-radius:50%; background:var(--gold); display:flex; align-items:center; justify-content:center; box-shadow:0 8px 20px rgba(0,0,0,0.3);">
-            <div style="width:0; height:0; border-top:11px solid transparent; border-bottom:11px solid transparent; border-left:18px solid var(--black); margin-left:4px;"></div>
-          </div>
-          <div style="position:absolute; bottom:10px; right:12px; font-family:'Jost',sans-serif; font-size:0.68rem; color:var(--cream); background:rgba(7,7,7,0.55); padding:2px 7px; border-radius:2px; letter-spacing:0.04em;">2:00</div>
-        </div>
-        <div style="padding:0.85rem 1rem; text-align:left;">
-          <div style="font-family:'Jost',sans-serif; font-size:0.68rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold); margin-bottom:0.25rem;">Your Free Training</div>
-          <div style="font-family:'Marcellus',serif; font-size:1rem; color:var(--green);">How to Want Touch Again in Two Minutes</div>
-        </div>
-      </div>
+  <section class="slide active" data-index="0">
+    <div class="slide-inner">
+      <div class="eyebrow">Before We Begin</div>
       <h1>Thank you for signing up.</h1>
-      <p style="color:var(--cream); opacity:0.92;">That training is already on its way to your inbox.</p>
-      <p style="color:var(--cream); opacity:0.92;">Before you get there, I want to explain why I do this work, and why touch goes quiet in the first place.</p>
+      <p class="sub">Your training, How to Want Touch Again in Two Minutes, is already on its way to your inbox.</p>
+      <p class="pop">Before you get there, I want to explain why I do this work, and why touch goes quiet in the first place.</p>
     </div>
   </section>
 
-  <!-- 2 HERO TITLE -->
-  <section class="slide">
-    <div class="glow"></div>
-    <div class="eyebrow">The Touch Reset</div>
-    <div class="content with-photo">
-      <img class="photo" src="https://feelfullyyou.com/touch-reset-hero-branded.jpg" alt="The Touch Reset" style="width:100%; max-width:560px; height:auto; margin-bottom:1.6rem;">
+  <section class="slide" data-index="1">
+    <div class="slide-inner">
+      <div class="cover-hero"><img src="touch-reset-hero-branded.jpg" alt="The Touch Reset"></div>
+      <div class="eyebrow">The Touch Reset</div>
       <h1>Why Your Body Braces at Touch, and How to Actually Want It Again</h1>
-      <p>Not another book that explains it and changes nothing.</p>
-      <p>The twelve week method, in the order the body actually changes.</p>
+      <p class="sub">Not another book that explains it and changes nothing.</p>
+      <p class="pop">The twelve week method, in the order the body actually changes.</p>
     </div>
   </section>
 
-  <!-- 3 STAMP / COVER -->
-  <section class="slide cover">
-    <div class="glow"></div>
-    <div class="eyebrow">The Touch Reset</div>
-    <div class="content with-photo">
-      <img class="photo photo-round" src="https://feelfullyyou.com/media/68f7ca9d84a9d68db66b2a16.jpeg" alt="Juliette Karaman">
-      <h1>I'm Juliette Karaman.<br>I'm a touch expert.</h1>
-      <div class="sub">Why touch goes quiet, and what actually brings it back</div>
+  <section class="slide" data-index="2">
+    <div class="slide-inner">
+      <div class="cover-photo"><img src="https://feelfullyyou.com/media/68f7ca9d84a9d68db66b2a16.jpeg" alt="Juliette Karaman"></div>
+      <div class="eyebrow">Who I Am</div>
+      <h2>I'm Juliette Karaman. I'm a touch expert.</h2>
     </div>
   </section>
 
-  <!-- 2 THE MOMENT -->
-  <section class="slide">
-    <div class="glow"></div>
-    <div class="eyebrow">The Moment</div>
-    <div class="content">
-      <h1>2am. You're thinking:<br>why don't I want this anymore.</h1>
-      <p>You love him. You love her. You're not looking for anyone else. Somewhere along the way, touch went quiet.</p>
-      <p>You've tried the things you're supposed to try. Date night. A weekend away. Therapy. Talking about it, again. For a few days, something shifts. Then Tuesday comes back, and so does the silence.</p>
+  <section class="slide" data-index="3">
+    <div class="slide-inner">
+      <div class="eyebrow">The Moment</div>
+      <h2>You're lying awake at 2am thinking, why don't I want this anymore.</h2>
+      <p class="sub">You love him. You love her. You're not looking for anyone else, and somewhere along the way, touch went quiet.</p>
+      <p class="sub" style="margin-top:14px">You've tried the things you're supposed to try. Date night. A weekend away. Therapy. Talking about it, again. For a few days something shifts. Then Tuesday comes back and so does the silence.</p>
+      <div class="slide-photo"><img src="touchfingers.JPG" alt="Touch Base, thumb to forefinger"></div>
     </div>
   </section>
 
-  <!-- 3 THE WHY -->
-  <section class="slide">
-    <div class="glow"></div>
-    <div class="eyebrow">The Why</div>
-    <div class="content">
-      <h1>Your body isn't waiting for the right mood.<br>It's bracing.</h1>
-      <p>That's a reflex, trained in by every unequal, unsafe, or unsatisfying experience you've ever had with touch.</p>
-      <p>A University of Toronto study found this is exactly why up to 55% of women lose desire, and it's developmental, not hormonal. Learned. Which means it can be unlearned.</p>
+  <section class="slide" data-index="4">
+    <div class="slide-inner">
+      <div class="eyebrow">The Why</div>
+      <h2>Here's what nobody told you. Your body isn't waiting for the right mood. It's bracing.</h2>
+      <p class="sub">That's a reflex, trained in by every unequal, unsafe, or unsatisfying experience you've ever had with touch.</p>
+      <p class="pop">A University of Toronto study found this is exactly why up to 55% of women lose desire, and it's developmental, not hormonal. Learned. Which means it can be unlearned.</p>
+      <div class="slide-photo"><img src="brace.jpg" alt="The brace, literally"></div>
     </div>
   </section>
 
-  <!-- 4 THE TURN -->
-  <section class="slide">
-    <div class="glow"></div>
-    <div class="eyebrow">The Turn</div>
-    <div class="content">
-      <h1>Everyone sells you spontaneity.<br>It won't work.</h1>
-      <p>Spontaneity asks a braced body to leap. A braced body doesn't leap. It waits to see if this is safe.</p>
-      <p>When spontaneity fails, the next thing everyone reaches for is technique. More moves, more effort, more variety, layered onto a body that isn't responsive yet. That's teaching someone to dance on a leg that's still numb.</p>
-      <p><strong>I don't sell spark, and I don't sell technique.</strong> I teach you to work with what's actually present in your body right now. Just what is. From there, it only gets better.</p>
+  <section class="slide" data-index="5">
+    <div class="slide-inner">
+      <div class="eyebrow">The Turn</div>
+      <h2>Everyone sells you spontaneity. It won't work.</h2>
+      <p class="sub">Recreate the mood, get away together, and the spark will come back. Spontaneity asks a braced body to leap. A braced body doesn't leap. It waits to see if this is safe.</p>
+      <p class="sub" style="margin-top:14px">When spontaneity fails, the next thing everyone reaches for is technique. More moves, more effort, more variety, layered onto a body that isn't responsive yet. That's teaching someone to dance on a leg that's still numb. Technique was never the missing piece.</p>
+      <p class="pop">I don't sell spark, and I don't sell technique. I teach you to work with what's actually present in your body right now, not what should be there. Just what is. From there, it only gets better.</p>
+      <div class="slide-photo"><img src="karentouch.JPG" alt="Real session work"></div>
     </div>
   </section>
 
-  <!-- 5 THE WHAT / PROGRAMME -->
-  <section class="slide">
-    <div class="glow"></div>
-    <div class="eyebrow">The Touch Reset</div>
-    <div class="content with-photo">
-      <h1>Four parts, always in this order.</h1>
-      <img class="photo" src="https://feelfullyyou.com/touchfingers.JPG" alt="Touch Base, thumb to forefinger" style="width:320px; height:220px; margin-bottom:1.2rem;">
-      <p>Know your own wiring first. Then structured conversation. Then structured touch dates, starting with the non-sexual kind. Then the rituals that keep it alive.</p>
-      <p>Structure, not spontaneity. Safety before pleasure, every time, because a nervous system that's still bracing can't feel much of anything else.</p>
+  <section class="slide" data-index="6">
+    <div class="slide-inner">
+      <div class="eyebrow">The What</div>
+      <h2>That container is the Touch Reset.</h2>
+      <p class="sub">Four parts, always in this order: know your own wiring first, then structured conversation, then structured touch dates starting with the non-sexual kind, then the rituals that keep it alive.</p>
+      <p class="pop">Structure, not spontaneity. Safety before pleasure, every time, because a nervous system that's still bracing can't feel much of anything else. Play and pleasure aren't step one. They're what becomes possible once your body trusts the room.</p>
     </div>
   </section>
 
-  <!-- 7 THE REBOOT -->
-  <section class="slide">
-    <div class="glow"></div>
-    <div class="eyebrow">The Reboot</div>
-    <div class="content with-photo">
-      <svg width="120" height="120" viewBox="0 0 120 120" style="margin-bottom:1.2rem;">
-        <rect x="38" y="10" width="44" height="100" rx="8" fill="none" stroke="#0d3535" stroke-width="2.5"/>
-        <line x1="52" y1="18" x2="68" y2="18" stroke="#0d3535" stroke-width="2.5" stroke-linecap="round"/>
-        <circle cx="60" cy="102" r="3" fill="#0d3535"/>
-        <g transform="translate(60,58)">
-          <path d="M -16 0 A 16 16 0 1 1 -11.3 11.3" fill="none" stroke="#a88538" stroke-width="3.5" stroke-linecap="round"/>
-          <path d="M -11.3 11.3 L -20 12 L -13 3 Z" fill="#a88538"/>
-        </g>
-      </svg>
-      <h1>Think of it like rebooting<br>a phone that's slowed to a crawl.</h1>
-      <p>Somewhere along the way you were loaded with instructions about touch, about sex, about how a relationship is supposed to work. All of it running in the background. None of it actually yours.</p>
-      <p>Twelve weeks clears the cache. It empties out what got crammed in and restarts from what's actually true for your body. That becomes the foundation for everything after. With your partner. With yourself. With the people around you. With your children.</p>
+  <section class="slide" data-index="7">
+    <div class="slide-inner">
+      <div class="eyebrow">The Reboot</div>
+      <h2>Think of it like rebooting a phone that's slowed to a crawl.</h2>
+      <p class="sub">Somewhere along the way you were loaded with instructions about touch, about sex, about how a relationship is supposed to work. All of it running in the background. None of it actually yours.</p>
+      <p class="sub" style="margin-top:14px">Twelve weeks clears the cache. It empties out what got crammed in and restarts from what's actually true for your body.</p>
+      <p class="pop">That becomes the foundation for everything after. The skills you build here, you use for life. With your partner. With yourself. With the people around you. With your children.</p>
     </div>
   </section>
 
-  <!-- 7 WHAT'S INCLUDED -->
-  <section class="slide">
-    <div class="glow"></div>
-    <div class="eyebrow">What You Get</div>
-    <div class="content with-photo">
-      <h1>You're not doing this alone.</h1>
-      <img class="photo" src="https://feelfullyyou.com/touch-reset-bonuses-collage.jpg" alt="The Touch Reset bonuses" style="width:480px; max-width:80vw; height:auto; margin-bottom:1.4rem;">
-      <div class="included-grid">
-        <div class="included-item"><b>Ritual Guide</b>For building touch into a weekly ritual, not a task.</div>
-        <div class="included-item"><b>The Cards</b>475+ real prompts for communication and intimacy.</div>
-        <div class="included-item"><b>Weekly Touch-In</b>A few minutes, every week, together.</div>
-        <div class="included-item"><b>Your Touch Map™</b>Yours to keep, and return to whenever you need it.</div>
-      </div>
+  <section class="slide" data-index="8">
+    <div class="slide-inner">
+      <div class="eyebrow">Twenty-Seven Years</div>
+      <h2>I've spent twenty-seven years building this, since it started with my own body giving out on me before I finally listened to it.</h2>
+      <div class="slide-photo"><img src="touchsofalondon.JPG" alt="Real session work, London"></div>
     </div>
   </section>
 
-  <!-- 8 AUTHORITY -->
-  <section class="slide">
-    <div class="glow"></div>
-    <div class="eyebrow">Twenty-Seven Years</div>
-    <div class="content">
-      <h1>I built this after my own body gave out on me.</h1>
-      <p>Twenty-seven years in this work, since it started with my own body finally making me listen.</p>
+  <section class="slide" data-index="9">
+    <div class="slide-inner">
+      <div class="eyebrow">This Isn't Theory</div>
+      <p class="sub" style="font-size:19px;color:var(--ink)">A couple came to me after twenty-three years without sex. We took sex off the table for six weeks and rebuilt the container first. They went on to have sex again, and they cried.</p>
+      <p class="sub" style="margin-top:18px;font-size:19px;color:var(--ink)">Sarah told me she'd forgotten she'd been braced for years until she finally felt herself soften.</p>
     </div>
   </section>
 
-  <!-- 9 PROOF -->
-  <section class="slide">
-    <div class="glow"></div>
-    <div class="eyebrow">Proof</div>
-    <div class="content">
-      <p class="quote">"I feel softer and more relaxed. I'd forgotten I'd been braced for years, until I finally felt myself soften."</p>
-      <div class="attrib">— Sarah</div>
-      <p style="margin-top:2rem;">A couple came to me after twenty-three years without sex. We took sex off the table for six weeks and rebuilt the container first.</p>
-      <p style="margin-top:0;">They went on to have sex again, and they cried.</p>
-    </div>
-  </section>
-
-  <!-- 10 CTA -->
-  <section class="slide cta">
-    <div class="glow"></div>
-    <div class="eyebrow">The Invitation</div>
-    <div class="content">
-      <h1>If any of this already landed in your body,<br>that's the container starting to work.</h1>
-      <p>Book your Touch Reset Call. A real conversation, not a pitch, to see if this is the right fit.</p>
-      <a href="https://tidycal.com/juliette2/the-touch-reset-clarity-call" class="cta-button">Book Your Touch Reset Call</a>
-      <div class="logo-strip">
-        <img src="https://feelfullyyou.com/media/672266601f25a7590d252591.png" alt="Forbes">
-        <img src="https://feelfullyyou.com/media/6722666030643409dd828ee6.png" alt="ITV">
-        <img src="https://feelfullyyou.com/media/672266637253cd083c119486.png" alt="The Telegraph">
-        <img src="https://feelfullyyou.com/media/672266609ccb72239f428c53.png" alt="Newsweek">
-      </div>
+  <section class="slide" data-index="10">
+    <div class="slide-inner">
+      <div class="eyebrow">The Invitation</div>
+      <h2>If any of this already landed in your body while you were listening, that's the container starting to work.</h2>
+      <p class="sub">Book your Touch Reset Call. A real conversation, not a pitch, to see if this is the right fit.</p>
+      <a href="https://tidycal.com/juliette2/the-touch-reset-clarity-call" class="btn">Book Your Touch Reset Call</a>
     </div>
   </section>
 
 </div>
 
-<div class="counter" id="counter">01 / 12</div>
-<div class="dots" id="dots"></div>
-<div class="clickzone left" id="prevZone"></div>
-<div class="clickzone right" id="nextZone"></div>
+<div class="controls">
+  <button class="navbtn" id="prevBtn" aria-label="Previous">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+  </button>
+  <div class="dots" id="dots"></div>
+  <button class="navbtn" id="nextBtn" aria-label="Next">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+  </button>
+</div>
 
 <script>
-  const slides = document.querySelectorAll('.slide');
-  const total = slides.length;
-  let current = 0;
-  const dotsWrap = document.getElementById('dots');
-  const counter = document.getElementById('counter');
+(function(){
+  var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
+  var dotsWrap = document.getElementById('dots');
+  var progressLabel = document.getElementById('progressLabel');
+  var prevBtn = document.getElementById('prevBtn');
+  var nextBtn = document.getElementById('nextBtn');
+  var current = 0;
 
-  slides.forEach((s, i) => {
-    const dot = document.createElement('div');
-    dot.className = 'dot';
-    dot.dataset.index = i;
-    dot.addEventListener('click', () => goTo(i));
-    dotsWrap.appendChild(dot);
+  slides.forEach(function(_, i){
+    var d = document.createElement('button');
+    d.className = 'dot' + (i === 0 ? ' active' : '');
+    d.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+    d.addEventListener('click', function(){ goTo(i); });
+    dotsWrap.appendChild(d);
   });
+  var dots = Array.prototype.slice.call(dotsWrap.children);
 
-  function isDarkSlide(i){
-    return slides[i].classList.contains('cover') || slides[i].classList.contains('cta');
+  function goTo(i){
+    if (i < 0 || i >= slides.length) return;
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = i;
+    slides[current].classList.add('active');
+    slides[current].scrollTop = 0;
+    dots[current].classList.add('active');
+    progressLabel.textContent = (current + 1) + ' / ' + slides.length;
+    prevBtn.disabled = current === 0;
+    nextBtn.disabled = current === slides.length - 1;
   }
 
-  function render(){
-    slides.forEach((s, i) => s.classList.toggle('active', i === current));
-    const dots = dotsWrap.querySelectorAll('.dot');
-    dots.forEach((d, i) => {
-      d.classList.toggle('active', i === current);
-      d.classList.toggle('on-dark', isDarkSlide(current));
-    });
-    counter.classList.toggle('on-dark', isDarkSlide(current));
-    counter.textContent = String(current + 1).padStart(2,'0') + ' / ' + String(total).padStart(2,'0');
-  }
-
-  function goTo(i){ current = Math.max(0, Math.min(total - 1, i)); render(); }
-  function next(){ if(current < total - 1) goTo(current + 1); }
-  function prev(){ if(current > 0) goTo(current - 1); }
-
-  document.addEventListener('keydown', (e) => {
-    if(e.key === 'ArrowRight' || e.key === ' '){ e.preventDefault(); next(); }
-    if(e.key === 'ArrowLeft'){ e.preventDefault(); prev(); }
+  prevBtn.addEventListener('click', function(){ goTo(current - 1); });
+  nextBtn.addEventListener('click', function(){ goTo(current + 1); });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'ArrowRight') goTo(current + 1);
+    if (e.key === 'ArrowLeft') goTo(current - 1);
   });
-  document.getElementById('nextZone').addEventListener('click', next);
-  document.getElementById('prevZone').addEventListener('click', prev);
-
-  let touchStartX = 0;
-  document.addEventListener('touchstart', e => touchStartX = e.touches[0].clientX);
-  document.addEventListener('touchend', e => {
-    const dx = e.changedTouches[0].clientX - touchStartX;
-    if(dx > 50) prev();
-    if(dx < -50) next();
-  });
-
-  render();
+  goTo(0);
+})();
 </script>
 
 </body>
