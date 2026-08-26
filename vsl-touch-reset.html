@@ -62,16 +62,21 @@
 
   .bonus-photo{width:100%;max-width:520px;border-radius:6px;overflow:hidden;margin:10px auto 18px;box-shadow:0 20px 50px rgba(13,53,53,.22)}
   .bonus-photo img{width:100%;display:block}
-  .bonus-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;text-align:left;max-width:640px;margin:0 auto}
-  .bonus-card{background:#fff;border:1px solid var(--line);border-radius:5px;padding:8px 9px;min-width:0}
-  .bonus-card .blabel{font-size:8px;letter-spacing:.05em;text-transform:uppercase;color:var(--gold-deep);font-weight:600}
-  .bonus-card h3{font-family:var(--display);font-size:10.5px;color:var(--ink);margin:2px 0 2px;line-height:1.15}
-  .bonus-card p{font-size:8.5px;color:var(--brown);line-height:1.25}
-  @media(max-width:700px){.bonus-grid{grid-template-columns:repeat(2,1fr)}}
+  .bonus-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px 40px;text-align:left;max-width:560px;margin:0 auto}
+  .bonus-item{font-size:14px;color:var(--brown);line-height:1.4}
+  .bonus-item b{display:block;color:var(--gold-deep);font-family:var(--display);font-size:12.5px;letter-spacing:.03em;text-transform:uppercase;margin-bottom:2px}
+  @media(max-width:700px){.bonus-grid{grid-template-columns:1fr}}
 
   .quote-card{background:#fff;border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:6px;padding:18px 22px;text-align:left;max-width:520px;margin:18px auto 0}
   .quote-card p{font-size:16px;line-height:1.5;margin-bottom:8px;color:var(--ink);font-style:italic}
   .quote-card span{font-size:12.5px;color:var(--gold-deep);font-weight:600}
+
+  .method-list{list-style:none;max-width:480px;margin:18px auto 0;text-align:left}
+  .method-list li{display:flex;align-items:baseline;gap:14px;font-size:16px;color:var(--ink);font-weight:600;padding:9px 0;border-bottom:1px solid var(--line)}
+  .method-list li:last-child{border-bottom:none}
+  .method-list .mnum{font-family:var(--display);font-weight:700;color:var(--gold-deep);font-size:15px;min-width:18px}
+
+  .reboot-icon{margin:6px auto 4px}
 
   @media(max-width:640px){
     .slide{padding:48px 20px 100px}
@@ -132,7 +137,7 @@
       <div class="eyebrow">2am</div>
       <h2>You're thinking: why don't I want this anymore.</h2>
       <p class="sub">You love him. You love her. You're not looking for anyone else, and somewhere along the way, touch went quiet.</p>
-      <p class="sub" style="margin-top:14px">You've tried the things you're supposed to try. Date night. A weekend away. Therapy. Talking about it, again. For a few days something shifts. Then Tuesday comes back and so does the silence.</p>
+      <p class="sub" style="margin-top:14px">You've tried the things you're supposed to try. <strong>Date night. A weekend away. Therapy. Talking about it, again.</strong> For a few days something shifts. Then Tuesday comes back and so does the silence.</p>
       <div class="slide-photo"><img src="touchfingers.JPG" alt="Touch Base, thumb to forefinger"></div>
     </div>
   </section>
@@ -162,19 +167,31 @@
     <div class="slide-inner">
       <div class="eyebrow">The Method</div>
       <h2>Four parts, always in this order.</h2>
-      <p class="sub">Know your own wiring first. Then structured conversation. Then structured touch dates, starting with the non-sexual kind. Then the rituals that keep it alive.</p>
+      <ol class="method-list">
+        <li><span class="mnum">1</span> Know your own wiring first</li>
+        <li><span class="mnum">2</span> Structured conversation</li>
+        <li><span class="mnum">3</span> Structured touch dates, starting with the non-sexual kind</li>
+        <li><span class="mnum">4</span> The rituals that keep it alive</li>
+      </ol>
       <p class="pop">Structure, not spontaneity. Safety before pleasure, every time, because a nervous system that's still bracing can't feel much of anything else.</p>
-      <div class="slide-photo"><img src="juliettestage.JPG" alt="Juliette speaking"></div>
     </div>
   </section>
 
   <section class="slide" data-index="7">
     <div class="slide-inner">
       <div class="eyebrow">Why Twelve Weeks</div>
+      <svg class="reboot-icon" width="90" height="90" viewBox="0 0 120 120">
+        <rect x="38" y="10" width="44" height="100" rx="8" fill="none" stroke="#0d3535" stroke-width="2.5"/>
+        <line x1="52" y1="18" x2="68" y2="18" stroke="#0d3535" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="60" cy="102" r="3" fill="#0d3535"/>
+        <g transform="translate(60,58)">
+          <path d="M -16 0 A 16 16 0 1 1 -11.3 11.3" fill="none" stroke="#a88538" stroke-width="3.5" stroke-linecap="round"/>
+          <path d="M -11.3 11.3 L -20 12 L -13 3 Z" fill="#a88538"/>
+        </g>
+      </svg>
       <h2>Think of it like rebooting a phone that's slowed to a crawl.</h2>
       <p class="sub">Somewhere along the way you were loaded with instructions about touch, about sex, about how a relationship is supposed to work. All of it running in the background. None of it actually yours.</p>
       <p class="pop" style="margin-top:14px">Twelve weeks clears the cache. It empties out what got crammed in and restarts from what's actually true for your body. That becomes the foundation for everything after. With your partner. With yourself. With the people around you. With your children.</p>
-      <div class="slide-photo"><img src="faceflogger.JPG" alt="Real session work"></div>
     </div>
   </section>
 
@@ -183,10 +200,10 @@
       <div class="eyebrow">You're Not Doing This Alone</div>
       <div class="bonus-photo"><img src="touch-reset-bonuses-collage.jpg" alt="The Touch Reset bonuses"></div>
       <div class="bonus-grid">
-        <div class="bonus-card"><div class="blabel">Bonus</div><h3>Ritual Guide</h3><p>For building touch into a weekly ritual, not a task.</p></div>
-        <div class="bonus-card"><div class="blabel">Bonus</div><h3>The Cards</h3><p>475+ real prompts for communication and intimacy.</p></div>
-        <div class="bonus-card"><div class="blabel">Bonus</div><h3>Weekly Touch-In</h3><p>A few minutes, every week, together.</p></div>
-        <div class="bonus-card"><div class="blabel">Bonus</div><h3>Your Touch Map</h3><p>Yours to keep, and return to whenever you need it.</p></div>
+        <div class="bonus-item"><b>Ritual Guide</b>For building touch into a weekly ritual, not a task.</div>
+        <div class="bonus-item"><b>The Cards</b>475+ real prompts for communication and intimacy.</div>
+        <div class="bonus-item"><b>Weekly Touch-In</b>A few minutes, every week, together.</div>
+        <div class="bonus-item"><b>Your Touch Map</b>Yours to keep, and return to whenever you need it.</div>
       </div>
     </div>
   </section>
@@ -215,6 +232,7 @@
   <section class="slide" data-index="11">
     <div class="slide-inner">
       <div class="eyebrow">The Invitation</div>
+      <div class="cover-photo" style="max-width:260px"><img src="juliettestage.JPG" alt="Juliette speaking"></div>
       <h2>If any of this already landed in your body, that's the container starting to work.</h2>
       <p class="sub">Book your Touch Reset Call. A real conversation, not a pitch, to see if this is the right fit.</p>
       <a href="https://tidycal.com/juliette2/the-touch-reset-clarity-call" class="btn">Book Your Touch Reset Call</a>
