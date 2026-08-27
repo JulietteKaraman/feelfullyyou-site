@@ -134,6 +134,20 @@
   footer .links{display:flex;gap:24px;flex-wrap:wrap}
   footer .links a{font-size:var(--t-xs);color:rgba(255,255,255,.75);font-weight:500;transition:color .2s}
   footer .links a:hover{color:#fff}
+
+  /* ── PASSWORD GATE ── */
+  #gate{position:fixed;inset:0;background:var(--teal);z-index:8888;display:flex;align-items:center;justify-content:center;padding:28px}
+  .gate-box{background:var(--cream);border-radius:6px;padding:48px 40px;max-width:420px;width:100%;text-align:center}
+  .gate-box .eyebrow{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:16px}
+  .gate-box h2{font-family:var(--display);font-weight:700;font-size:1.8rem;color:var(--ink);letter-spacing:-.02em;margin-bottom:10px}
+  .gate-box p{font-size:15px;color:var(--brown);margin-bottom:28px;line-height:1.6;max-width:none}
+  .gate-box input{width:100%;border:1.5px solid var(--line);border-radius:3px;padding:14px 16px;font-family:var(--body);font-size:16px;color:var(--ink);background:#fff;outline:none;margin-bottom:12px;transition:border-color .2s;letter-spacing:.1em;text-align:center}
+  .gate-box input:focus{border-color:var(--gold)}
+  .gate-box button{width:100%;background:var(--teal);color:#fff;font-family:var(--display);font-weight:700;font-size:16px;padding:15px;border-radius:3px;border:none;cursor:pointer;letter-spacing:-.01em;transition:background .2s}
+  .gate-box button:hover{background:var(--teal-deep)}
+  .gate-error{color:#c0392b;font-size:14px;margin-top:10px;display:none}
+  #content{display:none}
+  @media(max-width:480px){.gate-box{padding:36px 24px}}
 </style>
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -147,6 +161,20 @@ gtag('config', 'G-SY8NKELMNZ');
 </script>
 </head>
 <body>
+
+<!-- ── PASSWORD GATE ── -->
+<div id="gate">
+  <div class="gate-box">
+    <div class="eyebrow">Practitioner access</div>
+    <h2>Communication &amp; Intimacy Cards</h2>
+    <p>This page is for therapists, coaches, and venues we've spoken with directly. Enter the password from our email to get in.</p>
+    <input type="password" id="pw-input" placeholder="Password" autocomplete="off">
+    <button onclick="checkPassword()">Enter &rarr;</button>
+    <div class="gate-error" id="gate-error">That password isn't right. Check your email, or get in touch.</div>
+  </div>
+</div>
+
+<div id="content">
 
 <!-- NAV -->
 <header class="topbar">
@@ -310,6 +338,34 @@ gtag('config', 'G-SY8NKELMNZ');
     </div>
   </div>
 </footer>
+
+</div><!-- /content -->
+
+<script>
+  const PASSWORD = 'practitioner2026';
+  const SESSION_KEY = 'prac_access';
+
+  function checkPassword() {
+    const val = document.getElementById('pw-input').value.trim().toLowerCase();
+    if (val === PASSWORD) {
+      sessionStorage.setItem(SESSION_KEY, '1');
+      unlock();
+    } else {
+      document.getElementById('gate-error').style.display = 'block';
+    }
+  }
+
+  function unlock() {
+    document.getElementById('gate').style.display = 'none';
+    document.getElementById('content').style.display = 'block';
+  }
+
+  if (sessionStorage.getItem(SESSION_KEY) === '1') unlock();
+
+  document.getElementById('pw-input').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') checkPassword();
+  });
+</script>
 
 <script>
   const io = new IntersectionObserver(entries=>{
