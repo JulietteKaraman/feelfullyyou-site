@@ -132,6 +132,27 @@
   .pull-quote cite{display:block;font-family:var(--body);font-style:normal;font-size:var(--t-xs);letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);margin-top:18px;font-weight:600}
   @media(max-width:600px){.pull-quote{padding:30px 24px}}
 
+  /* ── SCRIPT QUOTE (spoken lines) ── */
+  .script-quote{border-left:3px solid var(--gold);background:var(--cream-2);padding:26px 32px;margin:20px 0;font-family:var(--display);font-style:italic;font-size:1rem;color:var(--ink);line-height:1.6;max-width:60ch}
+
+  /* ── TURN STEPS (micro-sequence) ── */
+  .turn-steps{display:flex;flex-direction:column;gap:16px;margin-top:32px}
+  .turn-step{display:grid;grid-template-columns:28px 1fr;gap:14px;align-items:baseline}
+  .turn-step .n{font-family:var(--display);font-size:.85rem;color:var(--gold);font-weight:700}
+  .turn-step .t{font-size:var(--t-sm);color:var(--ink);font-weight:600}
+  .turn-step .d{font-size:var(--t-xs);color:var(--brown);display:block;margin-top:2px}
+
+  /* ── SAFE RULES ── */
+  .safe-rules{display:flex;flex-direction:column;gap:26px;margin-top:32px}
+  .safe-rule{padding-left:18px;border-left:2px solid var(--line)}
+  .safe-rule h3{font-size:var(--t-sm);margin-bottom:6px}
+  .safe-rule p{font-size:var(--t-sm);color:var(--brown)}
+
+  /* ── PRINCIPLE CALLOUT ── */
+  .principle-block{background:var(--teal);padding:44px 40px;margin:36px 0;text-align:center}
+  .principle-block p{font-family:var(--display);font-style:italic;font-weight:400;font-size:clamp(1.15rem,2.4vw,1.5rem);color:var(--cream);line-height:1.5;max-width:46ch;margin:0 auto;max-width:none}
+  @media(max-width:600px){.principle-block{padding:32px 24px}}
+
   /* ── DECK SECTIONS ── */
   .deck-section{padding:72px 28px;border-top:1px solid var(--line);max-width:780px;margin:0 auto}
   .deck-section--alt{background:var(--cream-2)}
@@ -298,18 +319,28 @@ gtag('config', 'G-SY8NKELMNZ');
   <!-- PHOTO — save as: dyad-hands.jpg (hands holding the deck, green nails, gold ring) -->
   <img class="photo-bleed reveal" src="dyad-hands.jpg" alt="Hands holding the Communication and Intimacy Cards">
 
+  <!-- THE PRINCIPLE -->
+  <section class="section">
+    <p class="eyebrow reveal">The Principle</p>
+    <h2 class="reveal">Talking is not the same as being understood.</h2>
+    <p class="reveal">The speaker is not finished simply because they have spoken. A communication is complete when the listener has understood it. Everything below exists to carry a communication all the way to understanding, and then stop there.</p>
+    <div class="principle-block reveal">
+      <p>"We talk all the time. Talking doesn't mean we've been understood."</p>
+    </div>
+  </section>
+
   <!-- HOW IT WORKS -->
   <section class="section">
     <p class="eyebrow reveal">How It Works</p>
-    <h2 class="reveal">15 minutes. One card. One question at a time.</h2>
-    <p class="reveal">No preparation. No agenda. Just a card and the willingness to be in the room with each other.</p>
+    <h2 class="reveal">15 minutes. One card. One prompt, the whole time.</h2>
+    <p class="reveal">No preparation. No agenda. Just a card and the willingness to be in the room with each other. This is not a deck of good questions. It is a structured way of communicating.</p>
 
     <div class="steps reveal">
       <div class="step">
         <span class="step-num">1</span>
         <div class="step-body">
           <strong>Set a 15-minute timer</strong>
-          <p>One person picks a card and reads it aloud.</p>
+          <p>One person picks a card and reads the prompt aloud.</p>
         </div>
       </div>
       <div class="step">
@@ -322,17 +353,41 @@ gtag('config', 'G-SY8NKELMNZ');
       <div class="step">
         <span class="step-num">3</span>
         <div class="step-body">
-          <strong>Go deeper</strong>
-          <p>Same prompt, different layer. Stay until the timer ends.</p>
+          <strong>Thank you means switch</strong>
+          <p>Once you reach "Thank you," swap roles. Same prompt, back and forth.</p>
         </div>
       </div>
       <div class="step">
         <span class="step-num">4</span>
         <div class="step-body">
-          <strong>Switch</strong>
-          <p>The other person answers. The room changes.</p>
+          <strong>Repeat until the timer ends</strong>
+          <p>The repetition is the point. Each pass goes a little deeper.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- BEFORE YOU START -->
+  <section class="section">
+    <p class="eyebrow reveal">Before You Start</p>
+    <h2 class="reveal">Agree to the container before anything vulnerable gets said.</h2>
+    <p class="reveal">Say it out loud, together, before the first card is read:</p>
+    <div class="script-quote reveal">For the next 15 minutes, our only aim is to understand each other. We are going to stay with one prompt. We will not interject or fix. We do not have to like or agree with what the other person communicates. We agree to stay with the structure for the full 15 minutes.</div>
+    <p class="reveal">Then ask the question that makes it real:</p>
+    <div class="script-quote reveal">Do I have your agreement that you are going to follow the process all the way through?</div>
+  </section>
+
+  <!-- HOW ONE TURN MOVES -->
+  <section class="section">
+    <p class="eyebrow reveal">How One Turn Moves</p>
+    <h2 class="reveal">There is a pause built into this. It does not begin with talking.</h2>
+    <div class="turn-steps reveal">
+      <div class="turn-step"><span class="n">01</span><span><span class="t">Hear the prompt</span><span class="d">Given by the listener, with eye contact.</span></span></div>
+      <div class="turn-step"><span class="n">02</span><span><span class="t">Take it in</span><span class="d">Let the question actually reach you.</span></span></div>
+      <div class="turn-step"><span class="n">03</span><span><span class="t">Breathe</span></span></div>
+      <div class="turn-step"><span class="n">04</span><span><span class="t">Notice what comes</span><span class="d">Whatever arrives, before you edit it.</span></span></div>
+      <div class="turn-step"><span class="n">05</span><span><span class="t">Formulate one clear communication</span><span class="d">The one thing you are actually trying to say.</span></span></div>
+      <div class="turn-step"><span class="n">06</span><span><span class="t">Say it</span></span></div>
     </div>
   </section>
 
@@ -345,17 +400,62 @@ gtag('config', 'G-SY8NKELMNZ');
     <div class="responses">
       <div class="response reveal">
         <span class="response-phrase">"Thank you."</span>
-        <p class="response-text">You understood. The speaker feels received. Move on or switch.</p>
+        <p class="response-text"><em>I understood you.</em> Nothing else needs to happen. Switch roles.</p>
       </div>
       <div class="response reveal">
         <span class="response-phrase">"Clarify that."</span>
-        <p class="response-text">Something wasn't clear. The speaker unpacks it further, in their own direction, not yours.</p>
+        <p class="response-text"><em>I am listening, and I do not yet understand.</em> The speaker adds what was missing, often not more words, only the piece that makes it land.</p>
       </div>
       <div class="response reveal">
         <span class="response-phrase">"Summarise that."</span>
-        <p class="response-text">They've been speaking for a while. Invite them to land on one clear thought. Keeps the session from drifting.</p>
+        <p class="response-text"><em>There is too much here for me to understand it.</em> The speaker takes a breath, finds the bottom line, and gives one clear communication.</p>
       </div>
     </div>
+    <p class="reveal">Summarise that is the superpower. It asks the speaker to discover what they are actually trying to say rather than unloading everything they are thinking. Clarify and Summarise are never an opening for another conversation, they carry the communication to understanding, and then you return to Thank you.</p>
+  </section>
+
+  <!-- RULES THAT MAKE IT SAFE -->
+  <section class="section">
+    <p class="eyebrow reveal">The Rules That Make It Safe</p>
+    <h2 class="reveal">The structure is what creates safety, so both people know what to expect.</h2>
+    <div class="safe-rules reveal">
+      <div class="safe-rule">
+        <h3>One turn equals one communication</h3>
+        <p>Someone can believe you do not understand me while handing their partner five thoughts, three explanations and two grievances in a single turn. The structure distils that until the other person actually can understand them.</p>
+      </div>
+      <div class="safe-rule">
+        <h3>Receive, do not extract</h3>
+        <p>The listener stays quiet, and also stops pulling the communication out nonverbally: no leaning in, no excessive nodding, no prompting with the face.</p>
+      </div>
+      <div class="safe-rule">
+        <h3>Do not ride their communication</h3>
+        <p>You do not automatically use your next turn to react to what you just heard. If a "yeah, but" rises up, let it go for now, take in the prompt again, breathe, and find a communication that is yours. If the same thing keeps arising after many turns, that is far less likely to be an automatic rebuttal and much more likely to be what is genuinely there for you.</p>
+      </div>
+      <div class="safe-rule">
+        <h3>Stumbling is part of it</h3>
+        <p>Early on, people explain, qualify and pile on context because they are trying so hard to be understood. That is exactly where Clarify that and Summarise that earn their keep.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY THE REPETITION MATTERS -->
+  <section class="section">
+    <p class="eyebrow reveal">Why The Repetition Matters</p>
+    <h2 class="reveal">The first answers are surface swimming.</h2>
+    <p class="reveal">This is not a conventional back-and-forth discussion. Staying with the same prompt makes enough space for communications to surface that would otherwise stay buried. Another layer appears, then another. <em>I thought I had answered this. Oh. There is more.</em></p>
+  </section>
+
+  <!-- HOW IT ENDS -->
+  <section class="section">
+    <p class="eyebrow reveal">How It Ends</p>
+    <h2 class="reveal">When the timer goes, let it settle. Do not process it.</h2>
+    <p class="reveal">The person speaking finishes their one communication. The listener makes sure they have understood it and gets to Thank you. The Dyad is complete.</p>
+    <div class="pull-quote reveal">
+      <p>"You have added the coffee and the water and stirred everything up. The grounds are floating everywhere. You do not need to do something with them straight away. Let them settle."</p>
+    </div>
+    <p class="reveal">Acknowledging the experience is welcome, <em>wow, that went deep.</em> What does not belong here is <em>when you said that thing about</em>, or defending, correcting, or challenging what your partner revealed. Turning the fifteen minutes into a discussion afterwards would undo the safety of the whole structure. This is the second layer of trust: what I reveal in the Dyad will not be used against me once it ends.</p>
+    <p class="reveal">If something stays with you, ask for consent to reopen it, later, as its own conversation:</p>
+    <div class="script-quote reveal">Something from our Dyad has stayed with me. Are you open to talking about it?</div>
   </section>
 
   <!-- PULL QUOTE -->
