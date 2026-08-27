@@ -449,17 +449,6 @@
 
   <div class="photoband" style="background-image:url('https://feelfullyyou.com/touch-sequin-arm.jpg')"></div>
 
-  <section class="rband green">
-    <div class="rin" style="text-align:center">
-      <div class="reyebrow" style="justify-content:center">Where I'd have you start</div>
-      <div style="width:100%;height:clamp(160px,30vw,220px);border-radius:12px;background:url('https://feelfullyyou.com/one-touch-hero.jpg') center 30%/cover no-repeat;margin:0 0 22px;box-shadow:0 12px 30px -18px rgba(13,53,53,.45)"></div>
-      <h2 class="bandhead">Now you know your stack. <span class="termname">One Touch</span> is where you learn to read it in your body.</h2>
-      <p class="bandtext" style="margin:0 auto 18px;max-width:48ch">Seven days to feel these layers, not just know them: the safety anchor that opens every session, what opens you and what braces you, plus the Bonus Call and the <span class="termname">One Touch</span> Cards.</p>
-      <p class="bandtext" style="margin:0 auto 18px"><strong><span class="termname">One Touch</span> &middot; 7 days + 2 bonuses &middot; &pound;97</strong></p>
-      <a class="btn pulse" href="/one-touch" style="margin-top:6px">Start One Touch</a>
-    </div>
-  </section>
-
   <section class="rband dark">
     <div class="rin">
       <div class="reyebrow" style="justify-content:center">The full picture</div>
@@ -508,16 +497,16 @@
       blurb:"My 12-week live group where women come home to their own body, their own sensation, and their own yes.",
       foryou:["Touch has gone quiet, careful, or routine","You feel less than you used to, and you want it back","You are ready to stop performing fine and actually land"],
       free:{title:"One Touch",blurb:"Seven days, your own hands, to feel your pattern instead of just knowing it. £97, and it's exactly where I'd have you begin.",href:"/one-touch",cta:"Start One Touch"}},
-    man:{tag:20994350,line:"The Touch Reset for Men",door:"One Touch",href:"/one-touch",cta:"Show me One Touch",
-      blurb:"Seven days, your own hand. Learn to feel what you have been bracing against, in your own body, before you reach for hers.",
+    man:{tag:20994350,line:"The Touch Reset for Men",door:"The Touch Reset",href:"/the-touch-reset",cta:"Show me The Touch Reset",
+      blurb:"My 12-week live group where men learn to feel what they have been bracing against, and close the distance before it becomes permanent.",
       foryou:["She gets quieter and you don't know why","You have read the books and done the listening","You want your body to catch up to the effort"],
       free:{title:"When She Goes Quiet",blurb:"The free guide to what her withdrawal is really telling you, and the first moves that reach her again.",href:"/when-she-goes-quiet",cta:"Get the free guide"}},
-    couple:{tag:20994351,line:"The Touch Reset for Couples",door:"The Beginning",href:"/the-beginning",cta:"Show me The Beginning",
+    couple:{tag:20994351,line:"The Touch Reset for Couples",door:"The Touch Reset",href:"/the-touch-reset",cta:"Show me The Touch Reset",
       blurb:"My deep container for two people who love each other and lost the language to reach each other.",
       foryou:["You are polite, you co-parent, you share a bed","The reaching between you has stopped landing","You want the spark back, and the safety underneath it"],
       free:{title:"One Touch",blurb:"Seven days, your own hands, before you bring anyone else in. £97.",href:"/one-touch",cta:"Start One Touch"}},
-    self:{tag:21000827,line:"The Touch Reset",door:"Work with me",href:"/work-with-me",cta:"See where to start",
-      blurb:"One method, three doors: for women, for men, for couples. Wherever touch went quiet, this is the way back.",
+    self:{tag:21000827,line:"The Touch Reset",door:"The Touch Reset",href:"/the-touch-reset",cta:"Show me The Touch Reset",
+      blurb:"My 12-week live group for changing the pattern, not just naming it. Wherever touch went quiet, this is the way back.",
       foryou:["Touch has gone quiet, careful, or routine","You've done the courses and the therapy and it still hasn't landed","You want the work that reaches the body, not just the mind"],
       free:{title:"One Touch",blurb:"Seven days, your own hands, to feel your pattern instead of just knowing it. £97.",href:"/one-touch",cta:"Start One Touch"}}
   };
@@ -611,8 +600,7 @@
   };
   var STAGE_CAUTION="The tool has to match the stage. A Stage 1 fix, a date night, a holiday, one good conversation, applied to a Stage 2 or 3 situation is usually what makes couples give up on each other.";
   var STAGE_TAGLINE={quiet:"Nothing dramatic. Just quiet.",brace:"My body knows before my mind does.",gone:"This is just how things are now.",fade:"It's not gone, it's just not lit up right now."};
-  var FREE_INTRO="<span class=\"termname\">One Touch</span> teaches you to read your body. Start here, at your own pace.";
-  var PAID_INTRO="<span class=\"termname\">One Touch</span> teaches you to read your body. <span class=\"termname\">The Touch Reset</span> is where we change the pattern.";
+  var PAID_INTRO="<span class=\"termname\">The Touch Reset</span> is my 12-week live method for changing the pattern, not just naming it.";
 
   /* QUESTIONS: pattern(4) H/F/A/S/C · pleasure(4) · lead/receive(3) */
   var QPAT=[
@@ -768,21 +756,13 @@
   }
 
   function paintPitch(a,st){
-    var useFree=(audience==='woman'||audience==='couple');
-    $('pIntro').innerHTML=useFree?FREE_INTRO:PAID_INTRO;
+    $('pIntro').innerHTML=PAID_INTRO;
     $('pLine').textContent=st.pitchLine;
-    if(useFree&&a.free){
-      $('pDoor').textContent=a.free.title;
-      $('pBlurb').textContent=a.free.blurb;
-      $('pForyouWrap').style.display='none';
-      $('pCta').textContent=a.free.cta;$('pCta').href=a.free.href;
-    }else{
-      $('pDoor').textContent=a.door;
-      $('pBlurb').textContent=a.blurb;
-      $('pForyouWrap').style.display='block';
-      fillLi($('pForyou'),a.foryou);
-      $('pCta').textContent=a.cta;$('pCta').href=a.href;
-    }
+    $('pDoor').textContent=a.door;
+    $('pBlurb').textContent=a.blurb;
+    $('pForyouWrap').style.display='block';
+    fillLi($('pForyou'),a.foryou);
+    $('pCta').textContent=a.cta;$('pCta').href=a.href;
   }
 
   function paintResult(){
