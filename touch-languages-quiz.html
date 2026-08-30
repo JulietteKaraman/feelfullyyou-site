@@ -371,7 +371,7 @@
       <form class="capture" id="capForm" autocomplete="on" style="max-width:420px;margin:26px auto 0;text-align:left">
         <input type="email" id="email" name="email" placeholder="you@email.com" required>
         <input type="text" class="hp" name="hp_field" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <button type="submit" class="btn block pulse" id="sendBtn">Reveal my stack</button>
+        <button type="submit" class="btn block pulse" id="sendBtn">Reveal my results</button>
         <p class="consent">Where the pattern comes from, and your practices for the week ahead, sent to your inbox to keep. Then my letters on touch, intimacy and coming back to your body. Leave any time.</p>
         <div class="msg" id="msg"></div>
       </form>
@@ -765,7 +765,7 @@
       window.scrollTo(0,0);revealBands();
       if(typeof gtag==='function')gtag('event','quiz_optin',{quiz:'touch_reset',pattern:result.pattern,pleasure:result.pleasure,audience:audience});
     }).catch(function(){
-      btn.disabled=false;btn.textContent='Reveal my stack';
+      btn.disabled=false;btn.textContent='Reveal my results';
       msg.className='msg err';msg.textContent='Something went wrong. Please try again.';
     });
   });
@@ -776,7 +776,7 @@
     stageSec.style.display='none';visionSec.style.display='none';
     var unlocked=$('unlockedContent');if(unlocked)unlocked.style.display='none';
     $('capForm').style.display='block';$('capForm').reset();$('msg').textContent='';
-    $('sendBtn').disabled=false;$('sendBtn').textContent='Reveal my stack';
+    $('sendBtn').disabled=false;$('sendBtn').textContent='Reveal my results';
     intro.style.display='block';window.scrollTo(0,0);
   });
 
