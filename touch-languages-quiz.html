@@ -305,12 +305,9 @@
       <section id="intro">
         <div class="intro-photo"></div>
         <div class="eyebrow">Free &middot; 5 minutes</div>
-        <p class="spine">Intimacy doesn't come back through spontaneity. It comes back through structure.</p>
-        <h1 class="qtitle">The Touch <span class="g">Reset</span> Quiz</h1>
-        <p class="qtag">Find out why touch stopped landing for you, and what actually helps.</p>
-        <p class="qlead">Real questions about your body. Not a personality test.</p>
+        <h1 class="qtitle">What's Your Touch <span class="g">Pattern?</span></h1>
+        <p class="qtag">Find out the Pattern that's running your body, what actually turns you on, and whether you're a natural leader or a receiver.</p>
         <div style="margin-top:34px"><button class="btn pulse" id="begin">Begin</button></div>
-        <p class="note">Answer from your body, not your history.</p>
       </section>
 
       <section id="stage" style="display:none">
@@ -326,11 +323,11 @@
 
       <section id="quiz" style="display:none">
         <div class="qrings" id="qrings">
-          <div class="ring" data-p="0">1</div><div class="ring" data-p="1">2</div><div class="ring" data-p="2">3</div>
+          <div class="ring" data-p="0">1</div><div class="ring" data-p="1">2</div>
         </div>
         <span class="phase" id="phase"></span>
         <span class="phaseSub" id="phaseSub"></span>
-        <div class="proghead"><span class="l"></span><span class="eyebrow" id="prog">01 / 11</span><span class="l"></span></div>
+        <div class="proghead"><span class="l"></span><span class="eyebrow" id="prog">01 / 09</span><span class="l"></span></div>
         <div class="track"><div class="bar" id="bar"></div></div>
         <h2 class="qtext" id="question"></h2>
         <div class="opts" id="opts"></div>
@@ -387,7 +384,6 @@
       <div class="stack">
         <div class="srow"><span class="slabel">Pleasure Language</span><span class="sval" id="sPleasure"></span></div>
         <div class="srow"><span class="slabel">Touch Pattern</span><span class="sval" id="sPattern"></span></div>
-        <div class="srow"><span class="slabel">In touch, you</span><span class="sval" id="sOri"></span></div>
       </div>
       <p class="idaffirm">None of it is a flaw. It is a set of brilliant adaptations, and every one of them can soften.</p>
       <p class="idaffirm" id="visionEcho" style="display:none"></p>
@@ -403,6 +399,7 @@
       <div style="max-width:300px;margin:0 auto;aspect-ratio:9/16;border-radius:14px;overflow:hidden;box-shadow:0 18px 44px -22px rgba(0,0,0,.55);background:#000">
         <iframe src="https://player.vimeo.com/video/1213257476" style="width:100%;height:100%;border:0;display:block" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" referrerpolicy="strict-origin-when-cross-origin" title="Your two-minute touch"></iframe>
       </div>
+      <p class="bandtext" style="margin:22px auto 0;max-width:44ch">Most people go too fast and call it passion. The body checks out the second it can't keep up, and calls that checking out disinterest. Slowing down enough to actually stay present feels unbearable at first, almost boring, sometimes worse than that. That discomfort is not a sign you're doing it wrong. It's the exact place most people quit, right before it starts to land.</p>
     </div>
   </section>
 
@@ -494,9 +491,7 @@
   var EMBLEM={
     Holder:'<svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="2.4"/><path d="M4 12a8 8 0 0 0 16 0"/></svg>',
     Flame:'<svg viewBox="0 0 24 24"><path d="M12 3c.5 3.5 4.5 5 4.5 9.5A4.5 4.5 0 0 1 12 17a4.5 4.5 0 0 1-4.5-4.5c0-2.2 1.3-3.4 2.4-4.8.4 1.9 1.8 2 1.8.6C11.7 6.8 10.8 5.7 12 3Z"/></svg>',
-    Armour:'<svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6z"/></svg>',
-    Signal:'<svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="1.6"/><path d="M8.5 9.5a5 5 0 0 0 0 7M15.5 9.5a5 5 0 0 1 0 7M6 7a8.5 8.5 0 0 0 0 12M18 7a8.5 8.5 0 0 1 0 12"/></svg>',
-    Current:'<svg viewBox="0 0 24 24"><path d="M3 10c3-4 6-4 9 0s6 4 9 0M3 15c3-4 6-4 9 0s6 4 9 0"/></svg>'
+    Armour:'<svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6z"/></svg>'
   };
 
   var PLEASURE={
@@ -513,7 +508,7 @@
       turnons:["The charge before a single touch","Eye contact that says everything","Teasing, space, the delicious almost","Being felt from across a room","A partner who slows right down and tunes in"],
       shadow:"You feel every off-note too. The smallest misattunement makes you brace and disappear up into your head, right at the moment you most want to be reached."},
     Kinky:{name:"The Kinky",short:"Kinky",
-      desc:"This is not about performance. It is about permission. What turns you on is not only the act, it is the dynamic underneath: power, trust, tension, a little taboo. You come alive in the unknown, in the pause before the command. This wiring is not dangerous. It is devotional.",
+      desc:"This isn't about performance, it's about permission. What turns you on is not only the act, it is the dynamic underneath: power, trust, tension, a little taboo. You come alive in the unknown, in the pause before the command. This wiring isn't dangerous, it's devotional.",
       turnons:["Power play, given or taken","Trust deep enough to hand over control","A little taboo, a little edge","Being told what to do, or telling them","Ritual, restraint, the charge of the unknown"],
       shadow:"You can hide this whole part of yourself for fear of being judged, and settle for a version you never wanted, quietly starving for a charge you never let yourself ask for."},
     Shapeshifter:{name:"The Shapeshifter",short:"Shapeshifter",
@@ -525,44 +520,24 @@
   var PATTERN={
     Holder:{name:"The Holder",short:"Holder",
       line:"You connect by giving and stay safe by serving. You hold everyone, and rarely let yourself be touched without earning it first.",
+      leads:"You lead by giving. Someone has to hold the room, and it's always you. Receiving without earning it first is the part that actually stretches you.",
       growth:"Your edge: to be held as fully as you hold everyone else, without having to earn a thing.",
       braces:["Being handed all the responsibility","Affection that arrives like an invoice","Being needed but never quite seen","Nobody ever asking what you need"]},
     Flame:{name:"The Flame",short:"Flame",
       line:"You learned early that staying safe meant softening your fire, your tone, your hunger. You dim to stay wanted.",
+      leads:"You tend to receive, quietly. Putting your own want forward first feels like too much heat, too soon, so you wait for it to be offered instead.",
       growth:"Your edge: to be wanted at full brightness, and never dim a watt of yourself again.",
       braces:["Shrinking so someone else stays comfortable","Being praised only for your softness","Being misread, and saying nothing","Desire that needs you smaller than you are"]},
     Armour:{name:"The Armour",short:"Armour",
       line:"You structured. Softness once meant exposure, so you lead with control and clarity, and it has kept you sovereign.",
+      leads:"You lead by controlling the terms. You'll initiate all day long, on your own timing. Being led, or caught receiving, is the part that costs you.",
       growth:"Your edge: to soften on your own terms, without losing an ounce of your strength.",
-      braces:["A fast, unpredictable approach","Tenderness that feels like a tactic","Being led before it feels safe","Being told to 'just relax'"]},
-    Signal:{name:"The Signal",short:"Signal",
-      line:"You stayed legible. You curate your truth and share the polished version, and it has made you easy to love.",
-      growth:"Your edge: to be met in the full, unedited truth of you, and watch it only draw people closer.",
-      braces:["Having to translate yourself to be understood","Performing 'I'm fine'","Connection that only wants the tidy version","Being 'too much' the moment you're real"]},
-    Current:{name:"The Current",short:"Current",
-      line:"You stay met by staying on. You bring the aliveness and keep the charge alive, and rooms come alive around you.",
-      growth:"Your edge: to be received as generously as you give, without carrying the current alone.",
-      braces:["Being the only source of the spark","Silence read as a threat","Giving that is not returned","Carrying the aliveness alone"]}
-  };
-
-  var ORI={
-    Leads:{badge:"You lead",word:"Lead",
-      meaning:"You set the pace. You orchestrate the pleasure, read the room, make the moment happen. It is magnetic, and it is a lot to carry on your own. Most couples do not break over love, they break over one person always steering while the other waits to be steered. Know this about yourself before it turns into exhaustion.",
-      edge:"Your growth is receiving. Being devoted to, without directing it. The turn-on you have been missing is being taken, not being the one who always takes.",
-      tonight:"Tonight, hand over the lead. Ask your partner to run the whole thing while you do nothing but receive. Say it out loud: “tonight I am not leading.” Notice how hard, and how good, it is to simply be met."},
-    Receives:{badge:"You receive",word:"Receive",
-      meaning:"You open, you soften, you let it wash over you. You receive beautifully, and you can wait a long time to be reached for. Waiting to be reached for only works while someone else keeps doing the reaching, and that always runs out eventually. Know this before the waiting turns into resentment.",
-      edge:"Your growth is leading, and asking. The turn-on you have been missing is naming what you want out loud and reaching first, instead of hoping they read your mind.",
-      tonight:"Tonight, make the first move. Say one specific thing you want, in plain words, before you are asked. Watch how the whole moment changes when your desire is the one leading."},
-    Switches:{badge:"You switch",word:"Switch",
-      meaning:"You flip. You can lead with fire or surrender completely, depending on how safe you feel and who is across from you. Your range is your gift. Without knowing this about yourself, the flip can happen to you instead of being something you choose.",
-      edge:"Your growth is choosing on purpose, rather than only reacting to the room. Lead when you want to lead. Receive when you want to receive. Both by choice.",
-      tonight:"Tonight, name your lane before you begin. “I want to lead” or “I want to be taken.” Choosing it out loud turns your flexibility into a choice you make, not just a reflex you fall into."}
+      braces:["A fast, unpredictable approach","Tenderness that feels like a tactic","Being led before it feels safe","Being told to 'just relax'"]}
   };
 
   var STAGE={
     quiet:{name:"The Quiet",kicker:"Where you are right now",
-      desc:"Touch is still happening between you. Nothing dramatic has broken. But something about it has gone flat, like you're moving past each other rather than toward each other. Usually this is a mismatch: you're reaching in a language the other person can't quite receive, and neither of you knew the languages existed.",
+      desc:"Touch is still happening between you. Nothing dramatic has gone wrong, but something about it has gone flat, like you're moving past each other rather than toward each other. Usually this is a mismatch: you're reaching in a language the other person can't quite receive, and neither of you knew the languages existed.",
       part:"Your stack above is Part 1 of The Touch Reset: meet your wiring. For The Quiet, that's often enough on its own. Read it together, and let it do the work.",
       pitchLine:"Whenever you're ready to go deeper"},
     brace:{name:"The Brace",kicker:"Where you are right now",
@@ -575,39 +550,34 @@
       pitchLine:"This is where all four parts meet, with support"},
     fade:{name:"The Fade",kicker:"Where you are right now",
       desc:"Nothing broke and nothing braces. Touch is still on offer, your body just doesn't reach for it anymore. The wanting went quiet before the touch did, so even when it's right there, there's no pull toward it, just a flat, polite yes. This gets mistaken for not caring. It's actually a body that stopped expecting anything from touch a long time ago.",
-      part:"Your stack above matters most here. This isn't a communication problem to talk through, it's a wanting that needs to be rebuilt in the body, in doses small enough that desire has room to show up again.",
+      part:"Your stack above matters most here. This isn't a communication pattern to talk through, it's a wanting that needs to be rebuilt in the body, in doses small enough that desire has room to show up again.",
       pitchLine:"Start small: let wanting have room again"}
   };
   var STAGE_CAUTION="The tool has to match the stage. A Stage 1 fix, a date night, a holiday, one good conversation, applied to a Stage 2 or 3 situation is usually what makes couples give up on each other.";
   var STAGE_TAGLINE={quiet:"Nothing dramatic. Just quiet.",brace:"My body knows before my mind does.",gone:"This is just how things are now.",fade:"It's not gone, it's just not lit up right now."};
   var PAID_INTRO="<span class=\"termname\">The Touch Reset</span> is my 12-week live method for changing the pattern, not just naming it.";
 
-  /* QUESTIONS: pattern(4) H/F/A/S/C · pleasure(4) · lead/receive(3) */
-  var QPAT=[
-    ["When someone offers to help you, your first instinct is to:",[["Wave it off. You are the one who helps.","H"],["Accept quietly, and make sure you are no trouble.","F"],["Politely decline. You have it handled.","A"],["Explain exactly what would and would not be useful.","S"],["Turn it into something warmer and bigger than the small thing offered.","C"]]],
-    ["The hardest thing for you to receive is:",[["Care, with nothing expected back.","H"],["Full, undimmed desire or attention.","F"],["Tenderness that asks you to soften.","A"],["Being loved in a mess you have not tidied.","S"],["Aliveness you did not have to generate.","C"]]],
-    ["Under stress, you:",[["Over-function. You hold everyone.","H"],["Shrink, smooth, keep the peace.","F"],["Take control, contain it, manage.","A"],["Get precise, explain, curate.","S"],["Do more, lead more, keep it moving.","C"]]],
-    ["In intimacy, you are most likely to:",[["Give with care, and receive best when you're the one in control.","H"],["Follow their lead and rarely name your own edge.","F"],["Lead and hold authority, and struggle to surrender.","A"],["Stay composed, rarely letting go fully into sensation.","S"],["Spark the aliveness and keep it moving, even when it isn't met.","C"]]]
-  ];
+  /* QUESTIONS: pleasure(5) Sensual/Sexual/Energetic/Kinky/Shapeshifter · pattern(4) H/F/A */
   var QPL=[
+    ["You peek in your partner's secret drawer. What are you secretly hoping to find?",[["Massage oil, candles, something unhurried.","Sensual"],["Nothing. Just proof they were thinking about you, right now.","Sexual"],["A note. Something that shows they noticed you.","Energetic"],["Rope, a blindfold, something that says \"try me.\"","Kinky"],["Everything, at once. The oils and the rope and the candle. Why would I only want one drawer?","Shapeshifter"]]],
     ["Which scene would you most want to be in?",[["A candlelit bath, silk, and someone undressing you slowly.","Sensual"],["Pushed against the wall the second the door shuts.","Sexual"],["A long, charged look held across a crowded room.","Energetic"],["Hands pinned above your head, a whispered command.","Kinky"],["One that keeps changing: tender, then wild, then slow.","Shapeshifter"]]],
     ["How do you most like to be kissed?",[["Slowly and softly, like you're being savoured.","Sensual"],["Deep and hungry, with no hesitation.","Sexual"],["Barely touching at first, all breath and almost.","Energetic"],["Held by the jaw, and told to keep still.","Kinky"],["Differently every time. Surprise me.","Shapeshifter"]]],
     ["The text that would turn you on most:",[["“The bath's run and the candles are lit. Come home.”","Sensual"],["“I can't stop thinking about your body.”","Sexual"],["“I felt you the second you walked in tonight.”","Energetic"],["“Be ready when I get home. Do as you're told.”","Kinky"],["“Tonight could go so many different ways…”","Shapeshifter"]]],
-    ["Your body opens most when&hellip;",[["There's beauty, and a touch that lingers.","Sensual"],["There's no hesitation, and real, felt want.","Sexual"],["There's presence, breath, and being truly felt.","Energetic"],["There's deep trust, a playful edge, and surprise.","Kinky"],["Nothing is off-limits and you can bring every side of you.","Shapeshifter"]]]
+    ["I've learned to hide parts of my desire because&hellip;",[["I've been told my pace or slowness is too much.","Sensual"],["If it isn't bold, clear, or hot, I assume it is me.","Sexual"],["My turn-on doesn't look like what others expect, so I stay quiet.","Energetic"],["People misread my need for play or edge, so I keep it to myself.","Kinky"],["I adapt to what they want instead of asking for what I need.","Shapeshifter"]]]
   ];
-  var QLR=[
-    ["When desire is in the air, you're the one who&hellip;",[["Makes the first move and sets the tone.","L"],["Waits to be reached for, and melts when you are.","R"],["Reads the moment and goes either way.","B"]]],
-    ["Your favourite version of sex is&hellip;",[["You driving, watching them come undone.","L"],["Being taken, not having to think at all.","R"],["Trading who's in charge back and forth.","B"]]],
-    ["Handing over control feels&hellip;",[["Hard. You'd rather hold the reins.","L"],["Like relief. Finally.","R"],["Fine, once the trust is really there.","B"]]]
+  var QPAT=[
+    ["Which of these is closest to how people would describe you?",[["The one everyone leans on.","H"],["The one who reads the room before they say a word.","F"],["The one who always has it handled.","A"]]],
+    ["Which text from a partner would actually get you, more than any grand gesture?",[["“I've got today. Just let me look after you for once.”","H"],["“Tell me the real version, not the tidy one. I want all of it.”","F"],["“Don't fix anything tonight. Just let me hold you.”","A"]]],
+    ["When a hand lands on you first, unprompted, no reason attached, your body&hellip;",[["Tenses, already scanning for what you owe back.","H"],["Lets in a filtered version. The real want stays quiet.","F"],["Braces half a second before it lets the touch in.","A"]]],
+    ["Someone at work says \"could you just quickly&hellip;\" You:",[["Say yes before they finish. You'll feel it in your shoulders later.","H"],["Have the stronger opinion and offer about half of it.","F"],["Handle it alone rather than say \"I'm overwhelmed\" out loud.","A"]]]
   ];
 
-  var ALL=[].concat(QPL,QPAT,QLR);
-  var TOTAL=ALL.length; // 11
-  function phaseFor(idx){ if(idx<4)return"Part one · how you protect touch"; if(idx<8)return"Part two · how you're turned on"; return"Part three · lead or receive"; }
+  var ALL=[].concat(QPL,QPAT);
+  var TOTAL=ALL.length; // 9
+  function phaseFor(idx){ if(idx<5)return"Part one · what turns you on"; return"Part two · how you protect touch"; }
   function phaseExplain(idx){
-    if(idx<4)return"What you do first, before you even decide to, when touch or care comes your way.";
-    if(idx<8)return"What lights up your body's own yes.";
-    return"Whether you drive the moment, or let it be driven.";
+    if(idx<5)return"What lights up your body's own yes.";
+    return"What you do first, before you even decide to, when touch or care comes your way.";
   }
 
   var i=0,answers=new Array(TOTAL).fill(null),locked=false,audience='self',context='self',identity='',stage='quiet',visionAnswer=null;
@@ -638,7 +608,7 @@
     locked=false;var q=ALL[i];
     $('phase').textContent=phaseFor(i);
     $('phaseSub').textContent=phaseExplain(i);
-    var pIdx=i<4?0:(i<8?1:2);
+    var pIdx=i<5?0:1;
     Array.prototype.forEach.call(document.querySelectorAll('#qrings .ring'),function(r,ri){r.classList.toggle('active',ri===pIdx);});
     $('question').innerHTML=q[0];
     $('prog').textContent=pad(i+1)+' / '+TOTAL;
@@ -677,39 +647,32 @@
   var result={pattern:'',pleasure:'',ori:''};
 
   function score(){
-    var pt={H:0,F:0,A:0,S:0,C:0};
-    for(var a=0;a<4;a++){var pai=answers[4+a];if(pai!=null)pt[QPAT[a][1][pai][1]]++;}
-    var PM={H:'Holder',F:'Flame',A:'Armour',S:'Signal',C:'Current'};
+    var pt={H:0,F:0,A:0};
+    for(var a=0;a<4;a++){var pai=answers[5+a];if(pai!=null)pt[QPAT[a][1][pai][1]]++;}
+    var PM={H:'Holder',F:'Flame',A:'Armour'};
     var pattern=PM[Object.keys(pt).sort(function(x,y){return pt[y]-pt[x];})[0]];
     var pl={Sensual:0,Sexual:0,Energetic:0,Kinky:0,Shapeshifter:0};
-    for(var c=0;c<4;c++){var pi=answers[c];if(pi!=null)pl[QPL[c][1][pi][1]]++;}
+    for(var c=0;c<5;c++){var pi=answers[c];if(pi!=null)pl[QPL[c][1][pi][1]]++;}
     var prim=[['Sensual',pl.Sensual],['Sexual',pl.Sexual],['Energetic',pl.Energetic],['Kinky',pl.Kinky]].sort(function(x,y){return y[1]-x[1];});
     var isShift = pl.Shapeshifter>=2 || prim[0][1]<=1;
     var pleasure=isShift?'Shapeshifter':prim[0][0];
-    var lr={L:0,R:0,B:0};
-    for(var d=0;d<3;d++){var li=answers[8+d];if(li!=null)lr[QLR[d][1][li][1]]++;}
-    var ori;
-    if(lr.B>lr.L && lr.B>lr.R)ori='Switches';
-    else if(lr.L===lr.R)ori='Switches';
-    else ori=(lr.L>lr.R)?'Leads':'Receives';
-    return {pattern:pattern,pleasure:pleasure,ori:ori};
+    return {pattern:pattern,pleasure:pleasure};
   }
 
   function doReveal(){
     result=score();
     quiz.style.display='none';funnel.style.display='none';
     resultPage.style.display='block';window.scrollTo(0,0);
-    if(typeof gtag==='function')gtag('event','quiz_complete',{quiz:'touch_reset',pattern:result.pattern,pleasure:result.pleasure,orientation:result.ori,audience:audience,stage:stage});
+    if(typeof gtag==='function')gtag('event','quiz_complete',{quiz:'touch_reset',pattern:result.pattern,pleasure:result.pleasure,audience:audience,stage:stage});
   }
 
   function fillList(el,arr,cls){el.innerHTML='';arr.forEach(function(t){var d=document.createElement('div');d.className=cls;d.textContent=t;el.appendChild(d);});}
   function fillLi(el,arr){el.innerHTML='';arr.forEach(function(t){var li=document.createElement('li');li.textContent=t;el.appendChild(li);});}
 
-  function buildTeaserStack(pl,pa,o){
+  function buildTeaserStack(pl,pa){
     var rows=[
       {label:'Pleasure Language',name:pl.name,text:pl.desc},
-      {label:'Touch Pattern',name:pa.name,text:pa.line},
-      {label:'In touch, you',name:o.badge,text:o.meaning}
+      {label:'Touch Pattern',name:pa.name,text:pa.line+' '+pa.leads}
     ];
     var wrap=$('teaserStack');wrap.innerHTML='';
     rows.forEach(function(r,idx){
@@ -736,13 +699,12 @@
   }
 
   function paintResult(){
-    var pl=PLEASURE[result.pleasure],pa=PATTERN[result.pattern],o=ORI[result.ori],a=AUD[audience]||AUD.woman,st=STAGE[stage];
+    var pl=PLEASURE[result.pleasure],pa=PATTERN[result.pattern],a=AUD[audience]||AUD.woman,st=STAGE[stage];
     $('emblem').innerHTML=EMBLEM[result.pattern];
     $('sPleasure').textContent=pl.short;
     $('sPattern').textContent=pa.short;
-    $('sOri').textContent=o.word;
-    buildTeaserStack(pl,pa,o);
-    $('rStageLine').textContent="Right now: "+st.name+" — "+STAGE_TAGLINE[stage];
+    buildTeaserStack(pl,pa);
+    $('rStageLine').textContent="Right now: "+st.name+", "+STAGE_TAGLINE[stage];
     var ve=$('visionEcho');
     if(ve){
       var v=VISION[visionAnswer];
@@ -772,8 +734,8 @@
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){msg.className='msg err';msg.textContent='Please enter a valid email.';return;}
     var btn=$('sendBtn');btn.disabled=true;btn.textContent='Revealing…';
     var audTag=(AUD[audience]||{}).tag;
-    var tags=[PATTERN_TAG[result.pattern],PLEASURE_TAG[result.pleasure],ORI_TAG[result.ori],audTag,ID_TAG[identity],STAGE_TAG[stage]].filter(function(t){return t;});
-    var stackFields={touch_pleasure:result.pleasure,touch_pattern:PATTERN[result.pattern].short,touch_orientation:ORI[result.ori].word.toLowerCase(),touch_stage:STAGE[stage].name,touch_vision:visionAnswer||''};
+    var tags=[PATTERN_TAG[result.pattern],PLEASURE_TAG[result.pleasure],audTag,ID_TAG[identity],STAGE_TAG[stage]].filter(function(t){return t;});
+    var stackFields={touch_pleasure:result.pleasure,touch_pattern:PATTERN[result.pattern].short,touch_stage:STAGE[stage].name,touch_vision:visionAnswer||''};
     var payload=JSON.stringify({email:email,tagIds:tags,sequenceIds:[PATTERN_SEQ[result.pattern],2821695].filter(Boolean),fields:stackFields,hp_field:$('capForm').hp_field.value});
     function attempt(n){
       return fetch('/.netlify/functions/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:payload})
@@ -786,7 +748,7 @@
       var unlocked=$('unlockedContent');if(unlocked)unlocked.style.display='block';
       var form=$('capForm');if(form)form.style.display='none';
       window.scrollTo(0,0);revealBands();
-      if(typeof gtag==='function')gtag('event','quiz_optin',{quiz:'touch_reset',pattern:result.pattern,pleasure:result.pleasure,orientation:result.ori,audience:audience});
+      if(typeof gtag==='function')gtag('event','quiz_optin',{quiz:'touch_reset',pattern:result.pattern,pleasure:result.pleasure,audience:audience});
     }).catch(function(){
       btn.disabled=false;btn.textContent='Reveal my stack';
       msg.className='msg err';msg.textContent='Something went wrong. Please try again.';
