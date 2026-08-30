@@ -44,6 +44,8 @@
   .glow{position:absolute;left:50%;bottom:-60px;transform:translateX(-50%);width:480px;height:300px;background:radial-gradient(closest-side,rgba(168,133,56,.20),rgba(168,133,56,0));pointer-events:none}
   .card-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity .35s ease;pointer-events:none}
   .card-bg.on{opacity:1}
+  .card-bg.on ~ .inner .qtext{color:#fefcfa;text-shadow:0 2px 14px rgba(0,0,0,.65),0 1px 3px rgba(0,0,0,.5)}
+  .card-bg.on ~ .inner .phaseSub{color:rgba(254,252,250,.78)}
   .inner{position:relative}
 
   .eyebrow{font-family:var(--body);font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-pale);font-weight:400}
