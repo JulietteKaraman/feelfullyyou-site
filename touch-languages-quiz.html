@@ -42,6 +42,8 @@
   main{flex:1;display:flex;align-items:center;justify-content:center;padding:44px 20px}
   .stage{position:relative;width:100%;max-width:600px;background:var(--teal);border-radius:18px;padding:46px 44px 40px;overflow:hidden;box-shadow:0 1px 0 rgba(168,133,56,.28) inset,0 30px 80px -40px rgba(0,0,0,.6)}
   .glow{position:absolute;left:50%;bottom:-60px;transform:translateX(-50%);width:480px;height:300px;background:radial-gradient(closest-side,rgba(168,133,56,.20),rgba(168,133,56,0));pointer-events:none}
+  .card-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity .35s ease;pointer-events:none}
+  .card-bg.on{opacity:1}
   .inner{position:relative}
 
   .eyebrow{font-family:var(--body);font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-pale);font-weight:400}
@@ -300,13 +302,14 @@
 <main id="funnel">
   <div class="stage">
     <div class="glow"></div>
+    <div class="card-bg" id="cardBg"></div>
     <div class="inner">
 
       <section id="intro">
         <div class="intro-photo"></div>
         <div class="eyebrow">Free &middot; 5 minutes</div>
         <h1 class="qtitle">What's Your Touch <span class="g">Pattern?</span></h1>
-        <p class="qtag">Your Pleasure Language is your way into pleasure. Your Touch Pattern is what you were conditioned into. Find out both.</p>
+        <p class="qtag">Uncover your Pleasure Language, the way you're actually wired for pleasure, and the Touch Pattern quietly deciding whether you can receive it.</p>
         <div style="margin-top:34px"><button class="btn pulse" id="begin">Begin</button></div>
       </section>
 
@@ -558,33 +561,29 @@
 
   /* QUESTIONS: pleasure(5) Sensual/Sexual/Energetic/Kinky/Shapeshifter · pattern(4) H/F/A */
   var QPL=[
-    ["I feel most alive when&hellip;",[["My body is slowly invited in with texture, scent, and soothing tone.","Sensual"],["They kiss me without hesitation. I want action, not warm-up.","Sexual"],["I can feel the space between us like a current, each breath, pause, glance.","Energetic"],["They look at me and say, \"Don't move.\" That's where the thrill lives.","Kinky"],["It begins one way and unfolds into something else entirely. That shift wakes me up.","Shapeshifter"]]],
-    ["The kind of presence that opens me is&hellip;",[["Sensory-rich and slow, like soft touch and warm light.","Sensual"],["Direct, bold, and unapologetic.","Sexual"],["Grounded, steady, and attuned to my rhythm.","Energetic"],["Edgy or commanding, when someone leads with intensity or play.","Kinky"],["A blend of presence, depth, and curiosity. If it's only one note, I drift.","Shapeshifter"]]],
-    ["When I feel fully at ease in intimacy, it's usually because&hellip;",[["The room feels soft. The textures, the scent, the music, they help me melt.","Sensual"],["They want me. Now, and I feel it in how they move.","Sexual"],["Their presence is clean and still. They meet me with attention, not pressure.","Energetic"],["The power dynamic shifts, and something unsaid comes into play.","Kinky"],["The atmosphere is alive, changing, layered, sensual, playful.","Shapeshifter"]]],
-    ["What draws me in and keeps me open is&hellip;",[["Texture. Scent. Sound. When the details are right, my whole body says yes.","Sensual"],["A bold move. Clear want. No fluff.","Sexual"],["A pause before contact. That space lights up everything.","Energetic"],["The unexpected. When I can't predict what comes next.","Kinky"],["Freedom to move between it all, without being boxed.","Shapeshifter"]]],
-    ["The moment I feel most turned on is&hellip;",[["When the lights are low, music is soft, and I feel held.","Sensual"],["When they undress slowly and let me feel their full want.","Sexual"],["When the gaze softens and they breathe with me.","Energetic"],["When they say, \"Look at me. Keep still.\" My whole body wakes up.","Kinky"],["When the moment shifts, unexpected, layered, and alive.","Shapeshifter"]]],
-    ["Physical intimacy lands most when&hellip;",[["The space is beautiful and held. My senses are alive.","Sensual"],["They don't hesitate. I feel wanted, and they act on it.","Sexual"],["The energy is slow and intentional. I soften before I'm touched.","Energetic"],["They create a spark of resistance or tension, then lead me through it.","Kinky"],["Each moment brings something new. No two encounters feel the same.","Shapeshifter"]]],
-    ["What excites me most is&hellip;",[["A warm atmosphere, soft textures, and attuned presence.","Sensual"],["Touch that shows real want, without needing a reason.","Sexual"],["Eye contact that lingers. Energy that builds without words.","Energetic"],["Being taken somewhere new, through edge, tease, command, or roleplay.","Kinky"],["When it's not just one tone, when everything I crave gets to land.","Shapeshifter"]]],
-    ["I feel most satisfied when&hellip;",[["I'm courted through touch, scent, and softness.","Sensual"],["There's clear, embodied desire. We don't overthink it when we go there.","Sexual"],["The tension builds slowly, through breath and gaze.","Energetic"],["They take control, tease, or give me instructions.","Kinky"],["We flow between desire, play, intensity, and presence.","Shapeshifter"]]],
-    ["I start checking out when&hellip;",[["The environment is off. No rhythm, no warmth, no attention to detail.","Sensual"],["There's too much build-up and no follow-through. I lose the heat.","Sexual"],["I'm not emotionally seen before touch begins. I collapse into shutdown.","Energetic"],["It stays too soft. I want to be pushed or led.","Kinky"],["The moment feels like a script. I say yes, but I'm not really there.","Shapeshifter"]]],
-    ["I disconnect when&hellip;",[["The mood is wrong, harsh light, cluttered space, no touch.","Sensual"],["There's no spark. If desire isn't felt clearly, I zone out.","Sexual"],["Someone skips emotional alignment and moves straight to touch. My body shuts down before it begins.","Energetic"],["There's no contrast, risk, or dynamic. I feel flat without it.","Kinky"],["The experience stays in one gear. I show up, but not fully.","Shapeshifter"]]],
-    ["I struggle to stay present when&hellip;",[["The space feels rushed or chaotic. I freeze and go into my head.","Sensual"],["It becomes about performance instead of real desire.","Sexual"],["They rush in without attunement. I disconnect even if I say yes.","Energetic"],["It's too safe or neutral. I need a challenge to engage.","Kinky"],["I'm only met in one part of me. I start performing instead of feeling.","Shapeshifter"]]],
-    ["The thing that frustrates me most in intimacy is&hellip;",[["Feeling rushed or unheld. I need time to soften.","Sensual"],["Losing the physical spark. If desire fades, I struggle to stay engaged.","Sexual"],["When the moment is all intensity and no pacing. I short-circuit.","Energetic"],["When there's no risk, surprise, or power play. It starts to feel flat.","Kinky"],["Being met in only one part of me. I'm there, but not fully felt.","Shapeshifter"]]],
-    ["I've learned to hide parts of my desire because&hellip;",[["I've been told my pace or slowness is too much.","Sensual"],["If it isn't bold, clear, or hot, I assume it is me.","Sexual"],["My turn-on doesn't look like what others expect, so I stay quiet.","Energetic"],["People misread my need for play or edge, so I keep it to myself.","Kinky"],["I adapt to what they want instead of asking for what I need.","Shapeshifter"]]],
-    ["My deepest pleasure comes when&hellip;",[["I'm led into sensation with slowness and care.","Sensual"],["We act on desire like it matters now. Not later.","Sexual"],["My partner reads my energy like a language.","Energetic"],["I feel owned, seen, and met in the dark corners too.","Kinky"],["I don't have to choose. I move through softness, depth, heat, and play.","Shapeshifter"]]]
+    ["Your partner walks up behind you when you least expect it. What actually happens in your body?",[["Everything slows down. I want them to take their time.","Sensual"],["I turn around and go straight for them. No waiting.","Sexual"],["I can feel them. The hairs on my arm stand up, and I've got goosebumps. I can feel their energy before they even touch me.","Energetic"],["My heart jumps. Part of me wants to see what they'll do next.","Kinky"],["Depends entirely on the day. Could go any of these ways.","Shapeshifter"]],"touch-neck-back.jpg"],
+    ["Someone finds the exact knot in your shoulder during a massage. What sound do you actually make?",[["A long, quiet exhale. I could stay right there for an hour.","Sensual"],["A groan I'm embarrassed about the second it's out.","Sexual"],["Nothing. I just go still and quiet.","Energetic"],["\"Harder.\" I ask for more before they've even let go.","Kinky"],["Depends entirely on the knot. Every one gets something different out of me.","Shapeshifter"]],"touch-bw.jpg"],
+    ["The hairdresser tips your head back into the sink and starts washing. What's happening in you?",[["I deeply relax into it, savour every moment, and a moan escapes my mouth. This might be my favourite five minutes of the month.","Sensual"],["Honestly, my mind wanders somewhere else entirely. I am wondering what their hands would feel like on my butt.","Sexual"],["I'm hyper-aware of the moment before she touches me, and the shampoo is a bit strong smelling. I can sense the hesitation in her fingers when she tests the water for the temperature.","Energetic"],["I like that my head is fully in their hands and I have no control over it, but maybe I wish she'd pull on my hair a bit more.","Kinky"],["I love it and fully melt into it, but I'd also love a bit more variety, maybe pulling my hair a bit, changing up the pressure, speed and temperature. \"Wouldn't it be cool if they added different scents too, and someone fed me strawberries at the same time?\"","Shapeshifter"]],"touch-scarf-silk-2.jpg"],
+    ["A dance partner puts a firm hand on your lower back to lead you. Your body:",[["Melts into it. I let them carry the whole thing.","Sensual"],["Wants to know exactly where this is going, right now.","Sexual"],["Reads the pressure of their hand like it's a whole sentence.","Energetic"],["Loves being told where to go without a word said.","Kinky"],["Follows differently depending on the song, honestly.","Shapeshifter"]],"touch-sequin-arm.jpg"],
+    ["Someone hugs you a few seconds longer than a normal hug should last. What happens?",[["I sink into it completely. I don't want to be the one who lets go first.","Sensual"],["My whole body wakes up, fast.","Sexual"],["I notice the exact second it goes from friendly to something else.","Energetic"],["Part of me wants to see how long they'll actually hold on.","Kinky"],["Depends who it is. Some hugs mean nothing, some mean everything.","Shapeshifter"]],"touch-heart-hands-bw.jpg"],
+    ["You open your partner's closet, secretly hoping to find&hellip;",[["A soft robe or blanket, something made for slow mornings together.","Sensual"],["Nothing hidden at all. Just you, wanting them the second they walk in.","Sexual"],["Something small and private, proof you're on their mind even when you're not there.","Energetic"],["A locked box, or something clearly kept just out of sight, on purpose.","Kinky"],["A mix of everything, different for whatever mood you catch them in.","Shapeshifter"]],"touch-lace-closet-bw.jpg"],
+    ["If you're honest with yourself, which word actually describes you in bed?",[["Attentive.","Sensual"],["Direct.","Sexual"],["Intense.","Energetic"],["Adventurous.","Kinky"],["Unpredictable.","Shapeshifter"]],"touch-grey-cloth.jpg"],
+    ["You've got fifteen minutes and a date morning ahead of you. Which one would you actually reach for?",[["Tell me what happens when I run one finger slowly down your spine, and just stop.","Sensual"],["Tell me what happens when I pull you in and kiss you before you've even said hello.","Sexual"],["Tell me what happens when I stand close enough that you can feel my breath, and I don't touch you at all.","Energetic"],["Tell me what happens when I stand behind you, pull you towards me, and tell you \"look down right now.\"","Kinky"],["Tell me what happens when I start touching you and change what I'm doing before you can predict it.","Shapeshifter"]],"cards-in-hands.jpg"]
   ];
   var QPAT=[
-    ["Which of these is closest to how people would describe you?",[["The one everyone leans on.","H"],["The one who reads the room before they say a word.","F"],["The one who always has it handled.","A"]]],
-    ["Which text from a partner would actually get you, more than any grand gesture?",[["“I've got today. Just let me look after you for once.”","H"],["“Tell me the real version, not the tidy one. I want all of it.”","F"],["“Don't fix anything tonight. Just let me hold you.”","A"]]],
-    ["When a hand lands on you first, unprompted, no reason attached, your body&hellip;",[["Tenses, already scanning for what you owe back.","H"],["Lets in a filtered version. The real want stays quiet.","F"],["Braces half a second before it lets the touch in.","A"]]],
-    ["Someone at work says \"could you just quickly&hellip;\" You:",[["Say yes before they finish. You'll feel it in your shoulders later.","H"],["Have the stronger opinion and offer about half of it.","F"],["Handle it alone rather than say \"I'm overwhelmed\" out loud.","A"]]]
+    ["Which of these is closest to how people would describe you?",[["The one everyone leans on.","H"],["The one who reads the room before they say a word.","F"],["The one who always has it handled.","A"]],"dyad-hands.jpg"],
+    ["Someone's clearly gone out of their way to take care of you today. Your first instinct is:",[["To immediately start thinking about how you'll pay it back.","H"],["To play it down. \"Oh, you really didn't have to.\"","F"],["To feel slightly uncomfortable being the one who's looked after, for once.","A"]],"touch-grey-chest.jpg"],
+    ["You're at the kitchen counter, deep in your own head, not expecting anything. Someone walks up and just puts a hand on your back, no words. What actually happens in you?",[["You immediately turn and ask if THEY'RE okay, before you've even registered what just happened to you.","H"],["You say \"oh, hi,\" automatically, smoothing the moment over before you've let yourself actually feel it.","F"],["You go still for a second before you let yourself lean into it, and you hope they didn't clock the pause.","A"]],"touchfingers.JPG"],
+    ["Someone at work says \"could you just quickly&hellip;\" before you've even sat down with your coffee. You:",[["Already said yes, you only realise it now as they walk away.","H"],["Say yes, then spend the rest of the afternoon replaying all the ways you could have said no.","F"],["Say you'll look at it later, on your own terms, and mean it.","A"]],null],
+    ["You've had the longest day. Which touch would you actually want right now?",[["Someone else taking care of ME, though I won't quite know what to do with it.","H"],["A hug that doesn't ask anything of me. I don't have to perform being fine.","F"],["Honestly, nobody touching me yet. Give me a minute to land on my own terms first.","A"]],"touch-cloth.jpg"],
+    ["What's the actual pattern that gets in the way of your own pleasure?",[["I'm too busy making sure they're having a good time to actually drop into my own.","H"],["I dial myself down before I even get close to the edge, out of pure habit.","F"],["I can't fully let go, because some part of me is always still in control.","A"]],"touch-robe-tie-bw.jpg"]
   ];
 
   var ALL=[].concat(QPL,QPAT);
-  var TOTAL=ALL.length; // 9
-  function phaseFor(idx){ if(idx<14)return"Part one · your way into pleasure"; return"Part two · how you were conditioned to give and receive touch"; }
+  var TOTAL=ALL.length; // 14
+  function phaseFor(idx){ if(idx<8)return"Part one · your way into pleasure"; return"Part two · how you were conditioned to give and receive touch"; }
   function phaseExplain(idx){
-    if(idx<14)return"What lights up your body's own yes.";
+    if(idx<8)return"What lights up your body's own yes.";
     return"What you do first, before you even decide to, when touch or care comes your way.";
   }
 
@@ -592,6 +591,13 @@
   var $=function(id){return document.getElementById(id);};
   var funnel=$('funnel'),intro=$('intro'),stageSec=$('stage'),quiz=$('quiz'),visionSec=$('vision'),reveal=$('reveal'),resultPage=$('resultPage');
   function pad(n){return n<10?'0'+n:''+n;}
+  var cardBg=$('cardBg');
+  function setCardBg(file){
+    if(!cardBg)return;
+    if(!file){cardBg.classList.remove('on');cardBg.style.backgroundImage='';return;}
+    cardBg.style.backgroundImage='linear-gradient(180deg, rgba(6,26,26,.55) 0%, rgba(6,26,26,.72) 100%), url(\''+file+'\')';
+    cardBg.classList.add('on');
+  }
   var VISION={
     understood:{key:'understood',echo:"it would help most if your partner actually understood what you need"},
     release:{key:'release',echo:"it would help most if you could let go without your mind running the whole time"},
@@ -614,9 +620,10 @@
 
   function renderQ(){
     locked=false;var q=ALL[i];
+    setCardBg(q[2]);
     $('phase').textContent=phaseFor(i);
     $('phaseSub').textContent=phaseExplain(i);
-    var pIdx=i<14?0:1;
+    var pIdx=i<8?0:1;
     Array.prototype.forEach.call(document.querySelectorAll('#qrings .ring'),function(r,ri){r.classList.toggle('active',ri===pIdx);});
     $('question').innerHTML=q[0];
     $('prog').textContent=pad(i+1)+' / '+TOTAL;
@@ -632,9 +639,9 @@
         Array.prototype.forEach.call(box.children,function(c){c.classList.remove('sel');});
         b.classList.add('sel');answers[i]=idx;
         setTimeout(function(){
-          if(i===1){quiz.style.display='none';stageSec.style.display='block';}
+          if(i===1){quiz.style.display='none';stageSec.style.display='block';setCardBg('touch-grey-cloth-2.jpg');}
           else if(i<TOTAL-1){i++;renderQ();}
-          else{quiz.style.display='none';visionSec.style.display='block';}
+          else{quiz.style.display='none';visionSec.style.display='block';setCardBg('touch-pulling-feet.jpg');}
         },300);
       });
       box.appendChild(b);
@@ -656,13 +663,13 @@
 
   function score(){
     var pt={H:0,F:0,A:0};
-    for(var a=0;a<4;a++){var pai=answers[14+a];if(pai!=null)pt[QPAT[a][1][pai][1]]++;}
+    for(var a=0;a<6;a++){var pai=answers[8+a];if(pai!=null)pt[QPAT[a][1][pai][1]]++;}
     var PM={H:'Holder',F:'Flame',A:'Armour'};
     var pattern=PM[Object.keys(pt).sort(function(x,y){return pt[y]-pt[x];})[0]];
     var pl={Sensual:0,Sexual:0,Energetic:0,Kinky:0,Shapeshifter:0};
-    for(var c=0;c<14;c++){var pi=answers[c];if(pi!=null)pl[QPL[c][1][pi][1]]++;}
+    for(var c=0;c<8;c++){var pi=answers[c];if(pi!=null)pl[QPL[c][1][pi][1]]++;}
     var prim=[['Sensual',pl.Sensual],['Sexual',pl.Sexual],['Energetic',pl.Energetic],['Kinky',pl.Kinky]].sort(function(x,y){return y[1]-x[1];});
-    var isShift = pl.Shapeshifter>=6 || prim[0][1]<=3;
+    var isShift = pl.Shapeshifter>=3 || prim[0][1]<=2;
     var pleasure=isShift?'Shapeshifter':prim[0][0];
     return {pattern:pattern,pleasure:pleasure};
   }
