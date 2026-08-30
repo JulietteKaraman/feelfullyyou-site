@@ -313,8 +313,8 @@
         <p class="note">Answer from your body, not your history.</p>
       </section>
 
-      <section id="stage">
-        <div class="eyebrow">First</div>
+      <section id="stage" style="display:none">
+        <div class="eyebrow">Before we go on</div>
         <h1>Where does this feel true right now?</h1>
         <div class="aud-opts">
           <button class="aud" data-stage="quiet">Touch still happens. Something about it just feels flat.<span>Nothing dramatic. Just quiet.</span></button>
@@ -601,7 +601,7 @@
     ["Handing over control feels&hellip;",[["Hard. You'd rather hold the reins.","L"],["Like relief. Finally.","R"],["Fine, once the trust is really there.","B"]]]
   ];
 
-  var ALL=[].concat(QPAT,QPL,QLR);
+  var ALL=[].concat(QPL,QPAT,QLR);
   var TOTAL=ALL.length; // 11
   function phaseFor(idx){ if(idx<4)return"Part one · how you protect touch"; if(idx<8)return"Part two · how you're turned on"; return"Part three · lead or receive"; }
   function phaseExplain(idx){
@@ -623,13 +623,13 @@
   };
 
   $('begin').addEventListener('click',function(){
-    intro.style.display='none';stageSec.style.display='block';
+    intro.style.display='none';quiz.style.display='block';renderQ();
     if(typeof gtag==='function')gtag('event','quiz_start',{quiz:'touch_reset'});
   });
   Array.prototype.forEach.call(document.querySelectorAll('#stage .aud'),function(b){
     b.addEventListener('click',function(){
       stage=b.getAttribute('data-stage');
-      stageSec.style.display='none';quiz.style.display='block';renderQ();
+      stageSec.style.display='none';quiz.style.display='block';i=2;renderQ();
       if(typeof gtag==='function')gtag('event','quiz_stage',{quiz:'touch_reset',stage:stage});
     });
   });
@@ -653,7 +653,11 @@
         if(locked)return;locked=true;
         Array.prototype.forEach.call(box.children,function(c){c.classList.remove('sel');});
         b.classList.add('sel');answers[i]=idx;
-        setTimeout(function(){if(i<TOTAL-1){i++;renderQ();}else{quiz.style.display='none';visionSec.style.display='block';}},300);
+        setTimeout(function(){
+          if(i===1){quiz.style.display='none';stageSec.style.display='block';}
+          else if(i<TOTAL-1){i++;renderQ();}
+          else{quiz.style.display='none';visionSec.style.display='block';}
+        },300);
       });
       box.appendChild(b);
     });
