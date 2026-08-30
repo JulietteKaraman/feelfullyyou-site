@@ -125,6 +125,7 @@
   .bandtext.dark{color:rgba(6,26,26,.86)}
 
   .rband.hero{padding:66px 24px 60px;text-align:center;background:linear-gradient(180deg,rgba(6,26,26,.30) 0%,rgba(6,26,26,.38) 40%,rgba(6,26,26,.68) 100%),url('https://feelfullyyou.com/touch-cloth.jpg') center 30%/cover no-repeat;background-color:var(--teal-deep)}
+  .rband.hero.introhero{background:linear-gradient(180deg,rgba(6,26,26,.32) 0%,rgba(6,26,26,.40) 45%,rgba(6,26,26,.76) 100%),url('touch-embrace-bw.jpg') center 20%/cover no-repeat;background-color:var(--teal-deep)}
   .rband.hero .rin{opacity:1;transform:none}
   /* eyebrow + row labels here are plain white on purpose, not gold, this band
      sits on a real photo, not a flat colour, and gold-on-photo reads as
@@ -299,19 +300,20 @@
 
 <div class="topbar"><a class="brand" href="/">Feel Fully <b>You</b></a></div>
 
-<main id="funnel">
+<section id="intro" class="rband hero introhero">
+  <div class="rin">
+    <div class="hero-eyebrow">Free &middot; 5 minutes</div>
+    <h1 class="idline">What's Your Touch <span class="g">Pattern?</span></h1>
+    <p class="idsub">Uncover your Pleasure Language, the way you're actually wired for pleasure, and the Touch Pattern quietly deciding whether you can receive it.</p>
+    <div style="margin-top:30px"><button class="btn pulse" id="begin">Begin</button></div>
+  </div>
+</section>
+
+<main id="funnel" style="display:none">
   <div class="stage">
     <div class="glow"></div>
     <div class="card-bg" id="cardBg"></div>
     <div class="inner">
-
-      <section id="intro">
-        <div class="intro-photo"></div>
-        <div class="eyebrow">Free &middot; 5 minutes</div>
-        <h1 class="qtitle">What's Your Touch <span class="g">Pattern?</span></h1>
-        <p class="qtag">Uncover your Pleasure Language, the way you're actually wired for pleasure, and the Touch Pattern quietly deciding whether you can receive it.</p>
-        <div style="margin-top:34px"><button class="btn pulse" id="begin">Begin</button></div>
-      </section>
 
       <section id="stage" style="display:none">
         <div class="eyebrow">Before we go on</div>
@@ -562,7 +564,7 @@
   /* QUESTIONS: pleasure(5) Sensual/Sexual/Energetic/Kinky/Shapeshifter · pattern(4) H/F/A */
   var QPL=[
     ["Your partner walks up behind you when you least expect it. What actually happens in your body?",[["Everything slows down. I want them to take their time.","Sensual"],["I turn around and go straight for them. No waiting.","Sexual"],["I can feel them. The hairs on my arm stand up, and I've got goosebumps. I can feel their energy before they even touch me.","Energetic"],["My heart jumps. Part of me wants to see what they'll do next.","Kinky"],["Depends entirely on the day. Could go any of these ways.","Shapeshifter"]],"touch-neck-back.jpg"],
-    ["Someone finds the exact knot in your shoulder during a massage. What sound do you actually make?",[["\"Harder.\" I ask for more before they've even let go.","Kinky"],["A long, quiet exhale. I could stay right there for an hour.","Sensual"],["Depends entirely on the knot. Every one gets something different out of me.","Shapeshifter"],["A groan I'm embarrassed about the second it's out.","Sexual"],["Nothing. I just go still and quiet.","Energetic"]],"touch-bw.jpg"],
+    ["Someone finds the exact knot in your shoulder during a massage. What sound do you actually make?",[["\"Harder.\" I ask for more before they've even let go.","Kinky"],["A long, quiet exhale, then a slow moan. My body is lit up. I could stay right there for an hour.","Sensual"],["Depends entirely on the knot. Every one gets something different out of me.","Shapeshifter"],["A groan, but I'm already thinking about where this could go.","Sexual"],["Nothing. I just go still and quiet, or ask her to go lighter.","Energetic"]],"touch-bw.jpg"],
     ["The hairdresser tips your head back into the sink and starts washing. What's happening in you?",[["Honestly, my mind wanders somewhere else entirely. I am wondering what their hands would feel like on my butt.","Sexual"],["I'm hyper-aware of the moment before she touches me, and the shampoo is a bit strong smelling. I can sense the hesitation in her fingers when she tests the water for the temperature.","Energetic"],["I love it and fully melt into it, but I'd also love a bit more variety, maybe pulling my hair a bit, changing up the pressure, speed and temperature. \"Wouldn't it be cool if they added different scents too, and someone fed me strawberries at the same time?\"","Shapeshifter"],["I deeply relax into it, savour every moment, and a moan escapes my mouth. This might be my favourite five minutes of the month.","Sensual"],["I like that my head is fully in their hands and I have no control over it, but maybe I wish she'd pull on my hair a bit more.","Kinky"]],"touch-scarf-silk-2.jpg"],
     ["A dance partner puts a firm hand on your lower back to lead you. Your body:",[["Follows differently depending on the song, honestly.","Shapeshifter"],["Loves being told where to go without a word said.","Kinky"],["Melts into it. I let them carry the whole thing.","Sensual"],["Reads the pressure of their hand like it's a whole sentence.","Energetic"],["Wants to know exactly where this is going, right now.","Sexual"]],"touch-sequin-arm.jpg"],
     ["Someone hugs you a few seconds longer than a normal hug should last. What happens?",[["I notice the exact second it goes from friendly to something else.","Energetic"],["Depends who it is. Some hugs mean nothing, some mean everything.","Shapeshifter"],["Part of me wants to see how long they'll actually hold on.","Kinky"],["My whole body wakes up, fast.","Sexual"],["I sink into it completely. I don't want to be the one who lets go first.","Sensual"]],"touch-heart-hands-bw.jpg"],
@@ -607,7 +609,7 @@
   };
 
   $('begin').addEventListener('click',function(){
-    intro.style.display='none';quiz.style.display='block';renderQ();
+    intro.style.display='none';funnel.style.display='flex';quiz.style.display='block';renderQ();
     if(typeof gtag==='function')gtag('event','quiz_start',{quiz:'touch_reset'});
   });
   Array.prototype.forEach.call(document.querySelectorAll('#stage .aud'),function(b){
