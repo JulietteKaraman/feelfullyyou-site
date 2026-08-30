@@ -73,7 +73,8 @@
   .aud:active{transform:scale(.97);transition-duration:.1s}
   .aud span{display:block;font-family:var(--body);font-weight:300;font-size:.82rem;color:rgba(254,252,250,.6);margin-top:3px}
 
-  .qrings{display:flex;justify-content:center;gap:12px;margin-bottom:20px}
+  .qrings{display:none}
+  .phase{display:none}
   .qrings .ring{width:32px;height:32px;font-size:.82rem;opacity:.35;transition:opacity .3s,transform .3s,background .3s,color .3s}
   .qrings .ring.active{opacity:1;transform:scale(1.14)}
   .proghead{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:12px}
@@ -126,6 +127,7 @@
 
   .rband.hero{padding:66px 24px 60px;text-align:center;background:linear-gradient(180deg,rgba(6,26,26,.30) 0%,rgba(6,26,26,.38) 40%,rgba(6,26,26,.68) 100%),url('https://feelfullyyou.com/touch-cloth.jpg') center 30%/cover no-repeat;background-color:var(--teal-deep)}
   .rband.hero.introhero{background:linear-gradient(180deg,rgba(6,26,26,.32) 0%,rgba(6,26,26,.40) 45%,rgba(6,26,26,.76) 100%),url('touch-embrace-bw.jpg') center 20%/cover no-repeat;background-color:var(--teal-deep)}
+  @media(min-width:900px){.rband.hero.introhero{min-height:760px}}
   .rband.hero .rin{opacity:1;transform:none}
   /* eyebrow + row labels here are plain white on purpose, not gold, this band
      sits on a real photo, not a flat colour, and gold-on-photo reads as
@@ -136,6 +138,8 @@
   .emblem svg{width:42px;height:42px;stroke:var(--gold-pale);fill:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
   .idline{font-family:var(--display);font-weight:600;color:#fff;font-size:clamp(2.1rem,7vw,3.2rem);line-height:1.06;letter-spacing:-.02em;margin:14px auto 0}
   .idline .g{color:var(--gold-pale)}
+  .idline b{font-weight:700}
+  .idsub b{font-weight:700}
   .idsub{color:rgba(254,252,250,.82);font-weight:300;font-size:1rem;margin:14px auto 0;max-width:40ch;line-height:1.6}
 
   .stack{max-width:440px;margin:26px auto 0;text-align:left;background:rgba(6,26,26,.42);border:1px solid rgba(221,201,142,.34);border-radius:14px;overflow:hidden}
@@ -318,19 +322,20 @@
       <section id="stage" style="display:none">
         <span class="phase">Part one &middot; your way into pleasure</span>
         <span class="phaseSub">One honest check-in before you keep going.</span>
-        <h1>Which one sounds most like you lately?</h1>
+        <h2 class="qtext">Which one sounds most like you lately?</h2>
         <div class="aud-opts">
           <button class="aud" data-stage="quiet">Touch still happens and we are exploring a bit.<span>We don't always make time for it.</span></button>
           <button class="aud" data-stage="brace">I tense up half a second before I've even decided to.<span>My body answers before I do.</span></button>
           <button class="aud" data-stage="gone">I see my partner tense up, and I've stopped reaching for them a while ago.<span>This is just how it is.</span></button>
           <button class="aud" data-stage="fade">Touch just isn't something I'm that into anymore.<span>It's just&hellip; meh, and it doesn't quite land.</span></button>
+          <button class="aud" data-stage="reach">I want more touch than my partner, and I'm a bit frustrated by always having to initiate.<span>You're not imagining the gap.</span></button>
         </div>
       </section>
 
       <section id="reflect1" style="display:none">
         <span class="phase">Part one &middot; your way into pleasure</span>
         <span class="phaseSub">Not scored. Just notice it.</span>
-        <h1>The Pilates instructor holds your leg a little longer than the stretch needs, or the barista's fingers brush yours handing over your coffee. Heat rises before you can stop it. Your first thought is:</h1>
+        <h2 class="qtext">The Pilates instructor holds your leg a little longer than the stretch needs, or the barista's fingers brush yours handing over your coffee. Heat rises before you can stop it. Your first thought is:</h2>
         <div class="opts">
           <button type="button" class="opt" data-r1="partner">"Why not with my partner?"</button>
           <button type="button" class="opt" data-r1="body">"What is my body doing right now?"</button>
@@ -343,7 +348,7 @@
       <section id="reflect2" style="display:none">
         <span class="phase">Part two &middot; how you were conditioned to give and receive touch</span>
         <span class="phaseSub">Not scored. Just notice it.</span>
-        <h1>Your partner wraps their arms around you from behind, just holding you, nothing more. Be honest:</h1>
+        <h2 class="qtext">Your partner wraps their arms around you from behind, just holding you, nothing more. Be honest:</h2>
         <div class="opts">
           <button type="button" class="opt" data-r2="stay">I want it to stay exactly like this. Nothing more needed.</button>
           <button type="button" class="opt" data-r2="waiting">It's nice, but part of me is waiting for it to turn into something else.</button>
@@ -498,7 +503,7 @@
   var PLEASURE_TAG={Sensual:20944034,Sexual:20944035,Energetic:20944036,Kinky:20944037,Shapeshifter:20944038};
   var ORI_TAG={Leads:20994542,Receives:20994543,Switches:20994544};
   var ID_TAG={woman:21000823,man:21000824,nb:21000825,pref:21000826};
-  var STAGE_TAG={quiet:21270730,brace:21270733,gone:21270734,fade:22521332};
+  var STAGE_TAG={quiet:21270730,brace:21270733,gone:21270734,fade:22521332,reach:22906972};
   var AUD={
     woman:{tag:20994349,line:"The Touch Reset for Women",door:"The Touch Reset",href:"/the-touch-reset",cta:"Show me The Touch Reset",
       blurb:"My 12-week live group where women come home to their own body, their own sensation, and their own yes.",
@@ -581,10 +586,14 @@
     fade:{name:"The Fade",kicker:"Where you are right now",
       desc:"Nothing broke and nothing braces. Touch is still on offer, your body just doesn't reach for it anymore. The wanting went quiet before the touch did, so even when it's right there, there's no pull toward it, just a flat, polite yes. This gets mistaken for not caring. It's actually a body that stopped expecting anything from touch a long time ago.",
       part:"Your stack above matters most here. This isn't a communication pattern to talk through, it's a wanting that needs to be rebuilt in the body, in doses small enough that desire has room to show up again.",
-      pitchLine:"Start small: let wanting have room again"}
+      pitchLine:"Start small: let wanting have room again"},
+    reach:{name:"The Reach",kicker:"Where you are right now",
+      desc:"You're the one who initiates almost every time, and you're tired of it. You clearly want your partner. It's the wanting alone, every single time, that has started to feel less like desire and more like a job. The touch is there if you ask for it. The reaching isn't mutual, and some part of you has started keeping score.",
+      part:"Your stack above tells you what you're wired for. It won't close the gap by itself. Structured communication, Part 2, is where you actually say the thing, I don't want to be the only one who starts this, without it turning into a fight. That's what changes who reaches first.",
+      pitchLine:"Start here: you don't have to be the only one reaching"}
   };
   var STAGE_CAUTION="The tool has to match the stage. A Stage 1 fix, a date night, a holiday, one good conversation, applied to a Stage 2 or 3 situation is usually what makes couples give up on each other.";
-  var STAGE_TAGLINE={quiet:"Nothing dramatic. Just quiet.",brace:"My body knows before my mind does.",gone:"This is just how things are now.",fade:"It's not gone, it's just not lit up right now."};
+  var STAGE_TAGLINE={quiet:"Nothing dramatic. Just quiet.",brace:"My body knows before my mind does.",gone:"This is just how things are now.",fade:"It's not gone, it's just not lit up right now.",reach:"You're the one who keeps closing the gap."};
   var PAID_INTRO="<span class=\"termname\">The Touch Reset</span> is my 12-week live method for changing the pattern, not just naming it.";
 
   /* QUESTIONS: pleasure(5) Sensual/Sexual/Energetic/Kinky/Shapeshifter · pattern(4) H/F/A */
