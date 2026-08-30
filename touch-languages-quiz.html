@@ -327,13 +327,38 @@
         </div>
       </section>
 
+      <section id="reflect1" style="display:none">
+        <span class="phase">Part one &middot; your way into pleasure</span>
+        <span class="phaseSub">Not scored. Just notice it.</span>
+        <h1>The Pilates instructor holds your leg a little longer than the stretch needs, or the barista's fingers brush yours handing over your coffee. Heat rises before you can stop it. Your first thought is:</h1>
+        <div class="opts">
+          <button type="button" class="opt" data-r1="partner">"Why not with my partner?"</button>
+          <button type="button" class="opt" data-r1="body">"What is my body doing right now?"</button>
+          <button type="button" class="opt" data-r1="alive">"Holy shit, I'm alive."</button>
+          <button type="button" class="opt" data-r1="notmuch">"Not much."</button>
+          <button type="button" class="opt" data-r1="annoyed">"I'm annoyed."</button>
+        </div>
+      </section>
+
+      <section id="reflect2" style="display:none">
+        <span class="phase">Part two &middot; how you were conditioned to give and receive touch</span>
+        <span class="phaseSub">Not scored. Just notice it.</span>
+        <h1>Your partner wraps their arms around you from behind, just holding you, nothing more. Be honest:</h1>
+        <div class="opts">
+          <button type="button" class="opt" data-r2="stay">I want it to stay exactly like this. Nothing more needed.</button>
+          <button type="button" class="opt" data-r2="waiting">It's nice, but part of me is waiting for it to turn into something else.</button>
+          <button type="button" class="opt" data-r2="honest">I need us to actually say something honest right now, or it feels empty.</button>
+          <button type="button" class="opt" data-r2="still">I go a bit still. I never quite know what to do with just holding.</button>
+        </div>
+      </section>
+
       <section id="quiz" style="display:none">
         <div class="qrings" id="qrings">
           <div class="ring" data-p="0">1</div><div class="ring" data-p="1">2</div>
         </div>
         <span class="phase" id="phase"></span>
         <span class="phaseSub" id="phaseSub"></span>
-        <div class="proghead"><span class="l"></span><span class="eyebrow" id="prog">01 / 18</span><span class="l"></span></div>
+        <div class="proghead"><span class="l"></span><span class="eyebrow" id="prog">01 / 12</span><span class="l"></span></div>
         <div class="track"><div class="bar" id="bar"></div></div>
         <h2 class="qtext" id="question"></h2>
         <div class="opts" id="opts"></div>
@@ -564,35 +589,34 @@
 
   /* QUESTIONS: pleasure(5) Sensual/Sexual/Energetic/Kinky/Shapeshifter · pattern(4) H/F/A */
   var QPL=[
-    ["Your partner walks up behind you when you least expect it. What actually happens in your body?",[["Everything slows down. I want them to take their time.","Sensual"],["I turn around and go straight for them. No waiting.","Sexual"],["I can feel them. The hairs on my arm stand up, and I've got goosebumps. I can feel their energy before they even touch me.","Energetic"],["My heart jumps. Part of me wants to see what they'll do next.","Kinky"],["Depends entirely on the day. Could go any of these ways.","Shapeshifter"]],"touch-neck-back.jpg"],
     ["Someone finds the exact knot in your shoulder during a massage. What sound do you actually make?",[["\"Harder.\" I ask for more before they've even let go.","Kinky"],["A long, quiet exhale, then a slow moan. My body is lit up. I could stay right there for an hour.","Sensual"],["Depends entirely on the knot. Every one gets something different out of me.","Shapeshifter"],["A groan, but I'm already thinking about where this could go.","Sexual"],["Nothing. I just go still and quiet, or ask her to go lighter.","Energetic"]],"touch-bw.jpg"],
     ["The hairdresser tips your head back into the sink and starts washing. What's happening in you?",[["Honestly, my mind wanders somewhere else entirely. I am wondering what their hands would feel like on my butt.","Sexual"],["I'm hyper-aware of the moment before she touches me, and the shampoo is a bit strong smelling. I can sense the hesitation in her fingers when she tests the water for the temperature.","Energetic"],["I love it and fully melt into it, but I'd also love a bit more variety, maybe pulling my hair a bit, changing up the pressure, speed and temperature. \"Wouldn't it be cool if they added different scents too, and someone fed me strawberries at the same time?\"","Shapeshifter"],["I deeply relax into it, savour every moment, and a moan escapes my mouth. This might be my favourite five minutes of the month.","Sensual"],["I like that my head is fully in their hands and I have no control over it, but maybe I wish she'd pull on my hair a bit more.","Kinky"]],"touch-scarf-silk-2.jpg"],
     ["A dance partner puts a firm hand on your lower back to lead you. Your body:",[["Follows differently depending on the song, honestly.","Shapeshifter"],["Loves being told where to go without a word said.","Kinky"],["Melts into it. I let them carry the whole thing.","Sensual"],["Reads the pressure of their hand like it's a whole sentence.","Energetic"],["Wants to know exactly where this is going, right now.","Sexual"]],"touch-sequin-arm.jpg"],
-    ["Someone hugs you a few seconds longer than a normal hug should last. What happens?",[["I notice the exact second it goes from friendly to something else.","Energetic"],["Depends who it is. Some hugs mean nothing, some mean everything.","Shapeshifter"],["Part of me wants to see how long they'll actually hold on.","Kinky"],["My whole body wakes up, fast.","Sexual"],["I sink into it completely. I don't want to be the one who lets go first.","Sensual"]],"touch-heart-hands-bw.jpg"],
-    ["You're alone in the house. You open your partner's closet, half hoping to find something you shouldn't.",[["Nothing subtle. Something clearly bought to be used, not stored.","Sexual"],["Massage oil, half used, and a robe worn soft from wear.","Sensual"],["Rope. A flogger. Something that makes you wonder what you've been missing.","Kinky"],["A different drawer every time you look, candles one week, rope the next.","Shapeshifter"],["One object with no obvious use, except that it was clearly kept just for you.","Energetic"]],"touch-lace-closet-bw.jpg"],
-    ["If you're honest with yourself, which word actually describes you in bed?",[["Adventurous.","Kinky"],["Intense.","Energetic"],["Direct.","Sexual"],["Attentive.","Sensual"],["Unpredictable.","Shapeshifter"]],"touch-grey-cloth.jpg"],
-    ["You've got fifteen minutes and a date morning ahead of you. Which one would you actually reach for?",[["Tell me what happens when I stand close enough that you can feel my breath, and I don't touch you at all. What would you like to happen next?","Energetic"],["Tell me what happens when I stand behind you, pull you towards me, and tell you \"look down right now.\" What would you like to happen next?","Kinky"],["Tell me what happens when I set up the room with candles, low lighting and plush soft bedcovers, massage oil ready with your favourite oil. What would you like to happen next?","Sensual"],["Tell me what happens when I stand behind you, tell you to close your eyes and pull you towards me, and start by touching you off your heart space, then change the texture and pressure of what I'm doing before you can predict it. What would you like to happen next?","Shapeshifter"],["Tell me what happens when I pull you in and kiss you deeply and you can feel my desire for you. What would you like to happen next?","Sexual"]],"cards-in-hands.jpg"]
+    ["You open your partner's closet, half hoping to find:",[["Flogger, ropes, blindfold.","Kinky"],["Singing bowls and space, essential oils.","Energetic"],["Chocolate, candle, feathers, scented massage oil, soft blanket.","Sensual"],["Lingerie, a toy to be used together.","Sexual"],["All of the above.","Shapeshifter"]],"touch-lace-closet-bw.jpg"],
+    ["If you're honest with yourself, which word actually describes you and how you like touch?",[["Adventurous.","Kinky"],["Intense.","Energetic"],["Direct.","Sexual"],["Attentive.","Sensual"],["Unpredictable.","Shapeshifter"]],"touch-grey-cloth.jpg"],
+    ["Which style of touch has your body say \"yes, more please\"?",[["Charged and barely touching.","Energetic"],["Edgy and a little dangerous.","Kinky"],["Slow and deeply savoured.","Sensual"],["Different every single time.","Shapeshifter"],["Fast, hungry, and direct.","Sexual"]],null]
   ];
   var QPAT=[
-    ["Which of these is closest to how people would describe you?",[["The one everyone leans on.","H"],["The one who reads the room before they say a word.","F"],["The one who always has it handled.","A"]],"dyad-hands.jpg"],
-    ["Someone's clearly gone out of their way to take care of you today. Your first instinct is:",[["To immediately start thinking about how you'll pay it back.","H"],["To play it down. \"Oh, you really didn't have to.\"","F"],["To feel slightly uncomfortable being the one who's looked after. You'd rather be the one doing it.","A"]],"touch-grey-chest.jpg"],
+    ["When desire is in the air, you're usually the one who…",[["Makes sure they're taken care of first, then figures out what you want.","H"],["Waits to be reached for, and hopes they read it right.","F"],["Makes the first move and sets the tone.","A"]],"dyad-hands.jpg"],
+    ["Someone's clearly gone out of their way to take care of you today. You…",[["Start planning how you'll pay it back.","H"],["Wave it off. \"Oh, you really didn't have to.\"","F"],["Feel oddly exposed. You'd rather be the one doing it.","A"]],"touch-grey-chest.jpg"],
     ["You're at the kitchen counter, deep in your own head, not expecting anything. Someone walks up and just puts a hand on your back, no words. What actually happens in you?",[["You immediately turn and ask if THEY'RE okay, before you've even registered what just happened to you.","H"],["You say \"oh, hi,\" automatically, smoothing the moment over before you've let yourself actually feel it.","F"],["You go still for a second before you let yourself lean into it, and you hope they didn't clock the pause.","A"]],"touchfingers.JPG"],
     ["Someone at work says \"could you just quickly&hellip;\" before you've even sat down with your coffee. You:",[["Already said yes, you only realise it now as they walk away.","H"],["Say yes, then spend the rest of the afternoon replaying all the ways you could have said no.","F"],["Say you'll look at it later, on your own terms, and mean it.","A"]],null],
     ["You've had the longest day. Which touch would you actually want right now?",[["Someone else taking care of ME? I'd still probably ask if THEY'VE eaten first.","H"],["A hug that doesn't ask anything of me. My shoulders can actually drop.","F"],["Honestly, nobody touching me yet. Give me a minute to land on my own terms first.","A"]],"touch-cloth.jpg"],
-    ["What's the actual pattern that gets in the way of your own pleasure?",[["Making sure they're okay first. Always first.","H"],["Dialing myself down before I've even noticed I'm doing it.","F"],["Staying half in control, even mid-surrender.","A"]],"touch-robe-tie-bw.jpg"]
+    ["Handing over control feels…",[["Impossible. Someone has to keep things running.","H"],["Like relief, once someone else takes the wheel.","F"],["Hard. You'd rather hold the reins.","A"]],"touch-robe-tie-bw.jpg"]
   ];
 
   var ALL=[].concat(QPL,QPAT);
-  var TOTAL=ALL.length; // 14
-  function phaseFor(idx){ if(idx<8)return"Part one · your way into pleasure"; return"Part two · how you were conditioned to give and receive touch"; }
+  var TOTAL=ALL.length; // 12
+  var PLLEN=QPL.length; // 6
+  function phaseFor(idx){ if(idx<PLLEN)return"Part one · your way into pleasure"; return"Part two · how you were conditioned to give and receive touch"; }
   function phaseExplain(idx){
-    if(idx<8)return"What lights up your body's own yes.";
-    return"What you do first, before you even decide to, when touch or care comes your way.";
+    if(idx<PLLEN)return"What lights up your body's own yes.";
+    return"What you reach for first, and how in control you need to feel, when touch comes your way.";
   }
 
-  var i=0,answers=new Array(TOTAL).fill(null),locked=false,audience='self',context='self',identity='',stage='quiet',visionAnswer=null;
+  var i=0,answers=new Array(TOTAL).fill(null),locked=false,audience='self',context='self',identity='',stage='quiet',visionAnswer=null,reflect1Answer=null,reflect2Answer=null;
   var $=function(id){return document.getElementById(id);};
-  var funnel=$('funnel'),intro=$('intro'),stageSec=$('stage'),quiz=$('quiz'),visionSec=$('vision'),reveal=$('reveal'),resultPage=$('resultPage');
+  var funnel=$('funnel'),intro=$('intro'),stageSec=$('stage'),reflect1Sec=$('reflect1'),reflect2Sec=$('reflect2'),quiz=$('quiz'),visionSec=$('vision'),reveal=$('reveal'),resultPage=$('resultPage');
   function pad(n){return n<10?'0'+n:''+n;}
   var cardBg=$('cardBg');
   function setCardBg(file){
@@ -616,8 +640,26 @@
   Array.prototype.forEach.call(document.querySelectorAll('#stage .aud'),function(b){
     b.addEventListener('click',function(){
       stage=b.getAttribute('data-stage');
-      stageSec.style.display='none';quiz.style.display='block';i=2;renderQ();
+      stageSec.style.display='none';quiz.style.display='block';i=4;renderQ();
       if(typeof gtag==='function')gtag('event','quiz_stage',{quiz:'touch_reset',stage:stage});
+    });
+  });
+  Array.prototype.forEach.call(document.querySelectorAll('#reflect1 .opt'),function(b){
+    b.addEventListener('click',function(){
+      reflect1Answer=b.getAttribute('data-r1');
+      Array.prototype.forEach.call(document.querySelectorAll('#reflect1 .opt'),function(c){c.classList.remove('sel');});
+      b.classList.add('sel');
+      if(typeof gtag==='function')gtag('event','quiz_reflect1',{quiz:'touch_reset',reflect1:reflect1Answer});
+      setTimeout(function(){reflect1Sec.style.display='none';quiz.style.display='block';i=2;renderQ();},300);
+    });
+  });
+  Array.prototype.forEach.call(document.querySelectorAll('#reflect2 .opt'),function(b){
+    b.addEventListener('click',function(){
+      reflect2Answer=b.getAttribute('data-r2');
+      Array.prototype.forEach.call(document.querySelectorAll('#reflect2 .opt'),function(c){c.classList.remove('sel');});
+      b.classList.add('sel');
+      if(typeof gtag==='function')gtag('event','quiz_reflect2',{quiz:'touch_reset',reflect2:reflect2Answer});
+      setTimeout(function(){reflect2Sec.style.display='none';quiz.style.display='block';i=8;renderQ();},300);
     });
   });
 
@@ -626,7 +668,7 @@
     setCardBg(q[2]);
     $('phase').textContent=phaseFor(i);
     $('phaseSub').textContent=phaseExplain(i);
-    var pIdx=i<8?0:1;
+    var pIdx=i<PLLEN?0:1;
     Array.prototype.forEach.call(document.querySelectorAll('#qrings .ring'),function(r,ri){r.classList.toggle('active',ri===pIdx);});
     $('question').innerHTML=q[0];
     $('prog').textContent=pad(i+1)+' / '+TOTAL;
@@ -642,7 +684,9 @@
         Array.prototype.forEach.call(box.children,function(c){c.classList.remove('sel');});
         b.classList.add('sel');answers[i]=idx;
         setTimeout(function(){
-          if(i===1){quiz.style.display='none';stageSec.style.display='block';setCardBg('touch-grey-cloth-2.jpg');}
+          if(i===1){quiz.style.display='none';reflect1Sec.style.display='block';setCardBg(null);}
+          else if(i===3){quiz.style.display='none';stageSec.style.display='block';setCardBg('touch-grey-cloth-2.jpg');}
+          else if(i===7){quiz.style.display='none';reflect2Sec.style.display='block';setCardBg(null);}
           else if(i<TOTAL-1){i++;renderQ();}
           else{quiz.style.display='none';visionSec.style.display='block';setCardBg('touch-pulling-feet.jpg');}
         },300);
@@ -666,13 +710,13 @@
 
   function score(){
     var pt={H:0,F:0,A:0};
-    for(var a=0;a<6;a++){var pai=answers[8+a];if(pai!=null)pt[QPAT[a][1][pai][1]]++;}
+    for(var a=0;a<QPAT.length;a++){var pai=answers[PLLEN+a];if(pai!=null)pt[QPAT[a][1][pai][1]]++;}
     var PM={H:'Holder',F:'Flame',A:'Armour'};
     var pattern=PM[Object.keys(pt).sort(function(x,y){return pt[y]-pt[x];})[0]];
     var pl={Sensual:0,Sexual:0,Energetic:0,Kinky:0,Shapeshifter:0};
-    for(var c=0;c<8;c++){var pi=answers[c];if(pi!=null)pl[QPL[c][1][pi][1]]++;}
+    for(var c=0;c<PLLEN;c++){var pi=answers[c];if(pi!=null)pl[QPL[c][1][pi][1]]++;}
     var prim=[['Sensual',pl.Sensual],['Sexual',pl.Sexual],['Energetic',pl.Energetic],['Kinky',pl.Kinky]].sort(function(x,y){return y[1]-x[1];});
-    var isShift = pl.Shapeshifter>=3 || prim[0][1]<=2;
+    var isShift = pl.Shapeshifter>=2 || prim[0][1]<=1;
     var pleasure=isShift?'Shapeshifter':prim[0][0];
     return {pattern:pattern,pleasure:pleasure};
   }
@@ -776,7 +820,7 @@
   $('restart').addEventListener('click',function(){
     i=0;answers=new Array(TOTAL).fill(null);locked=false;visionAnswer=null;
     resultPage.style.display='none';funnel.style.display='flex';reveal.style.display='none';
-    stageSec.style.display='none';visionSec.style.display='none';
+    stageSec.style.display='none';visionSec.style.display='none';reflect1Sec.style.display='none';reflect2Sec.style.display='none';
     var unlocked=$('unlockedContent');if(unlocked)unlocked.style.display='none';
     $('capForm').style.display='block';$('capForm').reset();$('msg').textContent='';
     $('sendBtn').disabled=false;$('sendBtn').textContent='Reveal my results';
@@ -788,7 +832,7 @@
   if(new URLSearchParams(location.search).get('preview')){
     audience='self';identity='';context='self';stage='quiet';visionAnswer='specific';
     answers=answers.map(function(_,idx){return idx%3;});
-    intro.style.display='none';stageSec.style.display='none';quiz.style.display='none';
+    intro.style.display='none';stageSec.style.display='none';reflect1Sec.style.display='none';reflect2Sec.style.display='none';quiz.style.display='none';
     doReveal();
     // preview mode skips the email gate too, review only, never linked anywhere
     paintResult();
