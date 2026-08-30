@@ -304,7 +304,7 @@
 
       <section id="intro">
         <div class="intro-photo"></div>
-        <div class="eyebrow">Free &middot; 5 minutes &middot; women, men &amp; couples</div>
+        <div class="eyebrow">Free &middot; 5 minutes</div>
         <p class="spine">Intimacy doesn't come back through spontaneity. It comes back through structure.</p>
         <h1 class="qtitle">The Touch <span class="g">Reset</span> Quiz</h1>
         <p class="qtag">Find out why touch stopped landing for you, and what actually helps.</p>
@@ -678,11 +678,11 @@
 
   function score(){
     var pt={H:0,F:0,A:0,S:0,C:0};
-    for(var a=0;a<4;a++){if(answers[a]!=null)pt[QPAT[a][1][answers[a]][1]]++;}
+    for(var a=0;a<4;a++){var pai=answers[4+a];if(pai!=null)pt[QPAT[a][1][pai][1]]++;}
     var PM={H:'Holder',F:'Flame',A:'Armour',S:'Signal',C:'Current'};
     var pattern=PM[Object.keys(pt).sort(function(x,y){return pt[y]-pt[x];})[0]];
     var pl={Sensual:0,Sexual:0,Energetic:0,Kinky:0,Shapeshifter:0};
-    for(var c=0;c<4;c++){var pi=answers[4+c];if(pi!=null)pl[QPL[c][1][pi][1]]++;}
+    for(var c=0;c<4;c++){var pi=answers[c];if(pi!=null)pl[QPL[c][1][pi][1]]++;}
     var prim=[['Sensual',pl.Sensual],['Sexual',pl.Sexual],['Energetic',pl.Energetic],['Kinky',pl.Kinky]].sort(function(x,y){return y[1]-x[1];});
     var isShift = pl.Shapeshifter>=2 || prim[0][1]<=1;
     var pleasure=isShift?'Shapeshifter':prim[0][0];
