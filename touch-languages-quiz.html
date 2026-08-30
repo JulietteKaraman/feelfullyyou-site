@@ -313,28 +313,8 @@
         <p class="note">Answer from your body, not your history.</p>
       </section>
 
-      <section id="context">
+      <section id="stage">
         <div class="eyebrow">First</div>
-        <h1>You're taking this&hellip;</h1>
-        <div class="aud-opts">
-          <button class="aud" data-ctx="self">For myself<span>Coming home to my own body</span></button>
-          <button class="aud" data-ctx="partner">With my partner<span>Finding our way back to each other</span></button>
-        </div>
-      </section>
-
-      <section id="identity" style="display:none">
-        <div class="eyebrow">And</div>
-        <h1>You are&hellip;</h1>
-        <div class="aud-opts">
-          <button class="aud" data-id="woman">A woman</button>
-          <button class="aud" data-id="man">A man</button>
-          <button class="aud" data-id="nb">Non-binary</button>
-          <button class="aud" data-id="pref">Prefer not to say</button>
-        </div>
-      </section>
-
-      <section id="stage" style="display:none">
-        <div class="eyebrow">One more thing, before we find your stack</div>
         <h1>Where does this feel true right now?</h1>
         <div class="aud-opts">
           <button class="aud" data-stage="quiet">Touch still happens. Something about it just feels flat.<span>Nothing dramatic. Just quiet.</span></button>
@@ -567,15 +547,15 @@
 
   var ORI={
     Leads:{badge:"You lead",word:"Lead",
-      meaning:"You set the pace. You orchestrate the pleasure, read the room, make the moment happen. It is magnetic, and it is a lot to carry on your own.",
+      meaning:"You set the pace. You orchestrate the pleasure, read the room, make the moment happen. It is magnetic, and it is a lot to carry on your own. Most couples do not break over love, they break over one person always steering while the other waits to be steered. Know this about yourself before it turns into exhaustion.",
       edge:"Your growth is receiving. Being devoted to, without directing it. The turn-on you have been missing is being taken, not being the one who always takes.",
       tonight:"Tonight, hand over the lead. Ask your partner to run the whole thing while you do nothing but receive. Say it out loud: “tonight I am not leading.” Notice how hard, and how good, it is to simply be met."},
     Receives:{badge:"You receive",word:"Receive",
-      meaning:"You open, you soften, you let it wash over you. You receive beautifully, and you can wait a long time to be reached for.",
+      meaning:"You open, you soften, you let it wash over you. You receive beautifully, and you can wait a long time to be reached for. Waiting to be reached for only works while someone else keeps doing the reaching, and that always runs out eventually. Know this before the waiting turns into resentment.",
       edge:"Your growth is leading, and asking. The turn-on you have been missing is naming what you want out loud and reaching first, instead of hoping they read your mind.",
       tonight:"Tonight, make the first move. Say one specific thing you want, in plain words, before you are asked. Watch how the whole moment changes when your desire is the one leading."},
     Switches:{badge:"You switch",word:"Switch",
-      meaning:"You flip. You can lead with fire or surrender completely, depending on how safe you feel and who is across from you. Your range is your gift.",
+      meaning:"You flip. You can lead with fire or surrender completely, depending on how safe you feel and who is across from you. Your range is your gift. Without knowing this about yourself, the flip can happen to you instead of being something you choose.",
       edge:"Your growth is choosing on purpose, rather than only reacting to the room. Lead when you want to lead. Receive when you want to receive. Both by choice.",
       tonight:"Tonight, name your lane before you begin. “I want to lead” or “I want to be taken.” Choosing it out loud turns your flexibility into a choice you make, not just a reflex you fall into."}
   };
@@ -630,9 +610,9 @@
     return"Whether you drive the moment, or let it be driven.";
   }
 
-  var i=0,answers=new Array(TOTAL).fill(null),locked=false,audience='woman',context='self',identity='woman',stage='quiet',visionAnswer=null;
+  var i=0,answers=new Array(TOTAL).fill(null),locked=false,audience='self',context='self',identity='',stage='quiet',visionAnswer=null;
   var $=function(id){return document.getElementById(id);};
-  var funnel=$('funnel'),intro=$('intro'),contextSec=$('context'),identitySec=$('identity'),stageSec=$('stage'),quiz=$('quiz'),visionSec=$('vision'),reveal=$('reveal'),resultPage=$('resultPage');
+  var funnel=$('funnel'),intro=$('intro'),stageSec=$('stage'),quiz=$('quiz'),visionSec=$('vision'),reveal=$('reveal'),resultPage=$('resultPage');
   function pad(n){return n<10?'0'+n:''+n;}
   var VISION={
     understood:{key:'understood',echo:"it would help most if your partner actually understood what you need"},
@@ -643,22 +623,8 @@
   };
 
   $('begin').addEventListener('click',function(){
-    intro.style.display='none';contextSec.style.display='block';
+    intro.style.display='none';stageSec.style.display='block';
     if(typeof gtag==='function')gtag('event','quiz_start',{quiz:'touch_reset'});
-  });
-  Array.prototype.forEach.call(document.querySelectorAll('#context .aud'),function(b){
-    b.addEventListener('click',function(){
-      context=b.getAttribute('data-ctx');
-      contextSec.style.display='none';identitySec.style.display='block';
-    });
-  });
-  Array.prototype.forEach.call(document.querySelectorAll('#identity .aud'),function(b){
-    b.addEventListener('click',function(){
-      identity=b.getAttribute('data-id');
-      audience=(context==='partner')?'couple':(identity==='woman'?'woman':(identity==='man'?'man':'self'));
-      identitySec.style.display='none';stageSec.style.display='block';
-      if(typeof gtag==='function')gtag('event','quiz_audience',{quiz:'touch_reset',audience:audience,context:context,identity:identity});
-    });
   });
   Array.prototype.forEach.call(document.querySelectorAll('#stage .aud'),function(b){
     b.addEventListener('click',function(){
@@ -826,7 +792,7 @@
   $('restart').addEventListener('click',function(){
     i=0;answers=new Array(TOTAL).fill(null);locked=false;visionAnswer=null;
     resultPage.style.display='none';funnel.style.display='flex';reveal.style.display='none';
-    contextSec.style.display='none';identitySec.style.display='none';stageSec.style.display='none';visionSec.style.display='none';
+    stageSec.style.display='none';visionSec.style.display='none';
     var unlocked=$('unlockedContent');if(unlocked)unlocked.style.display='none';
     $('capForm').style.display='block';$('capForm').reset();$('msg').textContent='';
     $('sendBtn').disabled=false;$('sendBtn').textContent='Reveal my stack';
@@ -836,9 +802,9 @@
   // Quiet preview shortcut, add ?preview=1 to the URL to jump straight to a sample
   // results screen without retaking the quiz. Not linked anywhere, review use only.
   if(new URLSearchParams(location.search).get('preview')){
-    audience='woman';identity='woman';context='self';stage='quiet';visionAnswer='specific';
+    audience='self';identity='';context='self';stage='quiet';visionAnswer='specific';
     answers=answers.map(function(_,idx){return idx%3;});
-    intro.style.display='none';contextSec.style.display='none';identitySec.style.display='none';stageSec.style.display='none';quiz.style.display='none';
+    intro.style.display='none';stageSec.style.display='none';quiz.style.display='none';
     doReveal();
     // preview mode skips the email gate too, review only, never linked anywhere
     paintResult();
