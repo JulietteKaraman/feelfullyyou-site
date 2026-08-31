@@ -127,10 +127,6 @@
   .rband.hero{padding:66px 24px 60px;text-align:center;background:linear-gradient(180deg,rgba(6,26,26,.30) 0%,rgba(6,26,26,.38) 40%,rgba(6,26,26,.68) 100%),url('https://feelfullyyou.com/touch-cloth.jpg') center 30%/cover no-repeat;background-color:var(--teal-deep)}
   .rband.hero.introhero{background:linear-gradient(180deg,rgba(6,26,26,.32) 0%,rgba(6,26,26,.40) 45%,rgba(6,26,26,.76) 100%),url('touch-embrace-bw.jpg') center 20%/cover no-repeat;background-color:var(--teal-deep)}
   @media(min-width:900px){.rband.hero.introhero{min-height:760px}}
-  /* the results reveal band sits directly under the gate hero above it, which
-     already uses touch-cloth.jpg, so it needs its own photo or the two bands
-     read as the same image duplicated back to back */
-  .rband.hero.revealhero{background:linear-gradient(180deg,rgba(6,26,26,.34) 0%,rgba(6,26,26,.42) 45%,rgba(6,26,26,.74) 100%),url('https://feelfullyyou.com/touch-heart-hands-bw.jpg') center 32%/cover no-repeat;background-color:var(--teal-deep)}
   .rband.hero .rin{opacity:1;transform:none}
   /* eyebrow + row labels here are plain white on purpose, not gold, this band
      sits on a real photo, not a flat colour, and gold-on-photo reads as
@@ -413,19 +409,6 @@
 
   <div id="unlockedContent" style="display:none">
 
-  <section class="rband hero revealhero" style="padding-top:6px">
-    <div class="rin">
-      <div class="emblem" id="emblem"></div>
-      <div class="stack">
-        <div class="srow"><span class="slabel">Pleasure Language</span><span class="sval" id="sPleasure"></span></div>
-        <div class="srow"><span class="slabel">Touch Pattern</span><span class="sval" id="sPattern"></span></div>
-      </div>
-      <p class="idaffirm">None of it is a flaw. It is a set of brilliant adaptations, and every one of them can soften.</p>
-      <p class="idaffirm" id="visionEcho" style="display:none"></p>
-      <div class="scrollcue" id="reportSent">Check your inbox, it's on its way. First, one thing to do right now &darr;</div>
-    </div>
-  </section>
-
   <section class="rband dark" id="videoBand">
     <div class="rin" style="text-align:center">
       <div class="reyebrow" style="justify-content:center">Do this now</div>
@@ -434,7 +417,7 @@
       <div style="max-width:300px;margin:0 auto;aspect-ratio:9/16;border-radius:14px;overflow:hidden;box-shadow:0 18px 44px -22px rgba(0,0,0,.55);background:#000">
         <iframe src="https://player.vimeo.com/video/1213257476" style="width:100%;height:100%;border:0;display:block" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" referrerpolicy="strict-origin-when-cross-origin" title="Your two-minute touch"></iframe>
       </div>
-      <p class="bandtext" style="margin:22px auto 0;max-width:44ch">Most people go too fast and call it passion. The body checks out the second it can't keep up, and calls that checking out disinterest. Slowing down enough to actually stay present feels unbearable at first, almost boring, sometimes worse than that. That discomfort is not a sign you're doing it wrong. It's the exact place most people quit, right before it starts to land.</p>
+      <p class="bandtext" style="margin:22px auto 0;max-width:44ch">Most people go too fast and call it passion. The body checks out the second it can't keep up, and calls that checking out disinterest. Slowing down enough to actually stay present feels unbearable at first, almost boring, sometimes worse than that. That discomfort is the exact place most people quit, right before it starts to land.</p>
     </div>
   </section>
 
@@ -443,11 +426,8 @@
       <div class="reyebrow" style="justify-content:center">Your wiring, up close</div>
       <h2 class="bandhead">A first look at each layer.</h2>
       <div class="tstack" id="teaserStack"></div>
-      <p class="bandtext" id="rStageLine" style="text-align:center;font-style:italic;margin-top:22px;max-width:46ch;margin-left:auto;margin-right:auto"></p>
     </div>
   </section>
-
-  <div class="photoband" style="background-image:url('https://feelfullyyou.com/touch-chest.jpg')"></div>
 
   <section class="rband ochre" id="shareBand" style="display:none">
     <div class="rin" style="text-align:center">
@@ -459,12 +439,9 @@
     </div>
   </section>
 
-  <div class="photoband" style="background-image:url('https://feelfullyyou.com/touch-sequin-arm.jpg')"></div>
-
   <section class="rband dark">
     <div class="rin">
       <div class="reyebrow" style="justify-content:center">The full picture</div>
-      <p class="bandtext" style="text-align:center;max-width:52ch;margin:14px auto 30px">This quiz mapped your <span class="termname">Touch Pattern</span> and your <span class="termname">Pleasure Language</span>. Two more layers only show up live: your <span class="termname">Touch States</span>, moment to moment, and your <span class="termname">Touch Map&trade;</span>, exactly where each touch lands on your body. <span class="termname">The Touch Reset</span> is where you learn the whole system.</p>
       <div class="pitch">
         <p class="bandtext" id="pIntro" style="margin-bottom:22px"></p>
         <div class="pl" id="pLine"></div>
@@ -771,17 +748,7 @@
 
   function paintResult(){
     var pl=PLEASURE[result.pleasure],pa=PATTERN[result.pattern],a=AUD[audience]||AUD.woman,st=STAGE[stage];
-    $('emblem').innerHTML=EMBLEM[result.pattern];
-    $('sPleasure').textContent=pl.short;
-    $('sPattern').textContent=pa.short;
     buildTeaserStack(pl,pa);
-    $('rStageLine').textContent="Right now: "+st.name+", "+STAGE_TAGLINE[stage];
-    var ve=$('visionEcho');
-    if(ve){
-      var v=VISION[visionAnswer];
-      if(v){ve.textContent="Earlier you told us "+v.echo+". Keep that. It's exactly where this starts.";ve.style.display='block';}
-      else{ve.style.display='none';}
-    }
     paintPitch(a,st);
     $('shareBand').style.display='block';
   }
