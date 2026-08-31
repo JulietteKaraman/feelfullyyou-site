@@ -127,6 +127,10 @@
   .rband.hero{padding:66px 24px 60px;text-align:center;background:linear-gradient(180deg,rgba(6,26,26,.30) 0%,rgba(6,26,26,.38) 40%,rgba(6,26,26,.68) 100%),url('https://feelfullyyou.com/touch-cloth.jpg') center 30%/cover no-repeat;background-color:var(--teal-deep)}
   .rband.hero.introhero{background:linear-gradient(180deg,rgba(6,26,26,.32) 0%,rgba(6,26,26,.40) 45%,rgba(6,26,26,.76) 100%),url('touch-embrace-bw.jpg') center 20%/cover no-repeat;background-color:var(--teal-deep)}
   @media(min-width:900px){.rband.hero.introhero{min-height:760px}}
+  /* the results reveal band sits directly under the gate hero above it, which
+     already uses touch-cloth.jpg, so it needs its own photo or the two bands
+     read as the same image duplicated back to back */
+  .rband.hero.revealhero{background:linear-gradient(180deg,rgba(6,26,26,.34) 0%,rgba(6,26,26,.42) 45%,rgba(6,26,26,.74) 100%),url('https://feelfullyyou.com/touch-heart-hands-bw.jpg') center 32%/cover no-repeat;background-color:var(--teal-deep)}
   .rband.hero .rin{opacity:1;transform:none}
   /* eyebrow + row labels here are plain white on purpose, not gold, this band
      sits on a real photo, not a flat colour, and gold-on-photo reads as
@@ -410,7 +414,7 @@
 
   <div id="unlockedContent" style="display:none">
 
-  <section class="rband hero" style="padding-top:6px">
+  <section class="rband hero revealhero" style="padding-top:6px">
     <div class="rin">
       <div class="emblem" id="emblem"></div>
       <div class="stack">
@@ -437,7 +441,7 @@
 
   <section class="rband green">
     <div class="rin" style="text-align:center">
-      <div class="reyebrow" style="justify-content:center">Your stack, up close</div>
+      <div class="reyebrow" style="justify-content:center">Your wiring, up close</div>
       <h2 class="bandhead">A first look at each layer.</h2>
       <div class="tstack" id="teaserStack"></div>
       <p class="bandtext" id="rStageLine" style="text-align:center;font-style:italic;margin-top:22px;max-width:46ch;margin-left:auto;margin-right:auto"></p>
@@ -449,8 +453,8 @@
   <section class="rband ochre" id="shareBand" style="display:none">
     <div class="rin" style="text-align:center">
       <div class="reyebrow dark" style="justify-content:center">For the two of you</div>
-      <h2 class="bandhead" style="color:var(--teal-deep)">Now get your partner's stack.</h2>
-      <p class="bandtext dark" style="margin:0 auto 22px;max-width:48ch"><span class="termname">The Touch Reset</span> works best when you both know each other's wiring: what turns you on, what shuts you down, how you each need to be reached. Send them the quiz, then compare your stacks.</p>
+      <h2 class="bandhead" style="color:var(--teal-deep)">Now get your partner's wiring.</h2>
+      <p class="bandtext dark" style="margin:0 auto 22px;max-width:48ch"><span class="termname">The Touch Reset</span> works best when you both know each other's wiring: what turns you on, what shuts you down, how you each need to be reached. Send them the quiz, then compare your wiring.</p>
       <button class="btn" id="shareBtn" style="background:var(--teal-deep);color:var(--cream)">Copy the link to send</button>
       <p id="shareMsg" style="font-size:.86rem;color:var(--teal-deep);margin-top:12px;min-height:1.2em;font-weight:500"></p>
     </div>
@@ -570,23 +574,23 @@
   var STAGE={
     quiet:{name:"The Quiet",kicker:"Where you are right now",
       desc:"Touch is still happening between you. Nothing dramatic has gone wrong, but something about it has gone flat, like you're moving past each other rather than toward each other. Usually this is a mismatch: you're reaching in a language the other person can't quite receive, and neither of you knew the languages existed.",
-      part:"Your stack above is Part 1 of The Touch Reset: meet your wiring. For The Quiet, that's often enough on its own. Read it together, and let it do the work.",
+      part:"Your wiring above is Part 1 of The Touch Reset: meet what's running you. For The Quiet, that's often enough on its own. Read it together, and let it do the work.",
       pitchLine:"Whenever you're ready to go deeper"},
     brace:{name:"The Brace",kicker:"Where you are right now",
       desc:"The half-second before contact, your jaw sets, your back tightens, you already know how this goes before it's even started. Your body has learned to anticipate. This is the stage where you can look present from the outside and be somewhere else entirely on the inside.",
-      part:"Knowing your stack (Part 1) isn't enough here on its own. Structured communication comes next, Part 2: a container where you can say what's true without either of you having to fix it. Touch dates and rituals follow once that's in place.",
+      part:"Knowing your wiring (Part 1) isn't enough here on its own. Structured communication comes next, Part 2: a container where you can say what's true without either of you having to fix it. Touch dates and rituals follow once that's in place.",
       pitchLine:"Start here: structured communication first"},
     gone:{name:"The Gone",kicker:"Where you are right now",
       desc:"No single decision was made. Somewhere along the way your body made a quiet agreement, and nobody interrupted it in time. The distance has started to feel like the relationship itself, and there's grief underneath it, even if neither of you says the word.",
-      part:"This calls for all four parts of The Touch Reset, in order, with support: your stack, structured communication, structured touch dates, and daily rituals. It's recoverable. It's just not a one-part fix.",
+      part:"This calls for all four parts of The Touch Reset, in order, with support: your wiring, structured communication, structured touch dates, and daily rituals. It's recoverable. It's just not a one-part fix.",
       pitchLine:"This is where all four parts meet, with support"},
     fade:{name:"The Fade",kicker:"Where you are right now",
       desc:"Nothing broke and nothing braces. Touch is still on offer, your body just doesn't reach for it anymore. The wanting went quiet before the touch did, so even when it's right there, there's no pull toward it, just a flat, polite yes. This gets mistaken for not caring. It's actually a body that stopped expecting anything from touch a long time ago.",
-      part:"Your stack above matters most here. This isn't a communication pattern to talk through, it's a wanting that needs to be rebuilt in the body, in doses small enough that desire has room to show up again.",
+      part:"Your wiring above matters most here. This isn't a communication pattern to talk through, it's a wanting that needs to be rebuilt in the body, in doses small enough that desire has room to show up again.",
       pitchLine:"Start small: let wanting have room again"},
     reach:{name:"The Reach",kicker:"Where you are right now",
       desc:"You're the one who initiates almost every time, and you're tired of it. You clearly want your partner. It's the wanting alone, every single time, that has started to feel less like desire and more like a job. The touch is there if you ask for it. The reaching isn't mutual, and some part of you has started keeping score.",
-      part:"Your stack above tells you what you're wired for. It won't close the gap by itself. Structured communication, Part 2, is where you actually say the thing, I don't want to be the only one who starts this, without it turning into a fight. That's what changes who reaches first.",
+      part:"What's above tells you what you're wired for. It won't close the gap by itself. Structured communication, Part 2, is where you actually say the thing, I don't want to be the only one who starts this, without it turning into a fight. That's what changes who reaches first.",
       pitchLine:"Start here: you don't have to be the only one reaching"}
   };
   var STAGE_CAUTION="The tool has to match the stage. A Stage 1 fix, a date night, a holiday, one good conversation, applied to a Stage 2 or 3 situation is usually what makes couples give up on each other.";
@@ -785,7 +789,7 @@
   var shareBtn=$('shareBtn');
   if(shareBtn){shareBtn.addEventListener('click',function(){
     var link='https://feelfullyyou.com/touch-reset-quiz';
-    var txt="I did the Touch Reset quiz and got my stack. Do yours so we can see each other's: "+link;
+    var txt="I did the Touch Reset quiz and found my wiring. Do yours so we can compare: "+link;
     if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(function(){$('shareMsg').textContent='Copied. Paste it to your partner.';},function(){$('shareMsg').textContent=link;});}
     else{$('shareMsg').textContent=link;}
     if(typeof gtag==='function')gtag('event','quiz_share',{quiz:'touch_reset'});
