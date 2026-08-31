@@ -443,11 +443,9 @@
     <div class="rin">
       <div class="reyebrow" style="justify-content:center">The full picture</div>
       <div class="pitch">
-        <p class="bandtext" id="pIntro" style="margin-bottom:22px"></p>
-        <div class="pl" id="pLine"></div>
+        <p class="bandtext" id="pIntro" style="margin-bottom:18px"></p>
         <h2 id="pDoor"></h2>
         <p class="blurb" id="pBlurb"></p>
-        <div class="foryou" id="pForyouWrap"><div class="fyh">This is for you if&hellip;</div><ul id="pForyou"></ul></div>
         <a class="btn pulse" id="pCta" href="#">Show me</a>
       </div>
       <div class="again"><button id="restart">start again</button></div>
@@ -719,8 +717,8 @@
 
   function buildTeaserStack(pl,pa){
     var rows=[
-      {label:'Pleasure Language',name:pl.name,text:pl.desc},
-      {label:'Touch Pattern',name:pa.name,text:pa.line+' '+pa.leads}
+      {label:'Pleasure Language',name:pl.name},
+      {label:'Touch Pattern',name:pa.name}
     ];
     var wrap=$('teaserStack');wrap.innerHTML='';
     rows.forEach(function(r,idx){
@@ -730,19 +728,15 @@
       var lab=document.createElement('span');lab.className='tlabel';lab.textContent=r.label;
       head.appendChild(num);head.appendChild(lab);
       var nm=document.createElement('div');nm.className='tname';nm.textContent=r.name;
-      var p=document.createElement('p');p.textContent=r.text;
-      d.appendChild(head);d.appendChild(nm);d.appendChild(p);
+      d.appendChild(head);d.appendChild(nm);
       wrap.appendChild(d);
     });
   }
 
   function paintPitch(a,st){
     $('pIntro').innerHTML=PAID_INTRO;
-    $('pLine').textContent=st.pitchLine;
     $('pDoor').textContent=a.door;
     $('pBlurb').textContent=a.blurb;
-    $('pForyouWrap').style.display='block';
-    fillLi($('pForyou'),a.foryou);
     $('pCta').textContent=a.cta;$('pCta').href=a.href;
   }
 
