@@ -151,6 +151,14 @@
   .who-head{font-family:var(--display);font-weight:800;font-size:clamp(19px,2.6vw,24px);letter-spacing:.02em;text-transform:uppercase;color:var(--gold-deep);margin:52px 0 18px;line-height:1.3}
   .who-head:first-of-type{margin-top:44px}
 
+  /* PULL QUOTE: visual break inside long text sections */
+  .pull-quote{font-family:var(--display);font-weight:700;font-style:italic;font-size:clamp(23px,3.2vw,32px);color:var(--gold-deep);text-align:center;max-width:26ch;margin:54px auto;line-height:1.32;letter-spacing:-.015em}
+  .pull-quote::before{content:"";display:block;width:44px;height:2px;background:var(--gold);margin:0 auto 22px}
+  .touch-split.dark .pull-quote,.spine .pull-quote,.founding .pull-quote,.includes .pull-quote,.cta-final .pull-quote{color:var(--gold-pale)}
+  .spine .pull-quote::before,.founding .pull-quote::before,.cta-final .pull-quote::before{background:var(--gold-pale)}
+  .mid-photo{width:100%;overflow:hidden;line-height:0;margin:0 0 54px;border-radius:4px}
+  .mid-photo img{width:100%;height:auto;max-height:360px;object-fit:cover;display:block}
+
   /* ARC */
   .spine{padding:92px 0;border-top:1px solid var(--line);background:#b4a074}
   .spine .lede{max-width:60ch;color:rgba(254,252,250,.85);margin-bottom:14px}
@@ -311,34 +319,6 @@
   .touch-split.dark .wr-blueprint{color:#fff;font-style:italic;font-weight:700}
   .touch-split.dark .wr-big{color:#e8c96a;display:block;margin-top:14px}
 
-  /* PATTERNS, WHY THE TOUCH RESET, METHOD, copied from the-room-women-original.html */
-  .patterns{background:var(--teal);color:var(--cream);padding:90px 28px;border-top:1px solid var(--line-dark)}
-  .patterns .inner{max-width:var(--max);margin:0 auto}
-  .patterns .eyebrow{color:var(--gold-pale);margin-bottom:18px}
-  .patterns h2{color:var(--cream);max-width:24ch;margin-bottom:16px}
-  .patterns h2 .gp{color:var(--gold-pale)}
-  .patterns .lead{color:rgba(254,252,250,.74);max-width:58ch;font-size:var(--t-md);line-height:1.62;margin-bottom:46px}
-  .pattern-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;align-items:stretch}
-  @media(max-width:940px){.pattern-grid{grid-template-columns:repeat(2,1fr)}}
-  @media(max-width:640px){.pattern-grid{grid-template-columns:1fr}}
-  .pattern-card{background:rgba(255,255,255,.035);border:1px solid rgba(168,133,56,.42);border-top:3px solid var(--gold);border-radius:6px;padding:28px 24px;transition:background .25s,transform .25s}
-  .pattern-card:hover{background:rgba(255,255,255,.07);transform:translateY(-4px)}
-  .pattern-card .picon{width:52px;height:52px;margin-bottom:16px;opacity:1;filter:brightness(0) invert(1)}
-  .pattern-card .pname{font-family:var(--display);font-weight:700;font-size:27px;color:var(--gold-pale);letter-spacing:-.02em;line-height:1.05;margin-bottom:8px}
-  .pattern-card .pstrat{font-family:var(--body);font-size:11.5px;text-transform:uppercase;letter-spacing:.13em;color:var(--gold);font-weight:600;margin-bottom:16px}
-  .pattern-card p{font-size:14.5px;color:rgba(254,252,250,.82);line-height:1.62;margin:0 0 14px}
-  .pattern-card .ptouch{font-size:13.5px;color:rgba(254,252,250,.66);line-height:1.56;margin:0 0 14px;border-top:1px solid rgba(168,133,56,.24);padding-top:13px}
-  .pattern-card .ptl{color:var(--gold);font-weight:600;letter-spacing:.02em}
-  .pattern-card .ache{font-family:var(--display);font-style:italic;font-weight:500;font-size:15px;color:var(--gold-pale);line-height:1.4;margin:0 0 14px}
-  .pattern-card .possible{font-size:13.5px;color:rgba(254,252,250,.78);line-height:1.56;margin:0;border-top:1px solid rgba(168,133,56,.24);padding-top:13px}
-  .pattern-card .possl{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--gold);font-weight:600;margin:0 0 6px}
-  .pattern-card .slabel{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--gold);font-weight:600;margin:0 0 8px}
-  .pattern-card .signals{list-style:none;margin:0 0 16px;padding:12px 0 0;border-top:1px solid rgba(168,133,56,.24)}
-  .pattern-card .signals li{font-size:13px;color:rgba(254,252,250,.78);line-height:1.5;margin-bottom:8px;padding-left:14px;position:relative}
-  .pattern-card .signals li::before{content:"\00B7";position:absolute;left:0;color:var(--gold);font-weight:700}
-  .pattern-card .signals li:last-child{margin-bottom:0}
-  .patterns .pclose{font-family:var(--display);font-weight:600;font-size:clamp(20px,2.8vw,27px);color:var(--cream);max-width:34ch;margin:50px auto 30px;text-align:center;line-height:1.24;letter-spacing:-.015em}
-  .patterns .pcta{text-align:center}
   .why-room{padding:100px 0;background:var(--teal);color:var(--cream);text-align:center}
   .why-room .eyebrow{color:var(--gold-pale);margin-bottom:20px}
   .why-room h2{color:#fff;max-width:28ch;margin:0 auto 36px}
@@ -497,6 +477,7 @@
       Or to stop.
     </p>
     <p class="key-line reveal" style="margin-bottom:26px">That's what we're practising.</p>
+    <p class="pull-quote reveal">No flaw in you. No flaw in the relationship.</p>
     <p class="reveal" style="margin:0 0 26px;color:var(--brown);font-size:var(--t-base);line-height:1.8;max-width:56ch">
       Not once on a retreat, when everything feels amazing.<br>
       In small doses, repeatedly, inside ordinary life.<br>
@@ -542,6 +523,8 @@
     </p>
     <p class="reveal" style="margin-bottom:8px;max-width:60ch">Knowing when something doesn't feel right, and trusting yourself enough to listen.</p>
     <p class="reveal" style="margin-bottom:26px;max-width:60ch">Knowing when something <strong>does</strong> feel good, and letting yourself have more of it.</p>
+
+    <p class="pull-quote reveal">Knowing when something does feel good, and letting yourself have more of it.</p>
 
     <p class="reveal" style="margin-bottom:14px;max-width:60ch">You'll know more about your <strong>Pleasure Language</strong> and your <strong>Touch Languages</strong>, but more importantly, you'll know how to use that information in real life.</p>
     <p class="reveal" style="margin-bottom:6px;max-width:60ch">With yourself.</p>
@@ -628,63 +611,8 @@
   </div>
 </section>
 
-<!-- PHOTO BREAK: full width, splits Who This Is For from The Patterns -->
+<!-- PHOTO BREAK: full width, splits Who This Is For from the next section -->
 <div class="photo-break"><img src="touch-lace-bw.jpg" alt="The Touch Reset, structured touch" loading="lazy" decoding="async"></div>
-
-<!-- FIVE PATTERNS -->
-<section class="patterns">
-  <div class="inner">
-    <div class="eyebrow reveal">Underneath the situation</div>
-    <h2 class="reveal">Three situations. Three patterns. <span class="gp">One of them is yours.</span></h2>
-    <p class="lead reveal">Read them. One will describe you a little too well.</p>
-    <div class="pattern-grid">
-      <div class="pattern-card reveal">
-        <img class="picon" src="quiz-icons/pattern-holder.png" alt="" loading="lazy">
-        <div class="pname">The Holder</div>
-        <div class="pstrat">Give to stay connected</div>
-        <p>You reach first, you hold everyone, and quietly wonder why no one ever thinks to hold you.</p>
-        <p class="ptouch"><span class="ptl">With touch:</span> you give generously, and go blank the moment it's your turn to receive it.</p>
-        <p class="slabel">You'll recognise it when</p>
-        <ul class="signals">
-          <li>Someone asks what you need and you go blank.</li>
-          <li>You initiated every touch today.</li>
-        </ul>
-        <p class="ache">"I want to be held without having to earn it."</p>
-        <p class="possible"><span class="possl">What's possible</span>You stop tracking what you're owed and start receiving from overflow instead of obligation. Stillness becomes magnetic instead of empty.</p>
-      </div>
-      <div class="pattern-card reveal">
-        <img class="picon" src="quiz-icons/pattern-flame.png" alt="" loading="lazy">
-        <div class="pname">The Flame</div>
-        <div class="pstrat">Dim to stay digestible</div>
-        <p>There is fire in you. You learned to turn it down to stay wanted, and now you are quietly starving to be met at full heat.</p>
-        <p class="ptouch"><span class="ptl">With touch:</span> you only let it in once you have dimmed for it, so it reaches the softened version of you, never the full heat.</p>
-        <p class="slabel">You'll recognise it when</p>
-        <ul class="signals">
-          <li>You've got good at enjoying what arrives instead of asking for what you actually want.</li>
-          <li>Your laugh sometimes gets smaller halfway through. You don't always notice you did it.</li>
-        </ul>
-        <p class="ache">"I want to be wanted without shrinking."</p>
-        <p class="possible"><span class="possl">What's possible</span>Your yes gets to be as bright as it actually is. You stop apologising for wanting what you want.</p>
-      </div>
-      <div class="pattern-card reveal">
-        <img class="picon" src="quiz-icons/pattern-armour.png" alt="" loading="lazy">
-        <div class="pname">The Armour</div>
-        <div class="pstrat">Contain to stay safe</div>
-        <p>You stay composed and in control, because softness once cost you too much. You would rather hold than be held.</p>
-        <p class="ptouch"><span class="ptl">With touch:</span> you tense a beat before contact, and would rather give on your terms than be caught receiving.</p>
-        <p class="slabel">You'll recognise it when</p>
-        <ul class="signals">
-          <li>Compliments slide off. "You look amazing." "Thank you, yes." Already gone.</li>
-          <li>Someone tries to get close and something in you suddenly finds a reason to be busy.</li>
-        </ul>
-        <p class="ache">"I want to soften without collapsing."</p>
-        <p class="possible"><span class="possl">What's possible</span>You find out surrender isn't the opposite of strength, it's just a different kind. You get to let the right ones in.</p>
-      </div>
-    </div>
-    <p class="pclose reveal">Whichever one just described you, that is the pattern <span class="tr-name">The Touch Reset</span> is built to change.</p>
-    <div class="pcta reveal" style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap"><a href="#book" class="btn">Show me inside The Touch Reset</a><a href="https://tidycal.com/juliette2/the-touch-reset-call" class="btn" style="background:transparent;border:1px solid var(--teal);color:var(--teal)">Book a Call</a></div>
-  </div>
-</section>
 
 <!-- "BUT I'VE ALREADY DONE SO MUCH WORK ON THIS" -->
 <section class="touch-split dark alt">
@@ -741,6 +669,8 @@
       Not this kind of touch.
     </p>
     <p class="key-line reveal" style="margin-bottom:34px">That deserves to be listened to.</p>
+
+    <div class="mid-photo reveal"><img src="touch-lace-bw.jpg" alt="The Touch Reset, structured touch" loading="lazy" decoding="async"></div>
 
     <p class="reveal" style="max-width:60ch">But sometimes something else is happening.</p>
     <p class="reveal" style="max-width:60ch">Something gets activated.</p>
@@ -822,6 +752,8 @@
     <p class="reveal" style="max-width:60ch">We create structure around intimacy so you have space to actually notice yourself.</p>
     <p class="reveal" style="max-width:60ch">Not structure to make intimacy rigid.</p>
     <p class="reveal" style="font-family:var(--display);font-weight:700;font-size:clamp(19px,2.6vw,24px);color:var(--ink);line-height:1.35;margin-bottom:34px;max-width:60ch">Structure so connection doesn't depend on luck.</p>
+
+    <p class="pull-quote reveal">The noticing gives you information. The information gives you choice.</p>
 
     <p class="reveal" style="margin-bottom:6px;max-width:60ch"><strong class="wgold">We start with structured time.</strong></p>
     <p class="reveal" style="margin-bottom:26px;max-width:60ch">You know when you're beginning. You know when you're finishing. You don't have to wonder where something is going or how long it's going to last.</p>
@@ -1075,6 +1007,8 @@
     <p class="reveal" style="margin-bottom:18px;max-width:60ch">Something you can actually use.</p>
     <p class="reveal" style="margin-bottom:40px;max-width:60ch">You'll also have <strong>the community between calls,</strong> so when something comes up in real life, a reaction, a win, a question, an unexpected no, an oh my God, I finally understand what I've been doing, you have somewhere to bring it.</p>
 
+    <div class="mid-photo reveal"><img src="touch-scarf-silk.jpg" alt="The Touch Reset, weekly practice" style="object-position:center 20%" loading="lazy" decoding="async"></div>
+
     <h3 class="who-head reveal">The practices &amp; tools</h3>
     <p class="reveal" style="margin-bottom:18px;max-width:60ch">Throughout the 12 weeks, you'll build a collection of practices you can keep returning to, including:</p>
     <ul class="reveal" style="margin:0 0 30px;padding-left:22px;color:var(--brown);font-size:var(--t-base);line-height:1.7;max-width:56ch">
@@ -1159,6 +1093,8 @@
     <p class="reveal" style="max-width:60ch">When one person has a breakthrough, others learn through it too.</p>
     <p class="reveal" style="margin-bottom:8px;max-width:60ch">When somebody puts words to something you've felt but never been able to explain, you get to recognise:</p>
     <p class="reveal" style="margin-bottom:26px;max-width:60ch"><strong>"Oh. I'm not the only one."</strong></p>
+
+    <p class="pull-quote reveal">We get to bring some of that out of isolation and into the light.</p>
 
     <p class="reveal" style="max-width:60ch">And when we practise together, you're not there to compare yourself with anybody else.</p>
     <p class="reveal" style="max-width:60ch;margin-bottom:34px">You're there to notice <strong>yourself</strong>, where you might be holding a pattern, what your body is telling you, and what becomes possible when you practise something different.</p>
