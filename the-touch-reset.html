@@ -154,7 +154,7 @@
   /* PULL QUOTE: visual break inside long text sections */
   .pull-quote{font-family:var(--display);font-weight:700;font-style:italic;font-size:clamp(23px,3.2vw,32px);color:var(--gold-deep);text-align:center;max-width:26ch;margin:54px auto;line-height:1.32;letter-spacing:-.015em}
   .pull-quote::before{content:"";display:block;width:44px;height:2px;background:var(--gold);margin:0 auto 22px}
-  .touch-split.dark .pull-quote,.spine .pull-quote,.founding .pull-quote,.includes .pull-quote,.cta-final .pull-quote{color:var(--gold-pale)}
+  .touch-split.dark .pull-quote,.spine .pull-quote,.founding .pull-quote,.cta-final .pull-quote{color:var(--gold-pale)}
   .spine .pull-quote::before,.founding .pull-quote::before,.cta-final .pull-quote::before{background:var(--gold-pale)}
   .mid-photo{width:100%;overflow:hidden;line-height:0;margin:0 0 54px;border-radius:4px}
   .mid-photo img{width:100%;height:auto;max-height:360px;object-fit:cover;display:block}
@@ -179,16 +179,6 @@
   .node .day{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);font-weight:700}
   .node h3{margin:9px 0 10px;font-size:24px}
   .node p{color:var(--brown);font-size:16px;max-width:56ch}
-
-  /* INCLUDES */
-  .includes{padding:80px 0;background:var(--teal)}
-  .includes .eyebrow{color:var(--gold-pale)}
-  .includes h2{color:var(--cream)}
-  .includes-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px}
-  .inc-item{background:var(--cream);padding:28px 24px;border-left:3px solid var(--gold);box-shadow:0 8px 28px rgba(0,0,0,.18);border-radius:2px}
-  .inc-item .label{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:10px}
-  .inc-item h3{font-size:17px;margin-bottom:8px;color:var(--ink)}
-  .inc-item p{font-size:15px;color:var(--brown);margin:0;max-width:none}
 
   /* TESTIMONIAL CARDS */
   @import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap');
@@ -232,11 +222,7 @@
   .sticky-buy .nm{font-family:var(--body);font-size:15px;letter-spacing:.18em;text-transform:uppercase;color:var(--cream)}
   .sticky-buy .pr{font-size:13px;color:var(--gold-pale);font-weight:600}
 
-  @media(max-width:940px){
-    .includes-grid{grid-template-columns:1fr 1fr}
-  }
   @media(max-width:640px){
-    .includes-grid{grid-template-columns:1fr}
     .pay-options{flex-direction:column;align-items:center}
     .hero-img{width:100%;height:auto;max-height:760px;object-fit:cover;object-position:center 27%;display:block}
     .photo-break img{width:100%}
@@ -346,7 +332,7 @@
 
   /* BRAND NAME POP: every "The Touch Reset" mention in body copy gets this treatment */
   .tr-name{font-family:var(--display);font-weight:800;color:var(--gold-deep);letter-spacing:-.01em}
-  .touch-split.dark .tr-name,.patterns .tr-name,.founding .tr-name,.includes .tr-name,.cta-final .tr-name{color:var(--gold-pale)}
+  .touch-split.dark .tr-name,.founding .tr-name,.cta-final .tr-name{color:var(--gold-pale)}
   .spine .tr-name{color:var(--teal-deep)}
 </style>
 <link rel="icon" href="/favicon.ico" sizes="48x48">
@@ -1057,23 +1043,6 @@
       </ul>
     </div>
     <div class="photo reveal" style="background-image:url('touch-reset-bonuses-collage.jpg');background-size:contain;background-repeat:no-repeat;background-color:var(--cream)"></div>
-  </div>
-</section>
-
-<!-- THIS IS FOR YOU: bonuses -->
-<section class="includes" style="border-top:1px solid var(--line)">
-  <div class="wrap">
-    <div class="narrow" style="margin-bottom:0"><div class="eyebrow reveal" style="margin-bottom:12px">And this is for you</div><h2 class="reveal">Everything you leave with.</h2></div>
-    <div class="includes-grid">
-      <div class="inc-item reveal"><div class="label">Bonus</div><h3>Ritual Guide</h3><p>For building touch into a weekly ritual, not a task.</p></div>
-      <div class="inc-item reveal"><div class="label">Bonus</div><h3>The Cards</h3><p>475+ real prompts for communication and intimacy.</p></div>
-      <div class="inc-item reveal"><div class="label">Bonus</div><h3>Weekly Touch-In</h3><p>Not a check-in. A few minutes, every week, together.</p></div>
-      <div class="inc-item reveal"><div class="label">Bonus</div><h3>50 Touch Date Ideas</h3><p>Fun, creative, ready whenever you need one.</p></div>
-      <div class="inc-item reveal"><div class="label">Bonus</div><h3>Curated Touch Menu</h3><p>A menu of touch to choose from, no guessing.</p></div>
-      <div class="inc-item reveal"><div class="label">Bonus</div><h3>Curated Playlists</h3><p>The soundtrack, already chosen for you.</p></div>
-      <div class="inc-item reveal"><div class="label">Bonus</div><h3>Your Touch Map&trade;</h3><p>Yours from Stage 3, to keep and return to whenever you need it.</p></div>
-    </div>
-    <div class="reveal" style="text-align:center;margin-top:48px"><a href="https://tidycal.com/juliette2/the-touch-reset-call" class="btn">Book a Call</a></div>
   </div>
 </section>
 
