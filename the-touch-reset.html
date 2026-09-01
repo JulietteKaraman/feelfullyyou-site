@@ -125,6 +125,11 @@
   .thesis.band-teal .closer{color:var(--gold-pale)}
   .thesis.band-teal .key-line{color:var(--gold-pale)}
   .thesis.band-teal .tr-name{color:var(--gold-pale)}
+  .thesis.band-teal h2{color:#fff}
+  .thesis.band-teal .eyebrow{color:var(--gold-pale)}
+  .iso-split{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:center}
+  .iso-photo img{width:100%;height:100%;max-height:460px;object-fit:cover;border-radius:6px;box-shadow:0 14px 40px rgba(0,0,0,.25);display:block}
+  @media(max-width:760px){.iso-split{grid-template-columns:1fr;text-align:center}.iso-copy p{margin-left:auto;margin-right:auto}}
 
   /* PHOTO BREAK */
   .photo-break{width:100%;overflow:hidden;line-height:0}
@@ -683,26 +688,24 @@
 
 <!-- YOU DON'T HAVE TO DO THIS IN ISOLATION -->
 <section class="thesis band-teal">
-  <div class="narrow">
-    <div class="section-hero reveal">
+  <div class="narrow iso-split" style="max-width:980px">
+    <div class="iso-photo reveal">
       <img src="touch-grey-cloth.jpg" alt="The Touch Reset, you don't have to do this in isolation" loading="lazy" decoding="async">
-      <div class="sh-overlay">
-        <div>
-          <span class="sh-eyebrow">Why we do this in a group</span>
-          <h2 class="sh-h2">You don't have to do this in isolation.</h2>
-        </div>
-      </div>
     </div>
-    <p class="reveal" style="max-width:60ch">So much around intimacy, touch, desire and pleasure stays hidden.</p>
-    <p class="reveal" style="margin-bottom:22px;max-width:60ch">We think we're the only one.</p>
-    <p class="closer reveal" style="margin-bottom:34px">That's often where shame grows.</p>
+    <div class="iso-copy reveal">
+      <span class="eyebrow" style="display:block;margin-bottom:10px">Why we do this in a group</span>
+      <h2 style="margin-bottom:20px">You don't have to do this in isolation.</h2>
+      <p style="max-width:none">So much around intimacy, touch, desire and pleasure stays hidden.</p>
+      <p style="margin-bottom:22px;max-width:none">We think we're the only one.</p>
+      <p class="closer" style="margin-bottom:34px">That's often where shame grows.</p>
 
-    <p class="reveal" style="max-width:60ch;margin-bottom:22px">The beauty of doing this in a group is that when one person has a breakthrough, others learn through it too. You recognise: <strong>"Oh. I'm not the only one."</strong></p>
+      <p style="max-width:none;margin-bottom:22px">The beauty of doing this in a group is that when one person has a breakthrough, others learn through it too. You recognise: <strong>"Oh. I'm not the only one."</strong></p>
 
-    <p class="reveal" style="max-width:60ch">You're not there to compare.</p>
-    <p class="reveal" style="max-width:60ch;margin-bottom:22px"><strong>You're there to notice yourself.</strong></p>
+      <p style="max-width:none">You're not there to compare.</p>
+      <p style="max-width:none;margin-bottom:22px"><strong>You're there to notice yourself.</strong></p>
 
-    <p class="closer reveal">We learn together while discovering what is uniquely ours.</p>
+      <p class="closer">We learn together while discovering what is uniquely ours.</p>
+    </div>
   </div>
 </section>
 
