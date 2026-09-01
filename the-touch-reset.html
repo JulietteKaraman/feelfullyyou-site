@@ -165,17 +165,13 @@
   .spine .node .day{color:#fff}
   .spine .node h3{color:#fff}
   .spine .node p{color:#fff}
-  .spine .timeline::before{background:rgba(254,252,250,.25)}
-  .spine .node::before{background:rgba(254,252,250,.3);border-color:rgba(254,252,250,.5)}
-  .spine .node.in::before{background:#fff;border-color:#fff}
-  .timeline{position:relative;margin-left:20px;padding-left:78px}
-  .timeline::before{content:"";position:absolute;left:26px;top:6px;bottom:6px;width:2px;background:var(--line)}
-  .node{position:relative;padding:0 0 40px}
-  .node::before{display:none}
-  .stagenum{position:absolute;left:-78px;top:-6px;width:56px;height:56px;border-radius:50%;background:var(--teal-deep);color:var(--gold-pale);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:23px;font-weight:800;box-shadow:0 10px 22px -10px rgba(0,0,0,.4);border:2px solid rgba(254,252,250,.35)}
+  .stage-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin:0 auto 20px;max-width:900px}
+  .stage-card{position:relative;background:rgba(6,26,26,.14);border:1px solid rgba(254,252,250,.3);border-radius:6px;padding:32px 28px}
+  .stagenum{width:48px;height:48px;border-radius:50%;background:var(--teal-deep);color:var(--gold-pale);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:20px;font-weight:800;box-shadow:0 10px 22px -10px rgba(0,0,0,.4);border:2px solid rgba(254,252,250,.35);margin-bottom:12px}
   .node .day{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);font-weight:700}
   .node h3{margin:9px 0 10px;font-size:24px}
   .node p{color:var(--brown);font-size:16px;max-width:56ch}
+  @media(max-width:760px){.stage-grid{grid-template-columns:1fr}}
 
   /* TESTIMONIAL CARDS */
   @import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap');
@@ -564,8 +560,12 @@
     <p class="reveal" style="max-width:60ch;margin-bottom:14px"><span class="tr-name">The Touch Reset</span> gives you structure, around your time, your communication, your self-touch and your partnered touch, so you have somewhere to practise something different.</p>
     <p class="reveal" style="max-width:60ch;margin-bottom:40px">Over 12 weeks, we move through four stages.</p>
 
-    <div class="timeline">
-      <div class="node reveal">
+    <div class="photo-break reveal" style="max-width:640px;margin:0 auto 44px;border-radius:4px">
+      <img src="touchsofalondon.JPG" alt="Juliette Karaman working with a client" style="object-position:center 30%" loading="lazy" decoding="async">
+    </div>
+
+    <div class="stage-grid">
+      <div class="node stage-card reveal">
         <span class="stagenum">1</span><div class="day">Stage 1</div>
         <h3 style="color:var(--gold-pale);text-transform:uppercase;letter-spacing:.03em;font-size:28px">Recognise</h3>
         <p style="margin-bottom:8px"><strong>What is my body already doing?</strong></p>
@@ -575,7 +575,7 @@
         <p><strong>First, we notice.</strong></p>
       </div>
 
-      <div class="node reveal">
+      <div class="node stage-card reveal">
         <span class="stagenum">2</span><div class="day">Stage 2</div>
         <h3 style="color:var(--gold-pale);text-transform:uppercase;letter-spacing:.03em;font-size:28px">Discern</h3>
         <p style="margin-bottom:8px"><strong>What is this response actually telling me?</strong></p>
@@ -585,7 +585,7 @@
         <p>The aim isn't to endlessly excavate the past. <strong>It's to give you more choice in the present.</strong></p>
       </div>
 
-      <div class="node reveal">
+      <div class="node stage-card reveal">
         <span class="stagenum">3</span><div class="day">Stage 3</div>
         <h3 style="color:var(--gold-pale);text-transform:uppercase;letter-spacing:.03em;font-size:28px">Discover</h3>
         <p style="margin-bottom:8px"><strong>What actually feels good to me?</strong></p>
@@ -595,7 +595,7 @@
         <p><strong>It's difficult to ask somebody else for what you want when you don't yet know what that is.</strong></p>
       </div>
 
-      <div class="node reveal">
+      <div class="node stage-card reveal">
         <span class="stagenum">4</span><div class="day">Stage 4</div>
         <h3 style="color:var(--gold-pale);text-transform:uppercase;letter-spacing:.03em;font-size:28px">Ask &amp; Receive</h3>
         <p style="margin-bottom:8px"><strong>Can I bring what I've discovered into intimacy?</strong></p>
@@ -671,6 +671,10 @@
   </div>
 </section>
 
+<div class="photo-break reveal">
+  <img src="touchfingers.JPG" alt="The Touch Reset, connection and support" loading="lazy" decoding="async">
+</div>
+
 <!-- YOU DON'T HAVE TO DO THIS IN ISOLATION -->
 <section class="thesis band-teal">
   <div class="narrow">
@@ -738,6 +742,10 @@
         <p>How do we learn to trust ourselves again?</p>
       </div>
 
+      <div class="photo-break reveal" style="margin:8px 0 26px;border-radius:4px">
+        <img src="karentouch.JPG" alt="Juliette Karaman working with a client" style="max-height:420px" loading="lazy" decoding="async">
+      </div>
+
       <p class="intro reveal">Over 27 years of exploration and training, including the last 15 working deeply with couples and trauma, those questions became my life's work.</p>
       <p class="reveal" style="font-size:clamp(19px,2.4vw,23px);font-weight:700;color:var(--ink);margin:10px 0 18px"><span class="tr-name">The Touch Reset</span> grew out of that work.</p>
 
@@ -768,8 +776,15 @@
 <!-- YOU DON'T HAVE TO KEEP GUESSING -->
 <section class="founding" id="pricing">
   <div class="narrow">
-    <div class="eyebrow reveal">Ready when you are</div>
-    <h2 class="reveal">You don't have to keep guessing.</h2>
+    <div class="section-hero reveal">
+      <img src="touch-sequin-arm.jpg" alt="The Touch Reset, ready when you are" loading="lazy" decoding="async">
+      <div class="sh-overlay">
+        <div>
+          <span class="sh-eyebrow">Ready when you are</span>
+          <h2 class="sh-h2">You don't have to keep guessing.</h2>
+        </div>
+      </div>
+    </div>
     <p class="reveal" style="max-width:60ch;margin:0 auto 8px">You don't need to have all the answers before you come.</p>
     <p class="sub-price reveal">That's what we're here to explore.</p>
 
