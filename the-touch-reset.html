@@ -143,8 +143,14 @@
   .pull-quote::before{content:"";display:block;width:44px;height:2px;background:var(--gold);margin:0 auto 22px}
   .touch-split.dark .pull-quote,.spine .pull-quote,.founding .pull-quote,.cta-final .pull-quote{color:var(--gold-pale)}
   .spine .pull-quote::before,.founding .pull-quote::before,.cta-final .pull-quote::before{background:var(--gold-pale)}
-  .mid-photo{width:100%;overflow:hidden;line-height:0;margin:0 0 54px;border-radius:4px}
-  .mid-photo img{width:100%;height:auto;max-height:360px;object-fit:cover;display:block}
+  /* SECTION HERO: photo banner with heading overlaid, sits at the top of a section */
+  .section-hero{position:relative;overflow:hidden;border-radius:6px;margin:0 0 44px;box-shadow:0 14px 40px rgba(0,0,0,.18)}
+  .section-hero img{width:100%;height:300px;object-fit:cover;display:block}
+  .section-hero .sh-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,7,7,.05) 0%,rgba(7,7,7,.4) 55%,rgba(7,7,7,.84) 100%);display:flex;align-items:flex-end;padding:30px 32px}
+  .section-hero .sh-eyebrow{font-family:var(--body);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-pale);font-weight:600;margin-bottom:10px;display:block}
+  .section-hero .sh-h2{font-family:var(--display);font-weight:800;font-size:clamp(23px,3.4vw,34px);color:#fff;line-height:1.16;letter-spacing:-.02em;max-width:36ch;margin:0}
+  .section-hero .sh-h2 .tr-name{color:var(--gold-pale)}
+  @media(max-width:640px){.section-hero img{height:230px}.section-hero .sh-overlay{padding:22px 20px}}
 
   /* ARC */
   .spine{padding:92px 0;border-top:1px solid var(--line);background:#b4a074}
@@ -157,7 +163,6 @@
   .spine .timeline::before{background:rgba(254,252,250,.25)}
   .spine .node::before{background:rgba(254,252,250,.3);border-color:rgba(254,252,250,.5)}
   .spine .node.in::before{background:#fff;border-color:#fff}
-  .inc-head{margin:0 0 42px;display:flex;flex-direction:column;gap:12px}
   .timeline{position:relative;margin-left:20px;padding-left:78px}
   .timeline::before{content:"";position:absolute;left:26px;top:6px;bottom:6px;width:2px;background:var(--line)}
   .node{position:relative;padding:0 0 40px}
@@ -424,8 +429,15 @@
 <!-- WHAT THIS ACTUALLY IS -->
 <section class="thesis">
   <div class="narrow">
-    <div class="eyebrow reveal" style="margin-bottom:22px">What this actually is</div>
-    <h2 class="reveal"><span class="tr-name">The Touch Reset</span> is a 12-week practice in becoming deeply familiar with your own body.</h2>
+    <div class="section-hero reveal">
+      <img src="touch-lace-bw.jpg" alt="The Touch Reset, structured touch" loading="lazy" decoding="async">
+      <div class="sh-overlay">
+        <div>
+          <span class="sh-eyebrow">What this actually is</span>
+          <h2 class="sh-h2"><span class="tr-name">The Touch Reset</span> is a 12-week practice in becoming deeply familiar with your own body.</h2>
+        </div>
+      </div>
+    </div>
     <div class="mechanism-box reveal">
       <p>Not so you can make yourself want more touch. Not so you can push through a no. Not so you can learn another set of intimacy techniques to perform correctly.</p>
       <p class="mech-big">So you can begin to recognise what is actually happening before you automatically react to it.</p>
@@ -462,7 +474,15 @@
 <!-- AFTER 12 WEEKS -->
 <section class="thesis" style="padding:0 0 92px">
   <div class="narrow">
-    <h2 class="reveal" style="margin-bottom:22px">After 12 weeks&hellip;</h2>
+    <div class="section-hero reveal">
+      <img src="touch-scarf-silk.jpg" alt="The Touch Reset, after twelve weeks" style="object-position:center 20%" loading="lazy" decoding="async">
+      <div class="sh-overlay">
+        <div>
+          <span class="sh-eyebrow">Where this leads</span>
+          <h2 class="sh-h2">After 12 weeks&hellip;</h2>
+        </div>
+      </div>
+    </div>
     <p class="reveal" style="max-width:60ch">I want you to know yourself differently.</p>
     <p class="reveal" style="max-width:60ch">Not because you'll never get activated again.</p>
     <p class="reveal" style="max-width:60ch">Not because you'll suddenly want sex all the time.</p>
@@ -528,8 +548,15 @@
 <!-- WHO THIS IS FOR -->
 <section class="recog">
   <div class="copy">
-    <div class="eyebrow reveal">Who this is for</div>
-    <h2 class="reveal">Different situations. One place to begin: your own body.</h2>
+    <div class="section-hero reveal">
+      <img src="touch-grey-cloth.jpg" alt="The Touch Reset, who this is for" loading="lazy" decoding="async">
+      <div class="sh-overlay">
+        <div>
+          <span class="sh-eyebrow">Who this is for</span>
+          <h2 class="sh-h2">Different situations. One place to begin: your own body.</h2>
+        </div>
+      </div>
+    </div>
     <p class="reveal" style="margin:0 0 22px;color:var(--brown);font-size:var(--t-base);line-height:1.8;max-width:56ch">
       You don't need to have the same story as somebody else in the group.<br>
       You don't need to be a woman.<br>
@@ -580,9 +607,6 @@
   </div>
 </section>
 
-<!-- PHOTO BREAK: full width, splits Who This Is For from the next section -->
-<div class="photo-break"><img src="touch-lace-bw.jpg" alt="The Touch Reset, structured touch" loading="lazy" decoding="async"></div>
-
 <!-- "BUT I'VE ALREADY DONE SO MUCH WORK ON THIS" -->
 <section class="touch-split dark alt">
   <div class="split">
@@ -624,8 +648,15 @@
 <!-- IS THIS MY TRUTH, OR IS THIS MY PATTERN -->
 <section class="thesis">
   <div class="narrow">
-    <div class="eyebrow reveal" style="margin-bottom:22px">A question we come back to</div>
-    <h2 class="reveal">Is this my truth, or is this my pattern?</h2>
+    <div class="section-hero reveal">
+      <img src="touch-blindfold.jpg" alt="The Touch Reset, discerning truth from pattern" style="object-position:center 30%" loading="lazy" decoding="async">
+      <div class="sh-overlay">
+        <div>
+          <span class="sh-eyebrow">A question we come back to</span>
+          <h2 class="sh-h2">Is this my truth, or is this my pattern?</h2>
+        </div>
+      </div>
+    </div>
     <p class="reveal" style="max-width:60ch">This is one of the questions we come back to again and again inside <span class="tr-name">The Touch Reset</span>.</p>
     <p class="reveal" style="max-width:60ch">Because not every no means the same thing. Not every brace means the same thing. Not every loss of desire means you don't want intimacy.</p>
     <p class="reveal" style="margin-bottom:6px;max-width:60ch">Sometimes your body is giving you a very clean answer:</p>
@@ -638,8 +669,6 @@
       Not this kind of touch.
     </p>
     <p class="key-line reveal" style="margin-bottom:34px">That deserves to be listened to.</p>
-
-    <div class="mid-photo reveal"><img src="touch-lace-bw.jpg" alt="The Touch Reset, structured touch" loading="lazy" decoding="async"></div>
 
     <p class="reveal" style="max-width:60ch">But sometimes something else is happening.</p>
     <p class="reveal" style="max-width:60ch">Something gets activated.</p>
@@ -692,8 +721,15 @@
 <!-- WHY THE STRUCTURE MATTERS -->
 <section class="thesis">
   <div class="narrow">
-    <div class="eyebrow reveal" style="margin-bottom:22px">Why the structure matters</div>
-    <h2 class="reveal">The structure is what creates the space for something different.</h2>
+    <div class="section-hero reveal">
+      <img src="touch-sequin-arm.jpg" alt="The Touch Reset, why the structure matters" style="object-position:center 25%" loading="lazy" decoding="async">
+      <div class="sh-overlay">
+        <div>
+          <span class="sh-eyebrow">Why the structure matters</span>
+          <h2 class="sh-h2">The structure is what creates the space for something different.</h2>
+        </div>
+      </div>
+    </div>
     <p class="reveal" style="max-width:60ch">Most of us haven't been taught how to practise intimacy.</p>
     <p class="reveal" style="max-width:60ch">We wait until we're already in it.</p>
     <p class="reveal" style="margin:0 0 22px;color:var(--brown);font-size:var(--t-base);line-height:1.8;max-width:56ch">
@@ -751,14 +787,17 @@
   </div>
 </section>
 
-<div class="photo-break"><img src="touch-grey-cloth.jpg" alt="The Touch Reset, structured touch practice" loading="lazy" decoding="async"></div>
-
 <!-- HOW THE 12 WEEKS ACTUALLY WORK -->
 <section class="spine" id="weeks">
   <div class="narrow">
-    <div class="eyebrow reveal" style="margin-bottom:18px">How the 12 weeks actually work</div>
-    <div class="inc-head reveal">
-      <h2 style="margin:0">We don't start by trying to make you more sexual.</h2>
+    <div class="section-hero reveal">
+      <img src="touch-lace-bw.jpg" alt="The Touch Reset, how the twelve weeks work" loading="lazy" decoding="async">
+      <div class="sh-overlay">
+        <div>
+          <span class="sh-eyebrow">How the 12 weeks actually work</span>
+          <h2 class="sh-h2">We don't start by trying to make you more sexual.</h2>
+        </div>
+      </div>
     </div>
     <p class="reveal" style="max-width:60ch;margin-bottom:6px">We don't start by trying to fix your relationship.</p>
     <p class="reveal" style="max-width:60ch;margin-bottom:6px">And we definitely don't start by asking you to push through what your body is already telling you.</p>
@@ -863,8 +902,15 @@
 <!-- PLEASURE IS BIGGER THAN SEX -->
 <section class="thesis">
   <div class="narrow">
-    <div class="eyebrow reveal" style="margin-bottom:22px">What pleasure actually means here</div>
-    <h2 class="reveal">Pleasure is bigger than sex.</h2>
+    <div class="section-hero reveal">
+      <img src="touch-lace-bw.jpg" alt="The Touch Reset, pleasure is bigger than sex" loading="lazy" decoding="async">
+      <div class="sh-overlay">
+        <div>
+          <span class="sh-eyebrow">What pleasure actually means here</span>
+          <h2 class="sh-h2">Pleasure is bigger than sex.</h2>
+        </div>
+      </div>
+    </div>
     <p class="reveal" style="max-width:60ch">When I talk about pleasure, I don't only mean sex.</p>
     <p class="reveal" style="max-width:60ch">And I don't only mean orgasm.</p>
     <p class="reveal" style="margin:0 0 22px;color:var(--brown);font-size:var(--t-base);line-height:1.8;max-width:56ch">
@@ -943,13 +989,18 @@
   </div>
 </section>
 
-<div class="photo-break"><img src="touch-blindfold.jpg" alt="The Touch Reset, pleasure and turn-on" style="object-position:center 30%" loading="lazy" decoding="async"></div>
-
 <!-- WHAT YOU ACTUALLY GET -->
 <section class="thesis">
   <div class="narrow">
-    <div class="eyebrow reveal" style="margin-bottom:22px">What's included</div>
-    <h2 class="reveal" style="color:var(--gold-deep)">What you actually get.</h2>
+    <div class="section-hero reveal">
+      <img src="touch-scarf-silk.jpg" alt="The Touch Reset, what you actually get" style="object-position:center 20%" loading="lazy" decoding="async">
+      <div class="sh-overlay">
+        <div>
+          <span class="sh-eyebrow">What's included</span>
+          <h2 class="sh-h2">What you actually get.</h2>
+        </div>
+      </div>
+    </div>
     <p class="reveal" style="max-width:60ch"><strong><span class="tr-name">The Touch Reset</span> is designed to be lived, not completed.</strong></p>
     <p class="reveal" style="max-width:60ch">You don't need hours every day.</p>
     <p class="reveal" style="max-width:60ch">Each week, we'll focus on one piece of the work, practise it together, then you'll take small practices into your actual life.</p>
@@ -962,8 +1013,6 @@
     <p class="reveal" style="margin-bottom:4px;max-width:60ch">Not another two-hour lesson to watch.</p>
     <p class="reveal" style="margin-bottom:18px;max-width:60ch">Something you can actually use.</p>
     <p class="reveal" style="margin-bottom:40px;max-width:60ch">You'll also have <strong>the community between calls,</strong> so when something comes up in real life, a reaction, a win, a question, an unexpected no, an oh my God, I finally understand what I've been doing, you have somewhere to bring it.</p>
-
-    <div class="mid-photo reveal"><img src="touch-scarf-silk.jpg" alt="The Touch Reset, weekly practice" style="object-position:center 20%" loading="lazy" decoding="async"></div>
 
     <h3 class="who-head reveal">The practices &amp; tools</h3>
     <p class="reveal" style="margin-bottom:18px;max-width:60ch">Throughout the 12 weeks, you'll build a collection of practices you can keep returning to, including:</p>
@@ -1019,8 +1068,15 @@
 <!-- YOU DON'T HAVE TO DO THIS IN ISOLATION -->
 <section class="thesis">
   <div class="narrow">
-    <div class="eyebrow reveal" style="margin-bottom:22px">Why we do this in a group</div>
-    <h2 class="reveal" style="color:var(--gold-deep)">You don't have to do this in isolation.</h2>
+    <div class="section-hero reveal">
+      <img src="touch-grey-cloth.jpg" alt="The Touch Reset, you don't have to do this in isolation" loading="lazy" decoding="async">
+      <div class="sh-overlay">
+        <div>
+          <span class="sh-eyebrow">Why we do this in a group</span>
+          <h2 class="sh-h2">You don't have to do this in isolation.</h2>
+        </div>
+      </div>
+    </div>
     <p class="reveal" style="max-width:60ch">So much of what happens around intimacy, touch, desire and pleasure stays hidden.</p>
     <p class="reveal" style="margin:0 0 22px;color:var(--brown);font-size:var(--t-base);line-height:1.8;max-width:56ch">
       We don't talk about it.<br>
@@ -1044,8 +1100,6 @@
     <p class="closer reveal" style="color:var(--gold-deep)">We learn together while discovering what is uniquely ours.</p>
   </div>
 </section>
-
-<div class="photo-break"><img src="touch-sequin-arm.jpg" alt="The Touch Reset, in your own hands" style="object-position:center 25%" loading="lazy" decoding="async"></div>
 
 <!-- TESTIMONIALS: real photo screenshots, same pattern as the-room.html -->
 <section style="padding:72px 0;background:#c8d8dc;border-top:1px solid rgba(13,53,53,.12)">
@@ -1209,8 +1263,15 @@
 <!-- YOU DON'T HAVE TO KEEP GUESSING -->
 <section class="founding" id="pricing">
   <div class="narrow">
-    <div class="eyebrow reveal">Ready when you are</div>
-    <h2 class="reveal" style="font-size:clamp(28px,4vw,42px)">You don't have to keep guessing what your body is trying to tell you.</h2>
+    <div class="section-hero reveal" style="text-align:left">
+      <img src="touch-sequin-arm.jpg" alt="The Touch Reset, you don't have to keep guessing" style="object-position:center 25%" loading="lazy" decoding="async">
+      <div class="sh-overlay">
+        <div>
+          <span class="sh-eyebrow">Ready when you are</span>
+          <h2 class="sh-h2">You don't have to keep guessing what your body is trying to tell you.</h2>
+        </div>
+      </div>
+    </div>
 
     <p class="reveal" style="max-width:60ch;margin:0 auto 18px">You don't need to arrive at <span class="tr-name">The Touch Reset</span> knowing exactly what's happening.</p>
     <p class="reveal" style="max-width:60ch;margin:0 auto 8px">You might know your body braces.</p>
