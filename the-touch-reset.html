@@ -118,7 +118,6 @@
   .thesis h2{max-width:20ch}
   .thesis p{max-width:60ch;margin-bottom:18px;color:var(--brown);font-size:var(--t-md);line-height:1.6}
   .thesis .closer{font-family:var(--display);font-weight:700;font-size:clamp(22px,3.4vw,32px);color:var(--ink);max-width:30ch;margin-top:30px;line-height:1.18;letter-spacing:-.02em}
-  .wgold{color:var(--gold-deep);font-weight:700}
   .thesis .key-line{font-family:var(--display);font-weight:600;font-size:clamp(18px,2.4vw,23px);color:var(--ink);max-width:34ch;margin-top:8px;line-height:1.3}
 
   /* PHOTO BREAK */
@@ -136,7 +135,7 @@
   /* PULL QUOTE: visual break inside long text sections */
   .pull-quote{font-family:var(--display);font-weight:700;font-style:italic;font-size:clamp(23px,3.2vw,32px);color:var(--gold-deep);text-align:center;max-width:26ch;margin:54px auto;line-height:1.32;letter-spacing:-.015em}
   .pull-quote::before{content:"";display:block;width:44px;height:2px;background:var(--gold);margin:0 auto 22px}
-  .touch-split.dark .pull-quote,.spine .pull-quote,.founding .pull-quote,.cta-final .pull-quote{color:var(--gold-pale)}
+  .spine .pull-quote,.founding .pull-quote,.cta-final .pull-quote{color:var(--gold-pale)}
   .spine .pull-quote::before,.founding .pull-quote::before,.cta-final .pull-quote::before{background:var(--gold-pale)}
   /* SECTION HERO: photo banner with heading overlaid, sits at the top of a section */
   .section-hero{position:relative;overflow:hidden;border-radius:6px;margin:0 0 44px;box-shadow:0 14px 40px rgba(0,0,0,.18)}
@@ -263,59 +262,10 @@
   .why .last{font-size:18px;max-width:60ch;color:var(--brown)}
   @media(max-width:860px){.why .split{grid-template-columns:1fr}.why .photo{min-height:0;aspect-ratio:4/5;min-width:0}.why .copy{padding:56px 28px;min-width:0}}
 
-  /* TOUCH SPLIT: same pattern as WHY ME, photo on the right instead of left */
-  .touch-split{padding:0;border-top:1px solid var(--line);background:var(--paper)}
-  .touch-split .split{display:grid;grid-template-columns:1.15fr .85fr;align-items:stretch}
-  .touch-split .photo{background-size:cover;background-position:center;min-height:560px}
-  .touch-split .copy{padding:88px 56px;display:flex;flex-direction:column;justify-content:center}
-  .touch-split .eyebrow{margin-bottom:16px}
-  .touch-split h2{font-size:clamp(30px,4.6vw,46px);margin-bottom:18px}
-  .touch-split p{font-size:var(--t-md);max-width:52ch;color:var(--brown);line-height:1.6}
-  @media(max-width:860px){.touch-split .split,.touch-split.alt .split{grid-template-columns:1fr}.touch-split .photo{min-height:0;aspect-ratio:4/5;min-width:0}.touch-split .copy{padding:56px 28px;min-width:0}}
-  .touch-split.alt .split{grid-template-columns:.85fr 1.15fr}
-  @media(max-width:860px){.touch-split.alt .split{grid-template-columns:1fr}}
-  .touch-split.alt .photo{order:-1}
-  @media(max-width:860px){.touch-split.alt .photo{order:0}}
-  .touch-split.dark{background:var(--teal);border-top:1px solid var(--line-dark)}
-  .touch-split.dark .eyebrow{color:var(--gold-pale)}
-  .touch-split.dark h2{color:#fff}
-  .touch-split.dark p{color:rgba(254,252,250,.82)}
-  .touch-split.dark .wgold{color:var(--gold-pale)}
-  /* Every text colour below is explicit on purpose. These lines went black-on-green once already
-     because their colour lived on a parent class that got renamed. Never let that happen again:
-     every child element in a dark split gets its own explicit light colour, no inheritance bets. */
-  .touch-split.dark strong{color:#fff}
-  .touch-split.dark em{color:var(--gold-pale)}
-  .touch-split.dark .wr-statement{color:#fff;font-weight:700}
-  .touch-split.dark .wr-rooms span{color:var(--gold-pale);font-family:var(--display);font-weight:700}
-  .touch-split.dark .wr-close{color:rgba(254,252,250,.82)}
-  .touch-split.dark .wr-close strong{color:#fff}
-  .touch-split.dark .wr-gold{color:#e8c96a;font-style:italic;font-weight:700}
-  .touch-split.dark .wr-blueprint{color:#fff;font-style:italic;font-weight:700}
-  .touch-split.dark .wr-big{color:#e8c96a;display:block;margin-top:14px}
-
-  .why-room{padding:100px 0;background:var(--teal);color:var(--cream);text-align:center}
-  .why-room .eyebrow{color:var(--gold-pale);margin-bottom:20px}
-  .why-room h2{color:#fff;max-width:28ch;margin:0 auto 36px}
-  .why-room .wr-body{max-width:56ch;margin:0 auto;text-align:left}
-  .why-room .wr-body p{color:rgba(254,252,250,.8);font-size:17px;line-height:1.7;margin-bottom:18px}
-  .why-room .wr-rooms{display:flex;gap:10px 28px;flex-wrap:wrap;justify-content:center;margin:36px 0;padding:30px 0;border-top:1px solid rgba(254,252,250,.12);border-bottom:1px solid rgba(254,252,250,.12)}
-  .why-room .wr-rooms span{font-family:var(--display);font-weight:700;font-size:clamp(16px,2.2vw,22px);color:var(--gold-pale);letter-spacing:-.01em}
-  .why-room .wr-statement{font-family:var(--display);font-weight:700;font-size:clamp(24px,4vw,42px);color:#fff;line-height:1.18;letter-spacing:-.02em;max-width:24ch;margin:28px auto 36px;text-align:center}
-  .why-room .wr-close{max-width:52ch;margin:0 auto;text-align:center;font-size:17px;color:rgba(254,252,250,.8);line-height:1.7}
-  .why-room .wr-close strong{color:#fff}
-  .why-room .wr-gold{font-family:var(--display);font-style:italic;font-weight:700;color:#e8c96a;font-size:1.15em;letter-spacing:-.01em}
-  .why-room .wr-blueprint{font-family:var(--display);font-style:italic;font-weight:700;color:#fff;font-size:1.15em;letter-spacing:-.01em}
-  .why-room .wr-big{display:block;font-family:var(--display);font-style:italic;font-size:clamp(22px,3vw,30px);color:#e8c96a;font-weight:700;line-height:1.3;margin-top:24px;letter-spacing:-.01em}
-  .four-pillars{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:36px}
-  .pillar{background:var(--paper);padding:28px 26px;border-left:3px solid var(--gold)}
-  .pillar h3{font-size:17px;margin-bottom:8px;text-transform:uppercase;letter-spacing:.04em;color:var(--gold-deep)}
-  .pillar p{font-size:15.5px;color:var(--brown);margin:0;max-width:none}
-  @media(max-width:640px){.four-pillars{grid-template-columns:1fr}}
 
   /* BRAND NAME POP: every "The Touch Reset" mention in body copy gets this treatment */
   .tr-name{font-family:var(--display);font-weight:800;color:var(--gold-deep);letter-spacing:-.01em}
-  .touch-split.dark .tr-name,.founding .tr-name,.cta-final .tr-name{color:var(--gold-pale)}
+  .founding .tr-name,.cta-final .tr-name{color:var(--gold-pale)}
   .spine .tr-name{color:var(--teal-deep)}
 </style>
 <link rel="icon" href="/favicon.ico" sizes="48x48">
@@ -526,44 +476,6 @@
   </div>
 </section>
 
-<!-- "BUT I'VE ALREADY DONE SO MUCH WORK ON THIS" -->
-<section class="touch-split dark alt">
-  <div class="split">
-    <div class="photo reveal" style="background-image:url('touch-scarf-silk.jpg');background-position:center 20%"></div>
-    <div class="copy" style="padding:88px 56px">
-      <div class="eyebrow reveal">The objection I hear most</div>
-      <h2 class="reveal" style="font-size:clamp(28px,4vw,42px)">"But I've already done so much work on this."</h2>
-      <p class="reveal" style="max-width:none">Maybe you have.</p>
-      <p class="reveal" style="max-width:none">You've done therapy. You've read the books.</p>
-      <p class="reveal" style="max-width:none">You've taken the tantra course, gone to the retreat, learned the communication tools or explored your sexuality in ways most people never have.</p>
-      <p class="reveal" style="max-width:none"><strong>You understand yourself.</strong></p>
-      <p class="reveal" style="max-width:none">You may even know exactly why you respond the way you do. Then the moment actually arrives.</p>
-      <p class="reveal" style="max-width:none">Your partner reaches for you.</p>
-      <p class="reveal" style="max-width:none">You want to ask for something. You feel yourself shutting down.</p>
-      <p class="reveal" style="max-width:none">You want to say no. You want to receive. You notice your desire has disappeared.</p>
-      <p class="reveal" style="max-width:none">Something gets activated.</p>
-      <p class="reveal" style="max-width:none">And before you've had time to think about everything you know&hellip; your body has already answered.</p>
-      <p class="reveal" style="max-width:none">That doesn't make everything you've learned useless.</p>
-      <p class="reveal" style="max-width:none">It means there's another piece to practise.</p>
-      <p class="reveal" style="max-width:none">Not just understanding your patterns afterwards.</p>
-      <p class="reveal" style="max-width:none"><strong>Recognising them while they're happening.</strong></p>
-      <p class="reveal" style="max-width:none">Creating enough space to notice:</p>
-      <p class="reveal" style="max-width:none">
-        <span class="wr-gold">Is this actually a no?</span> <span class="wr-gold">Is this an old pattern?</span><br>
-        <span class="wr-gold">Am I activated right now?</span><br>
-        <span class="wr-gold">Do I want less, or do I want something different?</span><br>
-        <span class="wr-gold">What would feel good instead?</span>
-      </p>
-      <p class="reveal" style="max-width:none">Then learning what to <strong>DO</strong> with that information.</p>
-      <p class="reveal" style="max-width:none">This is why <span class="tr-name">The Touch Reset</span> is built around practice.</p>
-      <p class="reveal" style="max-width:none">Structured communication. Structured time. Structured self-touch. Structured partnered touch.</p>
-      <p class="reveal" style="max-width:none">Small places where you can notice what happens in your body, communicate it and practise something different, without needing to get intimacy "right."</p>
-      <p class="reveal" style="max-width:none">Because knowing yourself intellectually is one thing.</p>
-      <p class="reveal" style="font-family:var(--display);font-style:italic;font-weight:700;font-size:clamp(22px,3vw,30px);color:#e8c96a;line-height:1.3;letter-spacing:-.01em;margin-top:28px;max-width:none">Being able to hear yourself in the moment - and trust what you hear - is another.</p>
-    </div>
-  </div>
-</section>
-
 <!-- IS THIS MY TRUTH, OR IS THIS MY PATTERN -->
 <section class="thesis">
   <div class="narrow">
@@ -620,75 +532,6 @@
     </p>
 
     <p class="closer reveal" style="color:var(--gold-deep)">This is where your body starts becoming a compass you know how to read.</p>
-  </div>
-</section>
-
-<!-- WHY THE STRUCTURE MATTERS -->
-<section class="thesis">
-  <div class="narrow">
-    <div class="section-hero reveal">
-      <img src="touch-sequin-arm.jpg" alt="The Touch Reset, why the structure matters" style="object-position:center 25%" loading="lazy" decoding="async">
-      <div class="sh-overlay">
-        <div>
-          <span class="sh-eyebrow">Why the structure matters</span>
-          <h2 class="sh-h2">The structure is what creates the space for something different.</h2>
-        </div>
-      </div>
-    </div>
-    <p class="reveal" style="max-width:60ch">Most of us haven't been taught how to practise intimacy.</p>
-    <p class="reveal" style="max-width:60ch">We wait until we're already in it.</p>
-    <p class="reveal" style="margin:0 0 22px;color:var(--brown);font-size:var(--t-base);line-height:1.8;max-width:56ch">
-      Until someone reaches for us.<br>
-      Until we're having the difficult conversation.<br>
-      Until sex is on the table.<br>
-      Until somebody wants more and somebody wants less.
-    </p>
-    <p class="reveal" style="max-width:60ch">Then we try to work out what we want while we're already inside the moment.</p>
-    <p class="reveal" style="font-family:var(--display);font-weight:700;font-size:clamp(19px,2.6vw,24px);color:var(--ink);line-height:1.35;margin-bottom:26px;max-width:60ch"><span class="tr-name">The Touch Reset</span> gives you somewhere else to start.</p>
-
-    <p class="reveal" style="max-width:60ch">We create structure around intimacy so you have space to actually notice yourself.</p>
-    <p class="reveal" style="max-width:60ch">Not structure to make intimacy rigid.</p>
-    <p class="reveal" style="font-family:var(--display);font-weight:700;font-size:clamp(19px,2.6vw,24px);color:var(--ink);line-height:1.35;margin-bottom:34px;max-width:60ch">Structure so connection doesn't depend on luck.</p>
-
-    <p class="pull-quote reveal">The noticing gives you information. The information gives you choice.</p>
-
-    <p class="reveal" style="margin-bottom:6px;max-width:60ch"><strong class="wgold">We start with structured time.</strong></p>
-    <p class="reveal" style="margin-bottom:26px;max-width:60ch">You know when you're beginning. You know when you're finishing. You don't have to wonder where something is going or how long it's going to last.</p>
-
-    <p class="reveal" style="margin-bottom:6px;max-width:60ch"><strong class="wgold">Then structured communication.</strong></p>
-    <p class="reveal" style="margin-bottom:26px;max-width:60ch">You practise saying what is true for you without fixing, defending, interrupting or trying to manage somebody else's response.</p>
-
-    <p class="reveal" style="margin-bottom:6px;max-width:60ch"><strong class="wgold">Then structured self-touch.</strong></p>
-    <p class="reveal" style="margin-bottom:14px;max-width:60ch">Before asking somebody else to know what you want, you begin discovering it for yourself.</p>
-    <p class="reveal" style="margin:0 0 26px;color:var(--brown);font-size:var(--t-base);line-height:1.8;max-width:56ch">
-      What feels good?<br>
-      What doesn't?<br>
-      Where do you soften?<br>
-      Where do you disappear?<br>
-      What kind of sensation, pressure, pace, attention or space does your body actually respond to?
-    </p>
-
-    <p class="reveal" style="margin-bottom:14px;max-width:60ch">Then we bring that into <strong class="wgold">structured partnered touch</strong>, when that's appropriate for you.</p>
-    <p class="reveal" style="margin-bottom:14px;max-width:60ch">Now you're not simply hoping somebody guesses correctly.</p>
-    <p class="reveal" style="margin-bottom:6px;max-width:60ch">You're practising asking.</p>
-    <p class="reveal" style="margin:0 0 34px;color:var(--brown);font-size:var(--t-base);line-height:1.8;max-width:56ch">
-      Adjusting.<br>
-      Receiving.<br>
-      Giving.<br>
-      Stopping.<br>
-      Changing your mind.<br>
-      Wanting more.<br>
-      Wanting less.<br>
-      Wanting something different.
-    </p>
-
-    <p class="closer reveal" style="color:var(--gold-deep);margin-bottom:14px">The structure is what creates the space to notice.</p>
-    <p class="reveal" style="max-width:60ch">The noticing gives you information.</p>
-    <p class="reveal" style="margin-bottom:34px;max-width:60ch">The information gives you choice.</p>
-    <p class="closer reveal" style="color:var(--gold-deep);margin-bottom:46px">And choice changes the way you experience intimacy.</p>
-
-    <p class="key-line reveal" style="margin-bottom:14px">You don't need a partner to do this work.</p>
-    <p class="reveal" style="max-width:60ch">The work begins with your relationship with your own body. Partnered practices are there for those who have someone they want to practise with, they're not a requirement for getting something from <span class="tr-name">The Touch Reset</span>.</p>
   </div>
 </section>
 
@@ -1056,26 +899,11 @@
 <!-- FINAL CTA -->
 <section class="founding">
   <div class="narrow">
-    <div class="eyebrow reveal">You don't have to keep guessing</div>
-    <p class="reveal" style="max-width:52ch;margin:0 auto 10px">What does my body want?</p>
-    <p class="reveal" style="max-width:52ch;margin:0 auto 10px">Why am I pulling away?</p>
-    <p class="reveal" style="max-width:52ch;margin:0 auto 10px">Why am I not as turned on as I used to be?</p>
-    <p class="reveal" style="max-width:52ch;margin:0 auto 10px">Why does this kind of touch do nothing for me?</p>
-    <p class="reveal" style="max-width:52ch;margin:0 auto 10px">Why does that kind light me up?</p>
-    <p class="reveal" style="max-width:52ch;margin:0 auto 10px">Is this a no?</p>
-    <p class="reveal" style="max-width:52ch;margin:0 auto 10px">Is this an old pattern?</p>
-    <p class="reveal" style="max-width:52ch;margin:0 auto 26px">How do I tell my partner what I actually want?</p>
-    <p class="reveal" style="max-width:56ch;margin:0 auto 8px">You don't need to have all of those answers before you come.</p>
-    <p class="sub-price reveal" style="margin-bottom:40px">That's what we're here to explore.</p>
-
-    <h2 class="reveal" style="margin-bottom:14px"><span class="tr-name">The Touch Reset</span></h2>
-    <p class="sub-price reveal" style="max-width:56ch;margin:0 auto 24px">A 12-week reboot for the way you experience intimacy, connection and pleasure, so your body becomes a compass you know how to read.</p>
-    <span class="scarcity reveal">Founding cohort · 15 places</span>
-
+    <h2 class="reveal" style="margin-bottom:18px">Ready to join <span class="tr-name">The Touch Reset</span>?</h2>
+    <span class="scarcity reveal">Founding cohort &middot; 15 places</span>
     <div class="pay-options reveal" style="margin-top:34px">
       <a href="https://tidycal.com/juliette2/the-touch-reset-call" class="btn">Book a Call</a>
     </div>
-    <p class="sub-price reveal" style="max-width:54ch;margin:22px auto 0">Come and have a conversation with me. We'll look at what's happening for you, what you want to change, and whether <span class="tr-name">The Touch Reset</span> is the right place to do that work.</p>
   </div>
 </section>
 
