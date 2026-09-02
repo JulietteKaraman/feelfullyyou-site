@@ -746,14 +746,11 @@ document.addEventListener('click', function(e){
     BIRTHBABE:      { pct: 20, label: 'your community' },
     '6AMReset':     { pct: 20, label: 'your community' },
     PLEASURE:       { pct: 50, label: 'summit guests' },
-    PROUD50:        { pct: 50, label: 'Insider Touch readers' },
-    CARDSVIP:       { pct: 100, label: 'VIP' },
-    // Confidence Magazine reader gift, replaces the retired CONFIDENCE code
-    // (2 Sept 2026) — that one targeted Trust & Repair alone at 100% off and
-    // never worked reliably through the app. This one is the plain Full
-    // Bundle discount, same pattern as PROUD50, so it needs no target/
-    // basePrice override — the defaults below already point at the bundle.
-    CONFIDENCE50:   { pct: 50, label: 'Confidence Magazine readers' }
+    // Shared 2 Sept 2026: also given to Confidence Magazine readers instead
+    // of a dedicated CONFIDENCE50 code, so the label covers both audiences
+    // rather than reading wrong for one of them.
+    PROUD50:        { pct: 50, label: 'Insider Touch and Confidence Magazine readers' },
+    CARDSVIP:       { pct: 100, label: 'VIP' }
   };
 
   var promo = new URLSearchParams(location.search).get('promo');
