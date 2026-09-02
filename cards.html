@@ -748,10 +748,12 @@ document.addEventListener('click', function(e){
     PLEASURE:       { pct: 50, label: 'summit guests' },
     PROUD50:        { pct: 50, label: 'Insider Touch readers' },
     CARDSVIP:       { pct: 100, label: 'VIP' },
-    // Confidence Magazine reader gift, 3 Aug 2026 — this one targets the
-    // Trust & Repair card specifically, not the Full Bundle, so it needs its
-    // own element ids and base price rather than the bundle defaults below.
-    CONFIDENCE:     { pct: 100, label: 'Confidence Magazine readers', target: 'trust-repair', basePrice: 15, dealName: 'Trust & Repair deck' }
+    // Confidence Magazine reader gift, replaces the retired CONFIDENCE code
+    // (2 Sept 2026) — that one targeted Trust & Repair alone at 100% off and
+    // never worked reliably through the app. This one is the plain Full
+    // Bundle discount, same pattern as PROUD50, so it needs no target/
+    // basePrice override — the defaults below already point at the bundle.
+    CONFIDENCE50:   { pct: 50, label: 'Confidence Magazine readers' }
   };
 
   var promo = new URLSearchParams(location.search).get('promo');
