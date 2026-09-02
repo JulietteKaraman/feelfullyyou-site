@@ -37,12 +37,6 @@
   .cover-photo{width:100%;max-width:420px;border-radius:6px;overflow:hidden;margin:0 auto 28px;box-shadow:0 20px 50px rgba(13,53,53,.22)}
   .cover-photo img{width:100%;display:block;object-fit:cover;max-height:340px}
 
-  .cover-hero{width:100%;max-width:340px;border-radius:6px;overflow:hidden;margin:0 auto 24px;box-shadow:0 20px 50px rgba(13,53,53,.22)}
-  .cover-hero img{width:100%;display:block}
-
-  .slide-photo{width:100%;max-width:220px;border-radius:6px;overflow:hidden;margin:10px auto 0;box-shadow:0 16px 40px rgba(13,53,53,.18)}
-  .slide-photo img{width:100%;display:block;max-height:260px;object-fit:cover}
-
   .press-row{display:flex;justify-content:center;align-items:center;gap:20px 32px;flex-wrap:wrap;margin:22px 0 10px}
   .press-row img{height:26px;width:auto;max-width:110px;object-fit:contain;filter:brightness(0) opacity(.55)}
 
@@ -75,14 +69,6 @@
 
   .reboot-icon{margin:6px auto 4px}
 
-  .opening-row{display:flex;align-items:center;gap:44px;text-align:left}
-  .opening-preview{width:420px;flex-shrink:0;border-radius:8px;overflow:hidden;box-shadow:0 20px 50px rgba(13,53,53,.25);background:var(--cream)}
-  .opening-preview img{width:100%;display:block}
-  .opening-text{flex:1}
-  .opening-text h1{margin-bottom:8px}
-  .opening-text .sub{margin:0 0 10px;max-width:none}
-  .opening-text .pop{margin:0;max-width:none}
-
   .photo-row{display:flex;align-items:center;gap:40px;text-align:left}
   .photo-row.reverse{flex-direction:row-reverse}
   .photo-row .row-photo{width:300px;flex-shrink:0;border-radius:8px;overflow:hidden;box-shadow:0 20px 50px rgba(13,53,53,.22)}
@@ -95,8 +81,6 @@
   .photo-row .row-text .quote-card{margin:10px 0 0;max-width:none}
 
   @media(max-width:760px){
-    .opening-row{flex-direction:column;text-align:center}
-    .opening-preview{width:100%;max-width:420px}
     .photo-row,.photo-row.reverse{flex-direction:column;text-align:center}
     .photo-row .row-photo{width:100%;max-width:300px}
     .photo-row .row-text .sub,.photo-row .row-text .pop{text-align:center;max-width:56ch;margin-left:auto;margin-right:auto}
@@ -110,37 +94,19 @@
 </head>
 <body>
 
-<div class="corner-progress" id="progressLabel">1 / 12</div>
+<div class="corner-progress" id="progressLabel">1 / 11</div>
 
 <div class="deck" id="deck">
 
   <section class="slide active" data-index="0">
-    <div class="slide-inner" style="max-width:960px">
-      <div class="opening-row">
-        <div class="opening-preview">
-          <img src="vsl-opening-screenshot.jpg" alt="How to Want Touch Again, in 2 Minutes, the free training on its way to your inbox">
-        </div>
-        <div class="opening-text">
-          <div class="eyebrow">Before We Begin</div>
-          <h1>Thank you for signing up.</h1>
-          <p class="sub">That training is already on its way to your inbox.</p>
-          <p class="pop">Before you get there, I want to explain why I do this work, and why touch goes quiet in the first place.</p>
-        </div>
-      </div>
+    <div class="slide-inner">
+      <div class="eyebrow">Your 15-Minute Touch Date</div>
+      <h1>How to Stay Present With Touch &amp; Sensation</h1>
+      <p class="pop">So you can feel what's actually there, without ignoring the brace, pushing through discomfort, or forcing yourself to be in the mood.</p>
     </div>
   </section>
 
   <section class="slide" data-index="1">
-    <div class="slide-inner">
-      <div class="cover-hero"><img src="touch-reset-hero-branded.jpg" alt="The Touch Reset"></div>
-      <div class="eyebrow">The Touch Reset</div>
-      <h1>Why Your Body Braces at Touch, and How to Actually Want It Again</h1>
-      <p class="sub">Not another book that explains it and changes nothing.</p>
-      <p class="pop">The twelve week method, in the order the body actually changes.</p>
-    </div>
-  </section>
-
-  <section class="slide" data-index="2">
     <div class="slide-inner">
       <div class="cover-photo"><img src="https://feelfullyyou.com/media/68f7ca9d84a9d68db66b2a16.jpeg" alt="Juliette Karaman"></div>
       <div class="eyebrow">Who I Am</div>
@@ -161,35 +127,35 @@
     </div>
   </section>
 
-  <section class="slide" data-index="3">
+  <section class="slide" data-index="2">
     <div class="slide-inner" style="max-width:920px">
       <div class="photo-row">
         <div class="row-photo"><img src="touchfingers.JPG" alt="Touch Base, thumb to forefinger"></div>
         <div class="row-text">
           <div class="eyebrow">2am</div>
-          <h2>You're thinking: why don't I want this anymore.</h2>
-          <p class="sub">You love him. You love her. You're not looking for anyone else, and somewhere along the way, touch went quiet.</p>
-          <p class="sub" style="margin-top:14px">You've tried the things you're supposed to try. <strong>Date night. A weekend away. Therapy. Talking about it, again.</strong> For a few days something shifts. Then Tuesday comes back and so does the silence.</p>
+          <h2>You're thinking: why don't I want this anymore?</h2>
+          <p class="sub">You love him. You love her. You're not looking for anyone else. But somewhere along the way, something around touch changed.</p>
+          <p class="sub" style="margin-top:14px">You've tried the things you're supposed to try. <strong>Date night. A weekend away. Therapy. Talking about it, again.</strong> For a few days something shifts. Then Tuesday comes back, and so does the same old pattern.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" data-index="3">
+    <div class="slide-inner" style="max-width:920px">
+      <div class="photo-row reverse">
+        <div class="row-photo"><img src="brace.jpg" alt="The brace, literally"></div>
+        <div class="row-text">
+          <div class="eyebrow">The Why</div>
+          <h2>Your body isn't always waiting for the right mood. Something may already be happening.</h2>
+          <p class="sub">A brace. A tightening. Checking out. Tracking them instead of feeling yourself.</p>
+          <p class="pop">Before we try to change it, we need to notice what's actually there.</p>
         </div>
       </div>
     </div>
   </section>
 
   <section class="slide" data-index="4">
-    <div class="slide-inner" style="max-width:920px">
-      <div class="photo-row reverse">
-        <div class="row-photo"><img src="brace.jpg" alt="The brace, literally"></div>
-        <div class="row-text">
-          <div class="eyebrow">The Why</div>
-          <h2>Your body isn't waiting for the right mood. It's bracing.</h2>
-          <p class="sub">That's a reflex, trained in by every unequal, unsafe, or unsatisfying experience you've ever had with touch.</p>
-          <p class="pop">A University of Toronto study found this is exactly why up to 55% of women lose desire, and it's developmental, not hormonal. Learned. Which means it can be unlearned.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="slide" data-index="5">
     <div class="slide-inner" style="max-width:920px">
       <div class="photo-row">
         <div class="row-photo"><img src="karentouch.JPG" alt="Real session work"></div>
@@ -204,7 +170,7 @@
     </div>
   </section>
 
-  <section class="slide" data-index="6">
+  <section class="slide" data-index="5">
     <div class="slide-inner" style="max-width:920px">
       <div class="photo-row">
         <div class="row-photo"><img src="touch-neck-demo.jpg" alt="Structured touch, real practice"></div>
@@ -225,7 +191,7 @@
     </div>
   </section>
 
-  <section class="slide" data-index="7">
+  <section class="slide" data-index="6">
     <div class="slide-inner">
       <div class="eyebrow">Why Twelve Weeks</div>
       <svg class="reboot-icon" width="90" height="90" viewBox="0 0 120 120">
@@ -243,7 +209,7 @@
     </div>
   </section>
 
-  <section class="slide" data-index="8">
+  <section class="slide" data-index="7">
     <div class="slide-inner">
       <div class="eyebrow">You're Not Doing This Alone</div>
       <div class="bonus-photo"><img src="touch-reset-bonuses-collage.jpg" alt="The Touch Reset bonuses"></div>
@@ -256,7 +222,7 @@
     </div>
   </section>
 
-  <section class="slide" data-index="9">
+  <section class="slide" data-index="8">
     <div class="slide-inner" style="max-width:920px">
       <div class="photo-row reverse">
         <div class="row-photo"><img src="touchsofalondon.JPG" alt="Real session work, London"></div>
@@ -269,7 +235,7 @@
     </div>
   </section>
 
-  <section class="slide" data-index="10">
+  <section class="slide" data-index="9">
     <div class="slide-inner" style="max-width:920px">
       <div class="photo-row">
         <div class="row-photo"><img src="ropeslyndsay.JPG" alt="Real session work"></div>
@@ -285,7 +251,7 @@
     </div>
   </section>
 
-  <section class="slide" data-index="11">
+  <section class="slide" data-index="10">
     <div class="slide-inner">
       <div class="eyebrow">The Invitation</div>
       <div class="cover-photo" style="max-width:260px"><img src="juliettestage.JPG" alt="Juliette speaking"></div>
