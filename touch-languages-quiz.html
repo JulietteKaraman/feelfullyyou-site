@@ -409,33 +409,12 @@
 
   <div id="unlockedContent" style="display:none">
 
-  <section class="rband dark" id="videoBand">
-    <div class="rin" style="text-align:center">
-      <div class="reyebrow" style="justify-content:center">Do this now</div>
-      <h2 class="bandhead">Your two-minute touch</h2>
-      <p class="bandtext" style="margin:0 auto 22px;max-width:44ch">Before you read another word, do this with me. Two minutes, your own hands. This is where it starts to land in the body, not only the head.</p>
-      <div style="max-width:300px;margin:0 auto;aspect-ratio:9/16;border-radius:14px;overflow:hidden;box-shadow:0 18px 44px -22px rgba(0,0,0,.55);background:#000">
-        <iframe src="https://player.vimeo.com/video/1213257476" style="width:100%;height:100%;border:0;display:block" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" referrerpolicy="strict-origin-when-cross-origin" title="Your two-minute touch"></iframe>
-      </div>
-      <p class="bandtext" style="margin:22px auto 0;max-width:44ch">Most people go too fast and call it passion, then check out and call it disinterest. Slowing down enough to stay present feels unbearable at first. That discomfort is the exact place most people quit, right before it starts to land.</p>
-    </div>
-  </section>
-
   <section class="rband green">
     <div class="rin" style="text-align:center">
       <div class="reyebrow" style="justify-content:center">Your wiring, up close</div>
       <h2 class="bandhead">A first look at each layer.</h2>
       <div class="tstack" id="teaserStack"></div>
-    </div>
-  </section>
-
-  <section class="rband ochre" id="shareBand" style="display:none">
-    <div class="rin" style="text-align:center">
-      <div class="reyebrow dark" style="justify-content:center">For the two of you</div>
-      <h2 class="bandhead" style="color:var(--teal-deep)">Now get your partner's wiring.</h2>
-      <p class="bandtext dark" style="margin:0 auto 22px;max-width:48ch"><span class="termname">The Touch Reset</span> works best when you both know each other's wiring: what turns you on, what shuts you down, how you each need to be reached. Send them the quiz, then compare your wiring.</p>
-      <button class="btn" id="shareBtn" style="background:var(--teal-deep);color:var(--cream)">Copy the link to send</button>
-      <p id="shareMsg" style="font-size:.86rem;color:var(--teal-deep);margin-top:12px;min-height:1.2em;font-weight:500"></p>
+      <p class="bandtext" style="text-align:center;font-style:italic;margin-top:22px;max-width:44ch;margin-left:auto;margin-right:auto">Where each one comes from, and what to do about it, is already on its way to your inbox.</p>
     </div>
   </section>
 
@@ -506,22 +485,27 @@
 
   var PLEASURE={
     Sensual:{name:"The Sensual",short:"Sensual",
+      tease:"You don't just feel touch, you absorb it: the light, the scent, the slow unfolding of it all.",
       desc:"You don't just feel touch. You absorb it. The flicker of candlelight, the smell of their skin, the texture of sheets against your thighs. Your body responds to beauty, to detail, to the slow unfolding of sensation. You don't just want connection. You want to be melted into, slowly.",
       turnons:["A slow build, no rushing to the finish","Candlelight, scent, music, texture","Full-body touch, not a straight line","Being savoured, like you're being tasted","Anticipation stretched until you can barely stand it"],
       shadow:"You can need the conditions just right, the light, the mood, the time, before you'll let go. When it's rushed or plain, you quietly close, and desire ends up waiting for a stage that rarely gets set."},
     Sexual:{name:"The Sexual",short:"Sexual",
+      tease:"Direct, honest, no fluff. You don't need a long warm-up, you want it met.",
       desc:"Direct. Honest. No fluff, no performance. You don't need a long warm-up, you want to feel it now. Raw, real, unfiltered. You crave physical connection that does not apologise for its intensity, and you own what you want, out loud. You just want it met.",
       turnons:["Directness, no games","Skin on skin, now","Being wanted openly, and told so","Heat over elaborate staging","A partner who acts the moment they feel it"],
       shadow:"Your directness can get read as too much, and if a partner needs slow warmth first, you can take it as rejection, pull back, and stop reaching altogether."},
     Energetic:{name:"The Energetic",short:"Energetic",
+      tease:"You feel everything, even in stillness, the charge lives in the pause before contact.",
       desc:"You feel everything, even in stillness. Your arousal lives in the invisible: the pause, the pulse, the moment before contact. You don't need touch to feel lit up. You need space, presence, attunement. You are the blueprint of anticipation.",
       turnons:["The charge before a single touch","Eye contact that says everything","Teasing, space, the delicious almost","Being felt from across a room","A partner who slows right down and tunes in"],
       shadow:"You feel every off-note too. The smallest misattunement makes you brace and disappear up into your head, right at the moment you most want to be reached."},
     Kinky:{name:"The Kinky",short:"Kinky",
+      tease:"It was never about the act. It's about the dynamic underneath it: power, trust, permission.",
       desc:"This isn't about performance, it's about permission. What turns you on is not only the act, it is the dynamic underneath: power, trust, tension, a little taboo. You come alive in the unknown, in the pause before the command. This wiring isn't dangerous, it's devotional.",
       turnons:["Power play, given or taken","Trust deep enough to hand over control","A little taboo, a little edge","Being told what to do, or telling them","Ritual, restraint, the charge of the unknown"],
       shadow:"You can hide this whole part of yourself for fear of being judged, and settle for a version you never wanted, quietly starving for a charge you never let yourself ask for."},
     Shapeshifter:{name:"The Shapeshifter",short:"Shapeshifter",
+      tease:"You're fluent in many languages of turn-on, and you refuse to choose just one.",
       desc:"You are fluent in many languages of turn-on. You are layered, holding many at once. You want it all, and you can hold it: the tease, the tenderness, the rawness, the sacred, the unexpected. You don't want to choose. You want to be met in your full spectrum.",
       turnons:["Variety, surprise, range","Tenderness one night, edge the next","A partner who can meet every side of you","Never being boxed into one mode","The unexpected shift, mid-moment"],
       shadow:"You thrive on variety, so a partner with only one way in can leave you starving, and because you can meet anyone's flavour, you can lose track of what you actually want, and end up unmet in the shuffle."}
@@ -717,8 +701,8 @@
 
   function buildTeaserStack(pl,pa){
     var rows=[
-      {label:'Pleasure Language',name:pl.name},
-      {label:'Touch Pattern',name:pa.name}
+      {label:'Pleasure Language',name:pl.name,text:pl.tease},
+      {label:'Touch Pattern',name:pa.name,text:pa.line}
     ];
     var wrap=$('teaserStack');wrap.innerHTML='';
     rows.forEach(function(r,idx){
@@ -728,7 +712,8 @@
       var lab=document.createElement('span');lab.className='tlabel';lab.textContent=r.label;
       head.appendChild(num);head.appendChild(lab);
       var nm=document.createElement('div');nm.className='tname';nm.textContent=r.name;
-      d.appendChild(head);d.appendChild(nm);
+      var p=document.createElement('p');p.textContent=r.text;
+      d.appendChild(head);d.appendChild(nm);d.appendChild(p);
       wrap.appendChild(d);
     });
   }
@@ -744,16 +729,7 @@
     var pl=PLEASURE[result.pleasure],pa=PATTERN[result.pattern],a=AUD[audience]||AUD.woman,st=STAGE[stage];
     buildTeaserStack(pl,pa);
     paintPitch(a,st);
-    $('shareBand').style.display='block';
   }
-  var shareBtn=$('shareBtn');
-  if(shareBtn){shareBtn.addEventListener('click',function(){
-    var link='https://feelfullyyou.com/touch-reset-quiz';
-    var txt="I did the Touch Reset quiz and found my wiring. Do yours so we can compare: "+link;
-    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(function(){$('shareMsg').textContent='Copied. Paste it to your partner.';},function(){$('shareMsg').textContent=link;});}
-    else{$('shareMsg').textContent=link;}
-    if(typeof gtag==='function')gtag('event','quiz_share',{quiz:'touch_reset'});
-  });}
 
   function revealBands(){
     var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
