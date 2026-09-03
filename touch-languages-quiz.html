@@ -369,13 +369,12 @@
 
       <section id="vision" style="display:none">
         <span class="phase">One last thing</span>
-        <h2 class="qtext">What do you think might make you enjoy touch more than you do now?</h2>
+        <h2 class="qtext">If one thing could change about touch and connection for you, what would you most want?</h2>
         <div class="opts" id="visionOpts">
-          <button type="button" class="opt" data-vision="understood">If my partner actually understood what I need.</button>
-          <button type="button" class="opt" data-vision="release">If I could let go without my mind running the whole time.</button>
-          <button type="button" class="opt" data-vision="closeness">If there was more emotional closeness underneath it.</button>
-          <button type="button" class="opt" data-vision="specific">If I could ask for the specific touch I want.</button>
-          <button type="button" class="opt" data-vision="variety">If it wasn't the same thing, every time.</button>
+          <button type="button" class="opt" data-vision="care">For someone else to take care of me for once, without me having to manage it, explain every detail or give something back.</button>
+          <button type="button" class="opt" data-vision="receive">To stop treating intimacy like something I need to manage or get right, and let myself actually feel and receive it.</button>
+          <button type="button" class="opt" data-vision="discover">To discover more of what genuinely turns me on, and feel confident asking for the touch and experiences I actually want.</button>
+          <button type="button" class="opt" data-vision="stay">To stay with the person and the moment instead of disappearing into my thoughts when things get intimate, vulnerable or intense.</button>
         </div>
         <button class="qback" id="visionBack">go back</button>
       </section>
@@ -410,24 +409,31 @@
   <div id="unlockedContent" style="display:none">
 
   <section class="rband green">
-    <div class="rin" style="text-align:center">
-      <div class="reyebrow" style="justify-content:center">Your wiring, up close</div>
-      <h2 class="bandhead">A first look at each layer.</h2>
-      <div class="tstack" id="teaserStack"></div>
-      <p class="bandtext" style="text-align:center;font-style:italic;margin-top:22px;max-width:44ch;margin-left:auto;margin-right:auto">Where each one comes from, and what to do about it, is already on its way to your inbox.</p>
+    <div class="rin">
+      <div class="reyebrow" style="justify-content:center">Your Touch Pattern is</div>
+      <h2 class="bandhead" id="patternName" style="text-align:center"></h2>
+      <p class="bandtext" id="patternResultLine" style="text-align:center;font-weight:600;max-width:52ch;margin:0 auto 18px"></p>
+      <p class="bandtext" id="patternDesc" style="max-width:52ch;margin:0 auto 22px"></p>
+      <p class="bandtext" style="max-width:52ch;margin:0 auto 10px"><strong>Your strength:</strong> <span id="patternStrength"></span></p>
+      <p class="bandtext" style="max-width:52ch;margin:0 auto 22px"><strong>Your growth edge:</strong> <span id="patternGrowth"></span></p>
+      <p class="bandtext" id="patternQuestion" style="text-align:center;font-style:italic;max-width:46ch;margin:0 auto"></p>
     </div>
   </section>
 
   <section class="rband dark">
-    <div class="rin">
-      <div class="reyebrow" style="justify-content:center">The full picture</div>
-      <div class="pitch">
-        <p class="bandtext" id="pIntro" style="margin-bottom:18px"></p>
-        <h2 id="pDoor"></h2>
-        <p class="blurb" id="pBlurb"></p>
-        <a class="btn pulse" id="pCta" href="#">Show me</a>
-      </div>
-      <div class="again"><button id="restart">start again</button></div>
+    <div class="rin" style="text-align:center">
+      <div class="reyebrow" style="justify-content:center">Your Pleasure Language</div>
+      <h2 class="bandhead" id="pleasureName"></h2>
+      <p class="bandtext" id="pleasureDesc" style="text-align:left;max-width:52ch;margin:14px auto 0"></p>
+    </div>
+  </section>
+
+  <section class="rband green">
+    <div class="rin" style="text-align:center">
+      <h2 class="bandhead">Now experience your result in your body.</h2>
+      <p class="bandtext" style="max-width:48ch;margin:14px auto 26px">Your result gives you a pattern. Your 15-Minute Touch Date lets you notice what actually happens when touch and sensation arrive.</p>
+      <a class="btn pulse" href="https://feelfullyyou.com/the-15-minute-touch-date">Do your 15-Minute Touch Date</a>
+      <div class="again" style="margin-top:22px"><button id="restart">start again</button></div>
     </div>
   </section>
 
@@ -452,6 +458,9 @@
 (function(){
   "use strict";
 
+  // Operator/Explorer/Wanderer have no Kit tag or sequence ID yet, deliberately
+  // left out below rather than invented, so those results still tag/sequence
+  // as undefined (harmless, .filter(Boolean) drops them) until Kit is built.
   var PATTERN_TAG={Holder:20988556,Flame:20988557,Armour:20988558,Signal:20988559,Current:20988560};
   var PATTERN_SEQ={Holder:2821038,Flame:2821039,Armour:2821040,Signal:2821041,Current:2821042};
   var PLEASURE_TAG={Sensual:20944034,Sexual:20944035,Energetic:20944036,Kinky:20944037,Shapeshifter:20944038};
@@ -513,20 +522,29 @@
 
   var PATTERN={
     Holder:{name:"The Holder",short:"Holder",
-      line:"You connect by giving and stay safe by serving. You hold everyone, and rarely let yourself be touched without earning it first.",
-      leads:"You lead by giving. Someone has to hold the room, and it's always you. Receiving without earning it first is the part that actually stretches you.",
-      growth:"Your edge: to be held as fully as you hold everyone else, without having to earn a thing.",
-      braces:["Being handed all the responsibility","Affection that arrives like an invoice","Being needed but never quite seen","Nobody ever asking what you need"]},
-    Flame:{name:"The Flame",short:"Flame",
-      line:"You learned early that staying safe meant softening your fire, your tone, your hunger. You dim to stay wanted.",
-      leads:"You tend to receive, quietly. Putting your own want forward first feels like too much heat, too soon, so you wait for it to be offered instead.",
-      growth:"Your edge: to be wanted at full brightness, and never dim a watt of yourself again.",
-      braces:["Shrinking so someone else stays comfortable","Being praised only for your softness","Being misread, and saying nothing","Desire that needs you smaller than you are"]},
-    Armour:{name:"The Armour",short:"Armour",
-      line:"You structured. Softness once meant exposure, so you lead with control and clarity, and it has kept you sovereign.",
-      leads:"You lead by controlling the terms. You'll initiate all day long, on your own timing. Being led, or caught receiving, is the part that costs you.",
-      growth:"Your edge: to soften on your own terms, without losing an ounce of your strength.",
-      braces:["A fast, unpredictable approach","Tenderness that feels like a tactic","Being led before it feels safe","Being told to 'just relax'"]}
+      resultLine:"You naturally pay attention to everyone else.",
+      desc:"You're loving, attentive and dependable. You notice what people need and you're often the one keeping things running smoothly. That can follow you into intimacy, where you may track your partner's experience more easily than your own.",
+      strength:"You love deeply and show up fully.",
+      growthEdge:"Learning to receive without immediately giving back.",
+      question:"What do I want when I stop tracking everyone else?"},
+    Operator:{name:"The Operator",short:"Operator",
+      resultLine:"You're capable. You know how to make things happen.",
+      desc:"You solve problems, make decisions and keep moving. When life needs handling, you handle it. That capability can follow you into intimacy, where it's sometimes easier to do something than slow down enough to feel what's actually happening.",
+      strength:"You're highly capable and resourceful.",
+      growthEdge:"Feeling instead of managing.",
+      question:"What can I feel when I don't have to do anything with it?"},
+    Explorer:{name:"The Explorer",short:"Explorer",
+      resultLine:"You're curious about what else is possible.",
+      desc:"You want aliveness, pleasure, variety and discovery. You're willing to experiment rather than accept that intimacy has to stay the same. But more experiences don't automatically tell you what your body genuinely enjoys.",
+      strength:"Curiosity and openness.",
+      growthEdge:"Becoming precise about your own pleasure.",
+      question:"Is this exciting, sensational, or actually pleasurable for me?"},
+    Wanderer:{name:"The Wanderer",short:"Wanderer",
+      resultLine:"You want depth and real connection.",
+      desc:"Surface-level intimacy isn't really what you're after. You want to feel something. But sometimes when touch, emotion, vulnerability or sensation intensifies, your attention wanders. Your body can still be there while you've gone somewhere else.",
+      strength:"Your desire for depth and connection.",
+      growthEdge:"Staying present for what you want to experience.",
+      question:"Can I feel this and still be here?"}
   };
 
   var STAGE={
@@ -553,9 +571,7 @@
   };
   var STAGE_CAUTION="The tool has to match the stage. A Stage 1 fix, a date night, a holiday, one good conversation, applied to a Stage 2 or 3 situation is usually what makes couples give up on each other.";
   var STAGE_TAGLINE={quiet:"Nothing dramatic. Just quiet.",brace:"My body knows before my mind does.",gone:"This is just how things are now.",fade:"It's not gone, it's just not lit up right now.",reach:"You're the one who keeps closing the gap."};
-  var PAID_INTRO="<span class=\"termname\">The Touch Reset</span> is my 12-week live method for changing the pattern, not just naming it.";
-
-  /* QUESTIONS: pleasure(5) Sensual/Sexual/Energetic/Kinky/Shapeshifter · pattern(4) H/F/A */
+  /* QUESTIONS: pleasure(6) Sensual/Sexual/Energetic/Kinky/Shapeshifter · pattern(5) H/O/E/W, tie broken by Q10 (index 3) */
   var QPL=[
     ["Someone finds the exact knot in your shoulder during a massage. What sound do you actually make?",[["\"Harder.\" I ask for more before they've even let go.","Kinky"],["A long, quiet exhale, then a slow moan. My body is lit up. I could stay right there for an hour.","Sensual"],["Depends entirely on the knot. Every one gets something different out of me.","Shapeshifter"],["A groan, but I'm already thinking about where this could go.","Sexual"],["Nothing. I just go still and quiet, or ask her to go lighter.","Energetic"]],"touch-bw.jpg"],
     ["The hairdresser tips your head back into the sink and starts washing. What's happening in you?",[["Honestly, my mind wanders somewhere else entirely. I am wondering what their hands would feel like on my butt.","Sexual"],["I'm hyper-aware of the moment before she touches me, and the shampoo is a bit strong smelling. I can sense the hesitation in her fingers when she tests the water for the temperature.","Energetic"],["I love it and fully melt into it, but I'd also love a bit more variety, maybe pulling my hair a bit, changing up the pressure, speed and temperature. \"Wouldn't it be cool if they added different scents too, and someone fed me strawberries at the same time?\"","Shapeshifter"],["I deeply relax into it, savour every moment, and a moan escapes my mouth. This might be my favourite five minutes of the month.","Sensual"],["I like that my head is fully in their hands and I have no control over it, but maybe I wish she'd pull on my hair a bit more.","Kinky"]],"touch-scarf-silk-2.jpg"],
@@ -565,16 +581,15 @@
     ["Which style of touch has your body say \"yes, more please\"?",[["Charged and barely touching.","Energetic"],["Edgy and a little dangerous.","Kinky"],["Slow and deeply savoured.","Sensual"],["Different every single time.","Shapeshifter"],["Fast, hungry, and direct.","Sexual"]],null]
   ];
   var QPAT=[
-    ["When desire is in the air, you're usually the one who…",[["Makes sure they're taken care of first, then figures out what you want.","H"],["Waits to be reached for, and hopes they read it right.","F"],["Makes the first move and sets the tone.","A"]],"dyad-hands.jpg"],
-    ["Someone's clearly gone out of their way to take care of you today. You…",[["While receiving it, you're already planning how you'll pay it back, so it keeps you back from fully receiving it.","H"],["You enjoy it fully, and yet hear yourself say \"oh, you really didn't have to.\"","F"],["Feel oddly exposed. You'd rather be the one doing it. Yet you receive it anyway.","A"]],"touch-grey-chest.jpg"],
-    ["You're at the kitchen counter, deep in your own head, not expecting anything. Someone walks up and just puts a hand on your back, no words. What actually happens in you?",[["You immediately turn and ask if THEY'RE okay, before you've even registered what just happened to you.","H"],["You say \"oh, hi,\" automatically, smoothing the moment over before you've let yourself actually feel it.","F"],["You go still for a second before you let yourself lean into it, and you hope they didn't clock the pause.","A"]],"touchfingers.JPG"],
-    ["Someone at work says \"could you just quickly&hellip;\" before you've even sat down with your coffee. You:",[["Already said yes, you only realise it now as they walk away.","H"],["Say yes, then spend the rest of the afternoon replaying all the ways you could have said no.","F"],["Say you'll look at it later, on your own terms, and mean it.","A"]],null],
-    ["You've had the longest day. Which touch would you actually want right now?",[["Someone else taking care of ME? I'd still probably ask if THEY'VE eaten first.","H"],["A hug that doesn't ask anything of me. My shoulders can actually drop.","F"],["Honestly, nobody touching me yet. Give me a minute to land on my own terms first.","A"]],"touch-cloth.jpg"],
-    ["Handing over control feels…",[["Impossible. Someone has to keep things running.","H"],["Like relief, once someone else takes the wheel.","F"],["Hard. You'd rather hold the reins.","A"]],"touch-robe-tie-bw.jpg"]
+    ["When you want connection or touch with your partner, what are you most likely to do?",[["I check where they're at first, what mood they're in, what they need, whether they're okay, before I really check what I want.","H"],["I tend to take the lead or make something happen. It's easier when I know what we're doing than when I have to slow down and feel my way into it.","O"],["I want to try something: a different kind of touch, a new idea, something that might make things feel more interesting or alive.","E"],["I want the connection, but once we're actually in it my attention can wander. I can end up in my head rather than really feeling what's happening.","W"]],"dyad-hands.jpg"],
+    ["When someone gives you their full attention or care, what tends to happen?",[["I enjoy it, but pretty quickly I want to give something back. Just receiving without doing anything in return can feel uncomfortable.","H"],["Part of me wants to know what I'm supposed to do with it. I can find it easier to participate than to simply let myself receive.","O"],["I'm curious about it. I notice what they're doing, how it feels, and whether I want more, less or something different.","E"],["I want to receive it, but my attention can drift. I might suddenly realise I've been thinking rather than actually feeling what they're doing.","W"]],"touch-grey-chest.jpg"],
+    ["Someone you're close to unexpectedly puts their hand on your back. What happens first?",[["I notice them first, their mood, what they mean by it, whether they need something, before I notice my own response.","H"],["I register it, but I'm likely to keep doing whatever I was doing rather than stop and really feel it.","O"],["I notice the touch and get curious. Ooh, what does that feel like? Do I want them to keep going or touch me differently?","E"],["I notice it for a moment, but my attention can disappear somewhere else before I've really registered what I felt.","W"]],"touchfingers.JPG"],
+    ["Something isn't quite working during touch or intimacy. What are you most likely to do?",[["I start thinking about their experience, whether they're enjoying it or whether saying something might make them feel bad.","H"],["I try to make it work. Change position, change technique, do something. I'm more likely to fix it than stop and feel what's happening.","O"],["I want to change it up and try something different. There must be another way we could do this that feels better.","E"],["I can stay physically involved while my attention starts going somewhere else.","W"]],null],
+    ["When you imagine touch and intimacy feeling really good for you, what do you want more of?",[["To be able to relax into someone else taking care of me, without feeling like I need to give something back.","H"],["To get out of my head, stop managing everything and actually feel what's happening in my body.","O"],["More variety, play and discovery. I want to find out what else feels good and what really turns me on.","E"],["To stay present enough to really feel the touch, connection and intimacy I'm craving.","W"]],"touch-cloth.jpg"]
   ];
 
   var ALL=[].concat(QPL,QPAT);
-  var TOTAL=ALL.length; // 12
+  var TOTAL=ALL.length; // 11
   var PLLEN=QPL.length; // 6
   function phaseFor(idx){ if(idx<PLLEN)return"Part one · your way into pleasure"; return"Part two · how you were conditioned to give and receive touch"; }
   function phaseExplain(idx){
@@ -593,13 +608,6 @@
     cardBg.style.backgroundImage='url(\''+file+'\')';
     cardBg.classList.add('on');
   }
-  var VISION={
-    understood:{key:'understood',echo:"it would help most if your partner actually understood what you need"},
-    release:{key:'release',echo:"it would help most if you could let go without your mind running the whole time"},
-    closeness:{key:'closeness',echo:"it would help most if there was more emotional closeness underneath it"},
-    specific:{key:'specific',echo:"it would help most if you could ask for the specific touch you want"},
-    variety:{key:'variety',echo:"it would help most if it wasn't the same thing, every time"}
-  };
 
   $('begin').addEventListener('click',function(){
     intro.style.display='none';funnel.style.display='flex';quiz.style.display='block';renderQ();
@@ -677,10 +685,21 @@
   var result={pattern:'',pleasure:'',ori:''};
 
   function score(){
-    var pt={H:0,F:0,A:0};
+    var pt={H:0,O:0,E:0,W:0};
     for(var a=0;a<QPAT.length;a++){var pai=answers[PLLEN+a];if(pai!=null)pt[QPAT[a][1][pai][1]]++;}
-    var PM={H:'Holder',F:'Flame',A:'Armour'};
-    var pattern=PM[Object.keys(pt).sort(function(x,y){return pt[y]-pt[x];})[0]];
+    var PM={H:'Holder',O:'Operator',E:'Explorer',W:'Wanderer'};
+    var maxScore=Math.max(pt.H,pt.O,pt.E,pt.W);
+    var leaders=Object.keys(pt).filter(function(k){return pt[k]===maxScore;});
+    var patternLetter=leaders[0];
+    if(leaders.length>1){
+      // Tie: Q10 ("something isn't quite working during touch or intimacy")
+      // is the closest question to the automatic pattern we're identifying,
+      // so it breaks ties rather than a hidden priority order.
+      var q10Idx=3,q10Ans=answers[PLLEN+q10Idx];
+      var q10Letter=q10Ans!=null?QPAT[q10Idx][1][q10Ans][1]:null;
+      if(q10Letter&&leaders.indexOf(q10Letter)!==-1)patternLetter=q10Letter;
+    }
+    var pattern=PM[patternLetter];
     var pl={Sensual:0,Sexual:0,Energetic:0,Kinky:0,Shapeshifter:0};
     for(var c=0;c<PLLEN;c++){var pi=answers[c];if(pi!=null)pl[QPL[c][1][pi][1]]++;}
     var prim=[['Sensual',pl.Sensual],['Sexual',pl.Sexual],['Energetic',pl.Energetic],['Kinky',pl.Kinky]].sort(function(x,y){return y[1]-x[1];});
@@ -696,39 +715,17 @@
     if(typeof gtag==='function')gtag('event','quiz_complete',{quiz:'touch_reset',pattern:result.pattern,pleasure:result.pleasure,audience:audience,stage:stage});
   }
 
-  function fillList(el,arr,cls){el.innerHTML='';arr.forEach(function(t){var d=document.createElement('div');d.className=cls;d.textContent=t;el.appendChild(d);});}
-  function fillLi(el,arr){el.innerHTML='';arr.forEach(function(t){var li=document.createElement('li');li.textContent=t;el.appendChild(li);});}
-
-  function buildTeaserStack(pl,pa){
-    var rows=[
-      {label:'Pleasure Language',name:pl.name,text:pl.tease},
-      {label:'Touch Pattern',name:pa.name,text:pa.line}
-    ];
-    var wrap=$('teaserStack');wrap.innerHTML='';
-    rows.forEach(function(r,idx){
-      var d=document.createElement('div');d.className='trow';
-      var head=document.createElement('div');head.className='thead';
-      var num=document.createElement('span');num.className='lnum';num.textContent=String(idx+1);
-      var lab=document.createElement('span');lab.className='tlabel';lab.textContent=r.label;
-      head.appendChild(num);head.appendChild(lab);
-      var nm=document.createElement('div');nm.className='tname';nm.textContent=r.name;
-      var p=document.createElement('p');p.textContent=r.text;
-      d.appendChild(head);d.appendChild(nm);d.appendChild(p);
-      wrap.appendChild(d);
-    });
-  }
-
-  function paintPitch(a,st){
-    $('pIntro').innerHTML=PAID_INTRO;
-    $('pDoor').textContent=a.door;
-    $('pBlurb').textContent=a.blurb;
-    $('pCta').textContent=a.cta;$('pCta').href=a.href;
-  }
 
   function paintResult(){
-    var pl=PLEASURE[result.pleasure],pa=PATTERN[result.pattern],a=AUD[audience]||AUD.woman,st=STAGE[stage];
-    buildTeaserStack(pl,pa);
-    paintPitch(a,st);
+    var pl=PLEASURE[result.pleasure],pa=PATTERN[result.pattern];
+    $('patternName').textContent=pa.name;
+    $('patternResultLine').textContent=pa.resultLine;
+    $('patternDesc').textContent=pa.desc;
+    $('patternStrength').textContent=pa.strength;
+    $('patternGrowth').textContent=pa.growthEdge;
+    $('patternQuestion').textContent=pa.question;
+    $('pleasureName').textContent=pl.name;
+    $('pleasureDesc').textContent=pl.desc;
   }
 
   function revealBands(){
@@ -776,7 +773,7 @@
   // Quiet preview shortcut, add ?preview=1 to the URL to jump straight to a sample
   // results screen without retaking the quiz. Not linked anywhere, review use only.
   if(new URLSearchParams(location.search).get('preview')){
-    audience='self';identity='';context='self';stage='quiet';visionAnswer='specific';
+    audience='self';identity='';context='self';stage='quiet';visionAnswer='discover';
     answers=answers.map(function(_,idx){return idx%3;});
     intro.style.display='none';stageSec.style.display='none';reflect1Sec.style.display='none';reflect2Sec.style.display='none';quiz.style.display='none';
     doReveal();
