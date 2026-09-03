@@ -413,10 +413,18 @@
       <div class="reyebrow" style="justify-content:center">Your Touch Pattern is</div>
       <h2 class="bandhead" id="patternName" style="text-align:center"></h2>
       <p class="bandtext" id="patternResultLine" style="text-align:center;font-weight:600;max-width:52ch;margin:0 auto 18px"></p>
-      <p class="bandtext" id="patternDesc" style="max-width:52ch;margin:0 auto 22px"></p>
-      <p class="bandtext" style="max-width:52ch;margin:0 auto 10px"><strong>Your strength:</strong> <span id="patternStrength"></span></p>
-      <p class="bandtext" style="max-width:52ch;margin:0 auto 22px"><strong>Your growth edge:</strong> <span id="patternGrowth"></span></p>
-      <p class="bandtext" id="patternQuestion" style="text-align:center;font-style:italic;max-width:46ch;margin:0 auto"></p>
+      <p class="bandtext" id="patternDesc" style="max-width:52ch;margin:0 auto 26px"></p>
+      <div style="max-width:52ch;margin:0 auto 26px;display:flex;flex-direction:column;gap:14px">
+        <div style="background:rgba(6,26,26,.4);border-left:3px solid var(--gold-pale);padding:14px 18px;border-radius:6px">
+          <div style="font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-pale);font-weight:700;margin-bottom:5px">Your strength</div>
+          <div id="patternStrength" style="font-weight:700;color:var(--cream);font-size:1.08rem;line-height:1.5"></div>
+        </div>
+        <div style="background:rgba(6,26,26,.4);border-left:3px solid var(--gold-pale);padding:14px 18px;border-radius:6px">
+          <div style="font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-pale);font-weight:700;margin-bottom:5px">Your growth edge</div>
+          <div id="patternGrowth" style="font-weight:700;color:var(--cream);font-size:1.08rem;line-height:1.5"></div>
+        </div>
+      </div>
+      <p id="patternQuestion" style="text-align:center;font-style:italic;color:var(--gold-pale);font-family:var(--display);font-size:1.2rem;line-height:1.5;max-width:44ch;margin:0 auto"></p>
     </div>
   </section>
 
@@ -424,7 +432,9 @@
     <div class="rin" style="text-align:center">
       <div class="reyebrow" style="justify-content:center">Your Pleasure Language</div>
       <h2 class="bandhead" id="pleasureName"></h2>
-      <p class="bandtext" id="pleasureDesc" style="text-align:left;max-width:52ch;margin:14px auto 0"></p>
+      <p id="pleasureOpen" style="text-align:left;max-width:52ch;margin:22px auto 14px;font-family:var(--display);font-size:1.2rem;font-weight:700;color:var(--cream);line-height:1.4"></p>
+      <p class="bandtext" id="pleasureMid" style="text-align:left;max-width:52ch;margin:0 auto 16px"></p>
+      <p id="pleasureClose" style="text-align:left;max-width:52ch;margin:0 auto;font-style:italic;color:var(--gold-pale);font-size:1.1rem;line-height:1.5"></p>
     </div>
   </section>
 
@@ -496,26 +506,41 @@
     Sensual:{name:"The Sensual",short:"Sensual",
       tease:"You don't just feel touch, you absorb it: the light, the scent, the slow unfolding of it all.",
       desc:"You don't just feel touch. You absorb it. The flicker of candlelight, the smell of their skin, the texture of sheets against your thighs. Your body responds to beauty, to detail, to the slow unfolding of sensation. You don't just want connection. You want to be melted into, slowly.",
+      open:"You don't just feel touch. You absorb it.",
+      mid:"The flicker of candlelight, the smell of their skin, the texture of sheets against your thighs. Your body responds to beauty, to detail, to the slow unfolding of sensation.",
+      close:"You don't just want connection. You want to be melted into, slowly.",
       turnons:["A slow build, no rushing to the finish","Candlelight, scent, music, texture","Full-body touch, not a straight line","Being savoured, like you're being tasted","Anticipation stretched until you can barely stand it"],
       shadow:"You can need the conditions just right, the light, the mood, the time, before you'll let go. When it's rushed or plain, you quietly close, and desire ends up waiting for a stage that rarely gets set."},
     Sexual:{name:"The Sexual",short:"Sexual",
       tease:"Direct, honest, no fluff. You don't need a long warm-up, you want it met.",
       desc:"Direct. Honest. No fluff, no performance. You don't need a long warm-up, you want to feel it now. Raw, real, unfiltered. You crave physical connection that does not apologise for its intensity, and you own what you want, out loud. You just want it met.",
+      open:"Direct. Honest. No fluff, no performance.",
+      mid:"You don't need a long warm-up, you want to feel it now. Raw, real, unfiltered. You crave physical connection that does not apologise for its intensity, and you own what you want, out loud.",
+      close:"You just want it met.",
       turnons:["Directness, no games","Skin on skin, now","Being wanted openly, and told so","Heat over elaborate staging","A partner who acts the moment they feel it"],
       shadow:"Your directness can get read as too much, and if a partner needs slow warmth first, you can take it as rejection, pull back, and stop reaching altogether."},
     Energetic:{name:"The Energetic",short:"Energetic",
       tease:"You feel everything, even in stillness, the charge lives in the pause before contact.",
       desc:"You feel everything, even in stillness. Your arousal lives in the invisible: the pause, the pulse, the moment before contact. You don't need touch to feel lit up. You need space, presence, attunement. You are the blueprint of anticipation.",
+      open:"You feel everything, even in stillness.",
+      mid:"Your arousal lives in the invisible: the pause, the pulse, the moment before contact. You don't need touch to feel lit up. You need space, presence, attunement.",
+      close:"You are the blueprint of anticipation.",
       turnons:["The charge before a single touch","Eye contact that says everything","Teasing, space, the delicious almost","Being felt from across a room","A partner who slows right down and tunes in"],
       shadow:"You feel every off-note too. The smallest misattunement makes you brace and disappear up into your head, right at the moment you most want to be reached."},
     Kinky:{name:"The Kinky",short:"Kinky",
       tease:"It was never about the act. It's about the dynamic underneath it: power, trust, permission.",
       desc:"This isn't about performance, it's about permission. What turns you on is not only the act, it is the dynamic underneath: power, trust, tension, a little taboo. You come alive in the unknown, in the pause before the command. This wiring isn't dangerous, it's devotional.",
+      open:"This isn't about performance, it's about permission.",
+      mid:"What turns you on is not only the act, it is the dynamic underneath: power, trust, tension, a little taboo. You come alive in the unknown, in the pause before the command.",
+      close:"This wiring isn't dangerous, it's devotional.",
       turnons:["Power play, given or taken","Trust deep enough to hand over control","A little taboo, a little edge","Being told what to do, or telling them","Ritual, restraint, the charge of the unknown"],
       shadow:"You can hide this whole part of yourself for fear of being judged, and settle for a version you never wanted, quietly starving for a charge you never let yourself ask for."},
     Shapeshifter:{name:"The Shapeshifter",short:"Shapeshifter",
       tease:"You're fluent in many languages of turn-on, and you refuse to choose just one.",
       desc:"You are fluent in many languages of turn-on. You are layered, holding many at once. You want it all, and you can hold it: the tease, the tenderness, the rawness, the sacred, the unexpected. You don't want to choose. You want to be met in your full spectrum.",
+      open:"You are fluent in many languages of turn-on.",
+      mid:"You are layered, holding many at once. You want it all, and you can hold it: the tease, the tenderness, the rawness, the sacred, the unexpected.",
+      close:"You don't want to choose. You want to be met in your full spectrum.",
       turnons:["Variety, surprise, range","Tenderness one night, edge the next","A partner who can meet every side of you","Never being boxed into one mode","The unexpected shift, mid-moment"],
       shadow:"You thrive on variety, so a partner with only one way in can leave you starving, and because you can meet anyone's flavour, you can lose track of what you actually want, and end up unmet in the shuffle."}
   };
@@ -725,7 +750,9 @@
     $('patternGrowth').textContent=pa.growthEdge;
     $('patternQuestion').textContent=pa.question;
     $('pleasureName').textContent=pl.name;
-    $('pleasureDesc').textContent=pl.desc;
+    $('pleasureOpen').textContent=pl.open;
+    $('pleasureMid').textContent=pl.mid;
+    $('pleasureClose').textContent=pl.close;
   }
 
   function revealBands(){
