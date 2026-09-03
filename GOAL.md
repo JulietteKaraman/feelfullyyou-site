@@ -35,9 +35,16 @@ Juliette supplied all-new pattern copy for Holder (rewritten), Operator, Explore
 ## Progress
 2026-09-03: Quiz question set, scoring, and results page shipped live and verified (no console errors, correct field population, tie-break logic traced by hand). GOAL.md updated to reflect the funnel change (quiz -> 15-Minute Touch Date -> Touch Reset, not quiz -> Touch Reset directly).
 
+## Progress (cont.)
+2026-09-03 later: Kit infrastructure built, DRAFTS ONLY, nothing published/live yet:
+- Tags created: Touch Pattern - Operator (23079697), Touch Pattern - Explorer (23079699), Touch Pattern - Wanderer (23079700)
+- Sequences created: Touch Pattern Result - Operator (2882951), - Explorer (2882952), - Wanderer (2882953)
+- Draft emails written in grouped paragraphs with visual hierarchy (per her feedback that the one-line-per-line staccato version read badly): Holder's existing live email (id 10058800, sequence 2821038) has a pending unpublished draft revision; Operator (10270456), Explorer (10270458), Wanderer (10270459) are new unpublished drafts. confirm_urls given to her per sequence.
+- Results page also got a visual hierarchy pass per her feedback: strength/growth-edge are now gold-accented callout cards, the reflective question is bigger and gold, Pleasure Language description split into bold-open/plain-mid/italic-gold-close instead of one flat paragraph. Live, verified with a screenshot.
+
 ## Open questions
 - Icon images for Operator/Explorer/Wanderer: don't exist yet. Source new photos/icons, or a different treatment (no icon)?
 - What happens to Flame/Armour Kit sequences and any subscribers already tagged with them: retire like dormant Signal/Current, or repurpose?
 - Should the "Meet Touch Base™" second email (currently a draft, identical across patterns) be built per-pattern for the two new-tier patterns too, or left as-is?
-- Kit email rewrite: Holder has her full worked example, Operator/Explorer/Wanderer still need the same treatment written from her result-page copy.
+- Kit drafts need her review + explicit publish before the site's PATTERN_TAG/PATTERN_SEQ get updated to the real Operator/Explorer/Wanderer IDs and pushed live — publishing the site wiring before the Kit emails are live would enroll people into sequences with no live content.
 - Other pages still naming the old pattern set (touch-hub.html, media-and-pr.html, the-room-women-original.html, touch-reset.html, questions/what-are-the-touch-languages.html, specs/warm-leads-crm.md): not yet touched.
