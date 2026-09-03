@@ -1,8 +1,18 @@
 # Feel Fully You — Site Instructions for Claude
 
-## START OF EVERY SESSION: Run the site health check
+## START OF EVERY SESSION — do both of these before anything else, every time, regardless of how the session opened (task request, greeting, or otherwise)
 
-Before doing any other work, run this:
+### 1. Read the live Canon first
+
+Before saying anything about current offers, prices, voice rules, or "what exists," fetch this page live via the Notion MCP — do not rely on memory or on what's written below in this file, and do not wait for a greeting to trigger it:
+
+- **🔒 FFY CURRENT CANON — READ ONLY THIS**: `https://app.notion.com/p/3bfc7588d9ea81f39022e2a83ddb8aa8`
+
+This is the single source of truth for current facts (offers, pricing, voice, CTA routing, banned words). If anything in this CLAUDE.md file (brand rules, etc.) conflicts with Canon, Canon wins — this file is a static local mirror and can drift.
+
+If Canon references a piece of work (e.g. the Blotato posting pipeline, the content-system doc) that isn't reflected in this repo or in the local skill set, say so explicitly rather than guessing or assuming it's missing — check the linked Notion page before concluding anything is lost.
+
+### 2. Run the site health check
 
 ```bash
 bash /Users/julietteckaraman/Desktop/feelfullyyou-site/check-site.sh
