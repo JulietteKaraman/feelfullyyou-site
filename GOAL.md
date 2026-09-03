@@ -26,13 +26,18 @@ Juliette supplied all-new pattern copy for Holder (rewritten), Operator, Explore
 5. Once approved: implement site changes, push, then (separately) build/publish Kit changes as she signs off on each piece
 
 ## Decisions
-- Proposed tie-break order: Holder > Operator > Explorer > Wanderer (matches the order she presented them in). Flagged for her to confirm or override.
-- Proposed: keep the same 6 question scenarios, add/rewrite answer options rather than writing new scenarios from scratch.
+- Superseded the first draft: Juliette supplied final copy for the 5 scored pattern questions (was 6), the results-page pattern summaries, and the scoring rule herself. Implemented as given, live now.
+- Scoring: highest tally across Holder/Operator/Explorer/Wanderer wins; ties broken by whichever pattern was picked on Q10 ("something isn't quite working..."), not a fixed priority order.
+- Old Q12 ("handing over control") retired from scoring; that slot is now the unscored Vision question, replaced with her new "if one thing could change" wording.
+- Results page rebuilt per her spec: full pattern recognition block (name, result line, description, strength, growth edge, reflective question) + Pleasure Language block + bridge straight to the 15-Minute Touch Date. Touch Reset pitch removed from this page entirely, that CTA now points at /the-15-minute-touch-date.
+- Kit email rewrite (new tone, no £97 pitch in the first email, bridges to 15-Minute Touch Date instead): she supplied a full worked example for Holder. NOT built yet, drafting is next, needs her sign-off before anything touches Kit.
 
 ## Progress
-2026-09-03: Repo search complete, drafts complete, presenting to Juliette for approval before any implementation.
+2026-09-03: Quiz question set, scoring, and results page shipped live and verified (no console errors, correct field population, tie-break logic traced by hand). GOAL.md updated to reflect the funnel change (quiz -> 15-Minute Touch Date -> Touch Reset, not quiz -> Touch Reset directly).
 
 ## Open questions
 - Icon images for Operator/Explorer/Wanderer: don't exist yet. Source new photos/icons, or a different treatment (no icon)?
 - What happens to Flame/Armour Kit sequences and any subscribers already tagged with them: retire like dormant Signal/Current, or repurpose?
 - Should the "Meet Touch Base™" second email (currently a draft, identical across patterns) be built per-pattern for the two new-tier patterns too, or left as-is?
+- Kit email rewrite: Holder has her full worked example, Operator/Explorer/Wanderer still need the same treatment written from her result-page copy.
+- Other pages still naming the old pattern set (touch-hub.html, media-and-pr.html, the-room-women-original.html, touch-reset.html, questions/what-are-the-touch-languages.html, specs/warm-leads-crm.md): not yet touched.
