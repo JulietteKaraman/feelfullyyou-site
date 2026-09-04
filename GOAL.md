@@ -7,12 +7,12 @@ Move the Touch Reset Quiz's Touch Pattern system from 3 patterns (Holder, Flame,
 Juliette supplied all-new pattern copy for Holder (rewritten), Operator, Explorer, Wanderer, and said "we can change the Touch Reset quiz, the results, everything." Flame and Armour are retired.
 
 ## Done when
-- [ ] The Quizzes reference artifact (https://claude.ai/code/artifact/7b3b6214-4a8c-4496-9eea-effb922f2085, "shareable copy of the Notion hub") is updated to match everything done in this project: 4 patterns not 3, 5 scored pattern questions not 6, new Vision question, rebuilt results page, rebuilt Kit sequences. Juliette said do this LAST, only after every email in the longer story-driven sequence is finished. Do not touch it before then.
-- [ ] Juliette has approved: the 6 new pattern-question answer sets, the PATTERN object copy, the tie-break order, and the Kit/icon plan
-- [ ] touch-languages-quiz.html updated and pushed live (quiz questions, PATTERN object, scoring, PATTERN_TAG/PATTERN_SEQ, results-page tease lines)
+- [x] The Quizzes reference artifact (https://claude.ai/code/artifact/7b3b6214-4a8c-4496-9eea-effb922f2085, "shareable copy of the Notion hub") updated 3 Sept evening. Juliette changed her mind about waiting until the very end, asked for it now instead, republished with all patterns/questions/scoring/results-page/Kit-sequence changes reflected, including the in-progress long-sequence story assignments. Will need another pass once the longer sequence is actually finished and published in Kit.
+- [x] Juliette has approved: the pattern-question answer sets, the PATTERN object copy, the tie-break order (Q10 tiebreak, her own rule not a fixed order)
+- [x] touch-languages-quiz.html updated and pushed live (quiz questions, PATTERN object incl. origin lines, scoring, results-page redesign)
 - [ ] touch-hub.html, media-and-pr.html, the-room-women-original.html, touch-reset.html, questions/what-are-the-touch-languages.html, specs/warm-leads-crm.md fixed or explicitly deferred by her
-- [ ] Kit: decision made and (if approved) executed on Holder's sequence content, Flame/Armour retirement, and new Operator/Explorer/Wanderer sequences — blocked on pattern icon images existing
-- [ ] Icon images resolved: pattern-operator.png / pattern-explorer.png / pattern-wanderer.png sourced or commissioned
+- [x] Icons: resolved, decided NOT needed anywhere, including Holder's (was the only one that had one)
+- [ ] Kit: the longer, story-driven sequence (2-min video first, then 15-Minute Touch Date, then real proof stories, then possibly a "why 3 months" + two-paths-in beat) is IN PROGRESS, not yet written or published. This is the current active task.
 
 ## Boundaries
 - Nothing pushed live (git push or Kit `published:true`) without her explicit go-ahead on this specific piece
