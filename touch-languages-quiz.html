@@ -413,7 +413,8 @@
       <div class="reyebrow" style="justify-content:center">Your Touch Pattern is</div>
       <h2 class="bandhead" id="patternName" style="text-align:center"></h2>
       <p class="bandtext" id="patternResultLine" style="text-align:center;font-weight:600;max-width:52ch;margin:0 auto 18px"></p>
-      <p class="bandtext" id="patternDesc" style="max-width:52ch;margin:0 auto 26px"></p>
+      <p class="bandtext" id="patternDesc" style="max-width:52ch;margin:0 auto 18px"></p>
+      <p id="patternOrigin" style="max-width:52ch;margin:0 auto 26px;font-style:italic;color:var(--gold-pale);font-size:1.02rem;line-height:1.6"></p>
       <div style="max-width:52ch;margin:0 auto 26px;display:flex;flex-direction:column;gap:14px">
         <div style="background:rgba(6,26,26,.4);border-left:3px solid var(--gold-pale);padding:14px 18px;border-radius:6px">
           <div style="font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-pale);font-weight:700;margin-bottom:5px">Your strength</div>
@@ -549,24 +550,28 @@
     Holder:{name:"The Holder",short:"Holder",
       resultLine:"You naturally pay attention to everyone else.",
       desc:"You're loving, attentive and dependable. You notice what people need and you're often the one keeping things running smoothly. That can follow you into intimacy, where you may track your partner's experience more easily than your own.",
+      origin:"You learned early that being needed was safer than being wanted, so you got fluent in everyone else and never learned to read yourself.",
       strength:"You love deeply and show up fully.",
       growthEdge:"Learning to receive without immediately giving back.",
       question:"What do I want when I stop tracking everyone else?"},
     Operator:{name:"The Operator",short:"Operator",
       resultLine:"You're capable. You know how to make things happen.",
       desc:"You solve problems, make decisions and keep moving. When life needs handling, you handle it. That capability can follow you into intimacy, where it's sometimes easier to do something than slow down enough to feel what's actually happening.",
+      origin:"Somewhere along the way, doing became the only feeling you trusted. If you could handle it, you were safe. If you could fix it, you never had to feel it.",
       strength:"You're highly capable and resourceful.",
       growthEdge:"Feeling instead of managing.",
       question:"What can I feel when I don't have to do anything with it?"},
     Explorer:{name:"The Explorer",short:"Explorer",
       resultLine:"You're curious about what else is possible.",
       desc:"You want aliveness, pleasure, variety and discovery. You're willing to experiment rather than accept that intimacy has to stay the same. But more experiences don't automatically tell you what your body genuinely enjoys.",
+      origin:"Nobody ever asked what you liked, only what you were up for, so you got good at being up for things and never got the practice of knowing your own yes.",
       strength:"Curiosity and openness.",
       growthEdge:"Becoming precise about your own pleasure.",
       question:"Is this exciting, sensational, or actually pleasurable for me?"},
     Wanderer:{name:"The Wanderer",short:"Wanderer",
       resultLine:"You want depth and real connection.",
       desc:"Surface-level intimacy isn't really what you're after. You want to feel something. But sometimes when touch, emotion, vulnerability or sensation intensifies, your attention wanders. Your body can still be there while you've gone somewhere else.",
+      origin:"At some point feeling everything stopped being safe, so your body found its own workaround: show up, and leave anyway.",
       strength:"Your desire for depth and connection.",
       growthEdge:"Staying present for what you want to experience.",
       question:"Can I feel this and still be here?"}
@@ -746,6 +751,7 @@
     $('patternName').textContent=pa.name;
     $('patternResultLine').textContent=pa.resultLine;
     $('patternDesc').textContent=pa.desc;
+    $('patternOrigin').textContent=pa.origin;
     $('patternStrength').textContent=pa.strength;
     $('patternGrowth').textContent=pa.growthEdge;
     $('patternQuestion').textContent=pa.question;
