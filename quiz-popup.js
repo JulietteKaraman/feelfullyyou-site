@@ -8,7 +8,7 @@
     + "#trq-pop-overlay.show.in{opacity:1}\n"
     + "#trq-pop{position:relative;background:#fefcfa;border-radius:16px;max-width:380px;width:100%;overflow:hidden;text-align:center;box-shadow:0 30px 80px -20px rgba(0,0,0,.55);font-family:'Poppins',system-ui,sans-serif;opacity:0;transform:translateY(16px) scale(.96);transition:opacity .38s cubic-bezier(.23,1,.32,1),transform .38s cubic-bezier(.23,1,.32,1)}\n"
     + "#trq-pop-overlay.show.in #trq-pop{opacity:1;transform:none}\n"
-    + "#trq-pop-photo{width:100%;height:130px;background:url('https://feelfullyyou.com/touch-reset-quiz-og.jpg') center 42%/cover no-repeat}\n"
+    + "#trq-pop-photo{width:100%;height:130px;background:url('https://feelfullyyou.com/touch-embrace-bw.jpg') center 20%/cover no-repeat}\n"
     + "#trq-pop-body{padding:26px 30px 30px}\n"
     + "#trq-pop-close{position:absolute;top:12px;right:14px;background:rgba(6,26,26,.4);border:none;font-size:18px;line-height:1;color:#fefcfa;cursor:pointer;padding:4px;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:background .16s ease,transform .16s cubic-bezier(.23,1,.32,1)}\n"
     + "#trq-pop-close:active{transform:scale(.9)}\n"
