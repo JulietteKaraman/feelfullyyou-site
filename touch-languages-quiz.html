@@ -424,8 +424,8 @@
           <div id="patternGrowth" style="font-weight:700;color:var(--cream);font-size:1.08rem;line-height:1.5"></div>
         </div>
         <div style="background:rgba(6,26,26,.4);border-left:3px solid var(--gold-pale);padding:14px 18px;border-radius:6px">
-          <div style="font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-pale);font-weight:700;margin-bottom:5px">Where this takes your body</div>
-          <div id="patternState" style="font-weight:700;color:var(--cream);font-size:1.08rem;line-height:1.5"></div>
+          <div style="font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-pale);font-weight:700;margin-bottom:5px">Your MORE</div>
+          <div id="patternMore" style="font-weight:700;color:var(--cream);font-size:1.08rem;line-height:1.5"></div>
         </div>
       </div>
       <p id="patternQuestion" style="text-align:center;font-style:italic;color:var(--gold-pale);font-family:var(--display);font-size:1.2rem;line-height:1.5;max-width:44ch;margin:0 auto"></p>
@@ -549,27 +549,27 @@
   var PATTERN={
     Holder:{name:"The Holder",short:"Holder",
       resultLine:"You naturally pay attention to everyone else.",
-      desc:"You're loving, attentive and dependable. You notice what people need and you're often the one keeping things running smoothly. That can follow you into intimacy, where you may track your partner's experience more easily than your own.",
+      desc:"You're loving, attentive and dependable. You notice what people need and you're often the one keeping things running smoothly. That can follow you into intimacy, where you may notice your partner's experience before you've checked in with your own.",
       origin:"You learned early that being needed was safer than being wanted, so you got fluent in everyone else and never learned to read yourself.",
-      strength:"You love deeply and show up fully.",
-      growthEdge:"Learning to receive without immediately giving back.",
-      state:"Performing",stateLine:"Giving connection, receiving none of it.",
+      strength:"You love deeply and notice the people you're with.",
+      growthEdge:"Staying with what you want while you're with someone else.",
+      more:"Receiving deeply, without immediately turning your attention back to them.",
       question:"What do I want when I stop tracking everyone else?"},
     Operator:{name:"The Operator",short:"Operator",
       resultLine:"You're capable. You know how to make things happen.",
       desc:"You solve problems, make decisions and keep moving. When life needs handling, you handle it. That capability can follow you into intimacy, where it's sometimes easier to do something than slow down enough to feel what's actually happening.",
       origin:"Somewhere along the way, doing became the only feeling you trusted. If you could handle it, you were safe. If you could fix it, you never had to feel it.",
-      strength:"You're highly capable and resourceful.",
-      growthEdge:"Feeling instead of managing.",
-      state:"Braced",stateLine:"Bracing for intrusion. Shoulders up, breath shallow.",
+      strength:"You're highly capable, and things get done because of you.",
+      growthEdge:"Staying with what you feel instead of moving on to the next thing.",
+      more:"Feeling deeply, without needing to manage what happens next.",
       question:"What can I feel when I don't have to do anything with it?"},
     Wanderer:{name:"The Wanderer",short:"Wanderer",
       resultLine:"You want depth and real connection.",
       desc:"Surface-level intimacy isn't really what you're after. You want to feel something. But sometimes when touch, emotion, vulnerability or sensation intensifies, your attention wanders. Your body can still be there while you've gone somewhere else.",
       origin:"At some point feeling everything stopped being safe, so your body found its own workaround: show up, and leave anyway.",
-      strength:"Your desire for depth and connection.",
-      growthEdge:"Staying present for what you want to experience.",
-      state:"Withheld",stateLine:"In the room, quietly gone.",
+      strength:"You want real depth, and you keep reaching for it.",
+      growthEdge:"Staying with what you want to experience, especially as it intensifies.",
+      more:"Staying, all the way through, instead of leaving right when it gets good.",
       question:"Can I feel this and still be here?"}
   };
 
@@ -754,7 +754,7 @@
     $('patternOrigin').textContent=pa.origin;
     $('patternStrength').textContent=pa.strength;
     $('patternGrowth').textContent=pa.growthEdge;
-    $('patternState').textContent=pa.state+': "'+pa.stateLine+'"';
+    $('patternMore').textContent=pa.more;
     $('patternQuestion').textContent=pa.question;
     $('pleasureName').textContent=pl.name;
     $('pleasureOpen').textContent=pl.open;
