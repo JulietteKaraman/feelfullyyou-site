@@ -775,7 +775,7 @@
     var audTag=(AUD[audience]||{}).tag;
     var tags=[PATTERN_TAG[result.pattern],PLEASURE_TAG[result.pleasure],audTag,ID_TAG[identity],STAGE_TAG[stage]].filter(function(t){return t;});
     var stackFields={touch_pleasure:result.pleasure,touch_pattern:PATTERN[result.pattern].short,touch_stage:STAGE[stage].name,touch_vision:visionAnswer||''};
-    var payload=JSON.stringify({email:email,tagIds:tags,sequenceIds:[PATTERN_SEQ[result.pattern],2821695].filter(Boolean),fields:stackFields,hp_field:$('capForm').hp_field.value});
+    var payload=JSON.stringify({email:email,tagIds:tags,sequenceIds:[PATTERN_SEQ[result.pattern]].filter(Boolean),fields:stackFields,hp_field:$('capForm').hp_field.value});
     function attempt(n){
       return fetch('/.netlify/functions/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:payload})
         .then(function(r){return r.json().catch(function(){return {};});})
