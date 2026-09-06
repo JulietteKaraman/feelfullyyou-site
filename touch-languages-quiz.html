@@ -321,13 +321,14 @@
       <section id="stage" style="display:none">
         <span class="phase">Part one &middot; your way into pleasure</span>
         <span class="phaseSub">One honest check-in before you keep going.</span>
-        <h2 class="qtext">Which one sounds most like you lately?</h2>
+        <h2 class="qtext">Where are you with touch, intimacy and connection right now?</h2>
         <div class="aud-opts">
           <button class="aud" data-stage="quiet">Touch still happens and we are exploring a bit.<span>We don't always make time for it.</span></button>
           <button class="aud" data-stage="brace">I tense up half a second before I've even decided to.<span>My body answers before I do.</span></button>
           <button class="aud" data-stage="gone">I see my partner tense up, and I've stopped reaching for them a while ago.<span>This is just how it is.</span></button>
           <button class="aud" data-stage="fade">Touch just isn't something I'm that into anymore.<span>It's just&hellip; meh, and it doesn't quite land.</span></button>
           <button class="aud" data-stage="reach">I want more touch than my partner.<span>(I am a bit frustrated at always having to initiate.)</span></button>
+          <button class="aud" data-stage="more">Things aren't necessarily wrong. There may already be touch, intimacy and connection that I enjoy.<span>I just have a sense there's more available: more depth, more sensation, more pleasure, more aliveness, and I want to explore it.</span></button>
         </div>
       </section>
 
@@ -349,7 +350,6 @@
         <div class="opts">
           <button type="button" class="opt" data-r2="stay">I want it to stay exactly like this. Nothing more needed.</button>
           <button type="button" class="opt" data-r2="waiting">It's nice, but part of me is waiting for it to turn into something else.</button>
-          <button type="button" class="opt" data-r2="honest">I need us to actually say something honest right now, or it feels empty.</button>
           <button type="button" class="opt" data-r2="still">I go a bit still. I never quite know what to do with just holding.</button>
         </div>
       </section>
@@ -373,7 +373,6 @@
         <div class="opts" id="visionOpts">
           <button type="button" class="opt" data-vision="care">For someone else to take care of me for once, without me having to manage it, explain every detail or give something back.</button>
           <button type="button" class="opt" data-vision="receive">To stop treating intimacy like something I need to manage or get right, and let myself actually feel and receive it.</button>
-          <button type="button" class="opt" data-vision="discover">To discover more of what genuinely turns me on, and feel confident asking for the touch and experiences I actually want.</button>
           <button type="button" class="opt" data-vision="stay">To stay with the person and the moment instead of disappearing into my thoughts when things get intimate, vulnerable or intense.</button>
         </div>
         <button class="qback" id="visionBack">go back</button>
@@ -484,7 +483,7 @@
   var PLEASURE_TAG={Sensual:20944034,Sexual:20944035,Energetic:20944036,Kinky:20944037,Shapeshifter:20944038};
   var ORI_TAG={Leads:20994542,Receives:20994543,Switches:20994544};
   var ID_TAG={woman:21000823,man:21000824,nb:21000825,pref:21000826};
-  var STAGE_TAG={quiet:21270730,brace:21270733,gone:21270734,fade:22521332,reach:22906972};
+  var STAGE_TAG={quiet:21270730,brace:21270733,gone:21270734,fade:22521332,reach:22906972,more:23135504};
   var AUD={
     woman:{tag:20994349,line:"The Touch Reset for Women",door:"The Touch Reset",href:"/the-touch-reset",cta:"Show me The Touch Reset",
       blurb:"My 12-week live group where women come home to their own body, their own sensation, and their own yes.",
@@ -594,10 +593,14 @@
     reach:{name:"The Reach",kicker:"Where you are right now",
       desc:"You're the one who initiates almost every time, and you're tired of it. You clearly want your partner. It's the wanting alone, every single time, that has started to feel less like desire and more like a job. The touch is there if you ask for it. The reaching isn't mutual, and some part of you has started keeping score.",
       part:"What's above tells you what you're wired for. It won't close the gap by itself. Structured communication, Part 2, is where you actually say the thing, I don't want to be the only one who starts this, without it turning into a fight. That's what changes who reaches first.",
-      pitchLine:"Start here: you don't have to be the only one reaching"}
+      pitchLine:"Start here: you don't have to be the only one reaching"},
+    more:{name:"The More",kicker:"Where you are right now",
+      desc:"You're not reaching for this because something went quiet. You already have touch, intimacy and connection that works, at least some of the time. What you're noticing is closer to a ceiling than a gap: a sense that depth, sensation, pleasure and aliveness could go further than they currently do.",
+      part:"Your wiring above still matters here. Knowing your Pattern and Pleasure Language is how you find the specific more you're actually reaching for, instead of guessing at it generically. The four parts of The Touch Reset still apply, they just point toward expansion here, not repair.",
+      pitchLine:"Start here: point what already works toward more"}
   };
   var STAGE_CAUTION="The tool has to match the stage. A Stage 1 fix, a date night, a holiday, one good conversation, applied to a Stage 2 or 3 situation is usually what makes couples give up on each other.";
-  var STAGE_TAGLINE={quiet:"Nothing dramatic. Just quiet.",brace:"My body knows before my mind does.",gone:"This is just how things are now.",fade:"It's not gone, it's just not lit up right now.",reach:"You're the one who keeps closing the gap."};
+  var STAGE_TAGLINE={quiet:"Nothing dramatic. Just quiet.",brace:"My body knows before my mind does.",gone:"This is just how things are now.",fade:"It's not gone, it's just not lit up right now.",reach:"You're the one who keeps closing the gap.",more:"Good already. I want more of it."};
   /* QUESTIONS: pleasure(6) Sensual/Sexual/Energetic/Kinky/Shapeshifter · pattern(5) H/O/W, tie broken by Q10 (index 3) */
   var QPL=[
     ["Someone finds the exact knot in your shoulder during a massage. What sound do you actually make?",[["\"Harder.\" I ask for more before they've even let go.","Kinky"],["A long, quiet exhale, then a slow moan. My body is lit up. I could stay right there for an hour.","Sensual"],["Depends entirely on the knot. Every one gets something different out of me.","Shapeshifter"],["A groan, but I'm already thinking about where this could go.","Sexual"],["Nothing. I just go still and quiet, or ask her to go lighter.","Energetic"]],"touch-bw.jpg"],
@@ -608,11 +611,11 @@
     ["Which style of touch has your body say \"yes, more please\"?",[["Charged and barely touching.","Energetic"],["Edgy and a little dangerous.","Kinky"],["Slow and deeply savoured.","Sensual"],["Different every single time.","Shapeshifter"],["Fast, hungry, and direct.","Sexual"]],null]
   ];
   var QPAT=[
-    ["When you want connection or touch with your partner, what are you most likely to do?",[["I check where they're at first, what mood they're in, what they need, whether they're okay, before I really check what I want.","H"],["I tend to take the lead or make something happen. It's easier when I know what we're doing than when I have to slow down and feel my way into it.","O"],["I want the connection, but once we're actually in it my attention can wander. I can end up in my head rather than really feeling what's happening.","W"]],"dyad-hands.jpg"],
-    ["When someone gives you their full attention or care, what tends to happen?",[["I enjoy it, but pretty quickly I want to give something back. Just receiving without doing anything in return can feel uncomfortable.","H"],["Part of me wants to know what I'm supposed to do with it. I can find it easier to participate than to simply let myself receive.","O"],["I want to receive it, but my attention can drift. I might suddenly realise I've been thinking rather than actually feeling what they're doing.","W"]],"touch-grey-chest.jpg"],
-    ["Someone you're close to unexpectedly puts their hand on your back. What happens first?",[["I notice them first, their mood, what they mean by it, whether they need something, before I notice my own response.","H"],["I register it, but I'm likely to keep doing whatever I was doing rather than stop and really feel it.","O"],["I notice it for a moment, but my attention can disappear somewhere else before I've really registered what I felt.","W"]],"touchfingers.JPG"],
-    ["Something isn't quite working during touch or intimacy. What are you most likely to do?",[["I start thinking about their experience, whether they're enjoying it or whether saying something might make them feel bad.","H"],["I try to make it work. Change position, change technique, do something. I'm more likely to fix it than stop and feel what's happening.","O"],["I can stay physically involved while my attention starts going somewhere else.","W"]],null],
-    ["When you imagine touch and intimacy feeling really good for you, what do you want more of?",[["To be able to relax into someone else taking care of me, without feeling like I need to give something back.","H"],["To get out of my head, stop managing everything and actually feel what's happening in my body.","O"],["To stay present enough to really feel the touch, connection and intimacy I'm craving.","W"]],"touch-cloth.jpg"]
+    ["When you want more touch, intimacy or connection, what are you most likely to do?",[["I usually start with them. Are they in the mood? How are they feeling? What would they like? I can know I want more connection without having checked what I actually want from it.","H"],["I'm likely to do something about it: initiate, suggest something, create the moment. I'm good at getting things moving, slowing down to notice exactly what I want can come later.","O"],["I can really want more connection, but that doesn't always mean I know how to get there. I might think about it, imagine it, crave it, and then when the moment comes, I'm not always fully in it.","W"]],"dyad-hands.jpg"],
+    ["When someone is giving you their full attention, a massage, affection, really listening to you, doing something just for you, what feels most like you?",[["I love it, but I'm still aware of them. Are they comfortable? Are they enjoying this too? At some point I'll probably want to turn the attention back towards them.","H"],["I enjoy it more when I can be involved somehow. Just lying there and receiving can leave me wondering what to do with myself. Give me something to respond to and I'm happier.","O"],["I can love what they're giving me and still suddenly realise I've disappeared into a thought about something completely unrelated. Then I'm like, oh, come back, don't miss this.","W"]],"touch-grey-chest.jpg"],
+    ["Someone you're close to unexpectedly puts their hand on your back. What are you most likely to notice first?",[["Them. What's that about? Are they wanting something? Are they okay? I'll often read them and the meaning of the touch before I notice what the touch actually feels like to me.","H"],["I notice it, but I'm probably still doing whatever I was doing. I might lean into them, touch them back or carry on with the conversation without really stopping to notice the sensation itself.","O"],["I notice their hand, and then my mind can be somewhere else almost immediately. I may only realise afterwards that I never really noticed what the touch felt like.","W"]],"touchfingers.JPG"],
+    ["You're being touched and realise you'd like something different. What are you most likely to do?",[["I'll think about how to say it without making them feel like they're doing it wrong. Sometimes it feels easier to go with what they're doing than risk knocking their confidence.","H"],["I'm quite likely to do something: move their hand, change position, show them, take the lead. I tend to communicate what I want by changing what's happening.","O"],["I can know this isn't quite it before I know what I want instead. I need a moment to actually feel into it, otherwise I can end up going along with what's happening.","W"]],null],
+    ["When you imagine having more in touch, intimacy and connection, what are you most hungry for?",[["To be able to really receive. To let someone focus on me, enjoy it, ask for more, and not immediately start thinking about what they need from me.","H"],["To not have to make everything happen. To be able to stop doing for a minute, drop into my body and discover what feels good when I'm not directing the whole experience.","O"],["To feel more of what's already happening. To stay with the touch, the pleasure, the person, instead of realising my body was there but the rest of me had wandered off.","W"]],"touch-cloth.jpg"]
   ];
 
   var ALL=[].concat(QPL,QPAT);
