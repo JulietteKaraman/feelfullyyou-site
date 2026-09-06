@@ -424,6 +424,10 @@
           <div style="font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-pale);font-weight:700;margin-bottom:5px">Your growth edge</div>
           <div id="patternGrowth" style="font-weight:700;color:var(--cream);font-size:1.08rem;line-height:1.5"></div>
         </div>
+        <div style="background:rgba(6,26,26,.4);border-left:3px solid var(--gold-pale);padding:14px 18px;border-radius:6px">
+          <div style="font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-pale);font-weight:700;margin-bottom:5px">Where this takes your body</div>
+          <div id="patternState" style="font-weight:700;color:var(--cream);font-size:1.08rem;line-height:1.5"></div>
+        </div>
       </div>
       <p id="patternQuestion" style="text-align:center;font-style:italic;color:var(--gold-pale);font-family:var(--display);font-size:1.2rem;line-height:1.5;max-width:44ch;margin:0 auto"></p>
     </div>
@@ -469,11 +473,14 @@
 (function(){
   "use strict";
 
-  // Operator/Explorer/Wanderer have no Kit tag or sequence ID yet, deliberately
-  // left out below rather than invented, so those results still tag/sequence
-  // as undefined (harmless, .filter(Boolean) drops them) until Kit is built.
-  var PATTERN_TAG={Holder:20988556,Flame:20988557,Armour:20988558,Signal:20988559,Current:20988560};
-  var PATTERN_SEQ={Holder:2821038,Flame:2821039,Armour:2821040,Signal:2821041,Current:2821042};
+  // 3-pattern system, locked 5 Sept 2026: Explorer retired (kept sliding into
+  // Wanderer's territory, see reference_touch_pattern_differentiation_libido_fairy_comparison.md).
+  // These map to the REAL live Kit tags/sequences, replacing a stale map that
+  // still pointed at the old retired Flame/Armour/Signal/Current names, which
+  // meant every Operator/Explorer/Wanderer result went completely untagged and
+  // unsequenced. Fixed same session this was caught.
+  var PATTERN_TAG={Holder:20988556,Operator:23079697,Wanderer:23079700};
+  var PATTERN_SEQ={Holder:2821038,Operator:2882951,Wanderer:2882953};
   var PLEASURE_TAG={Sensual:20944034,Sexual:20944035,Energetic:20944036,Kinky:20944037,Shapeshifter:20944038};
   var ORI_TAG={Leads:20994542,Receives:20994543,Switches:20994544};
   var ID_TAG={woman:21000823,man:21000824,nb:21000825,pref:21000826};
@@ -495,12 +502,6 @@
       blurb:"My 12-week live group for changing the pattern, not just naming it. Wherever touch went quiet, this is the way back.",
       foryou:["Touch has gone quiet, careful, or routine","You've done the courses and the therapy and it still hasn't landed","You want the work that reaches the body, not just the mind"],
       free:{title:"One Touch",blurb:"Seven days, your own hands, to feel your pattern instead of just knowing it. £97.",href:"/one-touch",cta:"Start One Touch"}}
-  };
-
-  var EMBLEM={
-    Holder:'<svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="2.4"/><path d="M4 12a8 8 0 0 0 16 0"/></svg>',
-    Flame:'<svg viewBox="0 0 24 24"><path d="M12 3c.5 3.5 4.5 5 4.5 9.5A4.5 4.5 0 0 1 12 17a4.5 4.5 0 0 1-4.5-4.5c0-2.2 1.3-3.4 2.4-4.8.4 1.9 1.8 2 1.8.6C11.7 6.8 10.8 5.7 12 3Z"/></svg>',
-    Armour:'<svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6z"/></svg>'
   };
 
   var PLEASURE={
@@ -553,6 +554,7 @@
       origin:"You learned early that being needed was safer than being wanted, so you got fluent in everyone else and never learned to read yourself.",
       strength:"You love deeply and show up fully.",
       growthEdge:"Learning to receive without immediately giving back.",
+      state:"Performing",stateLine:"Giving connection, receiving none of it.",
       question:"What do I want when I stop tracking everyone else?"},
     Operator:{name:"The Operator",short:"Operator",
       resultLine:"You're capable. You know how to make things happen.",
@@ -560,20 +562,15 @@
       origin:"Somewhere along the way, doing became the only feeling you trusted. If you could handle it, you were safe. If you could fix it, you never had to feel it.",
       strength:"You're highly capable and resourceful.",
       growthEdge:"Feeling instead of managing.",
+      state:"Braced",stateLine:"Bracing for intrusion. Shoulders up, breath shallow.",
       question:"What can I feel when I don't have to do anything with it?"},
-    Explorer:{name:"The Explorer",short:"Explorer",
-      resultLine:"You're curious about what else is possible.",
-      desc:"You say yes to what's put in front of you more than you ask yourself what you actually want. You're open, easy-going, willing to try almost anything. But being willing was never going to tell you what your body genuinely enjoys, only precision could.",
-      origin:"Nobody ever asked what you liked, only what you were up for, so you got good at being up for things and never got the practice of knowing your own yes.",
-      strength:"Curiosity and openness.",
-      growthEdge:"Becoming precise about your own pleasure.",
-      question:"Is this exciting, sensational, or actually pleasurable for me?"},
     Wanderer:{name:"The Wanderer",short:"Wanderer",
       resultLine:"You want depth and real connection.",
       desc:"Surface-level intimacy isn't really what you're after. You want to feel something. But sometimes when touch, emotion, vulnerability or sensation intensifies, your attention wanders. Your body can still be there while you've gone somewhere else.",
       origin:"At some point feeling everything stopped being safe, so your body found its own workaround: show up, and leave anyway.",
       strength:"Your desire for depth and connection.",
       growthEdge:"Staying present for what you want to experience.",
+      state:"Withheld",stateLine:"In the room, quietly gone.",
       question:"Can I feel this and still be here?"}
   };
 
@@ -601,7 +598,7 @@
   };
   var STAGE_CAUTION="The tool has to match the stage. A Stage 1 fix, a date night, a holiday, one good conversation, applied to a Stage 2 or 3 situation is usually what makes couples give up on each other.";
   var STAGE_TAGLINE={quiet:"Nothing dramatic. Just quiet.",brace:"My body knows before my mind does.",gone:"This is just how things are now.",fade:"It's not gone, it's just not lit up right now.",reach:"You're the one who keeps closing the gap."};
-  /* QUESTIONS: pleasure(6) Sensual/Sexual/Energetic/Kinky/Shapeshifter · pattern(5) H/O/E/W, tie broken by Q10 (index 3) */
+  /* QUESTIONS: pleasure(6) Sensual/Sexual/Energetic/Kinky/Shapeshifter · pattern(5) H/O/W, tie broken by Q10 (index 3) */
   var QPL=[
     ["Someone finds the exact knot in your shoulder during a massage. What sound do you actually make?",[["\"Harder.\" I ask for more before they've even let go.","Kinky"],["A long, quiet exhale, then a slow moan. My body is lit up. I could stay right there for an hour.","Sensual"],["Depends entirely on the knot. Every one gets something different out of me.","Shapeshifter"],["A groan, but I'm already thinking about where this could go.","Sexual"],["Nothing. I just go still and quiet, or ask her to go lighter.","Energetic"]],"touch-bw.jpg"],
     ["The hairdresser tips your head back into the sink and starts washing. What's happening in you?",[["Honestly, my mind wanders somewhere else entirely. I am wondering what their hands would feel like on my butt.","Sexual"],["I'm hyper-aware of the moment before she touches me, and the shampoo is a bit strong smelling. I can sense the hesitation in her fingers when she tests the water for the temperature.","Energetic"],["I love it and fully melt into it, but I'd also love a bit more variety, maybe pulling my hair a bit, changing up the pressure, speed and temperature. \"Wouldn't it be cool if they added different scents too, and someone fed me strawberries at the same time?\"","Shapeshifter"],["I deeply relax into it, savour every moment, and a moan escapes my mouth. This might be my favourite five minutes of the month.","Sensual"],["I like that my head is fully in their hands and I have no control over it, but maybe I wish she'd pull on my hair a bit more.","Kinky"]],"touch-scarf-silk-2.jpg"],
@@ -611,11 +608,11 @@
     ["Which style of touch has your body say \"yes, more please\"?",[["Charged and barely touching.","Energetic"],["Edgy and a little dangerous.","Kinky"],["Slow and deeply savoured.","Sensual"],["Different every single time.","Shapeshifter"],["Fast, hungry, and direct.","Sexual"]],null]
   ];
   var QPAT=[
-    ["When you want connection or touch with your partner, what are you most likely to do?",[["I check where they're at first, what mood they're in, what they need, whether they're okay, before I really check what I want.","H"],["I tend to take the lead or make something happen. It's easier when I know what we're doing than when I have to slow down and feel my way into it.","O"],["I want to try something: a different kind of touch, a new idea, something that might make things feel more interesting or alive.","E"],["I want the connection, but once we're actually in it my attention can wander. I can end up in my head rather than really feeling what's happening.","W"]],"dyad-hands.jpg"],
-    ["When someone gives you their full attention or care, what tends to happen?",[["I enjoy it, but pretty quickly I want to give something back. Just receiving without doing anything in return can feel uncomfortable.","H"],["Part of me wants to know what I'm supposed to do with it. I can find it easier to participate than to simply let myself receive.","O"],["I'm curious about it. I notice what they're doing, how it feels, and whether I want more, less or something different.","E"],["I want to receive it, but my attention can drift. I might suddenly realise I've been thinking rather than actually feeling what they're doing.","W"]],"touch-grey-chest.jpg"],
-    ["Someone you're close to unexpectedly puts their hand on your back. What happens first?",[["I notice them first, their mood, what they mean by it, whether they need something, before I notice my own response.","H"],["I register it, but I'm likely to keep doing whatever I was doing rather than stop and really feel it.","O"],["I notice the touch and get curious. Ooh, what does that feel like? Do I want them to keep going or touch me differently?","E"],["I notice it for a moment, but my attention can disappear somewhere else before I've really registered what I felt.","W"]],"touchfingers.JPG"],
-    ["Something isn't quite working during touch or intimacy. What are you most likely to do?",[["I start thinking about their experience, whether they're enjoying it or whether saying something might make them feel bad.","H"],["I try to make it work. Change position, change technique, do something. I'm more likely to fix it than stop and feel what's happening.","O"],["I want to change it up and try something different. There must be another way we could do this that feels better.","E"],["I can stay physically involved while my attention starts going somewhere else.","W"]],null],
-    ["When you imagine touch and intimacy feeling really good for you, what do you want more of?",[["To be able to relax into someone else taking care of me, without feeling like I need to give something back.","H"],["To get out of my head, stop managing everything and actually feel what's happening in my body.","O"],["More variety, play and discovery. I want to find out what else feels good and what really turns me on.","E"],["To stay present enough to really feel the touch, connection and intimacy I'm craving.","W"]],"touch-cloth.jpg"]
+    ["When you want connection or touch with your partner, what are you most likely to do?",[["I check where they're at first, what mood they're in, what they need, whether they're okay, before I really check what I want.","H"],["I tend to take the lead or make something happen. It's easier when I know what we're doing than when I have to slow down and feel my way into it.","O"],["I want the connection, but once we're actually in it my attention can wander. I can end up in my head rather than really feeling what's happening.","W"]],"dyad-hands.jpg"],
+    ["When someone gives you their full attention or care, what tends to happen?",[["I enjoy it, but pretty quickly I want to give something back. Just receiving without doing anything in return can feel uncomfortable.","H"],["Part of me wants to know what I'm supposed to do with it. I can find it easier to participate than to simply let myself receive.","O"],["I want to receive it, but my attention can drift. I might suddenly realise I've been thinking rather than actually feeling what they're doing.","W"]],"touch-grey-chest.jpg"],
+    ["Someone you're close to unexpectedly puts their hand on your back. What happens first?",[["I notice them first, their mood, what they mean by it, whether they need something, before I notice my own response.","H"],["I register it, but I'm likely to keep doing whatever I was doing rather than stop and really feel it.","O"],["I notice it for a moment, but my attention can disappear somewhere else before I've really registered what I felt.","W"]],"touchfingers.JPG"],
+    ["Something isn't quite working during touch or intimacy. What are you most likely to do?",[["I start thinking about their experience, whether they're enjoying it or whether saying something might make them feel bad.","H"],["I try to make it work. Change position, change technique, do something. I'm more likely to fix it than stop and feel what's happening.","O"],["I can stay physically involved while my attention starts going somewhere else.","W"]],null],
+    ["When you imagine touch and intimacy feeling really good for you, what do you want more of?",[["To be able to relax into someone else taking care of me, without feeling like I need to give something back.","H"],["To get out of my head, stop managing everything and actually feel what's happening in my body.","O"],["To stay present enough to really feel the touch, connection and intimacy I'm craving.","W"]],"touch-cloth.jpg"]
   ];
 
   var ALL=[].concat(QPL,QPAT);
@@ -715,10 +712,10 @@
   var result={pattern:'',pleasure:'',ori:''};
 
   function score(){
-    var pt={H:0,O:0,E:0,W:0};
+    var pt={H:0,O:0,W:0};
     for(var a=0;a<QPAT.length;a++){var pai=answers[PLLEN+a];if(pai!=null)pt[QPAT[a][1][pai][1]]++;}
-    var PM={H:'Holder',O:'Operator',E:'Explorer',W:'Wanderer'};
-    var maxScore=Math.max(pt.H,pt.O,pt.E,pt.W);
+    var PM={H:'Holder',O:'Operator',W:'Wanderer'};
+    var maxScore=Math.max(pt.H,pt.O,pt.W);
     var leaders=Object.keys(pt).filter(function(k){return pt[k]===maxScore;});
     var patternLetter=leaders[0];
     if(leaders.length>1){
@@ -754,6 +751,7 @@
     $('patternOrigin').textContent=pa.origin;
     $('patternStrength').textContent=pa.strength;
     $('patternGrowth').textContent=pa.growthEdge;
+    $('patternState').textContent=pa.state+': "'+pa.stateLine+'"';
     $('patternQuestion').textContent=pa.question;
     $('pleasureName').textContent=pl.name;
     $('pleasureOpen').textContent=pl.open;
