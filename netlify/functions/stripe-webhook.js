@@ -387,10 +387,13 @@ const PRODUCT_MAP = {
   },
   // ─── ADDED 16 Jul 2026 — live prices that existed in Stripe but were missing
   // from this map, so their buyers were landing on the generic "purchased" tag.
-  'price_1Tqs53CCw18geY15u8MDw3OW': {
+  // price_1Tqs53CCw18geY15u8MDw3OW (£27) retired 7 Sept 2026, Juliette dropped the price to £17
+  // and created a new Payment Link (buy.stripe.com/dRm6oG7m39162Lr6eN0co1Q) rather than editing
+  // the old one in place, so the old link is now dead and this is the live price going forward.
+  'price_1UD0f6CCw18geY15BCSTDIlW': {
     tagId: 20913133,   // "sacred-no-buyer"
-    sequenceId: null,
-    label: 'The Sacred No £27'
+    sequenceId: null,  // TODO: still no real delivery sequence, see Sacred No Complete Reference doc
+    label: 'The Sacred No £17'
   },
   'price_1TqqjCCCw18geY15dCXrlEjD': {
     tagId: 20794225,   // "31 daily touch points"
