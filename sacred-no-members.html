@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Sacred No &middot; Members Area</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:ital,wght@0,400;0,600;0,700;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fefcfa;
+    --ink:#070707;
+    --brown:#5d4a33;
+    --gold:#a88538;
+    --gold-deep:#99680c;
+    --gold-soft:#b4a074;
+    --gold-pale:#ddc98e;
+    --teal:#0d3535;
+    --teal-deep:#061a1a;
+    --line:#e3dccf;
+    --display:'Poppins',system-ui,sans-serif;
+    --body:'Inter',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--cream);color:var(--brown);font-family:var(--body);font-size:17px;line-height:1.75;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+
+  .topbar{position:fixed;top:0;left:0;right:0;z-index:9999;background:var(--teal);padding:0 28px;height:64px;display:flex;align-items:center;justify-content:space-between}
+  .topbar .brand{font-family:var(--display);font-weight:700;font-size:16px;letter-spacing:.02em;color:var(--cream)}
+  .topbar .brand b{color:var(--gold-pale)}
+  .topbar .badge{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.5);font-weight:500}
+
+  #gate{position:fixed;inset:0;background:var(--teal);z-index:8888;display:flex;align-items:center;justify-content:center;padding:28px}
+  .gate-box{background:var(--cream);border-radius:6px;padding:48px 40px;max-width:420px;width:100%;text-align:center}
+  .gate-box .eyebrow{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:16px}
+  .gate-box h2{font-family:var(--display);font-weight:700;font-size:1.8rem;color:var(--ink);letter-spacing:-.02em;margin-bottom:10px}
+  .gate-box p{font-size:15px;color:var(--brown);margin-bottom:28px;line-height:1.6}
+  .gate-box input{width:100%;border:1.5px solid var(--line);border-radius:3px;padding:14px 16px;font-family:var(--body);font-size:16px;color:var(--ink);background:#fff;outline:none;margin-bottom:12px;transition:border-color .2s;letter-spacing:.1em;text-align:center}
+  .gate-box input:focus{border-color:var(--gold)}
+  .gate-box button{width:100%;background:var(--teal);color:#fff;font-family:var(--display);font-weight:700;font-size:16px;padding:15px;border-radius:3px;border:none;cursor:pointer;letter-spacing:-.01em;transition:background .2s}
+  .gate-box button:hover{background:var(--teal-deep)}
+  .gate-error{color:#c0392b;font-size:14px;margin-top:10px;display:none}
+
+  #content{display:none;padding-top:64px}
+
+  .hero{background:var(--teal);padding:64px 28px 56px;text-align:center}
+  .hero .eyebrow{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-pale);font-weight:600;margin-bottom:16px;opacity:.8}
+  .hero h1{font-family:var(--display);font-weight:700;font-size:clamp(2.2rem,5vw,3.2rem);color:#fff;line-height:1.06;letter-spacing:-.022em;margin-bottom:16px}
+  .hero .sub{font-size:18px;color:rgba(255,255,255,.7);max-width:46ch;margin:0 auto;line-height:1.7}
+
+  .section{max-width:720px;margin:0 auto;padding:56px 28px 0}
+  .section-label{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:24px}
+
+  .day-grid{display:flex;flex-direction:column;gap:16px}
+  .day-card{border:1px solid var(--line);border-radius:4px;overflow:hidden;background:#fff}
+  .day-header{background:var(--teal);padding:16px 22px;display:flex;align-items:center;gap:14px}
+  .day-num{font-family:var(--display);font-weight:700;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold-pale);min-width:70px}
+  .day-title{font-family:var(--display);font-weight:600;font-size:1rem;color:#fff;letter-spacing:-.01em}
+  .day-body{padding:22px}
+  .day-desc{font-size:15px;color:var(--brown);line-height:1.7;margin-bottom:16px}
+
+  .video-frame{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:3px;background:var(--teal);margin-bottom:6px}
+  .video-frame iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none;border-radius:3px}
+
+  .final-card{background:var(--teal);border-radius:6px;padding:36px 32px;margin-top:8px}
+  .final-card .eyebrow{color:var(--gold-pale);opacity:1}
+  .final-card h3{font-family:var(--display);font-weight:700;font-size:1.5rem;color:#fff;margin:10px 0 16px;letter-spacing:-.015em}
+  .final-card p{font-size:16px;color:rgba(255,255,255,.82);line-height:1.75;margin-bottom:14px;max-width:60ch}
+  .final-links{display:flex;gap:14px;flex-wrap:wrap;margin-top:20px}
+  .btn-next{display:inline-block;background:var(--gold);color:#070707;font-family:var(--display);font-weight:700;font-size:14px;padding:13px 24px;border-radius:3px;transition:background .2s}
+  .btn-next:hover{background:var(--gold-pale)}
+  .btn-next.ghost{background:transparent;border:1.5px solid rgba(255,255,255,.35);color:#fff}
+  .btn-next.ghost:hover{border-color:var(--gold-pale);color:var(--gold-pale)}
+
+  .support{max-width:720px;margin:48px auto 80px;padding:0 28px;text-align:center}
+  .support p{font-size:16px;color:var(--brown);line-height:1.7}
+  .support a{color:var(--gold);font-weight:600;text-decoration:underline}
+
+  .divider{max-width:720px;margin:48px auto 0;padding:0 28px}
+  .divider hr{border:none;border-top:1px solid var(--line)}
+
+  footer{background:var(--ink);color:rgba(255,255,255,.5);padding:22px 32px;font-size:13px;margin-top:64px}
+  footer .inner{max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  footer .brand{font-family:var(--display);font-weight:700;font-size:.95rem;color:#fff}
+  footer a{color:rgba(255,255,255,.5)}
+
+  @media(max-width:600px){
+    .gate-box{padding:36px 24px}
+    .section{padding:40px 20px 0}
+    .final-card{padding:28px 22px}
+  }
+</style>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SY8NKELMNZ"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-SY8NKELMNZ');
+</script>
+</head>
+<body>
+
+<div id="gate">
+  <div class="gate-box">
+    <div class="eyebrow">Members only</div>
+    <h2>The Sacred No</h2>
+    <p>Enter your access password to get into your programme.</p>
+    <input type="password" id="pw-input" placeholder="Password" autocomplete="off">
+    <button onclick="checkPassword()">Enter &rarr;</button>
+    <div class="gate-error" id="gate-error">That password isn't right. Check your welcome email.</div>
+  </div>
+</div>
+
+<div class="topbar">
+  <a href="/" class="brand">Feel Fully <b>You</b></a>
+  <span class="badge">The Sacred No &middot; Members</span>
+</div>
+
+<div id="content">
+
+  <div class="hero">
+    <div class="eyebrow">Welcome to your programme</div>
+    <h1>The Sacred No.</h1>
+    <p class="sub">Seven lessons, a few minutes each. Watch them in any order, at any pace, there is no wrong way to move through this.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Before you begin</div>
+    <div class="day-grid">
+
+      <div class="day-card" data-day="welcome">
+        <div class="day-header">
+          <span class="day-num">Welcome</span>
+          <span class="day-title">How often do you say yes and mean no?</span>
+        </div>
+        <div class="day-body">
+          <p class="day-desc">The challenge ahead of you: seven short lessons to start noticing what happens in your body in the exact moment a yes and a no are both trying to speak at once.</p>
+          <div class="video-frame">
+            <iframe src="https://drive.google.com/file/d/182L01c5FYbPJ8YBqSH48wQKAA-r2vaXJ/preview" allow="autoplay" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card" data-day="1">
+        <div class="day-header">
+          <span class="day-num">Lesson 1</span>
+          <span class="day-title">Why is no so difficult?</span>
+        </div>
+        <div class="day-body">
+          <p class="day-desc">Where this actually comes from: how we're conditioned from childhood to keep pushing until a no becomes a yes, and why that pattern followed you into every relationship since.</p>
+          <div class="video-frame">
+            <iframe src="https://drive.google.com/file/d/14uK4B3K4-Hl44Rm4MlsLHTi1x1tud3YF/preview" allow="autoplay" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card" data-day="2">
+        <div class="day-header">
+          <span class="day-num">Lesson 2</span>
+          <span class="day-title">Use your body as a compass</span>
+        </div>
+        <div class="day-body">
+          <p class="day-desc">A simple kinesiology practice to feel your own body's real yes and real no, so you can recognise the difference before your mind talks you out of it.</p>
+          <div class="video-frame">
+            <iframe src="https://drive.google.com/file/d/1Rvuo5_Ote8UbofjTLt7cMMGnJlxMI3SN/preview" allow="autoplay" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card" data-day="3">
+        <div class="day-header">
+          <span class="day-num">Lesson 3</span>
+          <span class="day-title">The Rapid Release Rewire Restore&reg; process</span>
+        </div>
+        <div class="day-body">
+          <p class="day-desc">A full process for working through the emotion still sitting underneath a time you said yes when your body was already saying no.</p>
+          <div class="video-frame">
+            <iframe src="https://drive.google.com/file/d/15cXfLYktIj09TNPwDWHLyDCPoeNdcZid/preview" allow="autoplay" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card" data-day="4">
+        <div class="day-header">
+          <span class="day-num">Lesson 4</span>
+          <span class="day-title">Touch Base</span>
+        </div>
+        <div class="day-body">
+          <p class="day-desc">Two minutes, your own hands. The anchor that brings your body back to safe enough to actually feel what it wants, before you answer anyone.</p>
+          <div class="video-frame">
+            <iframe src="https://drive.google.com/file/d/1hmSbssx6IV04FMkRGUzw_22AmAwsVqa_/preview" allow="autoplay" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card" data-day="5">
+        <div class="day-header">
+          <span class="day-num">Lesson 5</span>
+          <span class="day-title">Standards with others</span>
+        </div>
+        <div class="day-body">
+          <p class="day-desc">Where your boundaries are leaking with the people around you, friends, family, the ones who drain more than they give. A real look at your nos and your yeses with other people.</p>
+          <div class="video-frame">
+            <iframe src="https://drive.google.com/file/d/1z6wmOgueesXQaxSTy3vvikyeP6eA02tt/preview" allow="autoplay" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card" data-day="6">
+        <div class="day-header">
+          <span class="day-num">Lesson 6</span>
+          <span class="day-title">Standards with yourself</span>
+        </div>
+        <div class="day-body">
+          <p class="day-desc">The standards you keep once no one else is watching, phones at night, how you talk to yourself, what your own routine says about what you believe you deserve.</p>
+          <div class="video-frame">
+            <iframe src="https://drive.google.com/file/d/1NOtDXfaB3prEpybDSUTiSkAOQK-BWh2K/preview" allow="autoplay" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card" data-day="7">
+        <div class="day-header">
+          <span class="day-num">Lesson 7</span>
+          <span class="day-title">The last day</span>
+        </div>
+        <div class="day-body">
+          <p class="day-desc">A closing reflection and a release practice, on everything you've noticed this week and what's already started to shift.</p>
+          <div class="video-frame">
+            <iframe src="https://drive.google.com/file/d/1HosI7C7hX42wX19ieqylne-SOHTYZDue/preview" allow="autoplay" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card" data-day="bonus">
+        <div class="day-header">
+          <span class="day-num">Bonus</span>
+          <span class="day-title">A guided meditation</span>
+        </div>
+        <div class="day-body">
+          <p class="day-desc">A full guided meditation on saying no as an act of love for yourself. Come back to this any time you need it, long past the seven lessons.</p>
+          <div class="video-frame">
+            <iframe src="https://drive.google.com/file/d/1ky9FWoeBl0jsxm1-D_BRDOShH9clqGkS/preview" allow="autoplay" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /day-grid -->
+
+    <div class="final-card">
+      <div class="eyebrow">What's next</div>
+      <h3>You know your no now.</h3>
+      <p>That alone changes what happens next. You've done real work this week, and you know more about your own yes and your own no than you did when you started.</p>
+      <p>If you want to keep going on your own, <b style="color:#fff">One Touch</b> is the natural next step: seven days, your own hands, no partner required.</p>
+      <p>If you'd rather do this held, with real support around you, <b style="color:#fff">The Touch Reset</b> is where that happens.</p>
+      <p>Either way, nothing here disappears. Come back to any of these lessons whenever you need to.</p>
+      <div class="final-links">
+        <a href="https://feelfullyyou.com/one-touch" target="_blank" rel="noopener" class="btn-next">Start One Touch &rarr;</a>
+        <a href="https://feelfullyyou.com/the-touch-reset" target="_blank" rel="noopener" class="btn-next ghost">See The Touch Reset &rarr;</a>
+      </div>
+    </div>
+
+  </div><!-- /section -->
+
+  <div class="divider" style="margin-top:48px"><hr></div>
+  <div class="support" style="margin-top:40px">
+    <p>Questions? Something not working? Email <a href="mailto:juliette@feelfullyyou.com">juliette@feelfullyyou.com</a> and I'll come back to you.</p>
+  </div>
+
+  <footer>
+    <div class="inner">
+      <span class="brand">Feel Fully You</span>
+      <a href="mailto:juliette@feelfullyyou.com">juliette@feelfullyyou.com</a>
+    </div>
+  </footer>
+
+</div><!-- /content -->
+
+<script>
+  const PASSWORD = 'sacredno2026';
+  const SESSION_KEY = 'sn_access';
+
+  function checkPassword() {
+    const val = document.getElementById('pw-input').value.trim().toLowerCase();
+    if (val === PASSWORD) {
+      sessionStorage.setItem(SESSION_KEY, '1');
+      unlock();
+    } else {
+      document.getElementById('gate-error').style.display = 'block';
+    }
+  }
+
+  function unlock() {
+    document.getElementById('gate').style.display = 'none';
+    document.getElementById('content').style.display = 'block';
+  }
+
+  if (sessionStorage.getItem(SESSION_KEY) === '1') unlock();
+
+  document.getElementById('pw-input').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') checkPassword();
+  });
+</script>
+<script>
+document.addEventListener('click', function(e){
+  var a = e.target.closest('a'); if(!a || typeof gtag !== 'function') return;
+  var h = a.href || '';
+  var label = (a.textContent || '').trim().slice(0, 60);
+  if (h.indexOf('one-touch') > -1) gtag('event', 'sacred_no_upsell_click', {link_url: h, link_text: label, page_path: location.pathname});
+  else if (h.indexOf('the-touch-reset') > -1) gtag('event', 'sacred_no_upsell_click', {link_url: h, link_text: label, page_path: location.pathname});
+});
+</script>
+</body>
+</html>

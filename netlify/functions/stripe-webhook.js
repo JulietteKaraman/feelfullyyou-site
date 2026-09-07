@@ -392,7 +392,7 @@ const PRODUCT_MAP = {
   // the old one in place, so the old link is now dead and this is the live price going forward.
   'price_1UD0f6CCw18geY15BCSTDIlW': {
     tagId: 20913133,   // "sacred-no-buyer"
-    sequenceId: null,  // TODO: still no real delivery sequence, see Sacred No Complete Reference doc
+    sequenceId: 2885669,  // "Sacred No — Welcome", wired 7 Sept 2026, real delivery at last
     label: 'The Sacred No £17'
   },
   'price_1TqqjCCCw18geY15dCXrlEjD': {
