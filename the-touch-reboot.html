@@ -57,7 +57,8 @@
   .reveal.in{opacity:1;transform:none}
 
   /* TOPBAR */
-  .topbar{position:fixed;top:0;left:0;right:0;z-index:9999;background:var(--teal);padding:0 28px;height:64px;display:flex;align-items:center;justify-content:space-between}
+  .topbar{position:fixed;top:0;left:0;right:0;z-index:9999;background:linear-gradient(180deg,rgba(7,7,7,.65) 0%,rgba(7,7,7,.35) 60%,rgba(7,7,7,0) 100%);padding:0 28px;height:64px;display:flex;align-items:center;justify-content:space-between}
+  .topbar.scrolled{background:var(--teal)}
   .topbar .brand{font-family:var(--display);font-weight:700;font-size:16px;letter-spacing:.02em;color:var(--cream)}
   .topbar .brand b{color:var(--gold-pale)}
   .topbar nav{display:flex;gap:26px;align-items:center}
@@ -72,7 +73,7 @@
   .btn.ghost:hover{background:var(--gold);color:#fff}
 
   /* HERO */
-  .hero{position:relative;overflow:hidden;padding-top:64px}
+  .hero{position:relative;overflow:hidden;padding-top:0}
   .hero-img{width:100%;height:auto;display:block}
   .hero-content{display:none}
   .hero-text-overlay{position:absolute;left:0;top:0;bottom:0;width:100%;display:flex;align-items:center;padding-left:6%;background:linear-gradient(to right,rgba(7,7,7,.8) 0%,rgba(7,7,7,.55) 32%,rgba(7,7,7,0) 64%);pointer-events:none}
@@ -569,7 +570,7 @@
     </div>
     <p class="reveal" style="max-width:60ch;margin-bottom:14px">We don't start by trying to make you more sexual or fix your relationship. <strong>We start by learning how to listen.</strong></p>
     <p class="reveal" style="max-width:60ch;margin-bottom:14px">This is The Touch Reset itself, your Pattern, your Touch Languages, your Touch Map, the same method behind everything I teach. <span class="tr-name">The Touch Reboot</span> is where you actually live it, structure around your time, your communication, your self-touch and your partnered touch, so you have somewhere to practise something different.</p>
-    <p class="reveal" style="max-width:60ch;margin-bottom:40px">Over 12 weeks, we move through four stages.</p>
+    <p class="reveal" style="max-width:60ch;margin-bottom:40px"><strong>Over 12 weeks, we move through four stages.</strong></p>
 
     <div class="photo-break reveal" style="max-width:640px;margin:0 auto 44px;border-radius:4px">
       <img src="touchsofalondon.JPG" alt="Juliette Karaman working with a client" style="object-position:center 30%" loading="lazy" decoding="async">
@@ -790,7 +791,6 @@
 
     <h2 class="reveal" style="margin-bottom:14px"><span class="tr-name">The Touch Reboot</span></h2>
     <p class="sub-price reveal" style="max-width:56ch;margin:0 auto 24px">A 12-week reboot for the way you experience intimacy, connection and pleasure, so your body becomes a compass you know how to read.</p>
-    <span class="scarcity reveal">Evergreen. New rounds open every month, no need to wait for a date.</span>
 
     <div class="pay-options reveal" style="margin-top:28px">
       <a href="https://tidycal.com/juliette2/the-touch-reset-call" class="btn">Book a Call</a>
@@ -808,10 +808,6 @@
     <details class="reveal">
       <summary>How much time do I need each week?</summary>
       <p>Around two hours a week at most, including the live session and practices. The practices are small and designed to fit into real life.</p>
-    </details>
-    <details class="reveal">
-      <summary>When does it start?</summary>
-      <p>There's no single start date to wait for. New rounds open every month, so you begin your own 12 weeks whenever you're ready, not on somebody else's calendar.</p>
     </details>
     <details class="reveal">
       <summary>Do I need a partner?</summary>
@@ -858,7 +854,6 @@
 <section class="founding">
   <div class="narrow">
     <h2 class="reveal" style="margin-bottom:18px">Ready to join <span class="tr-name">The Touch Reboot</span>?</h2>
-    <span class="scarcity reveal">Evergreen. New rounds open every month, no need to wait for a date.</span>
     <div class="pay-options reveal" style="margin-top:28px">
       <a href="https://tidycal.com/juliette2/the-touch-reset-call" class="btn">Book a Call</a>
     </div>
@@ -903,6 +898,19 @@
   var btn=document.getElementById('hamBtn');
   var nav=document.getElementById('mobileNav');
   if(btn&&nav){btn.addEventListener('click',function(){nav.classList.toggle('open');btn.setAttribute('aria-expanded',nav.classList.contains('open'))});}
+})();
+</script>
+<script>
+(function(){
+  var topbar=document.querySelector('.topbar');
+  var hero=document.querySelector('.hero');
+  if(!topbar||!hero) return;
+  function onScroll(){
+    var heroBottom=hero.getBoundingClientRect().bottom;
+    topbar.classList.toggle('scrolled', heroBottom < 64);
+  }
+  document.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
 })();
 </script>
 </body>
