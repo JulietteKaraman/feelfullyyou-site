@@ -97,10 +97,12 @@
 /the-communication-kit-order-page /communication-reboot-kit        301
 /links                          /links.html                     200
 /connect-with-essence           /connect-with-essence.html      200
-/the-touch-reset                /the-touch-reset.html           200
-/the-room                       /the-touch-reset                301!
-/the-room.html                  /the-touch-reset                301!
-/the-room-mixed                 /the-touch-reset                301
+/the-touch-reboot                /the-touch-reboot.html           200
+/the-touch-reset                 /the-touch-reboot                301!
+/the-touch-reset.html            /the-touch-reboot                301!
+/the-room                       /the-touch-reboot                301!
+/the-room.html                  /the-touch-reboot                301!
+/the-room-mixed                 /the-touch-reboot                301
 /the-room-women-original        /the-room-women-original.html   200
 /thankyou-grief                 /thankyou-grief.html            200
 /be-touched                     https://findthetouch.live/      301
@@ -112,8 +114,8 @@
 /touch-map                       /touch-map.html                  200
 /felt-sense                      /felt-sense.html                 200
 /the-dyad                        /the-dyad-protocol               301
-/the-room-members               /the-touch-reset                 301
-/room-members                   /the-touch-reset                 301
+/the-room-members               /the-touch-reboot                 301
+/room-members                   /the-touch-reboot                 301
 /sacred-no-quiz                 /sacred-no-quiz.html            200
 /the-no-quiz                    /sacred-no-quiz.html            200
 /no-quiz                        /sacred-no-quiz.html            200
