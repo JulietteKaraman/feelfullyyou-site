@@ -110,7 +110,7 @@ gtag('config', 'G-SY8NKELMNZ');
     fetch('/.netlify/functions/subscribe', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({email, website: document.getElementById('bc_hp').value, tagIds: [23717652, 20910719], sequenceId: 2898044 /* "Body Confidence — Welcome (Meditation to One Touch to Touch Reset)", built 18 Sep for Just Woman Live. Tag 23717652 = body-confidence-signup, tag 20910719 = just-women-live (reused, existing). */})
+      body: JSON.stringify({email, website: document.getElementById('bc_hp').value, tagIds: [23717652, 23718116], sequenceId: 2898044 /* "Body Confidence — Welcome (Meditation to One Touch to Touch Reset)", built 18 Sep for speaking-gift goodie bags (multiple events, not one). Tag 23717652 = body-confidence-signup, tag 23718116 = speaking-gift-signup (generic, event-agnostic). */})
     }).catch(() => {});
 
     await new Promise(r => setTimeout(r, 600));

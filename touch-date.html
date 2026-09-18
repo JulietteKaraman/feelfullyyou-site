@@ -112,7 +112,7 @@ gtag('config', 'G-SY8NKELMNZ');
     fetch('/.netlify/functions/subscribe', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({email, website: document.getElementById('td_hp').value, tagIds: [23717789, 20910719], sequenceId: 2898047 /* "15-Minute Touch Date — Welcome (One Touch to Touch Reset)", built 18 Sep for Just Woman Live. Tag 23717789 = touch-date-signup, tag 20910719 = just-women-live (reused, existing). Redirects to the existing, already-built the-15-minute-touch-date.html, which stays ungated for its other existing use inside the Touch Reset Quiz nurture sequence. */})
+      body: JSON.stringify({email, website: document.getElementById('td_hp').value, tagIds: [23717789, 23718116], sequenceId: 2898047 /* "15-Minute Touch Date — Welcome (One Touch to Touch Reset)", built 18 Sep for speaking-gift goodie bags (multiple events, not one). Tag 23717789 = touch-date-signup, tag 23718116 = speaking-gift-signup (generic, event-agnostic). Redirects to the existing, already-built the-15-minute-touch-date.html, which stays ungated for its other existing use inside the Touch Reset Quiz nurture sequence. */})
     }).catch(() => {});
 
     await new Promise(r => setTimeout(r, 600));
