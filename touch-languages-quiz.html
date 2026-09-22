@@ -447,7 +447,6 @@
     <div class="rin" style="text-align:center">
       <div class="reyebrow dark" style="justify-content:center">Your Desire Style</div>
       <h2 class="bandhead" id="desireName" style="color:var(--teal-deep)"></h2>
-      <p id="desireOpen" style="max-width:52ch;margin:18px auto 0;font-family:var(--display);font-size:1.15rem;font-weight:600;color:var(--teal-deep);line-height:1.5"></p>
     </div>
   </section>
 
@@ -586,8 +585,8 @@
   };
 
   var DESIRE={
-    Responsive:{name:"Responsive",line:"Wanting doesn't show up first for you, it grows once touch is already underway."},
-    Spontaneous:{name:"Spontaneous",line:"Wanting shows up on its own for you, before anything else has happened."}
+    Responsive:{name:"Responsive"},
+    Spontaneous:{name:"Spontaneous"}
   };
 
   var STAGE={
@@ -803,7 +802,6 @@
     $('pleasureClose').textContent=pl.close;
     var de=DESIRE[result.desire];
     $('desireName').textContent=de.name;
-    $('desireOpen').textContent=de.line;
   }
 
   function revealBands(){
