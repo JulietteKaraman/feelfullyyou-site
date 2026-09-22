@@ -356,7 +356,7 @@
 
       <section id="quiz" style="display:none">
         <div class="qrings" id="qrings">
-          <div class="ring" data-p="0">1</div><div class="ring" data-p="1">2</div>
+          <div class="ring" data-p="0">1</div><div class="ring" data-p="1">2</div><div class="ring" data-p="2">3</div>
         </div>
         <span class="phase" id="phase"></span>
         <span class="phaseSub" id="phaseSub"></span>
@@ -390,10 +390,11 @@
     <div class="rin">
       <div class="hero-eyebrow">Your results</div>
       <h1 class="idline">Here's what's running your <span class="g">body</span>.</h1>
-      <p class="idsub">Two layers your body runs at once. No one else has this exact combination.</p>
+      <p class="idsub">Three layers your body runs at once. No one else has this exact combination.</p>
       <div class="stack">
         <div class="srow"><span class="slabel">Pleasure Language</span><span class="sval">&middot;&middot;&middot;&middot;&middot;&middot;</span></div>
         <div class="srow"><span class="slabel">Touch Pattern</span><span class="sval">&middot;&middot;&middot;&middot;&middot;&middot;</span></div>
+        <div class="srow"><span class="slabel">Desire Style</span><span class="sval">&middot;&middot;&middot;&middot;&middot;&middot;</span></div>
       </div>
       <form class="capture" id="capForm" autocomplete="on" style="max-width:420px;margin:26px auto 0;text-align:left">
         <input type="email" id="email" name="email" placeholder="you@email.com" required>
@@ -442,6 +443,16 @@
     </div>
   </section>
 
+  <section class="rband ochre">
+    <div class="rin" style="text-align:center">
+      <div class="reyebrow dark" style="justify-content:center">Your Desire Style</div>
+      <h2 class="bandhead" id="desireName" style="color:var(--teal-deep)"></h2>
+      <p id="desireOpen" style="text-align:left;max-width:52ch;margin:22px auto 14px;font-family:var(--display);font-size:1.2rem;font-weight:700;color:var(--teal-deep);line-height:1.4"></p>
+      <p class="bandtext dark" id="desireMid" style="text-align:left;max-width:52ch;margin:0 auto 16px"></p>
+      <p id="desireClose" style="text-align:left;max-width:52ch;margin:0 auto;font-style:italic;color:var(--gold-deep);font-size:1.1rem;line-height:1.5"></p>
+    </div>
+  </section>
+
   <section class="rband green">
     <div class="rin" style="text-align:center">
       <h2 class="bandhead">Look for the rest in your inbox.</h2>
@@ -483,20 +494,24 @@
   var ORI_TAG={Leads:20994542,Receives:20994543,Switches:20994544};
   var ID_TAG={woman:21000823,man:21000824,nb:21000825,pref:21000826};
   var STAGE_TAG={quiet:21270730,brace:21270733,gone:21270734,fade:22521332,reach:22906972,more:23135504};
+  // Desire Style, added 22 Sept 2026: responsive vs spontaneous desire (Basson 2000,
+  // Nagoski's Come As You Are). Third scored, fully revealed layer, same treatment as
+  // Pattern and Pleasure Language, not internal-only like Stage.
+  var DESIRE_TAG={Responsive:23818344,Spontaneous:23818347};
   var AUD={
-    woman:{tag:20994349,line:"The Touch Reset for Women",door:"The Touch Reset",href:"/the-touch-reset",cta:"Show me The Touch Reset",
+    woman:{tag:20994349,line:"The Touch Reboot for Women",door:"The Touch Reboot",href:"/the-touch-reboot",cta:"Show me The Touch Reboot",
       blurb:"My 12-week live group where women come home to their own body, their own sensation, and their own yes.",
       foryou:["Touch has gone quiet, careful, or routine","You feel less than you used to, and you want it back","You are ready to stop performing fine and actually land"],
       free:{title:"One Touch",blurb:"Seven days, your own hands, to feel your pattern instead of just knowing it. £97, and it's exactly where I'd have you begin.",href:"/one-touch",cta:"Start One Touch"}},
-    man:{tag:20994350,line:"The Touch Reset for Men",door:"The Touch Reset",href:"/the-touch-reset",cta:"Show me The Touch Reset",
+    man:{tag:20994350,line:"The Touch Reboot for Men",door:"The Touch Reboot",href:"/the-touch-reboot",cta:"Show me The Touch Reboot",
       blurb:"My 12-week live group where men learn to feel what they have been bracing against, and close the distance before it becomes permanent.",
       foryou:["She gets quieter and you don't know why","You have read the books and done the listening","You want your body to catch up to the effort"],
       free:{title:"When She Goes Quiet",blurb:"The free guide to what her withdrawal is really telling you, and the first moves that reach her again.",href:"/when-she-goes-quiet",cta:"Get the free guide"}},
-    couple:{tag:20994351,line:"The Touch Reset for Couples",door:"The Touch Reset",href:"/the-touch-reset",cta:"Show me The Touch Reset",
+    couple:{tag:20994351,line:"The Touch Reboot for Couples",door:"The Touch Reboot",href:"/the-touch-reboot",cta:"Show me The Touch Reboot",
       blurb:"My deep container for two people who love each other and lost the language to reach each other.",
       foryou:["You are polite, you co-parent, you share a bed","The reaching between you has stopped landing","You want the spark back, and the safety underneath it"],
       free:{title:"One Touch",blurb:"Seven days, your own hands, before you bring anyone else in. £97.",href:"/one-touch",cta:"Start One Touch"}},
-    self:{tag:21000827,line:"The Touch Reset",door:"The Touch Reset",href:"/the-touch-reset",cta:"Show me The Touch Reset",
+    self:{tag:21000827,line:"The Touch Reboot",door:"The Touch Reboot",href:"/the-touch-reboot",cta:"Show me The Touch Reboot",
       blurb:"My 12-week live group for changing the pattern, not just naming it. Wherever touch went quiet, this is the way back.",
       foryou:["Touch has gone quiet, careful, or routine","You've done the courses and the therapy and it still hasn't landed","You want the work that reaches the body, not just the mind"],
       free:{title:"One Touch",blurb:"Seven days, your own hands, to feel your pattern instead of just knowing it. £97.",href:"/one-touch",cta:"Start One Touch"}}
@@ -572,6 +587,17 @@
       question:"Can I feel this and still be here?"}
   };
 
+  var DESIRE={
+    Responsive:{name:"Responsive",
+      open:"Wanting doesn't show up first for you.",
+      mid:"Touch does, or closeness, or context, and desire grows out of that once it's already in motion. Sex researcher Rosemary Basson documented this back in 2000, and Emily Nagoski's Come As You Are later brought it to a wider audience: roughly 30% of women run primarily this way, a normal variant, not a malfunction.",
+      close:"Give your body the context first. The wanting was never going to arrive before that."},
+    Spontaneous:{name:"Spontaneous",
+      open:"Wanting shows up on its own for you.",
+      mid:"A thought, a glance, and you're already there, no touch or context needed first. For a long time this got treated as the only real kind of desire, even though it's the less common wiring, about 5% of men and a smaller share of women run primarily this way.",
+      close:"Trust it when it shows up early. That's just how your body runs."}
+  };
+
   var STAGE={
     quiet:{name:"The Quiet",kicker:"Where you are right now",
       desc:"Touch is still happening between you. Nothing dramatic has gone wrong, but something about it has gone flat, like you're moving past each other rather than toward each other. Usually this is a mismatch: you're reaching in a language the other person can't quite receive, and neither of you knew the languages existed.",
@@ -617,13 +643,26 @@
     ["When you imagine having more in touch, intimacy and connection, what are you most hungry for?",[["To be able to really receive. To let someone focus on me, enjoy it, ask for more, and not immediately start thinking about what they need from me.","H"],["To not have to make everything happen. To be able to stop doing for a minute, drop into my body and discover what feels good when I'm not directing the whole experience.","O"],["To feel more of what's already happening. To stay with the touch, the pleasure, the person, instead of realising my body was there but the rest of me had wandered off.","W"]],"touch-cloth.jpg"]
   ];
 
-  var ALL=[].concat(QPL,QPAT);
-  var TOTAL=ALL.length; // 11
+  // Desire Style questions, added 22 Sept 2026. Deliberately sit outside any structured
+  // session (no Touch Date, no built-in opt-out), because the structure Juliette teaches
+  // already removes the pressure that would otherwise reveal the difference between
+  // responsive and spontaneous desire. Question order matters: Q1 (shoulder touch) is
+  // the tie-break question in score(), the cleaner test of the actual mechanism, so it
+  // must stay index 0 of this array.
+  var QDESIRE=[
+    ["Your partner puts a hand on your shoulder in the middle of the afternoon, nothing else happening yet.",[["Not now. Give my body a bit of time to start responding, and then, yes.","Responsive"],["Oh, I'm actually ready for more. Can I ask for more?","Spontaneous"]],null],
+    ["It's been a few days since either of you touched the other. Nobody's said a word about it. How do you feel?",[["I feel it now, so I reach for his hand, or ask him to kiss my neck, and that will lead to more.","Spontaneous"],["I noticed the gap. We might need some cuddling first, to get me in the mood for more.","Responsive"]],null]
+  ];
+
+  var ALL=[].concat(QPL,QPAT,QDESIRE);
+  var TOTAL=ALL.length; // 13
   var PLLEN=QPL.length; // 6
-  function phaseFor(idx){ if(idx<PLLEN)return"Part one · your way into pleasure"; return"Part two · how you were conditioned to give and receive touch"; }
+  var PATEND=PLLEN+QPAT.length; // 11
+  function phaseFor(idx){ if(idx<PLLEN)return"Part one · your way into pleasure"; if(idx<PATEND)return"Part two · how you were conditioned to give and receive touch"; return"Part three · the order your desire arrives in"; }
   function phaseExplain(idx){
     if(idx<PLLEN)return"What lights up your body's own yes.";
-    return"What you reach for first, and how in control you need to feel, when touch comes your way.";
+    if(idx<PATEND)return"What you reach for first, and how in control you need to feel, when touch comes your way.";
+    return"Whether wanting shows up before touch starts, or grows once it's already underway.";
   }
 
   var i=0,answers=new Array(TOTAL).fill(null),locked=false,audience='self',context='self',identity='',stage='quiet',visionAnswer=null,reflect1Answer=null,reflect2Answer=null;
@@ -673,7 +712,7 @@
     setCardBg(q[2]);
     $('phase').textContent=phaseFor(i);
     $('phaseSub').textContent=phaseExplain(i);
-    var pIdx=i<PLLEN?0:1;
+    var pIdx=i<PLLEN?0:(i<PATEND?1:2);
     Array.prototype.forEach.call(document.querySelectorAll('#qrings .ring'),function(r,ri){r.classList.toggle('active',ri===pIdx);});
     $('question').innerHTML=q[0];
     $('prog').textContent=pad(i+1)+' / '+TOTAL;
@@ -711,7 +750,7 @@
   });
   $('visionBack').addEventListener('click',function(){visionSec.style.display='none';quiz.style.display='block';i=TOTAL-1;renderQ();});
 
-  var result={pattern:'',pleasure:'',ori:''};
+  var result={pattern:'',pleasure:'',ori:'',desire:''};
 
   function score(){
     var pt={H:0,O:0,W:0};
@@ -734,14 +773,25 @@
     var prim=[['Sensual',pl.Sensual],['Sexual',pl.Sexual],['Energetic',pl.Energetic],['Kinky',pl.Kinky]].sort(function(x,y){return y[1]-x[1];});
     var isShift = pl.Shapeshifter>=2 || prim[0][1]<=1;
     var pleasure=isShift?'Shapeshifter':prim[0][0];
-    return {pattern:pattern,pleasure:pleasure};
+    var ds={Responsive:0,Spontaneous:0};
+    for(var d=0;d<QDESIRE.length;d++){var dai=answers[PATEND+d];if(dai!=null)ds[QDESIRE[d][1][dai][1]]++;}
+    var desire;
+    if(ds.Responsive===ds.Spontaneous){
+      // Tie: Q1 (the shoulder-touch scenario, index 0) breaks it, the cleaner test
+      // of the actual mechanism, same logic as Pattern's own Q10 tie-break above.
+      var tieAns=answers[PATEND];
+      desire=tieAns!=null?QDESIRE[0][1][tieAns][1]:'Responsive';
+    }else{
+      desire=ds.Responsive>ds.Spontaneous?'Responsive':'Spontaneous';
+    }
+    return {pattern:pattern,pleasure:pleasure,desire:desire};
   }
 
   function doReveal(){
     result=score();
     quiz.style.display='none';funnel.style.display='none';
     resultPage.style.display='block';window.scrollTo(0,0);
-    if(typeof gtag==='function')gtag('event','quiz_complete',{quiz:'touch_reset',pattern:result.pattern,pleasure:result.pleasure,audience:audience,stage:stage});
+    if(typeof gtag==='function')gtag('event','quiz_complete',{quiz:'touch_reset',pattern:result.pattern,pleasure:result.pleasure,desire:result.desire,audience:audience,stage:stage});
   }
 
 
@@ -759,6 +809,11 @@
     $('pleasureOpen').textContent=pl.open;
     $('pleasureMid').textContent=pl.mid;
     $('pleasureClose').textContent=pl.close;
+    var de=DESIRE[result.desire];
+    $('desireName').textContent=de.name;
+    $('desireOpen').textContent=de.open;
+    $('desireMid').textContent=de.mid;
+    $('desireClose').textContent=de.close;
   }
 
   function revealBands(){
@@ -772,8 +827,8 @@
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){msg.className='msg err';msg.textContent='Please enter a valid email.';return;}
     var btn=$('sendBtn');btn.disabled=true;btn.textContent='Revealing…';
     var audTag=(AUD[audience]||{}).tag;
-    var tags=[PATTERN_TAG[result.pattern],PLEASURE_TAG[result.pleasure],audTag,ID_TAG[identity],STAGE_TAG[stage]].filter(function(t){return t;});
-    var stackFields={touch_pleasure:result.pleasure,touch_pattern:PATTERN[result.pattern].short,touch_stage:STAGE[stage].name,touch_vision:visionAnswer||''};
+    var tags=[PATTERN_TAG[result.pattern],PLEASURE_TAG[result.pleasure],audTag,ID_TAG[identity],STAGE_TAG[stage],DESIRE_TAG[result.desire]].filter(function(t){return t;});
+    var stackFields={touch_pleasure:result.pleasure,touch_pattern:PATTERN[result.pattern].short,touch_stage:STAGE[stage].name,touch_vision:visionAnswer||'',touch_desire:result.desire};
     var payload=JSON.stringify({email:email,tagIds:tags,sequenceIds:[PATTERN_SEQ[result.pattern]].filter(Boolean),fields:stackFields,hp_field:$('capForm').hp_field.value});
     function attempt(n){
       return fetch('/.netlify/functions/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:payload})
@@ -786,7 +841,7 @@
       var unlocked=$('unlockedContent');if(unlocked)unlocked.style.display='block';
       var form=$('capForm');if(form)form.style.display='none';
       window.scrollTo(0,0);revealBands();
-      if(typeof gtag==='function')gtag('event','quiz_optin',{quiz:'touch_reset',pattern:result.pattern,pleasure:result.pleasure,audience:audience});
+      if(typeof gtag==='function')gtag('event','quiz_optin',{quiz:'touch_reset',pattern:result.pattern,pleasure:result.pleasure,desire:result.desire,audience:audience});
     }).catch(function(){
       btn.disabled=false;btn.textContent='Reveal my results';
       msg.className='msg err';msg.textContent='Something went wrong. Please try again.';
@@ -807,7 +862,7 @@
   // results screen without retaking the quiz. Not linked anywhere, review use only.
   if(new URLSearchParams(location.search).get('preview')){
     audience='self';identity='';context='self';stage='quiet';visionAnswer='discover';
-    answers=answers.map(function(_,idx){return idx%3;});
+    answers=ALL.map(function(q,idx){return idx%q[1].length;}); // bounded per-question, was idx%3 which overflowed 2-option questions
     intro.style.display='none';stageSec.style.display='none';reflect1Sec.style.display='none';reflect2Sec.style.display='none';quiz.style.display='none';
     doReveal();
     // preview mode skips the email gate too, review only, never linked anywhere
