@@ -447,16 +447,14 @@
     <div class="rin" style="text-align:center">
       <div class="reyebrow dark" style="justify-content:center">Your Desire Style</div>
       <h2 class="bandhead" id="desireName" style="color:var(--teal-deep)"></h2>
-      <p id="desireOpen" style="text-align:left;max-width:52ch;margin:22px auto 14px;font-family:var(--display);font-size:1.2rem;font-weight:700;color:var(--teal-deep);line-height:1.4"></p>
-      <p class="bandtext dark" id="desireMid" style="text-align:left;max-width:52ch;margin:0 auto 16px"></p>
-      <p id="desireClose" style="text-align:left;max-width:52ch;margin:0 auto;font-style:italic;color:var(--gold-deep);font-size:1.1rem;line-height:1.5"></p>
+      <p id="desireOpen" style="max-width:52ch;margin:18px auto 0;font-family:var(--display);font-size:1.15rem;font-weight:600;color:var(--teal-deep);line-height:1.5"></p>
     </div>
   </section>
 
   <section class="rband green">
     <div class="rin" style="text-align:center">
       <h2 class="bandhead">Look for the rest in your inbox.</h2>
-      <p class="bandtext" style="max-width:48ch;margin:14px auto 26px">Check your email for the fuller report on your pattern, and what to do next.</p>
+      <p class="bandtext" style="max-width:48ch;margin:14px auto 26px">Check your email for the fuller report on your pattern, your pleasure language, your desire style, and what to do next.</p>
       <div class="again" style="margin-top:22px"><button id="restart">start again</button></div>
     </div>
   </section>
@@ -588,14 +586,8 @@
   };
 
   var DESIRE={
-    Responsive:{name:"Responsive",
-      open:"Wanting doesn't show up first for you.",
-      mid:"Touch does, or closeness, or context, and desire grows out of that once it's already in motion. Sex researcher Rosemary Basson documented this back in 2000, and Emily Nagoski's Come As You Are later brought it to a wider audience: roughly 30% of women run primarily this way, a normal variant, not a malfunction.",
-      close:"Give your body the context first. The wanting was never going to arrive before that."},
-    Spontaneous:{name:"Spontaneous",
-      open:"Wanting shows up on its own for you.",
-      mid:"A thought, a glance, and you're already there, no touch or context needed first. For a long time this got treated as the only real kind of desire, even though it's the less common wiring, about 5% of men and a smaller share of women run primarily this way.",
-      close:"Trust it when it shows up early. That's just how your body runs."}
+    Responsive:{name:"Responsive",line:"Wanting doesn't show up first for you, it grows once touch is already underway."},
+    Spontaneous:{name:"Spontaneous",line:"Wanting shows up on its own for you, before anything else has happened."}
   };
 
   var STAGE={
@@ -811,9 +803,7 @@
     $('pleasureClose').textContent=pl.close;
     var de=DESIRE[result.desire];
     $('desireName').textContent=de.name;
-    $('desireOpen').textContent=de.open;
-    $('desireMid').textContent=de.mid;
-    $('desireClose').textContent=de.close;
+    $('desireOpen').textContent=de.line;
   }
 
   function revealBands(){
