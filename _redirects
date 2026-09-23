@@ -1,5 +1,6 @@
 # Pretty URLs — strip .html extension
 /cards                          /cards.html                     200
+/31-days-closer                 /31-days-closer.html            200
 /content-only                   /content-only.html              200
 /work-with-me                   /work-with-me.html              200
 /the-beginning                  /the-beginning.html             200

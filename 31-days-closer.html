@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>31 Days Closer · Feel Fully You</title>
+<meta name="description" content="One card a night for 31 nights. Fifteen minutes. A structure that lets the real thing be said, and heard. £17.">
+<link rel="canonical" href="https://feelfullyyou.com/31-days-closer">
+<meta property="og:title" content="31 Days Closer · Feel Fully You">
+<meta property="og:description" content="One card a night for 31 nights. Fifteen minutes. £17.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://feelfullyyou.com/31-days-closer">
+<meta property="og:image" content="https://feelfullyyou.com/media/695bce014d9452f24cb4b08c.jpg">
+<meta property="og:site_name" content="Feel Fully You">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Beginning. A 12-Week Couples Intensive · Feel Fully You">
+<meta name="twitter:description" content="The Beginning, a 12-week couples intensive with Juliette Karaman. Where couples start again when touch has gone quiet between them.">
+<meta name="twitter:image" content="https://feelfullyyou.com/media/698afbc0a41b876eb63dd582.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fefcfa;--cream-2:#f6f4f1;
+    --ink:#1c1714;--brown:#5d4a33;
+    --gold:#a88538;--gold-deep:#99680c;--gold-soft:#b4a074;--gold-pale:#ddc98e;
+    --teal:#0d3535;--teal-deep:#061a1a;--teal-mid:#0f4040;
+    --blue:#d8dfe1;
+    --line:#e3dccf;--line-dark:#1d3a39;--max:1140px;
+    --display:'Poppins',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--brown);font-family:var(--body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  ::selection{background:var(--gold);color:#fff}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  p{max-width:62ch}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+  .narrow{max-width:700px;margin:0 auto;padding:0 28px}
+  .eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);font-weight:600}
+  h1,h2,h3{font-family:var(--display);font-weight:700}
+  h1,h2{line-height:1.07;letter-spacing:-.022em}
+  em{font-style:italic;color:var(--gold-deep);font-weight:600}
+  h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:22px;color:var(--ink)}
+  h3{font-size:1.15rem;line-height:1.2;letter-spacing:-.015em;color:var(--ink)}
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  .btn{display:inline-block;cursor:pointer;border:none;font-family:var(--body);font-weight:600;font-size:15px;letter-spacing:.01em;padding:16px 32px;border-radius:2px;background:var(--gold);color:#fff;transition:transform .25s,background .25s;text-decoration:none}
+  .btn:hover{background:var(--gold-deep);transform:translateY(-1px)}
+  .btn.ghost{background:transparent;border:1px solid var(--gold-pale);color:var(--gold-pale)}
+  .btn.ghost:hover{background:rgba(255,255,255,.08)}
+
+  .topbar{position:fixed;top:0;left:0;right:0;z-index:9999;background:var(--teal);padding:0 28px;height:64px;display:flex;align-items:center;justify-content:space-between}
+  .topbar .brand{font-family:var(--display);font-weight:700;font-size:16px;letter-spacing:.02em;color:var(--cream)}
+  .topbar .brand b{color:var(--gold-pale)}
+  .topbar nav{display:flex;gap:26px;align-items:center}
+  .topbar nav a{font-size:14px;color:var(--cream);font-weight:500;transition:color .2s}
+  .topbar nav a:hover{color:var(--gold-pale)}
+  .topbar nav a.btn{background:var(--gold);color:#fff;padding:10px 20px;border-radius:2px;font-weight:600}
+  .topbar nav a.btn:hover{background:var(--gold-deep)}
+  @media(max-width:860px){.topbar nav > a:not(.btn){display:none}}
+
+  .hero{padding-top:64px;background:var(--teal);overflow:hidden}
+  .hero-img{width:100%;height:auto;max-height:720px;object-fit:cover;object-position:center;display:block}
+  .hero-intro{max-width:var(--max);margin:0 auto;padding:56px 28px 64px;text-align:center}
+  .hero .eyebrow{color:var(--gold-pale);margin-bottom:18px}
+  .hero h1{font-size:clamp(2rem,4.2vw,3.2rem);color:#fff;letter-spacing:-.028em;line-height:1.05;margin-bottom:24px}
+  .hero h1 em{font-style:italic;color:var(--gold-pale)}
+  .hero .sub{font-size:18px;color:#d7d0c4;max-width:52ch;line-height:1.55;margin:0 auto 20px}
+  .hero .payoff{font-family:var(--display);font-style:italic;font-weight:600;font-size:clamp(20px,2.6vw,28px);color:var(--gold-pale);max-width:46ch;line-height:1.35;margin:0 auto 36px}
+  .hero .cta-row{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+  @media(max-width:860px){.hero-intro{padding:40px 24px 48px}}
+
+  .belief{padding:72px 0;background:#99680c;border-top:1px solid var(--line);text-align:center}
+  .belief .line{font-family:var(--display);font-weight:700;font-style:italic;color:#fff;font-size:clamp(1.4rem,3vw,2.2rem);line-height:1.3;max-width:36ch;margin:0 auto;letter-spacing:-.02em}
+
+  .atmo{position:relative;min-height:480px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+  .atmo img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+  .atmo .overlay{position:absolute;inset:0;background:rgba(6,26,26,.75)}
+  .atmo .content{position:relative;z-index:1;text-align:center;padding:60px 28px;max-width:680px}
+  .atmo .content h2{color:#fff;margin-bottom:20px;font-size:clamp(1.8rem,4vw,2.8rem)}
+  .atmo .content p{color:#d7d0c4;font-size:18px;line-height:1.65;margin:0 auto;max-width:52ch}
+
+  .pain{padding:80px 0;border-top:1px solid var(--line);background:var(--cream)}
+  .pain .eyebrow{margin-bottom:18px}
+  .pain h2{max-width:28ch}
+  .pain p{color:var(--brown);font-size:17px;line-height:1.7;margin-bottom:18px}
+  .pain .pull{font-family:var(--display);font-weight:600;font-size:19px;color:var(--ink);line-height:1.35;margin:32px 0;padding-left:20px;border-left:3px solid var(--gold);max-width:46ch}
+  .pain-split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .feeling-split{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center;margin:48px 0 36px}
+  .feeling-photo img{width:100%;height:auto;display:block;border-radius:12px}
+  @media(max-width:700px){.feeling-split{grid-template-columns:1fr}}
+  .pain-photo img{border-radius:12px;width:100%;height:auto;display:block}
+  .pain-lede{font-size:18px;line-height:1.75;color:var(--brown);margin-bottom:16px}
+  .pain-hook{font-size:17px;line-height:1.7;color:var(--ink);font-weight:600;margin-bottom:0}
+  @media(max-width:700px){.pain-split{grid-template-columns:1fr}.pain-photo{order:-1}}
+  .recognition-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:36px 0}
+  .recog-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:32px 28px}
+  .recog-label{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+  .recog-card p{font-size:16px;line-height:1.7;color:var(--brown);margin-bottom:12px}
+  .recog-q{font-family:var(--display);font-weight:700;font-size:17px;color:var(--ink);line-height:1.4;font-style:italic;border-top:1px solid var(--line);padding-top:16px;margin-top:16px}
+  .missing{padding:80px 0;background:var(--cream);border-top:1px solid var(--line)}
+  .missing h2{max-width:32ch;margin-bottom:24px}
+  .missing-pull{font-family:var(--display);font-weight:700;font-size:20px;color:var(--ink);line-height:1.4;padding:24px 28px;border-left:4px solid var(--gold);background:#fff;border-radius:0 8px 8px 0;margin:32px 0}
+  .missing p{font-size:17px;line-height:1.75;color:var(--brown);margin-bottom:14px}
+  .week-culm{grid-column:1/-1;background:var(--teal);color:#fff;border-color:transparent}
+  .week-culm .wlabel{color:var(--gold)}
+  .week-culm h3{color:#fff}
+  .week-culm p{color:rgba(255,255,255,.85);margin-bottom:12px}
+  .culm-note{font-style:italic;color:var(--gold) !important;font-weight:600;margin-top:16px;font-size:15px}
+  .testi-grid--5{grid-template-columns:1fr 1fr;gap:20px}
+  .tried-block{margin-top:56px;padding-top:48px;border-top:1px solid var(--line)}
+  .tried-banner{border-radius:12px;overflow:hidden;max-height:320px}
+  .tried-banner img{width:100%;height:320px;object-fit:cover;object-position:center top;display:block}
+  .tried-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:36px}
+  .tried-item{padding:20px 24px;background:#fff;border:1px solid var(--line);border-radius:10px}
+  .tried-item h4{font-family:var(--display);font-size:15px;font-weight:700;color:var(--ink);margin-bottom:6px}
+  .tried-item p{font-size:15px;line-height:1.65;color:var(--brown);margin:0}
+  @media(max-width:640px){.tried-grid{grid-template-columns:1fr}}
+  @media(max-width:640px){.recognition-grid{grid-template-columns:1fr}.tried-grid{grid-template-columns:1fr}}
+  .maybe-list{margin:28px 0;display:flex;flex-direction:column}
+  .maybe-item{padding:16px 0 16px 24px;border-bottom:1px solid var(--line);color:var(--brown);font-size:17px;line-height:1.5;position:relative}
+  .maybe-item:first-child{border-top:1px solid var(--line)}
+  .maybe-item::before{content:"";position:absolute;left:0;top:50%;width:8px;height:8px;border-radius:50%;background:var(--gold-soft);transform:translateY(-50%)}
+
+  .spine{padding:80px 0;border-top:1px solid var(--line);background:var(--cream-2)}
+  .spine h2{max-width:24ch}
+  .spine .lede{font-size:17px;color:var(--brown);max-width:58ch;margin-bottom:48px;line-height:1.65}
+  .weeks{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:36px}
+  .week{background:var(--cream);border:1px solid var(--line);border-radius:4px;padding:32px 28px}
+  .week .wlabel{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:10px}
+  .week h3{font-size:1.2rem;color:var(--ink);margin-bottom:10px}
+  .week p{font-size:15px;color:var(--brown);line-height:1.6;max-width:none}
+  @media(max-width:700px){.weeks{grid-template-columns:1fr}}
+
+  .included{padding:80px 0;border-top:1px solid var(--line);background:var(--teal)}
+  .included .eyebrow{color:var(--gold-pale);margin-bottom:18px}
+  .included h2{color:#fff;margin-bottom:12px}
+  .included .lede{color:#d7d0c4;font-size:17px;max-width:52ch;margin-bottom:48px;line-height:1.6}
+  .included-feature{margin-bottom:48px}
+  .included-feature img{width:100%;max-width:720px;margin:0 auto;border-radius:4px;display:block}
+  .checklist{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .check-item{background:rgba(255,255,255,.05);border:1px solid var(--line-dark);border-radius:4px;padding:24px;display:grid;grid-template-columns:68px 1fr;gap:18px;align-items:start}
+  .check-item img{width:68px;height:68px;object-fit:contain;border-radius:4px}
+  .check-item .ctitle{font-family:var(--display);font-weight:700;color:var(--gold-pale);font-size:.95rem;margin-bottom:6px}
+  .check-item .cdesc{color:#c8c0b4;font-size:14px;line-height:1.6;max-width:none}
+  @media(max-width:700px){.checklist{grid-template-columns:1fr}}
+
+  .testi{padding:80px 0;background:var(--cream-2);border-top:1px solid var(--line)}
+  .testi .eyebrow{margin-bottom:36px}
+  .testi-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .tcard{border-radius:4px;padding:36px 32px}
+  .tcard.t1{background:var(--teal);border:1px solid var(--line-dark)}
+  .tcard.t2{background:#a88538}
+  .tcard.t3{background:var(--blue);grid-column:1/-1}
+  .tcard .mark{font-family:var(--display);font-weight:700;font-size:2.4rem;line-height:.5;height:20px;margin-bottom:10px}
+  .tcard.t1 .mark,.tcard.t2 .mark{color:rgba(255,255,255,.6)}
+  .tcard.t3 .mark{color:var(--gold-deep)}
+  .tcard blockquote{font-family:var(--display);font-weight:600;font-style:italic;font-size:1.05rem;line-height:1.45;margin-bottom:16px}
+  .tcard.t1 blockquote,.tcard.t2 blockquote{color:#fff}
+  .tcard.t3 blockquote{color:var(--ink);font-size:1.15rem}
+  .tcard .who{font-size:12px;letter-spacing:.07em;text-transform:uppercase;font-weight:600}
+  .tcard.t1 .who,.tcard.t2 .who{color:rgba(255,255,255,.75)}
+  .tcard.t3 .who{color:var(--gold-deep)}
+  @media(max-width:700px){.testi-grid{grid-template-columns:1fr}.tcard.t3{grid-column:auto}}
+
+  .why-me{border-top:1px solid var(--line)}
+  .why-split{display:grid;grid-template-columns:.9fr 1.1fr;align-items:stretch}
+  .why-photo{overflow:hidden}
+  .why-photo img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+  .why-copy{padding:72px 56px}
+  .why-copy .eyebrow{margin-bottom:16px}
+  .why-copy h2{margin-bottom:20px}
+  .why-copy .intro{font-size:16px;color:var(--brown);line-height:1.65;margin-bottom:16px;max-width:52ch}
+  .modalities{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0}
+  .modalities span{font-family:var(--body);font-weight:500;font-size:14px;color:var(--gold-deep);border:1px solid var(--gold-soft);border-radius:99px;padding:7px 16px;background:var(--cream);letter-spacing:.01em}
+  .press{display:flex;gap:20px;flex-wrap:wrap;align-items:center;margin:28px 0;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .press span{font-family:var(--display);font-size:16px;color:var(--gold-soft)}
+  .press .pod{font-style:italic;color:var(--gold-deep);font-size:14px}
+  .why-last{font-size:16px;color:var(--ink);font-weight:600;line-height:1.5;max-width:44ch;margin-top:20px}
+  @media(max-width:820px){.why-split{grid-template-columns:1fr}.why-photo{min-height:340px}.why-copy{padding:52px 28px}}
+
+  .outcomes{padding:80px 0;background:var(--cream-2);border-top:1px solid var(--line)}
+  .outcomes h2{max-width:24ch}
+  .outcomes-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:36px}
+  .outcome{background:var(--blue);border-radius:4px;padding:28px}
+  .outcome h3{font-size:1.05rem;color:var(--teal);margin-bottom:10px;font-weight:700}
+  .outcome p{font-size:15px;color:var(--ink);line-height:1.6;max-width:none}
+  @media(max-width:700px){.outcomes-grid{grid-template-columns:1fr}}
+
+  .filter{padding:80px 0;background:var(--cream);border-top:1px solid var(--line)}
+  .filter-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-top:36px}
+  .filter h3{font-size:1.1rem;font-weight:700;margin-bottom:20px}
+  .filter-list{list-style:none;display:flex;flex-direction:column;gap:12px}
+  .filter-list li{font-size:16px;color:var(--brown);line-height:1.55;padding-left:34px;position:relative}
+  .filter-yes .filter-list li::before{content:"\2713";position:absolute;left:0;top:-2px;font-size:20px;font-weight:700;line-height:1;color:var(--teal)}
+  .filter-no .filter-list li::before{content:"\2715";position:absolute;left:0;top:-2px;font-size:18px;font-weight:700;line-height:1;color:var(--ink)}
+  @media(max-width:700px){.filter-grid{grid-template-columns:1fr}}
+
+  .cta-section{padding:100px 0;background:var(--teal);border-top:1px solid var(--line-dark);text-align:center}
+  .cta-section .eyebrow{color:var(--gold-pale);margin-bottom:20px}
+  .cta-section h2{color:#fff;max-width:26ch;margin:0 auto 12px}
+  .price-big{font-family:var(--display);font-weight:700;font-size:clamp(56px,10vw,100px);color:#fff;line-height:1;letter-spacing:-.03em;margin:28px 0 8px}
+  .price-note{color:var(--gold-pale);font-size:15px;margin-bottom:36px}
+  .cta-sub{color:#d7d0c4;font-size:17px;max-width:44ch;margin:0 auto 40px;line-height:1.6}
+  .cta-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+  .arrives{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-dark);border:1px solid var(--line-dark);max-width:560px;margin:52px auto 0;border-radius:4px;overflow:hidden}
+  .arrives div{background:var(--teal);padding:22px 16px;font-size:14px;color:#c9c2b4}
+  .arrives div b{display:block;color:#fff;font-family:var(--display);font-weight:600;font-size:15px;margin-bottom:4px}
+  @media(max-width:600px){.arrives{grid-template-columns:1fr}}
+
+  .faq{padding:80px 0;background:var(--cream-2);border-top:1px solid var(--line)}
+  .faq h2{max-width:24ch;margin-bottom:40px}
+  .faq-list{max-width:680px}
+  .faq-item{border-bottom:1px solid var(--line);padding:24px 0}
+  .faq-item:first-child{border-top:1px solid var(--line)}
+  .faq-item h3{font-size:1.05rem;color:var(--ink);margin-bottom:10px;font-weight:600}
+  .faq-item p{font-size:15px;color:var(--brown);line-height:1.65;max-width:none}
+
+  footer{padding:56px 0 48px;background:var(--gold);color:rgba(255,255,255,.85);border-top:1px solid var(--line-dark)}
+  footer .top{display:flex;justify-content:space-between;align-items:flex-start;gap:30px;flex-wrap:wrap;margin-bottom:28px}
+  footer .brand{font-family:var(--display);font-weight:700;font-size:17px;color:var(--cream)}
+  footer .brand b{color:var(--gold-pale)}
+  footer .tag{font-style:italic;color:var(--gold-pale);margin-top:6px;font-family:var(--display);font-weight:500;font-size:15px}
+  footer .fine{font-size:13px;color:#7e8a88;border-top:1px solid var(--line-dark);padding-top:20px}
+
+  @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}.reveal{opacity:1;transform:none}}
+  /* More dropdown */
+  .more-wrap{position:relative;display:inline-flex;align-items:center}
+  .more-wrap > button{background:none;border:none;cursor:pointer;font-size:14px;color:var(--cream);font-weight:500;font-family:var(--body);display:flex;align-items:center;gap:5px;padding:0;transition:color .2s}
+  .more-wrap > button:hover{color:var(--gold-pale)}
+  .more-wrap > button svg{transition:transform .2s}
+  .more-wrap.open > button svg{transform:rotate(180deg)}
+  .dropdown{position:absolute;top:calc(100% + 10px);right:0;background:var(--teal-deep);border:1px solid var(--line-dark);border-radius:3px;min-width:180px;padding:6px 0;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .18s,transform .18s;z-index:9999}
+  .more-wrap.open .dropdown{opacity:1;pointer-events:all;transform:none}
+  @media(max-width:860px){.dropdown{position:fixed;top:56px;right:16px}}
+  .dropdown a{display:block;padding:10px 18px;font-size:13px;color:var(--cream);font-weight:500;transition:background .15s,color .15s}
+  .dropdown a:hover{background:var(--teal);color:var(--gold-pale)}
+
+  /* MOBILE NAV */
+  .ham{display:none;background:none;border:none;cursor:pointer;padding:6px;color:var(--cream)}
+  .ham svg{display:block}
+  .mobile-nav{display:none;position:fixed;top:64px;left:0;right:0;background:var(--teal);z-index:9998;padding:16px 0;border-top:1px solid rgba(255,255,255,.1);flex-direction:column}
+  .mobile-nav a{display:block;padding:13px 28px;font-size:15px;color:var(--cream);font-weight:500;font-family:var(--body);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.07)}
+  .mobile-nav a:last-child{border-bottom:none}
+  .mobile-nav a.btn{margin:14px 28px 6px;display:block;background:var(--gold);color:#fff;padding:12px 20px;border-radius:2px;font-weight:600;text-align:center;border:none}
+  .mobile-nav.open{display:flex}
+  @media(max-width:860px){.ham{display:block}.topbar .more-wrap{display:none}.topbar nav > .btn{display:none}}
+
+/* 31 Days Closer additions */
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:560px;margin:40px auto 34px}
+.mini{background:#fff;color:#000;aspect-ratio:1226/1758;position:relative;box-shadow:0 24px 44px -24px rgba(0,0,0,.55);container-type:inline-size;border:1px solid var(--line)}
+.mini:nth-child(1){transform:rotate(-4deg) translateY(8px)}.mini:nth-child(3){transform:rotate(4deg) translateY(8px)}
+.mini .band{position:absolute;left:0;right:0;top:30%;height:18%;background:#000;color:#c9a85a;display:flex;align-items:center;justify-content:center;text-align:center;font-family:var(--display);font-size:9cqw;letter-spacing:.06em;font-weight:500;padding:0 6%;line-height:1.15}
+.mini .say{position:absolute;left:10%;right:10%;top:56%;text-align:center;font-size:8.4cqw;line-height:1.35;color:#333}
+.mini svg{position:absolute;left:50%;transform:translateX(-50%);width:32%}.mini .t{top:0}.mini .b{bottom:0}
+.sample{margin-top:14px;padding:14px 16px;background:#000;color:#fff;border-radius:4px;font-family:var(--display);font-weight:600;font-size:14px;letter-spacing:.02em;line-height:1.4}
+.sample small{display:block;color:#c9a85a;font-weight:500;font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px}
+.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:40px 0 10px;align-items:start;width:min(1080px,92vw);position:relative;left:50%;transform:translateX(-50%)}
+.shots img{width:100%;border-radius:8px;display:block;box-shadow:0 18px 40px -24px rgba(0,0,0,.4)}
+.naomi{display:grid;grid-template-columns:1fr;gap:32px;align-items:center;margin-top:56px}
+.naomi .vid{position:relative;aspect-ratio:9/16;max-width:320px;margin:0 auto;width:100%;background:#000;border-radius:8px;overflow:hidden}
+.naomi .vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+@media(min-width:820px){.naomi{grid-template-columns:320px 1fr;gap:56px}}
+@media(max-width:640px){.shots{grid-template-columns:1fr}.trio{gap:10px}}
+.sticky31{position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--teal-deep,#061a1a);color:#fff;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 18px calc(12px + env(safe-area-inset-bottom,0px));transform:translateY(110%);transition:transform .3s}
+.sticky31.show{transform:none}.sticky31 b{font-family:var(--display);font-weight:600}.sticky31 .btn{padding:12px 20px;font-size:14px}
+@media(min-width:820px){.sticky31{display:none}}
+</style>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SY8NKELMNZ"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-SY8NKELMNZ');
+</script>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="/" class="brand">Feel Fully <b>You</b></a>
+  <button class="ham" id="hamBtn" aria-label="Open menu" aria-expanded="false">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+  <nav>
+    <a href="/">Home</a>
+    <div class="more-wrap" id="workWrap">
+      <a href="/work-with-me" style="font-size:14px;color:var(--cream);font-weight:500;transition:color .2s;text-decoration:none">Work With Me</a><button onclick="document.getElementById('workWrap').classList.toggle('open')" aria-label="Sub-pages" style="background:none;border:none;cursor:pointer;color:var(--cream);padding:0 0 0 5px;display:inline-flex;align-items:center;transition:color .2s"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg></button>
+      <div class="dropdown">
+        <a href="/one-touch">One Touch</a>
+        <a href="/the-touch-reboot">The Touch Reboot</a>
+        <a href="/the-beginning">The Beginning</a>
+      </div>
+    </div>
+    <a href="/cards">The Cards</a>
+    <a href="/shop">Shop</a>
+    <div class="more-wrap" id="moreWrap">
+      <button onclick="document.getElementById('moreWrap').classList.toggle('open')" aria-expanded="false">
+        More <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg>
+      </button>
+      <div class="dropdown">
+        <a href="/about">About Juliette</a>
+        <a href="/touch-reset-quiz">The Touch Reset Quiz</a>
+        <a href="/free-resources">Free Resources</a>
+        <a href="/essays/">Essays</a>
+        <a href="/questions/">Questions</a>
+        <a href="/podcast/">Podcast</a>
+        <a href="/press">Press</a>
+        <a href="/media-and-pr">Media &amp; PR</a>
+        <a href="/touch">The Method</a>
+        <a href="/contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<nav class="mobile-nav" id="mobileNav">
+  <a href="/">Home</a>
+  <a href="/work-with-me" style="font-weight:600;color:var(--gold-pale)">Work With Me</a>
+  <a href="/one-touch" style="padding-left:44px;font-size:14px;opacity:.85">One Touch</a>
+  <a href="/the-touch-reboot" style="padding-left:44px;font-size:14px;opacity:.85">The Touch Reboot</a>
+  <a href="/the-beginning" style="padding-left:44px;font-size:14px;opacity:.85">The Beginning</a>
+  <a href="/cards">The Cards</a>
+  <a href="/shop">Shop</a>
+  <a href="/about">About Juliette</a>
+  <a href="/touch-reset-quiz">The Touch Reset Quiz</a>
+  <a href="/free-resources">Free Resources</a>
+        <a href="/essays/">Essays</a>
+        <a href="/questions/">Questions</a>
+        <a href="/podcast/">Podcast</a>
+  <a href="/press">Press</a>
+  <a href="/media-and-pr">Media &amp; PR</a>
+  <a href="/touch">The Method</a>
+  <a href="/contact">Contact</a>
+</nav>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <img class="hero-img reveal" src="/media/31dc-hero.jpg" alt="31 Days Closer on a phone, beside the Intimacy and Communication Cards, a candle and a bowl of oranges">
+  <div class="hero-intro">
+    <div class="eyebrow reveal">31 nights · one card a night · fifteen minutes</div>
+    <h1 class="reveal">31 Days<br><em>Closer.</em></h1>
+    <p class="sub reveal">Thirty-one nights of saying the thing you have been swallowing for years, and being heard all the way to the end of it.</p>
+    <p class="payoff reveal">One card. Fifteen minutes. Three answers.</p>
+    <div class="cta-row">
+      <a href="https://buy.stripe.com/6oUcN47m3gty71H1Yx0co1U" class="btn reveal">Start tonight for £17</a>
+      <a href="#how" class="btn ghost reveal">See how it works</a>
+    </div>
+  </div>
+</header>
+
+<section class="belief">
+  <div class="narrow">
+    <p class="line reveal">Closeness does not arrive on its own. It gets built, fifteen minutes at a time.</p>
+  </div>
+</section>
+
+<section class="pain">
+  <div class="wrap">
+    <div class="pain-split">
+      <div class="pain-copy">
+        <h2 class="reveal">You still love each other.<br>So why does every real conversation die by minute four?</h2>
+        <p class="reveal pain-lede">The kids are down. You are on the sofa, a foot apart, both scrolling. You try. <em>Can we talk about us?</em></p>
+        <p class="reveal pain-lede">His shoulders go up half an inch. You watch it happen. Within minutes you are having the argument you always have, the one with the same three lines, and you both go to bed early.</p>
+        <p class="reveal pain-hook">Later you lie there doing the maths. If it were real, it would be easy. It is not easy. So either the love has gone, or you are the faulty one.</p>
+      </div>
+      <div class="pain-photo">
+        <img src="https://feelfullyyou.com/media/6838a6c6af7b3c51d1de03a2.jpeg" alt="" class="reveal">
+      </div>
+    </div>
+  </div>
+  <div class="narrow">
+    <div class="feeling-split">
+      <div class="feeling-photo">
+        <img src="https://feelfullyyou.com/media/695bcf624d9452480bb5241c.jpg" alt="" class="reveal" loading="lazy" decoding="async">
+      </div>
+      <div class="feeling-copy">
+        <div class="eyebrow reveal" style="margin-bottom:20px">You know this conversation</div>
+        <p class="reveal" style="font-size:17px;line-height:1.75;color:var(--brown)">You did the maths at 2am and got the wrong answer, because you were handed the wrong sum.</p>
+      </div>
+    </div>
+
+    <div class="recognition-grid">
+      <div class="recog-card reveal" style="background:var(--blue)">
+        <div class="recog-label">Her experience</div>
+        <p>You rehearse it in the car. You pick the moment. You start gently.</p>
+        <p>Four minutes in he is explaining. Or defending. Or fixing. <em>It just doesn't go anywhere.</em></p>
+        <p>You end up apologising for bringing it up. You say "it's fine." It isn't.</p>
+        <p>Then you sit with a friend over a glass of wine and talk for three hours without once watching your words.</p>
+        <div class="recog-q">Why can I say anything to her, and nothing to the man I love?</div>
+      </div>
+      <div class="recog-card reveal" style="background:#f5ead8">
+        <div class="recog-label">His experience</div>
+        <p>She says "can we talk" and your stomach drops.</p>
+        <p>You listen. You try to help. Somehow the help is wrong. You explain what you meant and that is wrong too.</p>
+        <p>So you go quiet, because quiet feels safer. She reads the quiet as not caring.</p>
+        <p>At work you run a room without a second thought. At home you cannot find the first sentence.</p>
+        <div class="recog-q">How do I give her what she needs when every answer I give makes it worse?</div>
+      </div>
+    </div>
+
+    <div class="tried-block">
+      <div class="tried-banner reveal">
+        <img src="https://feelfullyyou.com/media/887ba9a2-e5af-48ba-9b26-885221d6d987.jpeg" alt="" loading="lazy" decoding="async">
+      </div>
+      <div class="eyebrow reveal" style="margin:32px 0 24px">Both of you have tried</div>
+      <div class="tried-grid">
+        <div class="tried-item reveal"><h4>The big talk</h4><p>Two hours at the kitchen table. You felt closer for a night. By Thursday it was the same.</p></div>
+        <div class="tried-item reveal"><h4>Date night</h4><p>Candles, a nice restaurant, the good bottle. You talked about the kids and the house. Again.</p></div>
+        <div class="tried-item reveal"><h4>The book or the podcast</h4><p>You both understand your attachment styles now. You can explain exactly why you go quiet. You still go quiet.</p></div>
+        <div class="tried-item reveal"><h4>The weekend away</h4><p>New hotel. New city. Close for three days. Back to flatmates by Thursday.</p></div>
+      </div>
+      <div class="pull reveal">A hotel room has no edges. Your body can tell.</div>
+      <p class="reveal" style="color:var(--brown);font-size:17px;line-height:1.7">You were both sold <span style="color:var(--gold-deep);font-weight:600">The Spontaneity Lie</span>: that real closeness arrives on its own, and anything built on purpose is not the real thing. So you waited for it. The distance grew in the waiting.</p>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--teal);color:var(--cream);padding:96px 28px;text-align:center">
+  <div class="narrow" style="max-width:640px;margin:0 auto">
+    <p class="reveal" style="font-family:var(--display);font-weight:700;font-size:clamp(26px,4.2vw,40px);line-height:1.28;letter-spacing:-.02em;color:#fff;margin-bottom:28px">Everyone sells you spontaneity. I build you a container.</p>
+    <p class="reveal" style="font-family:var(--display);font-weight:500;font-size:19px;line-height:1.65;color:rgba(254,252,250,.85);max-width:52ch;margin:0 auto 28px">The body does not open on command. It opens inside a container. A container is walls, a time limit, and a way back.</p>
+    <p class="reveal" style="font-family:var(--display);font-weight:700;font-style:italic;font-size:23px;color:var(--gold-pale);letter-spacing:-.01em">31 Days Closer is that container, one night at a time.</p>
+  </div>
+</section>
+
+<section class="missing" id="how">
+  <div class="narrow">
+    <div class="eyebrow reveal">How it works</div>
+    <h2 class="reveal">Fifteen minutes. One card.<br>The other person may say only three things.</h2>
+    <div class="trio reveal"><div class="mini"><svg class="t" viewBox="0 0 120 106"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8c6a2b"/><stop offset=".5" stop-color="#d9c389"/><stop offset="1" stop-color="#8c6a2b"/></linearGradient></defs><polyline points="0,0 60,104 120,0" fill="none" stroke="url(#g)" stroke-width="2.4"/></svg><div class="band">THANK YOU</div><div class="say">I understood you.</div><svg class="b" viewBox="0 0 120 106"><polyline points="0,106 60,2 120,106" fill="none" stroke="url(#g)" stroke-width="2.4"/></svg></div><div class="mini"><svg class="t" viewBox="0 0 120 106"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8c6a2b"/><stop offset=".5" stop-color="#d9c389"/><stop offset="1" stop-color="#8c6a2b"/></linearGradient></defs><polyline points="0,0 60,104 120,0" fill="none" stroke="url(#g)" stroke-width="2.4"/></svg><div class="band">CLARIFY THAT</div><div class="say">I'm listening, but I don't understand yet.</div><svg class="b" viewBox="0 0 120 106"><polyline points="0,106 60,2 120,106" fill="none" stroke="url(#g)" stroke-width="2.4"/></svg></div><div class="mini"><svg class="t" viewBox="0 0 120 106"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8c6a2b"/><stop offset=".5" stop-color="#d9c389"/><stop offset="1" stop-color="#8c6a2b"/></linearGradient></defs><polyline points="0,0 60,104 120,0" fill="none" stroke="url(#g)" stroke-width="2.4"/></svg><div class="band">SUMMARISE THAT</div><div class="say">Give me the bottom line.</div><svg class="b" viewBox="0 0 120 106"><polyline points="0,106 60,2 120,106" fill="none" stroke="url(#g)" stroke-width="2.4"/></svg></div></div>
+    <div class="missing-pull reveal">No fixing. No defending. No "that is not what happened." You do not have to agree. You only have to understand.</div>
+    <p class="reveal">Set a 15-minute timer. Phones in another room. Yes, both of them.</p>
+    <p class="reveal">One of you reads tonight's card and answers it. The other replies with Thank you, Clarify that, or Summarise that. Nothing else.</p>
+    <p class="reveal">At "Thank you" you swap. Same card, back and forth, until the timer goes. Each pass goes a layer deeper.</p>
+    <p class="reveal" style="font-weight:600;color:var(--ink)">I have used this structure with over 650 couples. It is the difference between another conversation that goes nowhere and the one you have been circling for years.</p>
+  </div>
+</section>
+
+<div class="atmo">
+  <img class="bg" src="https://feelfullyyou.com/media/671efd13edbeb128282f4bd9.jpg" alt="" loading="lazy" decoding="async">
+  <div class="overlay"></div>
+  <div class="content">
+    <h2 class="reveal">Picture night eight.</h2>
+    <p class="reveal">He puts the kettle on at nine without being asked. Tonight's card asks the question you have both been stepping around for years. He answers. You say only "Clarify that." He goes a layer deeper, then another, and says a sentence you have never heard him say. You say "Thank you" and mean it. The room goes quiet in the good way.</p>
+  </div>
+</div>
+
+<section class="spine">
+  <div class="wrap">
+    <div class="eyebrow reveal" style="margin-bottom:18px">How the month unfolds</div>
+    <h2 class="reveal">You never pick a card.<br><em style="font-style:italic;color:var(--gold)">The month does it for you.</em></h2>
+    <p class="lede reveal">A new card unlocks each day. The warm ones first. The deep ones once the container feels safe.</p>
+    <div class="weeks">
+      <div class="week reveal"><h3>Week 1 · Seeing each other</h3><p>Warm and easy on purpose, so the structure gets to feel good before it has to hold anything heavy.</p></div>
+      <div class="week reveal"><h3>Week 2 · Understanding each other</h3><p>The things you each assumed the other one already knew. It turns out they didn't.</p></div>
+      <div class="week reveal"><h3>Week 3 · Touch and closeness</h3><p>The conversations about touch most couples never have. Asked inside a container, so nobody has to brace.</p></div>
+      <div class="week week-culm reveal"><h3>Week 4 and beyond · Honesty, repair, choosing us</h3><p>The things neither of you has said out loud, and what you want to build next.</p><p>By now the structure is doing the holding, so the honest answer has somewhere to land.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="included" id="included">
+  <div class="wrap">
+    <div class="eyebrow reveal">Everything you get</div>
+    <h2 class="reveal">It lives on your phone. It opens tonight.</h2>
+    <p class="lede reveal">Pay once and you land straight on night one. No app to download, no password to remember.</p>
+    <div class="included-feature reveal">
+      <img src="/media/31dc-feature.jpg" alt="The 31 Days Closer app on a phone next to a hand holding the cards" loading="lazy" decoding="async">
+    </div>
+    <div class="checklist">
+      <div class="check-item reveal"><img src="https://feelfullyyou.com/media/695bce014d9452f24cb4b08c.jpg" alt="" loading="lazy" style="object-fit:cover"><div><div class="ctitle">31 cards, in the right order</div><div class="cdesc">Chosen from my Couples deck and sequenced night by night, the way I would give them to you.</div></div></div>
+      <div class="check-item reveal"><img src="https://feelfullyyou.com/media/695bcf624d9452480bb5241c.jpg" alt="" loading="lazy" style="object-fit:cover"><div><div class="ctitle">A new card every day</div><div class="cdesc">Tonight's card is always waiting. Miss a night and it waits for you.</div></div></div>
+      <div class="check-item reveal"><img src="https://feelfullyyou.com/media/6762e8ba81adf93734902b54.png" alt="" loading="lazy" style="object-fit:cover"><div><div class="ctitle">The three answers and a 15-minute timer</div><div class="cdesc">Built into every card, so the structure holds even on the nights you are tired.</div></div></div>
+      <div class="check-item reveal"><img src="https://feelfullyyou.com/media/69f8604e68affeac154eee79.jpg" alt="" loading="lazy" style="object-fit:cover"><div><div class="ctitle">Yours to keep</div><div class="cdesc">Come back to any card after the 31 nights. One payment, no subscription.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="testi">
+  <div class="narrow">
+    <div class="eyebrow reveal">In their own words</div>
+    <h2 class="reveal" style="font-family:var(--display);font-weight:700;font-size:clamp(28px,4vw,40px);letter-spacing:-.02em;margin:10px 0 8px">What happens when the cards come out.</h2>
+    <div class="shots">
+      <img class="reveal" src="https://feelfullyyou.com/media/68b9706a3823bf00a48e596b.png" alt="Testimonial: the cards sparked fun, intimate conversations and brought us closer together" loading="lazy">
+      <img class="reveal" src="https://feelfullyyou.com/media/68c04cce32f3390d40e17dcc.jpeg" alt="Testimonial: the cards helped me connect more with my parents, siblings, family, friends and partner" loading="lazy">
+      <img class="reveal" src="https://feelfullyyou.com/media/68b9706a6510b923022f807d.png" alt="Testimonial: loads of fun and very insightful in understanding my partner" loading="lazy">
+    </div>
+    <div class="naomi">
+      <div class="vid reveal"><iframe src="https://www.youtube.com/embed/FaGiujQuHdo" title="Naomi on what she likes about the cards" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      <div>
+        <h3 class="reveal" style="font-family:var(--display);font-weight:700;font-size:26px;letter-spacing:-.02em;margin-bottom:12px">In Naomi's own words.</h3>
+        <p class="reveal" style="color:var(--brown);font-size:17px;line-height:1.7;margin-bottom:28px">I asked my friend Naomi, a relationship and intimacy coach, what she likes about the cards.</p>
+        <div class="tcard t1 reveal"><div class="mark">"</div><blockquote>She was sixty-two. He was sixty-four. They had not been intimate in twenty-three years. Three months later, they went on a second honeymoon.</blockquote><div class="who">A couple I worked with</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why-me">
+  <div class="why-split">
+    <div class="why-photo">
+      <img src="/media/31dc-juliette-kingsx.jpg" alt="Juliette Karaman laughing against a brick wall" loading="lazy" decoding="async">
+    </div>
+    <div class="why-copy">
+      <div class="eyebrow reveal">Why Juliette</div>
+      <h2 class="reveal">I'm <em style="font-style:italic;color:var(--gold-deep)">Juliette.</em></h2>
+      <p class="intro reveal">I made these cards because I needed them first.</p>
+      <p class="intro reveal">Fifteen years in the room with couples who love each other and cannot reach each other. Over and over, I watched the right question, held by the right structure, open rooms that had been closed for decades.</p>
+      <p class="intro reveal">31 Days Closer is that, one night at a time, at your own kitchen table. No therapist in the room. Just a card, a timer, and the two of you.</p>
+      <div class="press reveal">
+        <span>Forbes</span><span>The Times</span><span>Marie Claire</span><span>ITV</span><span>Telegraph</span><span>Newsweek</span><span>NBC</span><span>ABC</span>
+        <span class="pod">The Scrumptious Woman, top 2.5% globally</span>
+      </div>
+      <p class="why-last reveal">Couples rarely regret starting. They regret waiting until the distance feels normal.</p>
+    </div>
+  </div>
+</section>
+
+<section class="outcomes">
+  <div class="narrow">
+    <div class="eyebrow reveal" style="margin-bottom:18px">What changes</div>
+    <h2 class="reveal">You stop bracing before you speak.<br>You start looking forward to nine o'clock.</h2>
+    <div class="outcomes-grid">
+      <div class="outcome reveal"><h3>The real thing gets said</h3><p>The sentence you have been swallowing for years has somewhere to land, and a person trained, by three simple answers, to receive it.</p></div>
+      <div class="outcome reveal"><h3>Being understood</h3><p>Agreement stops being the point. Understanding becomes the point. The rows lose their fuel.</p></div>
+      <div class="outcome reveal"><h3>A map of each other</h3><p>Thirty-one answers from each of you. Things you have lived beside for years and never heard.</p></div>
+      <div class="outcome reveal"><h3>A habit that holds</h3><p>Fifteen minutes becomes the part of the evening you both protect. The structure outlasts the month.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="filter">
+  <div class="narrow">
+    <div class="eyebrow reveal" style="margin-bottom:18px">Is this for you?</div>
+    <h2 class="reveal">Who 31 Days Closer is for, and who it isn't.</h2>
+    <div class="filter-grid">
+      <div class="reveal filter-yes"><h3>This is for you if</h3><ul class="filter-list">
+        <li>You still love each other and the conversations stay on the surface</li>
+        <li>You have tried talking more, and it keeps turning into the same row</li>
+        <li>You want a structure, not more advice</li>
+        <li>You can find fifteen minutes most evenings</li>
+        <li>You want to be understood more than you want to win</li></ul></div>
+      <div class="reveal filter-no"><h3>This is not for you if</h3><ul class="filter-list">
+        <li>You are in active crisis, infidelity or abuse and need clinical support</li>
+        <li>You want someone else to do the talking for you</li>
+        <li>You are looking for a quick fix without the fifteen minutes</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section" id="buy">
+  <div class="wrap">
+    <div class="eyebrow reveal">Start tonight</div>
+    <h2 class="reveal">31 Days Closer. £17.</h2>
+    <p class="price-note reveal">One payment · Opens on your phone straight away · No subscription</p>
+    <p class="cta-sub reveal">Less than the bottle of wine you would open to get brave enough to start the conversation.</p>
+    <div class="cta-buttons">
+      <a href="https://buy.stripe.com/6oUcN47m3gty71H1Yx0co1U" class="btn reveal">Start tonight for £17</a>
+    </div>
+    <div class="arrives reveal">
+      <div><b>Tonight</b>Night one opens. Warm on purpose.</div>
+      <div><b>Every day</b>A new card unlocks.</div>
+      <div><b>Night 31</b>Choosing us.</div>
+    </div>
+    <p class="reveal" style="margin-top:28px;font-family:var(--display);font-weight:700;font-size:clamp(19px,2.6vw,26px);color:var(--gold-pale);letter-spacing:-.01em">Tonight. One card. Fifteen minutes. See what gets said.</p>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="narrow">
+    <h2 class="reveal">Frequently asked</h2>
+    <div class="faq-list">
+      <div class="faq-item reveal"><h3>Isn't putting it on a timer a bit unromantic?</h3><p>A diary entry has no walls. This is a room with a door your body knows it can walk out of, which is the only reason it will ever walk in. Fifteen minutes, three answers, a timer. The romance is what happens inside it.</p></div>
+      <div class="faq-item reveal"><h3>What if my partner isn't ready?</h3><p>Start on your own. Use each card as a journal prompt, one answer at a time, until the timer ends. When one person changes how they show up, the other one feels it.</p></div>
+      <div class="faq-item reveal"><h3>What if we miss a night?</h3><p>Tonight's card waits for you. Every card you have opened stays open. Pick it up when you can.</p></div>
+      <div class="faq-item reveal"><h3>Do we need to download anything?</h3><p>No. It opens in your browser on any phone, tablet or laptop, straight after you pay.</p></div>
+      <div class="faq-item reveal"><h3>Is this a subscription?</h3><p>No. One payment of £17.</p></div>
+      <div class="faq-item reveal"><h3>What is your refund policy?</h3><p>Because you get access straight away, the 14-day cancellation right ends once you open your cards. If something isn't working, email support@feelfullyyou.com and we'll help.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="sticky31" id="sticky31"><b>31 Days Closer · £17</b><a class="btn" href="https://buy.stripe.com/6oUcN47m3gty71H1Yx0co1U">Start tonight</a></div>
+<script>(function(){var st=document.getElementById("sticky31"),h=document.querySelector(".hero"),b=document.getElementById("buy");if(!("IntersectionObserver" in window))return;var hv=true,bv=false;function u(){st.classList.toggle("show",!hv&&!bv)}new IntersectionObserver(function(e){hv=e[0].isIntersecting;u()}).observe(h);new IntersectionObserver(function(e){bv=e[0].isIntersecting;u()}).observe(b)})();</script>
+
+<footer style="background:#a88538;color:#fff;padding:22px 32px;font-size:13px">
+  <div style="max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+    <div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:0.95rem;color:#fff;letter-spacing:-.01em">Feel Fully You</div>
+    <div style="font-size:12px;color:rgba(255,255,255,.85);display:flex;gap:16px;align-items:center"><a href="mailto:support@feelfullyyou.com" style="color:#fff;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(255,255,255,.5)">support@feelfullyyou.com</a><a href="https://feelfullyyou.com/terms" style="color:rgba(255,255,255,.75);text-decoration:none" target="_blank" rel="noopener">Terms</a></div>
+    <div style="display:flex;gap:14px;align-items:center">
+      <a href="https://www.instagram.com/juliettekaraman/" aria-label="Instagram" style="color:rgba(255,255,255,.85);display:flex;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+      <a href="https://www.facebook.com/juliette.karamanvanschaardenburg" aria-label="Facebook" style="color:rgba(255,255,255,.85);display:flex;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+      <a href="https://www.linkedin.com/in/juliette-karaman-van-schaardenburg-89399913b" aria-label="LinkedIn" style="color:rgba(255,255,255,.85);display:flex;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+      <a href="https://www.tiktok.com/@juliettekaraman" aria-label="TikTok" style="color:rgba(255,255,255,.85);display:flex;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+      <a href="https://substack.com/@juliettekaraman" aria-label="Substack" style="color:rgba(255,255,255,.85);display:flex;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 17.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+<script>
+(function(){
+  var btn=document.getElementById('hamBtn');
+  var nav=document.getElementById('mobileNav');
+  if(btn&&nav){btn.addEventListener('click',function(){nav.classList.toggle('open');btn.setAttribute('aria-expanded',nav.classList.contains('open'))});}
+})();
+</script>
+<script>
+document.addEventListener('click', function(e){
+  var a = e.target.closest('a'); if(!a || typeof gtag !== 'function') return;
+  var h = a.href || '';
+  var label = (a.textContent || '').trim().slice(0, 60);
+  if (h.indexOf('stripe.com') > -1) gtag('event', 'begin_checkout', {link_url: h, link_text: label, page_path: location.pathname});
+  else if (h.indexOf('tidycal.com') > -1) gtag('event', 'book_call_click', {link_url: h, link_text: label, page_path: location.pathname});
+  else if (h.indexOf('instagram.com') > -1) gtag('event', 'instagram_click', {link_url: h, page_path: location.pathname});
+  else if (h.indexOf('/files/') > -1 || h.indexOf('.pdf') > -1) gtag('event', 'freebie_download', {link_url: h, page_path: location.pathname});
+});
+</script>
+<script src="quiz-popup.js" defer></script>
+</body>
+</html>
