@@ -103,7 +103,8 @@
 /the-room                       /the-touch-reboot                301!
 /the-room.html                  /the-touch-reboot                301!
 /the-room-mixed                 /the-touch-reboot                301
-/the-room-women-original        /the-room-women-original.html   200
+/the-room-women-original        /the-touch-reboot               301!
+/the-room-women-original.html   /the-touch-reboot               301!
 /thankyou-grief                 /thankyou-grief.html            200
 /be-touched                     https://findthetouch.live/      301
 /terms                          /terms.html                     200
