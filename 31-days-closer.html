@@ -81,6 +81,19 @@
   .atmo .content{position:relative;z-index:1;text-align:center;padding:60px 28px;max-width:680px}
   .atmo .content h2{color:#fff;margin-bottom:20px;font-size:clamp(1.8rem,4vw,2.8rem)}
   .atmo .content p{color:#d7d0c4;font-size:18px;line-height:1.65;margin:0 auto;max-width:52ch}
+  .atmo.scene{min-height:640px}
+  .atmo.scene .content{max-width:740px;padding:84px 26px}
+  .atmo.scene .content h2{margin-bottom:34px;letter-spacing:-.02em;line-height:1.05}
+  .atmo.scene .content h2 em{display:block;font-style:italic;font-weight:600;color:var(--gold-pale)}
+  .atmo.scene .beat{font-family:var(--body);color:#e6e0d4;font-size:clamp(17px,2.1vw,20px);line-height:1.5;max-width:30ch;margin:0 auto 20px}
+  .atmo.scene .beat.soft{color:#c0b8a8;font-size:clamp(16px,1.9vw,17.5px);max-width:34ch}
+  .atmo.scene .beat strong{color:#fff;font-weight:600}
+  .atmo.scene .spoken{margin:30px auto;max-width:34ch}
+  .atmo.scene .spoken .pre{display:block;font-family:var(--body);font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-soft);font-weight:600;margin-bottom:10px}
+  .atmo.scene .spoken .q{display:block;font-family:var(--display);font-weight:700;font-style:italic;color:#fff;font-size:clamp(1.75rem,5.2vw,2.5rem);line-height:1.1;letter-spacing:-.02em}
+  .atmo.scene .spoken .post{display:block;font-family:var(--body);font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-soft);font-weight:600;margin-top:10px}
+  .atmo.scene .rule{width:44px;height:1px;background:var(--gold-soft);opacity:.55;margin:34px auto}
+  .atmo.scene .quiet{font-family:var(--display);font-weight:600;font-style:italic;color:var(--gold-pale);font-size:clamp(1.3rem,3.4vw,2rem);line-height:1.3;max-width:20ch;margin:0 auto;letter-spacing:-.01em}
 
   .pain{padding:80px 0;border-top:1px solid var(--line);background:var(--cream)}
   .pain .eyebrow{margin-bottom:18px}
@@ -442,12 +455,26 @@ gtag('config', 'G-SY8NKELMNZ');
   </div>
 </section>
 
-<div class="atmo">
+<div class="atmo scene">
   <img class="bg" src="https://feelfullyyou.com/media/671efd13edbeb128282f4bd9.jpg" alt="" loading="lazy" decoding="async">
   <div class="overlay"></div>
   <div class="content">
-    <h2 class="reveal">Picture night eight.</h2>
-    <p class="reveal">He puts the kettle on at nine without being asked. Tonight's card asks the question you have both been stepping around for years. He answers. You say only "Clarify that." He goes a layer deeper, then another, and says a sentence you have never heard him say. You say "Thank you" and mean it. The room goes quiet in the good way.</p>
+    <h2 class="reveal">Picture<em>night eight.</em></h2>
+    <p class="beat soft reveal">He puts the kettle on at nine without being asked.</p>
+    <p class="beat reveal" style="transition-delay:.1s">Tonight's card asks <strong>the question you have both been stepping around for years.</strong></p>
+    <p class="beat reveal" style="transition-delay:.2s">He answers.</p>
+    <div class="spoken reveal" style="transition-delay:.25s">
+      <span class="pre">You say only</span>
+      <span class="q">&ldquo;Clarify that.&rdquo;</span>
+    </div>
+    <p class="beat reveal" style="transition-delay:.1s">He goes a layer deeper, then another, and says <strong>a sentence you have never heard him say.</strong></p>
+    <div class="spoken reveal" style="transition-delay:.2s">
+      <span class="pre">You say</span>
+      <span class="q">&ldquo;Thank you&rdquo;</span>
+      <span class="post">and mean it</span>
+    </div>
+    <div class="rule reveal"></div>
+    <p class="quiet reveal" style="transition-delay:.15s">The room goes quiet in the good way.</p>
   </div>
 </div>
 
