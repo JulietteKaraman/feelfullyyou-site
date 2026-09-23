@@ -24,7 +24,7 @@ Report any pages that are not returning 200. If all pages are OK, say so briefly
 
 - Desktop nav: "Work With Me" is a clickable `<a href="/work-with-me">` + a separate chevron `<button>` that opens the dropdown. These are TWO separate elements inside `.more-wrap`.
 - There must NEVER be a "Start here" button in the nav. It was removed. Do not re-add it.
-- Mobile nav: "Work With Me" appears as a parent link (`font-weight:600;color:var(--gold-pale)`) above the indented sub-pages (For Her / For Him / For Both / The Room).
+- Mobile nav: "Work With Me" appears as a parent link (`font-weight:600;color:var(--gold-pale)`) above the indented sub-pages: One Touch / The Touch Reboot / The Beginning / Private 1:1 Sessions. (Corrected 21 Sep 2026 — this used to say "For Her / For Him / For Both / The Room," but that nav dropdown was retired 4 Aug 2026, those URLs now redirect to the Touch Reset Quiz. "The Room" was separately renamed to "The Touch Reboot" on 14 Sep. This file had gone six weeks stale.)
 - When editing any page's nav, preserve both the desktop and mobile nav structures exactly.
 
 ## BRAND RULES
