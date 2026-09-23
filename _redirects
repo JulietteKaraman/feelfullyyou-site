@@ -1,3 +1,8 @@
+# The cards app, served on Juliette's own domain instead of a netlify.app
+# address. Proxied (status 200) so the address bar stays feelfullyyou.com.
+/my-cards/*                     https://feelfullyyou-cards.netlify.app/app/:splat   200
+/my-cards                       https://feelfullyyou-cards.netlify.app/app/         200
+
 # Pretty URLs — strip .html extension
 /cards                          /cards.html                     200
 /31-days-closer                 /31-days-closer.html            200
