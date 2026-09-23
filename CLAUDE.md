@@ -24,8 +24,16 @@ Report any pages that are not returning 200. If all pages are OK, say so briefly
 
 - Desktop nav: "Work With Me" is a clickable `<a href="/work-with-me">` + a separate chevron `<button>` that opens the dropdown. These are TWO separate elements inside `.more-wrap`.
 - There must NEVER be a "Start here" button in the nav. It was removed. Do not re-add it.
-- Mobile nav: "Work With Me" appears as a parent link (`font-weight:600;color:var(--gold-pale)`) above the indented sub-pages: One Touch / The Touch Reboot / The Beginning / Private 1:1 Sessions. (Corrected 21 Sep 2026 — this used to say "For Her / For Him / For Both / The Room," but that nav dropdown was retired 4 Aug 2026, those URLs now redirect to the Touch Reset Quiz. "The Room" was separately renamed to "The Touch Reboot" on 14 Sep. This file had gone six weeks stale.)
+- Mobile nav: "Work With Me" appears as a parent link (`font-weight:600;color:var(--gold-pale)`) above the indented sub-pages. TWO shapes are currently live and have not been reconciled: One Touch / The Touch Reboot / The Beginning (25 pages), and those three plus Private 1:1 Sessions (7 pages: index, work-with-me, about, podcast, private-sessions, the-3-month-intensive, the-touch-reboot). Check which shape a page uses before editing it. Do not convert one into the other without asking Juliette first. (Corrected 23 Sep 2026. This line originally said "For Her / For Him / For Both / The Room," a dropdown retired 4 Aug 2026 whose URLs now redirect to the Touch Reset Quiz. A 21 Sep correction then wrongly claimed The Room had been renamed to The Touch Reboot. It had not. See OFFER NAMING below.)
 - When editing any page's nav, preserve both the desktop and mobile nav structures exactly.
+
+## OFFER NAMING (do not mix these up)
+
+- **The Touch Reset** is the overall method, the whole structure Juliette teaches: the Patterns, the Touch Languages, the Touch Map, the quiz. It keeps its name everywhere it is used in that sense. "The Touch Reset Quiz" keeps its name too.
+- **The Touch Reboot** is the 12 week, women only programme, live at `/the-touch-reboot`. It was renamed from The Touch Reset on 14 Sep 2026. Any link, CTA, price or sign-up pointing at that programme says Touch Reboot.
+- **The Room** is permanently retired. Never present it as a current offer, and never quote its old pricing.
+- Before changing any "Touch Reset" mention, work out which of the two senses it carries. A pointer to the 12 week programme becomes Touch Reboot. A mention of the method or teaching philosophy stays Touch Reset.
+- The TidyCal booking slug `tidycal.com/juliette2/the-touch-reset-call` is correct as-is. Do not rename it.
 
 ## BRAND RULES
 
