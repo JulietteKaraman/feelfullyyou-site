@@ -117,6 +117,20 @@
   .missing h2{max-width:32ch;margin-bottom:24px}
   .missing-pull{font-family:var(--display);font-weight:700;font-size:20px;color:var(--ink);line-height:1.4;padding:24px 28px;border-left:4px solid var(--gold);background:#fff;border-radius:0 8px 8px 0;margin:32px 0}
   .missing p{font-size:17px;line-height:1.75;color:var(--brown);margin-bottom:14px}
+  .missing p strong,.pain-lede strong,.why-copy .intro strong{color:var(--ink);font-weight:600}
+  .steps{margin:34px 0 26px;display:grid;gap:14px}
+  .step{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:start;background:#fff;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:0 8px 8px 0;padding:24px 28px}
+  .step .num{font-family:var(--display);font-weight:700;font-size:14px;letter-spacing:.08em;color:var(--gold-deep);padding-top:6px}
+  .step .body{margin:0!important;font-size:16.5px;line-height:1.7;color:var(--brown)}
+  .step .do{display:block;font-family:var(--display);font-weight:700;font-size:clamp(18px,2.2vw,21px);color:var(--ink);line-height:1.28;letter-spacing:-.015em;margin-bottom:8px}
+  .step .aside{display:block;margin-top:8px;font-family:var(--display);font-style:italic;font-weight:600;font-size:15.5px;color:var(--gold-deep)}
+  @media(max-width:560px){.step{padding:20px;gap:14px}}
+  .pain-hook-big{font-family:var(--display);font-weight:700;font-size:clamp(19px,2.7vw,25px);line-height:1.28;letter-spacing:-.02em;color:var(--ink);max-width:32ch;margin:16px 0 0}
+  .lie{margin-top:26px}
+  .lie .lead-in{font-family:var(--display);font-weight:700;font-size:clamp(18px,2.4vw,22px);line-height:1.32;letter-spacing:-.015em;color:var(--ink);margin:0 0 12px;max-width:34ch}
+  .lie .defn{font-size:16px;line-height:1.7;color:var(--brown);max-width:46ch;margin:0 0 18px}
+  .lie .after{font-family:var(--display);font-weight:600;font-size:clamp(17px,2.1vw,19px);line-height:1.4;color:var(--ink);margin:0;max-width:30ch}
+  .lie .after em{font-style:italic;color:var(--gold-deep)}
   .week-culm{grid-column:1/-1;background:var(--teal);color:#fff;border-color:transparent}
   .week-culm .wlabel{color:var(--gold)}
   .week-culm h3{color:#fff}
@@ -379,8 +393,10 @@ gtag('config', 'G-SY8NKELMNZ');
       <div class="pain-copy">
         <h2 class="reveal">You still love each other.<br>So why does every real conversation die by minute four?</h2>
         <p class="reveal pain-lede">The kids are down. You are on the sofa, a foot apart, both scrolling. You try. <em>Can we talk about us?</em></p>
-        <p class="reveal pain-lede">His shoulders go up half an inch. You watch it happen. Within minutes you are having the argument you always have, the one with the same three lines, and you both go to bed early.</p>
-        <p class="reveal pain-hook">Later you lie there doing the maths. If it were real, it would be easy. It is not easy. So either the love has gone, or you are the faulty one.</p>
+        <p class="reveal pain-lede">His shoulders go up half an inch. <strong>You watch it happen.</strong></p>
+        <p class="reveal pain-lede">Within minutes you are having the argument you always have, the one with the same three lines, and you both go to bed early.</p>
+        <p class="reveal pain-hook">Later you lie there doing the maths. If it were real, it would be easy. It is not easy.</p>
+        <p class="reveal pain-hook-big">So either the love has gone, or you are the faulty one.</p>
       </div>
       <div class="pain-photo">
         <img src="https://feelfullyyou.com/media/6838a6c6af7b3c51d1de03a2.jpeg" alt="" class="reveal">
@@ -429,7 +445,11 @@ gtag('config', 'G-SY8NKELMNZ');
         <div class="tried-item reveal"><h4>The weekend away</h4><p>New hotel. New city. Close for three days. Back to flatmates by Thursday.</p></div>
       </div>
       <div class="pull reveal">A hotel room has no edges. Your body can tell.</div>
-      <p class="reveal" style="color:var(--brown);font-size:17px;line-height:1.7">You were both sold <span style="color:var(--gold-deep);font-weight:600">The Spontaneity Lie</span>: that real closeness arrives on its own, and anything built on purpose is not the real thing. So you waited for it. The distance grew in the waiting.</p>
+      <div class="lie">
+        <p class="lead-in reveal">You were both sold <span style="color:var(--gold-deep)">The Spontaneity Lie</span>:</p>
+        <p class="defn reveal" style="transition-delay:.08s">that real closeness arrives on its own, and anything built on purpose is not the real thing.</p>
+        <p class="after reveal" style="transition-delay:.16s">So you waited for it.<br><em>The distance grew in the waiting.</em></p>
+      </div>
     </div>
   </div>
 </section>
@@ -448,9 +468,20 @@ gtag('config', 'G-SY8NKELMNZ');
     <h2 class="reveal">Fifteen minutes. One card.<br>The other person may say only three things.</h2>
     <div class="trio reveal"><div class="mini"><svg class="t" viewBox="0 0 120 106"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8c6a2b"/><stop offset=".5" stop-color="#d9c389"/><stop offset="1" stop-color="#8c6a2b"/></linearGradient></defs><polyline points="0,0 60,104 120,0" fill="none" stroke="url(#g)" stroke-width="2.4"/></svg><div class="band">THANK YOU</div><div class="say">I understood you.</div><svg class="b" viewBox="0 0 120 106"><polyline points="0,106 60,2 120,106" fill="none" stroke="url(#g)" stroke-width="2.4"/></svg></div><div class="mini"><svg class="t" viewBox="0 0 120 106"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8c6a2b"/><stop offset=".5" stop-color="#d9c389"/><stop offset="1" stop-color="#8c6a2b"/></linearGradient></defs><polyline points="0,0 60,104 120,0" fill="none" stroke="url(#g)" stroke-width="2.4"/></svg><div class="band">CLARIFY THAT</div><div class="say">I'm listening, but I don't understand yet.</div><svg class="b" viewBox="0 0 120 106"><polyline points="0,106 60,2 120,106" fill="none" stroke="url(#g)" stroke-width="2.4"/></svg></div><div class="mini"><svg class="t" viewBox="0 0 120 106"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8c6a2b"/><stop offset=".5" stop-color="#d9c389"/><stop offset="1" stop-color="#8c6a2b"/></linearGradient></defs><polyline points="0,0 60,104 120,0" fill="none" stroke="url(#g)" stroke-width="2.4"/></svg><div class="band">SUMMARISE THAT</div><div class="say">Give me the bottom line.</div><svg class="b" viewBox="0 0 120 106"><polyline points="0,106 60,2 120,106" fill="none" stroke="url(#g)" stroke-width="2.4"/></svg></div></div>
     <div class="missing-pull reveal">No fixing. No defending. No "that is not what happened." You do not have to agree. You only have to understand.</div>
-    <p class="reveal">Set a 15-minute timer. Phones in another room. Yes, both of them.</p>
-    <p class="reveal">One of you reads tonight's card and answers it. The other replies with Thank you, Clarify that, or Summarise that. Nothing else.</p>
-    <p class="reveal">At "Thank you" you swap. Same card, back and forth, until the timer goes. Each pass goes a layer deeper.</p>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="num">01</div>
+        <p class="body"><span class="do">Set a 15-minute timer.</span>Phones in another room.<span class="aside">Yes, both of them.</span></p>
+      </div>
+      <div class="step reveal" style="transition-delay:.08s">
+        <div class="num">02</div>
+        <p class="body"><span class="do">One of you reads tonight's card and answers it.</span>The other replies with <strong>Thank you</strong>, <strong>Clarify that</strong>, or <strong>Summarise that</strong>.<span class="aside">Nothing else.</span></p>
+      </div>
+      <div class="step reveal" style="transition-delay:.16s">
+        <div class="num">03</div>
+        <p class="body"><span class="do">At &ldquo;Thank you&rdquo; you swap.</span>Same card, back and forth, until the timer goes.<span class="aside">Each pass goes a layer deeper.</span></p>
+      </div>
+    </div>
     <p class="reveal" style="font-weight:600;color:var(--ink)">I have used this structure with over 650 couples. It is the difference between another conversation that goes nowhere and the one you have been circling for years.</p>
   </div>
 </section>
@@ -538,7 +569,8 @@ gtag('config', 'G-SY8NKELMNZ');
       <div class="eyebrow reveal">Why Juliette</div>
       <h2 class="reveal">I'm <em style="font-style:italic;color:var(--gold-deep)">Juliette.</em></h2>
       <p class="intro reveal">I made these cards because I needed them first.</p>
-      <p class="intro reveal">Fifteen years in the room with couples who love each other and cannot reach each other. Over and over, I watched the right question, held by the right structure, open rooms that had been closed for decades.</p>
+      <p class="intro reveal"><strong>Fifteen years in the room</strong> with couples who love each other and cannot reach each other.</p>
+      <p class="intro reveal">Over and over, I watched the right question, held by the right structure, <strong>open rooms that had been closed for decades.</strong></p>
       <p class="intro reveal">31 Days Closer is that, one night at a time, at your own kitchen table. No therapist in the room. Just a card, a timer, and the two of you.</p>
       <div class="press reveal">
         <span>Forbes</span><span>The Times</span><span>Marie Claire</span><span>ITV</span><span>Telegraph</span><span>Newsweek</span><span>NBC</span><span>ABC</span>
