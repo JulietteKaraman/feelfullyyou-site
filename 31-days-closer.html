@@ -126,11 +126,6 @@
   .step .aside{display:block;margin-top:8px;font-family:var(--display);font-style:italic;font-weight:600;font-size:15.5px;color:var(--gold-deep)}
   @media(max-width:560px){.step{padding:20px;gap:14px}}
   .pain-hook-big{font-family:var(--display);font-weight:700;font-size:clamp(19px,2.7vw,25px);line-height:1.28;letter-spacing:-.02em;color:var(--ink);max-width:32ch;margin:16px 0 0}
-  .week-culm{grid-column:1/-1;background:var(--teal);color:#fff;border-color:transparent}
-  .week-culm .wlabel{color:var(--gold)}
-  .week-culm h3{color:#fff}
-  .week-culm p{color:rgba(255,255,255,.85);margin-bottom:12px}
-  .culm-note{font-style:italic;color:var(--gold) !important;font-weight:600;margin-top:16px;font-size:15px}
   .testi-grid--5{grid-template-columns:1fr 1fr;gap:20px}
   .tried-block{margin-top:56px;padding-top:48px;border-top:1px solid var(--line)}
   .tried-banner{border-radius:12px;overflow:hidden;max-height:320px}
@@ -154,6 +149,10 @@
   .week .wlabel{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:10px}
   .week h3{font-size:1.2rem;color:var(--ink);margin-bottom:10px}
   .week p{font-size:15px;color:var(--brown);line-height:1.6;max-width:none}
+  .week-culm{background:var(--teal);color:#fff;border-color:transparent}
+  .week-culm h3{color:#fff}
+  .week-culm p{color:rgba(255,255,255,.85);margin-bottom:12px}
+  .week-culm p:last-child{margin-bottom:0}
   @media(max-width:700px){.weeks{grid-template-columns:1fr}}
 
   .included{padding:80px 0;border-top:1px solid var(--line);background:var(--teal)}
@@ -587,7 +586,7 @@ gtag('config', 'G-SY8NKELMNZ');
 <section class="filter">
   <div class="narrow">
     <div class="eyebrow reveal" style="margin-bottom:18px">Is this for you?</div>
-    <h2 class="reveal">Who 31 Days Closer is for, and who it isn't.</h2>
+    <h2 class="reveal">Who 31 Days Closer is for, and who it isn't for.</h2>
     <div class="filter-grid">
       <div class="reveal filter-yes"><h3>This is for you if</h3><ul class="filter-list">
         <li>You still love each other and the conversations stay on the surface</li>
