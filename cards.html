@@ -531,41 +531,18 @@ gtag('config', 'G-SY8NKELMNZ');
 
     <div class="deck-card featured reveal" id="bundleCard">
       <div class="badge">MOST POPULAR</div>
-      <p class="deck-eye">FULL BUNDLE</p>
-      <h3>Trust &amp; Repair + Two Decks</h3>
+      <p class="deck-eye">BOTH DECKS</p>
+      <h3>Couples <em>and</em> Friends &amp; Family</h3>
       <div class="price" id="bundlePrice">£55</div>
       <ul>
-        <li>Trust &amp; Repair included</li>
         <li>Couples deck included</li>
         <li>Friends &amp; Family deck included</li>
-        <li>Everything in one app</li>
+        <li>£70 of decks, yours for £55</li>
+        <li>Both live in the same app</li>
       </ul>
-      <a href="https://couplecards.netlify.app/purchase/email?product=full-set" class="btn" id="bundleCta">Get Access</a>
+      <a href="https://buy.stripe.com/eVq4gycGn2CIadTfPn0co1V" class="btn" id="bundleCta">Get Access</a>
     </div>
 
-    <div class="deck-card reveal" id="trustRepairCard">
-      <p class="deck-eye">AFTER A RUPTURE</p>
-      <h3>Trust &amp; Repair</h3>
-      <div class="price" id="trustRepairPrice">£15</div>
-      <ul>
-        <li>50 cards for relationship rupture</li>
-        <li>For the conversations that stalled</li>
-        <li>Gentle entry point into the method</li>
-        <li>Instant app access</li>
-      </ul>
-      <a href="https://couplecards.netlify.app/purchase/email?product=trust-repair" class="btn" id="trustRepairCta">Get Access</a>
-    </div>
-  </div>
-
-  <div class="reveal" style="max-width:var(--max);margin:36px auto 0;padding:0 28px">
-    <div class="seasonal-band">
-      <div>
-        <p class="deck-eye">SEASONAL</p>
-        <h3>The Holiday Survival Kit</h3>
-        <p class="seasonal-copy">25 prompts to move through holiday stress into real connection. Family, beliefs, relationships, intimacy.</p>
-      </div>
-      <a href="https://couplecards.netlify.app/purchase/email?product=holiday-survival" class="btn" style="white-space:nowrap">Get the Kit &middot; £12</a>
-    </div>
   </div>
 </section>
 
@@ -760,10 +737,10 @@ document.addEventListener('click', function(e){
     PLEASURE:       { pct: 50, label: 'summit guests' },
     PROUD50:        { pct: 50, label: 'Insider Touch readers' },
     CARDSVIP:       { pct: 100, label: 'VIP' },
-    // Confidence Magazine reader gift, 3 Aug 2026 — this one targets the
-    // Trust & Repair card specifically, not the Full Bundle, so it needs its
-    // own element ids and base price rather than the bundle defaults below.
-    CONFIDENCE:     { pct: 100, label: 'Confidence Magazine readers', target: 'trust-repair', basePrice: 15, dealName: 'Trust & Repair deck' }
+    // Speaking goodie-bag card, 50% off the £55 bundle. The printed card sends
+    // people to a bare feelfullyyou.com/cards and tells them to type CARDS50 at
+    // checkout, so this entry only matters if the code is ever shared as a link.
+    CARDS50:        { pct: 50, label: 'the room you were in' },
   };
 
   var promo = new URLSearchParams(location.search).get('promo');
@@ -850,6 +827,11 @@ document.addEventListener('click', function(e){
 
   document.querySelectorAll('a[href*="purchase/email"]').forEach(function(a){
     a.href = a.href + (a.href.indexOf('?') > -1 ? '&' : '?') + 'promo=' + encodeURIComponent(promo);
+  });
+  // Stripe Payment Links take their own parameter, so the code arrives pre-filled
+  // rather than the buyer having to remember and type it.
+  document.querySelectorAll('a[href*="buy.stripe.com"]').forEach(function(a){
+    a.href = a.href + (a.href.indexOf('?') > -1 ? '&' : '?') + 'prefilled_promo_code=' + encodeURIComponent(promo);
   });
 })();
 </script>
