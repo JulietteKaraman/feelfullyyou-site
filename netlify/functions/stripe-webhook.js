@@ -146,6 +146,17 @@ const BUYER_TAG_ID = 21472382;   // "Buyer"
 // This map is used for the NOTIFICATION TEXT ONLY. It deliberately changes no
 // Kit tagging: the cards decks are tagged and sequenced by the card-engine
 // webhook, and duplicating that here would risk a second welcome email.
+// 31 Days Closer is sold through https://buy.stripe.com/6oUcN47m3gty71H1Yx0co1U,
+// whose plink_ id is not recoverable from that customer-facing URL. It is named
+// by price instead, the same way the card-engine webhook matches it. Safe here
+// because this is only consulted when NOTHING else matched, and the one other
+// £17 product (The Sacred No) carries metadata.price_id so it resolves long
+// before this. The label says how it was matched, so a future £17 product
+// showing up under this name is obvious rather than silent.
+const LAST_RESORT_LABEL_BY_PENCE = {
+  1700: 'Cards: 31 Days Closer £17 (matched by price)',
+};
+
 const PAYMENT_LINK_LABELS = {
   'plink_1UIwiyCCw18geY15dZkdExIa': 'Cards: Couples and Friends & Family £55',
   'plink_1UIx0xCCw18geY15QxWKWu4j': 'Cards: Couples £35',
@@ -807,11 +818,13 @@ exports.handler = async function(event) {
   // by name, the notification says what was bought instead of "UNIDENTIFIED".
   // This is the path every cards purchase takes, because the cards links carry
   // no metadata.price_id and their Kit tagging lives in the card-engine webhook.
+  const lastResort = LAST_RESORT_LABEL_BY_PENCE[session?.amount_subtotal] || null;
+  const fallbackLabel = linkLabel || lastResort;
   await notifyPayment({
-    label: linkLabel || undefined,
+    label: fallbackLabel || undefined,
     amountPence: session?.amount_total, subtotalPence: subtotal,
     currency: session?.currency, email, firstName,
-    identified: Boolean(linkLabel), kind: 'purchase', priceId, paymentLink,
+    identified: Boolean(fallbackLabel), kind: 'purchase', priceId, paymentLink,
   });
   return { statusCode: 200, body: JSON.stringify({ ok: true, note: 'unknown product, tagged as purchased' }) };
 };
