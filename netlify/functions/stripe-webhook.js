@@ -131,6 +131,28 @@ const BUYER_TAG_ID = 21472382;   // "Buyer"
 // One Touch: two prices live side by side on purpose. £97 is the old price
 // (existing buyers + Pleasure Bundle recipients), £197 is current. Both stay
 // mapped so old links still work.
+// Payment Link ids → a human name for the Telegram notification ONLY.
+// Added 24 Sep 2026. The notifier used to name a purchase from
+// session.metadata.price_id, which Stripe does NOT set by itself: it only
+// exists if that exact field was typed into the payment link by hand. The
+// cards links created 23-24 Sep have no such metadata, so every one of them
+// arrived as "UNIDENTIFIED", and a 100% discount code made it worse by zeroing
+// amount_total so even the amount fallback found nothing.
+//
+// session.payment_link IS always present (verified against a real delivered
+// payload, 24 Sep 2026), it is unique per product, and it survives any
+// discount. It is therefore the reliable way to name a sale.
+//
+// This map is used for the NOTIFICATION TEXT ONLY. It deliberately changes no
+// Kit tagging: the cards decks are tagged and sequenced by the card-engine
+// webhook, and duplicating that here would risk a second welcome email.
+const PAYMENT_LINK_LABELS = {
+  'plink_1UIwiyCCw18geY15dZkdExIa': 'Cards: Couples and Friends & Family £55',
+  'plink_1UIx0xCCw18geY15QxWKWu4j': 'Cards: Couples £35',
+  'plink_1UIx50CCw18geY15UOYzc1hE': 'Cards: Friends & Family £35',
+  'plink_1UIx7kCCw18geY15Ql5eR1T2': 'Cards: Trust & Repair £15',
+};
+
 const PRODUCT_MAP = {
   // SEQUENCE IDs REWIRED 6 July PM: Kit's original template sequences (2812532/33/34/91)
   // were deleted or repurposed during the paste-in. Nulls below = no sequence exists in
@@ -556,7 +578,7 @@ async function lookupWarmStatus(email) {
   }
 }
 
-async function notifyPayment({ label, amountPence, currency, email, firstName, kind, identified, priceId }) {
+async function notifyPayment({ label, amountPence, subtotalPence, currency, email, firstName, kind, identified, priceId, paymentLink }) {
   try {
     const botToken = process.env.TELEGRAM_BOT_TOKEN;
     const chatId = process.env.TELEGRAM_CHAT_ID;
@@ -565,7 +587,13 @@ async function notifyPayment({ label, amountPence, currency, email, firstName, k
       return;
     }
 
-    const amount = `£${(Number(amountPence || 0) / 100).toFixed(2)}`;
+    const paid = Number(amountPence || 0);
+    const listed = Number(subtotalPence || 0);
+    // A discount or 100% code makes amount_total 0, which on its own reads as
+    // if nothing was sold. Show what the deck is worth alongside what was paid.
+    const amount = (listed > paid)
+      ? `£${(paid / 100).toFixed(2)} (was £${(listed / 100).toFixed(2)}, code used)`
+      : `£${(paid / 100).toFixed(2)}`;
     const who = `${firstName || ''} · ${email}`.trim().replace(/^·\s*/, '');
 
     let text;
@@ -577,7 +605,8 @@ async function notifyPayment({ label, amountPence, currency, email, firstName, k
         `${who}\n` +
         `Tagged "purchased" only. No product tag, no sequence.\n` +
         `price_id: ${priceId || '(empty)'}\n` +
-        `Fix: add metadata.price_id to that payment link, or add the price to PRODUCT_MAP.`;
+        `payment_link: ${paymentLink || '(none)'}\n` +
+        `Fix: add that payment_link to PAYMENT_LINK_LABELS, or set metadata.price_id on the link.`;
     } else if (kind === 'renewal') {
       text =
         `${amount} · ${label}\n` +
@@ -713,6 +742,12 @@ exports.handler = async function(event) {
   // Price ID comes through in metadata (set this in each Stripe payment link)
   const priceId = session?.metadata?.price_id || '';
   const product = PRODUCT_MAP[priceId];
+  // Always present on a Payment Link checkout, and unaffected by discount codes.
+  const paymentLink = session?.payment_link || '';
+  const linkLabel = PAYMENT_LINK_LABELS[paymentLink] || null;
+  // amount_total is what was actually charged (0 on a 100% code);
+  // amount_subtotal is what the deck lists at. The notifier shows both.
+  const subtotal = session?.amount_subtotal;
 
   if (product) {
     console.log(`${product.label} purchase — adding ${email} to Kit`);
@@ -733,8 +768,9 @@ exports.handler = async function(event) {
 
     // Exit point 3 (row 3): checkout.session.completed, metadata.price_id in map — labelled.
     await notifyPayment({
-      label: product.label, amountPence: session?.amount_total, currency: session?.currency,
-      email, firstName, identified: true, kind: 'purchase',
+      label: product.label, amountPence: session?.amount_total, subtotalPence: subtotal,
+      currency: session?.currency, email, firstName, identified: true, kind: 'purchase',
+      paymentLink,
     });
 
     return { statusCode: 200, body: JSON.stringify({ ok: true, product: product.label }) };
@@ -756,8 +792,9 @@ exports.handler = async function(event) {
     await addToKit(email, firstName, amountMatch.tagId, null, apiSecret, phone);
     // Exit point 4 (row 4): checkout.session.completed, matched on amount (cards app) — labelled.
     await notifyPayment({
-      label: amountMatch.label, amountPence: session?.amount_total, currency: session?.currency,
-      email, firstName, identified: true, kind: 'purchase',
+      label: linkLabel || amountMatch.label, amountPence: session?.amount_total,
+      subtotalPence: subtotal, currency: session?.currency,
+      email, firstName, identified: true, kind: 'purchase', paymentLink,
     });
     return { statusCode: 200, body: JSON.stringify({ ok: true, product: amountMatch.label }) };
   }
@@ -765,10 +802,16 @@ exports.handler = async function(event) {
   // Fallback: tag as unknown purchaser so nobody is lost
   console.log(`Unknown price_id "${priceId}" for ${email} — tagging as purchased`);
   await addToKit(email, firstName, 20794289, null, apiSecret, phone); // "purchased" tag
-  // Exit point 5 (row 5): checkout.session.completed, price unknown — blind.
+  // Exit point 5 (row 5): checkout.session.completed, price unknown.
+  // The Kit tagging above is unchanged, but if the payment link is one we know
+  // by name, the notification says what was bought instead of "UNIDENTIFIED".
+  // This is the path every cards purchase takes, because the cards links carry
+  // no metadata.price_id and their Kit tagging lives in the card-engine webhook.
   await notifyPayment({
-    amountPence: session?.amount_total, currency: session?.currency, email, firstName,
-    identified: false, priceId,
+    label: linkLabel || undefined,
+    amountPence: session?.amount_total, subtotalPence: subtotal,
+    currency: session?.currency, email, firstName,
+    identified: Boolean(linkLabel), kind: 'purchase', priceId, paymentLink,
   });
   return { statusCode: 200, body: JSON.stringify({ ok: true, note: 'unknown product, tagged as purchased' }) };
 };
