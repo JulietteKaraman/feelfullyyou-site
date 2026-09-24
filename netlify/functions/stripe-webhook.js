@@ -146,18 +146,18 @@ const BUYER_TAG_ID = 21472382;   // "Buyer"
 // This map is used for the NOTIFICATION TEXT ONLY. It deliberately changes no
 // Kit tagging: the cards decks are tagged and sequenced by the card-engine
 // webhook, and duplicating that here would risk a second welcome email.
-// 31 Days Closer is sold through https://buy.stripe.com/6oUcN47m3gty71H1Yx0co1U,
-// whose plink_ id is not recoverable from that customer-facing URL. It is named
-// by price instead, the same way the card-engine webhook matches it. Safe here
-// because this is only consulted when NOTHING else matched, and the one other
-// £17 product (The Sacred No) carries metadata.price_id so it resolves long
-// before this. The label says how it was matched, so a future £17 product
+// Backstop only. 31 Days Closer is now pinned to its own link id below, which
+// Juliette supplied on 24 Sep, so this is reached only if that link is ever
+// replaced. Safe because it is consulted when NOTHING else matched, and the one
+// other £17 product (The Sacred No) carries metadata.price_id so it resolves
+// long before this. The label says how it was matched, so a future £17 product
 // showing up under this name is obvious rather than silent.
 const LAST_RESORT_LABEL_BY_PENCE = {
   1700: 'Cards: 31 Days Closer £17 (matched by price)',
 };
 
 const PAYMENT_LINK_LABELS = {
+  'plink_1UIqnGCCw18geY15MahlIFxj': 'Cards: 31 Days Closer £17',
   'plink_1UIwiyCCw18geY15dZkdExIa': 'Cards: Couples and Friends & Family £55',
   'plink_1UIx0xCCw18geY15QxWKWu4j': 'Cards: Couples £35',
   'plink_1UIx50CCw18geY15UOYzc1hE': 'Cards: Friends & Family £35',
