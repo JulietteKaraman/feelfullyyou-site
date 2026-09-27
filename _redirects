@@ -5,7 +5,11 @@
 
 # Pretty URLs — strip .html extension
 /cards                          /cards.html                     200
-/essence-cards                  /essence-cards.html             200
+# Essence retreat cards. Address rotated 27 Sep 2026 so the old public one and
+# the old netlify.app one both die for the co-hosts. Attendees get this link.
+/essence-cards-946d9d          /essence-cards-946d9d.html   200
+/essence-cards                  /404.html                       404
+/essence-cards.html             /404.html                       404
 /31-days-closer                 /31-days-closer.html            200
 /content-only                   /content-only.html              200
 /work-with-me                   /work-with-me.html              200
