@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Essence Cards · Feel Fully You</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f3f1ec; --ink:#111; --muted:#6b645a; --line:#d8d2c6;
+  --gold-1:#8c6a2b; --gold-2:#d9c389; --gold:#a8843f;
+  --card:#fff; --band:#000;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){ --bg:#1a1814; --ink:#f1ece2; --muted:#a79f90; --line:#3a352c; }
+}
+:root[data-theme="dark"]{ --bg:#1a1814; --ink:#f1ece2; --muted:#a79f90; --line:#3a352c; }
+html{ scroll-padding-top:env(safe-area-inset-top,0px); }
+*,*::before,*::after{ box-sizing:border-box; }
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:"Jost","Futura","Century Gothic","Avenir Next",sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{ max-width:440px; margin:0 auto; padding:20px 18px 40px; }
+header{ text-align:center; margin:6px 0 18px; }
+header h1{ font-weight:400; font-size:15px; letter-spacing:.3em; margin:0; color:var(--gold); }
+header p{ margin:6px 0 0; font-size:14px; color:var(--muted); }
+header p.rule{ margin:8px auto 0; max-width:34ch; font-size:13.5px; line-height:1.5; color:var(--gold); }
+
+/* categories: one line, no matter how many there are */
+.catbar{ display:flex; justify-content:center; padding:2px 0 14px; }
+.catsel{
+  appearance:none; -webkit-appearance:none;
+  font:inherit; font-size:14px; color:var(--ink); background:transparent;
+  border:1px solid var(--line); border-radius:999px;
+  padding:9px 34px 9px 16px; max-width:100%; cursor:pointer; text-align:center; text-align-last:center;
+  background-image:linear-gradient(45deg,transparent 50%,var(--gold) 50%),linear-gradient(135deg,var(--gold) 50%,transparent 50%);
+  background-position:calc(100% - 18px) calc(50% + 1px),calc(100% - 13px) calc(50% + 1px);
+  background-size:5px 5px,5px 5px; background-repeat:no-repeat;
+}
+.catsel option{ color:#111; background:#fff; }
+.catsel:focus-visible,.btn:focus-visible,.card:focus-visible,summary:focus-visible{ outline:2px solid var(--gold); outline-offset:3px; }
+
+/* card */
+/* --chrome = everything above and below the card. Keeps the card and the
+   Draw button on one screen so nobody has to scroll to draw. */
+.stage{ --chrome:262px; perspective:1200px; margin:6px 0 14px; display:flex; justify-content:center; }
+.card{
+  position:relative; width:100%; max-width:calc((100svh - var(--chrome)) * 1226 / 1758);
+  aspect-ratio:1226/1758; background:var(--card); color:#000;
+  border-radius:10px; box-shadow:0 18px 40px -22px rgba(60,45,20,.45), 0 0 0 1px rgba(0,0,0,.05);
+  overflow:hidden; cursor:pointer; container-type:inline-size;
+}
+.card.flip{ animation:flip .5s ease; }
+@keyframes flip{ 0%{transform:rotateY(0)} 50%{transform:rotateY(90deg)} 100%{transform:rotateY(0)} }
+@media (prefers-reduced-motion:reduce){ .card.flip{ animation:none; } }
+.chev{ position:absolute; left:50%; transform:translateX(-50%); width:31cqw; height:auto; }
+.chev.top{ top:0; }
+.chev.bottom{ bottom:0; }
+.band{
+  position:absolute; left:0; right:0; top:30.6cqw; height:17.6cqw; background:var(--band);
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  color:var(--gold); font-weight:400; line-height:1.08; padding:0 5cqw; overflow:hidden;
+}
+.band span{ display:block; white-space:nowrap; text-transform:uppercase; }
+.band .brand{ font-size:6.2cqw; }
+.band .catname{ font-size:6.2cqw; }
+.body{
+  position:absolute; left:14cqw; right:14cqw; top:50cqw; height:54cqw; overflow:hidden;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+}
+.prompt{ text-align:center; text-transform:uppercase; font-weight:700; letter-spacing:.14em; line-height:1.35; font-size:3.9cqw; }
+.sub{ margin-top:2.6cqw; text-align:center; font-size:3.55cqw; letter-spacing:.08em; color:#333; font-weight:400; }
+.url{ position:absolute; left:0; right:0; top:106cqw; text-align:center; font-size:3.2cqw; letter-spacing:.3em; }
+.count{ text-align:center; font-size:13px; color:var(--muted); margin:-6px 0 14px; }
+.actions{ display:flex; gap:10px; }
+.btn{
+  flex:1; font:inherit; font-size:15px; padding:14px 10px; border-radius:8px; cursor:pointer;
+  border:1px solid var(--ink); background:transparent; color:var(--ink);
+}
+.btn.primary{ background:var(--ink); color:var(--bg); }
+
+/* how to */
+details{ margin-top:26px; border-top:1px solid var(--line); }
+details + details{ margin-top:0; }
+summary{ list-style:none; cursor:pointer; padding:16px 2px; font-size:16px; font-weight:600; display:flex; justify-content:space-between; }
+summary::-webkit-details-marker{ display:none; }
+summary::after{ content:"+"; color:var(--gold); font-size:20px; line-height:1; }
+details[open] summary::after{ content:"–"; }
+.how{ padding:0 2px 14px; font-size:15px; line-height:1.6; }
+.how p{ margin:0 0 10px; }
+.how ol{ margin:0 0 10px; padding-left:20px; }
+.how li{ margin-bottom:6px; }
+.resp{ display:flex; gap:6px; flex-wrap:wrap; margin:4px 0 12px; }
+.resp span{ border:1px solid var(--gold); color:var(--gold); border-radius:999px; padding:4px 10px; font-size:13px; }
+
+.rlist{ margin:4px 0 14px; display:grid; gap:10px; }
+.rlist div{ font-size:14px; line-height:1.5; }
+.rlist span{ display:inline-block; border:1px solid var(--gold); color:var(--gold); border-radius:999px; padding:2px 10px; font-size:13px; margin-right:8px; }
+.tbar{ display:flex; align-items:center; gap:10px; margin-top:12px; padding:10px 12px; border:1px solid var(--line); border-radius:8px; }
+.tbar .time{ font-size:22px; font-variant-numeric:tabular-nums; min-width:62px; }
+.tbar.running .time{ color:var(--gold); }
+.len{ display:flex; gap:4px; }
+.seg{ font:inherit; font-size:13px; padding:6px 9px; border-radius:999px; border:1px solid var(--line); background:transparent; color:var(--ink); cursor:pointer; white-space:nowrap; }
+.seg[aria-pressed="true"]{ border-color:var(--gold); color:var(--gold); }
+.seg:disabled{ opacity:.4; cursor:default; }
+.tstart{ flex:0 0 auto; margin-left:auto; padding:9px 14px; font-size:14px; }
+.seg:focus-visible,.tstart:focus-visible{ outline:2px solid var(--gold); outline-offset:3px; }
+footer{ margin-top:30px; text-align:center; font-size:12px; color:var(--muted); letter-spacing:.2em; }
+footer a{ color:inherit; text-decoration:none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>ESSENCE</h1>
+    <p>Your cards from the day, to keep coming back to.</p>
+    <p class="rule">One card. Stay with the same prompt for the whole timer. The first answers are the surface.</p>
+  </header>
+
+  <div class="catbar">
+    <select class="catsel" id="catsel" aria-label="Choose a category"></select>
+  </div>
+
+  <div class="stage">
+    <div class="card" id="card" tabindex="0" role="button" aria-label="Draw the next card">
+      <svg class="chev top" viewBox="0 0 120 106" aria-hidden="true">
+        <defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8c6a2b"/><stop offset=".5" stop-color="#d9c389"/><stop offset="1" stop-color="#8c6a2b"/></linearGradient></defs>
+        <polyline points="0,0 60,104 120,0" fill="none" stroke="url(#g1)" stroke-width="2.4"/>
+        <polyline points="40,0 60,34 80,0" fill="none" stroke="url(#g1)" stroke-width="1.6"/>
+      </svg>
+      <div class="band"><span class="brand">ESSENCE</span><span class="catname" id="catname"></span></div>
+      <div class="body" id="body"><div class="prompt" id="prompt"></div><div class="sub" id="sub"></div></div>
+      <div class="url">FEELFULLYYOU.COM</div>
+      <svg class="chev bottom" viewBox="0 0 120 106" aria-hidden="true">
+        <polyline points="0,106 60,2 120,106" fill="none" stroke="url(#g1)" stroke-width="2.4"/>
+        <polyline points="40,106 60,72 80,106" fill="none" stroke="url(#g1)" stroke-width="1.6"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="count" id="count" aria-live="polite"></div>
+  <div class="actions">
+    <button class="btn" id="prev">Previous</button>
+    <button class="btn primary" id="next">Draw a card</button>
+  </div>
+
+  <div class="tbar" aria-label="Timer">
+    <span class="time" id="time" aria-live="off">15:00</span>
+    <div class="len" role="group" aria-label="Timer length">
+      <button class="seg" data-min="15" aria-pressed="true">15 min</button>
+      <button class="seg" data-min="10" aria-pressed="false">10 min</button>
+    </div>
+    <button class="btn tstart" id="startstop">Start timer</button>
+  </div>
+
+  <details open>
+    <summary>With a partner</summary>
+    <div class="how">
+      <p>15 minutes. One card. Face to face if you can.</p>
+      <ol>
+        <li>Agree together: for the next 15 minutes, our only aim is to understand each other. We stay with one prompt. We won't interject or fix. We don't have to like or agree with what the other person says.</li>
+        <li>One of you reads the card. The other takes it in, breathes, and gives one clear communication.</li>
+        <li>The listener answers with only one of three responses:</li>
+      </ol>
+      <div class="rlist">
+        <div><span>Thank you</span>I understood you.</div>
+        <div><span>Clarify that</span>I'm listening, but I don't understand yet. Add the missing piece.</div>
+        <div><span>Summarise that</span>There's too much for me to take in. Take a breath and give me the bottom line.</div>
+      </div>
+      <p>The aim is always to get to "Thank you": to be understood. You don't have to like what was said, or even agree with it.</p>
+      <p>Once you reach "Thank you", switch roles and use the same prompt again. Keep going back and forth until the timer ends. <strong style="font-weight:600">Each round goes a little deeper.</strong></p>
+      <p>Afterwards, let it settle. No picking apart what was said.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>On your own</summary>
+    <div class="how">
+      <p>Journal it, or speak it out loud. Both work.</p>
+      <ol>
+        <li>Pull a card and set the timer for 10 minutes.</li>
+        <li>Write one answer, or speak one answer out loud. Just one.</li>
+        <li>Take a breath. Read the question again, or say it out loud.</li>
+        <li>Write or speak your next answer. Excavate one answer at a time.</li>
+        <li>Keep returning to the same prompt until the timer ends. First answers are the surface. Stay with it.</li>
+        <li>When the timer ends, pause and notice how your body feels. <strong>Often there's a little more breath, more space, more aliveness.</strong></li>
+      </ol>
+    </div>
+  </details>
+
+
+  <footer><a href="https://feelfullyyou.com">FEELFULLYYOU.COM</a></footer>
+</div>
+
+<script>
+const S = "Be specific.";
+const DECK = [
+ ["New Beginnings",[
+  "Tell me something you've been saving for a special occasion.",
+  "Tell me what the woman you're becoming would wear.",
+  "Tell me what you're arriving carrying.",
+  "Tell me one thing you want to put down.",
+  "Tell me the identity that got you here.",
+  "Tell me what being the capable one has cost you."]],
+ ["Asking for What You Want",[
+  ["Tell me how you like to be looked after.",S],
+  "Tell me something small you'd love someone to do for you.",
+  "Tell me something you find hard to ask for.",
+  ["Tell me something you want.",S],
+  "Tell me how it feels when someone gets it exactly right for you.",
+  "Tell me about a time you got what you asked for, then realised you wanted something else."]],
+ ["In Touch",[
+  ["Tell me what you want to feel against your skin.",S],
+  ["Tell me a texture you love against your skin.",S],
+  ["Tell me a small pleasure your body loves.",S],
+  "Tell me where in your body you feel most at home.",
+  "Tell me where your body braces when it could settle.",
+  "Tell me when you last felt truly touched, by a person, a moment or a place."]],
+ ["Body Wisdom",[
+  "Tell me something your body does brilliantly.",
+  "Tell me when in the day you feel most like yourself.",
+  "Tell me what fills your energy back up.",
+  "Tell me how you know you need rest.",
+  "Tell me how your energy changes through the month.",
+  "Tell me how you speak to your body.",
+  "Tell me what your body is asking for right now.",
+  "Tell me where you override yourself."]],
+ ["Emotions",[
+  "Tell me what you're feeling right now.",
+  "Tell me an emotion you find easy to show.",
+  "Tell me an emotion you tend to hide.",
+  "Tell me where you feel joy in your body.",
+  "Tell me a feeling you've been keeping busy to avoid."]],
+ ["Soul & Intuition",[
+  "Tell me what you hear when everything goes quiet.",
+  "Tell me something your intuition already knows.",
+  "Tell me about a moment you felt completely yourself.",
+  "Tell me where you feel most connected to something bigger.",
+  "Tell me what you'd do if you trusted yourself fully.",
+  "Tell me a pattern you're ready to stop repeating.",
+  "Tell me something you want to remember about who you are."]],
+ ["Money & Worth",[
+  "Tell me what money means to you.",
+  "Tell me a money decision you're proud of.",
+  "Tell me a belief about money you inherited.",
+  "Tell me what independence means to you now.",
+  "Tell me something you'd spend on if you felt truly worthy of it.",
+  "Tell me what financial freedom would feel like in your body.",
+  "Tell me where you undervalue yourself."]],
+ ["Who Am I Becoming",[
+  "Tell me what you're taking home from this.",
+  "Tell me a win, insight or learning you've had.",
+  "Tell me what's available to you now that you didn't have access to before.",
+  "Tell me one thing the woman in your next chapter does differently.",
+  "Tell me who you're becoming."]]
+];
+const CARDS = DECK.flatMap(([cat,list]) => list.map(c => Array.isArray(c) ? {cat,text:c[0],sub:c[1]} : {cat,text:c,sub:""}));
+
+let filter = "All", pile = [], history = [], pos = -1;
+const $ = id => document.getElementById(id);
+
+function shuffle(a){ for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];} return a; }
+function build(){ pile = shuffle(CARDS.filter(c => filter==="All" || c.cat===filter)); history=[]; pos=-1; }
+function show(card){
+  const el=$("card"); el.classList.remove("flip"); void el.offsetWidth; el.classList.add("flip");
+  setTimeout(()=>{
+    $("catname").textContent=card.cat; $("prompt").textContent=card.text; $("sub").textContent=card.sub;
+    fit();
+  },200);
+  const total = filter==="All" ? CARDS.length : CARDS.filter(c=>c.cat===filter).length;
+  $("count").textContent = `Card ${pos+1} of ${total}`;
+  $("prev").disabled = pos<=0;
+}
+function fit(){
+  const w=$("card").clientWidth/100;
+  const band=document.querySelector(".band"), cn=$("catname");
+  let f=6.2; cn.style.fontSize=f*w+"px";
+  while(cn.scrollWidth > band.clientWidth - 10*w && f>3){ f-=0.1; cn.style.fontSize=f*w+"px"; }
+  band.querySelector(".brand").style.fontSize=f*w+"px";
+  const body=$("body"), pr=$("prompt");
+  let g=3.9; pr.style.fontSize=g*w+"px";
+  while(body.scrollHeight > body.clientHeight && g>2.6){ g-=0.1; pr.style.fontSize=g*w+"px"; }
+}
+window.addEventListener("resize",fit);
+function next(){
+  if(pos < history.length-1){ pos++; return show(history[pos]); }
+  if(!pile.length){ build(); }
+  history.push(pile.pop()); pos=history.length-1; show(history[pos]);
+}
+function prev(){ if(pos>0){ pos--; show(history[pos]); } }
+
+const cats=[["All","All categories"],...DECK.map(d=>[d[0],d[0]])];
+const sel=$("catsel");
+cats.forEach(([value,label])=>{
+  const o=document.createElement("option"); o.value=value; o.textContent=label; sel.appendChild(o);
+});
+sel.value=filter;
+sel.onchange=()=>{ filter=sel.value; build(); next(); };
+$("next").onclick=next; $("prev").onclick=prev;
+$("card").onclick=next;
+$("card").onkeydown=e=>{ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); next(); } };
+
+// timer: clock-based, keeps screen awake, soft chime at the end
+let mins=15, endAt=0, tick=null, lock=null, actx=null, remaining=15*60;
+const fmt=s=>`${String(Math.floor(s/60)).padStart(2,"0")}:${String(s%60).padStart(2,"0")}`;
+const tbar=document.querySelector(".tbar");
+function setLen(m){ mins=m; remaining=m*60; $("time").textContent=fmt(remaining);
+  document.querySelectorAll(".seg").forEach(b=>b.setAttribute("aria-pressed", b.dataset.min==m)); }
+document.querySelectorAll(".seg").forEach(b=>b.onclick=()=>{ if(!tick) setLen(+b.dataset.min); });
+async function wake(){ try{ if("wakeLock" in navigator){ lock=await navigator.wakeLock.request("screen"); } }catch(e){} }
+function sleep(){ try{ lock && lock.release(); }catch(e){} lock=null; }
+document.addEventListener("visibilitychange",()=>{ if(tick && document.visibilityState==="visible"){ wake(); update(); } });
+function unlockAudio(){
+  try{
+    actx = actx || new (window.AudioContext||window.webkitAudioContext)();
+    if(actx.state==="suspended") actx.resume();
+    const o=actx.createOscillator(), g=actx.createGain(); g.gain.value=0; o.connect(g).connect(actx.destination); o.start(); o.stop(actx.currentTime+0.01);
+  }catch(e){}
+}
+function chime(){
+  if(!actx) return;
+  const t=actx.currentTime, master=actx.createGain(); master.gain.value=0.35; master.connect(actx.destination);
+  [[196,1,7],[392,.5,5],[588,.28,4],[784,.16,3],[1176,.08,2.2]].forEach(([f,v,d])=>{
+    [0,2.6].forEach(off=>{
+      const o=actx.createOscillator(), g=actx.createGain();
+      o.type="sine"; o.frequency.value=f*(1+Math.random()*0.002);
+      g.gain.setValueAtTime(0.0001,t+off); g.gain.exponentialRampToValueAtTime(v,t+off+0.03); g.gain.exponentialRampToValueAtTime(0.0001,t+off+d);
+      o.connect(g).connect(master); o.start(t+off); o.stop(t+off+d+0.1);
+    });
+  });
+}
+function update(){
+  remaining=Math.max(0,Math.round((endAt-Date.now())/1000));
+  $("time").textContent=fmt(remaining);
+  if(remaining<=0) finish();
+}
+function finish(){
+  clearInterval(tick); tick=null; sleep(); chime();
+  if(navigator.vibrate) navigator.vibrate([200,100,200]);
+  tbar.classList.remove("running"); $("time").textContent="Time";
+  $("startstop").textContent="Start timer"; document.querySelectorAll(".seg").forEach(b=>b.disabled=false);
+  remaining=mins*60;
+}
+$("startstop").onclick=()=>{
+  if(tick){ clearInterval(tick); tick=null; sleep(); tbar.classList.remove("running");
+    $("startstop").textContent="Resume"; return; }
+  unlockAudio(); wake();
+  if(remaining<=0) remaining=mins*60;
+  endAt=Date.now()+remaining*1000;
+  tick=setInterval(update,500); update();
+  tbar.classList.add("running"); $("startstop").textContent="Pause";
+  document.querySelectorAll(".seg").forEach(b=>b.disabled=true);
+};
+setLen(15);
+build(); next();
+</script>
+</body>
+</html>
