@@ -15,8 +15,9 @@
 /gift/31-days                   /my-cards/?unlock=31-days-closer                    302
 /gift/31-days-closer            /my-cards/?unlock=31-days-closer                    302
 /gift/touch-languages           /my-cards/?unlock=touch-languages                   302
+/gift/three-answers             /my-cards/?unlock=three-answers                     302
 /gift/both                      /my-cards/?unlock=couples,friends-family            302
-/gift/everything                /my-cards/?unlock=couples,friends-family,trust-repair,touch-languages,31-days-closer  302
+/gift/everything                /my-cards/?unlock=couples,friends-family,trust-repair,touch-languages,31-days-closer,three-answers  302
 /gift                           /cards                                              302
 
 # Pretty URLs — strip .html extension
