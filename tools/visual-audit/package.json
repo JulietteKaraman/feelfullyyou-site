@@ -1,0 +1,9 @@
+{
+  "name": "ffy-visual-audit",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Headless render-and-check visual QA for feelfullyyou.com. Loads live pages in a real browser and inspects the RENDERED DOM (getComputedStyle/getBoundingClientRect), the same technique as check-contrast.js one level up, extended to more bug classes: broken images, unfilled image containers, wrong footer/brand color, oversized image bands, invisible-on-background buttons, text overflow.",
+  "dependencies": {
+    "playwright": "^1.61.1"
+  }
+}

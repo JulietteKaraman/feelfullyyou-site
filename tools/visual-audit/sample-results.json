@@ -1,0 +1,176 @@
+[
+  {
+    "url": "https://feelfullyyou.com/10-touch-rituals",
+    "ok": true,
+    "issues": [],
+    "screenshot": null
+  },
+  {
+    "url": "https://feelfullyyou.com/couples-intensive",
+    "ok": true,
+    "issues": [],
+    "screenshot": null
+  },
+  {
+    "url": "https://feelfullyyou.com/mens-intensive",
+    "ok": true,
+    "issues": [],
+    "screenshot": null
+  },
+  {
+    "url": "https://feelfullyyou.com/energetics-sensitivity",
+    "ok": true,
+    "issues": [],
+    "screenshot": null
+  },
+  {
+    "url": "https://feelfullyyou.com/scrumptious-communication",
+    "ok": true,
+    "issues": [],
+    "screenshot": null
+  },
+  {
+    "url": "https://feelfullyyou.com/private-sessions",
+    "ok": true,
+    "issues": [],
+    "screenshot": null
+  },
+  {
+    "url": "https://feelfullyyou.com/structured-touch",
+    "ok": true,
+    "issues": [],
+    "screenshot": null
+  },
+  {
+    "url": "https://feelfullyyou.com/touch-languages/physical",
+    "ok": false,
+    "issues": [
+      "FOOTER COLOR: expected ochre rgb(168,133,56), found rgba(0, 0, 0, 0)"
+    ],
+    "screenshot": "/Users/julietteckaraman/Documents/APP builds/01 Site & Dev/feelfullyyou-site/tools/visual-audit/screenshots/touch-languages_physical.png"
+  },
+  {
+    "url": "https://feelfullyyou.com/touch-that-lands",
+    "ok": true,
+    "issues": [],
+    "screenshot": null
+  },
+  {
+    "url": "https://feelfullyyou.com/essays/it-isnt-all-yours",
+    "ok": true,
+    "issues": [],
+    "screenshot": null
+  },
+  {
+    "url": "https://feelfullyyou.com/essays/what-i-know-about-dying",
+    "ok": true,
+    "issues": [],
+    "screenshot": null
+  },
+  {
+    "url": "https://feelfullyyou.com/essays/why-i-separate-them",
+    "ok": true,
+    "issues": [],
+    "screenshot": null
+  },
+  {
+    "url": "https://feelfullyyou.com/podcast/008-unveiling-scrumptious-experiences",
+    "ok": false,
+    "issues": [
+      "FOOTER COLOR: expected ochre rgb(168,133,56), found rgb(13, 53, 53)"
+    ],
+    "screenshot": "/Users/julietteckaraman/Documents/APP builds/01 Site & Dev/feelfullyyou-site/tools/visual-audit/screenshots/podcast_008-unveiling-scrumptious-experiences.png"
+  },
+  {
+    "url": "https://feelfullyyou.com/podcast/020-tea-ceremonies-stillness-and-connecting-with-the-universe-with",
+    "ok": false,
+    "issues": [
+      "FOOTER COLOR: expected ochre rgb(168,133,56), found rgb(13, 53, 53)"
+    ],
+    "screenshot": "/Users/julietteckaraman/Documents/APP builds/01 Site & Dev/feelfullyyou-site/tools/visual-audit/screenshots/podcast_020-tea-ceremonies-stillness-and-connecting-with-the-universe-with.png"
+  },
+  {
+    "url": "https://feelfullyyou.com/podcast/032-a-journey-of-gratitude-and-abundance-with-shilamida-kupershteyn",
+    "ok": false,
+    "issues": [
+      "FOOTER COLOR: expected ochre rgb(168,133,56), found rgb(13, 53, 53)"
+    ],
+    "screenshot": "/Users/julietteckaraman/Documents/APP builds/01 Site & Dev/feelfullyyou-site/tools/visual-audit/screenshots/podcast_032-a-journey-of-gratitude-and-abundance-with-shilamida-kupershteyn.png"
+  },
+  {
+    "url": "https://feelfullyyou.com/podcast/044-exploring-erotic-blueprints-spiritual-identity-and-the-taboo-of",
+    "ok": false,
+    "issues": [
+      "FOOTER COLOR: expected ochre rgb(168,133,56), found rgb(13, 53, 53)"
+    ],
+    "screenshot": "/Users/julietteckaraman/Documents/APP builds/01 Site & Dev/feelfullyyou-site/tools/visual-audit/screenshots/podcast_044-exploring-erotic-blueprints-spiritual-identity-and-the-taboo-of.png"
+  },
+  {
+    "url": "https://feelfullyyou.com/podcast/056-navigating-lifes-journey-karen-dubi-on-the-art-of-getting-out-of",
+    "ok": false,
+    "issues": [
+      "FOOTER COLOR: expected ochre rgb(168,133,56), found rgb(13, 53, 53)"
+    ],
+    "screenshot": "/Users/julietteckaraman/Documents/APP builds/01 Site & Dev/feelfullyyou-site/tools/visual-audit/screenshots/podcast_056-navigating-lifes-journey-karen-dubi-on-the-art-of-getting-out-of.png"
+  },
+  {
+    "url": "https://feelfullyyou.com/podcast/068-journey-to-self-discovery-unveiling-the-layers-with-lynne-forrest",
+    "ok": false,
+    "issues": [
+      "FOOTER COLOR: expected ochre rgb(168,133,56), found rgb(13, 53, 53)"
+    ],
+    "screenshot": "/Users/julietteckaraman/Documents/APP builds/01 Site & Dev/feelfullyyou-site/tools/visual-audit/screenshots/podcast_068-journey-to-self-discovery-unveiling-the-layers-with-lynne-forrest.png"
+  },
+  {
+    "url": "https://feelfullyyou.com/podcast/080-rediscovering-your-feminine-essence-with-cassandra-austin-mcdonald",
+    "ok": false,
+    "issues": [
+      "FOOTER COLOR: expected ochre rgb(168,133,56), found rgb(13, 53, 53)"
+    ],
+    "screenshot": "/Users/julietteckaraman/Documents/APP builds/01 Site & Dev/feelfullyyou-site/tools/visual-audit/screenshots/podcast_080-rediscovering-your-feminine-essence-with-cassandra-austin-mcdonald.png"
+  },
+  {
+    "url": "https://feelfullyyou.com/podcast/092-embracing-the-goddess-within-syma-kharal-on-reclaiming-power-and",
+    "ok": false,
+    "issues": [
+      "FOOTER COLOR: expected ochre rgb(168,133,56), found rgb(13, 53, 53)"
+    ],
+    "screenshot": "/Users/julietteckaraman/Documents/APP builds/01 Site & Dev/feelfullyyou-site/tools/visual-audit/screenshots/podcast_092-embracing-the-goddess-within-syma-kharal-on-reclaiming-power-and.png"
+  },
+  {
+    "url": "https://feelfullyyou.com/podcast/s2-02-embracing-pleasure-through-rest-and-safety-with-genevieve",
+    "ok": false,
+    "issues": [
+      "FOOTER COLOR: expected ochre rgb(168,133,56), found rgb(13, 53, 53)"
+    ],
+    "screenshot": "/Users/julietteckaraman/Documents/APP builds/01 Site & Dev/feelfullyyou-site/tools/visual-audit/screenshots/podcast_s2-02-embracing-pleasure-through-rest-and-safety-with-genevieve.png"
+  },
+  {
+    "url": "https://feelfullyyou.com/podcast/s2-14-from-dominatrix-to-mentor-of-feminine-dominance-mistress",
+    "ok": false,
+    "issues": [
+      "FOOTER COLOR: expected ochre rgb(168,133,56), found rgb(13, 53, 53)"
+    ],
+    "screenshot": "/Users/julietteckaraman/Documents/APP builds/01 Site & Dev/feelfullyyou-site/tools/visual-audit/screenshots/podcast_s2-14-from-dominatrix-to-mentor-of-feminine-dominance-mistress.png"
+  },
+  {
+    "url": "https://feelfullyyou.com/podcast/s2-ep26-the-hidden-cost-of-perfectionism-and-being-good-enough-with",
+    "ok": false,
+    "issues": [
+      "FOOTER COLOR: expected ochre rgb(168,133,56), found rgb(13, 53, 53)"
+    ],
+    "screenshot": "/Users/julietteckaraman/Documents/APP builds/01 Site & Dev/feelfullyyou-site/tools/visual-audit/screenshots/podcast_s2-ep26-the-hidden-cost-of-perfectionism-and-being-good-enough-with.png"
+  },
+  {
+    "url": "https://feelfullyyou.com/questions/couples-therapy-didnt-work",
+    "ok": true,
+    "issues": [],
+    "screenshot": null
+  },
+  {
+    "url": "https://feelfullyyou.com/questions/she-says-shes-fine",
+    "ok": true,
+    "issues": [],
+    "screenshot": null
+  }
+]
