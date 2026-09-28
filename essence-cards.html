@@ -201,47 +201,46 @@ footer a{ color:inherit; text-decoration:none; }
 </div>
 
 <script>
-const S = "Be specific.";
 const DECK = [
  ["New Beginnings",[
-  ["Tell me something you've been saving for a special occasion.","What are you saving it for?"],
-  ["Tell me one thing you want to put down.","What has it been costing you?"],
-  ["Tell me the identity that got you here.","Do you still need her?"],
-  ["Tell me what being the capable one has cost you.","Who would you be without it?"]]],
+  "Tell me something you've been saving for a special occasion.",
+  "Tell me one thing you want to put down.",
+  "Tell me the identity that got you here.",
+  "Tell me what being the capable one has cost you."]],
  ["Asking for What You Want",[
-  ["Tell me how you like to be looked after.",S],
-  ["Tell me something you find hard to ask for.","Where did you learn not to?"],
-  ["Tell me how it feels when someone gets it exactly right for you.","Where do you feel it?"],
-  ["Tell me about a time you got what you asked for, then realised you wanted something else.","What did that teach you?"]]],
+  "Tell me how you like to be looked after.",
+  "Tell me something you find hard to ask for.",
+  "Tell me how it feels when someone gets it exactly right for you.",
+  "Tell me about a time you got what you asked for, then realised you wanted something else."]],
  ["In Touch",[
-  ["Tell me a texture you love against your skin.",S],
-  ["Tell me a small pleasure your body loves.",S],
-  ["Tell me where in your body you feel most at home.","Can you stay there for one breath?"],
-  ["Tell me when you last felt truly touched, by a person, a moment or a place.","What made it land?"]]],
+  "Tell me a texture you love against your skin.",
+  "Tell me a small pleasure your body loves.",
+  "Tell me where in your body you feel most at home.",
+  "Tell me when you last felt truly touched, by a person, a moment or a place."]],
  ["Body Wisdom",[
-  ["Tell me something your body does brilliantly.","Have you ever thanked it?"],
-  ["Tell me how you speak to your body.","Whose voice is it in?"],
-  ["Tell me what your body is asking for right now.","Can you give it any of that?"],
-  ["Tell me where you override yourself.","What happens afterwards?"]]],
+  "Tell me something your body does brilliantly.",
+  "Tell me how you speak to your body.",
+  "Tell me what your body is asking for right now.",
+  "Tell me where you override yourself."]],
  ["Emotions",[
-  ["Tell me an emotion you tend to hide.","Who taught you to?"],
-  ["Tell me where you feel joy in your body.","When did you last?"],
-  ["Tell me a feeling you've been keeping busy to avoid.","What would happen if you stopped?"]]],
+  "Tell me an emotion you tend to hide.",
+  "Tell me where you feel joy in your body.",
+  "Tell me a feeling you've been keeping busy to avoid."]],
  ["Soul & Intuition",[
-  ["Tell me something your intuition already knows.","How long has it known?"],
-  ["Tell me about a moment you felt completely yourself.","What made it possible?"],
-  ["Tell me what you'd do if you trusted yourself fully.","What is the smallest version of it?"],
-  ["Tell me a pattern you're ready to stop repeating.","What replaces it?"]]],
+  "Tell me something your intuition already knows.",
+  "Tell me about a moment you felt completely yourself.",
+  "Tell me what you'd do if you trusted yourself fully.",
+  "Tell me a pattern you're ready to stop repeating."]],
  ["Money & Worth",[
-  ["Tell me a belief about money you inherited.","Whose voice is it in?"],
-  ["Tell me something you'd spend on if you felt truly worthy of it.","What is the smallest version of it?"],
-  ["Tell me what financial freedom would feel like in your body.","Where would you feel it first?"],
-  ["Tell me where you undervalue yourself.","What is uncomfortable to admit?"]]],
+  "Tell me a belief about money you inherited.",
+  "Tell me something you'd spend on if you felt truly worthy of it.",
+  "Tell me what financial freedom would feel like in your body.",
+  "Tell me where you undervalue yourself."]],
  ["Who Am I Becoming",[
-  ["Tell me a win, insight or learning you've had.","What made it possible?"],
-  ["Tell me what's available to you now that you didn't have access to before.","What will you do with it?"],
-  ["Tell me one thing the woman in your next chapter does differently.","Could you do it this week?"],
-  ["Tell me who you're becoming.","What does she need from you now?"]]]
+  "Tell me a win, insight or learning you've had.",
+  "Tell me what's available to you now that you didn't have access to before.",
+  "Tell me one thing the woman in your next chapter does differently.",
+  "Tell me who you're becoming."]]
 ];
 const CARDS = DECK.flatMap(([cat,list]) => list.map(c => Array.isArray(c) ? {cat,text:c[0],sub:c[1]} : {cat,text:c,sub:""}));
 
