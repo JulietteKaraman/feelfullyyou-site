@@ -414,9 +414,10 @@
   // meant every Operator/Explorer/Wanderer result went completely untagged and
   // unsequenced. Fixed same session this was caught.
   var PATTERN_TAG={Holder:20988556,Operator:23079697,Wanderer:23079700};
-  // NOT YET CREATED IN KIT. Filled in once the four readings are approved.
-  var STATE_TAG={'Braced':null,'The Fade':null,'Reaching':null,'Melted':null};
-  var READY_TAG={};
+  var STATE_TAG={'Braced':24122590,'The Fade':24122591,'Reaching':24122592,'Melted':24122593};
+  var READY_TAG={'ready-good':24122594,'ready-wrongkind':24122595,'ready-stuck':24122596,
+                 'ready-sad':24122597,'ready-yes':24122598,'ready-now':24122599};
+  var STATE_SEQ={'Braced':2910584,'The Fade':2910585,'Reaching':2910587,'Melted':2910588};
   var PATTERN_SEQ={Holder:2821038,Operator:2882951,Wanderer:2882953};
   var PLEASURE_TAG={Sensual:20944034,Sexual:20944035,Energetic:20944036,Kinky:20944037,Shapeshifter:20944038};
   var ORI_TAG={Leads:20994542,Receives:20994543,Switches:20994544};
@@ -809,7 +810,7 @@
     var audTag=(AUD[audience]||{}).tag;
     var tags=[STATE_TAG[result.state],PLEASURE_TAG[result.pleasure],PATTERN_TAG[result.pattern],audTag,ID_TAG[identity],READY_TAG[result.ready]].filter(function(t){return t;});
     var stackFields={touch_pleasure:result.pleasure,touch_pattern:result.pattern,touch_state:result.state,touch_want:result.gap||'',touch_ready:result.ready||''};
-    var payload=JSON.stringify({email:email,tagIds:tags,sequenceIds:[],fields:stackFields,hp_field:$('capForm').hp_field.value});
+    var payload=JSON.stringify({email:email,tagIds:tags,sequenceIds:[STATE_SEQ[result.state]].filter(Boolean),fields:stackFields,hp_field:$('capForm').hp_field.value});
     function attempt(n){
       return fetch('/.netlify/functions/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:payload})
         .then(function(r){return r.json().catch(function(){return {};});})
