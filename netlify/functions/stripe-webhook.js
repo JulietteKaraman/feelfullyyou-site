@@ -162,6 +162,51 @@ const PAYMENT_LINK_LABELS = {
   'plink_1UIx0xCCw18geY15QxWKWu4j': 'Cards: Couples £35',
   'plink_1UIx50CCw18geY15UOYzc1hE': 'Cards: Friends & Family £35',
   'plink_1UIx7kCCw18geY15Ql5eR1T2': 'Cards: Trust & Repair £15',
+  // VIP DAYS, repriced 29 Sep 2026. Stripe names both women's products identically
+  // and both men's products identically, so the product name alone cannot tell a
+  // half day from a full day in the alert. These labels do.
+  'plink_1UKxm5CCw18geY154Ggi7p89': "Women's VIP Full Day £3,000",
+  'plink_1UKxnLCCw18geY15bnzAIMuF': "Women's VIP Half Day £1,500",
+  'plink_1UKxrYCCw18geY15fsIW9olR': "Men's VIP Full Day £3,000",
+  'plink_1UKxsqCCw18geY15BpIdfbxX': "Men's VIP Half Day £1,500",
+  'plink_1UKxpqCCw18geY15NEqv2tyj': 'Couples VIP Full Day £5,000',
+};
+
+// Tag + sequence by PAYMENT LINK, not by metadata.price_id.
+//
+// Added 29 Sep 2026 with the VIP reprice. The five old intensive price IDs in
+// PRODUCT_MAP below are dead (their payment links were replaced), and the new
+// links carry no metadata.price_id, so without this map an intensive buyer
+// matches nothing and is never tagged. session.payment_link is always present
+// on a Payment Link checkout and survives discount codes, so it is the more
+// reliable key. Consulted only when PRODUCT_MAP misses, so it can never
+// override an existing metadata-tagged product.
+const PAYMENT_LINK_PRODUCTS = {
+  'plink_1UKxm5CCw18geY154Ggi7p89': {
+    tagId: 20913129,   // "womens-intensive-buyer"
+    sequenceId: 2909778,  // "VIP Day, booking your day"
+    label: "Women's VIP Full Day £3,000"
+  },
+  'plink_1UKxnLCCw18geY15bnzAIMuF': {
+    tagId: 20913129,   // "womens-intensive-buyer"
+    sequenceId: 2909778,
+    label: "Women's VIP Half Day £1,500"
+  },
+  'plink_1UKxrYCCw18geY15fsIW9olR': {
+    tagId: 24106223,   // "mens-intensive-buyer" (created 29 Sep 2026; men's had NO tag before this)
+    sequenceId: 2909778,
+    label: "Men's VIP Full Day £3,000"
+  },
+  'plink_1UKxsqCCw18geY15BpIdfbxX': {
+    tagId: 24106223,   // "mens-intensive-buyer"
+    sequenceId: 2909778,
+    label: "Men's VIP Half Day £1,500"
+  },
+  'plink_1UKxpqCCw18geY15NEqv2tyj': {
+    tagId: 20913130,   // "couples-intensive-buyer"
+    sequenceId: 2909778,
+    label: 'Couples VIP Full Day £5,000'
+  },
 };
 
 const PRODUCT_MAP = {
@@ -752,9 +797,10 @@ exports.handler = async function(event) {
 
   // Price ID comes through in metadata (set this in each Stripe payment link)
   const priceId = session?.metadata?.price_id || '';
-  const product = PRODUCT_MAP[priceId];
   // Always present on a Payment Link checkout, and unaffected by discount codes.
   const paymentLink = session?.payment_link || '';
+  // metadata.price_id first (every older product sets it), then the payment link.
+  const product = PRODUCT_MAP[priceId] || PAYMENT_LINK_PRODUCTS[paymentLink];
   const linkLabel = PAYMENT_LINK_LABELS[paymentLink] || null;
   // amount_total is what was actually charged (0 on a 100% code);
   // amount_subtotal is what the deck lists at. The notifier shows both.
