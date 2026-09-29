@@ -359,11 +359,9 @@
   <section class="rband green">
     <div class="rin">
       <p class="bandtext" id="gapLine" style="text-align:center;font-weight:600;max-width:46ch;margin:0 auto 26px;color:var(--gold-pale)"></p>
-      <h2 class="bandhead" id="stateName" style="text-align:center"></h2>
-      <p class="bandtext" id="stateLine" style="text-align:center;font-weight:600;max-width:52ch;margin:0 auto 22px"></p>
-      <p class="bandtext" id="stateP1" style="max-width:52ch;margin:0 auto 18px"></p>
-      <p class="bandtext" id="stateP2" style="max-width:52ch;margin:0 auto 22px"></p>
-      <p id="stateClose" style="text-align:center;font-style:italic;color:var(--gold-pale);font-family:var(--display);font-size:1.2rem;line-height:1.5;max-width:46ch;margin:0 auto"></p>
+      <h2 class="bandhead" id="stateName" style="text-align:center;margin-bottom:28px"></h2>
+      <div id="stateBeats" style="max-width:34ch;margin:0 auto 34px"></div>
+      <p id="stateClose" style="text-align:center;font-style:italic;color:var(--gold-pale);font-family:var(--display);font-size:1.32rem;line-height:1.55;max-width:32ch;margin:0 auto;padding-top:26px;border-top:1px solid rgba(221,201,142,.28)"></p>
     </div>
   </section>
 
@@ -377,11 +375,17 @@
 
   <section class="rband green">
     <div class="rin">
-      <h2 class="bandhead" id="ctaHead" style="text-align:center"></h2>
-      <p class="bandtext" id="ctaBody" style="max-width:50ch;margin:18px auto 24px;text-align:center"></p>
-      <div id="ctaBtnWrap" style="text-align:center;display:none">
-        <a class="btn pulse" id="ctaBtn" href="https://tidycal.com/juliette2/the-touch-reset-call">Book your Touch Reset call</a>
+      <h2 class="bandhead" id="ctaHead" style="text-align:center">Start with two minutes.</h2>
+      <p class="bandtext" style="max-width:40ch;margin:18px auto 8px;text-align:center">You did ten seconds of this in the quiz, on your own wrist.</p>
+      <p class="bandtext" style="max-width:40ch;margin:0 auto 26px;text-align:center">This is the longer version, on one spot.</p>
+      <div style="text-align:center">
+        <a class="btn pulse" href="https://vimeo.com/1213257476" target="_blank" rel="noopener">Watch the two minutes</a>
       </div>
+      <div id="ctaBtnWrap" style="text-align:center;display:none;margin-top:30px;padding-top:28px;border-top:1px solid rgba(221,201,142,.28)">
+        <p class="bandtext" id="ctaBody" style="max-width:42ch;margin:0 auto 20px;text-align:center"></p>
+        <a class="btn" id="ctaBtn" href="https://tidycal.com/juliette2/the-touch-reset-call">Book your Touch Reset call</a>
+      </div>
+      <p style="text-align:center;font-style:italic;color:var(--gold-pale);font-size:1.02rem;margin:30px auto 0;max-width:38ch">A fuller reading is on its way to your inbox.</p>
       <div class="again" style="margin-top:22px;text-align:center"><button id="restart">start again</button></div>
     </div>
   </section>
@@ -548,26 +552,23 @@
   };
   var STAGE_CAUTION="The tool has to match the stage. A Stage 1 fix, a date night, a holiday, one good conversation, applied to a Stage 2 or 3 situation is usually what makes couples give up on each other.";
   var STATE={
-  'Braced':{
-    line:"Almost nothing is arriving. Not the touch, not the wanting, not the asking.",
-    p1:"Numb is the word most people reach for. What your body is actually doing is holding. It decided, a long time ago, that braced was safer than open, and it has held that position ever since, including with someone you love and trust completely.",
-    p2:"Holding is a position, not a mood. Nobody talks themselves out of a position. It changes the way it arrived, through the body, slowly, in very small amounts.",
-    close:"Nobody starts here by trying to feel more. You start with one small, contained, entirely predictable piece of touch where nothing is asked of you afterwards."},
-  'The Fade':{
-    line:"You can feel it. That part is working.",
-    p1:"Something starts, your body picks it up, and for a moment you are right there in it. Then somewhere in the middle you are gone. Thinking about tomorrow. Watching yourself. Checking whether they are alright. You come back at the end and realise you missed most of it.",
-    p2:"This is not about wanting it more. You already want it. Your body opens and then goes somewhere safer, because staying in sensation is a capacity, and nobody ever built yours.",
-    close:"Staying is trainable. It starts with three minutes and one place on your own body."},
-  'Reaching':{
-    line:"You can feel it, and you stay for it. Both of those work, and they are the hard ones.",
-    p1:"What stops is the asking. You know when something is not quite right. You know it while it is happening. Then you run the calculation. How do I say this without them hearing it as criticism, without knocking their confidence, without making the whole thing about me.",
-    p2:"By the time the calculation finishes, the moment has gone and you have let it happen the way it was already happening. You are the one closing the gap, every time. You have become very good at receiving what is offered instead of asking for what you want, and from the outside that looks like generosity.",
-    close:"Asking has a structure. It can be learned in one sitting."},
-  'Melted':{
-    line:"Everything reaches you.",
-    p1:"A look across the kitchen. Your own hand on your own arm. The weight of someone near you before anything has happened. There is no effort in it. Nothing has to be arranged or agreed or built up to.",
-    p2:"You are available to what is already there, and it keeps arriving. Most people never get here, and the ones who do got here on purpose.",
-    close:"So there is nothing here to repair. The question at this end is range. What you have not tried, what you have never said out loud, what you would want if none of it had to be justified to anyone."}};
+  'Braced':{beats:["Almost nothing is getting through.",
+                   "Not the touch, not the wanting.",
+                   "Your body took up a position a long time ago and never put it down."],
+            close:"Positions don't respond to being told to relax."},
+  'The Fade':{beats:["It starts. Your body picks it up.",
+                     "Then somewhere in the middle you're gone.",
+                     "You come back at the end and realise you missed most of it."],
+              close:"You already want it. Staying is the part nobody built."},
+  'Reaching':{beats:["You know when something isn't quite right.",
+                     "You know it while it's happening.",
+                     "Then you work out how to say it without it landing as criticism.",
+                     "By the time you've worked that out, the moment has gone."],
+              close:"You're the one closing the gap. Every time."},
+  'Melted':{beats:["A look across the kitchen.",
+                   "Your own hand on your own arm.",
+                   "Most of what passes other people by reaches you."],
+            close:"Nothing here to repair. The question at your end is range."}};
   var STATE_TAGLINE={'Braced':"almost nothing is arriving","The Fade":"it arrives and then you go","Reaching":"you feel it and you cannot ask for it","Melted":"all of it reaches you"};
   var READY_CALL={'ready-yes':1,'ready-now':1};
   var WANT={'want-feel':"to feel it when you are touched",'want-stay':"to stay with it instead of going somewhere else",
@@ -784,18 +785,19 @@
     if(result.gap&&WANT[result.gap])
       set('gapLine','Right now, '+STATE_TAGLINE[result.state]+'. What you want is '+WANT[result.gap]+'.');
     set('stateName',result.state);
-    set('stateLine',st.line); set('stateP1',st.p1); set('stateP2',st.p2); set('stateClose',st.close);
+    var box=$('stateBeats');
+    if(box){box.innerHTML='';st.beats.forEach(function(line){
+      var el=document.createElement('p');
+      el.textContent=line;
+      el.style.cssText='margin:0 0 18px;text-align:center;font-size:1.16rem;line-height:1.62;color:var(--cream)';
+      box.appendChild(el);});}
+    set('stateClose',st.close);
     if(pl){set('pleasureName',pl.name);set('pleasureOpen',pl.open);}
     var w=$('ctaBtnWrap');
     if(READY_CALL[result.ready]){
-      set('ctaHead','Then let\u2019s talk.');
-      set('ctaBody','Thirty minutes, free. We look at where the touch stopped landing, what has been holding it there, and what would move it. If it is not a fit I will say so, and point you at what is.');
+      set('ctaBody','You said you are ready. Thirty minutes, free, and we look at what would actually move this.');
       if(w)w.style.display='block';
-    }else{
-      set('ctaHead','That\u2019s your reading.');
-      set('ctaBody','Everything above is yours. Nothing to do with it today. Come back to it in a week and see whether it is still true.');
-      if(w)w.style.display='none';
-    }
+    }else if(w){w.style.display='none';}
   }
 
   function revealBands(){
