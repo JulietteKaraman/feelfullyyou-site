@@ -25,6 +25,13 @@ const crypto = require('crypto');
 // that's needed, no new webhook logic. Must stay in sync with
 // PRICE_ID_TO_DECK_TYPE in practice-app/lib/entitlements/config.ts.
 const PRACTICE_APP_DECK_TYPES = {
+  // 31 Touch Points, £27, live in the app 30 Sep 2026. Three historic prices,
+  // all from the old "31 Daily Touch Points" PDF. All three grant the app:
+  // anyone who bought that PDF bought this month, and Juliette's instruction
+  // was to give existing buyers access rather than charge them twice.
+  'price_1TiBhLCCw18geY15dLECqNFr': '31-touch-points', // £27, the current price
+  'price_1TqqjCCCw18geY15dCXrlEjD': '31-touch-points', // £31, the old full price
+  'price_1TlpvDCCw18geY15wlpzVg4f': '31-touch-points', // £19, Between Touches upsell only
   'price_1Tlpu0CCw18geY15b8J3jlBW': 'ten-touch-rituals', // 10 Touch Rituals, £7
   'price_1TzO4DCCw18geY15u7X9j7iw': 'unspoken-distance', // The Unspoken Distance, £77 (old price, real buyers 31 Jul-1 Aug 2026)
   'price_1TnxAqCCw18geY153w22a2Ye': 'unspoken-distance', // The Unspoken Distance, £97 (current, back from £77 1 Aug 2026)
@@ -157,6 +164,7 @@ const LAST_RESORT_LABEL_BY_PENCE = {
 };
 
 const PAYMENT_LINK_LABELS = {
+  'plink_1ULQ4yCCw18geY15H3JjWZcy': '31 Touch Points £27 (app)',
   'plink_1UIqnGCCw18geY15MahlIFxj': 'Cards: 31 Days Closer £17',
   'plink_1UIwiyCCw18geY15dZkdExIa': 'Cards: Couples and Friends & Family £55',
   'plink_1UIx0xCCw18geY15QxWKWu4j': 'Cards: Couples £35',
@@ -182,6 +190,14 @@ const PAYMENT_LINK_LABELS = {
 // reliable key. Consulted only when PRODUCT_MAP misses, so it can never
 // override an existing metadata-tagged product.
 const PAYMENT_LINK_PRODUCTS = {
+  // 31 Touch Points £27, 30 Sep 2026. Existing tag and delivery sequence from
+  // the PDF era. NOTE: sequence 2817543 still delivers the 41-page PDF and
+  // needs rewriting to send people to the app instead.
+  'plink_1ULQ4yCCw18geY15H3JjWZcy': {
+    tagId: 20794225,   // "31 daily touch points"
+    sequenceId: 2817543,  // "31 Daily Touch Points" delivery
+    label: '31 Touch Points £27 (app)'
+  },
   'plink_1UKxm5CCw18geY154Ggi7p89': {
     tagId: 20913129,   // "womens-intensive-buyer"
     sequenceId: 2909778,  // "VIP Day, booking your day"
@@ -207,6 +223,11 @@ const PAYMENT_LINK_PRODUCTS = {
     sequenceId: 2909778,
     label: 'Couples VIP Full Day £5,000'
   },
+};
+
+// App entitlement by PAYMENT LINK, the fallback for PRACTICE_APP_DECK_TYPES.
+const PAYMENT_LINK_APP_DECKS = {
+  'plink_1ULQ4yCCw18geY15H3JjWZcy': '31-touch-points', // 31 Touch Points £27, buy.stripe.com/7sYeVceOvgtydq5av30co2o
 };
 
 const PRODUCT_MAP = {
@@ -814,7 +835,13 @@ exports.handler = async function(event) {
     // content lives there. Deliberately AFTER and independent of the Kit
     // call above and wrapped so a failure here can never affect the Kit
     // tag/sequence that already succeeded (spec R3 / E3).
-    const deckType = PRACTICE_APP_DECK_TYPES[priceId];
+    // Payment-link fallback, added 30 Sep 2026 with 31 Touch Points. A Payment
+    // Link created in the dashboard does not always carry metadata.price_id,
+    // and Juliette can rebuild a link on a fresh price at any time, which
+    // would silently stop granting app access. session.payment_link is always
+    // present on a Payment Link checkout and survives discount codes, so it is
+    // the safer second key. Same pattern as PAYMENT_LINK_PRODUCTS above.
+    const deckType = PRACTICE_APP_DECK_TYPES[priceId] || PAYMENT_LINK_APP_DECKS[paymentLink];
     if (deckType) {
       try {
         await grantPracticeAppEntitlement(email, deckType, session.id);
