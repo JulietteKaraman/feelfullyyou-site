@@ -165,6 +165,7 @@ const LAST_RESORT_LABEL_BY_PENCE = {
 
 const PAYMENT_LINK_LABELS = {
   'plink_1ULQ4yCCw18geY15H3JjWZcy': '31 Touch Points £27 (app)',
+  'plink_1ULQHUCCw18geY15FZP1jMYR': '31 Day Connection Kit £35 (both 31s)',
   'plink_1UIqnGCCw18geY15MahlIFxj': 'Cards: 31 Days Closer £17',
   'plink_1UIwiyCCw18geY15dZkdExIa': 'Cards: Couples and Friends & Family £55',
   'plink_1UIx0xCCw18geY15QxWKWu4j': 'Cards: Couples £35',
@@ -228,6 +229,10 @@ const PAYMENT_LINK_PRODUCTS = {
 // App entitlement by PAYMENT LINK, the fallback for PRACTICE_APP_DECK_TYPES.
 const PAYMENT_LINK_APP_DECKS = {
   'plink_1ULQ4yCCw18geY15H3JjWZcy': '31-touch-points', // 31 Touch Points £27, buy.stripe.com/7sYeVceOvgtydq5av30co2o
+  // 31 Day Connection Kit £35: both 31s together. This grants the app half.
+  // The cards half is granted by the cards app's own webhook, keyed on the
+  // same payment link. buy.stripe.com/fZu5kC0XFfpuadT32B0co2p
+  'plink_1ULQHUCCw18geY15FZP1jMYR': '31-touch-points',
 };
 
 const PRODUCT_MAP = {
