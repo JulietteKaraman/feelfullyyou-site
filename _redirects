@@ -34,7 +34,16 @@
 /mens-intensive                 /mens-intensive.html            200
 /mens-six-week-intensive        /the-3-month-intensive          301
 /the-unspoken-distance          /the-unspoken-distance.html     200
-/10-touch-rituals               /10-touch-rituals.html          200
+# 10 TOUCH RITUALS RETIRED 1 Oct 2026. Juliette: "just take the page down",
+# and she archived the £7 Stripe link herself the same minute. It was still
+# selling at £7 against 31 Touch Points at £27, the product built to replace
+# it, so she was competing with herself at a quarter of the price.
+#
+# Redirected rather than deleted, because old posts, emails and links still
+# point here and a 404 helps nobody. Nobody loses access: she confirmed
+# nobody ever bought it through the app, they all received PDFs.
+/10-touch-rituals               /31-daily-touch-points          301!
+/10-touch-rituals.html          /31-daily-touch-points          301!
 /31-touch-points                /31-daily-touch-points          301!
 /31-touch-points.html           /31-daily-touch-points          301!
 /touch-point                    /one-touch                      301!
