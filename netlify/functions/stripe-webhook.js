@@ -196,8 +196,31 @@ const PAYMENT_LINK_PRODUCTS = {
   // needs rewriting to send people to the app instead.
   'plink_1ULQ4yCCw18geY15H3JjWZcy': {
     tagId: 20794225,   // "31 daily touch points"
-    sequenceId: 2817543,  // "31 Daily Touch Points" delivery
+    sequenceId: 2817543,  // "31 Daily Touch Points" delivery, the one-off welcome
+    // The thirty-one daily nudges, built 30 Sep / 1 Oct 2026. One a day, each
+    // naming its WEEK rather than a day number, because Kit counts from
+    // purchase and the app counts from the last "done".
+    extraSequenceIds: [2912029],
     label: '31 Touch Points £27 (app)'
+  },
+  // 31 DAY CONNECTION KIT, £35, both 31s. Added 1 Oct 2026 to close a real
+  // hole: this link granted app access and was wired to NO Kit tag and NO
+  // sequence, so a £35 buyer got the product and total silence.
+  //
+  // It now gets the 31 Touch Points tag, welcome and daily nudges, which is
+  // the app half. THE CARDS HALF IS STILL MISSING: this bundle has no welcome
+  // of its own that hands over both products. Write one, then point
+  // sequenceId here at it instead of 2817543.
+  //
+  // WARNING for whoever deploys card-engine next: its stripe-webhook.mts has
+  // an undeployed commit (7f601fb) that ALSO enrols this link into cards
+  // sequence 2903192. If that ships while this entry exists, a £35 buyer gets
+  // two welcome emails. Pick one webhook to own this link, not both.
+  'plink_1ULQHUCCw18geY15FZP1jMYR': {
+    tagId: 20794225,   // "31 daily touch points"
+    sequenceId: 2817543,
+    extraSequenceIds: [2912029],
+    label: '31 Day Connection Kit £35 (both 31s)'
   },
   'plink_1UKxm5CCw18geY154Ggi7p89': {
     tagId: 20913129,   // "womens-intensive-buyer"
@@ -563,7 +586,7 @@ const PRODUCT_MAP = {
   }
 };
 
-async function addToKit(email, firstName, tagId, sequenceId, apiKey, phone) {
+async function addToKit(email, firstName, tagId, sequenceId, apiKey, phone, extraSequenceIds) {
   const headers = {
     'X-Kit-Api-Key': apiKey,
     'Content-Type': 'application/json',
@@ -604,6 +627,23 @@ async function addToKit(email, firstName, tagId, sequenceId, apiKey, phone) {
       headers,
       body: JSON.stringify({ email_address: email })
     });
+  }
+
+  // 3b. Any ADDITIONAL sequences this product runs alongside its welcome.
+  // Added 1 Oct 2026 for 31 Touch Points, which has a one-off welcome AND a
+  // thirty-one email daily drip. One product, two sequences, so the single
+  // sequenceId above was not enough. Each is wrapped so one failing cannot
+  // stop the others.
+  for (const extraId of extraSequenceIds || []) {
+    try {
+      await fetch(`${KIT_V4}/sequences/${extraId}/subscribers`, {
+        method: 'POST',
+        headers,
+        body: JSON.stringify({ email_address: email })
+      });
+    } catch (err) {
+      console.error(`Could not enrol ${email} in sequence ${extraId}:`, err);
+    }
   }
 }
 
@@ -834,7 +874,7 @@ exports.handler = async function(event) {
 
   if (product) {
     console.log(`${product.label} purchase — adding ${email} to Kit`);
-    await addToKit(email, firstName, product.tagId, product.sequenceId, apiSecret, phone);
+    await addToKit(email, firstName, product.tagId, product.sequenceId, apiSecret, phone, product.extraSequenceIds);
 
     // Grant real-account access in the Feel Fully You App, if this product's
     // content lives there. Deliberately AFTER and independent of the Kit
