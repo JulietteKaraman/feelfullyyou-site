@@ -125,10 +125,10 @@
     .voices .head{text-align:center;margin-bottom:12px}
     .voices h2{max-width:24ch;margin:0 auto 10px}
     .voices .sub{color:var(--brown);font-size:var(--t-md);max-width:46ch;margin:0 auto 40px;text-align:center}
-    .shots{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;align-items:start;max-width:920px;margin:0 auto}
-    .shot{background:var(--cream);border:1px solid var(--line);border-radius:6px;padding:14px;box-shadow:0 18px 40px -26px rgba(0,0,0,.35)}
+    .shots{columns:2;column-gap:26px;max-width:920px;margin:0 auto}
+    .shot{break-inside:avoid;page-break-inside:avoid;background:var(--cream);border:1px solid var(--line);border-radius:6px;padding:14px;margin:0 0 26px;box-shadow:0 18px 40px -26px rgba(0,0,0,.35)}
     .shot img{width:100%;height:auto;border-radius:3px;display:block}
-    @media(max-width:760px){.shots{grid-template-columns:1fr;max-width:460px}}
+    @media(max-width:760px){.shots{columns:1;max-width:460px}}
 
     /* WHO IS JULIETTE */
     .jbio{border-top:1px solid var(--line)}
@@ -392,10 +392,11 @@ gtag('config', 'G-SY8NKELMNZ');
       <h2 class="reveal">What the women say afterwards.</h2>
     </div>
     <div class="shots">
-      <div class="shot reveal"><img src="https://feelfullyyou.com/how-to-feel-like-a-woman-t1.jpg" width="900" height="1721" loading="lazy" alt="Message from Christine: working with Juliette has been a game-changer in my life."></div>
-      <div class="shot reveal"><img src="https://feelfullyyou.com/how-to-feel-like-a-woman-t2.jpg" width="900" height="487" loading="lazy" alt="Message from a client: I really received that modelled receiving so beautifully, and it felt so good to do this with my husband."></div>
-      <div class="shot reveal"><img src="https://feelfullyyou.com/how-to-feel-like-a-woman-t3.jpg" width="900" height="837" loading="lazy" alt="Message from a client: I definitely feel more in my body and more pleasure after our work together."></div>
-      <div class="shot reveal"><img src="https://feelfullyyou.com/how-to-feel-like-a-woman-t4.jpg" width="900" height="818" loading="lazy" alt="Message from Justine: I'm deeply grateful for the transmissions of touch you shared."></div>
+      <div class="shot reveal"><img src="https://feelfullyyou.com/how-to-feel-like-a-woman-christine.jpg" width="900" height="1720" loading="lazy" alt="Message from Christine: working with Juliette has been a game-changer in my life."></div>
+      <div class="shot reveal"><img src="https://feelfullyyou.com/how-to-feel-like-a-woman-safe-space.jpg" width="900" height="353" loading="lazy" alt="Message from a client: this is a safe space, you model it so well, we're doing this together."></div>
+      <div class="shot reveal"><img src="https://feelfullyyou.com/how-to-feel-like-a-woman-miki.jpg" width="900" height="1267" loading="lazy" alt="Message from Miki: for the first time, sex feels integrated with who I am, not just a set of activities."></div>
+      <div class="shot reveal"><img src="https://feelfullyyou.com/how-to-feel-like-a-woman-more-pleasure.jpg" width="900" height="837" loading="lazy" alt="Message from a client: I definitely feel more in my body and more pleasure after our work together."></div>
+      <div class="shot reveal"><img src="https://feelfullyyou.com/how-to-feel-like-a-woman-justine.jpg" width="900" height="818" loading="lazy" alt="Message from Justine: I'm deeply grateful for the transmissions of touch you shared."></div>
     </div>
   </div>
 </section>
