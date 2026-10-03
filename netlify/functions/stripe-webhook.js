@@ -247,6 +247,19 @@ const PAYMENT_LINK_PRODUCTS = {
     sequenceId: 2909778,
     label: 'Couples VIP Full Day £5,000'
   },
+  // HOW TO FEEL LIKE A WOMAN, £197, 12 places, four Wednesdays from 21 Oct 2026.
+  // Added 3 Oct 2026. Checked in the Stripe dashboard the same day: this payment
+  // link's metadata is {} , so session.metadata.price_id is EMPTY and the
+  // PRODUCT_MAP lookup below can never match it on checkout.session.completed.
+  // Without this entry a £197 buyer fell through to the generic "purchased" tag
+  // (20794289) with no sequence, which means product paid for and total silence.
+  // The tag and sequence already existed in Kit (created 2 Oct under the course's
+  // one-day-old name "How to Be a Woman"); nothing had ever pointed at them.
+  'plink_1UM5w5CCw18geY15F82LrWlz': {
+    tagId: 24227628,      // "Bought: How to Feel Like a Woman"
+    sequenceId: 2914293,  // "How to Feel Like a Woman: Welcome"
+    label: 'How to Feel Like a Woman £197'
+  },
 };
 
 // App entitlement by PAYMENT LINK, the fallback for PRACTICE_APP_DECK_TYPES.
@@ -531,6 +544,16 @@ const PRODUCT_MAP = {
     tagId: 20895627,   // "confidence-magazine-reader"
     sequenceId: null,
     label: 'Free — Confidence Magazine readers'
+  },
+  // ─── HOW TO FEEL LIKE A WOMAN ───────────────────────────────────────────────
+  // The real price behind payment link plink_1UM5w5CCw18geY15F82LrWlz. That link
+  // sets NO metadata.price_id today, so the PAYMENT_LINK_PRODUCTS entry above is
+  // the one actually doing the work. This entry is here so that if the link is
+  // ever given metadata.price_id, or rebuilt, the buyer still lands correctly.
+  'price_1UM5nVCCw18geY156Vq5ASOC': {
+    tagId: 24227628,      // "Bought: How to Feel Like a Woman"
+    sequenceId: 2914293,  // "How to Feel Like a Woman: Welcome"
+    label: 'How to Feel Like a Woman £197'
   },
   // ─── THE ROOM SPECIAL PRICE £2,000 (until 2 Aug 2026) — no discount code, fixed-price ─
   // Pay-in-full (one-time): tags via checkout.session.completed, so the payment link MUST

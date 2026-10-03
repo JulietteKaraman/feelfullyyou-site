@@ -61,6 +61,17 @@
 /for-both.html                  /touch-reset-quiz               301!
 /men                            /touch-reset-quiz               301!
 /7-days-scrumptiousness         /7-days-scrumptiousness.html    200
+
+# HOW TO FEEL LIKE A WOMAN, the Scrumptious Stroking course. £197, 12 places,
+# four Wednesdays from 21 Oct 2026. Named "How to Be a Woman" for one day on
+# 2-3 Oct 2026, so that spelling redirects here rather than 404ing anything
+# already shared. "feel-like-a-woman-again" was the 12 Sep working title.
+/how-to-feel-like-a-woman       /how-to-feel-like-a-woman.html  200
+/how-to-be-a-woman              /how-to-feel-like-a-woman       301!
+/how-to-be-a-woman.html         /how-to-feel-like-a-woman       301!
+/feel-like-a-woman              /how-to-feel-like-a-woman       301!
+/feel-like-a-woman-again        /how-to-feel-like-a-woman       301!
+/scrumptious-stroking           /how-to-feel-like-a-woman       301!
 /sacred-no                      /sacred-no.html                 200
 /communication-reboot-kit       /communication-reboot-kit.html  200
 /romantic-relationship-repair-kit /romantic-relationship-repair-kit.html 200
