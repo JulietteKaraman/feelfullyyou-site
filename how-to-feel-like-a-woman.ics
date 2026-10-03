@@ -1,0 +1,84 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Feel Fully You//How to Feel Like a Woman//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:How to Feel Like a Woman
+BEGIN:VTIMEZONE
+TZID:Europe/London
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0000
+TZOFFSETTO:+0100
+TZNAME:BST
+DTSTART:19700329T010000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0000
+TZNAME:GMT
+DTSTART:19701025T020000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:htflaw-20261021@feelfullyyou.com
+DTSTAMP:20261003T120000Z
+DTSTART;TZID=Europe/London:20261021T203000
+DTEND;TZID=Europe/London:20261021T220000
+SUMMARY:How to Feel Like a Woman \, Masterclass 1 of 4
+LOCATION:Zoom
+DESCRIPTION:Masterclass 1 of 4 with Juliette Karaman.\n\nYour Zoom link and the week's practice times live here:\nhttps://feelfullyyou.com/how-to-feel-like-a-woman-welcome
+URL:https://feelfullyyou.com/how-to-feel-like-a-woman-welcome
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:How to Feel Like a Woman starts in 30 minutes
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:htflaw-20261028@feelfullyyou.com
+DTSTAMP:20261003T120000Z
+DTSTART;TZID=Europe/London:20261028T203000
+DTEND;TZID=Europe/London:20261028T220000
+SUMMARY:How to Feel Like a Woman \, Masterclass 2 of 4
+LOCATION:Zoom
+DESCRIPTION:Masterclass 2 of 4 with Juliette Karaman.\n\nYour Zoom link and the week's practice times live here:\nhttps://feelfullyyou.com/how-to-feel-like-a-woman-welcome
+URL:https://feelfullyyou.com/how-to-feel-like-a-woman-welcome
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:How to Feel Like a Woman starts in 30 minutes
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:htflaw-20261104@feelfullyyou.com
+DTSTAMP:20261003T120000Z
+DTSTART;TZID=Europe/London:20261104T203000
+DTEND;TZID=Europe/London:20261104T220000
+SUMMARY:How to Feel Like a Woman \, Masterclass 3 of 4
+LOCATION:Zoom
+DESCRIPTION:Masterclass 3 of 4 with Juliette Karaman.\n\nYour Zoom link and the week's practice times live here:\nhttps://feelfullyyou.com/how-to-feel-like-a-woman-welcome
+URL:https://feelfullyyou.com/how-to-feel-like-a-woman-welcome
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:How to Feel Like a Woman starts in 30 minutes
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:htflaw-20261111@feelfullyyou.com
+DTSTAMP:20261003T120000Z
+DTSTART;TZID=Europe/London:20261111T203000
+DTEND;TZID=Europe/London:20261111T220000
+SUMMARY:How to Feel Like a Woman \, Masterclass 4 of 4
+LOCATION:Zoom
+DESCRIPTION:Masterclass 4 of 4 with Juliette Karaman.\n\nYour Zoom link and the week's practice times live here:\nhttps://feelfullyyou.com/how-to-feel-like-a-woman-welcome
+URL:https://feelfullyyou.com/how-to-feel-like-a-woman-welcome
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:How to Feel Like a Woman starts in 30 minutes
+END:VALARM
+END:VEVENT
+END:VCALENDAR
