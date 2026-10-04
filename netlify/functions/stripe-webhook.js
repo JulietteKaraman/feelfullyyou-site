@@ -37,11 +37,77 @@ const PRACTICE_APP_DECK_TYPES = {
   'price_1TnxAqCCw18geY153w22a2Ye': 'unspoken-distance', // The Unspoken Distance, £97 (current, back from £77 1 Aug 2026)
 };
 
+// Tell Juliette the moment an app grant fails. Added 4 Oct 2026.
+// Before this, a failed grant only ever wrote to a Netlify function log
+// nobody reads, so four women who redeemed a 100% code on 1 Oct were
+// tagged in Kit, looked exactly like happy buyers, and could not open the
+// thing they had just "bought". A paid-for product that silently does not
+// deliver has to be loud.
+async function notifyAccessFailure(email, deckType, reason) {
+  try {
+    const botToken = process.env.TELEGRAM_BOT_TOKEN;
+    const chatId = process.env.TELEGRAM_CHAT_ID;
+    if (!botToken || !chatId) return;
+    await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        chat_id: chatId,
+        text:
+          `🚨 APP ACCESS NOT GRANTED\n` +
+          `${email}\n` +
+          `Product: ${deckType}\n` +
+          `Reason: ${reason}\n` +
+          `They paid and cannot open it. Fix: app.feelfullyyou.com/admin → Give someone access.`,
+      }),
+    });
+  } catch (err) {
+    console.error('notifyAccessFailure: could not send', err);
+  }
+}
+
+// Find a Supabase auth user by email, paginating properly.
+//
+// THIS IS THE BUG THAT COST FOUR BUYERS, fixed 4 Oct 2026. The old version
+// did a single GET on /auth/v1/admin/users?email=... and trusted it to
+// filter. GoTrue ignores an unsupported query param and returns the FIRST
+// PAGE instead (50 users by default), so once the project had more than a
+// page of accounts, an existing user who happened to sit on page 2 read as
+// "not found". The caller then tried to CREATE that email, Supabase
+// rejected it as already registered, and the function returned without
+// ever granting. Kit tagging had already succeeded, so from the outside
+// the buyer looked completely fine.
+//
+// The practice-app hit this identical fault on 1 Aug 2026 and fixed it by
+// paginating (see practice-app/lib/entitlements/grant.ts). This reimplementation
+// never got that fix. Keep the two in step.
+async function findSupabaseUserIdByEmail(supabaseUrl, authHeaders, normalizedEmail) {
+  const PER_PAGE = 200;
+  for (let page = 1; page <= 50; page++) {
+    const res = await fetch(
+      `${supabaseUrl}/auth/v1/admin/users?page=${page}&per_page=${PER_PAGE}`,
+      { headers: authHeaders }
+    );
+    if (!res.ok) {
+      throw new Error(`listing users failed (page ${page}): ${await res.text()}`);
+    }
+    const data = await res.json();
+    const users = data.users || [];
+    const match = users.find((u) => (u.email || '').toLowerCase() === normalizedEmail);
+    if (match) return match.id;
+    if (users.length < PER_PAGE) return null; // last page, genuinely not there
+  }
+  throw new Error('listing users exceeded 50 pages without finding the end');
+}
+
 async function grantPracticeAppEntitlement(email, deckType, stripeSessionId) {
   const supabaseUrl = process.env.SUPABASE_URL;
   const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  const normalizedEmail = String(email).toLowerCase().trim();
+
   if (!supabaseUrl || !serviceKey) {
-    console.error('grantPracticeAppEntitlement: SUPABASE_URL / SUPABASE_SERVICE_ROLE_KEY not set — skipped (Kit tagging above still succeeded)');
+    console.error('grantPracticeAppEntitlement: SUPABASE_URL / SUPABASE_SERVICE_ROLE_KEY not set');
+    await notifyAccessFailure(normalizedEmail, deckType, 'Supabase env vars not set on this site');
     return;
   }
 
@@ -50,22 +116,11 @@ async function grantPracticeAppEntitlement(email, deckType, stripeSessionId) {
     Authorization: `Bearer ${serviceKey}`,
     'Content-Type': 'application/json',
   };
-  const normalizedEmail = String(email).toLowerCase().trim();
 
   try {
-    // 1. Find an existing auth user by email, or create one (no password,
-    // pre-confirmed) — same shape as lib/entitlements/grant.ts in the
-    // practice-app, reimplemented here via raw REST since this function
-    // has no npm dependencies to install a Supabase SDK into.
-    let userId = null;
-    const listRes = await fetch(`${supabaseUrl}/auth/v1/admin/users?email=${encodeURIComponent(normalizedEmail)}`, {
-      headers: authHeaders,
-    });
-    if (listRes.ok) {
-      const listData = await listRes.json();
-      const found = (listData.users || []).find((u) => (u.email || '').toLowerCase() === normalizedEmail);
-      if (found) userId = found.id;
-    }
+    // 1. Get-or-create the auth user (no password, pre-confirmed), same
+    // shape as practice-app/lib/entitlements/grant.ts.
+    let userId = await findSupabaseUserIdByEmail(supabaseUrl, authHeaders, normalizedEmail);
 
     if (!userId) {
       const createRes = await fetch(`${supabaseUrl}/auth/v1/admin/users`, {
@@ -73,12 +128,25 @@ async function grantPracticeAppEntitlement(email, deckType, stripeSessionId) {
         headers: authHeaders,
         body: JSON.stringify({ email: normalizedEmail, email_confirm: true }),
       });
-      if (!createRes.ok) {
-        console.error('grantPracticeAppEntitlement: failed to create user', await createRes.text());
-        return;
+
+      if (createRes.ok) {
+        const created = await createRes.json();
+        userId = created.id;
+      } else {
+        // Belt and braces on top of the pagination fix: if the create was
+        // refused because the address already exists (a race with another
+        // sign-in, or any lookup miss we haven't thought of), look again
+        // rather than giving up on a real buyer.
+        const createErrText = await createRes.text();
+        const alreadyExists =
+          createRes.status === 422 || /already\s+(been\s+)?registered|already exists/i.test(createErrText);
+        if (alreadyExists) {
+          userId = await findSupabaseUserIdByEmail(supabaseUrl, authHeaders, normalizedEmail);
+        }
+        if (!userId) {
+          throw new Error(`could not create user: ${createErrText}`);
+        }
       }
-      const created = await createRes.json();
-      userId = created.id;
     }
 
     // 2. Upsert the entitlement row.
@@ -93,12 +161,15 @@ async function grantPracticeAppEntitlement(email, deckType, stripeSessionId) {
       }),
     });
     if (!grantRes.ok) {
-      console.error('grantPracticeAppEntitlement: failed to grant entitlement', await grantRes.text());
-      return;
+      throw new Error(`granting entitlement failed: ${await grantRes.text()}`);
     }
+
     console.log(`grantPracticeAppEntitlement: granted ${deckType} to ${normalizedEmail}`);
   } catch (err) {
-    console.error('grantPracticeAppEntitlement: unexpected error', err);
+    // Still never allowed to break the Kit tagging that already succeeded,
+    // but no longer allowed to disappear quietly either.
+    console.error('grantPracticeAppEntitlement: FAILED', err);
+    await notifyAccessFailure(normalizedEmail, deckType, String(err && err.message ? err.message : err));
   }
 }
 
