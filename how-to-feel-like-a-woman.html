@@ -25,6 +25,31 @@
     :root{--cream:#fefcfa;--cream-2:#f6f4f1;--paper:#fdfbf8;--ink:#1c1714;--brown:#5d4a33;--gold:#a88538;--gold-deep:#99680c;--gold-soft:#b4a074;--gold-pale:#ddc98e;--teal:#0d3535;
     --teal-deep:#061a1a;--line:#e3dccf;--line-dark:#1d3a39;--max:1140px;--display:'Poppins',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;--t-xs:0.78rem;--t-sm:0.94rem;--t-base:1.0625rem;--t-md:1.2rem;--t-lg:1.5rem;--t-xl:2.05rem;--t-2xl:2.75rem;}
     *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{background:var(--cream);color:var(--brown);font-family:var(--body);font-size:var(--t-base);font-weight:400;line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden;letter-spacing:-0.003em;}::selection{background:var(--gold);color:#fff}a{color:inherit}img{max-width:100%;display:block}p{max-width:62ch}.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}.narrow{max-width:720px;margin:0 auto;padding:0 28px}section{position:relative}
+
+    /* THE MAP, added 5 Oct 2026 */
+    .themap{background:var(--teal);color:var(--cream);padding:clamp(70px,9vw,120px) 0}
+    .themap .eyebrow{color:var(--gold-pale)}
+    .themap h2{color:var(--cream)}
+    .themap p{color:#dfe7e4}
+    .themap strong{color:var(--gold-pale)}
+    .map-solo{display:flex;flex-direction:column;align-items:center;margin:34px 0 6px}
+    .map-solo img{width:min(100%,400px);height:auto}
+    .labcard{background:var(--teal);border-radius:4px;padding:clamp(28px,4vw,44px);margin:38px 0 6px;display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(24px,4vw,44px);align-items:center}
+    .labcard .goldline{color:var(--gold-pale);margin-top:0}
+    .works .labcard p{color:#e8efec;margin:16px 0 0;max-width:38ch}
+    .works .labcard strong{color:#fff}
+    .labart{display:flex;justify-content:center}
+    .labart img{width:min(100%,230px);height:auto}
+    @media(max-width:760px){.labcard{grid-template-columns:1fr;gap:26px}.labart img{width:min(70%,210px)}}
+    .map-cap{font-size:var(--t-xs);letter-spacing:.16em;text-transform:uppercase;color:var(--gold-pale);opacity:.8;text-align:center;margin-top:18px}
+    .map-list{margin-top:34px;display:grid;gap:14px}
+    .map-row{display:flex;gap:14px;align-items:flex-start}
+    .map-row .ix{color:var(--gold-pale);font-size:13px;line-height:1.9;flex:none}
+    .map-row p{margin:0}
+    
+
+    .goldline{font-family:var(--display);font-weight:700;font-size:clamp(21px,3.2vw,30px);color:var(--gold-deep);line-height:1.2;letter-spacing:-.018em;max-width:28ch;margin-top:34px}
+    .themap .goldline{color:var(--gold-pale)}
     .eyebrow{font-family:var(--body);font-size:var(--t-xs);letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);font-weight:600}
     h1,h2,h3{font-family:var(--display);font-weight:700;color:var(--ink)}h1,h2{line-height:1.06;letter-spacing:-.022em}h2{font-size:clamp(2rem,4.8vw,var(--t-2xl));margin-bottom:26px}h3{font-size:var(--t-lg);line-height:1.18;letter-spacing:-.015em;font-weight:600}
     em{font-style:italic}strong{font-weight:700;color:var(--ink)}
@@ -86,8 +111,8 @@
     .thesis .closer{font-family:var(--display);font-weight:700;font-size:clamp(22px,3.4vw,32px);color:var(--ink);max-width:28ch;margin-top:30px;line-height:1.18;letter-spacing:-.02em}
     .stack{margin:26px 0 8px}
     .stack p{font-family:var(--display);font-weight:600;font-size:clamp(19px,2.6vw,24px);color:var(--ink);line-height:1.5;letter-spacing:-.015em;margin:0}
-    .four{margin:34px 0;display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
-    .four div{background:var(--paper);padding:26px 24px;font-family:var(--display);font-weight:600;font-size:clamp(17px,2.2vw,20px);color:var(--ink);letter-spacing:-.015em;line-height:1.3}
+    .four{margin:34px 0;display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:#e8d9a8;border:1px solid #e0cd94;border-radius:3px;overflow:hidden}
+    .four div{background:#fbf2d9;padding:26px 24px;font-family:var(--display);font-weight:700;font-size:clamp(17px,2.2vw,20px);color:#4a3a18;letter-spacing:-.015em;line-height:1.3}
     @media(max-width:620px){.four{grid-template-columns:1fr}}
 
     .works{padding:80px 0;background:var(--cream-2);border-top:1px solid var(--line)}
@@ -132,13 +157,14 @@
 
     /* WHO IS JULIETTE */
     .jbio{border-top:1px solid var(--line)}
-    .jbio .grid{display:grid;grid-template-columns:480px 1fr;gap:0;align-items:stretch}
-    .jbio .jphoto{background-size:cover;background-position:center 20%;min-height:520px}
-    .jbio .jcopy{padding:72px 60px;background:var(--paper)}
+    .jbio{background:var(--paper)}
+    .jbio .grid{display:grid;grid-template-columns:minmax(380px,560px) 1fr;gap:0;align-items:start}
+    .jbio .jphoto{background-size:cover;background-position:center 18%;aspect-ratio:1000/1500;min-height:0;align-self:start}
+    .jbio .jcopy{padding:64px 60px;background:var(--paper)}
     .jbio .jcopy .eyebrow{margin-bottom:16px}
     .jbio .jcopy h2{max-width:24ch;margin-bottom:22px}
     .jbio .jcopy p{max-width:54ch;margin-bottom:18px;color:var(--brown);font-size:var(--t-md);line-height:1.6}
-    @media(max-width:860px){.jbio .grid{grid-template-columns:1fr}.jbio .jphoto{min-height:360px}.jbio .jcopy{padding:56px 28px}}
+    @media(max-width:860px){.jbio .grid{grid-template-columns:1fr}.jbio .jphoto{aspect-ratio:1000/1500;min-height:0;max-width:460px;margin:0 auto;width:100%}.jbio .jcopy{padding:56px 28px}}
 
     /* DATES */
     .dates{padding:80px 0;border-top:1px solid var(--line);background:var(--cream)}
@@ -318,8 +344,16 @@ gtag('config', 'G-SY8NKELMNZ');
       <div class="line">Why am I suddenly feeling emotional?</div>
     </div>
     <p class="reveal">This is why I don't want to give you a practice and send you off to figure it out by yourself.</p>
-    <div class="qline reveal">At least three times a week, we'll actually practise together.</div>
-    <p class="reveal" style="margin-top:26px"><strong>I do this practice every day myself. Especially in the beginning, having somewhere to show up and actually do it helps.</strong></p>
+    <div class="qline reveal">At least three times a week we run a Practice Lab, and we actually do it together.</div>
+    <div class="labcard reveal">
+      <div class="labcopy">
+        <div class="goldline">It is easy to learn something. Sticking to it until it becomes a practice is the hard part.</div>
+        <p>Which is exactly why I have built in Practice Lab time.</p>
+        <p><strong>You do not need more information. You need to actually feel it, and notice how it changes you.</strong></p>
+      </div>
+      <div class="labart"><img src="https://feelfullyyou.com/how-to-feel-like-a-woman-clitoris.png" alt="The clitoris, most of which is internal" loading="lazy" width="1374" height="1497"></div>
+    </div>
+    <p class="reveal" style="margin-top:26px">I do this practice every day myself. Especially at the beginning, having somewhere to turn up and actually do it is what makes it stick.</p>
     <p class="reveal">Fifteen minutes. Cameras on or off, you choose.</p>
     <p class="reveal">I'll be there doing the practice with you, holding the time, telling you when to begin and when to finish. Sometimes we'll practise something specific we've been working with, like the Yes Stroke. Sometimes we'll simply practise.</p>
     <p class="reveal">Because I'm not particularly interested in you becoming very knowledgeable about being turned on.</p>
@@ -353,6 +387,35 @@ gtag('config', 'G-SY8NKELMNZ');
   </div>
 </section>
 
+<!-- THE MAP -->
+<section class="themap">
+  <div class="narrow">
+    <div class="eyebrow reveal">What you'll actually be taught</div>
+    <h2 class="reveal">Twelve regions. Each one feels different.</h2>
+    <p class="reveal">Most women have been going to the same square centimetre for twenty years, found the same thing there every time, and quietly concluded there is nothing to find.</p>
+    <p class="reveal">There are twelve.</p>
+
+    <div class="map-solo reveal">
+      <img src="https://feelfullyyou.com/how-to-feel-like-a-woman-clock.svg" alt="The twelve regions, numbered around the glans" loading="lazy" width="560" height="700">
+      <div class="map-cap">One region at a time</div>
+    </div>
+
+    <p class="reveal" style="margin-top:30px">Over the four weeks I take you round the whole clock, on your own body first, always.</p>
+
+    <div class="map-list reveal">
+      <div class="map-row"><div class="ix">◆</div><p><strong>The clock.</strong> Twelve o'clock points up toward your belly. One o'clock sits slightly to the left, and it is the one most women find first and then never leave.</p></div>
+      <div class="map-row"><div class="ix">◆</div><p><strong>Up strokes and down strokes</strong>, and what changes between them.</p></div>
+      <div class="map-row"><div class="ix">◆</div><p><strong>The scissors.</strong> Two fingers, a little more pressure on the way down.</p></div>
+      <div class="map-row"><div class="ix">◆</div><p><strong>Hovering</strong>, which never lands at all, and which for some women is the most powerful touch there is.</p></div>
+      <div class="map-row"><div class="ix">◆</div><p><strong>The Yes Stroke.</strong> Saying yes out loud every time you genuinely feel it, and leaving alone the ones you cannot.</p></div>
+    </div>
+
+    <p class="reveal" style="margin-top:30px">No partner needed for any of it. Not in week one, not in week four.</p>
+    <p class="reveal" style="margin-top:22px">Amrita, which is what tantra calls female ejaculation, sometimes arrives through this work. Sometimes it does not, and it is never the measure of anything.</p>
+    <div class="goldline reveal">What changes for every woman is how much she can feel.</div>
+  </div>
+</section>
+
 <!-- WHAT'S INCLUDED -->
 <section class="included">
   <div class="narrow">
@@ -360,7 +423,7 @@ gtag('config', 'G-SY8NKELMNZ');
     <h2 class="reveal">Four weeks, and I am in it with you.</h2>
     <div class="inc-list reveal">
       <div class="inc-row"><div class="ix">◆</div><p>Four live masterclasses, every Wednesday at 8:30pm UK time</p></div>
-      <div class="inc-row"><div class="ix">◆</div><p>At least three live 15-minute Scrumptious Stroking practices every week, with times arranged around the women who join</p></div>
+      <div class="inc-row"><div class="ix">◆</div><p>At least three live 15-minute <strong>Practice Labs</strong> every week, with times arranged around the women who join</p></div>
       <div class="inc-row"><div class="ix">◆</div><p>Daily invitations between sessions</p></div>
       <div class="inc-row"><div class="ix">◆</div><p>Scrumptious Confessions</p></div>
       <div class="inc-row"><div class="ix">◆</div><p>Private WhatsApp sisterhood, with access to me throughout the four weeks</p></div>
@@ -413,7 +476,8 @@ gtag('config', 'G-SY8NKELMNZ');
       <p class="reveal">I'm Juliette Karaman. I've spent decades exploring and working with touch, intimacy, pleasure and what it means to actually inhabit your body.</p>
       <p class="reveal">I've worked as a professional dominatrix, a Dakini, in conscious sexuality, and with hundreds of women and couples around intimacy, touch and connection.</p>
       <p class="reveal">But I don't teach this from theory. <strong>I practise it.</strong> At this stage of my life, I feel more turned on, more connected to my body and more at ease being a woman than ever.</p>
-      <p class="reveal">And that's what I want to open up for you.</p>
+      <p class="reveal">That's what I want to open up for you.</p>
+      <p class="reveal"><strong>A woman who is turned on by her own life changes the room she walks into.</strong> That part I do not have to teach you. It happens on its own, and other people tend to notice it before you do.</p>
     </div>
   </div>
 </section>
