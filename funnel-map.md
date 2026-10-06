@@ -20,7 +20,7 @@ Last updated: 2026-07-01
 | Page | Button label | Stripe link | Price | After payment |
 |------|-------------|-------------|-------|---------------|
 | /10-touch-rituals | Get instant access | buy.stripe.com/cNi9AS49Relq1Hn9qZ0co0y | £7 | ⚠️ UNKNOWN |
-| /31-daily-touch-points | Start the month | buy.stripe.com/8x2fZgeOv1yEbhXcDb0co0A | £27 | ⚠️ UNKNOWN |
+| /31-touch-points | Start the month | buy.stripe.com/8x2fZgeOv1yEbhXcDb0co0A | £27 | ⚠️ UNKNOWN |
 | /7-days-scrumptiousness | Begin · £33 | buy.stripe.com/8wMcNC0GIesG05G7sT | £33 | ⚠️ UNKNOWN |
 | /communication-reboot-kit | Get the kit · £37 | buy.stripe.com/7sYeVceOvelq0Dj9qZ0co0D | £37 | ⚠️ UNKNOWN |
 | /touch-point | Join Touch Point · £97/mo | buy.stripe.com/00w28q21J9164Tz5aJ0co0B | £97/mo | ⚠️ No welcome email yet |

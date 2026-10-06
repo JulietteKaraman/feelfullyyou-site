@@ -42,10 +42,11 @@
 # Redirected rather than deleted, because old posts, emails and links still
 # point here and a 404 helps nobody. Nobody loses access: she confirmed
 # nobody ever bought it through the app, they all received PDFs.
-/10-touch-rituals               /31-daily-touch-points          301!
-/10-touch-rituals.html          /31-daily-touch-points          301!
-/31-touch-points                /31-daily-touch-points          301!
-/31-touch-points.html           /31-daily-touch-points          301!
+/10-touch-rituals               /31-touch-points                301!
+/10-touch-rituals.html          /31-touch-points                301!
+/31-touch-points                /31-touch-points.html           200
+/31-daily-touch-points          /31-touch-points                301!
+/31-daily-touch-points.html     /31-touch-points                301!
 /touch-point                    /one-touch                      301!
 /touch-point.html               /one-touch                      301!
 /touch-point-live               /one-touch                      301!

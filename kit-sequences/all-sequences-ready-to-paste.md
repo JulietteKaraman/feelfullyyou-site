@@ -121,7 +121,7 @@ The rituals work at that half-second.
 
 If you want to go deeper — 31 Daily Touch Points gives you a full month of these moments, one a day, building on each other. Three minutes, no props, works whether your partner is in the room or not.
 
-You can find them here: https://feelfullyyou.com/31-daily-touch-points
+You can find them here: https://feelfullyyou.com/31-touch-points
 
 Juliette
 

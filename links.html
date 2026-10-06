@@ -30,20 +30,22 @@
   body{background:var(--cream);font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased;min-height:100vh}
 
   /* HERO — full portrait, not cropped */
-  .hero{text-align:center;padding:40px 20px 28px}
-  .hero img{width:140px;height:140px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid var(--gold-soft);margin:0 auto 16px;display:block}
-  .hero .name{font-family:'Poppins',sans-serif;font-weight:700;font-size:1.2rem;color:var(--ink);letter-spacing:-.02em;margin-bottom:4px}
-  .hero .bio{font-size:13px;color:var(--brown);line-height:1.5}
+  .hero{text-align:center;padding:40px 20px 34px;background:var(--teal);border-radius:0 0 22px 22px}
+  .hero img{width:140px;height:140px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid var(--gold-pale);margin:0 auto 16px;display:block}
+  .hero .name{font-family:'Poppins',sans-serif;font-weight:700;font-size:1.2rem;color:var(--cream);letter-spacing:-.02em;margin-bottom:4px}
+  .hero .bio{font-size:13px;color:var(--gold-pale);line-height:1.5}
 
   /* CONTENT */
   .content{max-width:480px;margin:0 auto;padding:8px 16px 60px}
 
   /* SECTION LABEL */
-  .slabel{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin:24px 0 8px 2px}
+  .slabel{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--teal);font-weight:700;margin:26px 0 8px 2px}
 
   /* LINK ROW — photo left, text right */
   .row{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--line);border-radius:5px;padding:10px 14px 10px 10px;margin-bottom:8px;text-decoration:none;color:var(--ink);transition:background .18s,transform .15s}
   .row:hover{background:var(--cream);transform:translateY(-1px)}
+  .row.green{background:var(--teal);border-color:transparent;color:var(--cream)}
+  .row.green:hover{background:#0a2a2a}
   .row.gold{background:var(--gold);border-color:transparent;color:#fff}
   .row.gold:hover{background:var(--gold-deep)}
   .row.black{background:#070707;border-color:transparent;color:var(--cream)}
@@ -52,8 +54,10 @@
   .row .rtext{flex:1;min-width:0}
   .row .rtitle{font-family:'Poppins',sans-serif;font-weight:600;font-size:.9rem;letter-spacing:-.01em;line-height:1.2;margin-bottom:2px}
   .row .rdesc{font-size:11.5px;color:var(--brown);line-height:1.4}
+  .row.green .rdesc{color:var(--gold-pale)}
   .row.gold .rdesc,.row.black .rdesc{color:rgba(255,255,255,.8)}
-  .row .rarr{color:var(--gold-deep);font-size:14px;flex-shrink:0;margin-left:4px}
+  .row .rarr{color:var(--teal);font-size:14px;flex-shrink:0;margin-left:4px}
+  .row.green .rarr{color:var(--gold-pale)}
   .row.gold .rarr,.row.black .rarr{color:rgba(255,255,255,.8)}
 
   /* DIVIDER */
@@ -65,15 +69,15 @@
   .site-card img{width:52px;height:52px;border-radius:4px;object-fit:cover;object-position:center 25%;flex-shrink:0}
   .site-card .rtext .rtitle{font-family:'Poppins',sans-serif;font-weight:600;font-size:.9rem;letter-spacing:-.01em;line-height:1.2;margin-bottom:2px}
   .site-card .rtext .rdesc{font-size:11.5px;color:var(--brown)}
-  .site-card .rarr{color:var(--gold-deep);font-size:14px;flex-shrink:0;margin-left:auto;padding-left:8px}
+  .site-card .rarr{color:var(--teal);font-size:14px;flex-shrink:0;margin-left:auto;padding-left:8px}
 
   /* SOCIALS */
   .socials{display:flex;justify-content:center;gap:22px;margin-top:32px}
-  .socials a{color:var(--gold-soft);transition:color .2s;display:flex}
+  .socials a{color:var(--teal);transition:color .2s;display:flex}
   .socials a:hover{color:var(--gold-deep)}
   .socials svg{width:20px;height:20px;fill:currentColor}
 
-  .footer{text-align:center;margin-top:22px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-soft)}
+  .footer{text-align:center;margin-top:22px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);opacity:.7}
   a{color:inherit;text-decoration:none}
   
   /* MOBILE NAV */
@@ -134,7 +138,7 @@ gtag('config', 'G-SY8NKELMNZ');
     <span class="rarr">&rarr;</span>
   </a>
 
-  <a href="https://feelfullyyou.com/cards-free-taster" class="row black">
+  <a href="https://feelfullyyou.com/cards-free-taster" class="row">
     <img src="https://feelfullyyou.com/cards-in-hands.jpg" alt="Free Cards Taster">
     <div class="rtext">
       <div class="rtitle">Free Cards Taster</div>
@@ -143,15 +147,9 @@ gtag('config', 'G-SY8NKELMNZ');
     <span class="rarr">→</span>
   </a>
 
-  <a href="https://feelfullyyou.com/free-resources" class="row">
-    <div class="rtext">
-      <div class="rtitle">Free Resources</div>
-      <div class="rdesc">Guides and practices, free</div>
-    </div>
-    <span class="rarr">→</span>
-  </a>
+  <div class="slabel">On your own, in the app</div>
 
-  <a href="https://feelfullyyou.com/31-days-closer" class="row gold">
+  <a href="https://feelfullyyou.com/31-days-closer" class="row green">
     <img src="https://feelfullyyou.com/media/31dc-hero.jpg" alt="31 Days Closer" loading="lazy" decoding="async">
     <div class="rtext">
       <div class="rtitle">31 Days Closer &middot; £17</div>
@@ -160,7 +158,7 @@ gtag('config', 'G-SY8NKELMNZ');
     <span class="rarr">→</span>
   </a>
 
-  <a href="https://feelfullyyou.com/31-daily-touch-points" class="row gold">
+  <a href="https://feelfullyyou.com/31-touch-points" class="row green">
     <img src="https://feelfullyyou.com/media/6838a6c6af7b3c51d1de03a2.jpeg" alt="31 Touch Points" loading="lazy" decoding="async">
     <div class="rtext">
       <div class="rtitle">31 Touch Points &middot; £27</div>
@@ -169,7 +167,7 @@ gtag('config', 'G-SY8NKELMNZ');
     <span class="rarr">→</span>
   </a>
 
-  <a href="https://feelfullyyou.com/one-touch" class="row gold">
+  <a href="https://feelfullyyou.com/one-touch" class="row green">
     <img src="https://feelfullyyou.com/one-touch-hero.jpg" alt="One Touch">
     <div class="rtext">
       <div class="rtitle">One Touch · £97</div>
@@ -178,7 +176,9 @@ gtag('config', 'G-SY8NKELMNZ');
     <span class="rarr">→</span>
   </a>
 
-  <a href="https://feelfullyyou.com/the-touch-reboot" class="row gold">
+  <div class="slabel">With me, live</div>
+
+  <a href="https://feelfullyyou.com/the-touch-reboot" class="row black">
     <img src="https://feelfullyyou.com/touchresethero.jpg" alt="The Touch Reboot">
     <div class="rtext">
       <div class="rtitle">The Touch Reboot</div>
@@ -187,7 +187,7 @@ gtag('config', 'G-SY8NKELMNZ');
     <span class="rarr">&rarr;</span>
   </a>
 
-  <a href="https://feelfullyyou.com/work-with-me" style="display:flex;align-items:center;justify-content:space-between;border:1.5px solid var(--gold);border-radius:5px;padding:12px 16px;margin-bottom:8px;text-decoration:none;color:var(--gold-deep);font-family:'Poppins',sans-serif;font-weight:600;font-size:.9rem;letter-spacing:-.01em;transition:background .18s">
+  <a href="https://feelfullyyou.com/work-with-me" style="display:flex;align-items:center;justify-content:space-between;border:1.5px solid var(--teal);border-radius:5px;padding:12px 16px;margin-bottom:8px;text-decoration:none;color:var(--teal);font-family:'Poppins',sans-serif;font-weight:600;font-size:.9rem;letter-spacing:-.01em;transition:background .18s">
     <span>Work with Juliette</span>
     <span style="font-size:14px">→</span>
   </a>

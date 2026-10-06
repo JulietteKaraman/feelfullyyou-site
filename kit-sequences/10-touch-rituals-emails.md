@@ -73,7 +73,7 @@ For women: it will bring you back into your own body first, then toward the kind
 
 For men: it gives you something specific to do every day. Actual practice. The kind that builds something real.
 
-[BUTTON: 31 Daily Touch Points → https://feelfullyyou.com/31-daily-touch-points]
+[BUTTON: 31 Daily Touch Points → https://feelfullyyou.com/31-touch-points]
 
 It starts exactly where you are.
 
@@ -109,7 +109,7 @@ For women: The 31 Daily Touch Points is a month of daily practice that builds th
 
 For men: The same practice from your side. Specific. Physical. Something to come back to every day.
 
-[BUTTON: See the 31-day touch practice → https://feelfullyyou.com/31-daily-touch-points]
+[BUTTON: See the 31-day touch practice → https://feelfullyyou.com/31-touch-points]
 
 Juliette
 
