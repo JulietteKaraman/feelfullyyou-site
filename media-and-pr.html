@@ -439,6 +439,22 @@ document.addEventListener('click', function(e){
   else if (h.indexOf('/files/') > -1 || h.indexOf('.pdf') > -1) gtag('event', 'freebie_download', {link_url: h, page_path: location.pathname});
 });
 </script>
+<script>
+/* Deep links like /media-and-pr#just-women-live: images above the target load
+   late and move it, so re-settle on the anchor once everything has loaded. */
+(function(){
+  if(!location.hash) return;
+  function settle(){
+    var el=document.getElementById(location.hash.slice(1));
+    if(!el) return;
+    var prev=document.documentElement.style.scrollBehavior;
+    document.documentElement.style.scrollBehavior='auto';
+    el.scrollIntoView();
+    document.documentElement.style.scrollBehavior=prev;
+  }
+  window.addEventListener('load',function(){settle();setTimeout(settle,300);});
+})();
+</script>
 <script src="quiz-popup.js" defer></script>
 </body>
 </html>
