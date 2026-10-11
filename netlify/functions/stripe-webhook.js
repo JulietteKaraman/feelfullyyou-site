@@ -318,7 +318,7 @@ const PAYMENT_LINK_PRODUCTS = {
     sequenceId: 2909778,
     label: 'Couples VIP Full Day £5,000'
   },
-  // HOW TO FEEL LIKE A WOMAN, £197, 12 places, four Wednesdays from 21 Oct 2026.
+  // HOW TO FEEL LIKE A WOMAN, £197, 12 places, four Wednesdays from 28 Oct 2026.
   // Added 3 Oct 2026. Checked in the Stripe dashboard the same day: this payment
   // link's metadata is {} , so session.metadata.price_id is EMPTY and the
   // PRODUCT_MAP lookup below can never match it on checkout.session.completed.
