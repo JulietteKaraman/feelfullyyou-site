@@ -76,6 +76,7 @@
 
   .card-grid{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
   .card-grid.two{grid-template-columns:repeat(2,1fr);max-width:760px}
+  .card-grid.one{grid-template-columns:1fr;max-width:560px}
   .card{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:28px 26px;display:flex;flex-direction:column}
   .card .cat{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--teal);font-weight:600;margin-bottom:12px}
   .card h3{font-family:var(--display);font-size:1.15rem;font-weight:700;color:var(--ink);letter-spacing:-.015em;line-height:1.18;margin-bottom:8px}
@@ -90,6 +91,19 @@
   .card.featured p{color:#c8c0b4}
   .card.featured .btn{background:var(--gold);color:#fff}
   .card.featured .btn:hover{background:var(--gold-deep)}
+  /* featured card: lead line, included list, note */
+  .card .lead{font-family:var(--display);font-weight:600;font-size:1.02rem;line-height:1.42;color:var(--ink);margin:4px 0 20px;flex:0}
+  .card.featured .lead{color:#fff}
+  .card ul.incl{list-style:none;margin:0 0 20px;padding:0;flex:1;display:flex;flex-direction:column;gap:14px}
+  .card ul.incl li{font-size:14.5px;line-height:1.55;color:var(--brown);padding-left:18px;position:relative}
+  .card.featured ul.incl li{color:#c8c0b4}
+  .card ul.incl li:before{content:"";position:absolute;left:0;top:.62em;width:7px;height:1px;background:var(--gold)}
+  .card.featured ul.incl li:before{background:var(--gold-pale)}
+  .card ul.incl b{display:block;font-family:var(--display);font-weight:700;font-size:15px;color:var(--gold-deep);letter-spacing:-.01em;margin-bottom:3px}
+  .card.featured ul.incl b{color:var(--gold-pale)}
+  .card .note{font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:var(--gold-deep);margin:0 0 4px;flex:0}
+  .card.featured .note{color:var(--gold-pale)}
+  .card.featured .price{font-size:16px}
 
   /* DEEPER DOORS STRIP */
   .doors{background:var(--teal);padding:64px 28px;text-align:center}
@@ -262,14 +276,23 @@ gtag('config', 'G-SY8NKELMNZ');
     <div class="label">Three months</div>
     <div class="line"></div>
   </div>
-  <p class="tier-sub reveal">A day opens it. Three months gives it somewhere to go. Two calls a month for three months (6 in total) plus a Touch Map™ intensive, one to one, with the option to extend.</p>
-  <div class="card-grid two">
+  <p class="tier-sub reveal">A day opens it. Three months gives it somewhere to go.</p>
+  <div class="card-grid one">
 
     <div class="card reveal featured">
       <div class="cat">1:1 · Three months · Individual</div>
       <h3>The 3 Month Intensive</h3>
-      <div class="price">£5,000 &middot; £1,700 a month</div>
-      <p>Two calls a month for three months (6 in total), plus a Touch Map&trade; intensive and WhatsApp access in between, so you are not holding it until the next session. One to one, the body catching up with everything you already know. Option to extend afterwards. Two spots.</p>
+      <div class="price">£5,000 &middot; or £1,700 a month</div>
+
+      <p class="lead">Three months of me, one to one, while your body catches up with everything you already know.</p>
+
+      <ul class="incl">
+        <li><b>Six calls</b>Two a month, for three months.</li>
+        <li><b>A Touch Map&trade; intensive</b>Your YES, your MAYBE, your NO, mapped with me.</li>
+        <li><b>WhatsApp in between</b>The 2am thought goes somewhere, instead of waiting for the next session.</li>
+      </ul>
+
+      <p class="note">Two spots &middot; option to extend</p>
       <a href="/the-3-month-intensive" class="btn">Apply &rarr;</a>
     </div>
 
