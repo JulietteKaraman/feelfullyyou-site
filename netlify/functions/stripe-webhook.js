@@ -35,6 +35,7 @@ const PRACTICE_APP_DECK_TYPES = {
   'price_1Tlpu0CCw18geY15b8J3jlBW': 'ten-touch-rituals', // 10 Touch Rituals, £7
   'price_1TzO4DCCw18geY15u7X9j7iw': 'unspoken-distance', // The Unspoken Distance, £77 (old price, real buyers 31 Jul-1 Aug 2026)
   'price_1TnxAqCCw18geY153w22a2Ye': 'unspoken-distance', // The Unspoken Distance, £97 (current, back from £77 1 Aug 2026)
+  'price_1UD0f6CCw18geY15BCSTDIlW': 'sacred-no', // The Sacred No £17, moved into the app 17 Oct 2026 (specs/sacred-no-in-app.md R12)
 };
 
 // Tell Juliette the moment an app grant fails. Added 4 Oct 2026.
@@ -331,6 +332,16 @@ const PAYMENT_LINK_PRODUCTS = {
     sequenceId: 2914293,  // "How to Feel Like a Woman: Welcome"
     label: 'How to Feel Like a Woman £197'
   },
+  // THE SACRED NO, £17, 17 Oct 2026 (specs/sacred-no-in-app.md R12). The
+  // course moved into the app. Payment link buy.stripe.com/dRm6oG7m39162Lr6eN0co1Q,
+  // plink id read from the Stripe dashboard by Juliette 17 Oct 2026. A
+  // dashboard link carries no metadata.price_id, so this is the key that
+  // actually matches. The PRODUCT_MAP price entry stays as the backstop.
+  'plink_1UD0gtCCw18geY15E6gj9XGx': {
+    tagId: 20913133,      // "sacred-no-buyer"
+    sequenceId: 2885669,  // "Sacred No — Welcome"
+    label: 'The Sacred No £17'
+  },
 };
 
 // App entitlement by PAYMENT LINK, the fallback for PRACTICE_APP_DECK_TYPES.
@@ -340,6 +351,8 @@ const PAYMENT_LINK_APP_DECKS = {
   // The cards half is granted by the cards app's own webhook, keyed on the
   // same payment link. buy.stripe.com/fZu5kC0XFfpuadT32B0co2p
   'plink_1ULQHUCCw18geY15FZP1jMYR': '31-touch-points',
+  // The Sacred No £17, buy.stripe.com/dRm6oG7m39162Lr6eN0co1Q (17 Oct 2026).
+  'plink_1UD0gtCCw18geY15E6gj9XGx': 'sacred-no',
 };
 
 const PRODUCT_MAP = {
