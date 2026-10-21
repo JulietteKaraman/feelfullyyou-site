@@ -34,7 +34,7 @@ const KEYWORDS = [
   { match: 'DISTANCE', dm: 'Here is The Unspoken Distance: https://feelfullyyou.com/the-unspoken-distance. Written for the man who feels her closing and does not know why. Start there.' },
   { match: 'QUIET', dm: 'Here is When She Goes Quiet: https://feelfullyyou.com/when-she-goes-quiet. It explains what her silence is actually saying, and what reaches her when words do not.' },
   { match: 'BETWEEN', dm: 'Here is Between Touches: https://feelfullyyou.com/between-touches. What happens between you when nobody is touching is where the work starts.' },
-  { match: 'INTENSIVE', dm: 'The intensives start with a fifteen-minute call. I will tell you honestly if I can help: https://tidycal.com/juliette2/the-beginning-clarity-call' },
+  { match: 'INTENSIVE', dm: 'The intensives start with the Touch Audit. Three minutes, and it comes straight to me. I will tell you honestly if I can help: https://feelfullyyou.com/touch-audit' },
   { match: 'BEGINNING', dm: 'Here is The Beginning: https://feelfullyyou.com/the-beginning. Eight private weeks, both of you, each with your own space inside it.' },
   // must stay LAST — longer phrases above (TOUCH BASE, ONE TOUCH) match first
   { match: 'TOUCH', dm: 'Here are the 10 Touch Rituals: https://feelfullyyou.com/10-touch-rituals. £7, instant access, start tonight. One ritual is all it takes to begin.' }
