@@ -206,6 +206,40 @@
     .sticky-buy .info .sub{font-size:12px;color:#9aa6a4}
     @media(max-width:720px){.arrives{grid-template-columns:1fr}.sticky-buy .info .sub{display:none}.sticky-buy{padding:11px 18px}.sticky-buy .btn{padding:10px 16px;font-size:13px}}
     @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}.reveal{opacity:1;transform:none}}
+    /* REWRITE 21 Oct 2026 */
+    .hero .hero-plain{font-size:var(--t-md);color:var(--brown);max-width:46ch;margin-top:14px;line-height:1.55}
+    .safe-strip{background:var(--teal);color:var(--gold-pale);text-align:center;padding:16px 20px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+    .safe-strip span{display:inline-block;padding:4px 16px}
+    @media(max-width:700px){.safe-strip span{display:block;padding:3px 0}}
+    .room{margin-top:40px;padding:30px 28px;border:1px solid rgba(168,133,56,.42);border-top:3px solid var(--gold);border-radius:6px;background:var(--paper)}
+    .room-big{font-family:var(--display);font-weight:700;font-size:clamp(22px,3.4vw,32px);color:var(--gold-deep);line-height:1.18;letter-spacing:-.02em;margin-bottom:14px}
+    .room p{max-width:56ch}
+    .private{padding:84px 0;background:var(--teal);color:var(--cream)}
+    .private .eyebrow{color:var(--gold-pale)}
+    .private h2{color:var(--cream);max-width:20ch}
+    .private p{color:#dfe7e4;font-size:var(--t-md);line-height:1.6;margin-bottom:18px}
+    .private strong{color:#fff}
+    .private .private-big{font-family:var(--display);font-weight:700;font-size:clamp(22px,3.4vw,30px);color:var(--gold-pale);line-height:1.22;letter-spacing:-.018em;max-width:30ch}
+    .labcard{grid-template-columns:1fr}
+    .value{margin-top:34px;text-align:center}
+    .value-big{font-family:var(--display);font-weight:700;font-size:clamp(22px,3.4vw,32px);color:var(--gold-deep);line-height:1.2;letter-spacing:-.02em;margin:0 auto 10px;max-width:24ch}
+    .value p{margin-left:auto;margin-right:auto;max-width:52ch;color:var(--brown)}
+    .mapmore{margin-top:34px;border-top:1px solid rgba(221,201,142,.3);padding-top:22px}
+    .mapmore summary{cursor:pointer;font-family:var(--display);font-weight:600;font-size:18px;color:var(--gold-pale);list-style:none}
+    .mapmore summary::-webkit-details-marker{display:none}
+    .mapmore summary::after{content:"  +"}
+    .mapmore[open] summary::after{content:"  \2212"}
+    .faq{padding:80px 0;border-top:1px solid var(--line);background:var(--cream)}
+    .faq details{border-bottom:1px solid var(--line);padding:18px 0}
+    .faq summary{cursor:pointer;font-family:var(--display);font-weight:600;font-size:clamp(17px,2.2vw,20px);color:var(--ink);list-style:none;display:flex;justify-content:space-between;gap:16px}
+    .faq summary::-webkit-details-marker{display:none}
+    .faq summary::after{content:"+";color:var(--gold-deep);font-size:22px;line-height:1}
+    .faq details[open] summary::after{content:"\2212"}
+    .faq details p{margin-top:12px;color:var(--brown);font-size:var(--t-md);line-height:1.6}
+    @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(168,133,56,.55)}70%{box-shadow:0 0 0 16px rgba(168,133,56,0)}100%{box-shadow:0 0 0 0 rgba(168,133,56,0)}}
+    .btn.pulse{animation:pulse 2.4s infinite}
+    @media(prefers-reduced-motion:reduce){.btn.pulse{animation:none}}
+    .closing .a{max-width:30ch;margin:0 auto;line-height:1.3}
   </style>
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -298,24 +332,45 @@ gtag('config', 'G-SY8NKELMNZ');
   <div class="under">
     <div class="inner">
       <div class="reveal">
-        <div class="meta">With Juliette Karaman &nbsp;·&nbsp; 4 weeks &nbsp;·&nbsp; Starts Wednesday 28 October</div>
-        <p class="tag">This is about being turned on by your own life again.</p>
+        <div class="meta">Live with Juliette &nbsp;·&nbsp; 4 weeks &nbsp;·&nbsp; Starts Wednesday 28 October</div>
+        <p class="tag">Four weeks to feel your own body again.</p>
+        <p class="hero-plain">A private month with me, for women who have gone quiet somewhere after 40. Fifteen minutes at a time, in your own room, camera off if you want it off.</p>
         <div class="price-line">
-          <div class="p">£197 <span>Only <s class="gone">12</s> 9 places left</span></div>
+          <div class="p">£197 <span>9 places left</span></div>
         </div>
       </div>
       <div class="hero-cta reveal">
-        <a class="btn" href="#buy">Claim your place</a>
-        <a class="btn ghost" href="#works">How the month works</a>
+        <a class="btn pulse" href="#buy">Claim your place</a>
+        <a class="btn ghost" href="#private">How private is it?</a>
       </div>
     </div>
+  </div>
+</section>
+
+<div class="safe-strip">
+  <span>Camera on or off, you choose</span><span>No partner needed</span><span>Every masterclass recorded</span><span>Access to me all month</span>
+</div>
+
+<!-- MAYBE THIS IS WHERE YOU ARE -->
+<section class="maybe-s">
+  <div class="narrow">
+    <div class="eyebrow reveal">Maybe this is where you are</div>
+    <h2 class="reveal">I hear these sentences from women again and again.</h2>
+    <div class="maybe-list">
+      <div class="maybe">"I'm frigid."</div>
+      <div class="maybe">"I can't feel."</div>
+      <div class="maybe">"My body doesn't feel like mine anymore."</div>
+      <div class="maybe">"We're more like roommates."</div>
+      <div class="maybe">"I just want to feel like me again."</div>
+    </div>
+    <p class="reveal">If one of those is yours, you are exactly who I built this month for. You are in good company, and none of it is a life sentence.</p>
   </div>
 </section>
 
 <!-- OPENING -->
 <section class="thesis">
   <div class="narrow">
-    <h2 class="reveal">When you say, "I don't feel like myself anymore"… what part of you are you missing?</h2>
+    <h2 class="reveal">When you say "I don't feel like myself anymore", which part of you are you missing?</h2>
     <div class="threes reveal">
       <p>The woman who could feel?</p>
       <p>Who knew what she wanted?</p>
@@ -327,14 +382,28 @@ gtag('config', 'G-SY8NKELMNZ');
       <p>In touch with your life.</p>
       <p>In touch with <strong>how life touches you.</strong></p>
     </div>
-    <p class="reveal" style="margin-top:30px">For four weeks, we're going to give your body something different to experience.</p>
     <div class="four reveal">
       <div>Scrumptious Stroking.</div>
       <div>Scrumptious Confessions.</div>
       <div>Daily practices.</div>
       <div>Desire. Sensation. Play.</div>
     </div>
-    <div class="closer reveal">The parts of you that may have become quieter somewhere after 40.</div>
+    <div class="room reveal">
+      <p class="room-big">A woman who is turned on by her own life changes the room she walks into.</p>
+      <p>That part I do not have to teach you. It happens on its own, and other people tend to notice it before you do.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRIVACY -->
+<section class="private" id="private">
+  <div class="narrow">
+    <div class="eyebrow reveal">The question every woman asks first</div>
+    <h2 class="reveal">"Do I have to do this in front of anyone?"</h2>
+    <p class="private-big reveal">No. You are in your own room, in your own bed if you like, and nobody is watching you.</p>
+    <p class="reveal">At least three times a week we meet for a fifteen-minute Practice Lab. <strong>Cameras on or off, you choose.</strong> I am on the call doing the practice too, holding the time, telling you when to begin and when to finish. You never have to share a thing you do not want to.</p>
+    <p class="reveal">Turning up somewhere and actually doing it is what makes it stick. I do this practice every day myself, and having a time and a place is the whole reason it becomes yours.</p>
+    <a class="btn reveal" href="#buy" style="margin-top:14px">I'm in. Claim my place</a>
   </div>
 </section>
 
@@ -343,119 +412,44 @@ gtag('config', 'G-SY8NKELMNZ');
   <div class="narrow">
     <div class="eyebrow reveal">How the month works</div>
     <h2 class="reveal">Each week, one masterclass. Then we practise together.</h2>
-    <p class="reveal">Each week, we'll have one masterclass where I'll teach you what we're working with, we'll talk about what's actually coming up, and we'll take the practice deeper.</p>
+    <p class="reveal">Every Wednesday I teach you what we are working with, we talk about what is actually coming up for you, and we take the practice deeper.</p>
     <p class="reveal">Because things <em>do</em> come up.</p>
     <div class="comesup">
       <div class="line">I can't feel anything.</div>
       <div class="line">Oh God, now I can feel everything.</div>
       <div class="line">Am I doing this right?</div>
-      <div class="line">Was that a climax?</div>
       <div class="line">Why am I suddenly feeling emotional?</div>
     </div>
-    <p class="reveal">This is why I don't want to give you a practice and send you off to figure it out by yourself.</p>
-    <div class="qline reveal">At least three times a week we run a Practice Lab, and we actually do it together.</div>
+    <p class="reveal">That is why I will never hand you a practice and send you off to figure it out alone.</p>
     <div class="labcard reveal">
       <div class="labcopy">
-        <div class="goldline">It is easy to learn something. Sticking to it until it becomes a practice is the hard part.</div>
-        <p>Which is exactly why I have built in Practice Lab time.</p>
-        <p><strong>You do not need more information. You need to actually feel it, and notice how it changes you.</strong></p>
+        <div class="goldline">It is easy to learn something. Sticking with it until it becomes a practice is the hard part.</div>
+        <p><strong>What you need now is to actually feel it, and notice how it changes you.</strong></p>
       </div>
-      <div class="labart"><img src="https://feelfullyyou.com/how-to-feel-like-a-woman-clitoris.png" alt="The clitoris, most of which is internal" loading="lazy" width="1374" height="1497"></div>
     </div>
-    <p class="reveal" style="margin-top:26px">I do this practice every day myself. Especially at the beginning, having somewhere to turn up and actually do it is what makes it stick.</p>
-    <p class="reveal">Fifteen minutes. Cameras on or off, you choose.</p>
-    <p class="reveal">I'll be there doing the practice with you, holding the time, telling you when to begin and when to finish. Sometimes we'll practise something specific we've been working with, like the Yes Stroke. Sometimes we'll simply practise.</p>
-    <p class="reveal">Because I'm not particularly interested in you becoming very knowledgeable about being turned on.</p>
-    <div class="qline reveal">I want you to experience yourself differently.</div>
-    <p class="reveal" style="margin-top:26px">Throughout the month, you'll have access to me inside our private WhatsApp sisterhood too.</p>
-    <p class="reveal">That's where the Scrumptious Confessions, questions, discoveries, <em>"WHAT just happened?"</em> moments, and the things you might not be quite ready to say anywhere else, get to live.</p>
+    <p class="reveal" style="margin-top:26px">Throughout the month you have me inside our private WhatsApp sisterhood too. That is where the Scrumptious Confessions, the questions, the discoveries and the <em>"WHAT just happened?"</em> moments get to live.</p>
     <div class="closer reveal" style="font-family:var(--display);font-weight:700;font-size:clamp(22px,3.4vw,30px);color:var(--ink);max-width:26ch;margin-top:30px;line-height:1.18;letter-spacing:-.02em">I don't normally give this much access to me.</div>
     <p class="reveal" style="margin-top:14px;font-size:var(--t-md)">For these four weeks, I am.</p>
   </div>
 </section>
 
-<!-- SCRUMPTIOUS CONFESSIONS -->
-<section class="confess">
-  <div class="narrow">
-    <div class="eyebrow reveal">Scrumptious Confessions</div>
-    <h2 class="reveal">The stories I don't usually tell.</h2>
-    <p class="reveal">I've spent decades exploring the places most women were taught not to talk about.</p>
-    <p class="reveal">I've worked as a professional dominatrix. As a Dakini. I've worked in conscious sexuality and taught and worked with hundreds of women around touch, pleasure, intimacy and the body.</p>
-    <p class="reveal">Hundreds of those women were carrying sexual trauma. Women who had learned to leave their own bodies long before anyone asked them to stay.</p>
-    <p class="reveal">I was one of them. For a long time I did not know what was going on in my own body. I could not have told you what I wanted, or where I felt anything, or whether what I felt was pleasure or bracing.</p>
-    <p class="reveal">I've also been the woman wired up to monitors as part of research into female sexual response.</p>
-    <p class="reveal">I've been the woman who thought parts of her own body had gone quiet.</p>
-    <p class="reveal">So throughout these four weeks, I'm going to tell you some of the stories I don't usually tell.</p>
-    <div class="threes reveal">
-      <p>The things I've seen.</p>
-      <p>The things I've learned.</p>
-      <p>The things that surprised the hell out of me.</p>
-    </div>
-    <p class="reveal">Not because I want you to have my experience.</p>
-    <div class="qline reveal">I want you to become much more interested in your own.</div>
-  </div>
-</section>
-
-<!-- THE MAP -->
-<section class="themap">
-  <div class="narrow">
-    <div class="eyebrow reveal">What you'll actually be taught</div>
-    <h2 class="reveal">Twelve regions. Each one feels different.</h2>
-    <p class="reveal">Most women have been going to the same square centimetre for twenty years, found the same thing there every time, and quietly concluded there is nothing to find.</p>
-    <p class="reveal">There are twelve.</p>
-
-    <div class="map-solo reveal">
-      <img src="https://feelfullyyou.com/how-to-feel-like-a-woman-clock.svg" alt="The twelve regions, numbered around the glans" loading="lazy" width="560" height="700">
-      <div class="map-cap">One region at a time</div>
-    </div>
-
-    <p class="reveal" style="margin-top:30px">Over the four weeks I take you round the whole clock, on your own body first, always.</p>
-
-    <div class="map-list reveal">
-      <div class="map-row"><div class="ix">◆</div><p><strong>The clock.</strong> Twelve o'clock points up toward your belly. One o'clock sits slightly to the left, and it is the one most women find first and then never leave.</p></div>
-      <div class="map-row"><div class="ix">◆</div><p><strong>Up strokes and down strokes</strong>, and what changes between them.</p></div>
-      <div class="map-row"><div class="ix">◆</div><p><strong>The scissors.</strong> Two fingers, a little more pressure on the way down.</p></div>
-      <div class="map-row"><div class="ix">◆</div><p><strong>Hovering</strong>, which never lands at all, and which for some women is the most powerful touch there is.</p></div>
-      <div class="map-row"><div class="ix">◆</div><p><strong>The Yes Stroke.</strong> Saying yes out loud every time you genuinely feel it, and leaving alone the ones you cannot.</p></div>
-    </div>
-
-    <p class="reveal" style="margin-top:30px">No partner needed for any of it. Not in week one, not in week four.</p>
-    <p class="reveal" style="margin-top:22px">Amrita, which is what tantra calls female ejaculation, sometimes arrives through this work. Sometimes it does not, and it is never the measure of anything.</p>
-    <div class="goldline reveal">What changes for every woman is how much she can feel.</div>
-  </div>
-</section>
-
-<!-- WHAT'S INCLUDED -->
+<!-- WHAT'S INCLUDED + VALUE -->
 <section class="included">
   <div class="narrow">
-    <div class="eyebrow reveal">What's included</div>
+    <div class="eyebrow reveal">What you get</div>
     <h2 class="reveal">Four weeks, and I am in it with you.</h2>
     <div class="inc-list reveal">
       <div class="inc-row"><div class="ix">◆</div><p>Four live masterclasses, every Wednesday at 8:30pm UK time</p></div>
       <div class="inc-row"><div class="ix">◆</div><p><strong>A recording of every masterclass</strong>, sent to you the day afterwards</p></div>
-      <div class="inc-row"><div class="ix">◆</div><p>At least three live 15-minute <strong>Practice Labs</strong> every week, covering all time zones, set around the women who join</p></div>
+      <div class="inc-row"><div class="ix">◆</div><p>At least three live 15-minute <strong>Practice Labs</strong> every week, covering all time zones</p></div>
       <div class="inc-row"><div class="ix">◆</div><p>Daily invitations between sessions</p></div>
-      <div class="inc-row"><div class="ix">◆</div><p>Scrumptious Confessions</p></div>
+      <div class="inc-row"><div class="ix">◆</div><p>Scrumptious Confessions, the stories I don't usually tell</p></div>
       <div class="inc-row"><div class="ix">◆</div><p>Private WhatsApp sisterhood, with access to me throughout the four weeks</p></div>
     </div>
-  </div>
-</section>
-
-<!-- MAYBE THIS IS WHERE YOU ARE -->
-<section class="maybe-s">
-  <div class="narrow">
-    <div class="eyebrow reveal">Maybe this is where you are</div>
-    <h2 class="reveal">I've heard versions of these sentences again and again from women.</h2>
-    <div class="maybe-list">
-      <div class="maybe">"I'm frigid."</div>
-      <div class="maybe">"I can't feel."</div>
-      <div class="maybe">"I could never ask for that."</div>
-      <div class="maybe">"My body doesn't feel like mine anymore."</div>
-      <div class="maybe">"We're more like roommates."</div>
-      <div class="maybe">"I just want to feel like me again."</div>
+    <div class="value reveal">
+      <p class="value-big">Sixteen live sessions with me, at least. About £12 each.</p>
+      <p>Less than a glass of wine and a starter, for a month of being taught, held and practised with by someone who has spent her life on exactly this.</p>
     </div>
-    <p class="reveal"><strong>I don't think you need another person telling you what you should want or how you should feel.</strong></p>
-    <p class="reveal">I want you to become intimate enough with your own body to discover what is actually true for you.</p>
   </div>
 </section>
 
@@ -464,15 +458,16 @@ gtag('config', 'G-SY8NKELMNZ');
   <div class="wrap">
     <div class="head">
       <div class="eyebrow reveal">In their own words</div>
-      <h2 class="reveal">What the women say afterwards.</h2>
+      <h2 class="reveal">What women say after working with me.</h2>
     </div>
     <div class="shots">
-      <div class="shot reveal"><img src="https://feelfullyyou.com/how-to-feel-like-a-woman-christine.jpg" width="900" height="1720" loading="lazy" alt="Message from Christine: working with Juliette has been a game-changer in my life."></div>
-      <div class="shot reveal"><img src="https://feelfullyyou.com/how-to-feel-like-a-woman-safe-space.jpg" width="900" height="353" loading="lazy" alt="Message from a client: this is a safe space, you model it so well, we're doing this together."></div>
       <div class="shot reveal"><img src="https://feelfullyyou.com/how-to-feel-like-a-woman-miki.jpg" width="900" height="1267" loading="lazy" alt="Message from Miki: for the first time, sex feels integrated with who I am, not just a set of activities."></div>
       <div class="shot reveal"><img src="https://feelfullyyou.com/how-to-feel-like-a-woman-more-pleasure.jpg" width="900" height="837" loading="lazy" alt="Message from a client: I definitely feel more in my body and more pleasure after our work together."></div>
+      <div class="shot reveal"><img src="https://feelfullyyou.com/how-to-feel-like-a-woman-safe-space.jpg" width="900" height="353" loading="lazy" alt="Message from a client: this is a safe space, you model it so well, we're doing this together."></div>
+      <div class="shot reveal"><img src="https://feelfullyyou.com/how-to-feel-like-a-woman-christine.jpg" width="900" height="1720" loading="lazy" alt="Message from Christine: working with Juliette has been a game-changer in my life."></div>
       <div class="shot reveal"><img src="https://feelfullyyou.com/how-to-feel-like-a-woman-justine.jpg" width="900" height="818" loading="lazy" alt="Message from Justine: I'm deeply grateful for the transmissions of touch you shared."></div>
     </div>
+    <div style="text-align:center;margin-top:10px"><a class="btn pulse" href="https://buy.stripe.com/eVq9ASfSz91685L0Ut0co2q">I want this month · £197</a></div>
   </div>
 </section>
 
@@ -483,12 +478,51 @@ gtag('config', 'G-SY8NKELMNZ');
     <div class="jcopy">
       <div class="eyebrow reveal">Who is Juliette?</div>
       <h2 class="reveal">I don't teach this from theory. I practise it.</h2>
-      <p class="reveal">I'm Juliette Karaman. I've spent decades exploring and working with touch, intimacy, pleasure and what it means to actually inhabit your body.</p>
-      <p class="reveal">I've worked as a professional dominatrix, a Dakini, in conscious sexuality, and with hundreds of women and couples around intimacy, touch and connection.</p>
-      <p class="reveal">But I don't teach this from theory. <strong>I practise it.</strong> At this stage of my life, I feel more turned on, more connected to my body and more at ease being a woman than ever.</p>
-      <p class="reveal">That's what I want to open up for you.</p>
-      <p class="reveal"><strong>A woman who is turned on by her own life changes the room she walks into.</strong> That part I do not have to teach you. It happens on its own, and other people tend to notice it before you do.</p>
+      <p class="reveal">I'm Juliette Karaman, intimacy and touch expert. I've spent decades exploring touch, pleasure and what it means to actually live inside your body, and I've worked with hundreds of women and couples on exactly this.</p>
+      <p class="reveal">For a long time I was one of those women. I could not have told you what I wanted, or where I felt anything, or whether what I felt was pleasure or bracing.</p>
+      <p class="reveal">At this stage of my life I feel more turned on, more connected to my body and more at ease being a woman than ever. <strong>That is what I want to open up for you.</strong></p>
     </div>
+  </div>
+</section>
+
+<!-- SCRUMPTIOUS CONFESSIONS -->
+<section class="confess">
+  <div class="narrow">
+    <div class="eyebrow reveal">Scrumptious Confessions</div>
+    <h2 class="reveal">The stories I don't usually tell.</h2>
+    <p class="reveal">I've spent decades in the places most women were taught not to talk about. I've worked as a professional dominatrix. As a Dakini. In conscious sexuality. I've been the woman wired up to monitors in research into female sexual response, and I've been the woman who thought parts of her own body had gone quiet for good.</p>
+    <p class="reveal">Over these four weeks I'll tell you some of those stories.</p>
+    <div class="threes reveal">
+      <p>The things I've seen.</p>
+      <p>The things I've learned.</p>
+      <p>The things that surprised the hell out of me.</p>
+    </div>
+    <div class="qline reveal">Mostly, I want you to get far more interested in your own.</div>
+  </div>
+</section>
+
+<!-- THE MAP -->
+<section class="themap">
+  <div class="narrow">
+    <div class="eyebrow reveal">What you'll actually learn</div>
+    <h2 class="reveal">Most women have been going to the same square centimetre for twenty years.</h2>
+    <p class="reveal">They found the same thing there every time, and quietly concluded there is nothing more to find. There is. Over the four weeks I take you, one gentle step at a time, round a map of your own body that most women have never been shown. On your own body first, always, and no partner needed for any of it.</p>
+    <div class="goldline reveal">What changes for every woman is how much she can feel.</div>
+    <details class="mapmore reveal">
+      <summary>See the map, region by region</summary>
+      <div class="map-solo">
+        <img src="https://feelfullyyou.com/how-to-feel-like-a-woman-clock.svg" alt="The twelve regions, numbered around the glans" loading="lazy" width="560" height="700">
+        <div class="map-cap">Twelve regions. Each one feels different.</div>
+      </div>
+      <div class="map-list">
+        <div class="map-row"><div class="ix">◆</div><p><strong>The clock.</strong> Twelve o'clock points up toward your belly. One o'clock sits slightly to the left, and it is the one most women find first and then never leave.</p></div>
+        <div class="map-row"><div class="ix">◆</div><p><strong>Up strokes and down strokes</strong>, and what changes between them.</p></div>
+        <div class="map-row"><div class="ix">◆</div><p><strong>Hovering</strong>, which never lands at all, and which for some women is the most powerful touch there is.</p></div>
+        <div class="map-row"><div class="ix">◆</div><p><strong>The Yes Stroke.</strong> Saying yes out loud every time you genuinely feel it, and leaving alone the ones you cannot.</p></div>
+      </div>
+      <div class="labart" style="margin-top:30px"><img src="https://feelfullyyou.com/how-to-feel-like-a-woman-clitoris.png" alt="The clitoris, most of which is internal" loading="lazy" width="1374" height="1497"></div>
+      <p style="margin-top:22px">Amrita, which is what tantra calls female ejaculation, sometimes arrives through this work. Sometimes it does not, and it is never the measure of anything.</p>
+    </details>
   </div>
 </section>
 
@@ -504,21 +538,22 @@ gtag('config', 'G-SY8NKELMNZ');
       <div class="drow"><div class="mc">Masterclass 4</div><div class="dt">Wednesday 18 November &nbsp;·&nbsp; 8:30pm UK time</div></div>
     </div>
     <div class="plus reveal">Plus at least three live 15-minute Scrumptious Stroking practices each week.</div>
-    <p class="plusnote reveal"><strong>8:30pm UK is chosen on purpose.</strong> It lands in the evening across Europe, early morning in eastern Australia, and the middle of the day in the States.</p>
-    <p class="plusnote reveal"><strong>The Practice Labs cover all time zones.</strong> Those times get set around the women who actually join, so there is a lab you can reach from wherever you are.</p>
-    <p class="plusnote reveal"><strong>Every masterclass is recorded, and the recording is sent to you the day afterwards.</strong> If you cannot make one live, you have not missed it.</p>
+    <p class="plusnote reveal"><strong>8:30pm UK</strong> lands in the evening across Europe, early morning in eastern Australia, and the middle of the day in the States. The Practice Labs are set around the women who join, so there is one you can reach from wherever you are.</p>
+    <p class="plusnote reveal"><strong>Every masterclass is recorded</strong> and sent to you the day afterwards. If you cannot make one live, you have not missed it.</p>
   </div>
 </section>
 
-<!-- WHO THIS ISN'T FOR -->
-<section class="maybe-s">
+<!-- FAQ -->
+<section class="faq">
   <div class="narrow">
-    <div class="eyebrow reveal">Who this isn't for</div>
-    <h2 class="reveal">Said plainly, so you can decide before you pay me.</h2>
-    <p class="reveal"><strong>This isn't for you if you want to read about it.</strong> There is a practice, you do it, and I am on the call doing it alongside you. Reading about pleasure has never once changed what a body can feel.</p>
-    <p class="reveal"><strong>This isn't for you if you are hoping to hand your partner a solution.</strong> All of this starts on your own body, and it works the same whether there is someone in the bed or not.</p>
-    <p class="reveal"><strong>This isn't for you if you want a guaranteed outcome.</strong> I can promise you four weeks of practice and my full attention. I cannot promise you a particular sensation on a particular Wednesday, and anyone who does is selling you something.</p>
-    <p class="reveal"><strong>This isn't for you if you cannot find fifteen minutes, three times a week.</strong> That is the ask. If the next four weeks genuinely have nothing spare in them, this isn't the month.</p>
+    <div class="eyebrow reveal">Questions</div>
+    <h2 class="reveal">Before you say yes</h2>
+    <details><summary>Do I have to be on camera?</summary><p>No. Cameras on or off, you choose, every single time. Nobody is watching you practise.</p></details>
+    <details><summary>I can't feel anything down there. Is this for me?</summary><p>Yes. That is exactly where most women start. We go slowly, one region at a time, and you only ever stay with what you can genuinely feel.</p></details>
+    <details><summary>Do I need a partner?</summary><p>No. All of it starts on your own body, and it works the same whether there is someone in the bed or not.</p></details>
+    <details><summary>What if I miss a Wednesday?</summary><p>Every masterclass is recorded and sent to you the day afterwards, and there are at least three Practice Labs every week to catch.</p></details>
+    <details><summary>How much time does it take?</summary><p>The Wednesday masterclass, plus fifteen minutes, three times a week. That is the whole ask.</p></details>
+    <details><summary>Is there a guarantee?</summary><p>I can promise you four weeks of practice and my full attention. I can't promise a particular sensation on a particular Wednesday, and anyone who does is selling you something.</p></details>
   </div>
 </section>
 
@@ -526,28 +561,28 @@ gtag('config', 'G-SY8NKELMNZ');
 <section class="founding" id="buy">
   <div class="wrap">
     <div class="eyebrow reveal">How to Feel Like a Woman</div>
-    <h2 class="reveal">Four weeks.</h2>
+    <h2 class="reveal">Four weeks to feel your own body again.</h2>
     <div class="price-big reveal">£197</div>
-    <div class="places reveal">Only <s class="gone">12</s> 9 places left</div>
+    <div class="places reveal">9 places left &nbsp;·&nbsp; starts 28 October</div>
     <div class="arrives reveal">
       <div><b>Four masterclasses</b>Every Wednesday, 8:30pm UK</div>
       <div><b>Every one recorded</b>Sent to you the day afterwards</div>
       <div><b>Three practices a week</b>Fifteen minutes, live, with me</div>
       <div><b>Daily invitations</b>Between the sessions</div>
       <div><b>Scrumptious Confessions</b>The stories I don't usually tell</div>
-      <div><b>The WhatsApp sisterhood</b>Private, for the whole month</div>
-      <div><b>Access to me</b>Throughout the month</div>
+      <div><b>The WhatsApp sisterhood</b>Private, with me, all month</div>
     </div>
-    <a class="btn reveal" href="https://buy.stripe.com/eVq9ASfSz91685L0Ut0co2q">Claim your place →</a>
-    <p class="after reveal">Starts Wednesday 28 October at 8:30pm UK time.</p>
+    <a class="btn pulse reveal" href="https://buy.stripe.com/eVq9ASfSz91685L0Ut0co2q">Claim your place →</a>
+    <p class="after reveal">Camera on or off, always your choice. Starts Wednesday 28 October at 8:30pm UK time.</p>
   </div>
 </section>
 
 <!-- CLOSING -->
 <section class="closing">
   <div class="narrow">
-    <div class="a reveal">Then, after a month...</div>
-    <div class="b reveal">watch what happens to your body.</div>
+    <div class="a reveal">Picture a year from now, still saying "I don't feel like myself".</div>
+    <div class="b reveal">Or four weeks from now, watching what happens to your body.</div>
+    <div style="margin-top:34px"><a class="btn pulse" href="https://buy.stripe.com/eVq9ASfSz91685L0Ut0co2q">Claim your place · £197</a></div>
     <div class="stampname reveal">HOW TO FEEL LIKE A WOMAN</div>
     <div class="stampsub reveal">The Art of Being Turned On After 40</div>
   </div>
@@ -557,7 +592,7 @@ gtag('config', 'G-SY8NKELMNZ');
 <div class="sticky-buy" id="stickybuy">
   <div class="info">
     <span class="nm">How to Feel Like a Woman</span>
-    <span class="pr">£197 · <s class="gone">12</s> 9 places left</span>
+    <span class="pr">£197 · 9 places left</span>
     <span class="sub">Starts Wednesday 28 October</span>
   </div>
   <a class="btn" href="https://buy.stripe.com/eVq9ASfSz91685L0Ut0co2q">Claim your place</a>
