@@ -143,6 +143,20 @@
   .way p{font-size:.94rem;color:var(--brown);line-height:1.6;margin-bottom:18px}
   .way a{font-size:.88rem;font-weight:600;color:var(--gold-deep);text-decoration:underline;text-underline-offset:3px}
   @media(max-width:700px){.ways-grid{grid-template-columns:1fr}}
+  .ways-grid.doors4{grid-template-columns:repeat(4,1fr);max-width:1180px;gap:18px;text-align:left}
+  .door4{display:flex;flex-direction:column;background:var(--cream,#fefcfa);border:1px solid var(--line);text-decoration:none;color:inherit;transition:transform .2s,box-shadow .2s}
+  .door4:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(7,7,7,.1)}
+  .d4-im{aspect-ratio:4/3;overflow:hidden;background:#070707}
+  .d4-im img{width:100%;height:100%;object-fit:cover;display:block}
+  .d4-bd{padding:22px 22px 24px;display:flex;flex-direction:column;flex:1}
+  .d4-n{font-family:var(--display);font-weight:700;font-size:2.4rem;line-height:1;color:var(--gold);margin-bottom:10px}
+  .door4 .label{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:6px}
+  .door4 h3{font-family:var(--display);font-size:1.2rem;color:var(--ink);margin-bottom:8px}
+  .door4 p{font-size:.95rem;color:var(--brown);line-height:1.55;margin-bottom:14px}
+  .d4-go{margin-top:auto;font-weight:600;color:var(--teal);font-size:14px}
+  @media(max-width:1000px){.ways-grid.doors4{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:600px){.ways-grid.doors4{grid-template-columns:1fr}}
+
 
   footer{background:var(--gold);color:#fff;padding:22px 32px;font-size:13px}
   footer .inner{max-width:var(--max);margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
@@ -337,26 +351,25 @@ gtag('config', 'G-SY8NKELMNZ');
 <section class="ways">
   <h2 class="reveal">How to work with Juliette</h2>
   <p class="sub reveal">Wherever you are, there's a way in.</p>
-  <div class="ways-grid" style="max-width:900px">
-    <div class="way reveal">
-      <div class="label">Start on your own</div>
-      <h3>Begin here</h3>
-      <p>The free Touch Reset Quiz and the Cards. The gentlest way in, tonight.</p>
-      <a href="/work-with-me">Explore →</a>
-    </div>
-    <div class="way reveal">
-      <div class="label">Come home to your body</div>
-      <h3>One Touch</h3>
-      <p>Seven days, your own hands. Feel your own Touch Pattern before you ask anyone else to meet it. £97.</p>
-      <a href="/one-touch">Start One Touch →</a>
-    </div>
-    <div class="way reveal">
-      <div class="label">Go all the way, together</div>
-      <h3>The Touch Reset &amp; The Beginning</h3>
-      <p>When you are ready to rewrite the whole pattern, in a group or in private.</p>
-      <a href="/work-with-me">See the ways →</a>
-    </div>
+  <div class="ways-grid doors4">
+    <a class="door4 reveal" href="/touch-reset-quiz">
+      <div class="d4-im"><img src="touch-reset-quiz-embrace-og.jpg" alt="The Touch Reset Quiz" loading="lazy"></div>
+      <div class="d4-bd"><span class="d4-n">01</span><div class="label">Begin here, free</div><h3>The Touch Reset Quiz</h3><p>Where did the touch go? Five minutes to find your pattern, and how you're wired for pleasure.</p><span class="d4-go">Take the quiz →</span></div>
+    </a>
+    <a class="door4 reveal" href="/one-touch">
+      <div class="d4-im"><img src="one-touch-hero.jpg" alt="One Touch" loading="lazy"></div>
+      <div class="d4-bd"><span class="d4-n">02</span><div class="label">Come home to your body</div><h3>One Touch · £97</h3><p>Seven days, your own hands. Feel your own Touch Pattern before you ask anyone else to meet it.</p><span class="d4-go">Start One Touch →</span></div>
+    </a>
+    <a class="door4 reveal" href="/the-3-month-intensive">
+      <div class="d4-im"><img src="karentouch.JPG" alt="Juliette working one to one with a client" loading="lazy"></div>
+      <div class="d4-bd"><span class="d4-n">03</span><div class="label">Work with me, one to one</div><h3>The 3 Month Intensive</h3><p>Three months, just you and me, with a half-day VIP intensive where we map your whole body. Or a single VIP day, half or full.</p><span class="d4-go">See the Intensive →</span></div>
+    </a>
+    <a class="door4 reveal" href="/the-beginning">
+      <div class="d4-im"><img src="media/698afbc0a41b876eb63dd582.jpg" alt="The Beginning: The Ultimate Touch Reset" loading="lazy"></div>
+      <div class="d4-bd"><span class="d4-n">04</span><div class="label">Together, as a couple</div><h3>The Beginning</h3><p>The ultimate Touch Reset, for couples. Where you start again when touch has gone quiet between you.</p><span class="d4-go">See The Beginning →</span></div>
+    </a>
   </div>
+  <p class="reveal" style="margin:-10px auto 34px;font-size:15px">Looking for a single day? <a href="/womens-intensive" style="text-decoration:underline;color:var(--teal);font-weight:600">VIP days for women</a>, <a href="/mens-intensive" style="text-decoration:underline;color:var(--teal);font-weight:600">men</a> and <a href="/couples-intensive" style="text-decoration:underline;color:var(--teal);font-weight:600">couples</a>.</p>
   <a href="/free-resources" class="btn reveal" style="background:transparent;border:2px solid var(--gold);color:var(--gold-deep)">Start with something free</a>
   <p class="reveal" style="font-family:'Poppins',sans-serif;font-weight:700;color:var(--gold-deep);font-size:clamp(18px,2.4vw,24px);letter-spacing:-.01em;margin-top:20px">Being touched isn't the same as feeling touch. Patterns can be changed.</p>
 </section>
