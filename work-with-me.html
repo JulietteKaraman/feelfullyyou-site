@@ -410,6 +410,24 @@ gtag('config', 'G-SY8NKELMNZ');
 /* readable labels on dark green, 23 Oct 2026 */
 .wm .feature .kick,.wm .teal .kick,.wm .bw-teal .kick,.wm .bw-black .kick,.wm .vip .kick{color:#fefcfa!important;font-size:13px;opacity:1}
 .wm .l-int .ln,.wm .l-int .lk{color:#fefcfa}
+
+/* photo ladder tiles, 23 Oct 2026 */
+.wm .ladder{background:#070707!important;padding:56px 0 64px!important;border:none!important}
+.wm .ladder .in::before{content:"Five ways in. Start wherever you are.";display:block;text-align:center;font-family:var(--display);font-weight:700;color:#fff;font-size:clamp(1.6rem,3.4vw,2.4rem);margin-bottom:28px;letter-spacing:-.02em}
+.wm .lad{gap:14px!important}
+.wm .lt{position:relative!important;display:block!important;min-height:380px;padding:0!important;border:none!important;overflow:hidden;background:#070707!important;border-radius:2px}
+.wm .lt img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.wm .lt:hover img{transform:scale(1.05)}
+.wm .lt::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,7,7,.05) 20%,rgba(7,7,7,.88) 72%)}
+.wm .lt-in{position:absolute;z-index:2;left:0;right:0;bottom:0;padding:22px 20px 22px;display:flex;flex-direction:column;gap:4px}
+.wm .lt .ln{font-family:var(--display);font-weight:700;font-size:2.6rem!important;line-height:1;color:var(--gold-pale)!important}
+.wm .lt .lk{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:#fefcfa!important;margin-top:4px}
+.wm .lt b{font-family:var(--display);color:#fff!important;font-size:1.15rem;line-height:1.2}
+.wm .lt .lw{font-size:.88rem;color:#fefcfa;opacity:.9;line-height:1.4}
+.wm .lt .lp{font-family:var(--display);font-weight:700;font-size:1.7rem!important;color:#fff!important;margin-top:8px;padding-top:0!important}
+.wm .lt:hover::after{background:linear-gradient(180deg,rgba(13,53,53,.15) 10%,rgba(13,53,53,.92) 70%)}
+.wm .lt .lp{white-space:nowrap;font-size:clamp(1.3rem,1.9vw,1.7rem)!important}
+@media(max-width:1000px){.wm .lt{min-height:320px}}
 </style>
 
 <main class="wm">
@@ -419,7 +437,7 @@ gtag('config', 'G-SY8NKELMNZ');
   <div>
     <p class="kick">Work with Juliette</p>
     <h1>There's a way in, <em>wherever you are.</em></h1>
-    <p class="lede"><strong>Start free tonight.</strong> Learn on your own, in your own time. Join a group of women. Or work with me one to one, for a day or for three months.</p>
+    <p class="lede"><strong>Start free today.</strong> Learn on your own, in your own time. Join a group of women. Or work with me one to one, for a day or for three months.</p>
     <div class="btns">
       <a href="#ladder" class="btn">Find your way in &darr;</a>
       <a href="/touch-reset-quiz" class="btn line">Take the free quiz</a>
@@ -434,11 +452,11 @@ gtag('config', 'G-SY8NKELMNZ');
 <section class="ladder" id="ladder">
   <div class="in">
     <div class="lad">
-      <a href="#free" class="lt l-free"><span class="ln">01</span><span class="lk">Free</span><b>The Touch Reset Quiz</b><span class="lp">Free</span></a>
-      <a href="#on-your-own" class="lt l-own"><span class="ln">02</span><span class="lk">On your own</span><b>Courses and cards</b><span class="lp">From £17</span></a>
-      <a href="#a-group" class="lt l-grp"><span class="ln">03</span><span class="lk">In a group</span><b>How to Feel Like a Woman</b><span class="lp">£197</span></a>
-      <a href="#a-day" class="lt l-day"><span class="ln">04</span><span class="lk">One to one</span><b>A VIP day, or as a couple</b><span class="lp">From £1,500</span></a>
-      <a href="#intensive" class="lt l-int"><span class="ln">05</span><span class="lk">Three months</span><b>The 3 Month Intensive</b><span class="lp">£5,000</span></a>
+      <a href="#free" class="lt"><img src="touch-embrace-bw.jpg" alt="" loading="lazy" style="object-position:center 25%"><span class="lt-in"><span class="ln">01</span><span class="lk">Free</span><b>The Touch Reset Quiz</b><span class="lw">Five minutes. Find where your touch went.</span><span class="lp">Free</span></span></a>
+      <a href="#on-your-own" class="lt"><img src="cards-in-hands.jpg" alt="" loading="lazy" style="object-position:30% center"><span class="lt-in"><span class="ln">02</span><span class="lk">On your own</span><b>Courses and cards</b><span class="lw">In your own time, at your own pace.</span><span class="lp">From £17</span></span></a>
+      <a href="#a-group" class="lt"><img src="how-to-feel-like-a-woman-juliette.jpg" alt="" loading="lazy" style="object-position:center 15%"><span class="lt-in"><span class="ln">03</span><span class="lk">In a group</span><b>How to Feel Like a Woman</b><span class="lw">Four weeks, held, with other women.</span><span class="lp">£197</span></span></a>
+      <a href="#a-day" class="lt"><img src="touch-heart-hands-bw.jpg" alt="" loading="lazy"><span class="lt-in"><span class="ln">04</span><span class="lk">One to one</span><b>A VIP day, or as a couple</b><span class="lw">One day, all of it on you.</span><span class="lp">From £1,500</span></span></a>
+      <a href="#intensive" class="lt"><img src="karentouch.JPG" alt="" loading="lazy" style="object-position:center 20%"><span class="lt-in"><span class="ln">05</span><span class="lk">Three months</span><b>The 3 Month Intensive</b><span class="lw">The deepest way in. Just you and me.</span><span class="lp">£5,000</span></span></a>
     </div>
   </div>
 </section>
@@ -618,5 +636,9 @@ document.addEventListener('click', function(e){
 });
 </script>
 <script src="quiz-popup.js" defer></script>
+<script>
+/* land on the right section once photos have loaded (23 Oct 2026) */
+window.addEventListener('load',function(){if(location.hash){var el=document.getElementById(location.hash.slice(1));if(el){setTimeout(function(){el.scrollIntoView({block:'start'});},60);}}});
+</script>
 </body>
 </html>
