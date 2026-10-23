@@ -160,6 +160,52 @@
   .mobile-nav a.btn{margin:14px 28px 6px;display:block;background:var(--gold);color:#fff;padding:12px 20px;border-radius:2px;font-weight:600;text-align:center;border:none}
   .mobile-nav.open{display:flex}
   @media(max-width:860px){.ham{display:block}.topbar .more-wrap{display:none}.topbar nav > .btn{display:none}}
+
+/* ===== Work With Me, light and simple (23 Oct 2026) ===== */
+.wm .ladder{background:#fefcfa!important;padding:56px 0 30px!important}
+.wm .ladder .in::before{color:var(--ink)!important}
+.w2{padding:84px 28px}
+.w2-white{background:#fefcfa}.w2-cream{background:#f4f1ec}.w2-blue{background:#d8dfe1}
+.w2-in{max-width:1180px;margin:0 auto}
+.w2-split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.w2-split.rev .w2-tx{order:1}.w2-split.rev .w2-phones{order:2}
+.w2-ph img{width:100%;height:520px;object-fit:cover;display:block}
+.w2-kick{font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--gold-deep);margin-bottom:14px}
+.w2 h2{font-family:var(--display);font-weight:700;color:var(--ink);font-size:clamp(2rem,4.2vw,3.2rem);line-height:1.08;letter-spacing:-.02em;margin-bottom:18px}
+.w2 h2 em{font-style:normal;color:var(--gold)}
+.w2 p{color:#3d332c;font-size:1.06rem;line-height:1.65;margin-bottom:12px}
+.w2 strong{color:var(--ink)}
+.w2-big{font-family:var(--display);font-weight:700;font-size:2.6rem!important;color:var(--ink)!important;line-height:1;margin:4px 0 16px!important}
+.w2-btn{display:inline-block;margin-top:14px;background:var(--gold);color:#fff;font-weight:600;padding:15px 30px;text-decoration:none;border-radius:2px}
+.w2-btn:hover{background:var(--gold-deep)}
+.w2-list{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:10px}
+.w2-list li{position:relative;padding-left:28px;font-weight:600;color:var(--ink);font-size:1.05rem}
+.w2-list li::before{content:"";position:absolute;left:0;top:.55em;width:12px;height:12px;border-radius:50%;background:var(--gold)}
+.w2-phones{position:relative;height:540px}
+.w2-hand{position:absolute;left:0;top:0;width:62%;height:100%;object-fit:cover}
+.w2-screen{position:absolute;width:34%;border:7px solid #070707;border-radius:24px;box-shadow:0 18px 40px rgba(7,7,7,.22);background:#070707;object-fit:cover;object-position:top}
+.w2-screen.s1{right:12%;top:30px;height:420px}
+.w2-screen.s2{right:0;top:140px;height:380px}
+.w2-head{text-align:center;margin-bottom:34px}
+.w2-sub{font-family:var(--display);font-weight:700;font-size:1.3rem!important;color:var(--ink)!important;margin:0 0 18px!important;padding-bottom:10px;border-bottom:2px solid var(--gold)}
+.w2-grid{display:grid;gap:26px;margin-top:56px}
+.w2-head + .w2-sub{margin-top:10px!important}
+#a-day .w2-grid{margin-top:0}
+.w2-grid.g3{grid-template-columns:repeat(3,1fr)}.w2-grid.g2{grid-template-columns:repeat(2,1fr)}
+.w2-grid.g2 .w2-im{aspect-ratio:16/9}
+.w2-card{display:flex;flex-direction:column;background:#fff;text-decoration:none;box-shadow:0 2px 20px rgba(7,7,7,.07);transition:transform .25s,box-shadow .25s}
+.w2-card:hover{transform:translateY(-4px);box-shadow:0 10px 30px rgba(7,7,7,.12)}
+.w2-blue .w2-card,.w2-cream .w2-card{background:#fefcfa}
+.w2-im{aspect-ratio:4/3;overflow:hidden;background:#eee}
+.w2-im img{width:100%;height:100%;object-fit:cover;display:block}
+.w2-im.w2-dark{background:#070707}
+.w2-bd{padding:24px 26px 28px;display:flex;flex-direction:column;flex:1}
+.w2-meta{font-size:11px!important;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--gold-deep)!important;margin-bottom:8px!important}
+.w2-card h3{font-family:var(--display);font-weight:700;color:var(--ink);font-size:1.3rem;line-height:1.2;margin-bottom:6px}
+.w2-pr{font-family:var(--display);font-weight:700;font-size:1.7rem!important;color:var(--ink)!important;margin-bottom:10px!important}
+.w2-bd p{font-size:.98rem;flex:0}
+.w2-go{margin-top:auto;padding-top:10px;font-weight:600;color:var(--teal)}
+@media(max-width:900px){.w2{padding:60px 20px}.w2-split{grid-template-columns:1fr;gap:34px}.w2-split.rev .w2-tx{order:0}.w2-ph img{height:360px}.w2-phones{height:420px}.w2-grid.g3,.w2-grid.g2{grid-template-columns:1fr}}
 </style>
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -420,9 +466,24 @@ gtag('config', 'G-SY8NKELMNZ');
 .wm .cards.five .card{flex:0 1 calc((100% - 44px)/3)}
 @media(max-width:900px){.wm .cards.five .card{flex:0 1 calc((100% - 22px)/2)}}
 @media(max-width:600px){.wm .cards.five .card{flex:1 1 100%}}
+.wm .bw-blue{background:#d8dfe1}
+.wm .bw-blue .bw-head h2{color:var(--ink)}.wm .bw-blue .kick{color:var(--gold-deep)!important}
+.wm .bw-light{background:#fefcfa}
+.wm .bw-light .bw-head h2{color:var(--ink)}.wm .bw-light .kick{color:var(--gold-deep)!important}
+.wm .bw-sub{margin-top:10px;color:var(--brown)}
+.wm .bw-light .card{box-shadow:0 2px 18px rgba(7,7,7,.07)}
+.wm .cards.three-c{grid-template-columns:repeat(3,1fr)}
+.wm .cards.solo{grid-template-columns:minmax(0,380px);justify-content:center}
+.wm .appstrip{display:grid;grid-template-columns:1fr 1.3fr .75fr;gap:30px;align-items:center;background:#fefcfa;padding:26px;margin:0 auto 34px;max-width:1180px}
+.wm .appstrip img{width:100%;display:block}
+.wm .appstrip .as-ph img{height:300px;object-fit:cover}
+.wm .appstrip .as-screen img{height:300px;object-fit:cover;object-position:top;border-radius:18px;border:6px solid #070707}
+.wm .appstrip h3{font-family:var(--display);font-size:1.6rem;line-height:1.2;color:var(--ink);margin:6px 0 12px}
+.wm .appstrip p{color:var(--brown)}
+@media(max-width:900px){.wm .cards.three-c{grid-template-columns:1fr}.wm .appstrip{grid-template-columns:1fr}.wm .appstrip .as-screen{display:none}}
 /* photo ladder tiles, 23 Oct 2026 */
-.wm .ladder{background:#070707!important;padding:56px 0 64px!important;border:none!important}
-.wm .ladder .in::before{content:"Six ways in. Start wherever you are.";display:block;text-align:center;font-family:var(--display);font-weight:700;color:#fff;font-size:clamp(1.6rem,3.4vw,2.4rem);margin-bottom:28px;letter-spacing:-.02em}
+.wm .ladder{background:#fefcfa!important;padding:56px 0 30px!important;border:none!important}
+.wm .ladder .in::before{content:"Six ways in. Start wherever you are.";display:block;text-align:center;font-family:var(--display);font-weight:700;color:var(--ink);font-size:clamp(1.6rem,3.4vw,2.4rem);margin-bottom:28px;letter-spacing:-.02em}
 .wm .lad{gap:14px!important}
 .wm .lt{position:relative!important;display:block!important;min-height:380px;padding:0!important;border:none!important;overflow:hidden;background:#070707!important;border-radius:2px}
 .wm .lt img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s}
@@ -471,120 +532,84 @@ gtag('config', 'G-SY8NKELMNZ');
   </div>
 </section>
 
-<!-- NOT SURE -->
-<section class="sec bw-free" id="free">
-  <div class="tight center">
-    <p class="kick">01 · Free</p>
-    <h2>Find your pattern first. <em>It's free.</em></h2>
-    <p>Five minutes. The Touch Reset Quiz shows you your Touch Pattern, your Pleasure Language and your Desire Style.</p>
-    <div class="btns" style="justify-content:center">
-      <a href="/touch-reset-quiz" class="btn">Take the free quiz</a>
-      <a href="/apply" class="btn light">Or apply for a Touch Audit</a>
+<!-- ============ FREE ============ -->
+<section class="w2 w2-cream" id="free">
+  <div class="w2-in w2-split">
+    <div class="w2-ph"><img src="touch-embrace-bw.jpg" alt="Juliette and Alex in an embrace, black and white" loading="lazy" style="object-position:center 25%"></div>
+    <div class="w2-tx">
+      <p class="w2-kick">01 · Free</p>
+      <h2>Find your pattern first. <em>It's free.</em></h2>
+      <p>Five minutes. The Touch Reset Quiz shows you your Touch Pattern, your Pleasure Language and your Desire Style.</p>
+      <a href="/touch-reset-quiz" class="w2-btn">Take the free quiz</a>
     </div>
-    <p style="font-family:var(--display);font-weight:700;color:var(--gold-pale);font-size:clamp(18px,2.4vw,24px);margin-top:40px">Being touched isn't the same as feeling touch. Patterns can be changed.</p>
   </div>
 </section>
 
-<section class="band-way bw-teal" id="on-your-own">
-  <div class="in">
-    <div class="bw-head"><p class="kick">02 · On your own</p><h2>In your own time, at your own pace.</h2></div>
-    <div class="group">
-      <div class="ghead"><span class="gn">03</span><h3>On your own</h3><p>In your own time, at your own pace</p></div>
-      <div class="cards five">
-        <a href="/sacred-no" class="card">
-          <div class="im"><img src="touch-cloth.jpg" alt="The Sacred No" loading="lazy"></div>
-          <div class="bd"><p class="meta">In the app · 7 days</p><h3>The Sacred No</h3><p class="pr">£17</p><p>Learn to feel your no before you say it, so your yes means something again.</p><span class="go">Start The Sacred No →</span></div>
-        </a>
-        <a href="/31-days-closer" class="card">
-          <div class="im"><img src="media/31dc-hero.jpg" alt="31 Days Closer" loading="lazy"></div>
-          <div class="bd"><p class="meta">In the app · 31 days</p><h3>31 Days Closer</h3><p class="pr">£17</p><p>Thirty-one cards, one a day, already in the right order.</p><span class="go">Start 31 Days Closer →</span></div>
-        </a>
-        <a href="/31-touch-points" class="card">
-          <div class="im"><img src="31-touch-points-og.jpg" alt="31 Touch Points" loading="lazy"></div>
-          <div class="bd"><p class="meta">In the app · 31 days</p><h3>31 Touch Points</h3><p class="pr">£27</p><p>A month of being touched, and actually feeling it.</p><span class="go">Start the month →</span></div>
-        </a>
-        <a href="/one-touch" class="card">
-          <div class="im"><img src="one-touch-hero.jpg" alt="One Touch" loading="lazy"></div>
-          <div class="bd"><p class="meta">7 days · solo</p><h3>One Touch</h3><p class="pr">£97</p><p>Seven days to come back into touch with yourself.</p><span class="go">Start One Touch →</span></div>
-        </a>
-        <a href="/the-unspoken-distance" class="card">
-          <div class="im"><img src="media/app-unspoken-distance-library.jpg" alt="The Unspoken Distance inside the app" loading="lazy" style="object-position:center 12%"></div>
-          <div class="bd"><p class="meta">For men · In the app</p><h3>The Unspoken Distance</h3><p class="pr">£97</p><p>For the man who knows something is off but can't name it.</p><span class="go">Get the guide →</span></div>
-        </a>
-      </div>
+<!-- ============ ON YOUR OWN, IN THE APP ============ -->
+<section class="w2 w2-white" id="on-your-own">
+  <div class="w2-in w2-split rev">
+    <div class="w2-tx">
+      <p class="w2-kick">02 · On your own</p>
+      <h2>Your courses and your Cards, <em>in one app.</em></h2>
+      <p>Open it on your phone, whenever you want. In your own time, at your own pace.</p>
+      <ul class="w2-list">
+        <li>The Sacred No</li>
+        <li>31 Days Closer</li>
+        <li>31 Touch Points</li>
+        <li>The Unspoken Distance</li>
+        <li>The Intimacy and Communication Cards</li>
+      </ul>
     </div>
-  
+    <div class="w2-phones">
+      <img class="w2-hand" src="cardsappkingsx.jpg" alt="Juliette's hands holding her phone with the app open" loading="lazy">
+      <img class="w2-screen s1" src="media/app-library-screenshot.jpg" alt="A course inside the app" loading="lazy">
+      <img class="w2-screen s2" src="cards-app-taster.jpg" alt="The Cards inside the app" loading="lazy">
+    </div>
+  </div>
+  <div class="w2-in">
+    <div class="w2-grid g3">
+      <a href="/sacred-no" class="w2-card"><div class="w2-im"><img src="touch-cloth.jpg" alt="" loading="lazy"></div><div class="w2-bd"><p class="w2-meta">In the app · 7 days</p><h3>The Sacred No</h3><p class="w2-pr">£17</p><p>Learn to feel your no before you say it, so your yes means something again.</p><span class="w2-go">See The Sacred No →</span></div></a>
+      <a href="/31-days-closer" class="w2-card"><div class="w2-im"><img src="media/31dc-hero.jpg" alt="" loading="lazy"></div><div class="w2-bd"><p class="w2-meta">In the app · 31 days</p><h3>31 Days Closer</h3><p class="w2-pr">£17</p><p>Thirty-one cards, one a day, already in the right order.</p><span class="w2-go">See 31 Days Closer →</span></div></a>
+      <a href="/31-touch-points" class="w2-card"><div class="w2-im"><img src="31-touch-points-og.jpg" alt="" loading="lazy"></div><div class="w2-bd"><p class="w2-meta">In the app · 31 days</p><h3>31 Touch Points</h3><p class="w2-pr">£27</p><p>A month of being touched, and actually feeling it.</p><span class="w2-go">See 31 Touch Points →</span></div></a>
+      <a href="/cards" class="w2-card"><div class="w2-im"><img src="cards-in-hands.jpg" alt="" loading="lazy"></div><div class="w2-bd"><p class="w2-meta">In the app · The full set</p><h3>The Intimacy and Communication Cards</h3><p class="w2-pr">£55</p><p>One prompt at a time. For couples, friends and family.</p><span class="w2-go">See the Cards →</span></div></a>
+      <a href="/one-touch" class="w2-card"><div class="w2-im"><img src="one-touch-hero.jpg" alt="" loading="lazy"></div><div class="w2-bd"><p class="w2-meta">7 days · Solo</p><h3>One Touch</h3><p class="w2-pr">£97</p><p>Seven days to come back into touch with yourself.</p><span class="w2-go">See One Touch →</span></div></a>
+      <a href="/the-unspoken-distance" class="w2-card"><div class="w2-im"><img src="media/app-unspoken-distance-library.jpg" alt="" loading="lazy" style="object-position:center 12%"></div><div class="w2-bd"><p class="w2-meta">For men · In the app</p><h3>The Unspoken Distance</h3><p class="w2-pr">£97</p><p>For the man who knows something is off but can't name it.</p><span class="w2-go">See the guide →</span></div></a>
+    </div>
   </div>
 </section>
-<section class="band-way bw-ochre" id="a-group">
-  <div class="in">
-    <div class="bw-head"><p class="kick">03 · In a group</p><h2>Held, with other women.</h2></div>
-    <div class="group">
-      <div class="ghead"><span class="gn">02</span><h3>With me, in a group</h3><p>Women only</p></div>
-      <div class="cards one">
-        <a href="/how-to-feel-like-a-woman" class="card wide">
-          <div class="im"><img src="how-to-feel-like-a-woman-hero.jpg" alt="How to Feel Like a Woman" loading="lazy"></div>
-          <div class="bd"><span class="badge">Starts Wed 28 Oct</span><p class="meta">Women only · Group · 4 weeks</p><h3>How to Feel Like a Woman</h3><p class="pr">£197</p><p>The Art of Being Turned On After 40. Four live masterclasses, and at least three fifteen-minute practices every week with me on the call, doing it with you.</p><span class="go">Find out more →</span></div>
-        </a>
-      </div>
+
+<!-- ============ IN A GROUP ============ -->
+<section class="w2 w2-blue" id="a-group">
+  <div class="w2-in w2-split">
+    <div class="w2-ph"><img src="how-to-feel-like-a-woman-juliette.jpg" alt="Juliette sitting forward, smiling" loading="lazy" style="object-position:center 20%"></div>
+    <div class="w2-tx">
+      <p class="w2-kick">03 · In a group · Women only</p>
+      <h2>How to Feel Like a Woman</h2>
+      <p class="w2-big">£197</p>
+      <p>The Art of Being Turned On After 40. Four live masterclasses, and at least three fifteen-minute practices every week with me on the call, doing it with you.</p>
+      <p><strong>Starts Wednesday 28 October.</strong></p>
+      <a href="/how-to-feel-like-a-woman" class="w2-btn">See How to Feel Like a Woman</a>
     </div>
-
-
   </div>
 </section>
-<section class="band-way bw-black" id="a-day">
-  <div class="in">
-    <div class="bw-head"><p class="kick">04 · One to one</p><h2>A VIP day, for you or as a couple.</h2></div>
-    <div class="group">
-      <div class="ghead"><span class="gn">01</span><h3>With me, one to one</h3><p>Women, men and couples. A half day or a full day.</p></div>
-      <div class="cards one wide">
-        <div class="card">
-          <div class="im"><img src="touch-heart-hands-bw.jpg" alt="Hands resting over a heart, black and white" loading="lazy"></div>
-          <div class="bd"><p class="meta">Private · Half day or full day</p><h3><a href="/womens-intensive" class="stretch">VIP Days</a></h3><p class="pr">From £1,500</p><p>One day, all of it on you. Online, or in person with me. A half day or a full day.</p><span class="go">See the VIP day for women →</span><span class="also">Also for <a href="/mens-intensive">men</a> and <a href="/couples-intensive">couples</a></span></div>
-        </div>
-      </div>
+
+<!-- ============ ONE TO ONE ============ -->
+<section class="w2 w2-white" id="a-day">
+  <div class="w2-in">
+    <div class="w2-head">
+      <p class="w2-kick">04 · With me, one to one</p>
+      <h2>For a day, <em>or for three months.</em></h2>
     </div>
-
-
-  </div>
-</section>
-<div id="intensive-wrap">
-<section class="feature" id="intensive">
-  <div class="ph"><span class="chip">In person · Half day</span><img src="karentouch.JPG" alt="Juliette laughing, hands resting on a client lying on a treatment table" loading="lazy"></div>
-  <div class="txt">
-    <p class="kick">05 · Three months, one to one</p>
-    <h2>One person. One private space. <em>Your whole body.</em></h2>
-    <p>Instead of a therapist, a couples counsellor, a sex coach and another weekend retreat, each seeing a single part of you, the Intensive brings it all together.</p>
-    <ul class="incl">
-      <li><b>01</b>Six private calls</li>
-      <li><b>02</b>WhatsApp between calls</li>
-      <li><b>03</b>Half-day VIP intensive, your whole body mapped</li>
-      <li><b>04</b>Meditations made for you</li>
-      <li><b>05</b>My online programmes</li>
-      <li><b>06</b>The full set of Cards</li>
-    </ul>
-    <p class="price">£5,000<small>or £1,700 a month for three months</small></p>
-    <div class="btns">
-      <a href="https://buy.stripe.com/aFa00ifSz2CI2Lr5aJ0co2s" class="btn">Begin now · £5,000</a>
-      <a href="https://buy.stripe.com/28EaEWayf3GM99P32B0co2r" class="btn light">Or £1,700 a month × 3</a>
+    <p class="w2-sub">One day</p>
+    <div class="w2-grid g3">
+      <a href="/womens-intensive" class="w2-card"><div class="w2-im"><img src="vip-dl-40.jpg" alt="" loading="lazy"></div><div class="w2-bd"><p class="w2-meta">For women · Half or full day</p><h3>Women's VIP Day</h3><p class="w2-pr">From £1,500</p><p>A day where your body comes first.</p><span class="w2-go">See the women's day →</span></div></a>
+      <a href="/mens-intensive" class="w2-card"><div class="w2-im"><img src="touch-heart-hands-bw.jpg" alt="" loading="lazy"></div><div class="w2-bd"><p class="w2-meta">For men · Half or full day</p><h3>Men's VIP Day</h3><p class="w2-pr">From £1,500</p><p>For the man who leads everywhere else, and freezes when he reaches for her.</p><span class="w2-go">See the men's day →</span></div></a>
+      <a href="/couples-intensive" class="w2-card"><div class="w2-im"><img src="vip-site-05.jpg" alt="" loading="lazy"></div><div class="w2-bd"><p class="w2-meta">For couples · Full day</p><h3>Couples VIP Day</h3><p class="w2-pr">Full day</p><p>One day for the two of you, to meet each other again in the body.</p><span class="w2-go">See the couples day →</span></div></a>
     </div>
-    <p style="margin-top:20px"><a href="/the-3-month-intensive" style="color:#fefcfa;text-decoration:underline;font-weight:600">Read everything about the Intensive →</a></p>
-  </div>
-</section>
-</div>
-
-
-<!-- 06 THE BEGINNING (23 Oct 2026) -->
-<section class="band-way bw-teal" id="the-beginning">
-  <div class="in">
-    <div class="bw-head"><p class="kick">06 · Together, 12 weeks</p><h2>The Beginning. The ultimate Touch Reset, for couples.</h2></div>
-    <div class="group">
-      <div class="cards one wide">
-        <a href="/the-beginning" class="card">
-          <div class="im"><img src="media/698afbc0a41b876eb63dd582.jpg" alt="The Beginning: The Ultimate Touch Reset" loading="lazy" style="object-position:center;object-fit:contain;background:#070707"></div>
-          <div class="bd"><p class="meta">For couples · 12 weeks</p><h3>The Beginning</h3><p class="pr">£8,997</p><p>The ultimate Touch Reset, for couples. Where you start again when touch has gone quiet between you.</p><span class="go">See The Beginning →</span></div>
-        </a>
-      </div>
+    <p class="w2-sub" style="margin-top:56px">Three months</p>
+    <div class="w2-grid g2">
+      <a href="/the-3-month-intensive" class="w2-card" id="intensive"><div class="w2-im"><img src="karentouch.JPG" alt="" loading="lazy" style="object-position:center 20%"></div><div class="w2-bd"><p class="w2-meta">For women · 3 months</p><h3>The 3 Month Intensive</h3><p class="w2-pr">£5,000</p><p>Three months, just you and me, with a half-day VIP intensive where we map your whole body.</p><span class="w2-go">See the 3 Month Intensive →</span></div></a>
+      <a href="/the-beginning" class="w2-card" id="the-beginning"><div class="w2-im w2-dark"><img src="media/698afbc0a41b876eb63dd582.jpg" alt="" loading="lazy" style="object-fit:contain"></div><div class="w2-bd"><p class="w2-meta">For couples · 3 months</p><h3>The Beginning</h3><p class="w2-pr">£8,997</p><p>The ultimate Touch Reset, for couples. Where you start again when touch has gone quiet between you.</p><span class="w2-go">See The Beginning →</span></div></a>
     </div>
   </div>
 </section>
