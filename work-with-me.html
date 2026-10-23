@@ -389,7 +389,7 @@ gtag('config', 'G-SY8NKELMNZ');
 
 /* ladder-first layout, 23 Oct 2026 */
 .wm .ladder{background:var(--cream-2);padding:34px 0 40px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.wm .lad{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.wm .lad{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .wm .lt{display:flex;flex-direction:column;gap:4px;padding:20px 18px 22px;text-decoration:none;border-top:4px solid var(--gold);background:var(--cream);transition:transform .2s,box-shadow .2s}
 .wm .lt:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(7,7,7,.12)}
 .wm .lt .ln{font-family:var(--display);font-weight:700;font-size:2rem;line-height:1;color:var(--gold)}
@@ -411,9 +411,14 @@ gtag('config', 'G-SY8NKELMNZ');
 .wm .feature .kick,.wm .teal .kick,.wm .bw-teal .kick,.wm .bw-black .kick,.wm .vip .kick{color:#fefcfa!important;font-size:13px;opacity:1}
 .wm .l-int .ln,.wm .l-int .lk{color:#fefcfa}
 
+.wm .cards.wide .card{display:grid!important;grid-template-columns:1.1fr 1fr;align-items:stretch}
+.wm .cards.wide .card .im{height:100%;min-height:320px;aspect-ratio:auto!important}
+.wm .cards.wide .card .im img{height:100%;width:100%;object-fit:cover}
+.wm .cards.wide .card .bd{display:flex;flex-direction:column;justify-content:center;padding:36px 34px!important}
+@media(max-width:800px){.wm .cards.wide .card{grid-template-columns:1fr}.wm .cards.wide .card .im{min-height:220px}}
 /* photo ladder tiles, 23 Oct 2026 */
 .wm .ladder{background:#070707!important;padding:56px 0 64px!important;border:none!important}
-.wm .ladder .in::before{content:"Five ways in. Start wherever you are.";display:block;text-align:center;font-family:var(--display);font-weight:700;color:#fff;font-size:clamp(1.6rem,3.4vw,2.4rem);margin-bottom:28px;letter-spacing:-.02em}
+.wm .ladder .in::before{content:"Six ways in. Start wherever you are.";display:block;text-align:center;font-family:var(--display);font-weight:700;color:#fff;font-size:clamp(1.6rem,3.4vw,2.4rem);margin-bottom:28px;letter-spacing:-.02em}
 .wm .lad{gap:14px!important}
 .wm .lt{position:relative!important;display:block!important;min-height:380px;padding:0!important;border:none!important;overflow:hidden;background:#070707!important;border-radius:2px}
 .wm .lt img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s}
@@ -457,6 +462,7 @@ gtag('config', 'G-SY8NKELMNZ');
       <a href="#a-group" class="lt"><img src="how-to-feel-like-a-woman-juliette.jpg" alt="" loading="lazy" style="object-position:center 15%"><span class="lt-in"><span class="ln">03</span><span class="lk">In a group</span><b>How to Feel Like a Woman</b><span class="lw">Four weeks, held, with other women.</span><span class="lp">£197</span></span></a>
       <a href="#a-day" class="lt"><img src="touch-heart-hands-bw.jpg" alt="" loading="lazy"><span class="lt-in"><span class="ln">04</span><span class="lk">One to one</span><b>A VIP day, or as a couple</b><span class="lw">One day, all of it on you.</span><span class="lp">From £1,500</span></span></a>
       <a href="#intensive" class="lt"><img src="karentouch.JPG" alt="" loading="lazy" style="object-position:center 20%"><span class="lt-in"><span class="ln">05</span><span class="lk">Three months</span><b>The 3 Month Intensive</b><span class="lw">The deepest way in. Just you and me.</span><span class="lp">£5,000</span></span></a>
+      <a href="#the-beginning" class="lt"><img src="media/698afbc0a41b876eb63dd582.jpg" alt="" loading="lazy" style="object-fit:contain;object-position:center 12%"><span class="lt-in"><span class="ln">06</span><span class="lk">Together, 12 weeks</span><b>The Beginning</b><span class="lw">The ultimate Touch Reset, for couples.</span><span class="lp">£8,997</span></span></a>
     </div>
   </div>
 </section>
@@ -521,18 +527,14 @@ gtag('config', 'G-SY8NKELMNZ');
 </section>
 <section class="band-way bw-black" id="a-day">
   <div class="in">
-    <div class="bw-head"><p class="kick">04 · One to one</p><h2>A VIP day, or together as a couple.</h2></div>
+    <div class="bw-head"><p class="kick">04 · One to one</p><h2>A VIP day, for you or as a couple.</h2></div>
     <div class="group">
-      <div class="ghead"><span class="gn">01</span><h3>With me, one to one</h3><p>A VIP day, or the programme for couples</p></div>
-      <div class="cards two">
+      <div class="ghead"><span class="gn">01</span><h3>With me, one to one</h3><p>Women, men and couples. A half day or a full day.</p></div>
+      <div class="cards one wide">
         <div class="card">
           <div class="im"><img src="touch-heart-hands-bw.jpg" alt="Hands resting over a heart, black and white" loading="lazy"></div>
           <div class="bd"><p class="meta">Private · Half day or full day</p><h3><a href="/womens-intensive" class="stretch">VIP Days</a></h3><p class="pr">From £1,500</p><p>One day, all of it on you. Online, or in person with me. A half day or a full day.</p><span class="go">See the VIP day for women →</span><span class="also">Also for <a href="/mens-intensive">men</a> and <a href="/couples-intensive">couples</a></span></div>
         </div>
-        <a href="/the-beginning" class="card">
-          <div class="im"><img src="media/698afbc0a41b876eb63dd582.jpg" alt="The Beginning: The Ultimate Touch Reset" loading="lazy" style="object-position:center"></div>
-          <div class="bd"><p class="meta">For couples · 12 weeks</p><h3>The Beginning</h3><p class="pr">By application</p><p>The ultimate Touch Reset, for couples. Where you start again when touch has gone quiet between you.</p><span class="go">See The Beginning →</span></div>
-        </a>
       </div>
     </div>
 
@@ -564,6 +566,21 @@ gtag('config', 'G-SY8NKELMNZ');
 </section>
 </div>
 
+
+<!-- 06 THE BEGINNING (23 Oct 2026) -->
+<section class="band-way bw-teal" id="the-beginning">
+  <div class="in">
+    <div class="bw-head"><p class="kick">06 · Together, 12 weeks</p><h2>The Beginning. The ultimate Touch Reset, for couples.</h2></div>
+    <div class="group">
+      <div class="cards one wide">
+        <a href="/the-beginning" class="card">
+          <div class="im"><img src="media/698afbc0a41b876eb63dd582.jpg" alt="The Beginning: The Ultimate Touch Reset" loading="lazy" style="object-position:center;object-fit:contain;background:#070707"></div>
+          <div class="bd"><p class="meta">For couples · 12 weeks</p><h3>The Beginning</h3><p class="pr">£8,997</p><p>The ultimate Touch Reset, for couples. Where you start again when touch has gone quiet between you.</p><span class="go">See The Beginning →</span></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
 </main>
 
