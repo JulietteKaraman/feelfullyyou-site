@@ -174,6 +174,33 @@
   .mobile-nav.open{display:flex}
   @media(max-width:860px){.ham{display:block}.topbar .more-wrap{display:none}.topbar nav > .btn{display:none}}
 .ab3-shot{width:100%;max-width:360px;display:block;margin:0 auto;border-radius:14px;box-shadow:0 18px 40px rgba(7,7,7,.18)}
+
+/* About rework 23 Oct 2026: compact stand, sky blue rhythm, five ways in */
+.stand.st2{text-align:left;padding:72px 28px}
+.st2-grid{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.st2 .video-wrap{margin:0}
+.st2 h2{margin:0 0 16px!important;max-width:none!important;text-align:left}
+.st2 .intro{margin:0 0 22px!important;max-width:none!important}
+.st2 .eyebrow{text-align:left}
+.st2 .stand-list{grid-template-columns:1fr!important;margin:0 0 28px!important;max-width:none}
+.st2 .stand-item{padding:9px 0!important;border:none!important}
+.st2 .stand-item p{font-size:1rem}
+@media(max-width:900px){.st2-grid{grid-template-columns:1fr;gap:32px}}
+.ix .sec.cream2{background:#d8dfe1!important}
+.ways{background:#d8dfe1!important}
+.ab-lad{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;max-width:1180px;margin:30px auto 0;text-align:left}
+.ab-lad .lt{position:relative;display:block;min-height:380px;overflow:hidden;background:#070707;border-radius:2px;text-decoration:none}
+.ab-lad .lt img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.ab-lad .lt:hover img{transform:scale(1.05)}
+.ab-lad .lt::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,7,7,.05) 20%,rgba(7,7,7,.88) 72%)}
+.ab-lad .lt-in{position:absolute;z-index:2;left:0;right:0;bottom:0;padding:22px 20px;display:flex;flex-direction:column;gap:4px}
+.ab-lad .ln{font-family:var(--display);font-weight:700;font-size:2.6rem;line-height:1;color:var(--gold-pale)}
+.ab-lad .lk{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:#fefcfa;margin-top:4px}
+.ab-lad b{font-family:var(--display);color:#fff;font-size:1.15rem;line-height:1.2}
+.ab-lad .lw{font-size:.88rem;color:#fefcfa;opacity:.9;line-height:1.4}
+.ab-lad .lp{font-family:var(--display);font-weight:700;font-size:clamp(1.3rem,1.9vw,1.7rem);color:#fff;margin-top:8px;white-space:nowrap}
+@media(max-width:1000px){.ab-lad{grid-template-columns:1fr 1fr}.ab-lad .lt{min-height:320px}}
+@media(max-width:600px){.ab-lad{grid-template-columns:1fr}}
 </style>
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -550,6 +577,34 @@ gtag('config', 'G-SY8NKELMNZ');
   </div>
 </section>
 
+<!-- I TAKE A STAND (compact, 23 Oct 2026) -->
+</main>
+<section class="stand st2">
+  <div class="st2-grid">
+    <div class="st2-vid">
+  <div class="video-wrap reveal">
+        <div class="video-container">
+          <iframe src="https://drive.google.com/file/d/19OVEYyo3vj2CK9MIiR3swZmXhN2TKqdG/preview" title="I Take a Stand · Juliette Karaman" allow="autoplay" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="st2-tx">
+  <p class="eyebrow reveal" style="color:var(--gold-pale);margin-bottom:16px">I Take a Stand</p>
+  <h2 class="reveal">So many of us have been here, quietly wondering why we can't fully receive love.</h2>
+  <p class="intro reveal">This is what I take a stand for. In every session, every room, every conversation.</p>
+  <div class="stand-list">
+    <div class="stand-item reveal"><div class="dot"></div><p>Sexual reclamation: your body, your desire, your terms</p></div>
+    <div class="stand-item reveal"><div class="dot"></div><p>Thriving instead of surviving</p></div>
+    <div class="stand-item reveal"><div class="dot"></div><p>Deep emotional safety: the only place intimacy can truly grow</p></div>
+    <div class="stand-item reveal"><div class="dot"></div><p>Pleasure that liberates, not performs</p></div>
+    <div class="stand-item reveal"><div class="dot"></div><p>Presence that transforms, not just soothes</p></div>
+    <div class="stand-item reveal"><div class="dot"></div><p>Touch that lands where words no longer reach</p></div>
+  </div>
+      <a href="#ways" class="btn reveal">See how to work with me</a>
+    </div>
+  </div>
+</section>
+<main class="ix">
 <!-- HER STORY -->
 <section class="sec cream2">
   <div class="in split">
@@ -584,6 +639,20 @@ gtag('config', 'G-SY8NKELMNZ');
   </div>
 </section>
 
+<!-- WHERE THIS BEGAN -->
+<section class="sec cream2">
+  <div class="in split">
+    <div>
+      <p class="kick">Where this began</p>
+      <h2>The body already knows. <em style="font-style:normal;color:var(--gold)">It always has.</em></h2>
+      <p>Long before any of this, I was a SENCO. I worked with children on the autism spectrum, helping them feel safe in their own skin, and trust what they sensed but couldn't say.</p>
+      <p>In those rooms I learned the thing that has shaped everything since.</p>
+      <p class="bigline" style="margin-top:18px">The body already knows.</p>
+    </div>
+    <div class="ph"><figure class="fig"><img src="about-jp-26.jpg" alt="Juliette in a yellow scarf, looking down" loading="lazy"></figure></div>
+  </div>
+</section>
+
 <!-- AT THE EDGE OF LIFE -->
 <section class="closeband">
   <div class="cb-ph"><img src="about-jp-37.jpg" alt="Juliette on a beach, looking into the distance" loading="lazy" style="object-position:72% center"></div>
@@ -600,23 +669,9 @@ gtag('config', 'G-SY8NKELMNZ');
   </div>
 </section>
 
-<!-- WHERE THIS BEGAN -->
-<section class="sec cream2">
-  <div class="in split">
-    <div>
-      <p class="kick">Where this began</p>
-      <h2>The body already knows. <em style="font-style:normal;color:var(--gold)">It always has.</em></h2>
-      <p>Long before any of this, I was a SENCO. I worked with children on the autism spectrum, helping them feel safe in their own skin, and trust what they sensed but couldn't say.</p>
-      <p>In those rooms I learned the thing that has shaped everything since.</p>
-      <p class="bigline" style="margin-top:18px">The body already knows.</p>
-    </div>
-    <div class="ph"><figure class="fig"><img src="about-jp-26.jpg" alt="Juliette in a yellow scarf, looking down" loading="lazy"></figure></div>
-  </div>
-</section>
-
 <!-- WHAT I DO NOW -->
 <section class="sec">
-  <div class="in split rev">
+  <div class="in split">
     <div>
       <p class="kick">What I do now</p>
       <h2>I created The Touch Reset.</h2>
@@ -631,52 +686,18 @@ gtag('config', 'G-SY8NKELMNZ');
 </main>
 
 
-<!-- I TAKE A STAND -->
-<section class="stand">
-  <p class="eyebrow reveal" style="color:var(--gold-pale);margin-bottom:16px">I Take a Stand</p>
-  <h2 class="reveal">So many of us have been here, quietly wondering why we can't fully receive love.</h2>
-  <p class="intro reveal">This is what I take a stand for. In every session, every room, every conversation.</p>
-  <div class="stand-list">
-    <div class="stand-item reveal"><div class="dot"></div><p>Sexual reclamation: your body, your desire, your terms</p></div>
-    <div class="stand-item reveal"><div class="dot"></div><p>Thriving instead of surviving</p></div>
-    <div class="stand-item reveal"><div class="dot"></div><p>Deep emotional safety: the only place intimacy can truly grow</p></div>
-    <div class="stand-item reveal"><div class="dot"></div><p>Pleasure that liberates, not performs</p></div>
-    <div class="stand-item reveal"><div class="dot"></div><p>Presence that transforms, not just soothes</p></div>
-    <div class="stand-item reveal"><div class="dot"></div><p>Touch that lands where words no longer reach</p></div>
-  </div>
-  <p class="sub reveal">Watch Juliette take a stand.</p>
-  <div class="video-wrap reveal">
-    <div class="video-container">
-      <iframe src="https://drive.google.com/file/d/19OVEYyo3vj2CK9MIiR3swZmXhN2TKqdG/preview" title="I Take a Stand · Juliette Karaman" allow="autoplay" allowfullscreen></iframe>
-    </div>
-  </div>
-  <p class="reveal" style="color:#d7d0c4;font-size:1rem;margin-bottom:36px">Let's make that happen together.</p>
-  <a href="#ways" class="btn reveal">See how to work with me</a>
-</section>
-
 <!-- WAYS IN -->
 <section class="ways" id="ways">
   <h2 class="reveal">How to work with Juliette</h2>
-  <p class="sub reveal">Wherever you are, there's a way in.</p>
-  <div class="ways-grid doors4">
-    <a class="door4 reveal" href="/touch-reset-quiz">
-      <div class="d4-im"><img src="touch-embrace-bw.jpg" style="object-position:center 25%" alt="The Touch Reset Quiz, Juliette and Alex" loading="lazy"></div>
-      <div class="d4-bd"><span class="d4-n">01</span><div class="label">Begin here, free</div><h3>The Touch Reset Quiz</h3><p>Where did the touch go? Five minutes to find your pattern, and how you're wired for pleasure.</p><span class="d4-go">Take the quiz →</span></div>
-    </a>
-    <a class="door4 reveal" href="/one-touch">
-      <div class="d4-im"><img src="one-touch-hero.jpg" alt="One Touch" loading="lazy"></div>
-      <div class="d4-bd"><span class="d4-n">02</span><div class="label">Come home to your body</div><h3>One Touch · £97</h3><p>Seven days, your own hands. Feel your own Touch Pattern before you ask anyone else to meet it.</p><span class="d4-go">Start One Touch →</span></div>
-    </a>
-    <a class="door4 reveal" href="/the-3-month-intensive">
-      <div class="d4-im"><img src="karentouch.JPG" alt="Juliette working one to one with a client" loading="lazy"></div>
-      <div class="d4-bd"><span class="d4-n">03</span><div class="label">Work with me, one to one</div><h3>The 3 Month Intensive</h3><p>Three months, just you and me, with a half-day VIP intensive where we map your whole body. Or a single VIP day, half or full.</p><span class="d4-go">See the Intensive →</span></div>
-    </a>
-    <a class="door4 reveal" href="/the-beginning">
-      <div class="d4-im"><img src="media/698afbc0a41b876eb63dd582.jpg" alt="The Beginning: The Ultimate Touch Reset" loading="lazy"></div>
-      <div class="d4-bd"><span class="d4-n">04</span><div class="label">Together, as a couple</div><h3>The Beginning</h3><p>The ultimate Touch Reset, for couples. Where you start again when touch has gone quiet between you.</p><span class="d4-go">See The Beginning →</span></div>
-    </a>
+  <p class="sub reveal">Five ways in. Start wherever you are.</p>
+    <div class="lad ab-lad">
+    <a href="/touch-reset-quiz" class="lt"><img src="touch-embrace-bw.jpg" alt="" loading="lazy" style="object-position:center 25%"><span class="lt-in"><span class="ln">01</span><span class="lk">Free</span><b>The Touch Reset Quiz</b><span class="lw">Five minutes. Find where your touch went.</span><span class="lp">Free</span></span></a>
+    <a href="/work-with-me#on-your-own" class="lt"><img src="cards-in-hands.jpg" alt="" loading="lazy" style="object-position:30% center"><span class="lt-in"><span class="ln">02</span><span class="lk">On your own</span><b>Courses and cards</b><span class="lw">In your own time, at your own pace.</span><span class="lp">From £17</span></span></a>
+    <a href="/how-to-feel-like-a-woman" class="lt"><img src="how-to-feel-like-a-woman-juliette.jpg" alt="" loading="lazy" style="object-position:center 15%"><span class="lt-in"><span class="ln">03</span><span class="lk">In a group</span><b>How to Feel Like a Woman</b><span class="lw">Four weeks, held, with other women.</span><span class="lp">£197</span></span></a>
+    <a href="/work-with-me#a-day" class="lt"><img src="touch-heart-hands-bw.jpg" alt="" loading="lazy"><span class="lt-in"><span class="ln">04</span><span class="lk">One to one</span><b>A VIP day, or as a couple</b><span class="lw">One day, all of it on you.</span><span class="lp">From £1,500</span></span></a>
+    <a href="/the-3-month-intensive" class="lt"><img src="karentouch.JPG" alt="" loading="lazy" style="object-position:center 20%"><span class="lt-in"><span class="ln">05</span><span class="lk">Three months</span><b>The 3 Month Intensive</b><span class="lw">The deepest way in. Just you and me.</span><span class="lp">£5,000</span></span></a>
   </div>
-  <p class="reveal" style="margin:-10px auto 34px;font-size:15px">Looking for a single day? <a href="/womens-intensive" style="text-decoration:underline;color:var(--teal);font-weight:600">VIP days for women</a>, <a href="/mens-intensive" style="text-decoration:underline;color:var(--teal);font-weight:600">men</a> and <a href="/couples-intensive" style="text-decoration:underline;color:var(--teal);font-weight:600">couples</a>.</p>
+  <p class="reveal" style="margin:28px auto 34px;font-size:15px">Looking for a single day? <a href="/womens-intensive" style="text-decoration:underline;color:var(--teal);font-weight:600">VIP days for women</a>, <a href="/mens-intensive" style="text-decoration:underline;color:var(--teal);font-weight:600">men</a> and <a href="/couples-intensive" style="text-decoration:underline;color:var(--teal);font-weight:600">couples</a>.</p>
   <a href="/free-resources" class="btn reveal" style="background:transparent;border:2px solid var(--gold);color:var(--gold-deep)">Start with something free</a>
   <p class="reveal" style="font-family:'Poppins',sans-serif;font-weight:700;color:var(--gold-deep);font-size:clamp(18px,2.4vw,24px);letter-spacing:-.01em;margin-top:20px">Being touched isn't the same as feeling touch. Patterns can be changed.</p>
 </section>
