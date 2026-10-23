@@ -251,6 +251,7 @@ const PAYMENT_LINK_LABELS = {
   'plink_1UKxrYCCw18geY15fsIW9olR': "Men's VIP Full Day £3,000",
   'plink_1UKxsqCCw18geY15BpIdfbxX': "Men's VIP Half Day £1,500",
   'plink_1UKxpqCCw18geY15NEqv2tyj': 'Couples VIP Full Day £5,000',
+  'plink_1UThP0CCw18geY15zZHeEcsQ': '3 Month Intensive £1,700/mo x 3 (payment plan)',
 };
 
 // Tag + sequence by PAYMENT LINK, not by metadata.price_id.
@@ -342,6 +343,16 @@ const PAYMENT_LINK_PRODUCTS = {
     sequenceId: 2885669,  // "Sacred No — Welcome"
     label: 'The Sacred No £17'
   },
+  // THE 3 MONTH INTENSIVE, payment plan £1,700/mo x 3. Link created by Juliette
+  // 23 Oct 2026, buy.stripe.com/28EaEWayf3GM99P32B0co2r. A dashboard link, so no
+  // metadata.price_id: the plink is the key. sequenceId stays null until her
+  // welcome email is approved and built. NOTE: Stripe does not stop this plan
+  // after three payments by itself.
+  'plink_1UThP0CCw18geY15zZHeEcsQ': {
+    tagId: 24937591,      // "Bought: 3 Month Intensive"
+    sequenceId: null,
+    label: '3 Month Intensive £1,700/mo x 3'
+  },
 };
 
 // App entitlement by PAYMENT LINK, the fallback for PRACTICE_APP_DECK_TYPES.
@@ -356,6 +367,14 @@ const PAYMENT_LINK_APP_DECKS = {
 };
 
 const PRODUCT_MAP = {
+  // THE 3 MONTH INTENSIVE, pay in full £5,000, buy.stripe.com/dRm5kC21Jb9e99P0Ut0co1C.
+  // Created 6 Jul 2026 (as the 2 Month Intensive) WITH metadata.price_id, so the
+  // price id is the key. Renamed in Stripe and made buy-now on the page 23 Oct 2026.
+  'price_1TvJihCCw18geY150fZFF1Iv': {
+    tagId: 24937591,      // "Bought: 3 Month Intensive"
+    sequenceId: null,     // welcome email pending Juliette's approval (23 Oct 2026)
+    label: '3 Month Intensive £5,000 (pay in full)'
+  },
   // SEQUENCE IDs REWIRED 6 July PM: Kit's original template sequences (2812532/33/34/91)
   // were deleted or repurposed during the paste-in. Nulls below = no sequence exists in
   // Kit yet for that product; fill in as Kiera creates them from the Paste Pack.
