@@ -252,6 +252,7 @@ const PAYMENT_LINK_LABELS = {
   'plink_1UKxsqCCw18geY15BpIdfbxX': "Men's VIP Half Day £1,500",
   'plink_1UKxpqCCw18geY15NEqv2tyj': 'Couples VIP Full Day £5,000',
   'plink_1UThP0CCw18geY15zZHeEcsQ': '3 Month Intensive £1,700/mo x 3 (payment plan)',
+  'plink_1UThdoCCw18geY15iWICtaFv': '3 Month Intensive £5,000 (pay in full)',
 };
 
 // Tag + sequence by PAYMENT LINK, not by metadata.price_id.
@@ -348,6 +349,15 @@ const PAYMENT_LINK_PRODUCTS = {
   // metadata.price_id: the plink is the key. sequenceId is the welcome she
   // approved 23 Oct 2026. NOTE: Stripe does not stop this plan
   // after three payments by itself.
+  // THE 3 MONTH INTENSIVE, pay in full £5,000. New link created by Juliette
+  // 23 Oct 2026, buy.stripe.com/aFa00ifSz2CI2Lr5aJ0co2s, on price
+  // price_1TvJihCCw18geY150fZFF1Iv. Keyed on the plink because a dashboard link
+  // carries no metadata.price_id. The PRODUCT_MAP price entry stays as backstop.
+  'plink_1UThdoCCw18geY15iWICtaFv': {
+    tagId: 24937591,      // "Bought: 3 Month Intensive"
+    sequenceId: 2941427,  // "3 Month Intensive: Welcome"
+    label: '3 Month Intensive £5,000 (pay in full)'
+  },
   'plink_1UThP0CCw18geY15zZHeEcsQ': {
     tagId: 24937591,      // "Bought: 3 Month Intensive"
     sequenceId: 2941427,  // "3 Month Intensive: Welcome" (approved 23 Oct 2026)
