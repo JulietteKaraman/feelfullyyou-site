@@ -354,6 +354,11 @@ gtag('config', 'G-SY8NKELMNZ');
 .wm .card.wide h3{font-size:1.8rem}
 .wm .lede{color:var(--ink)}
 .wm .lede strong{color:var(--teal)}
+.wm .card{position:relative}
+.wm .card h3 a.stretch{color:inherit;text-decoration:none}
+.wm .card h3 a.stretch::after{content:"";position:absolute;inset:0;z-index:1}
+.wm .card .also{position:relative;z-index:2;display:block;margin-top:8px;font-size:14px}
+.wm .card .also a{color:var(--teal);font-weight:600;text-decoration:underline}
 </style>
 
 <main class="wm">
@@ -427,10 +432,10 @@ gtag('config', 'G-SY8NKELMNZ');
     <div class="group">
       <div class="ghead"><span class="gn">01</span><h3>With me, in a day</h3><p>One to one, or together as a couple</p></div>
       <div class="cards two">
-        <a href="/private-sessions" class="card">
+        <div class="card">
           <div class="im"><img src="touch-heart-hands-bw.jpg" alt="Hands resting over a heart, black and white" loading="lazy"></div>
-          <div class="bd"><p class="meta">Private · Half day or full day</p><h3>VIP Days</h3><p class="pr">From £1,500</p><p>One day, all of it on you. Online, or in person with me. A half day or a full day, for women and for men.</p><span class="go">See the VIP days →</span></div>
-        </a>
+          <div class="bd"><p class="meta">Private · Half day or full day</p><h3><a href="/womens-intensive" class="stretch">VIP Days</a></h3><p class="pr">From £1,500</p><p>One day, all of it on you. Online, or in person with me. A half day or a full day.</p><span class="go">See the VIP day for women →</span><span class="also">Also for <a href="/mens-intensive">men</a> and <a href="/couples-intensive">couples</a></span></div>
+        </div>
         <a href="/the-beginning" class="card">
           <div class="im"><img src="media/698afbc0a41b876eb63dd582.jpg" alt="The Beginning: The Ultimate Touch Reset" loading="lazy" style="object-position:center"></div>
           <div class="bd"><p class="meta">For couples · 12 weeks</p><h3>The Beginning</h3><p class="pr">By application</p><p>The ultimate Touch Reset, for couples. Where you start again when touch has gone quiet between you.</p><span class="go">See The Beginning →</span></div>
