@@ -345,12 +345,12 @@ const PAYMENT_LINK_PRODUCTS = {
   },
   // THE 3 MONTH INTENSIVE, payment plan £1,700/mo x 3. Link created by Juliette
   // 23 Oct 2026, buy.stripe.com/28EaEWayf3GM99P32B0co2r. A dashboard link, so no
-  // metadata.price_id: the plink is the key. sequenceId stays null until her
-  // welcome email is approved and built. NOTE: Stripe does not stop this plan
+  // metadata.price_id: the plink is the key. sequenceId is the welcome she
+  // approved 23 Oct 2026. NOTE: Stripe does not stop this plan
   // after three payments by itself.
   'plink_1UThP0CCw18geY15zZHeEcsQ': {
     tagId: 24937591,      // "Bought: 3 Month Intensive"
-    sequenceId: null,
+    sequenceId: 2941427,  // "3 Month Intensive: Welcome" (approved 23 Oct 2026)
     label: '3 Month Intensive £1,700/mo x 3'
   },
 };
@@ -372,7 +372,7 @@ const PRODUCT_MAP = {
   // price id is the key. Renamed in Stripe and made buy-now on the page 23 Oct 2026.
   'price_1TvJihCCw18geY150fZFF1Iv': {
     tagId: 24937591,      // "Bought: 3 Month Intensive"
-    sequenceId: null,     // welcome email pending Juliette's approval (23 Oct 2026)
+    sequenceId: 2941427,  // "3 Month Intensive: Welcome" (approved 23 Oct 2026)
     label: '3 Month Intensive £5,000 (pay in full)'
   },
   // SEQUENCE IDs REWIRED 6 July PM: Kit's original template sequences (2812532/33/34/91)
