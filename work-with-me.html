@@ -357,6 +357,59 @@ gtag('config', 'G-SY8NKELMNZ');
 .wm .card h3 a.stretch::after{content:"";position:absolute;inset:0;z-index:1}
 .wm .card .also{position:relative;z-index:2;display:block;margin-top:8px;font-size:14px}
 .wm .card .also a{color:var(--teal);font-weight:600;text-decoration:underline}
+
+/* coloured bands per way of working, 23 Oct 2026 */
+.wm .waynav{background:var(--cream-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);position:sticky;top:64px;z-index:50}
+.wm .waynav .in{display:flex;flex-wrap:wrap;gap:8px 10px;align-items:center;padding-top:12px;padding-bottom:12px}
+.wm .waynav span{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--gold-deep);margin-right:6px}
+.wm .waynav a{font-size:14px;font-weight:600;color:var(--ink);border:1.5px solid var(--gold);padding:7px 14px;border-radius:999px;text-decoration:none}
+.wm .waynav a:hover{background:var(--gold);color:#fff}
+.wm .ways-intro{padding:80px 0 36px;background:var(--cream)}
+.wm .band-way{padding:80px 0 90px}
+.wm .bw-head{text-align:center;margin-bottom:36px}
+.wm .bw-head h2{margin-bottom:0}
+.wm .band-way .ghead{display:none}
+.wm .band-way .group{margin-top:0}
+.wm .bw-black{background:#070707}
+.wm .bw-black .bw-head h2{color:#fff}.wm .bw-black .kick{color:var(--gold-pale)}
+.wm .bw-ochre{background:var(--gold)}
+.wm .bw-ochre .bw-head h2{color:#fff}.wm .bw-ochre .kick{color:#fefcfa}
+.wm .bw-teal{background:var(--teal)}
+.wm .bw-teal .bw-head h2{color:#fff}.wm .bw-teal .kick{color:var(--gold-pale)}
+.wm .bw-teal .menrow{border-color:var(--gold-pale);color:#fefcfa}
+.wm .bw-teal .menrow strong{color:#fff!important}
+.wm .bw-teal .menrow a{color:var(--gold-pale)}
+.wm .band-way .card{border:none}
+.wm .bw-free{background:var(--cream);color:var(--brown)}
+.wm .bw-free h2{color:var(--ink)}.wm .bw-free h2 em{color:var(--gold)}.wm .bw-free .kick{color:var(--gold-deep)}
+.wm .bw-free .btn.light{color:var(--ink);border-color:var(--gold)}
+.wm .bw-free p[style*="gold-pale"]{color:var(--gold-deep)!important}
+.wm [id]{scroll-margin-top:130px}
+@media(max-width:900px){.wm .waynav{position:static}.wm .band-way{padding:60px 0}}
+
+/* ladder-first layout, 23 Oct 2026 */
+.wm .ladder{background:var(--cream-2);padding:34px 0 40px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.wm .lad{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.wm .lt{display:flex;flex-direction:column;gap:4px;padding:20px 18px 22px;text-decoration:none;border-top:4px solid var(--gold);background:var(--cream);transition:transform .2s,box-shadow .2s}
+.wm .lt:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(7,7,7,.12)}
+.wm .lt .ln{font-family:var(--display);font-weight:700;font-size:2rem;line-height:1;color:var(--gold)}
+.wm .lt .lk{font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--gold-deep);margin-top:6px}
+.wm .lt b{font-family:var(--display);color:var(--ink);font-size:1.02rem;line-height:1.25}
+.wm .lt .lp{margin-top:auto;padding-top:10px;font-family:var(--display);font-weight:700;font-size:1.3rem;color:var(--ink)}
+.wm .l-free{border-top-color:var(--gold-soft)}
+.wm .l-own{border-top-color:var(--teal)}
+.wm .l-grp{border-top-color:var(--gold)}
+.wm .l-day{border-top-color:#070707}
+.wm .l-int{border-top-color:var(--teal);background:var(--teal)}
+.wm .l-int .ln,.wm .l-int .lk{color:var(--gold-pale)}
+.wm .l-int b,.wm .l-int .lp{color:#fff}
+.wm #intensive-wrap .stats{margin-top:0}
+@media(max-width:1000px){.wm .lad{grid-template-columns:repeat(2,1fr)}.wm .l-int{grid-column:1 / -1}}
+@media(max-width:560px){.wm .lad{grid-template-columns:1fr}}
+
+/* readable labels on dark green, 23 Oct 2026 */
+.wm .feature .kick,.wm .teal .kick,.wm .bw-teal .kick,.wm .bw-black .kick,.wm .vip .kick{color:#fefcfa!important;font-size:13px;opacity:1}
+.wm .l-int .ln,.wm .l-int .lk{color:#fefcfa}
 </style>
 
 <main class="wm">
@@ -365,92 +418,48 @@ gtag('config', 'G-SY8NKELMNZ');
 <section class="hero2">
   <div>
     <p class="kick">Work with Juliette</p>
-    <h1>The deepest way to work with me is <em>one to one.</em></h1>
-    <p class="lede"><strong>The 3 Month Intensive.</strong> Three months to feel your own body again. Whatever life is throwing at you.</p>
-    <p>For women who look like they have it all together, and can't remember the last time they actually felt touched. Six private calls, me on WhatsApp between them, and a half-day VIP intensive where we map your whole body.</p>
+    <h1>There's a way in, <em>wherever you are.</em></h1>
+    <p class="lede"><strong>Start free tonight.</strong> Learn on your own, in your own time. Join a group of women. Or work with me one to one, for a day or for three months.</p>
     <div class="btns">
-      <a href="/the-3-month-intensive" class="btn">See the 3 Month Intensive</a>
-      <a href="https://buy.stripe.com/aFa00ifSz2CI2Lr5aJ0co2s" class="btn line">Begin now · £5,000</a>
+      <a href="#ladder" class="btn">Find your way in &darr;</a>
+      <a href="/touch-reset-quiz" class="btn line">Take the free quiz</a>
     </div>
   </div>
   <figure class="fig">
     <img src="Juliette_KingsX_onetoonework.jpg" alt="Juliette Karaman, hands on hips, against a brick wall">
-    <figcaption class="tag"><small>Women only</small>Three months · One to one</figcaption>
+    <figcaption class="tag"><small>Five ways in</small>From free to fully one to one</figcaption>
   </figure>
 </section>
 
-<div class="stats"><div class="row">
-  <div><b>3</b><span>Months, one to one</span></div>
-  <div><b>6</b><span>Private calls</span></div>
-  <div><b>½</b><span>Day VIP intensive</span></div>
-  <div><b>1:1</b><span>Just you and me</span></div>
-</div></div>
-
-<!-- FEATURE: the intensive -->
-<section class="feature">
-  <div class="ph"><span class="chip">In person · Half day</span><img src="karentouch.JPG" alt="Juliette laughing, hands resting on a client lying on a treatment table" loading="lazy"></div>
-  <div class="txt">
-    <p class="kick">The 3 Month Intensive</p>
-    <h2>One person. One private space. <em>Your whole body.</em></h2>
-    <p>Instead of a therapist, a couples counsellor, a sex coach and another weekend retreat, each seeing a single part of you, the Intensive brings it all together.</p>
-    <ul class="incl">
-      <li><b>01</b>Six private calls</li>
-      <li><b>02</b>WhatsApp between calls</li>
-      <li><b>03</b>Half-day VIP intensive, your whole body mapped</li>
-      <li><b>04</b>Meditations made for you</li>
-      <li><b>05</b>My online programmes</li>
-      <li><b>06</b>The full set of Cards</li>
-    </ul>
-    <p class="price">£5,000<small>or £1,700 a month for three months</small></p>
-    <div class="btns">
-      <a href="https://buy.stripe.com/aFa00ifSz2CI2Lr5aJ0co2s" class="btn">Begin now · £5,000</a>
-      <a href="https://buy.stripe.com/28EaEWayf3GM99P32B0co2r" class="btn light">Or £1,700 a month × 3</a>
-    </div>
-    <p style="margin-top:20px"><a href="/the-3-month-intensive" style="color:var(--gold-pale);text-decoration:underline">Read everything about the Intensive →</a></p>
-  </div>
-</section>
-
-<!-- PROOF -->
-<section class="sec cream2">
+<section class="ladder" id="ladder">
   <div class="in">
-    <div class="pull"><p>"The combination of online work and a VIP day was divine. By the time we met in person, I was already a changed person, and this was the icing on the cake!"</p><cite>Gina B.</cite></div>
-    <div class="shots">
-      <img src="intensive-testimonial-d.jpg" alt="Message from D.: When we worked together I feel so safe and held." loading="lazy">
-      <img src="intensive-testimonial-miki.jpg" alt="Message from Miki: For the first time, sex feels integrated with who I am." loading="lazy">
-      <img src="how-to-feel-like-a-woman-more-pleasure.jpg" alt="WhatsApp message from a client: I definitely feel more in my body and more pleasure after our work together" loading="lazy">
+    <div class="lad">
+      <a href="#free" class="lt l-free"><span class="ln">01</span><span class="lk">Free</span><b>The Touch Reset Quiz</b><span class="lp">Free</span></a>
+      <a href="#on-your-own" class="lt l-own"><span class="ln">02</span><span class="lk">On your own</span><b>Courses and cards</b><span class="lp">From £17</span></a>
+      <a href="#a-group" class="lt l-grp"><span class="ln">03</span><span class="lk">In a group</span><b>How to Feel Like a Woman</b><span class="lp">£197</span></a>
+      <a href="#a-day" class="lt l-day"><span class="ln">04</span><span class="lk">One to one</span><b>A VIP day, or as a couple</b><span class="lp">From £1,500</span></a>
+      <a href="#intensive" class="lt l-int"><span class="ln">05</span><span class="lk">Three months</span><b>The 3 Month Intensive</b><span class="lp">£5,000</span></a>
     </div>
   </div>
 </section>
 
-<!-- OTHER WAYS -->
-<section class="sec">
+<!-- NOT SURE -->
+<section class="sec bw-free" id="free">
+  <div class="tight center">
+    <p class="kick">01 · Free</p>
+    <h2>Find your pattern first. <em>It's free.</em></h2>
+    <p>Five minutes. The Touch Reset Quiz shows you your Touch Pattern, your Pleasure Language and your Desire Style.</p>
+    <div class="btns" style="justify-content:center">
+      <a href="/touch-reset-quiz" class="btn">Take the free quiz</a>
+      <a href="/apply" class="btn light">Or apply for a Touch Audit</a>
+    </div>
+    <p style="font-family:var(--display);font-weight:700;color:var(--gold-pale);font-size:clamp(18px,2.4vw,24px);margin-top:40px">Being touched isn't the same as feeling touch. Patterns can be changed.</p>
+  </div>
+</section>
+
+<section class="band-way bw-teal" id="on-your-own">
   <div class="in">
-    <div class="center"><p class="kick">Not ready for three months?</p><h2>Other ways to work with me</h2></div>
-
-    <div class="group">
-      <div class="ghead"><span class="gn">01</span><h3>With me, one to one</h3><p>A VIP day, or the programme for couples</p></div>
-      <div class="cards two">
-        <div class="card">
-          <div class="im"><img src="touch-heart-hands-bw.jpg" alt="Hands resting over a heart, black and white" loading="lazy"></div>
-          <div class="bd"><p class="meta">Private · Half day or full day</p><h3><a href="/womens-intensive" class="stretch">VIP Days</a></h3><p class="pr">From £1,500</p><p>One day, all of it on you. Online, or in person with me. A half day or a full day.</p><span class="go">See the VIP day for women →</span><span class="also">Also for <a href="/mens-intensive">men</a> and <a href="/couples-intensive">couples</a></span></div>
-        </div>
-        <a href="/the-beginning" class="card">
-          <div class="im"><img src="media/698afbc0a41b876eb63dd582.jpg" alt="The Beginning: The Ultimate Touch Reset" loading="lazy" style="object-position:center"></div>
-          <div class="bd"><p class="meta">For couples · 12 weeks</p><h3>The Beginning</h3><p class="pr">By application</p><p>The ultimate Touch Reset, for couples. Where you start again when touch has gone quiet between you.</p><span class="go">See The Beginning →</span></div>
-        </a>
-      </div>
-    </div>
-
-    <div class="group">
-      <div class="ghead"><span class="gn">02</span><h3>With me, in a group</h3><p>Women only</p></div>
-      <div class="cards one">
-        <a href="/how-to-feel-like-a-woman" class="card wide">
-          <div class="im"><img src="how-to-feel-like-a-woman-hero.jpg" alt="How to Feel Like a Woman" loading="lazy"></div>
-          <div class="bd"><span class="badge">Starts Wed 28 Oct</span><p class="meta">Women only · Group · 4 weeks</p><h3>How to Feel Like a Woman</h3><p class="pr">£197</p><p>The Art of Being Turned On After 40. Four live masterclasses, and at least three fifteen-minute practices every week with me on the call, doing it with you.</p><span class="go">Find out more →</span></div>
-        </a>
-      </div>
-    </div>
-
+    <div class="bw-head"><p class="kick">02 · On your own</p><h2>In your own time, at your own pace.</h2></div>
     <div class="group">
       <div class="ghead"><span class="gn">03</span><h3>On your own</h3><p>In your own time, at your own pace</p></div>
       <div class="cards four">
@@ -473,22 +482,70 @@ gtag('config', 'G-SY8NKELMNZ');
       </div>
       <div class="menrow"><span><strong style="color:var(--ink)">For men:</strong> The Unspoken Distance, £97. For the man who knows something is off but can't name it.</span><a href="/the-unspoken-distance">Get the guide →</a></div>
     </div>
+  
   </div>
 </section>
-
-<!-- NOT SURE -->
-<section class="sec teal">
-  <div class="tight center">
-    <p class="kick">Not sure where to start?</p>
-    <h2>Find your pattern first. <em>It's free.</em></h2>
-    <p>Five minutes. The Touch Reset Quiz shows you your Touch Pattern, your Pleasure Language and your Desire Style.</p>
-    <div class="btns" style="justify-content:center">
-      <a href="/touch-reset-quiz" class="btn">Take the free quiz</a>
-      <a href="/apply" class="btn light">Or apply for a Touch Audit</a>
+<section class="band-way bw-ochre" id="a-group">
+  <div class="in">
+    <div class="bw-head"><p class="kick">03 · In a group</p><h2>Held, with other women.</h2></div>
+    <div class="group">
+      <div class="ghead"><span class="gn">02</span><h3>With me, in a group</h3><p>Women only</p></div>
+      <div class="cards one">
+        <a href="/how-to-feel-like-a-woman" class="card wide">
+          <div class="im"><img src="how-to-feel-like-a-woman-hero.jpg" alt="How to Feel Like a Woman" loading="lazy"></div>
+          <div class="bd"><span class="badge">Starts Wed 28 Oct</span><p class="meta">Women only · Group · 4 weeks</p><h3>How to Feel Like a Woman</h3><p class="pr">£197</p><p>The Art of Being Turned On After 40. Four live masterclasses, and at least three fifteen-minute practices every week with me on the call, doing it with you.</p><span class="go">Find out more →</span></div>
+        </a>
+      </div>
     </div>
-    <p style="font-family:var(--display);font-weight:700;color:var(--gold-pale);font-size:clamp(18px,2.4vw,24px);margin-top:40px">Being touched isn't the same as feeling touch. Patterns can be changed.</p>
+
+
   </div>
 </section>
+<section class="band-way bw-black" id="a-day">
+  <div class="in">
+    <div class="bw-head"><p class="kick">04 · One to one</p><h2>A VIP day, or together as a couple.</h2></div>
+    <div class="group">
+      <div class="ghead"><span class="gn">01</span><h3>With me, one to one</h3><p>A VIP day, or the programme for couples</p></div>
+      <div class="cards two">
+        <div class="card">
+          <div class="im"><img src="touch-heart-hands-bw.jpg" alt="Hands resting over a heart, black and white" loading="lazy"></div>
+          <div class="bd"><p class="meta">Private · Half day or full day</p><h3><a href="/womens-intensive" class="stretch">VIP Days</a></h3><p class="pr">From £1,500</p><p>One day, all of it on you. Online, or in person with me. A half day or a full day.</p><span class="go">See the VIP day for women →</span><span class="also">Also for <a href="/mens-intensive">men</a> and <a href="/couples-intensive">couples</a></span></div>
+        </div>
+        <a href="/the-beginning" class="card">
+          <div class="im"><img src="media/698afbc0a41b876eb63dd582.jpg" alt="The Beginning: The Ultimate Touch Reset" loading="lazy" style="object-position:center"></div>
+          <div class="bd"><p class="meta">For couples · 12 weeks</p><h3>The Beginning</h3><p class="pr">By application</p><p>The ultimate Touch Reset, for couples. Where you start again when touch has gone quiet between you.</p><span class="go">See The Beginning →</span></div>
+        </a>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+<div id="intensive-wrap">
+<section class="feature" id="intensive">
+  <div class="ph"><span class="chip">In person · Half day</span><img src="karentouch.JPG" alt="Juliette laughing, hands resting on a client lying on a treatment table" loading="lazy"></div>
+  <div class="txt">
+    <p class="kick">05 · Three months, one to one</p>
+    <h2>One person. One private space. <em>Your whole body.</em></h2>
+    <p>Instead of a therapist, a couples counsellor, a sex coach and another weekend retreat, each seeing a single part of you, the Intensive brings it all together.</p>
+    <ul class="incl">
+      <li><b>01</b>Six private calls</li>
+      <li><b>02</b>WhatsApp between calls</li>
+      <li><b>03</b>Half-day VIP intensive, your whole body mapped</li>
+      <li><b>04</b>Meditations made for you</li>
+      <li><b>05</b>My online programmes</li>
+      <li><b>06</b>The full set of Cards</li>
+    </ul>
+    <p class="price">£5,000<small>or £1,700 a month for three months</small></p>
+    <div class="btns">
+      <a href="https://buy.stripe.com/aFa00ifSz2CI2Lr5aJ0co2s" class="btn">Begin now · £5,000</a>
+      <a href="https://buy.stripe.com/28EaEWayf3GM99P32B0co2r" class="btn light">Or £1,700 a month × 3</a>
+    </div>
+    <p style="margin-top:20px"><a href="/the-3-month-intensive" style="color:#fefcfa;text-decoration:underline;font-weight:600">Read everything about the Intensive →</a></p>
+  </div>
+</section>
+</div>
+
 
 </main>
 
