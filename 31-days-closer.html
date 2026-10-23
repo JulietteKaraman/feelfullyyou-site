@@ -41,16 +41,20 @@
   .eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);font-weight:600}
   h1,h2,h3{font-family:var(--display);font-weight:700}
   h1,h2{line-height:1.07;letter-spacing:-.022em}
-  em{font-style:italic;color:var(--gold-deep);font-weight:600}
   h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:22px;color:var(--ink)}
-  h3{font-size:1.15rem;line-height:1.2;letter-spacing:-.015em;color:var(--ink)}
+  h3{font-size:1.2rem;line-height:1.2;letter-spacing:-.015em;color:var(--ink)}
   .reveal{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
   .reveal.in{opacity:1;transform:none}
   .btn{display:inline-block;cursor:pointer;border:none;font-family:var(--body);font-weight:600;font-size:15px;letter-spacing:.01em;padding:16px 32px;border-radius:2px;background:var(--gold);color:#fff;transition:transform .25s,background .25s;text-decoration:none}
   .btn:hover{background:var(--gold-deep);transform:translateY(-1px)}
+  .btn.teal{background:var(--teal);color:#fff}
+  .btn.teal:hover{background:var(--teal-mid)}
   .btn.ghost{background:transparent;border:1px solid var(--gold-pale);color:var(--gold-pale)}
   .btn.ghost:hover{background:rgba(255,255,255,.08)}
+  .btn.ghost-dark{background:transparent;border:1px solid var(--gold);color:var(--gold-deep)}
+  .btn.ghost-dark:hover{background:var(--gold);color:#fff}
 
+  /* TOPBAR */
   .topbar{position:fixed;top:0;left:0;right:0;z-index:9999;background:var(--teal);padding:0 28px;height:64px;display:flex;align-items:center;justify-content:space-between}
   .topbar .brand{font-family:var(--display);font-weight:700;font-size:16px;letter-spacing:.02em;color:var(--cream)}
   .topbar .brand b{color:var(--gold-pale)}
@@ -61,131 +65,91 @@
   .topbar nav a.btn:hover{background:var(--gold-deep)}
   @media(max-width:860px){.topbar nav > a:not(.btn){display:none}}
 
-  .hero{padding-top:64px;background:var(--teal);overflow:hidden}
-  .hero-img{width:100%;height:auto;max-height:720px;object-fit:cover;object-position:center;display:block}
-  .hero-intro{max-width:var(--max);margin:0 auto;padding:56px 28px 64px;text-align:center}
+  /* HERO */
+  .hero{padding-top:66px;background:var(--teal);overflow:hidden}
+  .hero-inner{display:grid;grid-template-columns:1.1fr .9fr;align-items:end;max-width:var(--max);margin:0 auto;padding:0 28px}
+  .hero .copy{padding:64px 56px 72px 0}
   .hero .eyebrow{color:var(--gold-pale);margin-bottom:18px}
   .hero h1{font-size:clamp(2rem,4.2vw,3.2rem);color:#fff;letter-spacing:-.028em;line-height:1.05;margin-bottom:24px}
   .hero h1 em{font-style:italic;color:var(--gold-pale)}
-  .hero .sub{font-size:18px;color:#d7d0c4;max-width:52ch;line-height:1.55;margin:0 auto 20px}
-  .hero .payoff{font-family:var(--display);font-style:italic;font-weight:600;font-size:clamp(20px,2.6vw,28px);color:var(--gold-pale);max-width:46ch;line-height:1.35;margin:0 auto 36px}
-  .hero .cta-row{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
-  @media(max-width:860px){.hero-intro{padding:40px 24px 48px}}
+  .hero .sub{font-size:18px;color:#d7d0c4;max-width:38ch;line-height:1.55;margin-bottom:36px}
+  .hero .photo-col img{width:100%;height:auto;display:block}
+  @media(max-width:860px){
+    .hero-inner{grid-template-columns:1fr}
+    .hero .copy{padding:48px 0 36px}
+  }
 
+  /* BELIEF BAND */
   .belief{padding:72px 0;background:#99680c;border-top:1px solid var(--line);text-align:center}
-  .belief .line{font-family:var(--display);font-weight:700;font-style:italic;color:#fff;font-size:clamp(1.4rem,3vw,2.2rem);line-height:1.3;max-width:36ch;margin:0 auto;letter-spacing:-.02em}
+  .belief .line{font-family:var(--display);font-weight:700;font-style:italic;color:#fff;font-size:clamp(1.4rem,3vw,2.2rem);line-height:1.2;max-width:28ch;margin:0 auto;letter-spacing:-.02em}
 
-  .atmo{position:relative;min-height:480px;overflow:hidden;display:flex;align-items:center;justify-content:center}
-  .atmo img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
-  .atmo .overlay{position:absolute;inset:0;background:rgba(6,26,26,.75)}
-  .atmo .content{position:relative;z-index:1;text-align:center;padding:60px 28px;max-width:680px}
-  .atmo .content h2{color:#fff;margin-bottom:20px;font-size:clamp(1.8rem,4vw,2.8rem)}
-  .atmo .content p{color:#d7d0c4;font-size:18px;line-height:1.65;margin:0 auto;max-width:52ch}
-  .atmo.scene{min-height:640px}
-  .atmo.scene .content{max-width:740px;padding:84px 26px}
-  .atmo.scene .content h2{margin-bottom:34px;letter-spacing:-.02em;line-height:1.05}
-  .atmo.scene .content h2 em{display:block;font-style:italic;font-weight:600;color:var(--gold-pale)}
-  .atmo.scene .beat{font-family:var(--body);color:#e6e0d4;font-size:clamp(17px,2.1vw,20px);line-height:1.5;max-width:30ch;margin:0 auto 20px}
-  .atmo.scene .beat.soft{color:#c0b8a8;font-size:clamp(16px,1.9vw,17.5px);max-width:34ch}
-  .atmo.scene .beat strong{color:#fff;font-weight:600}
-  .atmo.scene .spoken{margin:30px auto;max-width:34ch}
-  .atmo.scene .spoken .pre{display:block;font-family:var(--body);font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-soft);font-weight:600;margin-bottom:10px}
-  .atmo.scene .spoken .q{display:block;font-family:var(--display);font-weight:700;font-style:italic;color:#fff;font-size:clamp(1.75rem,5.2vw,2.5rem);line-height:1.1;letter-spacing:-.02em}
-  .atmo.scene .spoken .post{display:block;font-family:var(--body);font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-soft);font-weight:600;margin-top:10px}
-  .atmo.scene .rule{width:44px;height:1px;background:var(--gold-soft);opacity:.55;margin:34px auto}
-  .atmo.scene .quiet{font-family:var(--display);font-weight:600;font-style:italic;color:var(--gold-pale);font-size:clamp(1.3rem,3.4vw,2rem);line-height:1.3;max-width:20ch;margin:0 auto;letter-spacing:-.01em}
-
+  /* PAIN */
   .pain{padding:80px 0;border-top:1px solid var(--line);background:var(--cream)}
   .pain .eyebrow{margin-bottom:18px}
   .pain h2{max-width:28ch}
   .pain p{color:var(--brown);font-size:17px;line-height:1.7;margin-bottom:18px}
   .pain .pull{font-family:var(--display);font-weight:600;font-size:19px;color:var(--ink);line-height:1.35;margin:32px 0;padding-left:20px;border-left:3px solid var(--gold);max-width:46ch}
-  .pain-split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-  .feeling-split{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center;margin:48px 0 36px}
-  .feeling-photo img{width:100%;height:auto;display:block;border-radius:12px}
-  @media(max-width:700px){.feeling-split{grid-template-columns:1fr}}
-  .pain-photo img{border-radius:12px;width:100%;height:auto;display:block}
-  .pain-lede{font-size:18px;line-height:1.75;color:var(--brown);margin-bottom:16px}
-  .pain-hook{font-size:17px;line-height:1.7;color:var(--ink);font-weight:600;margin-bottom:0}
-  @media(max-width:700px){.pain-split{grid-template-columns:1fr}.pain-photo{order:-1}}
-  .recognition-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:36px 0}
-  .recog-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:32px 28px}
-  .recog-label{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
-  .recog-card p{font-size:16px;line-height:1.7;color:var(--brown);margin-bottom:12px}
-  .recog-q{font-family:var(--display);font-weight:700;font-size:17px;color:var(--ink);line-height:1.4;font-style:italic;border-top:1px solid var(--line);padding-top:16px;margin-top:16px}
-  .missing{padding:80px 0;background:var(--cream);border-top:1px solid var(--line)}
-  .missing h2{max-width:32ch;margin-bottom:24px}
-  .missing-pull{font-family:var(--display);font-weight:700;font-size:20px;color:var(--ink);line-height:1.4;padding:24px 28px;border-left:4px solid var(--gold);background:#fff;border-radius:0 8px 8px 0;margin:32px 0}
-  .missing p{font-size:17px;line-height:1.75;color:var(--brown);margin-bottom:14px}
-  .missing p strong,.pain-lede strong,.why-copy .intro strong{color:var(--ink);font-weight:600}
-  .steps{margin:34px 0 26px;display:grid;gap:14px}
-  .step{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:start;background:#fff;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:0 8px 8px 0;padding:24px 28px}
-  .step .num{font-family:var(--display);font-weight:700;font-size:14px;letter-spacing:.08em;color:var(--gold-deep);padding-top:6px}
-  .step .body{margin:0!important;font-size:16.5px;line-height:1.7;color:var(--brown)}
-  .step .do{display:block;font-family:var(--display);font-weight:700;font-size:clamp(18px,2.2vw,21px);color:var(--ink);line-height:1.28;letter-spacing:-.015em;margin-bottom:8px}
-  .step .aside{display:block;margin-top:8px;font-family:var(--display);font-style:italic;font-weight:600;font-size:15.5px;color:var(--gold-deep)}
-  @media(max-width:560px){.step{padding:20px;gap:14px}}
-  .pain-hook-big{font-family:var(--display);font-weight:700;font-size:clamp(19px,2.7vw,25px);line-height:1.28;letter-spacing:-.02em;color:var(--ink);max-width:32ch;margin:16px 0 0}
-  .testi-grid--5{grid-template-columns:1fr 1fr;gap:20px}
-  .tried-block{margin-top:56px;padding-top:48px;border-top:1px solid var(--line)}
-  .tried-banner{border-radius:12px;overflow:hidden;max-height:320px}
-  .tried-banner img{width:100%;height:320px;object-fit:cover;object-position:center top;display:block}
-  .tried-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:36px}
-  .tried-item{padding:20px 24px;background:#fff;border:1px solid var(--line);border-radius:10px}
-  .tried-item h4{font-family:var(--display);font-size:15px;font-weight:700;color:var(--ink);margin-bottom:6px}
-  .tried-item p{font-size:15px;line-height:1.65;color:var(--brown);margin:0}
-  @media(max-width:640px){.tried-grid{grid-template-columns:1fr}}
-  @media(max-width:640px){.recognition-grid{grid-template-columns:1fr}.tried-grid{grid-template-columns:1fr}}
-  .maybe-list{margin:28px 0;display:flex;flex-direction:column}
-  .maybe-item{padding:16px 0 16px 24px;border-bottom:1px solid var(--line);color:var(--brown);font-size:17px;line-height:1.5;position:relative}
-  .maybe-item:first-child{border-top:1px solid var(--line)}
-  .maybe-item::before{content:"";position:absolute;left:0;top:50%;width:8px;height:8px;border-radius:50%;background:var(--gold-soft);transform:translateY(-50%)}
 
-  .spine{padding:80px 0;border-top:1px solid var(--line);background:var(--cream-2)}
-  .spine h2{max-width:24ch}
-  .spine .lede{font-size:17px;color:var(--brown);max-width:58ch;margin-bottom:48px;line-height:1.65}
-  .weeks{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:36px}
-  .week{background:var(--cream);border:1px solid var(--line);border-radius:4px;padding:32px 28px}
-  .week .wlabel{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:10px}
-  .week h3{font-size:1.2rem;color:var(--ink);margin-bottom:10px}
-  .week p{font-size:15px;color:var(--brown);line-height:1.6;max-width:none}
-  .week-culm{background:var(--teal);color:#fff;border-color:transparent}
-  .week-culm h3{color:#fff}
-  .week-culm p{color:rgba(255,255,255,.85);margin-bottom:12px}
-  .week-culm p:last-child{margin-bottom:0}
-  @media(max-width:700px){.weeks{grid-template-columns:1fr}}
+  /* METHOD */
+  .method{background:var(--teal);border-top:1px solid var(--line-dark)}
+  .method-inner{display:grid;grid-template-columns:1fr 1fr;align-items:start;max-width:var(--max);margin:0 auto}
+  .method .photo-col{position:relative;overflow:hidden;align-self:stretch}
+  .method .photo-col img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+  .method .copy{padding:80px 52px}
+  .method .eyebrow{color:var(--gold-pale);margin-bottom:18px}
+  .method h2{color:#fff;max-width:28ch;margin-bottom:16px}
+  .method .sub{color:#d7d0c4;font-size:17px;margin-bottom:36px;max-width:44ch;line-height:1.6}
+  .method-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:8px}
+  .method-item{background:var(--teal);border:1px solid var(--line-dark);border-radius:4px;padding:22px}
+  .method-item h3{color:var(--gold-pale);font-size:.9rem;letter-spacing:.04em;text-transform:uppercase;margin-bottom:8px}
+  .method-item p{color:#c8c0b4;font-size:14px;line-height:1.6;max-width:none}
+  @media(max-width:860px){
+    .method-inner{grid-template-columns:1fr}
+    .method .photo-col{min-height:340px;order:-1}
+    .method .copy{padding:52px 28px}
+  }
+  @media(max-width:700px){.method-grid{grid-template-columns:1fr}}
 
-  .included{padding:80px 0;border-top:1px solid var(--line);background:var(--teal)}
-  .included .eyebrow{color:var(--gold-pale);margin-bottom:18px}
-  .included h2{color:#fff;margin-bottom:12px}
-  .included .lede{color:#d7d0c4;font-size:17px;max-width:52ch;margin-bottom:48px;line-height:1.6}
-  .included-feature{margin-bottom:48px}
-  .included-feature img{width:100%;max-width:720px;margin:0 auto;border-radius:4px;display:block}
-  .checklist{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-  .check-item{background:rgba(255,255,255,.05);border:1px solid var(--line-dark);border-radius:4px;padding:24px;display:grid;grid-template-columns:68px 1fr;gap:18px;align-items:start}
-  .check-item img{width:68px;height:68px;object-fit:contain;border-radius:4px}
-  .check-item .ctitle{font-family:var(--display);font-weight:700;color:var(--gold-pale);font-size:.95rem;margin-bottom:6px}
-  .check-item .cdesc{color:#c8c0b4;font-size:14px;line-height:1.6;max-width:none}
-  @media(max-width:700px){.checklist{grid-template-columns:1fr}}
+  /* OFFER */
+  .offer{padding:80px 0;background:var(--cream-2);border-top:1px solid var(--line)}
+  .offer .eyebrow{margin-bottom:18px}
+  .offer h2{max-width:24ch}
+  .offer-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:36px}
+  .offer-grid.single{grid-template-columns:1fr;max-width:520px;margin-left:auto;margin-right:auto}
+  .offer-card{background:var(--cream);border:1px solid var(--line);border-radius:4px;padding:36px 32px}
+  .offer-card.featured{background:var(--teal);border-color:var(--line-dark)}
+  .offer-card .tag{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--gold-deep);margin-bottom:12px}
+  .offer-card.featured .tag{color:var(--gold-pale)}
+  .offer-card .price{font-family:var(--display);font-weight:700;font-size:2.2rem;color:var(--ink);letter-spacing:-.02em;margin-bottom:4px}
+  .offer-card.featured .price{color:#fff}
+  .offer-card .price-sub{font-size:14px;color:var(--brown);margin-bottom:24px}
+  .offer-card.featured .price-sub{color:#d7d0c4}
+  .offer-list{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:28px}
+  .offer-list li{display:flex;align-items:flex-start;gap:12px;font-size:15px;color:var(--brown);line-height:1.5}
+  .offer-card.featured .offer-list li{color:#d7d0c4}
+  .offer-list li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:9px}
+  .offer-card.featured .offer-list li::before{background:var(--gold-pale)}
+  .offer-note{font-size:13px;color:var(--brown);font-style:italic;margin-top:16px}
+  .offer-card.featured .offer-note{color:var(--gold-soft)}
+  @media(max-width:700px){.offer-grid{grid-template-columns:1fr}}
 
-  .testi{padding:80px 0;background:var(--cream-2);border-top:1px solid var(--line)}
-  .testi .eyebrow{margin-bottom:36px}
-  .testi-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-  .tcard{border-radius:4px;padding:36px 32px}
-  .tcard.t1{background:var(--teal);border:1px solid var(--line-dark)}
-  .tcard.t2{background:#a88538}
-  .tcard.t3{background:var(--blue);grid-column:1/-1}
-  .tcard .mark{font-family:var(--display);font-weight:700;font-size:2.4rem;line-height:.5;height:20px;margin-bottom:10px}
-  .tcard.t1 .mark,.tcard.t2 .mark{color:rgba(255,255,255,.6)}
-  .tcard.t3 .mark{color:var(--gold-deep)}
-  .tcard blockquote{font-family:var(--display);font-weight:600;font-style:italic;font-size:1.05rem;line-height:1.45;margin-bottom:16px}
-  .tcard.t1 blockquote,.tcard.t2 blockquote{color:#fff}
-  .tcard.t3 blockquote{color:var(--ink);font-size:1.15rem}
-  .tcard .who{font-size:12px;letter-spacing:.07em;text-transform:uppercase;font-weight:600}
-  .tcard.t1 .who,.tcard.t2 .who{color:rgba(255,255,255,.75)}
-  .tcard.t3 .who{color:var(--gold-deep)}
-  @media(max-width:700px){.testi-grid{grid-template-columns:1fr}.tcard.t3{grid-column:auto}}
+  /* TESTIMONIALS */
+  .testi{padding:80px 0;background:var(--teal);border-top:1px solid var(--line-dark)}
+  .testi .eyebrow{color:var(--gold-pale);margin-bottom:36px}
+  .testi-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px}
+  .tcard{border-radius:4px;padding:32px 28px}
+  .tcard:nth-child(1){background:#a88538}
+  .tcard:nth-child(2){background:var(--teal);border:1px solid var(--line-dark)}
+  .tcard:nth-child(3){background:var(--blue)}
+  .tcard .mark{font-family:var(--display);font-weight:700;font-size:2.2rem;line-height:.5;height:20px;color:#fff;margin-bottom:8px}
+  .tcard:nth-child(3) .mark{color:var(--gold-deep)}
+  .tcard blockquote{font-family:var(--display);font-weight:600;font-style:italic;font-size:1rem;line-height:1.4;color:#fff;margin-bottom:14px}
+  .tcard:nth-child(3) blockquote{color:var(--ink)}
+  .tcard .who{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.7);font-weight:500}
+  .tcard:nth-child(3) .who{color:var(--gold-deep)}
+  @media(max-width:760px){.testi-grid{grid-template-columns:1fr}}
 
+  /* WHY ME */
   .why-me{border-top:1px solid var(--line)}
   .why-split{display:grid;grid-template-columns:.9fr 1.1fr;align-items:stretch}
   .why-photo{overflow:hidden}
@@ -196,41 +160,42 @@
   .why-copy .intro{font-size:16px;color:var(--brown);line-height:1.65;margin-bottom:16px;max-width:52ch}
   .modalities{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0}
   .modalities span{font-family:var(--body);font-weight:500;font-size:14px;color:var(--gold-deep);border:1px solid var(--gold-soft);border-radius:99px;padding:7px 16px;background:var(--cream);letter-spacing:.01em}
+  .needed{font-style:italic;color:var(--gold-deep);font-size:15px;margin-bottom:20px}
   .press{display:flex;gap:20px;flex-wrap:wrap;align-items:center;margin:28px 0;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
   .press span{font-family:var(--display);font-size:16px;color:var(--gold-soft)}
   .press .pod{font-style:italic;color:var(--gold-deep);font-size:14px}
   .why-last{font-size:16px;color:var(--ink);font-weight:600;line-height:1.5;max-width:44ch;margin-top:20px}
-  @media(max-width:820px){.why-split{grid-template-columns:1fr}.why-photo{min-height:340px}.why-copy{padding:52px 28px}}
+  @media(max-width:820px){
+    .why-split{grid-template-columns:1fr}
+    .why-photo{min-height:340px}
+    .why-copy{padding:52px 28px}
+  }
 
+  /* OUTCOMES */
   .outcomes{padding:80px 0;background:var(--cream-2);border-top:1px solid var(--line)}
   .outcomes h2{max-width:24ch}
   .outcomes-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:36px}
-  .outcome{background:var(--blue);border-radius:4px;padding:28px}
+  .outcome{background:var(--blue);border:none;border-radius:4px;padding:28px}
   .outcome h3{font-size:1.05rem;color:var(--teal);margin-bottom:10px;font-weight:700}
   .outcome p{font-size:15px;color:var(--ink);line-height:1.6;max-width:none}
   @media(max-width:700px){.outcomes-grid{grid-template-columns:1fr}}
 
+  /* FILTER */
   .filter{padding:80px 0;background:var(--cream);border-top:1px solid var(--line)}
   .filter-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-top:36px}
   .filter h3{font-size:1.1rem;font-weight:700;margin-bottom:20px}
   .filter-list{list-style:none;display:flex;flex-direction:column;gap:12px}
-  .filter-list li{font-size:16px;color:var(--brown);line-height:1.55;padding-left:34px;position:relative}
-  .filter-yes .filter-list li::before{content:"\2713";position:absolute;left:0;top:-2px;font-size:20px;font-weight:700;line-height:1;color:var(--teal)}
-  .filter-no .filter-list li::before{content:"\2715";position:absolute;left:0;top:-2px;font-size:18px;font-weight:700;line-height:1;color:var(--ink)}
+  .filter-list li{font-size:16px;color:var(--brown);line-height:1.55;padding-left:18px;position:relative}
+  .filter-list li::before{content:"";position:absolute;left:0;top:10px;width:6px;height:6px;border-radius:50%;background:var(--gold-soft)}
   @media(max-width:700px){.filter-grid{grid-template-columns:1fr}}
 
-  .cta-section{padding:100px 0;background:var(--teal);border-top:1px solid var(--line-dark);text-align:center}
-  .cta-section .eyebrow{color:var(--gold-pale);margin-bottom:20px}
-  .cta-section h2{color:#fff;max-width:26ch;margin:0 auto 12px}
-  .price-big{font-family:var(--display);font-weight:700;font-size:clamp(56px,10vw,100px);color:#fff;line-height:1;letter-spacing:-.03em;margin:28px 0 8px}
-  .price-note{color:var(--gold-pale);font-size:15px;margin-bottom:36px}
-  .cta-sub{color:#d7d0c4;font-size:17px;max-width:44ch;margin:0 auto 40px;line-height:1.6}
+  /* CTA */
+  .cta-section{padding:88px 0;background:var(--teal);border-top:1px solid var(--line-dark);text-align:center}
+  .cta-section h2{color:#fff;max-width:22ch;margin:0 auto 16px}
+  .cta-section p{color:#d7d0c4;font-size:17px;max-width:42ch;margin:0 auto 36px;line-height:1.6}
   .cta-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
-  .arrives{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-dark);border:1px solid var(--line-dark);max-width:560px;margin:52px auto 0;border-radius:4px;overflow:hidden}
-  .arrives div{background:var(--teal);padding:22px 16px;font-size:14px;color:#c9c2b4}
-  .arrives div b{display:block;color:#fff;font-family:var(--display);font-weight:600;font-size:15px;margin-bottom:4px}
-  @media(max-width:600px){.arrives{grid-template-columns:1fr}}
 
+  /* FAQ */
   .faq{padding:80px 0;background:var(--cream-2);border-top:1px solid var(--line)}
   .faq h2{max-width:24ch;margin-bottom:40px}
   .faq-list{max-width:680px}
@@ -239,6 +204,7 @@
   .faq-item h3{font-size:1.05rem;color:var(--ink);margin-bottom:10px;font-weight:600}
   .faq-item p{font-size:15px;color:var(--brown);line-height:1.65;max-width:none}
 
+  /* FOOTER */
   footer{padding:56px 0 48px;background:var(--gold);color:rgba(255,255,255,.85);border-top:1px solid var(--line-dark)}
   footer .top{display:flex;justify-content:space-between;align-items:flex-start;gap:30px;flex-wrap:wrap;margin-bottom:28px}
   footer .brand{font-family:var(--display);font-weight:700;font-size:17px;color:var(--cream)}
@@ -268,26 +234,6 @@
   .mobile-nav a.btn{margin:14px 28px 6px;display:block;background:var(--gold);color:#fff;padding:12px 20px;border-radius:2px;font-weight:600;text-align:center;border:none}
   .mobile-nav.open{display:flex}
   @media(max-width:860px){.ham{display:block}.topbar .more-wrap{display:none}.topbar nav > .btn{display:none}}
-
-/* 31 Days Closer additions */
-.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:560px;margin:40px auto 34px}
-.mini{background:#fff;color:#000;aspect-ratio:1226/1758;position:relative;box-shadow:0 24px 44px -24px rgba(0,0,0,.55);container-type:inline-size;border:1px solid var(--line)}
-.mini:nth-child(1){transform:rotate(-4deg) translateY(8px)}.mini:nth-child(3){transform:rotate(4deg) translateY(8px)}
-.mini .band{position:absolute;left:0;right:0;top:30%;height:18%;background:#000;color:#c9a85a;display:flex;align-items:center;justify-content:center;text-align:center;font-family:var(--display);font-size:9cqw;letter-spacing:.06em;font-weight:500;padding:0 6%;line-height:1.15}
-.mini .say{position:absolute;left:10%;right:10%;top:56%;text-align:center;font-size:8.4cqw;line-height:1.35;color:#333}
-.mini svg{position:absolute;left:50%;transform:translateX(-50%);width:32%}.mini .t{top:0}.mini .b{bottom:0}
-.sample{margin-top:14px;padding:14px 16px;background:#000;color:#fff;border-radius:4px;font-family:var(--display);font-weight:600;font-size:14px;letter-spacing:.02em;line-height:1.4}
-.sample small{display:block;color:#c9a85a;font-weight:500;font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px}
-.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:40px 0 10px;align-items:start;width:min(1080px,92vw);position:relative;left:50%;transform:translateX(-50%)}
-.shots img{width:100%;border-radius:8px;display:block;box-shadow:0 18px 40px -24px rgba(0,0,0,.4)}
-.naomi{display:grid;grid-template-columns:1fr;gap:32px;align-items:center;margin-top:56px}
-.naomi .vid{position:relative;aspect-ratio:9/16;max-width:320px;margin:0 auto;width:100%;background:#000;border-radius:8px;overflow:hidden}
-.naomi .vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-@media(min-width:820px){.naomi{grid-template-columns:320px 1fr;gap:56px}}
-@media(max-width:640px){.shots{grid-template-columns:1fr}.trio{gap:10px}}
-.sticky31{position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--teal-deep,#061a1a);color:#fff;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 18px calc(12px + env(safe-area-inset-bottom,0px));transform:translateY(110%);transition:transform .3s}
-.sticky31.show{transform:none}.sticky31 b{font-family:var(--display);font-weight:600}.sticky31 .btn{padding:12px 20px;font-size:14px}
-@media(min-width:820px){.sticky31{display:none}}
 </style>
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -299,6 +245,329 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-SY8NKELMNZ');
 </script>
+<style>
+/* VIP day: shared rebuild styles (from 3 Month Intensive), 23 Oct 2026 (Ali-style rebuild) */
+.ix{color:var(--brown)}
+.ix p{max-width:none}
+.ix p+p{margin-top:14px}
+.ix .sec{padding:96px 0}
+.ix .in{max-width:var(--max);margin:0 auto;padding:0 28px}
+.ix .tight{max-width:720px;margin:0 auto;padding:0 28px}
+.ix .center{text-align:center}
+.ix .center p{margin-left:auto;margin-right:auto}
+.ix .kick{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:16px}
+.ix .caps{font-family:var(--display);font-weight:600;text-transform:uppercase;letter-spacing:.06em;font-size:clamp(1.05rem,2vw,1.3rem);line-height:1.35;color:var(--ink)}
+.ix .bigline{font-family:var(--display);font-weight:600;font-size:clamp(1.3rem,2.6vw,1.75rem);line-height:1.3;color:var(--ink)}
+.ix .bigline em{font-style:normal;color:var(--gold)}
+.ix .btn{margin-top:30px}
+.ix .cream2{background:var(--cream-2)}
+.ix .teal{background:var(--teal);color:#fefcfa}
+.ix .teal h2,.ix .teal h3,.ix .teal .caps,.ix .teal .bigline{color:#fff}
+.ix .teal .kick{color:var(--gold-pale)}
+.ix .teal .bigline em{color:var(--gold-pale)}
+/* split: text + photo */
+.ix .split{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+.ix .split.rev .ph{order:-1}
+.ix .ph img{width:100%;height:100%;max-height:640px;object-fit:cover;border-radius:2px}
+/* full-width photo band */
+.ix .band{height:min(70vh,620px);overflow:hidden}
+.ix .band img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+/* three women */
+.ix .three{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+.ix .three .w{background:var(--cream);border-top:3px solid var(--gold);padding:30px 26px}
+.ix .three h3{font-size:1rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px}
+.ix .three .q{margin-top:14px;font-weight:600;color:var(--ink)}
+/* quotes */
+.ix .said{margin:26px 0;font-family:var(--display);font-weight:500;font-size:clamp(1.3rem,2.6vw,1.7rem);line-height:1.5;color:var(--gold-pale)}
+/* numbered list */
+.ix .num{list-style:none;margin-top:30px}
+.ix .num li{display:grid;grid-template-columns:64px 1fr;gap:10px;padding:22px 0;border-top:1px solid var(--line);font-size:1.05rem}
+.ix .num b{font-family:var(--display);font-size:1.4rem;color:var(--gold)}
+/* included */
+.ix .inc{display:grid;gap:0;margin-top:40px}
+.ix .inc .it{display:grid;grid-template-columns:64px 1fr;gap:10px;padding:30px 0;border-top:1px solid var(--line)}
+.ix .inc .it b.n{font-family:var(--display);font-size:1.4rem;color:var(--gold)}
+.ix .inc h3{font-size:1.05rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px}
+.ix .vip{background:var(--teal);color:#fefcfa;margin:40px 0}
+.ix .vip .split{gap:0}
+.ix .vip .txt{padding:56px 52px}
+.ix .vip h3{color:#fff;font-size:1.15rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px}
+.ix .vip .ph img{max-height:none;min-height:100%;border-radius:0}
+.ix .lights{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}
+.ix .lights span{font-size:14px;font-weight:600;padding:7px 16px;border-radius:999px;color:#fefcfa}
+.ix .lights .g{background:#0d3535;border:1px solid var(--gold-pale)}
+.ix .lights .o{background:#a88538}
+.ix .lights .r{background:#070707}
+.ix .worth{font-size:14px;color:var(--gold-pale);margin-top:18px}
+.ix .vip .sub-ph{display:grid;grid-template-columns:1fr;gap:0}
+/* price */
+.ix .price{font-family:var(--display);font-weight:700;font-size:clamp(2.6rem,6vw,4rem);color:var(--ink);line-height:1;margin:6px 0 8px}
+.ix .teal .price{color:#fff}
+/* stories */
+.ix .story{padding:40px 0;border-top:1px solid var(--line)}
+.ix .story h3{font-size:clamp(1.25rem,2.4vw,1.6rem);margin-bottom:16px}
+.ix blockquote{margin:18px 0 0;padding:6px 0 6px 22px;border-left:3px solid var(--gold);font-family:var(--display);font-weight:500;font-size:1.15rem;line-height:1.5;color:var(--ink)}
+/* testimonials */
+.ix .tq{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+.ix .tq .t{background:var(--cream);padding:30px 26px;border-top:3px solid var(--gold)}
+.ix .tq .t p{font-family:var(--display);font-weight:500;color:var(--ink);font-size:1.05rem;line-height:1.5}
+.ix .tq cite{display:block;margin-top:14px;font-style:normal;font-size:13px;font-weight:600;letter-spacing:.04em}
+.ix .wa{display:flex;gap:22px;justify-content:center;align-items:flex-start;flex-wrap:wrap;margin-top:28px}
+.ix .wa img{width:min(100%,420px);border-radius:14px;box-shadow:0 6px 24px rgba(0,0,0,.08)}
+/* faq */
+.ix .faq h3{font-size:1.05rem;margin:30px 0 8px}
+@media(max-width:860px){
+  .ix .sec{padding:68px 0}
+  .ix .split{grid-template-columns:1fr;gap:34px}
+  .ix .split.rev .ph{order:0}
+  .ix .ph img{max-height:520px}
+  .ix .three,.ix .tq{grid-template-columns:1fr}
+  .ix .band{height:380px}
+  .ix .vip .txt{padding:40px 24px}
+  .ix .num li,.ix .inc .it{grid-template-columns:44px 1fr}
+}
+
+.hero .photo-col img{max-height:640px;object-fit:cover;object-position:center 20%}
+.hero .sub+.sub{margin-top:-20px}
+.hero .lede{font-family:var(--display);font-weight:600;font-size:clamp(1.15rem,2vw,1.4rem);color:var(--gold-pale);line-height:1.35;margin-bottom:22px;max-width:30ch}
+
+/* photo treatments */
+.ix .fig{position:relative;margin:0}
+.ix .fig::before{content:"";position:absolute;inset:22px -22px -22px 22px;border:1.5px solid var(--gold);z-index:0}
+.ix .split.rev .fig::before{inset:22px 22px -22px -22px}
+.ix .fig img{position:relative;z-index:1}
+.ix .fig .tag{position:absolute;z-index:2;left:-34px;bottom:44px;max-width:300px;background:var(--cream);padding:20px 22px;border-left:3px solid var(--gold);box-shadow:0 14px 34px rgba(7,7,7,.14);font-family:var(--display);font-weight:600;font-size:1.05rem;line-height:1.35;color:var(--ink)}
+.ix .split.rev .fig .tag{left:auto;right:-34px}
+.ix .fig .tag small{display:block;font-family:var(--body);font-weight:600;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:8px}
+.ix .fig .tag.dark{background:var(--teal);color:#fefcfa;border-left-color:var(--gold-pale)}
+.ix .fig .tag.dark small{color:var(--gold-pale)}
+.ix .fig .tag ul{list-style:none;font-family:var(--body);font-weight:500;font-size:.95rem}
+.ix .fig .tag li{padding:5px 0;border-top:1px solid var(--line)}
+.ix .fig .tag li:first-child{border-top:0}
+.ix .teal .fig::before{border-color:var(--gold-pale)}
+/* band with words over it */
+.ix .band{position:relative}
+.ix .band::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,7,7,.72) 0%,rgba(7,7,7,.35) 55%,rgba(7,7,7,0) 100%)}
+.ix .band .over{position:absolute;z-index:2;left:0;right:0;top:50%;transform:translateY(-50%);max-width:var(--max);margin:0 auto;padding:0 28px}
+.ix .band .over p{font-family:var(--display);font-weight:700;font-size:clamp(1.7rem,4vw,3rem);line-height:1.12;color:#fefcfa;max-width:16ch}
+.ix .band .over p+p{margin-top:16px;color:var(--gold-pale);font-size:clamp(1.2rem,2.4vw,1.7rem)}
+/* chips on the VIP photo */
+.ix .vip .ph{position:relative}
+.ix .vip .chip{position:absolute;z-index:2;top:22px;left:22px;background:var(--gold);color:#fefcfa;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:9px 16px}
+.ix .vip .cap{position:absolute;z-index:2;left:0;right:0;bottom:0;padding:70px 26px 24px;background:linear-gradient(0deg,rgba(7,7,7,.75),rgba(7,7,7,0));font-family:var(--display);font-weight:700;font-size:1.5rem;color:#fefcfa}
+/* hero badge */
+.hero .photo-col{position:relative}
+.hero .badge{position:absolute;left:-26px;bottom:40px;background:var(--cream);color:var(--ink);padding:16px 20px;border-left:3px solid var(--gold);font-family:var(--display);font-weight:600;font-size:.95rem;line-height:1.35;box-shadow:0 14px 34px rgba(7,7,7,.25)}
+.hero .badge small{display:block;font-family:var(--body);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:6px}
+@media(max-width:860px){
+  .ix .fig::before{inset:14px -10px -14px 10px}
+  .ix .split.rev .fig::before{inset:14px -10px -14px 10px}
+  .ix .fig .tag,.ix .split.rev .fig .tag{left:14px;right:14px;bottom:-30px;max-width:none}
+  .ix .fig{margin-bottom:40px}
+  .ix .band .over p{max-width:14ch}
+  .hero .badge{left:14px;bottom:18px}
+}
+
+/* scale and contrast */
+.ix h2{font-size:clamp(2rem,4.6vw,3.3rem);line-height:1.04}
+.ix .stats{background:var(--ink);color:#fefcfa}
+.ix .stats .row{max-width:var(--max);margin:0 auto;padding:46px 28px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.ix .stats .s b{display:block;font-family:var(--display);font-weight:700;font-size:clamp(3rem,7vw,5.2rem);line-height:.9;color:var(--gold-pale);letter-spacing:-.03em}
+.ix .stats .s span{display:block;margin-top:10px;font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
+.ix .num li{grid-template-columns:110px 1fr;align-items:center;font-size:1.12rem}
+.ix .num b{font-size:clamp(2.8rem,5vw,4rem);font-weight:700;line-height:1;color:transparent;-webkit-text-stroke:1.5px var(--gold)}
+.ix .num li:nth-child(odd) b{color:var(--gold);-webkit-text-stroke:0}
+.ix .inc .it{grid-template-columns:110px 1fr}
+.ix .inc .it b.n{font-size:clamp(2.8rem,5vw,4rem);font-weight:700;line-height:1}
+.ix .vip .kick{font-size:13px}
+.ix .vip h3{font-size:clamp(1.5rem,3vw,2.2rem);letter-spacing:.02em;text-transform:none}
+.ix .said{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;line-height:1.25}
+.ix .huge{font-family:var(--display);font-weight:700;font-size:clamp(2.4rem,6vw,4.6rem);line-height:1;letter-spacing:-.03em;color:var(--ink)}
+.ix .teal .huge{color:#fefcfa}
+.ix .huge em{font-style:normal;color:var(--gold)}
+.ix .teal .huge em{color:var(--gold-pale)}
+.ix .price{font-size:clamp(3.6rem,9vw,6.4rem);letter-spacing:-.035em}
+.ix .three h3{font-size:1.15rem}
+.ix .three .w .big{display:block;font-family:var(--display);font-weight:700;font-size:3.4rem;line-height:1;color:var(--gold);margin-bottom:14px}
+@media(max-width:860px){
+  .ix .stats .row{grid-template-columns:repeat(2,1fr);gap:30px 18px;padding:40px 22px}
+  .ix .num li,.ix .inc .it{grid-template-columns:72px 1fr}
+}
+
+/* familiar cards */
+.ix .fam{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:40px}
+.ix .fc{background:var(--cream-2);padding:30px 30px 32px;border-top:3px solid var(--gold)}
+.ix .fc .fn{display:block;font-family:var(--display);font-weight:700;font-size:3rem;line-height:1;color:var(--gold);margin-bottom:14px}
+.ix .fc p{font-size:1.08rem;line-height:1.55;color:var(--ink)}
+.ix .fc:last-child{grid-column:1 / -1;background:var(--teal)}
+.ix .fc:last-child p{color:#fefcfa;font-family:var(--display);font-weight:600;font-size:1.35rem}
+.ix .fc:last-child .fn{color:var(--gold-pale)}
+.ix .wa img{width:min(100%,320px)}
+@media(max-width:860px){.ix .fam{grid-template-columns:1fr}.ix .fc .fn{font-size:2.4rem}}
+
+/* show whole photos, no cropping */
+.ix .ph img{height:auto;max-height:none;object-fit:contain}
+.hero .photo-col img{max-height:none;object-fit:contain}
+.ix .vip .ph img{height:100%;object-fit:cover;object-position:center top}
+.ix .band{height:auto}
+.ix .band img{height:auto;max-height:none}
+
+/* band as black split, photo uncropped */
+.ix .band{display:grid;grid-template-columns:1fr 1fr;align-items:center;background:#070707;height:auto;overflow:visible}
+.ix .band::after{display:none}
+.ix .band img{order:2;width:100%;height:auto;max-height:none;object-fit:contain}
+.ix .band .over{position:static;transform:none;order:1;padding:56px 48px;max-width:none;margin:0}
+@media(max-width:860px){.ix .band{grid-template-columns:1fr}.ix .band .over{padding:44px 24px}}
+
+/* screenshot wall + pull quote */
+.ix .wall{columns:3 280px;column-gap:22px;margin-top:40px}
+.ix .wall img{width:100%;display:block;margin:0 0 22px;break-inside:avoid;border-radius:14px;box-shadow:0 8px 26px rgba(7,7,7,.12);background:#070707}
+.ix .pull{max-width:860px;margin:10px auto 50px;text-align:center}
+.ix .pull p{font-family:var(--display);font-weight:600;font-size:clamp(1.35rem,2.8vw,2rem);line-height:1.35;color:var(--ink)}
+.ix .pull cite{display:block;margin-top:14px;font-style:normal;font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep)}
+
+.ix .buy2{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.ix .buy2 .btn{margin-top:22px}
+.ix .btn.ghost-dark{background:transparent;color:var(--ink);border:1.5px solid var(--gold)}
+.ix .btn.ghost-dark:hover{background:var(--gold);color:#fff}
+/* VIP day extras, 23 Oct 2026 */
+.ix .fam .fc,.ix .fam .fc:last-child{background:var(--cream-2);grid-column:auto}
+.ix .fam .fc h3,.ix .fam .fc:last-child h3{color:var(--ink)}
+.ix .fam .fc p,.ix .fam .fc:last-child p{color:var(--brown);font-family:var(--body);font-weight:400;font-size:1rem}
+.ix .fam .fc .fn{color:var(--gold)}
+.ix .btn.line{background:transparent;color:var(--ink);border:1.5px solid var(--gold)}
+.ix .btn.line:hover{background:var(--gold);color:#fff}
+.ix .btn.light{background:transparent;color:#fefcfa;border:1.5px solid var(--gold-pale)}
+.ix .btns{display:flex;flex-wrap:wrap;gap:12px}
+.ix .note{font-size:14px}
+.ix .step{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:56px;background:var(--cream);align-items:stretch}
+.ix .step.rev .st-ph{order:2}
+.ix .st-ph img{width:100%;height:100%;max-height:560px;object-fit:cover;display:block}
+.ix .st-tx{padding:56px 52px;display:flex;flex-direction:column;justify-content:center}
+.ix .st-n{font-family:var(--display);font-weight:700;font-size:clamp(3rem,6vw,4.6rem);line-height:.9;color:var(--gold);margin-bottom:12px}
+.ix .st-tx h3{font-size:clamp(1.5rem,2.6vw,2rem);margin-bottom:14px}
+.ix .st-line{font-family:var(--display);font-weight:600;color:var(--ink);font-size:1.15rem;margin-top:18px}
+.ix .lights span{color:#fefcfa}
+.ix .prices{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:40px;max-width:960px;margin-left:auto;margin-right:auto}
+.ix .pc{background:var(--cream);border:1px solid var(--line);padding:40px 36px;display:flex;flex-direction:column}
+.ix .pc.feat{background:var(--teal);color:#fefcfa;border-color:var(--teal)}
+.ix .pc.feat .kick{color:var(--gold-pale)}
+.ix .pc .price{color:var(--ink);font-size:clamp(3rem,6vw,4.4rem);margin:6px 0}
+.ix .pc.feat .price{color:#fff}
+.ix .pc-sub{font-family:var(--display);font-weight:600;font-size:1.05rem;margin-bottom:16px}
+.ix .pc ul{list-style:none;margin:0 0 10px;display:grid;gap:10px}
+.ix .pc li{padding-left:22px;position:relative;line-height:1.5}
+.ix .pc li::before{content:"";position:absolute;left:0;top:.6em;width:10px;height:2px;background:var(--gold)}
+.ix .pc .btn{margin-top:auto;align-self:flex-start}
+.ix .fam{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:40px}
+.ix .fc{background:var(--cream-2);padding:30px;border-top:3px solid var(--gold)}
+.ix .fn{display:block;font-family:var(--display);font-weight:700;font-size:3rem;line-height:1;color:var(--gold);margin-bottom:12px}
+.ix .fc h3{font-size:1.3rem;margin-bottom:8px}
+.ix .forno{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:40px}
+.ix .forno>div{background:var(--cream);padding:34px;border-top:3px solid var(--gold)}
+.ix .forno>div:last-child{border-top-color:var(--ink)}
+.ix .forno h3{font-size:1.2rem;margin-bottom:14px}
+.ix .forno ul{list-style:none;display:grid;gap:10px}
+.ix .forno li{padding-left:22px;position:relative;line-height:1.5}
+.ix .forno li::before{content:"✓";position:absolute;left:0;color:var(--gold);font-weight:700}
+.ix .forno>div:last-child li::before{content:"×";color:var(--ink)}
+.ix .closeband{display:grid;grid-template-columns:1fr 1fr;background:var(--teal);color:#fefcfa}
+.ix .cb-ph img{width:100%;height:100%;max-height:720px;object-fit:cover;display:block}
+.ix .cb-tx{padding:72px 56px;display:flex;flex-direction:column;justify-content:center}
+.ix .closeband .huge{color:#fff;font-size:clamp(2.2rem,5vw,3.8rem)}
+.ix .closeband .huge em{color:var(--gold-pale)}
+.ix .faq h3{font-size:1.1rem;margin:28px 0 8px}
+.ix .wall{columns:4 220px}
+@media(max-width:860px){
+  .ix .step,.ix .prices,.ix .fam,.ix .forno,.ix .closeband{grid-template-columns:1fr}
+  .ix .step.rev .st-ph{order:0}
+  .ix .st-ph img{max-height:420px}
+  .ix .st-tx,.ix .cb-tx{padding:36px 24px}
+  .ix .pc{padding:30px 24px}
+}
+
+
+/* readable labels on dark backgrounds, 23 Oct 2026 */
+.ix .teal .kick,.ix .vip .kick,.ix .pc.feat .kick,.ix .closeband .kick,.hero .eyebrow{color:#fefcfa!important;font-size:13px}
+</style>
+
+<style>
+/* 31 Touch Points rebuild, 23 Oct 2026 */
+.tp-hero{background:#fefcfa;padding:120px 28px 70px}
+.tp-hero-in{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.tp-hero .kick{font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--gold-deep);margin-bottom:16px}
+.tp-hero h1{font-family:var(--display);font-weight:700;color:var(--ink);font-size:clamp(2.6rem,5.6vw,4.4rem);line-height:1.02;letter-spacing:-.03em;margin-bottom:14px}
+.tp-hero h1 em{font-style:normal;color:var(--gold)}
+.tp-sub{font-family:var(--display);font-weight:700;color:var(--gold-deep);font-size:1.35rem;margin-bottom:14px}
+.tp-hero p{color:#3d332c;font-size:1.08rem;line-height:1.65}
+.tp-buy{display:flex;align-items:center;gap:22px;margin:26px 0 8px;flex-wrap:wrap}
+.tp-price{font-family:var(--display);font-weight:800;font-size:3.4rem;line-height:1;color:var(--ink)}
+.tp-small{font-size:.92rem!important;color:var(--brown)!important}
+.tp-visual{position:relative;min-height:520px}
+.tp-photo{width:82%;height:520px;object-fit:cover;display:block;margin-left:auto}
+.tp-phone{position:absolute;left:0;bottom:-30px;width:210px;background:#070707;border-radius:30px;padding:10px;box-shadow:0 24px 50px rgba(7,7,7,.3)}
+.tp-phone.big{position:relative;left:auto;bottom:auto;width:250px;margin:0 auto}
+.tp-scr{background:#0d3535;border-radius:22px;padding:30px 18px 26px;text-align:center;color:#fefcfa}
+.tp-app-k{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#ddc98e!important;margin-bottom:14px!important}
+.tp-app-day{font-family:var(--display);font-weight:700;font-size:1.05rem;color:#fff!important;margin-bottom:6px!important}
+.tp-app-t{font-size:.9rem!important;color:#fefcfa!important;line-height:1.35!important;margin-bottom:18px!important}
+.tp-play{width:62px;height:62px;border-radius:50%;background:#a88538;margin:0 auto 12px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:22px;padding-left:4px}
+.tp-app-time{font-family:var(--display);font-weight:700;font-size:1.6rem;color:#fff!important;margin-bottom:10px!important}
+.tp-app-note{font-size:.78rem!important;color:#d7d0c4!important}
+.tp-phone-wrap{display:flex;justify-content:center}
+.tp-iph{position:absolute;left:0;bottom:-40px;width:230px;filter:drop-shadow(0 24px 40px rgba(7,7,7,.3))}
+.tp-iph2{width:300px;max-width:80%;filter:drop-shadow(0 24px 40px rgba(7,7,7,.25))}
+@media(max-width:900px){.tp-iph{width:150px;left:10px;bottom:-30px}}
+.tp-stats{display:grid;grid-template-columns:repeat(4,1fr);max-width:1180px;margin:0 auto;padding:46px 28px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#fefcfa}
+.tp-stats div{text-align:center}
+.tp-stats b{display:block;font-family:var(--display);font-weight:800;font-size:3rem;color:var(--gold);line-height:1}
+.tp-stats span{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--ink)}
+.ix .tp-blue{background:#d8dfe1}
+.ix .tp-blue .w{background:#fefcfa}
+.tp-weeks{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+.tp-weeks .wk{background:#fefcfa;border-top:4px solid var(--gold);padding:28px 26px;box-shadow:0 2px 18px rgba(7,7,7,.06)}
+.tp-weeks .wk-d{font-size:11px!important;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--gold-deep)!important;margin-bottom:6px!important}
+.tp-weeks h3{font-family:var(--display);font-size:1.6rem;color:var(--ink);margin-bottom:10px}
+.tp-weeks .wk-l{font-weight:600;color:var(--ink)!important;margin-top:12px}
+.tp-weeks .wk-gold{background:#a88538;border-top-color:#a88538}
+.tp-weeks .wk-gold h3,.tp-weeks .wk-gold p{color:#fff!important}
+.tp-ticks{list-style:none;padding:0;margin:24px 0}
+.tp-ticks li{position:relative;padding:14px 0 14px 38px;border-bottom:1px solid var(--line);color:var(--ink);font-size:1.05rem;line-height:1.55}
+.tp-ticks li::before{content:"✓";position:absolute;left:0;top:12px;width:26px;height:26px;border-radius:50%;background:#0d3535;color:#fff;font-size:14px;display:flex;align-items:center;justify-content:center}
+.tp-yes{background:#fefcfa;border-top:4px solid var(--gold);padding:26px 28px;margin-top:20px}
+.tp-press{font-size:.9rem!important;color:var(--gold-deep)!important;margin-top:20px}
+.tp-faq details{border-bottom:1px solid var(--line);padding:18px 0}
+.tp-faq summary{cursor:pointer;font-family:var(--display);font-weight:600;font-size:18px;color:var(--ink);list-style:none;display:flex;justify-content:space-between;gap:16px}
+.tp-faq summary::-webkit-details-marker{display:none}
+.tp-faq summary::after{content:"+";color:var(--gold-deep);font-size:22px;line-height:1}
+.tp-faq details[open] summary::after{content:"2"}
+.tp-faq details p{margin-top:12px}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:9000;background:#0D3535;color:#fefcfa;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 20px;font-size:15px;transform:translateY(110%);transition:transform .3s;box-shadow:0 -6px 24px rgba(0,0,0,.2)}
+.sticky.show{transform:none}.sticky b{color:#ddc98e}
+.sticky a{background:#A88538;color:#fff;font-weight:700;padding:11px 20px;border-radius:2px;white-space:nowrap;text-decoration:none}
+@media(max-width:900px){.tp-hero{padding:96px 20px 50px}.tp-hero-in{grid-template-columns:1fr;gap:30px}.tp-visual{min-height:0}.tp-photo{width:100%;height:380px}.tp-phone{width:170px;left:12px;bottom:-24px}.tp-stats{grid-template-columns:1fr 1fr;gap:24px}.tp-weeks{grid-template-columns:1fr}}
+</style>
+<style>
+/* 31 Days Closer rebuild, 23 Oct 2026 */
+.ix .hh{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px}
+.ix .hh-c{background:#fefcfa;border-top:4px solid var(--gold);padding:36px 32px}
+.ix .hh-c h3{font-family:var(--display);font-size:1.3rem;line-height:1.25;color:var(--ink);margin:6px 0 16px}
+.ix .hh-c p{margin-bottom:12px}
+.ix .hh-c .hh-q{font-family:var(--display);font-weight:700;font-size:1.15rem;line-height:1.35;color:var(--gold-deep);margin-top:18px}
+.dc-three{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+.dc-three div{background:#0d3535;padding:34px 24px;text-align:center}
+.dc-three b{display:block;font-family:var(--display);font-weight:800;font-size:1.6rem;letter-spacing:.06em;text-transform:uppercase;color:#fff;margin-bottom:8px}
+.dc-three p{color:#fefcfa!important;margin:0}
+.tp-weeks.four{grid-template-columns:repeat(4,1fr)}
+.dc-naomi{display:grid;grid-template-columns:320px 1fr;gap:44px;align-items:center;max-width:900px;margin:60px auto 0}
+.dc-naomi .vid{position:relative;padding-bottom:177%;height:0;overflow:hidden;background:#111}
+.dc-naomi .vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.dc-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+.dc-steps div{background:#fefcfa;padding:18px 14px;border-top:3px solid var(--gold)}
+.dc-steps b{display:block;font-family:var(--display);color:var(--ink);margin-bottom:4px}
+.dc-steps span{font-size:.9rem;color:var(--brown)}
+@media(max-width:900px){.ix .hh,.dc-three,.tp-weeks.four,.dc-naomi,.dc-steps{grid-template-columns:1fr}.dc-naomi .vid{max-width:300px;margin:0 auto}}
+</style>
 </head>
 <body>
 
@@ -369,282 +638,266 @@ gtag('config', 'G-SY8NKELMNZ');
 </nav>
 
 <!-- HERO -->
-<header class="hero">
-  <img class="hero-img reveal" src="/media/31dc-hero.jpg" alt="31 Days Closer on a phone, beside the Intimacy and Communication Cards, a candle and a bowl of oranges">
-  <div class="hero-intro">
-    <div class="eyebrow reveal">31 days · one card a day · fifteen minutes</div>
-    <h1 class="reveal">31 Days<br><em>Closer.</em></h1>
-    <p class="sub reveal">Thirty-one days of saying the thing you have been swallowing for years, and being heard all the way to the end of it.</p>
-    <p class="payoff reveal">One card. Fifteen minutes. Three answers.</p>
-    <div class="cta-row">
-      <a href="https://buy.stripe.com/6oUcN47m3gty71H1Yx0co1U" class="btn reveal">Start today for £17</a>
-      <a href="#how" class="btn ghost reveal">See how it works</a>
+<header class="tp-hero">
+  <div class="tp-hero-in">
+    <div class="tp-copy">
+      <p class="kick">31 days · one card a day · fifteen minutes</p>
+      <h1>31 Days <em>Closer.</em></h1>
+      <p class="tp-sub">One card. Fifteen minutes. Three answers.</p>
+      <p>Thirty-one days of saying the thing you have been swallowing for years, and being heard all the way to the end of it.</p>
+      <div class="tp-buy">
+        <span class="tp-price">£17</span>
+        <a href="https://buy.stripe.com/6oUcN47m3gty71H1Yx0co1U" class="btn">Start today</a>
+      </div>
+      <p class="tp-small">One payment · Opens on your phone straight away · No subscription</p>
+    </div>
+    <div class="tp-visual">
+      <img src="media/31dc-hero.jpg" alt="31 Days Closer on a phone, beside the Intimacy and Communication Cards, a candle and a bowl of oranges" class="tp-photo" style="width:100%;object-position:85% center">
     </div>
   </div>
 </header>
 
-<section class="belief">
-  <div class="narrow">
-    <p class="line reveal">Closeness does not arrive on its own. It gets built, fifteen minutes at a time.</p>
+<main class="ix">
+
+<div class="tp-stats">
+  <div><b>31</b><span>Cards, in the right order</span></div>
+  <div><b>15</b><span>Minutes a day</span></div>
+  <div><b>3</b><span>Answers only</span></div>
+  <div><b>£17</b><span>One payment</span></div>
+</div>
+
+<!-- STILL LOVE -->
+<section class="sec">
+  <div class="in split">
+    <div>
+      <p class="kick">Closeness gets built, fifteen minutes at a time</p>
+      <h2>You still love each other. <em style="font-style:normal;color:var(--gold)">So why does every real conversation die by minute four?</em></h2>
+      <p>The kids are down. You are on the sofa, a foot apart, both scrolling. You try. Can we talk about us?</p>
+      <p>His shoulders go up half an inch. You watch it happen.</p>
+      <p>Within minutes you are having the argument you always have, the one with the same three lines, and you both go to bed early.</p>
+      <p>Later you lie there doing the maths. If it were real, it would be easy. It is not easy.</p>
+      <p class="bigline" style="margin-top:20px">So either the love has gone, or you are the faulty one.</p>
+      <p style="margin-top:14px">You did the maths at 2am and got the wrong answer, <strong style="color:var(--ink)">because you were handed the wrong sum.</strong></p>
+    </div>
+    <div class="ph"><figure class="fig"><img src="media/6838a6c6af7b3c51d1de03a2.jpeg" alt="Two hands held together, black and white" loading="lazy"></figure></div>
   </div>
 </section>
 
-<section class="pain">
-  <div class="wrap">
-    <div class="pain-split">
-      <div class="pain-copy">
-        <h2 class="reveal">You still love each other.<br>So why does every real conversation die by minute four?</h2>
-        <p class="reveal pain-lede">The kids are down. You are on the sofa, a foot apart, both scrolling. You try. <em>Can we talk about us?</em></p>
-        <p class="reveal pain-lede">His shoulders go up half an inch. <strong>You watch it happen.</strong></p>
-        <p class="reveal pain-lede">Within minutes you are having the argument you always have, the one with the same three lines, and you both go to bed early.</p>
-        <p class="reveal pain-hook">Later you lie there doing the maths. If it were real, it would be easy. It is not easy.</p>
-        <p class="reveal pain-hook-big">So either the love has gone, or you are the faulty one.</p>
-      </div>
-      <div class="pain-photo">
-        <img src="https://feelfullyyou.com/media/6838a6c6af7b3c51d1de03a2.jpeg" alt="" class="reveal">
-      </div>
-    </div>
-  </div>
-  <div class="narrow">
-    <div class="feeling-split">
-      <div class="feeling-photo">
-        <img src="https://feelfullyyou.com/media/695bcf624d9452480bb5241c.jpg" alt="" class="reveal" loading="lazy" decoding="async">
-      </div>
-      <div class="feeling-copy">
-        <div class="eyebrow reveal" style="margin-bottom:20px">You know this conversation</div>
-        <p class="reveal" style="font-size:17px;line-height:1.75;color:var(--brown)">You did the maths at 2am and got the wrong answer, because you were handed the wrong sum.</p>
-      </div>
-    </div>
-
-    <div class="recognition-grid">
-      <div class="recog-card reveal" style="background:var(--blue)">
-        <div class="recog-label">Her experience</div>
-        <p>You rehearse it in the car. You pick the moment. You start gently.</p>
-        <p>Four minutes in he is explaining. Or defending. Or fixing. <em>It just doesn't go anywhere.</em></p>
+<!-- HER / HIS -->
+<section class="sec tp-blue">
+  <div class="in">
+    <div class="center"><p class="kick">You know this conversation</p><h2>Two sides of the same four minutes.</h2></div>
+    <div class="hh">
+      <div class="hh-c">
+        <p class="kick">Her experience</p>
+        <h3>You rehearse it in the car. You pick the moment. You start gently.</h3>
+        <p>Four minutes in he is explaining. Or defending. Or fixing. It just doesn't go anywhere.</p>
         <p>You end up apologising for bringing it up. You say "it's fine." It isn't.</p>
-        <p>Then you sit with a friend over a glass of wine and talk for three hours without once watching your words.</p>
-        <div class="recog-q">Why can I say anything to her, and nothing to the man I love?</div>
+        <p>Then you have a glass of wine with a friend and talk for three hours without once watching your words.</p>
+        <p class="hh-q">"Why can I say anything to her, and nothing to the man I love?"</p>
       </div>
-      <div class="recog-card reveal" style="background:#f5ead8">
-        <div class="recog-label">His experience</div>
-        <p>She says "can we talk" and your stomach drops.</p>
+      <div class="hh-c">
+        <p class="kick">His experience</p>
+        <h3>She says "can we talk" and your stomach drops.</h3>
         <p>You listen. You try to help. Somehow the help is wrong. You explain what you meant and that is wrong too.</p>
         <p>So you go quiet, because quiet feels safer. She reads the quiet as not caring.</p>
         <p>At work you run a room without a second thought. At home you cannot find the first sentence.</p>
-        <div class="recog-q">How do I give her what she needs when every answer I give makes it worse?</div>
+        <p class="hh-q">"How do I give her what she needs when every answer I give makes it worse?"</p>
       </div>
-    </div>
-
-    <div class="tried-block">
-      <div class="tried-banner reveal">
-        <img src="https://feelfullyyou.com/media/887ba9a2-e5af-48ba-9b26-885221d6d987.jpeg" alt="" loading="lazy" decoding="async">
-      </div>
-      <div class="eyebrow reveal" style="margin:32px 0 24px">Both of you have tried</div>
-      <div class="tried-grid">
-        <div class="tried-item reveal"><h4>The big talk</h4><p>Two hours at the kitchen table. You felt closer for a night. By Thursday it was the same.</p></div>
-        <div class="tried-item reveal"><h4>Date night</h4><p>Candles, a nice restaurant, the good bottle. You talked about the kids and the house. Again.</p></div>
-        <div class="tried-item reveal"><h4>The book or the podcast</h4><p>You both understand your attachment styles now. You can explain exactly why you go quiet. You still go quiet.</p></div>
-        <div class="tried-item reveal"><h4>The weekend away</h4><p>New hotel. New city. Close for three days. Back to flatmates by Thursday.</p></div>
-      </div>
-      <div class="pull reveal">A hotel room has no edges. Your body can tell.</div>
     </div>
   </div>
 </section>
 
-<section style="background:var(--teal);color:var(--cream);padding:96px 28px;text-align:center">
-  <div class="narrow" style="max-width:640px;margin:0 auto">
-    <p class="reveal" style="font-family:var(--display);font-weight:700;font-size:clamp(26px,4.2vw,40px);line-height:1.28;letter-spacing:-.02em;color:#fff;margin-bottom:28px">Everyone sells you spontaneity. I build you a container.</p>
-    <p class="reveal" style="font-family:var(--display);font-weight:500;font-size:19px;line-height:1.65;color:rgba(254,252,250,.85);max-width:52ch;margin:0 auto 28px">The body does not open on command. It opens inside a container. A container is walls, a time limit, and a way back.</p>
-    <p class="reveal" style="font-family:var(--display);font-weight:700;font-style:italic;font-size:23px;color:var(--gold-pale);letter-spacing:-.01em">31 Days Closer is that container, one day at a time.</p>
+<!-- BOTH TRIED -->
+<section class="sec">
+  <div class="in">
+    <div class="center"><p class="kick">Both of you have tried</p><h2>A hotel room has no edges. <em style="font-style:normal;color:var(--gold)">Your body can tell.</em></h2></div>
+    <div class="fam">
+      <div class="fc"><span class="fn">01</span><p><strong style="color:var(--ink)">The big talk.</strong> Two hours at the kitchen table. You felt closer for a night. By Thursday it was the same.</p></div>
+      <div class="fc"><span class="fn">02</span><p><strong style="color:var(--ink)">Date night.</strong> Candles, a nice restaurant, the good bottle. You talked about the kids and the house. Again.</p></div>
+      <div class="fc"><span class="fn">03</span><p><strong style="color:var(--ink)">The book or the podcast.</strong> You both understand your attachment styles now. You can explain exactly why you go quiet. You still go quiet.</p></div>
+      <div class="fc"><span class="fn">04</span><p><strong style="color:var(--ink)">The weekend away.</strong> New hotel. New city. Close for three days. Back to flatmates by Thursday.</p></div>
+    </div>
+    <p class="bigline center" style="margin-top:40px">The body does not open on command. <em>It opens inside a container.</em></p>
+    <p class="center" style="max-width:56ch;margin:12px auto 0">A container is walls, a time limit, and a way back. 31 Days Closer is that container, one day at a time.</p>
   </div>
 </section>
 
-<section class="missing" id="how">
-  <div class="narrow">
-    <div class="eyebrow reveal">How it works</div>
-    <h2 class="reveal">Fifteen minutes. One card.<br>The other person may say only three things.</h2>
-    <div class="trio reveal"><div class="mini"><svg class="t" viewBox="0 0 120 106"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8c6a2b"/><stop offset=".5" stop-color="#d9c389"/><stop offset="1" stop-color="#8c6a2b"/></linearGradient></defs><polyline points="0,0 60,104 120,0" fill="none" stroke="url(#g)" stroke-width="2.4"/></svg><div class="band">THANK YOU</div><div class="say">I understood you.</div><svg class="b" viewBox="0 0 120 106"><polyline points="0,106 60,2 120,106" fill="none" stroke="url(#g)" stroke-width="2.4"/></svg></div><div class="mini"><svg class="t" viewBox="0 0 120 106"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8c6a2b"/><stop offset=".5" stop-color="#d9c389"/><stop offset="1" stop-color="#8c6a2b"/></linearGradient></defs><polyline points="0,0 60,104 120,0" fill="none" stroke="url(#g)" stroke-width="2.4"/></svg><div class="band">CLARIFY THAT</div><div class="say">I'm listening, but I don't understand yet.</div><svg class="b" viewBox="0 0 120 106"><polyline points="0,106 60,2 120,106" fill="none" stroke="url(#g)" stroke-width="2.4"/></svg></div><div class="mini"><svg class="t" viewBox="0 0 120 106"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8c6a2b"/><stop offset=".5" stop-color="#d9c389"/><stop offset="1" stop-color="#8c6a2b"/></linearGradient></defs><polyline points="0,0 60,104 120,0" fill="none" stroke="url(#g)" stroke-width="2.4"/></svg><div class="band">SUMMARISE THAT</div><div class="say">Give me the bottom line.</div><svg class="b" viewBox="0 0 120 106"><polyline points="0,106 60,2 120,106" fill="none" stroke="url(#g)" stroke-width="2.4"/></svg></div></div>
-    <div class="missing-pull reveal">No fixing. No defending. No "that is not what happened." You do not have to agree. You only have to understand.</div>
-    <div class="steps">
-      <div class="step reveal">
-        <div class="num">01</div>
-        <p class="body"><span class="do">Set a 15-minute timer.</span>Phones in another room.<span class="aside">Yes, both of them.</span></p>
-      </div>
-      <div class="step reveal" style="transition-delay:.08s">
-        <div class="num">02</div>
-        <p class="body"><span class="do">One of you reads today's card and answers it.</span>The other replies with <strong>Thank you</strong>, <strong>Clarify that</strong>, or <strong>Summarise that</strong>.<span class="aside">Nothing else.</span></p>
-      </div>
-      <div class="step reveal" style="transition-delay:.16s">
-        <div class="num">03</div>
-        <p class="body"><span class="do">At &ldquo;Thank you&rdquo; you swap.</span>Same card, back and forth, until the timer goes.<span class="aside">Each pass goes a layer deeper.</span></p>
-      </div>
+<!-- HOW IT WORKS -->
+<section class="sec cream2" id="how">
+  <div class="in">
+    <div class="center"><p class="kick">How it works</p><h2>Fifteen minutes. One card. <em style="font-style:normal;color:var(--gold)">The other person may say only three things.</em></h2></div>
+    <div class="dc-three">
+      <div><b>Thank you</b><p>I understood you.</p></div>
+      <div><b>Clarify that</b><p>I'm listening, but I don't understand yet.</p></div>
+      <div><b>Summarise that</b><p>Give me the bottom line.</p></div>
     </div>
-    <p class="reveal" style="font-weight:600;color:var(--ink)">I have used this structure with over 650 couples. It is the difference between another conversation that goes nowhere and the one you have been circling for years.</p>
+    <p class="bigline center" style="margin-top:34px">No fixing. No defending. No "that is not what happened." <em>You do not have to agree. You only have to understand.</em></p>
+    <div class="tp-weeks" style="margin-top:44px">
+      <div class="wk"><p class="wk-d">Step 01</p><h3>Set a 15-minute timer</h3><p>Phones in another room. Yes, both of them.</p></div>
+      <div class="wk"><p class="wk-d">Step 02</p><h3>Read today's card</h3><p>One of you reads today's card and answers it. The other replies with Thank you, Clarify that, or Summarise that. Nothing else.</p></div>
+      <div class="wk"><p class="wk-d">Step 03</p><h3>At "Thank you" you swap</h3><p>Same card, back and forth, until the timer goes. Each pass goes a layer deeper.</p></div>
+    </div>
+    <p class="center" style="max-width:60ch;margin:30px auto 0">I have used this structure with couples for years. It is the difference between another conversation that goes nowhere and the one you have been circling for years.</p>
+    <div class="center" style="margin-top:30px"><a href="https://buy.stripe.com/6oUcN47m3gty71H1Yx0co1U" class="btn">Start today for £17</a></div>
   </div>
 </section>
 
-<div class="atmo scene">
-  <img class="bg" src="https://feelfullyyou.com/media/671efd13edbeb128282f4bd9.jpg" alt="" loading="lazy" decoding="async">
-  <div class="overlay"></div>
-  <div class="content">
-    <h2 class="reveal">Picture<em>day eight.</em></h2>
-    <p class="beat soft reveal">He puts the kettle on at nine without being asked.</p>
-    <p class="beat reveal" style="transition-delay:.1s">Today's card asks <strong>the question you have both been stepping around for years.</strong></p>
-    <p class="beat reveal" style="transition-delay:.2s">He answers.</p>
-    <div class="spoken reveal" style="transition-delay:.25s">
-      <span class="pre">You say only</span>
-      <span class="q">&ldquo;Clarify that.&rdquo;</span>
+<!-- DAY EIGHT -->
+<section class="sec">
+  <div class="in split rev">
+    <div>
+      <p class="kick">Picture day eight</p>
+      <h2>He puts the kettle on at nine without being asked.</h2>
+      <p>Today's card asks the question you have both been stepping around for years.</p>
+      <p>He answers. You say only <strong style="color:var(--ink)">"Clarify that."</strong></p>
+      <p>He goes a layer deeper, then another, and says a sentence you have never heard him say.</p>
+      <p>You say <strong style="color:var(--ink)">"Thank you"</strong> and mean it.</p>
+      <p class="bigline" style="margin-top:20px"><em>The room goes quiet in the good way.</em></p>
     </div>
-    <p class="beat reveal" style="transition-delay:.1s">He goes a layer deeper, then another, and says <strong>a sentence you have never heard him say.</strong></p>
-    <div class="spoken reveal" style="transition-delay:.2s">
-      <span class="pre">You say</span>
-      <span class="q">&ldquo;Thank you&rdquo;</span>
-      <span class="post">and mean it</span>
-    </div>
-    <div class="rule reveal"></div>
-    <p class="quiet reveal" style="transition-delay:.15s">The room goes quiet in the good way.</p>
+    <div class="ph"><figure class="fig"><img src="media/695bce014d9452f24cb4b08c.jpg" alt="The Intimacy and Communication Cards beside a glass of wine" loading="lazy"></figure></div>
   </div>
-</div>
+</section>
 
-<section class="spine">
-  <div class="wrap">
-    <div class="eyebrow reveal" style="margin-bottom:18px">How the month unfolds</div>
-    <h2 class="reveal">You never pick a card.<br><em style="font-style:italic;color:var(--gold)">The month does it for you.</em></h2>
-    <p class="lede reveal">A new card unlocks each day. The warm ones first. The deep ones once the container feels safe.</p>
-    <div class="weeks">
-      <div class="week reveal"><h3>Week 1 · Seeing each other</h3><p>Warm and easy on purpose, so the structure gets to feel good before it has to hold anything heavy.</p></div>
-      <div class="week reveal"><h3>Week 2 · Understanding each other</h3><p>The things you each assumed the other one already knew. It turns out they didn't.</p></div>
-      <div class="week reveal"><h3>Week 3 · Touch and closeness</h3><p>The conversations about touch most couples never have. Asked inside a container, so nobody has to brace.</p></div>
-      <div class="week week-culm reveal"><h3>Week 4 and beyond · Honesty, repair, choosing us</h3><p>The things neither of you has said out loud, and what you want to build next.</p><p>By now the structure is doing the holding, so the honest answer has somewhere to land.</p></div>
+<!-- THE MONTH -->
+<section class="sec tp-blue">
+  <div class="in">
+    <div class="center"><p class="kick">How the month unfolds</p><h2>You never pick a card. <em style="font-style:normal;color:var(--gold)">The month does it for you.</em></h2><p style="max-width:56ch;margin:0 auto">A new card unlocks each day. The warm ones first. The deep ones once the container feels safe.</p></div>
+    <div class="tp-weeks four">
+      <div class="wk"><p class="wk-d">Week 1</p><h3>Seeing each other</h3><p>Warm and easy on purpose, so the structure gets to feel good before it has to hold anything heavy.</p></div>
+      <div class="wk"><p class="wk-d">Week 2</p><h3>Understanding each other</h3><p>The things you each assumed the other one already knew. It turns out they didn't.</p></div>
+      <div class="wk"><p class="wk-d">Week 3</p><h3>Touch and closeness</h3><p>The conversations about touch most couples never have. Asked inside a container, so nobody has to brace.</p></div>
+      <div class="wk wk-gold"><p class="wk-d" style="color:#fff!important">Week 4 and beyond</p><h3>Honesty, repair, choosing us</h3><p>The things neither of you has said out loud, and what you want to build next. By now the structure is doing the holding, so the honest answer has somewhere to land.</p></div>
     </div>
   </div>
 </section>
 
-<section class="included" id="included">
-  <div class="wrap">
-    <div class="eyebrow reveal">Everything you get</div>
-    <h2 class="reveal">It lives on your phone. It opens today.</h2>
-    <p class="lede reveal">Pay once and you land straight on day one. No app to download, no password to remember.</p>
-    <p class="lede reveal" style="transition-delay:.08s">By day thirty-one you know the structure by heart. That is the part you keep, and it works on any conversation you bring to it.</p>
-    <div class="included-feature reveal">
-      <img src="/media/31dc-feature.jpg" alt="The 31 Days Closer app on a phone next to a hand holding the cards" loading="lazy" decoding="async">
+<!-- WHAT YOU GET -->
+<section class="sec">
+  <div class="in split">
+    <div>
+      <p class="kick">Everything you get</p>
+      <h2>It lives on your phone. It opens today.</h2>
+      <p>Pay once and you land straight on day one. No app to download, no password to remember.</p>
+      <ul class="tp-ticks">
+        <li><strong>31 cards, in the right order.</strong> Chosen from my Couples deck and sequenced day by day, the way I would give them to you.</li>
+        <li><strong>A new card every day.</strong> Today's card is always waiting. Miss a day and it waits for you.</li>
+        <li><strong>The three answers and a 15-minute timer.</strong> Built into every card, so the structure holds even on the days you are tired.</li>
+        <li><strong>Yours to keep.</strong> Come back to any card after the 31 days. One payment, no subscription.</li>
+      </ul>
+      <p class="bigline">By day thirty-one you know the structure by heart. <em>That is the part you keep.</em></p>
     </div>
-    <div class="checklist">
-      <div class="check-item reveal"><img src="https://feelfullyyou.com/media/695bce014d9452f24cb4b08c.jpg" alt="" loading="lazy" style="object-fit:cover"><div><div class="ctitle">31 cards, in the right order</div><div class="cdesc">Chosen from my Couples deck and sequenced day by day, the way I would give them to you.</div></div></div>
-      <div class="check-item reveal"><img src="https://feelfullyyou.com/media/695bcf624d9452480bb5241c.jpg" alt="" loading="lazy" style="object-fit:cover"><div><div class="ctitle">A new card every day</div><div class="cdesc">Today's card is always waiting. Miss a day and it waits for you.</div></div></div>
-      <div class="check-item reveal"><img src="https://feelfullyyou.com/media/6762e8ba81adf93734902b54.png" alt="" loading="lazy" style="object-fit:cover"><div><div class="ctitle">The three answers and a 15-minute timer</div><div class="cdesc">Built into every card, so the structure holds even on the days you are tired.</div></div></div>
-      <div class="check-item reveal"><img src="https://feelfullyyou.com/media/69f8604e68affeac154eee79.jpg" alt="" loading="lazy" style="object-fit:cover"><div><div class="ctitle">Yours to keep</div><div class="cdesc">Come back to any card after the 31 days. One payment, no subscription.</div></div></div>
-    </div>
+    <div class="ph"><figure class="fig"><img src="media/31dc-feature.jpg" alt="The 31 Days Closer app on a phone next to a hand holding the cards" loading="lazy"></figure></div>
   </div>
 </section>
 
-<section class="testi">
-  <div class="narrow">
-    <div class="eyebrow reveal">In their own words</div>
-    <h2 class="reveal" style="font-family:var(--display);font-weight:700;font-size:clamp(28px,4vw,40px);letter-spacing:-.02em;margin:10px 0 8px">What happens when the cards come out.</h2>
-    <div class="shots">
-      <img class="reveal" src="https://feelfullyyou.com/media/68b9706a3823bf00a48e596b.png" alt="Testimonial: the cards sparked fun, intimate conversations and brought us closer together" loading="lazy">
-      <img class="reveal" src="https://feelfullyyou.com/media/68c04cce32f3390d40e17dcc.jpeg" alt="Testimonial: the cards helped me connect more with my parents, siblings, family, friends and partner" loading="lazy">
-      <img class="reveal" src="https://feelfullyyou.com/media/68b9706a6510b923022f807d.png" alt="Testimonial: loads of fun and very insightful in understanding my partner" loading="lazy">
+<!-- TESTIMONIALS -->
+<section class="sec cream2">
+  <div class="in">
+    <div class="center"><p class="kick">In their own words</p><h2>What happens when the cards come out.</h2></div>
+    <div class="wall">
+      <img src="media/68b9706a3823bf00a48e596b.png" alt="Testimonial: the cards sparked fun, intimate conversations and brought us closer together" loading="lazy">
+      <img src="media/68c04cce32f3390d40e17dcc.jpeg" alt="Testimonial: the cards helped me connect more with my parents, siblings, family, friends and partner" loading="lazy">
+      <img src="media/68b9706a6510b923022f807d.png" alt="Testimonial: loads of fun and very insightful in understanding my partner" loading="lazy">
     </div>
-    <div class="naomi">
-      <div class="vid reveal"><iframe src="https://www.youtube.com/embed/FaGiujQuHdo" title="Naomi on what she likes about the cards" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+    <div class="dc-naomi">
+      <div class="vid"><iframe src="https://www.youtube.com/embed/FaGiujQuHdo" title="Naomi on what she likes about the cards" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
       <div>
-        <h3 class="reveal" style="font-family:var(--display);font-weight:700;font-size:26px;letter-spacing:-.02em;margin-bottom:12px">In Naomi's own words.</h3>
-        <p class="reveal" style="color:var(--brown);font-size:17px;line-height:1.7;margin-bottom:28px">I asked my friend Naomi, a relationship and intimacy coach, what she likes about the cards.</p>
-        <div class="tcard t1 reveal"><div class="mark">"</div><blockquote>She was sixty-two. He was sixty-four. They had not been intimate in twenty-three years. Three months later, they went on a second honeymoon.</blockquote><div class="who">A couple I worked with</div></div>
+        <p class="kick">In Naomi's own words</p>
+        <p>I asked my friend Naomi, a relationship and intimacy coach, what she likes about the cards.</p>
+        <div class="tp-yes" style="margin-top:22px"><p class="bigline" style="margin:0 0 8px">"She was sixty-two. He was sixty-four. They had not been intimate in twenty-three years. <em>Three months later, they went on a second honeymoon.</em>"</p><p style="margin:0;font-size:.9rem">A couple I worked with</p></div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="why-me">
-  <div class="why-split">
-    <div class="why-photo">
-      <img src="/media/31dc-juliette-kingsx.jpg" alt="Juliette Karaman laughing against a brick wall" loading="lazy" decoding="async">
+<!-- WHY JULIETTE -->
+<section class="sec">
+  <div class="in split rev">
+    <div>
+      <p class="kick">Why Juliette</p>
+      <h2>I'm Juliette.</h2>
+      <p class="bigline">Fifteen years in the room with couples who love each other and cannot reach each other.</p>
+      <p style="margin-top:16px">Over and over, I watched the right question, held by the right structure, open rooms that had been closed for decades.</p>
+      <p>I did not invent that structure. It is older than me. What I did was use it with clients for years, and then put it into a form you can use without me.</p>
+      <p>31 Days Closer is that, one day at a time, at your own kitchen table. No therapist in the room. Just a card, a timer, and the two of you.</p>
+      <p class="tp-press">As seen on ITV, and in Forbes, The Times, Marie Claire, the Telegraph, Newsweek, NBC and ABC · The Scrumptious Woman® Podcast, top 2.5% globally</p>
     </div>
-    <div class="why-copy">
-      <div class="eyebrow reveal">Why Juliette</div>
-      <h2 class="reveal">I'm <em style="font-style:italic;color:var(--gold-deep)">Juliette.</em></h2>
-      <p class="intro reveal"><strong>Fifteen years in the room</strong> with couples who love each other and cannot reach each other.</p>
-      <p class="intro reveal">Over and over, I watched the right question, held by the right structure, <strong>open rooms that had been closed for decades.</strong></p>
-      <p class="intro reveal">I did not invent that structure. It is older than me. What I did was use it with clients for years, and then put it into a form you can use without me.</p>
-      <p class="intro reveal">31 Days Closer is that, one day at a time, at your own kitchen table. No therapist in the room. Just a card, a timer, and the two of you.</p>
-      <div class="press reveal">
-        <span>Forbes</span><span>The Times</span><span>Marie Claire</span><span>ITV</span><span>Telegraph</span><span>Newsweek</span><span>NBC</span><span>ABC</span>
-        <span class="pod">The Scrumptious Woman, top 2.5% globally</span>
-      </div>
-      <p class="why-last reveal">Couples rarely regret starting. They regret waiting until the distance feels normal.</p>
+    <div class="ph"><figure class="fig"><img src="media/31dc-juliette-kingsx.jpg" alt="Juliette Karaman laughing against a brick wall" loading="lazy"><figcaption class="tag"><small>Juliette Karaman</small>Intimacy and touch expert</figcaption></figure></div>
+  </div>
+</section>
+
+<!-- WHAT CHANGES -->
+<section class="sec tp-blue">
+  <div class="in">
+    <div class="center"><p class="kick">What changes</p><h2>You stop bracing before you speak. <em style="font-style:normal;color:var(--gold)">You start looking forward to the fifteen minutes.</em></h2></div>
+    <div class="three">
+      <div class="w"><span class="big">01</span><h3>The real thing gets said</h3><p>The sentence you have been swallowing for years has somewhere to land, and a person trained, by three simple answers, to receive it.</p></div>
+      <div class="w"><span class="big">02</span><h3>Being understood</h3><p>Agreement stops being the point. Understanding becomes the point. The rows lose their fuel.</p></div>
+      <div class="w"><span class="big">03</span><h3>A habit that holds</h3><p>Fifteen minutes becomes the part of the day you both protect. The structure outlasts the month.</p></div>
     </div>
   </div>
 </section>
 
-<section class="outcomes">
-  <div class="narrow">
-    <div class="eyebrow reveal" style="margin-bottom:18px">What changes</div>
-    <h2 class="reveal">You stop bracing before you speak.<br>You start looking forward to the fifteen minutes.</h2>
-    <div class="outcomes-grid">
-      <div class="outcome reveal"><h3>The real thing gets said</h3><p>The sentence you have been swallowing for years has somewhere to land, and a person trained, by three simple answers, to receive it.</p></div>
-      <div class="outcome reveal"><h3>Being understood</h3><p>Agreement stops being the point. Understanding becomes the point. The rows lose their fuel.</p></div>
-      <div class="outcome reveal" style="grid-column:1/-1"><h3>A habit that holds</h3><p>Fifteen minutes becomes the part of the day you both protect. The structure outlasts the month.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="filter">
-  <div class="narrow">
-    <div class="eyebrow reveal" style="margin-bottom:18px">Is this for you?</div>
-    <h2 class="reveal">Who 31 Days Closer is for, and who it isn't for.</h2>
-    <div class="filter-grid">
-      <div class="reveal filter-yes"><h3>This is for you if</h3><ul class="filter-list">
+<!-- FOR YOU -->
+<section class="sec">
+  <div class="in">
+    <div class="center"><p class="kick">Is this for you?</p><h2>Who 31 Days Closer is for</h2></div>
+    <div class="forno">
+      <div><h3>This is for you if</h3><ul>
         <li>You still love each other and the conversations stay on the surface</li>
         <li>You have tried talking more, and it keeps turning into the same row</li>
-        <li>You want a structure, not more advice</li>
+        <li>You want a clear structure for the conversation</li>
         <li>You can find fifteen minutes most days</li>
         <li>You want to be understood more than you want to win</li></ul></div>
-      <div class="reveal filter-no"><h3>This is not for you if</h3><ul class="filter-list">
-        <li>You are in active crisis, infidelity or abuse and need clinical support</li>
+      <div><h3>This is not for you if</h3><ul>
+        <li>You are in active crisis, such as ongoing infidelity or abuse</li>
         <li>You want someone else to do the talking for you</li>
         <li>You are looking for a quick fix without the fifteen minutes</li></ul></div>
     </div>
   </div>
 </section>
 
-<section class="cta-section" id="buy">
-  <div class="wrap">
-    <div class="eyebrow reveal">Start today</div>
-    <h2 class="reveal">31 Days Closer. £17.</h2>
-    <p class="price-note reveal">One payment · Opens on your phone straight away · No subscription</p>
-    <p class="cta-sub reveal">Less than the bottle of wine you would open to get brave enough to start the conversation.</p>
-    <div class="cta-buttons">
-      <a href="https://buy.stripe.com/6oUcN47m3gty71H1Yx0co1U" class="btn reveal">Start today for £17</a>
-    </div>
-    <div class="arrives reveal">
-      <div><b>Today</b>Day one opens. Warm on purpose.</div>
-      <div><b>Every day</b>A new card unlocks.</div>
-      <div><b>Day 31</b>Choosing us.</div>
-    </div>
-    <p class="reveal" style="margin-top:28px;font-family:var(--display);font-weight:700;font-size:clamp(19px,2.6vw,26px);color:var(--gold-pale);letter-spacing:-.01em">Today. One card. Fifteen minutes. See what gets said.</p>
+<!-- PRICE -->
+<section class="sec cream2">
+  <div class="tight center">
+    <p class="kick">Start today</p>
+    <h2>31 Days Closer.</h2>
+    <p class="tp-price" style="margin:10px 0 6px">£17</p>
+    <p class="tp-small">One payment · Opens on your phone straight away · No subscription</p>
+    <p class="bigline" style="margin-top:16px"><em>Less than the bottle of wine you would open to get brave enough to start the conversation.</em></p>
+    <a href="https://buy.stripe.com/6oUcN47m3gty71H1Yx0co1U" class="btn" style="margin-top:14px">Start today for £17</a>
+    <div class="dc-steps"><div><b>Today</b><span>Day one opens. Warm on purpose.</span></div><div><b>Every day</b><span>A new card unlocks.</span></div><div><b>Day 31</b><span>Choosing us.</span></div></div>
+    <p class="bigline" style="margin-top:26px">Today. One card. Fifteen minutes. See what gets said.</p>
   </div>
 </section>
 
-<section class="faq">
-  <div class="narrow">
-    <h2 class="reveal">Frequently asked</h2>
-    <div class="faq-list">
-      <div class="faq-item reveal"><h3>Isn't putting it on a timer a bit unromantic?</h3><p>A diary entry has no walls. This is a room with a door your body knows it can walk out of, which is the only reason it will ever walk in. Fifteen minutes, three answers, a timer. The romance is what happens inside it.</p></div>
-      <div class="faq-item reveal"><h3>What if my partner isn't ready?</h3><p>Start on your own. Use each card as a journal prompt, one answer at a time, until the timer ends. When one person changes how they show up, the other one feels it.</p></div>
-      <div class="faq-item reveal"><h3>What if we miss a day?</h3><p>Today's card waits for you. Every card you have opened stays open. Pick it up when you can.</p></div>
-      <div class="faq-item reveal"><h3>Do we need to download anything?</h3><p>No. It opens in your browser on any phone, tablet or laptop, straight after you pay.</p></div>
-      <div class="faq-item reveal"><h3>Is this a subscription?</h3><p>No. One payment of £17.</p></div>
-      <div class="faq-item reveal"><h3>What is your refund policy?</h3><p>Because you get access straight away, the 14-day cancellation right ends once you open your cards. If something isn't working, email support@feelfullyyou.com and we'll help.</p></div>
-    </div>
+<!-- FAQ -->
+<section class="sec tp-faq">
+  <div class="tight">
+    <p class="kick">Questions</p>
+    <h2>Frequently asked</h2>
+    <details><summary>Isn't putting it on a timer a bit unromantic?</summary><p>A diary entry has no walls. This is a room with a door your body knows it can walk out of, which is the only reason it will ever walk in. Fifteen minutes, three answers, a timer. The romance is what happens inside it.</p></details>
+    <details><summary>What if my partner isn't ready?</summary><p>Start on your own. Use each card as a journal prompt, one answer at a time, until the timer ends. When one person changes how they show up, the other one feels it.</p></details>
+    <details><summary>What if we miss a day?</summary><p>Today's card waits for you. Every card you have opened stays open. Pick it up when you can.</p></details>
+    <details><summary>Do we need to download anything?</summary><p>No. It opens in your browser on any phone, tablet or laptop, straight after you pay.</p></details>
+    <details><summary>Is this a subscription?</summary><p>No. One payment of £17.</p></details>
+    <details><summary>What is your refund policy?</summary><p>Because you get access straight away, the 14-day cancellation right ends once you open your cards. If something isn't working, email support@feelfullyyou.com and we'll help.</p></details>
   </div>
 </section>
 
-<div class="sticky31" id="sticky31"><b>31 Days Closer · £17</b><a class="btn" href="https://buy.stripe.com/6oUcN47m3gty71H1Yx0co1U">Start today</a></div>
-<script>(function(){var st=document.getElementById("sticky31"),h=document.querySelector(".hero"),b=document.getElementById("buy");if(!("IntersectionObserver" in window))return;var hv=true,bv=false;function u(){st.classList.toggle("show",!hv&&!bv)}new IntersectionObserver(function(e){hv=e[0].isIntersecting;u()}).observe(h);new IntersectionObserver(function(e){bv=e[0].isIntersecting;u()}).observe(b)})();</script>
+</main>
 
+<div class="sticky" id="sticky">
+  <span><b>31 Days Closer</b> &middot; &pound;17</span>
+  <a href="https://buy.stripe.com/6oUcN47m3gty71H1Yx0co1U">Start today</a>
+</div>
+<script>
+(function(){var s=document.getElementById('sticky');if(!s)return;window.addEventListener('scroll',function(){s.classList.toggle('show',window.scrollY>700)},{passive:true});})();
+</script>
+
+
+<!-- FOOTER -->
 <footer style="background:#a88538;color:#fff;padding:22px 32px;font-size:13px">
   <div style="max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
     <div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:0.95rem;color:#fff;letter-spacing:-.01em">Feel Fully You</div>
