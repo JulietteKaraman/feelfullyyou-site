@@ -160,7 +160,15 @@ gtag('config', 'G-SY8NKELMNZ');
 .longtesti{background:var(--blue)!important;border-top:none!important}
 .longtesti .eyebrow{color:var(--gold-deep)!important}
 .longtesti .lt-grid{grid-template-columns:1fr 1fr!important;align-items:start;gap:40px 36px!important}
-.hp-stack{display:flex;flex-direction:column;gap:28px;align-self:center}
+.q3{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:12px}
+.q3 .lt.hp-quote{align-self:stretch;padding:40px 32px}
+.q3 .q-lead{font-size:clamp(1.25rem,1.9vw,1.55rem)!important}
+.lt.q-ochre{background:var(--gold)!important;border-top:none!important}
+.lt.q-green{background:var(--teal)!important;border-top:none!important}
+.lt.q-ochre .q-lead,.lt.q-ochre p,.lt.q-ochre .who,.lt.q-green .q-lead,.lt.q-green p,.lt.q-green .who{color:#fff!important}
+.lt.q-green .who{color:var(--gold-pale)!important}
+.lt.q-light{background:#fefcfa!important;border-top:4px solid var(--gold)!important}
+@media(max-width:900px){.q3{grid-template-columns:1fr}}
 .lt.hp-quote{background:#fefcfa;padding:44px 40px;border-top:4px solid var(--gold);align-self:center}
 .lt.hp-quote .q-lead{font-family:var(--display);font-weight:700;font-size:clamp(1.5rem,2.6vw,2rem);line-height:1.2;color:var(--ink);margin-bottom:16px}
 .lt.hp-quote p{color:var(--ink);font-size:1.05rem;line-height:1.6}
@@ -429,22 +437,24 @@ gtag('config', 'G-SY8NKELMNZ');
       <div class="lt reveal hp-shot"><img src="about-testimonial-christine.jpg" alt="Message from Christine: You will never forget who you are" loading="lazy">
         <div class="who">Christine Borschneck &middot; Coach &amp; Trauma Specialist, Canada</div>
       </div>
-      <div class="lt reveal hp-shot"><img src="vip-testimonial-marc.jpg" alt="Message from Marc: Juliette offers a type of healing that so few even know is available to them" loading="lazy">
-        <div class="who">Marc Q &middot; Computer Analyst, Turkey</div>
-      </div>
-      <div class="hp-stack">
-        <div class="lt reveal hp-quote">
+      <div class="q3">
+        <div class="lt reveal hp-quote q-ochre">
+          <p class="q-lead">"Juliette offers a type of healing that so few even know is available to them."</p>
+          <p>"It feels like being loved from the inside out. Juliette knows how to listen to what my body needs to release even better than I can. You must try it!"</p>
+          <div class="who">Marc Q &middot; Computer Analyst, Turkey</div>
+        </div>
+        <div class="lt reveal hp-quote q-green">
           <p class="q-lead">"I came believing I was in control."</p>
           <p>"I left with a level of clarity I didn't realise I was missing. This changed how I lead, at home and in business."</p>
           <div class="who">R. &middot; Investor and Strategist, UK</div>
         </div>
-        <div class="lt reveal hp-quote">
+        <div class="lt reveal hp-quote q-light">
           <p class="q-lead">"Juliette's loving, generous connection has allowed me to see myself in a way I never had before."</p>
           <p>"She shines a light on the places I've been hiding, guiding me to uncover my own wisdom. Fiercely loving, she leaves you feeling beautiful, capable, and strong, ready to face the world as your true self."</p>
           <div class="who">Sue-Ann MacCara &middot; Mastercoach &amp; Trainer, Canada</div>
         </div>
       </div>
-    </div>
+  </div>
   </div>
 </section>
 
