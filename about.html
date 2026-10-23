@@ -184,6 +184,267 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-SY8NKELMNZ');
 </script>
+<style>
+/* VIP day: shared rebuild styles (from 3 Month Intensive), 23 Oct 2026 (Ali-style rebuild) */
+.ix{color:var(--brown)}
+.ix p{max-width:none}
+.ix p+p{margin-top:14px}
+.ix .sec{padding:96px 0}
+.ix .in{max-width:var(--max);margin:0 auto;padding:0 28px}
+.ix .tight{max-width:720px;margin:0 auto;padding:0 28px}
+.ix .center{text-align:center}
+.ix .center p{margin-left:auto;margin-right:auto}
+.ix .kick{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:16px}
+.ix .caps{font-family:var(--display);font-weight:600;text-transform:uppercase;letter-spacing:.06em;font-size:clamp(1.05rem,2vw,1.3rem);line-height:1.35;color:var(--ink)}
+.ix .bigline{font-family:var(--display);font-weight:600;font-size:clamp(1.3rem,2.6vw,1.75rem);line-height:1.3;color:var(--ink)}
+.ix .bigline em{font-style:normal;color:var(--gold)}
+.ix .btn{margin-top:30px}
+.ix .cream2{background:var(--cream-2)}
+.ix .teal{background:var(--teal);color:#fefcfa}
+.ix .teal h2,.ix .teal h3,.ix .teal .caps,.ix .teal .bigline{color:#fff}
+.ix .teal .kick{color:var(--gold-pale)}
+.ix .teal .bigline em{color:var(--gold-pale)}
+/* split: text + photo */
+.ix .split{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+.ix .split.rev .ph{order:-1}
+.ix .ph img{width:100%;height:100%;max-height:640px;object-fit:cover;border-radius:2px}
+/* full-width photo band */
+.ix .band{height:min(70vh,620px);overflow:hidden}
+.ix .band img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+/* three women */
+.ix .three{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+.ix .three .w{background:var(--cream);border-top:3px solid var(--gold);padding:30px 26px}
+.ix .three h3{font-size:1rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px}
+.ix .three .q{margin-top:14px;font-weight:600;color:var(--ink)}
+/* quotes */
+.ix .said{margin:26px 0;font-family:var(--display);font-weight:500;font-size:clamp(1.3rem,2.6vw,1.7rem);line-height:1.5;color:var(--gold-pale)}
+/* numbered list */
+.ix .num{list-style:none;margin-top:30px}
+.ix .num li{display:grid;grid-template-columns:64px 1fr;gap:10px;padding:22px 0;border-top:1px solid var(--line);font-size:1.05rem}
+.ix .num b{font-family:var(--display);font-size:1.4rem;color:var(--gold)}
+/* included */
+.ix .inc{display:grid;gap:0;margin-top:40px}
+.ix .inc .it{display:grid;grid-template-columns:64px 1fr;gap:10px;padding:30px 0;border-top:1px solid var(--line)}
+.ix .inc .it b.n{font-family:var(--display);font-size:1.4rem;color:var(--gold)}
+.ix .inc h3{font-size:1.05rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px}
+.ix .vip{background:var(--teal);color:#fefcfa;margin:40px 0}
+.ix .vip .split{gap:0}
+.ix .vip .txt{padding:56px 52px}
+.ix .vip h3{color:#fff;font-size:1.15rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px}
+.ix .vip .ph img{max-height:none;min-height:100%;border-radius:0}
+.ix .lights{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}
+.ix .lights span{font-size:14px;font-weight:600;padding:7px 16px;border-radius:999px;color:#fefcfa}
+.ix .lights .g{background:#0d3535;border:1px solid var(--gold-pale)}
+.ix .lights .o{background:#a88538}
+.ix .lights .r{background:#070707}
+.ix .worth{font-size:14px;color:var(--gold-pale);margin-top:18px}
+.ix .vip .sub-ph{display:grid;grid-template-columns:1fr;gap:0}
+/* price */
+.ix .price{font-family:var(--display);font-weight:700;font-size:clamp(2.6rem,6vw,4rem);color:var(--ink);line-height:1;margin:6px 0 8px}
+.ix .teal .price{color:#fff}
+/* stories */
+.ix .story{padding:40px 0;border-top:1px solid var(--line)}
+.ix .story h3{font-size:clamp(1.25rem,2.4vw,1.6rem);margin-bottom:16px}
+.ix blockquote{margin:18px 0 0;padding:6px 0 6px 22px;border-left:3px solid var(--gold);font-family:var(--display);font-weight:500;font-size:1.15rem;line-height:1.5;color:var(--ink)}
+/* testimonials */
+.ix .tq{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+.ix .tq .t{background:var(--cream);padding:30px 26px;border-top:3px solid var(--gold)}
+.ix .tq .t p{font-family:var(--display);font-weight:500;color:var(--ink);font-size:1.05rem;line-height:1.5}
+.ix .tq cite{display:block;margin-top:14px;font-style:normal;font-size:13px;font-weight:600;letter-spacing:.04em}
+.ix .wa{display:flex;gap:22px;justify-content:center;align-items:flex-start;flex-wrap:wrap;margin-top:28px}
+.ix .wa img{width:min(100%,420px);border-radius:14px;box-shadow:0 6px 24px rgba(0,0,0,.08)}
+/* faq */
+.ix .faq h3{font-size:1.05rem;margin:30px 0 8px}
+@media(max-width:860px){
+  .ix .sec{padding:68px 0}
+  .ix .split{grid-template-columns:1fr;gap:34px}
+  .ix .split.rev .ph{order:0}
+  .ix .ph img{max-height:520px}
+  .ix .three,.ix .tq{grid-template-columns:1fr}
+  .ix .band{height:380px}
+  .ix .vip .txt{padding:40px 24px}
+  .ix .num li,.ix .inc .it{grid-template-columns:44px 1fr}
+}
+
+.hero .photo-col img{max-height:640px;object-fit:cover;object-position:center 20%}
+.hero .sub+.sub{margin-top:-20px}
+.hero .lede{font-family:var(--display);font-weight:600;font-size:clamp(1.15rem,2vw,1.4rem);color:var(--gold-pale);line-height:1.35;margin-bottom:22px;max-width:30ch}
+
+/* photo treatments */
+.ix .fig{position:relative;margin:0}
+.ix .fig::before{content:"";position:absolute;inset:22px -22px -22px 22px;border:1.5px solid var(--gold);z-index:0}
+.ix .split.rev .fig::before{inset:22px 22px -22px -22px}
+.ix .fig img{position:relative;z-index:1}
+.ix .fig .tag{position:absolute;z-index:2;left:-34px;bottom:44px;max-width:300px;background:var(--cream);padding:20px 22px;border-left:3px solid var(--gold);box-shadow:0 14px 34px rgba(7,7,7,.14);font-family:var(--display);font-weight:600;font-size:1.05rem;line-height:1.35;color:var(--ink)}
+.ix .split.rev .fig .tag{left:auto;right:-34px}
+.ix .fig .tag small{display:block;font-family:var(--body);font-weight:600;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:8px}
+.ix .fig .tag.dark{background:var(--teal);color:#fefcfa;border-left-color:var(--gold-pale)}
+.ix .fig .tag.dark small{color:var(--gold-pale)}
+.ix .fig .tag ul{list-style:none;font-family:var(--body);font-weight:500;font-size:.95rem}
+.ix .fig .tag li{padding:5px 0;border-top:1px solid var(--line)}
+.ix .fig .tag li:first-child{border-top:0}
+.ix .teal .fig::before{border-color:var(--gold-pale)}
+/* band with words over it */
+.ix .band{position:relative}
+.ix .band::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,7,7,.72) 0%,rgba(7,7,7,.35) 55%,rgba(7,7,7,0) 100%)}
+.ix .band .over{position:absolute;z-index:2;left:0;right:0;top:50%;transform:translateY(-50%);max-width:var(--max);margin:0 auto;padding:0 28px}
+.ix .band .over p{font-family:var(--display);font-weight:700;font-size:clamp(1.7rem,4vw,3rem);line-height:1.12;color:#fefcfa;max-width:16ch}
+.ix .band .over p+p{margin-top:16px;color:var(--gold-pale);font-size:clamp(1.2rem,2.4vw,1.7rem)}
+/* chips on the VIP photo */
+.ix .vip .ph{position:relative}
+.ix .vip .chip{position:absolute;z-index:2;top:22px;left:22px;background:var(--gold);color:#fefcfa;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:9px 16px}
+.ix .vip .cap{position:absolute;z-index:2;left:0;right:0;bottom:0;padding:70px 26px 24px;background:linear-gradient(0deg,rgba(7,7,7,.75),rgba(7,7,7,0));font-family:var(--display);font-weight:700;font-size:1.5rem;color:#fefcfa}
+/* hero badge */
+.hero .photo-col{position:relative}
+.hero .badge{position:absolute;left:-26px;bottom:40px;background:var(--cream);color:var(--ink);padding:16px 20px;border-left:3px solid var(--gold);font-family:var(--display);font-weight:600;font-size:.95rem;line-height:1.35;box-shadow:0 14px 34px rgba(7,7,7,.25)}
+.hero .badge small{display:block;font-family:var(--body);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:6px}
+@media(max-width:860px){
+  .ix .fig::before{inset:14px -10px -14px 10px}
+  .ix .split.rev .fig::before{inset:14px -10px -14px 10px}
+  .ix .fig .tag,.ix .split.rev .fig .tag{left:14px;right:14px;bottom:-30px;max-width:none}
+  .ix .fig{margin-bottom:40px}
+  .ix .band .over p{max-width:14ch}
+  .hero .badge{left:14px;bottom:18px}
+}
+
+/* scale and contrast */
+.ix h2{font-size:clamp(2rem,4.6vw,3.3rem);line-height:1.04}
+.ix .stats{background:var(--ink);color:#fefcfa}
+.ix .stats .row{max-width:var(--max);margin:0 auto;padding:46px 28px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.ix .stats .s b{display:block;font-family:var(--display);font-weight:700;font-size:clamp(3rem,7vw,5.2rem);line-height:.9;color:var(--gold-pale);letter-spacing:-.03em}
+.ix .stats .s span{display:block;margin-top:10px;font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
+.ix .num li{grid-template-columns:110px 1fr;align-items:center;font-size:1.12rem}
+.ix .num b{font-size:clamp(2.8rem,5vw,4rem);font-weight:700;line-height:1;color:transparent;-webkit-text-stroke:1.5px var(--gold)}
+.ix .num li:nth-child(odd) b{color:var(--gold);-webkit-text-stroke:0}
+.ix .inc .it{grid-template-columns:110px 1fr}
+.ix .inc .it b.n{font-size:clamp(2.8rem,5vw,4rem);font-weight:700;line-height:1}
+.ix .vip .kick{font-size:13px}
+.ix .vip h3{font-size:clamp(1.5rem,3vw,2.2rem);letter-spacing:.02em;text-transform:none}
+.ix .said{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;line-height:1.25}
+.ix .huge{font-family:var(--display);font-weight:700;font-size:clamp(2.4rem,6vw,4.6rem);line-height:1;letter-spacing:-.03em;color:var(--ink)}
+.ix .teal .huge{color:#fefcfa}
+.ix .huge em{font-style:normal;color:var(--gold)}
+.ix .teal .huge em{color:var(--gold-pale)}
+.ix .price{font-size:clamp(3.6rem,9vw,6.4rem);letter-spacing:-.035em}
+.ix .three h3{font-size:1.15rem}
+.ix .three .w .big{display:block;font-family:var(--display);font-weight:700;font-size:3.4rem;line-height:1;color:var(--gold);margin-bottom:14px}
+@media(max-width:860px){
+  .ix .stats .row{grid-template-columns:repeat(2,1fr);gap:30px 18px;padding:40px 22px}
+  .ix .num li,.ix .inc .it{grid-template-columns:72px 1fr}
+}
+
+/* familiar cards */
+.ix .fam{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:40px}
+.ix .fc{background:var(--cream-2);padding:30px 30px 32px;border-top:3px solid var(--gold)}
+.ix .fc .fn{display:block;font-family:var(--display);font-weight:700;font-size:3rem;line-height:1;color:var(--gold);margin-bottom:14px}
+.ix .fc p{font-size:1.08rem;line-height:1.55;color:var(--ink)}
+.ix .fc:last-child{grid-column:1 / -1;background:var(--teal)}
+.ix .fc:last-child p{color:#fefcfa;font-family:var(--display);font-weight:600;font-size:1.35rem}
+.ix .fc:last-child .fn{color:var(--gold-pale)}
+.ix .wa img{width:min(100%,320px)}
+@media(max-width:860px){.ix .fam{grid-template-columns:1fr}.ix .fc .fn{font-size:2.4rem}}
+
+/* show whole photos, no cropping */
+.ix .ph img{height:auto;max-height:none;object-fit:contain}
+.hero .photo-col img{max-height:none;object-fit:contain}
+.ix .vip .ph img{height:100%;object-fit:cover;object-position:center top}
+.ix .band{height:auto}
+.ix .band img{height:auto;max-height:none}
+
+/* band as black split, photo uncropped */
+.ix .band{display:grid;grid-template-columns:1fr 1fr;align-items:center;background:#070707;height:auto;overflow:visible}
+.ix .band::after{display:none}
+.ix .band img{order:2;width:100%;height:auto;max-height:none;object-fit:contain}
+.ix .band .over{position:static;transform:none;order:1;padding:56px 48px;max-width:none;margin:0}
+@media(max-width:860px){.ix .band{grid-template-columns:1fr}.ix .band .over{padding:44px 24px}}
+
+/* screenshot wall + pull quote */
+.ix .wall{columns:3 280px;column-gap:22px;margin-top:40px}
+.ix .wall img{width:100%;display:block;margin:0 0 22px;break-inside:avoid;border-radius:14px;box-shadow:0 8px 26px rgba(7,7,7,.12);background:#070707}
+.ix .pull{max-width:860px;margin:10px auto 50px;text-align:center}
+.ix .pull p{font-family:var(--display);font-weight:600;font-size:clamp(1.35rem,2.8vw,2rem);line-height:1.35;color:var(--ink)}
+.ix .pull cite{display:block;margin-top:14px;font-style:normal;font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep)}
+
+.ix .buy2{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.ix .buy2 .btn{margin-top:22px}
+.ix .btn.ghost-dark{background:transparent;color:var(--ink);border:1.5px solid var(--gold)}
+.ix .btn.ghost-dark:hover{background:var(--gold);color:#fff}
+/* VIP day extras, 23 Oct 2026 */
+.ix .fam .fc,.ix .fam .fc:last-child{background:var(--cream-2);grid-column:auto}
+.ix .fam .fc h3,.ix .fam .fc:last-child h3{color:var(--ink)}
+.ix .fam .fc p,.ix .fam .fc:last-child p{color:var(--brown);font-family:var(--body);font-weight:400;font-size:1rem}
+.ix .fam .fc .fn{color:var(--gold)}
+.ix .btn.line{background:transparent;color:var(--ink);border:1.5px solid var(--gold)}
+.ix .btn.line:hover{background:var(--gold);color:#fff}
+.ix .btn.light{background:transparent;color:#fefcfa;border:1.5px solid var(--gold-pale)}
+.ix .btns{display:flex;flex-wrap:wrap;gap:12px}
+.ix .note{font-size:14px}
+.ix .step{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:56px;background:var(--cream);align-items:stretch}
+.ix .step.rev .st-ph{order:2}
+.ix .st-ph img{width:100%;height:100%;max-height:560px;object-fit:cover;display:block}
+.ix .st-tx{padding:56px 52px;display:flex;flex-direction:column;justify-content:center}
+.ix .st-n{font-family:var(--display);font-weight:700;font-size:clamp(3rem,6vw,4.6rem);line-height:.9;color:var(--gold);margin-bottom:12px}
+.ix .st-tx h3{font-size:clamp(1.5rem,2.6vw,2rem);margin-bottom:14px}
+.ix .st-line{font-family:var(--display);font-weight:600;color:var(--ink);font-size:1.15rem;margin-top:18px}
+.ix .lights span{color:#fefcfa}
+.ix .prices{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:40px;max-width:960px;margin-left:auto;margin-right:auto}
+.ix .pc{background:var(--cream);border:1px solid var(--line);padding:40px 36px;display:flex;flex-direction:column}
+.ix .pc.feat{background:var(--teal);color:#fefcfa;border-color:var(--teal)}
+.ix .pc.feat .kick{color:var(--gold-pale)}
+.ix .pc .price{color:var(--ink);font-size:clamp(3rem,6vw,4.4rem);margin:6px 0}
+.ix .pc.feat .price{color:#fff}
+.ix .pc-sub{font-family:var(--display);font-weight:600;font-size:1.05rem;margin-bottom:16px}
+.ix .pc ul{list-style:none;margin:0 0 10px;display:grid;gap:10px}
+.ix .pc li{padding-left:22px;position:relative;line-height:1.5}
+.ix .pc li::before{content:"";position:absolute;left:0;top:.6em;width:10px;height:2px;background:var(--gold)}
+.ix .pc .btn{margin-top:auto;align-self:flex-start}
+.ix .fam{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:40px}
+.ix .fc{background:var(--cream-2);padding:30px;border-top:3px solid var(--gold)}
+.ix .fn{display:block;font-family:var(--display);font-weight:700;font-size:3rem;line-height:1;color:var(--gold);margin-bottom:12px}
+.ix .fc h3{font-size:1.3rem;margin-bottom:8px}
+.ix .forno{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:40px}
+.ix .forno>div{background:var(--cream);padding:34px;border-top:3px solid var(--gold)}
+.ix .forno>div:last-child{border-top-color:var(--ink)}
+.ix .forno h3{font-size:1.2rem;margin-bottom:14px}
+.ix .forno ul{list-style:none;display:grid;gap:10px}
+.ix .forno li{padding-left:22px;position:relative;line-height:1.5}
+.ix .forno li::before{content:"✓";position:absolute;left:0;color:var(--gold);font-weight:700}
+.ix .forno>div:last-child li::before{content:"×";color:var(--ink)}
+.ix .closeband{display:grid;grid-template-columns:1fr 1fr;background:var(--teal);color:#fefcfa}
+.ix .cb-ph img{width:100%;height:100%;max-height:720px;object-fit:cover;display:block}
+.ix .cb-tx{padding:72px 56px;display:flex;flex-direction:column;justify-content:center}
+.ix .closeband .huge{color:#fff;font-size:clamp(2.2rem,5vw,3.8rem)}
+.ix .closeband .huge em{color:var(--gold-pale)}
+.ix .faq h3{font-size:1.1rem;margin:28px 0 8px}
+.ix .wall{columns:4 220px}
+@media(max-width:860px){
+  .ix .step,.ix .prices,.ix .fam,.ix .forno,.ix .closeband{grid-template-columns:1fr}
+  .ix .step.rev .st-ph{order:0}
+  .ix .st-ph img{max-height:420px}
+  .ix .st-tx,.ix .cb-tx{padding:36px 24px}
+  .ix .pc{padding:30px 24px}
+}
+
+/* About v3, 23 Oct 2026 */
+.ix h2{color:var(--ink);margin-bottom:22px;font-style:normal}
+.ix .huge{color:var(--ink)}
+.ix .ab3-hero{position:relative;margin-top:64px;background:#070707;color:#fefcfa;min-height:min(88vh,820px);display:grid;grid-template-columns:1.1fr .9fr;align-items:stretch}
+.ix .ab3-hero-img{width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block;filter:grayscale(1)}
+.ix .ab3-hero-tx{padding:64px 56px;display:flex;flex-direction:column;justify-content:center}
+.ix .ab3-hero h1{font-family:var(--display);font-weight:700;color:#fff;font-size:clamp(2rem,4vw,3.3rem);line-height:1.08;letter-spacing:-.02em;margin-bottom:18px}
+.ix .ab3-cause{font-size:1.1rem;color:#fefcfa;line-height:1.55;margin-bottom:24px}
+.ix .ab3-small{font-size:1.05rem;color:#d7d0c4}
+.ix .ab3-decision{font-family:var(--display);font-weight:700;color:var(--gold-pale);font-size:clamp(1.8rem,3.4vw,2.6rem);line-height:1.1;margin:10px 0 18px}
+.ix .ab3-skip{margin-top:30px;align-self:flex-start;color:var(--gold-pale);font-size:14px;font-weight:600;text-decoration:underline;text-underline-offset:4px}
+.ix .ab3-note{font-size:13px;font-style:italic;color:var(--brown);border-left:3px solid var(--line);padding-left:12px;margin-bottom:28px}
+.ix .ab3-chips{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 14px}
+.ix .ab3-chips span{border:1px solid var(--gold-soft);color:var(--gold-deep);font-size:13px;padding:6px 12px;border-radius:999px}
+.ix .closeband .kick{margin-bottom:10px}
+.ix .cb-tx p{color:#fefcfa}
+@media(max-width:860px){.ix .ab3-hero{grid-template-columns:1fr;min-height:0}.ix .ab3-hero-img{max-height:420px}.ix .ab3-hero-tx{padding:40px 24px}}
+
+</style>
+
 </head>
 <body>
 
@@ -254,75 +515,111 @@ gtag('config', 'G-SY8NKELMNZ');
 </nav>
 
 <!-- HERO -->
-<section class="hero">
-  <div class="hero-grid">
-    <div class="hero-copy">
-      <p class="eyebrow reveal">About Juliette</p>
-      <h1 class="reveal"><span class="lead">Touch base with yourself.</span><span class="punch">Be touched by life.</span></h1>
-      <p class="open reveal">This isn't self-help. It's a full-body remembrance of softness and strength. Of what's always been yours.</p>
-      <p class="open reveal">This is for someone finding the patterns that close the door to touch, aliveness and connection, and learning how to open it again.</p>
-    </div>
-    <div class="hero-photo reveal">
-      <img src="/about-hero-plain.jpg" alt="Juliette Karaman">
-    </div>
+<main class="ix">
+<section class="ab3-hero">
+  <img src="about-jp-08.jpg" alt="Juliette Karaman, black and white" class="ab3-hero-img">
+  <div class="ab3-hero-tx">
+    <p class="kick" style="color:var(--gold-pale)">About Juliette</p>
+    <h1>I woke up on the half landing in a pool of my own blood.</h1>
+    <p class="ab3-cause">I'd fainted again, and fallen onto a Chinese vase. It shattered and cut my wrist open.</p>
+    <p class="ab3-small">Lying there, I made a decision.</p>
+    <p class="ab3-decision">This is not how I die.</p>
+    <p class="ab3-small">Everything I teach began on that landing.</p>
+    <a href="#ways" class="ab3-skip">How to work with me ↓</a>
   </div>
 </section>
 
-<!-- ORIGIN -->
-<section style="background:var(--cream);border-bottom:1px solid var(--line)">
-  <div class="prose">
-    <p class="eyebrow reveal" style="color:var(--gold-deep);margin-bottom:20px">Where this began</p>
-    <h2 class="reveal">Sensation over strategy. Presence over performance.</h2>
-    <p class="reveal">Before I worked with couples, visionaries, and women reclaiming themselves, I was a SENCO, supporting children on the autism spectrum to feel, regulate, and trust what they sensed but couldn't speak. That is where this work began. In those rooms, I learned something that has shaped everything since: <em>the body already knows.</em> It always has.</p>
-    <p class="reveal">I created <span class="trname">The Touch Reset</span>, my method for taking you from performing fine to landing in your own body, built on <strong>Touch Base®</strong> and <strong>Touch Languages™</strong>. There is a way in for women and for men, alone or with someone you love. All of it from <em>lived experience, not textbooks</em>, in the rooms where people stop performing and start feeling.</p>
-    <div class="pills reveal">
-      <span>EMDR</span><span>Hypnotherapy</span><span>Touch Base®</span><span>Touch Languages™</span><span>Somatic experiencing</span><span>Spinal attunement</span><span>Energy work</span><span>Deep PEAT</span><span>Aspectics</span><span>Soma Mystica</span><span>RRRR®</span><span>Erotic Blueprints</span>
-    </div>
-    <p class="reveal pullline">I did not collect these. I needed every single one.</p>
-    <p class="reveal">You were told <strong>The Spontaneity Lie</strong>: that real closeness arrives on its own, and anything built on purpose is not the real thing. It does not arrive on its own. <em>It is built.</em></p>
+<!-- WHAT MY BODY BURIED -->
+<section class="sec">
+  <div class="tight">
+    <p class="ab3-note">This part of my story mentions sexual assault.</p>
+    <p class="kick">What my body buried</p>
+    <p>That night was the beginning. One thing unravelled, then the next.</p>
+    <p>Then I remembered what my mind had buried for twenty-five years.</p>
+    <p class="huge" style="margin:26px 0;font-size:clamp(2.2rem,5vw,3.6rem)">I had been <em>date raped.</em></p>
+    <p>My body had carried it the whole time. The bracing. The numbness. The years of wondering why I couldn't feel as much as I wanted to.</p>
+    <p>If I hadn't nearly died on that half landing, I might never have gone looking.</p>
+    <blockquote style="margin-top:30px">So many of the women who come to me carry sexual trauma. Some don't remember it. Their body does.</blockquote>
+    <p class="bigline" style="margin-top:26px">When a woman tells me her body closes and she doesn't know why, she doesn't have to explain. <em>I know where it lives.</em></p>
   </div>
 </section>
 
-<!-- PULL QUOTE -->
-<div class="pull">
-  <p class="reveal">"What they long for now is to feel what's always been there."</p>
-</div>
-
-<!-- PERSONAL STORY WITH PHOTO -->
-<section style="background:var(--paper);border-bottom:1px solid var(--line);padding:0">
-  <div class="origin-grid">
-    <div class="origin-copy">
-      <p class="eyebrow reveal" style="color:var(--gold-deep);margin-bottom:20px">Her story</p>
-      <h2 class="reveal popH2">The life that looked perfect on the outside.</h2>
-      <p class="reveal" style="color:var(--brown);margin-bottom:22px;font-size:1.0625rem;line-height:1.85">I built a life that looked extraordinary. <strong>Four children of my own.</strong> A relationship with a man who had three. Seven children, two homes, different cultures, one family woven together with love and sheer will. I was devoted. I overgave. I held it all: the harmony, the logistics, the emotional weight of everyone around me, while quietly carrying my own in the body.</p>
-      <p class="reveal beat">Then my body stopped me.</p>
-      <p class="reveal" style="color:var(--brown);margin-bottom:22px;font-size:1.0625rem;line-height:1.85">Nine months of illness. Fainting. Hospitals. A body that refused to keep going until I listened. I had become a shell of the woman I used to be, performing strength, managing everyone's safety, holding a smile over what I actually felt. My body knew before I did: <em>this was not sustainable. This was not living.</em></p>
-      <p class="reveal" style="color:var(--brown);margin-bottom:16px;font-size:1.0625rem;line-height:1.85">That nine months changed everything. It forced me to choose myself for the first time, with full permission.</p>
-      <p class="reveal pullline">That terrifying, liberating choice became the root of everything I now teach.</p>
+<!-- HER STORY -->
+<section class="sec cream2">
+  <div class="in split">
+    <div>
+      <p class="kick">Her story</p>
+      <h2>The life that looked perfect <em style="font-style:normal;color:var(--gold)">on the outside.</em></h2>
+      <p>Before the landing, I had built a life that looked extraordinary.</p>
+      <p>Four children of my own. A man I loved, with three of his. Seven children, two homes, different cultures, one family woven together with love and sheer will.</p>
+      <p>I held all of it. The logistics, the harmony, the feelings of everyone in the house. I overgave. I was very good at it.</p>
+      <p class="bigline" style="margin-top:22px">I got so good at managing everyone's life yet could not feel my own body.</p>
+      <p style="margin-top:18px">Nine months of illness. Hospitals. Fainting, again and again. My body had stopped asking politely.</p>
     </div>
-    <div class="origin-photo reveal">
-      <img src="/about-middle.jpg" alt="Juliette Karaman">
-    </div>
+    <div class="ph"><figure class="fig"><img src="about-jp-05.jpg" alt="Juliette leaning on a kitchen counter, smiling" loading="lazy"><figcaption class="tag"><small>Juliette Karaman</small>Mother of four</figcaption></figure></div>
   </div>
 </section>
 
-<!-- KARIM WITH PHOTO -->
-<section class="karim" style="padding:0">
-  <div class="karim-grid" style="grid-template-columns:1fr;max-width:740px;margin:0 auto">
-    <div class="karim-copy" style="padding:72px 28px 48px">
-      <p class="eyebrow reveal" style="color:var(--gold-deep);margin-bottom:20px">What became possible</p>
-      <h2 class="reveal popH2">Our children never had to choose.</h2>
-      <p class="reveal" style="margin-bottom:20px;line-height:1.85">When my relationship with Karim ended, we sat down together, <em>before any lawyers</em>, and decided everything.</p>
-      <p class="reveal" style="margin-bottom:20px;line-height:1.85">How our children would spend time with each of us. What happened to the houses, the money, the life we'd built. By the time we reached the lawyers, <strong>there was nothing left to fight over.</strong></p>
-      <p class="reveal beat">Fifteen years later, we still spend Christmas together.</p>
-      <p class="reveal" style="margin-bottom:28px;line-height:1.85">Birthdays together. We're each other's closest friends, just no longer married. Every time we're at a table together, someone pulls me aside and asks: <span class="ask">how did you do that?</span></p>
-      <p class="reveal pullline">That is the work. That is what becomes possible when you stop performing safety and start building it from the inside.</p>
+<!-- WHAT BECAME POSSIBLE -->
+<section class="sec">
+  <div class="in split rev">
+    <div>
+      <p class="kick">What became possible</p>
+      <h2>Our children never had to choose.</h2>
+      <p>When Karim and I ended our relationship, we sat down together, before any lawyers, and decided everything. How the children would spend time with each of us. The houses. The money. The life we'd built.</p>
+      <p>By the time we reached the lawyers, there was nothing left to fight over.</p>
+      <p class="huge" style="margin:26px 0;font-size:clamp(1.9rem,4vw,2.8rem)">Fifteen years later, <em>we still spend Christmas together.</em></p>
+      <p>Birthdays too. We're each other's closest friends. Every time we're at a table together, someone pulls me aside and asks: <strong style="color:var(--ink)">"How did you do that?"</strong></p>
+      <p class="bigline" style="margin-top:18px">That is the work.</p>
+      <p style="margin-top:22px;font-style:italic">Today I live in England with my fiancé, Alex.</p>
     </div>
-  </div>
-  <div class="reveal" style="width:100%;overflow:hidden;max-height:520px;margin-top:56px">
-    <img src="/familyxmas.jpg" alt="Juliette with family at Christmas" style="width:100%;height:520px;object-fit:cover;object-position:center 20%;display:block" loading="lazy" decoding="async">
+    <div class="ph"><figure class="fig"><img src="/familyxmas.jpg" alt="Juliette with Karim and their children at Christmas" loading="lazy"><figcaption class="tag"><small>Christmas</small>Still a family</figcaption></figure></div>
   </div>
 </section>
+
+<!-- AT THE EDGE OF LIFE -->
+<section class="closeband">
+  <div class="cb-ph"><img src="about-jp-37.jpg" alt="Juliette on a beach, looking into the distance" loading="lazy" style="object-position:72% center"></div>
+  <div class="cb-tx">
+    <p class="kick" style="color:var(--gold-pale)">At the edge of life</p>
+    <p class="huge">I'm also a <em>death doula.</em></p>
+    <p>I've been with my mother, my sister and my father as they died.</p>
+    <p>I know how to stay in a room when everything is at its most raw. It's the same presence I bring to every session: nothing is too much, and nothing has to be hidden.</p>
+    <p style="margin-top:18px;font-weight:600;color:#fff">I have been working with trauma and the body for the last ten years, and I know it deeply in my own body too.</p>
+  </div>
+</section>
+
+<!-- WHERE THIS BEGAN -->
+<section class="sec cream2">
+  <div class="in split">
+    <div>
+      <p class="kick">Where this began</p>
+      <h2>The body already knows. <em style="font-style:normal;color:var(--gold)">It always has.</em></h2>
+      <p>Long before any of this, I was a SENCO. I worked with children on the autism spectrum, helping them feel safe in their own skin, and trust what they sensed but couldn't say.</p>
+      <p>In those rooms I learned the thing that has shaped everything since.</p>
+      <p class="bigline" style="margin-top:18px">The body already knows.</p>
+    </div>
+    <div class="ph"><figure class="fig"><img src="about-jp-26.jpg" alt="Juliette in a yellow scarf, looking down" loading="lazy"></figure></div>
+  </div>
+</section>
+
+<!-- WHAT I DO NOW -->
+<section class="sec">
+  <div class="in split rev">
+    <div>
+      <p class="kick">What I do now</p>
+      <h2>I created The Touch Reset.</h2>
+      <p>My method for taking you from performing fine to landing in your own body. Built on Touch Base® and the Touch Languages™. A way in for women and for men, alone or with someone you love.</p>
+      <div class="ab3-chips"><span>EMDR</span><span>Hypnotherapy</span><span>Touch Base®</span><span>Touch Languages™</span><span>Somatic experiencing</span><span>Spinal attunement</span><span>Energy work</span><span>Deep PEAT</span><span>Aspectics</span><span>Soma Mystica</span><span>RRRR®</span><span>Erotic Blueprints</span></div>
+      <p style="font-style:italic;font-weight:600;color:var(--ink)">I did not collect these. I needed every single one.</p>
+      <p style="margin-top:18px">You were told <strong style="color:var(--ink)">The Spontaneity Lie</strong>: that real closeness arrives on its own, and anything built on purpose isn't the real thing.</p>
+      <p class="huge" style="margin-top:14px;font-size:clamp(2rem,4vw,3rem)">It is <em>built.</em></p>
+    </div>
+    <div class="ph"><figure class="fig"><img src="about-hero-22.jpg" alt="Juliette laughing, sitting on a tall chair" loading="lazy"></figure></div>
+  </div>
+</section>
+</main>
+
 
 <!-- I TAKE A STAND -->
 <section class="stand">
@@ -344,11 +641,11 @@ gtag('config', 'G-SY8NKELMNZ');
     </div>
   </div>
   <p class="reveal" style="color:#d7d0c4;font-size:1rem;margin-bottom:36px">Let's make that happen together.</p>
-  <a href="/work-with-me" class="btn reveal">Start here</a>
+  <a href="#ways" class="btn reveal">See how to work with me</a>
 </section>
 
 <!-- WAYS IN -->
-<section class="ways">
+<section class="ways" id="ways">
   <h2 class="reveal">How to work with Juliette</h2>
   <p class="sub reveal">Wherever you are, there's a way in.</p>
   <div class="ways-grid doors4">
