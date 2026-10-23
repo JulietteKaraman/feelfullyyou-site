@@ -416,6 +416,10 @@ gtag('config', 'G-SY8NKELMNZ');
 .wm .cards.wide .card .im img{height:100%;width:100%;object-fit:cover}
 .wm .cards.wide .card .bd{display:flex;flex-direction:column;justify-content:center;padding:36px 34px!important}
 @media(max-width:800px){.wm .cards.wide .card{grid-template-columns:1fr}.wm .cards.wide .card .im{min-height:220px}}
+.wm .cards.five{display:flex!important;flex-wrap:wrap;justify-content:center;gap:22px}
+.wm .cards.five .card{flex:0 1 calc((100% - 44px)/3)}
+@media(max-width:900px){.wm .cards.five .card{flex:0 1 calc((100% - 22px)/2)}}
+@media(max-width:600px){.wm .cards.five .card{flex:1 1 100%}}
 /* photo ladder tiles, 23 Oct 2026 */
 .wm .ladder{background:#070707!important;padding:56px 0 64px!important;border:none!important}
 .wm .ladder .in::before{content:"Six ways in. Start wherever you are.";display:block;text-align:center;font-family:var(--display);font-weight:700;color:#fff;font-size:clamp(1.6rem,3.4vw,2.4rem);margin-bottom:28px;letter-spacing:-.02em}
@@ -486,10 +490,14 @@ gtag('config', 'G-SY8NKELMNZ');
     <div class="bw-head"><p class="kick">02 · On your own</p><h2>In your own time, at your own pace.</h2></div>
     <div class="group">
       <div class="ghead"><span class="gn">03</span><h3>On your own</h3><p>In your own time, at your own pace</p></div>
-      <div class="cards four">
+      <div class="cards five">
         <a href="/one-touch" class="card">
           <div class="im"><img src="one-touch-hero.jpg" alt="One Touch" loading="lazy"></div>
           <div class="bd"><p class="meta">7 days · solo</p><h3>One Touch</h3><p class="pr">£97</p><p>Seven days to come back into touch with yourself.</p><span class="go">Start One Touch →</span></div>
+        </a>
+        <a href="/the-unspoken-distance" class="card">
+          <div class="im" style="background:#070707"><img src="media/69d9373a9a68c417bdfa53de.jpg" alt="The Unspoken Distance: a guide for men who love women they can no longer reach" loading="lazy" style="object-fit:contain"></div>
+          <div class="bd"><p class="meta">For men · A guide</p><h3>The Unspoken Distance</h3><p class="pr">£97</p><p>For the man who knows something is off but can't name it.</p><span class="go">Get the guide →</span></div>
         </a>
         <a href="/31-touch-points" class="card">
           <div class="im"><img src="31-touch-points-og.jpg" alt="31 Touch Points" loading="lazy"></div>
@@ -504,7 +512,6 @@ gtag('config', 'G-SY8NKELMNZ');
           <div class="bd"><p class="meta">In the app · 31 days</p><h3>31 Days Closer</h3><p class="pr">£17</p><p>Thirty-one cards, one a day, already in the right order.</p><span class="go">Start 31 Days Closer →</span></div>
         </a>
       </div>
-      <div class="menrow"><span><strong style="color:var(--ink)">For men:</strong> The Unspoken Distance, £97. For the man who knows something is off but can't name it.</span><a href="/the-unspoken-distance">Get the guide →</a></div>
     </div>
   
   </div>
