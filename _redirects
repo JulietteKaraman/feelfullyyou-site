@@ -44,6 +44,16 @@
 # nobody ever bought it through the app, they all received PDFs.
 /10-touch-rituals               /31-touch-points                301!
 /10-touch-rituals.html          /31-touch-points                301!
+# 10 Touch Rituals retired (Juliette, 24 Oct 2026): old pages go to 31 Touch Points. The PDF stays reachable for past buyers whose welcome email links it.
+/thankyou-10rituals             /31-touch-points                301!
+/thankyou-10rituals.html        /31-touch-points                301!
+/trip-wire                      /31-touch-points                301!
+/trip-wire.html                 /31-touch-points                301!
+/trip                           /31-touch-points                301!
+/confidence                     /31-touch-points                301!
+/confidence.html                /31-touch-points                301!
+/confidence-thankyou            /31-touch-points                301!
+/confidence-thankyou.html       /31-touch-points                301!
 /31-touch-points                /31-touch-points.html           200
 /31-daily-touch-points          /31-touch-points                301!
 /31-daily-touch-points.html     /31-touch-points                301!
@@ -90,8 +100,6 @@
 /the-scrumptious-and-pleasure-candles /the-scrumptious-and-pleasure-candles.html 200
 /the-scrumptious--and-pleasure-candles /the-scrumptious-and-pleasure-candles.html 200
 /landing                        /landing.html                   200
-/trip-wire                      /trip-wire.html                 200
-/trip                           /trip-wire.html                 200
 /trip-wire-between-touches      /                               301!
 /free-10-rituals                 https://couplecards.netlify.app/api/touch-rituals-checkout?promo=FREERITUALS 301
 /summit-pleasure                 /summit-pleasure.html           200
@@ -113,7 +121,6 @@
 /relationship-pattern-session-thankyou /pattern-session-thankyou 301
 
 # Thank-you pages
-/thankyou-10rituals             /thankyou-10rituals.html        200
 /thankyou-31touchpoints         /thankyou-31touchpoints.html    200
 /thankyou-both                  /thankyou-both.html             200
 /thankyou-between-touches       /thankyou-between-touches.html  200
@@ -183,7 +190,6 @@
 /members                        /members.html                   200
 /membership                     /members.html                   200
 
-/confidence                     /confidence.html                200
 
 # Podcast show-notes links (Buzzsprout points here)
 /pick-a-card                    https://couplecards.netlify.app  302
