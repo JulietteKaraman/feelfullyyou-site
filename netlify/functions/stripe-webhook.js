@@ -365,12 +365,12 @@ const PAYMENT_LINK_PRODUCTS = {
   // sequenceId once "The Beginning: Welcome" is rebuilt.
   'plink_1UTszzCCw18geY15tWcXFDIo': {
     tagId: 20794305,   // "the beginning"
-    sequenceId: null,
+    sequenceId: 2942261,  // "The Beginning: Welcome" (rebuilt 24 Oct 2026)
     label: 'The Beginning £8,997 (pay in full)'
   },
   'plink_1UTt4pCCw18geY15560fTMsf': {
     tagId: 20794305,   // "the beginning"
-    sequenceId: null,
+    sequenceId: 2942261,  // "The Beginning: Welcome" (rebuilt 24 Oct 2026)
     label: 'The Beginning £3,222 x 3 (payment plan)'
   },
   'plink_1UThP0CCw18geY15zZHeEcsQ': {
