@@ -213,90 +213,109 @@
   @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}.btn.pulse{animation:none}.rin{opacity:1;transform:none}}
 </style>
 <style>
-  /* ===== LIGHT THEME (cream base, green + ochre accents) ===== */
-  body{background:var(--sand);color:var(--brown)}
-  .stage{background:var(--paper);border:1px solid #e7dfce;box-shadow:0 30px 70px -30px rgba(13,53,53,.4),0 2px 0 rgba(255,255,255,.8) inset}
-  .glow{background:radial-gradient(closest-side,rgba(168,133,56,.13),rgba(168,133,56,0))}
-  h1{color:var(--ink)}
-  .eyebrow{color:var(--gold-deep)}
-  #intro .sub{color:var(--brown)}
-  #intro .meta,#intro .meta b{color:var(--gold-deep)}
-  #intro .note{color:var(--gold-deep)}
-  @keyframes pulseL{0%{box-shadow:0 0 0 0 rgba(13,53,53,.32)}70%{box-shadow:0 0 0 14px rgba(13,53,53,0)}100%{box-shadow:0 0 0 0 rgba(13,53,53,0)}}
-  .btn{background:var(--teal);color:var(--cream)}
-  .btn:hover{background:#0a2a2a}
-  .btn.pulse{animation:pulseL 2.4s infinite}
-  .aud{background:var(--cream-2);border-color:var(--line);border-left:3px solid var(--gold-soft);color:var(--ink);box-shadow:0 2px 6px -2px rgba(93,74,51,.2)}
-  @media (hover:hover) and (pointer:fine){.aud:hover{border-color:var(--gold);border-left-color:var(--gold);background:#faf4e8;transform:translateY(-2px);box-shadow:0 12px 26px -12px rgba(93,74,51,.3)}}
-  .aud span{color:var(--brown)}
-  .phase{color:var(--gold-deep)}
-  .phaseSub{color:var(--brown)}
-  .proghead .l{background:#e7dfce}
-  .track{background:#ece5d7}
-  .qtext{color:var(--ink)}
-  .opt{background:var(--cream-2);border-color:var(--line);border-left:3px solid var(--gold-soft);color:var(--brown);box-shadow:0 2px 6px -2px rgba(93,74,51,.2)}
-  @media (hover:hover) and (pointer:fine){.opt:hover{border-color:var(--gold);border-left-color:var(--gold);background:#faf4e8;transform:translateY(-2px);box-shadow:0 12px 26px -12px rgba(93,74,51,.3)}}
-  .opt.sel{border-color:var(--gold);border-left-color:var(--gold);background:#f6edda;color:var(--ink);box-shadow:0 12px 30px -14px rgba(168,133,56,.4)}
-  .qback{color:var(--gold-deep)}
-  #reveal .kicker,#reveal .sub{color:var(--gold-deep)}
-  #reveal .tease{color:var(--brown)}
-  .divider{background:var(--gold-soft)}
-  .capture label{color:var(--ink)}
-  .capture .sublabel{color:var(--brown)}
-  .capture input[type=email]{background:#fff;border-color:#e7dfce;color:var(--ink)}
-  .capture input[type=email]::placeholder{color:#b9b1a2}
-  /* a second .consent{color:#9a917f} rule used to sit here, a leftover from an
-     old light-theme capture form that no longer exists on this page. Same
-     class, later in the cascade, so it silently beat the real dark-theme
-     .consent rule above and made the email consent text unreadable against
-     the hero photo. Removed for good, never redefine .consent a second time
-     without scoping it, this exact silent-override bug is the one to avoid. */
-  /* result: dark bands stay genuinely dark (teal-deep) for real color rhythm against the cream body + teal bands */
-  .rband.dark{background:var(--teal-deep)}
-  /* .rband.hero keeps its own photo + dark overlay from the base rule above,
-     with the pale gold/cream text built for it, on purpose, not part of the
-     cream light theme, the photo is the point of this band. */
-  .rband.dark .reyebrow{color:var(--gold-pale)}
-  .rband.dark .reyebrow:before{background:var(--gold-pale)}
-  .rband.dark .bandhead{color:var(--cream)}
-  .rband.dark .bandtext{color:rgba(254,252,250,.88)}
-  .rband.dark .pitch .pl{color:var(--gold-pale)}
-  .rband.dark .pitch h2{color:var(--cream)}
-  .rband.dark .pitch .blurb,.rband.dark .pitch .foryou li{color:rgba(254,252,250,.85)}
-  .rband.dark .again button{color:var(--gold-pale)}
-  /* buttons on green and dark accent bands pop in gold, not teal-on-teal */
-  .rband.green .btn,.rband.dark .btn{background:var(--gold-pale);color:var(--teal)}
-  .rband.green .btn:hover,.rband.dark .btn:hover{background:#e7d6a3}
-  .rband.green .btn.pulse,.rband.dark .btn.pulse{animation:pulse 2.4s infinite}
-  /* intro: big title + popping layer words */
-  #intro .eyebrow{font-size:11px;letter-spacing:.2em}
-  #intro .qtitle{font-family:var(--display);font-weight:700;font-size:clamp(2.5rem,7vw,3.6rem);color:var(--ink);line-height:1.03;letter-spacing:-.024em;margin:14px 0 0}
-  #intro .qtitle .g{color:var(--gold-deep)}
-  #intro .qtag{font-family:var(--display);font-style:italic;font-weight:400;color:var(--gold-deep);font-size:clamp(1.2rem,3.4vw,1.6rem);margin-top:16px}
-  #intro .qlead{color:var(--brown);font-size:1.08rem;margin-top:30px;line-height:1.6}
-  #intro .qlead b{color:var(--gold-deep);font-weight:700}
-  #intro .spine{font-family:var(--display);font-style:italic;font-weight:400;color:var(--gold-deep);font-size:1.02rem;line-height:1.55;margin:16px auto 0;max-width:38ch}
-  #intro .partpill{display:inline-block;font-family:var(--body);font-weight:600;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);background:#f6edda;border:1px solid var(--gold-soft);border-radius:20px;padding:6px 16px;margin-top:16px}
-  #intro .layercircles{display:flex;flex-wrap:wrap;justify-content:center;gap:22px 26px;margin:26px auto 0;max-width:470px}
-  #intro .lc{display:flex;flex-direction:column;align-items:center;gap:10px;width:92px}
-  .ring{border-radius:50%;border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:600;color:var(--gold-deep);background:#fff;box-shadow:0 6px 18px -10px rgba(168,133,56,.6)}
-  #intro .ring{width:62px;height:62px;font-size:1.3rem}
-  .qrings .ring.active{background:var(--teal);border-color:var(--teal);color:#fff}
-  #intro .lc span{font-family:var(--body);font-weight:500;font-size:.82rem;color:var(--brown);text-align:center;line-height:1.25}
-  #intro .note{margin-top:26px}
-  /* result layer number circles */
-  .lnum{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;border:1.5px solid var(--gold);color:var(--gold-deep);font-family:var(--display);font-weight:600;font-size:.82rem;flex:0 0 auto}
-  .reyebrow.num{gap:12px}
-  .reyebrow.num:before{content:none}
-  .rband.green .lnum{border-color:var(--gold-pale);color:var(--gold-pale)}
-  .reyebrow.dark .lnum{border-color:var(--teal-deep);color:var(--teal-deep)}
-  /* readability + shadow + growth */
-  .rband.green .bandtext,.rband.green .aside{color:rgba(254,252,250,.95)}
-  .rband.green .chip{color:#fff}
-  .rband.ochre{background:linear-gradient(180deg,#f8ecd4 0%,var(--cream) 100%)}
-  .rband.ochre .bigbadge{color:var(--gold-deep)}
-  .photoband{width:100%;height:clamp(280px,60vw,460px);background-size:cover;background-position:center 18%;background-repeat:no-repeat}
-  #intro .intro-photo{display:block;width:100%;height:clamp(180px,38vw,240px);border-radius:12px;background:url('https://feelfullyyou.com/touch-embrace-bw.jpg') center 20%/cover no-repeat;margin:0 0 26px;box-shadow:0 12px 30px -18px rgba(13,53,53,.45)}
+  /* ===== DARK THEME, same look as the cards app ("Dyad mode + dark look") =====
+     Replaces the old light/cream override block. Tokens: #070707 bg with a deep teal
+     glow at the top, cream text, bright yellow #DDC98E accent, lemon #EEDE80 only for
+     focus rings, dark gold #A88538 only as a deep tone. Poppins 300 headings, Inter body. */
+  :root{
+    --bg:#070707;--ink:#fefcfa;--muted:rgba(254,252,250,.62);--line:rgba(221,201,142,.2);
+    --gold:#DDC98E;--gold-pale:#DDC98E;--lemon:#EEDE80;--deep:#A88538;--teal:#0D3535;
+    --ease:cubic-bezier(.2,.8,.2,1);
+  }
+  html{background:#070707}
+  body{background-color:#070707;background-image:radial-gradient(120% 70% at 50% -10%,#0D3535 0%,rgba(13,53,53,.35) 45%,#070707 75%);background-attachment:fixed;background-repeat:no-repeat;color:var(--ink)}
+  ::selection{background:var(--gold);color:#070707}
+  a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--lemon);outline-offset:3px}
+
+  .topbar{background:transparent;border-bottom:1px solid var(--line)}
+  .topbar .brand{font-weight:400;letter-spacing:.06em;display:inline-flex;align-items:center;min-height:44px;padding:0 12px}
+  .topbar .brand b{color:var(--gold);font-weight:500}
+
+  /* buttons: solid yellow pill, near-black text */
+  .btn,.rband.green .btn,.rband.dark .btn{background:var(--gold);color:#070707;border-radius:999px;font-family:var(--display);font-weight:400;font-size:1rem;letter-spacing:.02em;min-height:52px;padding:14px 38px;display:inline-flex;align-items:center;justify-content:center;transition:transform .2s var(--ease),background .2s}
+  .btn:hover,.rband.green .btn:hover,.rband.dark .btn:hover{background:#e9d9a8;transform:translateY(-2px)}
+  .btn.block{display:flex;width:100%;padding:14px 0}
+  .btn.pulse,.rband.green .btn.pulse,.rband.dark .btn.pulse{animation:pulse 2.6s infinite}
+
+  /* intro: photo kept, now fading into the dark page */
+  .rband.hero.introhero{background:linear-gradient(180deg,rgba(7,7,7,.38) 0%,rgba(7,7,7,.42) 45%,rgba(7,7,7,.94) 100%),url('touch-embrace-bw.jpg') center 20%/cover no-repeat;background-color:#070707}
+  .rband.hero{background:linear-gradient(180deg,rgba(7,7,7,.45) 0%,rgba(7,7,7,.55) 45%,rgba(7,7,7,.94) 100%),url('https://feelfullyyou.com/touch-cloth.jpg') center 30%/cover no-repeat;background-color:#070707}
+  .hero-eyebrow{color:var(--gold);font-weight:400;letter-spacing:.32em}
+  #intro{flex:1 0 auto;padding-top:clamp(56px,13vh,130px)}
+  .idline{font-weight:300;letter-spacing:-.015em;text-wrap:balance}
+  .idline b{font-weight:400}
+  .idline .g{color:var(--gold)}
+  .idsub{color:rgba(254,252,250,.84);font-weight:300}
+  .idsub b{font-weight:500;color:var(--ink)}
+
+  /* quiz panel */
+  main{padding:44px 20px}
+  .stage{overflow:hidden;overflow:clip;background:rgba(254,252,250,.025);border:1px solid var(--line);border-radius:20px;box-shadow:0 30px 60px -30px rgba(0,0,0,.9),0 0 70px -30px rgba(221,201,142,.18)}
+  .glow{background:radial-gradient(closest-side,rgba(221,201,142,.09),rgba(221,201,142,0))}
+  .card-bg{position:relative;height:clamp(170px,36vw,230px);border-radius:14px;border:1px solid var(--line);box-shadow:0 18px 40px -22px rgba(0,0,0,.9)}
+  .card-bg::after{content:"";position:absolute;inset:0;border-radius:inherit;background:linear-gradient(180deg,rgba(7,7,7,0) 45%,rgba(7,7,7,.55) 100%);pointer-events:none}
+  .eyebrow{color:var(--muted);font-size:12px;letter-spacing:.2em}
+  .proghead .l{background:var(--line)}
+  .phaseSub{font-family:var(--display);font-style:italic;font-weight:300;font-size:.92rem;color:var(--gold);line-height:1.45;margin-bottom:16px}
+  .track{background:rgba(254,252,250,.09);height:2px}
+  .track .bar{background:var(--gold)}
+  .qtext{font-family:var(--display);font-weight:300;font-size:1.42rem;line-height:1.38;color:var(--ink);margin:26px 0 24px}
+  .opts{gap:10px}
+  .opt{display:block;min-height:52px;background:rgba(254,252,250,.03);border:1px solid var(--line);border-left:1px solid var(--line);border-radius:14px;padding:14px 18px;color:rgba(254,252,250,.88);font-weight:300;font-size:.97rem;line-height:1.5;box-shadow:none}
+  @media (hover:hover) and (pointer:fine){.opt:hover{border-color:rgba(221,201,142,.55);background:rgba(221,201,142,.07);transform:translateY(-2px);box-shadow:0 14px 28px -16px rgba(0,0,0,.9)}}
+  .opt.sel{border-color:var(--gold);border-width:1px;background:rgba(221,201,142,.1);color:var(--ink);box-shadow:0 0 0 1px rgba(221,201,142,.35),0 0 28px -6px rgba(221,201,142,.45)}
+  .qback{min-height:44px;min-width:44px;padding:12px 18px;margin:10px auto 0;color:var(--muted);font-size:.84rem}
+  .qback:hover{color:var(--gold)}
+
+  /* gentle fade-up between questions, like turning a card */
+  @keyframes qin{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  .qanim{animation:qin .55s var(--ease) backwards}
+  .opts .opt{animation:qin .5s var(--ease) backwards}
+  .opts .opt:nth-child(2){animation-delay:.04s}.opts .opt:nth-child(3){animation-delay:.08s}
+  .opts .opt:nth-child(4){animation-delay:.12s}.opts .opt:nth-child(5){animation-delay:.16s}.opts .opt:nth-child(6){animation-delay:.2s}
+
+  /* email step */
+  .capture input[type=email]{background:rgba(7,7,7,.55);border:1px solid rgba(221,201,142,.4);border-radius:14px;min-height:52px;padding:14px 18px;color:var(--ink);font-size:16px;margin-bottom:12px}
+  .capture input[type=email]::placeholder{color:rgba(254,252,250,.42)}
+  .capture input[type=email]:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 1px rgba(221,201,142,.35),0 0 28px -6px rgba(221,201,142,.4)}
+  .consent{color:var(--muted);font-size:.86rem;text-align:center}
+  .msg.err{color:#e9b9b9;text-align:center}
+
+  /* results */
+  .rband{padding:76px 24px;border-top:1px solid var(--line)}
+  .rband.hero{border-top:0}
+  .rband.green{background:linear-gradient(180deg,rgba(13,53,53,.6) 0%,rgba(13,53,53,.28) 100%)}
+  .rband.dark{background:transparent}
+  .rlabel{display:block;text-align:center;font-family:var(--body);font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:400;margin:0 0 18px}
+  .bandhead{font-weight:300;font-size:clamp(1.9rem,6.4vw,2.8rem);line-height:1.14;letter-spacing:-.012em;color:var(--ink);text-align:center;margin:0 auto 22px;max-width:20ch}
+  .rband.dark .bandhead{color:var(--gold)}
+  #resultPage{flex:1 0 auto}
+  .rdesc,.bandtext{text-wrap:pretty}
+  .rdesc{text-align:center;max-width:44ch;margin:0 auto;font-size:1.08rem;line-height:1.75;font-weight:300;color:rgba(254,252,250,.9)}
+  .rclose{text-align:center;max-width:36ch;margin:34px auto 0;padding-top:28px;border-top:1px solid var(--line);font-family:var(--display);font-style:italic;font-weight:300;font-size:1.18rem;line-height:1.55;color:var(--gold)}
+  .rband.green .bandtext{color:rgba(254,252,250,.86);text-align:center}
+  .rband.green .bandhead{color:var(--ink)}
+  #ctaBtnWrap{border-top:1px solid var(--line)!important}
+  .again button{min-height:44px;padding:10px 18px;color:var(--muted);font-size:.84rem}
+  .again button:hover{color:var(--gold)}
+
+  footer{background:transparent;border-top:1px solid var(--line);color:var(--muted)}
+  footer .fbrand{color:var(--ink);font-weight:400}
+  footer a{color:var(--muted);display:inline-flex;align-items:center;min-height:44px;padding:0 4px}
+  footer div[style]{color:var(--muted)!important}
+  footer a[style]{color:var(--muted)!important}
+
+  @media(max-width:600px){
+    main{padding:20px 14px 32px}
+    .stage{padding:28px 18px 24px;border-radius:18px}
+    .qtext{font-size:1.28rem}
+    .rband{padding:60px 20px}
+    .rdesc{font-size:1.04rem}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+    .rin{opacity:1;transform:none}
+  }
 </style>
 </head>
 <body>
@@ -342,8 +361,8 @@
   <section class="rband hero">
     <div class="rin">
       <div class="hero-eyebrow">Your results</div>
-      <h1 class="idline">That's everything I <span class="g">need.</span></h1>
-      <p class="idsub">Two things came back. Where the touch actually went, and how you're wired for it.<br>Where shall I send them?</p>
+      <h1 class="idline" id="idLine">That's everything I <span class="g">need.</span></h1>
+      <p class="idsub" id="idSub">Two things came back. Where the touch actually went, and how you're wired for it.<br>Where shall I send them?</p>
       <form class="capture" id="capForm" autocomplete="on" style="max-width:420px;margin:26px auto 0;text-align:left">
         <input type="email" id="email" name="email" placeholder="you@email.com" required>
         <input type="text" class="hp" name="hp_field" tabindex="-1" autocomplete="off" aria-hidden="true">
@@ -356,21 +375,20 @@
 
   <div id="unlockedContent" style="display:none">
 
-  <section class="rband green">
+  <section class="rband green" id="stageBand">
     <div class="rin">
-      <p class="bandtext" id="gapLine" style="text-align:center;font-weight:600;max-width:46ch;margin:0 auto 26px;color:var(--gold-pale)"></p>
-      <h2 class="bandhead" id="stateName" style="text-align:center;margin-bottom:28px"></h2>
-      <div id="stateBeats" style="max-width:34ch;margin:0 auto 34px"></div>
-      <p id="stateClose" style="text-align:center;font-style:italic;color:var(--gold-pale);font-family:var(--display);font-size:1.32rem;line-height:1.55;max-width:32ch;margin:0 auto;padding-top:26px;border-top:1px solid rgba(221,201,142,.28)"></p>
+      <span class="rlabel">Where your touch went</span>
+      <h2 class="bandhead" id="stageHead"></h2>
+      <p class="rdesc" id="stageDesc"></p>
     </div>
   </section>
 
-  <section class="rband dark">
+  <section class="rband dark" id="pleasureBand">
     <div class="rin">
-      <p style="text-align:center;font-size:.86rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-pale);margin:0 0 10px">Your Pleasure Language</p>
-      <h2 class="bandhead" id="pleasureName" style="text-align:center"></h2>
-      <p id="pleasureOpen" style="text-align:center;max-width:36ch;margin:20px auto 30px;font-size:1.16rem;line-height:1.62;color:var(--cream)"></p>
-      <p id="pleasureClose" style="text-align:center;max-width:34ch;margin:0 auto;padding-top:26px;border-top:1px solid rgba(221,201,142,.28);font-style:italic;color:var(--gold-pale);font-family:var(--display);font-size:1.24rem;line-height:1.55">And you don't know your partner's. Most couples never find out, and spend years offering each other the wrong thing in good faith.</p>
+      <span class="rlabel">How you're wired for it</span>
+      <h2 class="bandhead" id="pleasureName"></h2>
+      <p class="rdesc" id="pleasureDesc"></p>
+      <p class="rclose" id="pleasureClose">You may not know your partner's yet. Couples can spend years offering each other the wrong touch, in good faith.</p>
     </div>
   </section>
 
@@ -448,6 +466,7 @@
 
   var PLEASURE={
     Sensual:{name:"The Sensual",short:"Sensual",
+      res:"You absorb touch. The flicker of candlelight, the smell of their skin, the texture of sheets against your thighs. Your body responds to beauty, to detail, to the slow unfolding of sensation. You want to be melted into, slowly.",
       tease:"You don't just feel touch, you absorb it: the light, the scent, the slow unfolding of it all.",
       desc:"You don't just feel touch. You absorb it. The flicker of candlelight, the smell of their skin, the texture of sheets against your thighs. Your body responds to beauty, to detail, to the slow unfolding of sensation. You don't just want connection. You want to be melted into, slowly.",
       open:"You don't just feel touch. You absorb it.",
@@ -456,6 +475,7 @@
       turnons:["A slow build, no rushing to the finish","Candlelight, scent, music, texture","Full-body touch, not a straight line","Being savoured, like you're being tasted","Anticipation stretched until you can barely stand it"],
       shadow:"You can need the conditions just right, the light, the mood, the time, before you'll let go. When it's rushed or plain, you quietly close, and desire ends up waiting for a stage that rarely gets set."},
     Sexual:{name:"The Sexual",short:"Sexual",
+      res:"Direct. Honest. No fluff, no performance. You don't need a long warm-up, you want to feel it now. Raw, real, unfiltered. You crave physical connection that does not apologise for its intensity, and you own what you want, out loud. You just want it met.",
       tease:"Direct, honest, no fluff. You don't need a long warm-up, you want it met.",
       desc:"Direct. Honest. No fluff, no performance. You don't need a long warm-up, you want to feel it now. Raw, real, unfiltered. You crave physical connection that does not apologise for its intensity, and you own what you want, out loud. You just want it met.",
       open:"Direct. Honest. No fluff, no performance.",
@@ -464,6 +484,7 @@
       turnons:["Directness, no games","Skin on skin, now","Being wanted openly, and told so","Heat over elaborate staging","A partner who acts the moment they feel it"],
       shadow:"Your directness can get read as too much, and if a partner needs slow warmth first, you can take it as rejection, pull back, and stop reaching altogether."},
     Energetic:{name:"The Energetic",short:"Energetic",
+      res:"You feel everything, even in stillness. Your arousal lives in the invisible: the pause, the pulse, the moment before contact. You don't need touch to feel lit up. You need space, presence, attunement. Anticipation is where it starts for you.",
       tease:"You feel everything, even in stillness, the charge lives in the pause before contact.",
       desc:"You feel everything, even in stillness. Your arousal lives in the invisible: the pause, the pulse, the moment before contact. You don't need touch to feel lit up. You need space, presence, attunement. You are the blueprint of anticipation.",
       open:"You feel everything, even in stillness.",
@@ -472,6 +493,7 @@
       turnons:["The charge before a single touch","Eye contact that says everything","Teasing, space, the delicious almost","Being felt from across a room","A partner who slows right down and tunes in"],
       shadow:"You feel every off-note too. The smallest misattunement makes you brace and disappear up into your head, right at the moment you most want to be reached."},
     Kinky:{name:"The Kinky",short:"Kinky",
+      res:"What turns you on is the dynamic underneath the act: power, trust, tension, a little taboo. It's about permission. You come alive in the unknown, in the pause before the command. This wiring is devotional.",
       tease:"It was never about the act. It's about the dynamic underneath it: power, trust, permission.",
       desc:"This isn't about performance, it's about permission. What turns you on is not only the act, it is the dynamic underneath: power, trust, tension, a little taboo. You come alive in the unknown, in the pause before the command. This wiring isn't dangerous, it's devotional.",
       open:"This isn't about performance, it's about permission.",
@@ -480,6 +502,7 @@
       turnons:["Power play, given or taken","Trust deep enough to hand over control","A little taboo, a little edge","Being told what to do, or telling them","Ritual, restraint, the charge of the unknown"],
       shadow:"You can hide this whole part of yourself for fear of being judged, and settle for a version you never wanted, quietly starving for a charge you never let yourself ask for."},
     Shapeshifter:{name:"The Shapeshifter",short:"Shapeshifter",
+      res:"You are fluent in many languages of turn-on. You are layered, holding many at once. You want it all, and you can hold it: the tease, the tenderness, the rawness, the sacred, the unexpected. You don't want to choose. You want to be met in your full spectrum.",
       tease:"You're fluent in many languages of turn-on, and you refuse to choose just one.",
       desc:"You are fluent in many languages of turn-on. You are layered, holding many at once. You want it all, and you can hold it: the tease, the tenderness, the rawness, the sacred, the unexpected. You don't want to choose. You want to be met in your full spectrum.",
       open:"You are fluent in many languages of turn-on.",
@@ -523,26 +546,38 @@
 
   var STAGE={
     quiet:{name:"The Quiet",kicker:"Where you are right now",
+      head:"Your touch went quiet.",
+      res:"Touch is still happening between you. Nothing dramatic went wrong. Something about it went flat, like you're moving past each other instead of toward each other. Often it's a mismatch: you're reaching in a language the other person can't quite receive, and neither of you knew the languages existed.",
       desc:"Touch is still happening between you. Nothing dramatic has gone wrong, but something about it has gone flat, like you're moving past each other rather than toward each other. Usually this is a mismatch: you're reaching in a language the other person can't quite receive, and neither of you knew the languages existed.",
       part:"Your wiring above is Part 1 of The Touch Reset: meet what's running you. For The Quiet, that's often enough on its own. Read it together, and let it do the work.",
       pitchLine:"Whenever you're ready to go deeper"},
     brace:{name:"The Brace",kicker:"Where you are right now",
+      head:"Your body braces.",
+      res:"The half-second before contact, your jaw sets and your back tightens. You already know how this goes before it's started. Your body has learned to anticipate. From the outside you can look present while you're somewhere else entirely on the inside.",
       desc:"The half-second before contact, your jaw sets, your back tightens, you already know how this goes before it's even started. Your body has learned to anticipate. This is the stage where you can look present from the outside and be somewhere else entirely on the inside.",
       part:"Knowing your wiring (Part 1) isn't enough here on its own. Structured communication comes next, Part 2: a container where you can say what's true without either of you having to fix it. Touch dates and rituals follow once that's in place.",
       pitchLine:"Start here: structured communication first"},
     gone:{name:"The Gone",kicker:"Where you are right now",
+      head:"The touch has gone.",
+      res:"No single decision was made. Somewhere along the way your body made a quiet agreement, and nobody interrupted it in time. The distance has started to feel like the relationship itself, and there's grief underneath it, even if neither of you says the word.",
       desc:"No single decision was made. Somewhere along the way your body made a quiet agreement, and nobody interrupted it in time. The distance has started to feel like the relationship itself, and there's grief underneath it, even if neither of you says the word.",
       part:"This calls for all four parts of The Touch Reset, in order, with support: your wiring, structured communication, structured touch dates, and daily rituals. It's recoverable. It's just not a one-part fix.",
       pitchLine:"This is where all four parts meet, with support"},
     fade:{name:"The Fade",kicker:"Where you are right now",
+      head:"The wanting faded.",
+      res:"Nothing broke, and nothing braces. Touch is still on offer. Your body just doesn't reach for it anymore. The wanting went quiet before the touch did, so even when it's right there, there's no pull toward it, just a flat, polite yes. This gets mistaken for not caring. Your body stopped expecting anything from touch a long time ago.",
       desc:"Nothing broke and nothing braces. Touch is still on offer, your body just doesn't reach for it anymore. The wanting went quiet before the touch did, so even when it's right there, there's no pull toward it, just a flat, polite yes. This gets mistaken for not caring. It's actually a body that stopped expecting anything from touch a long time ago.",
       part:"Your wiring above matters most here. This isn't a communication pattern to talk through, it's a wanting that needs to be rebuilt in the body, in doses small enough that desire has room to show up again.",
       pitchLine:"Start small: let wanting have room again"},
     reach:{name:"The Reach",kicker:"Where you are right now",
+      head:"You're the one who reaches.",
+      res:"You're the one who initiates almost every time, and you're tired of it. You clearly want your partner. Wanting alone, every single time, has started to feel like a job. The touch is there if you ask for it. The reaching isn't mutual, and some part of you has started keeping score.",
       desc:"You're the one who initiates almost every time, and you're tired of it. You clearly want your partner. It's the wanting alone, every single time, that has started to feel less like desire and more like a job. The touch is there if you ask for it. The reaching isn't mutual, and some part of you has started keeping score.",
       part:"What's above tells you what you're wired for. It won't close the gap by itself. Structured communication, Part 2, is where you actually say the thing, I don't want to be the only one who starts this, without it turning into a fight. That's what changes who reaches first.",
       pitchLine:"Start here: you don't have to be the only one reaching"},
     more:{name:"The More",kicker:"Where you are right now",
+      head:"It's good. You want more.",
+      res:"You already have touch, intimacy and connection that works, at least some of the time. What you're noticing is a ceiling: a sense that depth, sensation, pleasure and aliveness could go further than they do now.",
       desc:"You're not reaching for this because something went quiet. You already have touch, intimacy and connection that works, at least some of the time. What you're noticing is closer to a ceiling than a gap: a sense that depth, sensation, pleasure and aliveness could go further than they currently do.",
       part:"Your wiring above still matters here. Knowing your Pattern and Pleasure Language is how you find the specific more you're actually reaching for, instead of guessing at it generically. The four parts of The Touch Reset still apply, they just point toward expansion here, not repair.",
       pitchLine:"Start here: point what already works toward more"}
@@ -566,12 +601,16 @@
                    "Your own hand on your own arm.",
                    "Most of what passes other people by reaches you."],
             close:"Nothing here to repair. The question at your end is range."}};
+  // The quiz scores 4 STATES (Braced / The Fade / Reaching / Melted), not the 6 STAGES in the
+  // approved copy. Each state is shown with the stage whose copy describes it. 'quiet' and
+  // 'gone' have no scored state yet, so they are never shown until scoring emits them.
+  var STATE_STAGE={'Braced':'brace','The Fade':'fade','Reaching':'reach','Melted':'more'};
   var STATE_TAGLINE={'Braced':"almost nothing is arriving","The Fade":"it arrives and then you go","Reaching":"you feel it and you cannot ask for it","Melted":"all of it reaches you"};
   var READY_CALL={'ready-yes':1,'ready-now':1};
   var WANT={'want-feel':"to feel it when you are touched",'want-stay':"to stay with it instead of going somewhere else",
             'want-ask':"to know what you want, and be able to say it",'want-more':"to be touched more often than you are",
             'want-good':"more of what you already have"};
-  var STAGE_TAGLINE={quiet:"Nothing dramatic. Just quiet.",brace:"My body knows before my mind does.",gone:"This is just how things are now.",fade:"It's not gone, it's just not lit up right now.",reach:"You're the one who keeps closing the gap.",more:"Good already. I want more of it."};
+  var STAGE_TAGLINE={quiet:"Nothing dramatic. Just quiet.",brace:"My body knows before my mind does.",gone:"This is just how things are now.",fade:"It's still there. It just isn't lit up right now.",reach:"You're the one who keeps closing the gap.",more:"Good already. I want more of it."};
   var ALL=[
 ["Think about yesterday. What touch actually happened?",[
  ["None that I can remember.",{f:0,s:0,a:0}],
@@ -673,7 +712,7 @@
   function phaseExplain(idx){
     if(idx===0)return"No thinking. Just what actually happened.";
     if(idx<5)return"What your body already says yes to.";
-    if(idx<11)return"Not what you believe about yourself. What happens.";
+    if(idx<11)return"Only what actually happens in your body.";
     return"Where you want it, and what it costs to stay here.";
   }
   var i=0,answers=new Array(TOTAL).fill(null),locked=false,audience='self',context='self',identity='';
@@ -692,6 +731,11 @@
     intro.style.display='none';funnel.style.display='flex';quiz.style.display='block';renderQ();
     if(typeof gtag==='function')gtag('event','quiz_start',{quiz:'touch_reset'});
   });
+  function replay(){
+    [cardBg,$('phaseSub'),$('question')].forEach(function(el){
+      if(!el)return;el.classList.remove('qanim');void el.offsetWidth;el.classList.add('qanim');
+    });
+  }
   function renderQ(){
     locked=false;var q=ALL[i];
     setCardBg(q[2]);
@@ -719,6 +763,7 @@
       });
       box.appendChild(b);
     });
+    replay();
   }
   $('back').addEventListener('click',function(){if(i>0){i--;renderQ();}});
   var result={state:'',pleasure:'',pattern:'',gap:null,ready:null};
@@ -776,20 +821,17 @@
   }
 
 
+  // After the email step the heading says what came back (Juliette, 24 Oct).
+  function showCameBack(){
+    var il=$('idLine'),is=$('idSub');
+    if(il)il.innerHTML="Here's what <span class=\"g\">came back.</span>";
+    if(is)is.textContent="Where the touch actually went, and how you're wired for it.";
+  }
   function paintResult(){
     var set=function(id,txt){var el=$(id);if(el)el.textContent=txt;};
-    var st=STATE[result.state]||STATE['Reaching'], pl=PLEASURE[result.pleasure];
-    if(result.gap&&WANT[result.gap])
-      set('gapLine','Right now, '+STATE_TAGLINE[result.state]+'. What you want is '+WANT[result.gap]+'.');
-    set('stateName',result.state);
-    var box=$('stateBeats');
-    if(box){box.innerHTML='';st.beats.forEach(function(line){
-      var el=document.createElement('p');
-      el.textContent=line;
-      el.style.cssText='margin:0 0 18px;text-align:center;font-size:1.16rem;line-height:1.62;color:var(--cream)';
-      box.appendChild(el);});}
-    set('stateClose',st.close);
-    if(pl){set('pleasureName',pl.name);set('pleasureOpen',pl.open);}
+    var sg=STAGE[STATE_STAGE[result.state]||'reach'], pl=PLEASURE[result.pleasure];
+    set('stageHead',sg.head);set('stageDesc',sg.res);
+    if(pl){set('pleasureName',pl.name);set('pleasureDesc',pl.res);}
     var w=$('ctaBtnWrap');
     if(READY_CALL[result.ready]){
       set('ctaBody','You said you are ready. Thirty minutes, free, and we look at what would actually move this.');
@@ -821,6 +863,7 @@
       paintResult();
       var unlocked=$('unlockedContent');if(unlocked)unlocked.style.display='block';
       var form=$('capForm');if(form)form.style.display='none';
+      showCameBack();
       window.scrollTo(0,0);revealBands();
       if(typeof gtag==='function')gtag('event','quiz_optin',{quiz:'touch_reset',state:result.state,pleasure:result.pleasure,ready:result.ready});
     }).catch(function(){
@@ -834,6 +877,9 @@
     resultPage.style.display='none';funnel.style.display='flex';reveal.style.display='none';
 
     var unlocked=$('unlockedContent');if(unlocked)unlocked.style.display='none';
+    var il=$('idLine'),is=$('idSub');
+    if(il)il.innerHTML="That's everything I <span class=\"g\">need.</span>";
+    if(is)is.innerHTML="Two things came back. Where the touch actually went, and how you're wired for it.<br>Where shall I send them?";
     $('capForm').style.display='block';$('capForm').reset();$('msg').textContent='';
     $('sendBtn').disabled=false;$('sendBtn').textContent='Reveal my results';
     intro.style.display='block';window.scrollTo(0,0);
@@ -850,6 +896,7 @@
     paintResult();
     var unlocked=$('unlockedContent');if(unlocked)unlocked.style.display='block';
     var form=$('capForm');if(form)form.style.display='none';
+    showCameBack();
     // skip the scroll-triggered fade-in, show everything already settled since
     // there's no real scrolling to trigger it on a straight jump like this
     document.querySelectorAll('.reveal, .rin').forEach(function(el){el.classList.add('in');});
