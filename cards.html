@@ -269,69 +269,41 @@
   .mobile-nav.open{display:flex}
   @media(max-width:860px){.ham{display:block}.topbar .more-wrap{display:none}.topbar nav > .btn{display:none}}
 
-  /* GUIDED APP (24 Oct 2026): real screenshots of feelfullyyou.com/my-cards, Ali-style */
-  .ga{padding:96px 0;background:var(--cream)}
-  .ga.alt{background:var(--cream-2)}
-  .ga .gin{max-width:var(--max);margin:0 auto;padding:0 28px}
-  .ga .center{text-align:center}
-  .ga .center p{margin-left:auto;margin-right:auto}
-  .ga .eyebrow{display:block;margin-bottom:16px}
-  .ga h2{max-width:22ch;margin-left:auto;margin-right:auto}
-  .ga h2 em,.ga h3 em,.ga .bigline em{font-style:normal;color:var(--gold)}
-  .ga .lead{max-width:58ch;margin:0 auto;font-size:var(--t-md);line-height:1.6;color:var(--brown)}
-  .ga .split{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;margin-top:84px}
-  .ga .center + .split{margin-top:64px}
-  .ga .split.rev .phwrap{order:-1}
-  .ga h3{font-family:var(--display);font-weight:700;font-size:clamp(1.6rem,3.2vw,2.3rem);line-height:1.12;letter-spacing:-.02em;margin:0 0 18px;color:var(--ink)}
-  .ga p{line-height:1.65;margin:0 0 16px}
-  .ga h2{margin-bottom:18px}
-  .ga .bigline{font-family:var(--display);font-weight:600;font-size:clamp(1.25rem,2.4vw,1.6rem);line-height:1.3;color:var(--ink);margin-top:22px}
-  .ga .ans3{list-style:none;margin:20px 0 6px;padding:0}
-  .ga .ans3 li{display:flex;gap:16px;align-items:baseline;padding:14px 0;border-top:1px solid var(--line)}
-  .ga .ans3 li:last-child{border-bottom:1px solid var(--line)}
-  .ga .ans3 b{font-family:var(--display);font-weight:700;font-size:1.15rem;min-width:9.5em;color:var(--ink)}
-  .ga .ans3 span{color:var(--brown)}
-  .ga .quote{font-family:var(--display);font-weight:700;font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.2;color:var(--ink);border-left:4px solid var(--gold-pale);padding:6px 0 6px 22px;margin:22px 0}
-  .ga .phwrap{display:flex;justify-content:center;padding-bottom:34px}
-  .ga .phone{position:relative;width:min(300px,78vw);margin:0}
-  .ga .phone::before{content:"";position:absolute;inset:26px -26px -26px 26px;border:1.5px solid var(--gold);z-index:0}
-  .ga .split.rev .phone::before{inset:26px 26px -26px -26px}
-  .ga .phone .bezel{position:relative;z-index:1;background:#070707;border-radius:38px;padding:10px;box-shadow:0 30px 60px rgba(7,7,7,.28)}
-  .ga .phone img{display:block;width:100%;height:auto;border-radius:29px}
-  .ga .phone .tag{position:absolute;z-index:2;right:-70px;bottom:-34px;max-width:250px;background:var(--cream);padding:18px 20px;border-left:3px solid var(--gold);box-shadow:0 14px 34px rgba(7,7,7,.16);font-family:var(--display);font-weight:600;font-size:1.02rem;line-height:1.35;color:var(--ink)}
-  .ga .split.rev .phone .tag{right:auto;left:-70px}
-  .ga .phone .tag small{display:block;font-family:var(--body);font-weight:600;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:8px}
-  .ga .phone .tag.dark{background:var(--teal);color:#fefcfa;border-left-color:var(--gold-pale)}
-  .ga .phone .tag.dark small{color:var(--gold-pale)}
-  .ga-nums{background:var(--teal);color:#fefcfa}
-  .ga-nums .row{max-width:var(--max);margin:0 auto;padding:56px 28px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
-  .ga-nums b{display:block;font-family:var(--display);font-weight:800;font-size:clamp(3rem,7vw,5.2rem);line-height:1;color:var(--gold-pale);letter-spacing:-.03em}
-  .ga-nums span{display:block;margin-top:10px;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:rgba(254,252,250,.82);font-weight:600}
-  .ga-nums p{grid-column:1/-1;margin:14px auto 0;font-family:var(--display);font-weight:600;font-size:clamp(1.2rem,2.4vw,1.6rem);color:#fefcfa}
-  .ga-nums p em{font-style:normal;color:var(--gold-pale)}
-  .ga .two{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:60px;max-width:980px;margin-left:auto;margin-right:auto}
-  .ga .two .col{display:flex;flex-direction:column;align-items:center;text-align:center}
-  .ga .two .phone{width:min(260px,70vw);margin-bottom:56px}
-  .ga .two .phone::before{inset:22px -22px -22px 22px}
-  .ga .two .mins{font-family:var(--display);font-weight:800;font-size:clamp(2.6rem,5vw,3.6rem);line-height:1;color:var(--gold);letter-spacing:-.03em}
-  .ga .two .mins small{display:block;font-family:var(--body);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-top:8px}
-  .ga .two h3{margin:14px 0 12px;font-size:clamp(1.4rem,2.6vw,1.8rem)}
-  .ga .two p{max-width:40ch}
-  .ga .cta{margin-top:56px;text-align:center}
-  .ga .cta .btn{margin:6px}
-  .ga .cta .btn.ghost2{background:transparent;color:var(--gold-deep);border:1.5px solid var(--gold)}
+  /* APP VIDEO (24 Oct 2026): her own screen recording of the app */
+  .vid{background:radial-gradient(120% 90% at 80% 20%,#0d3535 0%,#070707 62%);color:#fefcfa;padding:96px 0;overflow:hidden}
+  .vid .vin{max-width:var(--max);margin:0 auto;padding:0 28px;display:grid;grid-template-columns:1.05fr .95fr;gap:72px;align-items:center}
+  .vid .eyebrow{color:var(--gold-pale);margin-bottom:18px;display:block}
+  .vid h2{color:#fefcfa;max-width:16ch}
+  .vid h2 em{font-style:normal;color:var(--gold-pale)}
+  .vid p{color:rgba(254,252,250,.86);font-size:var(--t-md);line-height:1.65;margin:0 0 16px;max-width:46ch}
+  .vid .three{display:flex;gap:34px;margin:30px 0 34px}
+  .vid .three b{display:block;font-family:var(--display);font-weight:800;font-size:clamp(2.6rem,5vw,3.6rem);line-height:1;color:var(--gold-pale);letter-spacing:-.03em}
+  .vid .three span{display:block;margin-top:8px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:rgba(254,252,250,.75);font-weight:600}
+  .vid .btn{margin:0 10px 10px 0}
+  .vid .btn.ghost{background:transparent;border:1px solid rgba(254,252,250,.55);color:#fefcfa}
+  .vid .phwrap{display:flex;justify-content:center}
+  .vid .phone{position:relative;width:min(300px,74vw);margin:0}
+  .vid .phone::before{content:"";position:absolute;inset:26px -26px -26px 26px;border:1.5px solid var(--gold-pale);z-index:0}
+  .vid .bezel{position:relative;z-index:1;background:#070707;border-radius:40px;padding:10px;box-shadow:0 34px 70px rgba(0,0,0,.45)}
+  .vid video{display:block;width:100%;height:auto;border-radius:31px;background:#070707}
+  .handsband{position:relative;min-height:440px;display:flex;align-items:center;overflow:hidden;background:#070707}
+  .handsband img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 55%}
+  .handsband::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,7,7,.78) 0%,rgba(7,7,7,.35) 55%,rgba(7,7,7,0) 100%)}
+  .handsband p{position:relative;z-index:1;max-width:var(--max);width:100%;margin:0 auto;padding:0 28px;font-family:var(--display);font-weight:700;font-size:clamp(1.8rem,4vw,3rem);line-height:1.12;letter-spacing:-.02em;color:#fefcfa}
+  .handsband p em{font-style:normal;color:var(--gold-pale)}
+  .appstrip{display:grid;grid-template-columns:2fr 3fr;gap:6px;background:#070707}
+  .appstrip img{width:100%;height:560px;object-fit:cover;display:block}
+  .appstrip img.fam{object-position:center 45%}
+  @media(max-width:860px){.appstrip{grid-template-columns:1fr}.appstrip img{height:360px}}
   @media(max-width:860px){
-    .ga{padding:72px 0}
-    .ga .gin{padding:0 22px}
-    .ga .split{grid-template-columns:1fr;gap:56px;margin-top:72px}
-    .ga .split.rev .phwrap{order:0}
-    .ga .phwrap{order:-1}
-    .ga .phone{width:min(270px,72vw)}
-    .ga .phone::before,.ga .split.rev .phone::before{inset:18px -14px -18px 14px}
-    .ga .phone .tag,.ga .split.rev .phone .tag{right:-18px;left:auto;bottom:-30px;max-width:210px;font-size:.92rem;padding:14px 16px}
-    .ga .ans3 li{flex-direction:column;gap:2px}
-    .ga-nums .row{grid-template-columns:repeat(2,1fr);gap:34px 18px;padding:46px 22px}
-    .ga .two{grid-template-columns:1fr;gap:64px}
+    .vid{padding:72px 0}
+    .vid .vin{grid-template-columns:1fr;gap:60px;padding:0 22px}
+    .vid .phone{width:min(270px,72vw)}
+    .vid .phone::before{inset:18px -14px -18px 14px}
+    .handsband{min-height:340px}
+    .handsband::after{background:linear-gradient(180deg,rgba(7,7,7,.15) 0%,rgba(7,7,7,.75) 100%)}
+    .handsband{align-items:flex-end;padding-bottom:40px}
+    .handsband p{padding:0 22px}
   }
 </style>
 <link rel="icon" href="/favicon.ico" sizes="48x48">
@@ -458,26 +430,6 @@ gtag('config', 'G-SY8NKELMNZ');
   </div>
 </section>
 
-<!-- RECOGNITION -->
-<section class="recog">
-  <div class="recog-inner">
-    <div class="recog-grid">
-      <div class="recog-card reveal" style="background:var(--blue)">
-        <div class="label">You recognise this</div>
-        <p>You bring something up and it goes sideways within minutes.</p>
-        <p>You want more closeness but you don't want another difficult conversation.</p>
-        <p>You know something needs to shift. You don't know where to begin.</p>
-      </div>
-      <div class="recog-card reveal" style="background:#f5ead8">
-        <div class="label">Or this</div>
-        <p>You want to understand each other better but the usual questions go nowhere.</p>
-        <p>You share a life, and still feel like there are whole rooms in each other you've never been in.</p>
-        <p>You are not in crisis. You just want more.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- BELIEF QUOTE -->
 <div class="bquote">
   <blockquote class="reveal">"I have watched this structure open rooms that had been closed for decades."</blockquote>
@@ -488,19 +440,14 @@ gtag('config', 'G-SY8NKELMNZ');
 <section class="method" id="how">
   <div class="method-inner">
     <div class="photo reveal">
-      <img src="https://feelfullyyou.com/media/695bcf624d9452480bb5241c.jpg" alt="" loading="lazy" decoding="async">
+      <img src="/media/cards-app-kingsx-life.jpg" alt="Juliette holding her phone with a card open in the Communication and Intimacy Cards app" loading="lazy" decoding="async">
     </div>
     <div class="copy">
       <p class="eyebrow reveal">HOW IT WORKS</p>
       <h2 class="reveal">15 minutes. One card. One prompt, the whole time.</h2>
       <p class="reveal">The speaker is not finished simply because they have spoken.</p>
       <p class="reveal">A communication is complete when the listener has understood it.</p>
-      <p class="reveal"><strong>This is not just a deck of good questions, it is a structured way of communicating.</strong></p>
       <p class="reveal"><strong style="color:var(--gold-deep)">We talk all the time. Talking does not mean we have been understood.</strong></p>
-      <p class="reveal">No preparation. No agenda. Just a card and the willingness to be in the room with each other.</p>
-      <p class="reveal">You were told The Spontaneity Lie: that real closeness arrives on its own, and anything built on purpose is not the real thing. It does not arrive on its own. It is built.</p>
-      <p class="reveal" style="font-size:var(--t-md)"><strong>Connection does not just happen over dinner.</strong></p>
-      <p class="reveal" style="font-size:var(--t-md);color:var(--gold-deep);font-weight:700;margin-top:10px">You build it, and the cards are the structure.</p>
       <div class="steps">
         <div class="step reveal">
           <div class="step-num">1</div>
@@ -551,141 +498,40 @@ gtag('config', 'G-SY8NKELMNZ');
   </div>
 </section>
 
-<!-- WHAT IS ACTUALLY IN A DECK -->
-<section style="padding:80px 0;border-top:1px solid var(--line)">
-  <div class="wrap">
-    <div style="text-align:center;margin-bottom:44px">
-      <p class="eyebrow reveal">WHAT YOU ARE ACTUALLY BUYING</p>
-      <h2 class="reveal">A deck that knows what kind of moment you are in.</h2>
-      <p class="reveal" style="max-width:640px;margin:16px auto 0">Most card decks hand you a shuffle and hope.</p>
-      <p class="reveal" style="max-width:640px;margin:12px auto 0;color:var(--gold-deep);font-weight:700">Yours is sorted by the moment you are actually in, so the card that comes up fits the room you are in.</p>
-    </div>
-
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;max-width:1000px;margin:0 auto">
-      <div class="reveal" style="background:var(--cream-2);border:1px solid var(--line);border-radius:10px;padding:28px">
-        <h3 style="margin:0 0 10px;font-size:20px">Sorted by the moment</h3>
-        <p style="margin:0 0 12px"><strong>When It's Good</strong> is warm and easy. <strong>After the Row</strong> is for repair. <strong>The Table</strong> is what you can say with other people in earshot.</p>
-        <p style="margin:0"><strong>You pick the section, or let it shuffle.</strong></p>
-      </div>
-      <div class="reveal" style="background:var(--cream-2);border:1px solid var(--line);border-radius:10px;padding:28px">
-        <h3 style="margin:0 0 10px;font-size:20px">One question on a card</h3>
-        <p style="margin:0"><strong>The deepening is live. The listener says <em>Clarify that</em>, or <em>Summarise that</em>.</strong></p>
-      </div>
-      <div class="reveal" style="background:var(--cream-2);border:1px solid var(--line);border-radius:10px;padding:28px">
-        <h3 style="margin:0 0 10px;font-size:20px">The heaviest cards are held back</h3>
-        <p style="margin:0"><strong>You open it on purpose, when you have time and nothing after.</strong></p>
-      </div>
-    </div>
-
-    <p class="reveal" style="text-align:center;max-width:620px;margin:40px auto 0;font-size:19px;color:var(--gold-deep);font-style:italic">One card. <strong>Stay with the same prompt for the whole timer.</strong><br>The first answers are the surface.</p>
-  </div>
-</section>
-
-<!-- GUIDED APP: what happens when you open the cards (24 Oct 2026, real screenshots of feelfullyyou.com/my-cards) -->
-<section class="ga" id="inside">
-  <div class="gin">
-    <div class="center">
+<!-- APP VIDEO: Juliette's own screen recording of the cards app (24 Oct 2026) -->
+<section class="vid" id="inside">
+  <div class="vin">
+    <div class="copy">
       <p class="eyebrow reveal">INSIDE THE APP</p>
-      <h2 class="reveal">Press play. <em>I take you through it.</em></h2>
-      <p class="lead reveal">Pick a card and turn it over. Choose with a partner, or on your own. From there my voice guides the sitting: who speaks first, the timer, the three answers, the bell.</p>
-    </div>
-
-    <div class="split">
-      <div class="copy">
-        <p class="eyebrow reveal">THE SITTING</p>
-        <h3 class="reveal">One prompt. <em>Fifteen minutes.</em> The whole time.</h3>
-        <p class="reveal">The prompt stays at the top of the screen. You both see who is speaking and who is listening. The timer runs in a slim gold ring, so nobody watches the clock.</p>
-        <p class="reveal">The listener has three answers, right there as buttons:</p>
-        <ul class="ans3 reveal">
-          <li><b>Thank you</b><span>I understood you.</span></li>
-          <li><b>Clarify that</b><span>I'm listening, I don't understand yet.</span></li>
-          <li><b>Summarise that</b><span>Take a breath and give me the bottom line.</span></li>
-        </ul>
-        <p class="bigline reveal">No fixing. No interrupting. No debating. <em>Three answers.</em></p>
+      <h2 class="reveal">This is what it feels like. <em>Press play.</em></h2>
+      <p class="reveal">Pick a card and turn it over. Choose with a partner, or on your own. Then my voice takes you through it: who speaks first, the timer, the three answers, the bell.</p>
+      <div class="three reveal">
+        <div><b>1</b><span>prompt</span></div>
+        <div><b>15</b><span>minutes</span></div>
+        <div><b>3</b><span>answers</span></div>
       </div>
-      <div class="phwrap reveal">
-        <figure class="phone">
-          <div class="bezel"><img src="/media/cards-app-sitting.jpg" alt="The cards app mid-sitting: the prompt at the top, Sam speaking and Alex listening, a gold timer ring at 14:56, and three buttons: Thank you, Clarify that, Summarise that" loading="lazy" decoding="async" width="600" height="1298"></div>
-          <figcaption class="tag"><small>My voice</small>I start you off, and I'm there when you need me.</figcaption>
-        </figure>
+      <div class="reveal">
+        <a href="#decks" class="btn">Get the Cards</a>
+        <a href="/cards-free-taster" class="btn ghost">Try six cards free first</a>
       </div>
     </div>
-
-    <div class="split rev">
-      <div class="copy">
-        <p class="eyebrow reveal">THANK YOU MEANS SWITCH</p>
-        <h3 class="reveal">Same card. <em>Your turn.</em></h3>
-        <p class="reveal">Understood? The listener presses Thank you. A soft chime, the names cross over, and the other one speaks. Same prompt, back and forth, a little deeper each time.</p>
-        <p class="reveal">Clarify that and Summarise that keep the same person speaking. My voice comes in with permission to go again.</p>
-        <p class="bigline reveal">Every Thank you is a completed communication. <em>The app counts them.</em></p>
-      </div>
-      <div class="phwrap reveal">
-        <figure class="phone">
-          <div class="bezel"><img src="/media/cards-app-your-turn.jpg" alt="The cards app after Thank you: the roles have swapped and the screen says Same card. Alex, your turn. Completed communications: 3" loading="lazy" decoding="async" width="600" height="1298"></div>
-          <figcaption class="tag dark"><small>A soft chime</small>On every Thank you.</figcaption>
-        </figure>
-      </div>
-    </div>
-
-    <div class="split">
-      <div class="copy">
-        <p class="eyebrow reveal">THE BELL</p>
-        <h3 class="reveal">Then the bell rings. <em>Let it settle.</em></h3>
-        <p class="reveal">The screen shows how many completed communications you had. Three times, one of you said something real and was fully understood.</p>
-        <p class="reveal">Then I ask you both one question.</p>
-        <p class="quote reveal">"Tell me what landed for you today as we did this."</p>
-        <p class="reveal">No streaks. Nothing lost if you miss a day. Next time, a new card.</p>
-      </div>
-      <div class="phwrap reveal">
-        <figure class="phone">
-          <div class="bezel"><img src="/media/cards-app-ending.jpg" alt="The end of a sitting: Let it settle. 3 completed communications. Ask each other: Tell me what landed for you today as we did this." loading="lazy" decoding="async" width="600" height="1298"></div>
-          <figcaption class="tag"><small>The ending</small>3 completed communications.</figcaption>
-        </figure>
-      </div>
+    <div class="phwrap reveal">
+      <figure class="phone">
+        <div class="bezel"><video src="/media/cards-app-video.mp4" poster="/media/cards-app-video-poster.jpg" controls playsinline preload="none" width="540" height="960" aria-label="Juliette going through the Communication and Intimacy Cards app on her phone"></video></div>
+      </figure>
     </div>
   </div>
 </section>
 
-<div class="ga-nums">
-  <div class="row">
-    <div class="reveal"><b>1</b><span>prompt</span></div>
-    <div class="reveal"><b>15</b><span>minutes together</span></div>
-    <div class="reveal"><b>3</b><span>answers</span></div>
-    <div class="reveal"><b>5</b><span>minutes on your own</span></div>
-    <p class="reveal">Say the real thing and be understood, <em>without it turning into a row.</em></p>
-  </div>
+<div class="appstrip">
+  <img class="fam" src="/media/cards-app-kingsx-family.jpg" alt="Juliette holding her phone out with a Family card open in the app" loading="lazy" decoding="async">
+  <img src="/media/cards-app-kingsx-stories.jpg" alt="Juliette's hands holding her phone with a Stories and Growth card open in the app" loading="lazy" decoding="async">
 </div>
 
-<section class="ga alt">
-  <div class="gin">
-    <div class="center">
-      <p class="eyebrow reveal">WITH A PARTNER, OR ON YOUR OWN</p>
-      <h2 class="reveal">Two of you. <em>Or just you.</em></h2>
-    </div>
-    <div class="two">
-      <div class="col">
-        <figure class="phone reveal">
-          <div class="bezel"><img src="/media/cards-app-agreement.jpg" alt="The agreement before the timer starts: For the next 15 minutes, our only aim is to understand each other. We stay with one prompt. We won't interject or fix. Button: We agree. Start." loading="lazy" decoding="async" width="600" height="1298"></div>
-        </figure>
-        <div class="mins reveal">15<small>minutes, face to face</small></div>
-        <h3 class="reveal">With a partner</h3>
-        <p class="reveal">Put in your names and choose who speaks first. Then you agree, out loud: for the next 15 minutes, our only aim is to understand each other.</p>
-      </div>
-      <div class="col">
-        <figure class="phone reveal">
-          <div class="bezel"><img src="/media/cards-app-on-your-own.jpg" alt="On your own: a five minute timer, Write one answer, or speak it out loud. Just one. A Next answer button and the answers so far" loading="lazy" decoding="async" width="600" height="1298"></div>
-        </figure>
-        <div class="mins reveal">5<small>minutes, out loud or on paper</small></div>
-        <h3 class="reveal">On your own</h3>
-        <p class="reveal">Write one answer, or speak it out loud. Just one. Take a breath, read the question again, give the next. I call it clearing the pipes.</p>
-      </div>
-    </div>
-    <div class="cta reveal">
-      <a href="#decks" class="btn">Get the Cards</a>
-      <a href="/cards-free-taster" class="btn ghost2">Try six cards free first</a>
-    </div>
-  </div>
-</section>
+<div class="handsband">
+  <img src="/cards-in-hands-og.jpg" alt="Juliette's hands holding the Communication and Intimacy Cards" loading="lazy" decoding="async">
+  <p class="reveal">One card. Fifteen minutes.<br><em>Three answers.</em></p>
+</div>
 
 <!-- OFFER -->
 <section class="offer" id="decks">
