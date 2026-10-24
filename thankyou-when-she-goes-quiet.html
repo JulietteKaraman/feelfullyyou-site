@@ -102,9 +102,9 @@ gtag('config', 'G-SY8NKELMNZ');
   </div>
   <div class="eyebrow">You're in</div>
   <h1>Here's your guide.</h1>
-  <p class="hero-sub">When She Goes Quiet is ready for you right now, in your library.</p>
-  <a href="https://app.feelfullyyou.com" id="openAppLink" class="btn btn-gold" style="margin-top:26px">Open the app &rarr;</a>
-  <p id="openAppHint" style="font-size:13px;color:var(--brown);margin-top:14px">Sign in with the email you just used, no password needed.</p>
+  <p class="hero-sub">When She Goes Quiet is ready for you right now, in the app.</p>
+  <a href="https://app.feelfullyyou.com/practice/when-she-goes-quiet" id="openAppLink" class="btn btn-gold" style="margin-top:26px">Open the guide &rarr;</a>
+  <p id="openAppHint" style="font-size:13px;color:var(--brown);margin-top:14px">It opens straight away. No sign in, no password.</p>
 </div>
 
 <div class="offer">
@@ -159,22 +159,6 @@ document.addEventListener('click', function(e){
   else if (h.indexOf('instagram.com') > -1) gtag('event', 'instagram_click', {link_url: h, page_path: location.pathname});
   else if (h.indexOf('/files/') > -1 || h.indexOf('.pdf') > -1) gtag('event', 'freebie_download', {link_url: h, page_path: location.pathname});
 });
-</script>
-<script>
-// If we arrived with ?email= (the address just typed into the signup form),
-// point "Open the app" straight at the app's login with that email
-// prefilled — it auto-sends the magic link on load, so there's no second
-// "sign up" step. Falls back to the plain app link if there's no email.
-(function () {
-  var params = new URLSearchParams(window.location.search);
-  var email = params.get('email');
-  var link = document.getElementById('openAppLink');
-  var hint = document.getElementById('openAppHint');
-  if (email && link) {
-    link.href = 'https://app.feelfullyyou.com/login?email=' + encodeURIComponent(email);
-    if (hint) hint.textContent = "We'll send your link straight to " + email + ".";
-  }
-})();
 </script>
 <script src="quiz-popup.js" defer></script>
 </body>
