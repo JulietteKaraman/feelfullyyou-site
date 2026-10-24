@@ -29,8 +29,8 @@ const PUBLIC_REPLY = 'Just sent it over, check your DMs 🤍';
 const KEYWORDS = [
   { match: 'TOUCH BASE', dm: 'Here is Touch Base: https://feelfullyyou.com/touch-base-anchor. Three minutes. Thumb to forefinger. Your body learns it is safe right now.' },
   { match: 'ONE TOUCH', dm: 'Here is One Touch: https://feelfullyyou.com/one-touch. Seven days, one practice a day, just you. Structure creates safety. Safety creates surrender.' },
-  { match: 'DECK', dm: 'Here they are. The Intimacy and Communication Cards, 475 prompts across four decks, from £15: https://feelfullyyou.com/cards. Pull one tonight. One answer, from the heart.' },
-  { match: 'CARDS', dm: 'Here is your free taster deck. Ten cards, start tonight: https://feelfullyyou.com/cards-free-taster. Enter your email and the deck opens straight away. Read one out loud. One answer, from the heart. Fifteen minutes is all it takes.' },
+  { match: 'DECK', dm: 'Here they are. The Communication and Intimacy Cards, from £17, the full set £55: https://feelfullyyou.com/cards. One card, fifteen minutes, three answers.' },
+  { match: 'CARDS', dm: 'Here is your free taster. Six cards, three for the two of you and three for the people you have known longest: https://feelfullyyou.com/cards-free-taster. Enter your email and they open straight away. One card, fifteen minutes, three answers.' },
   { match: 'DISTANCE', dm: 'Here is The Unspoken Distance: https://feelfullyyou.com/the-unspoken-distance. Written for the man who feels her closing and does not know why. Start there.' },
   { match: 'QUIET', dm: 'Here is When She Goes Quiet: https://feelfullyyou.com/when-she-goes-quiet. It explains what her silence is actually saying, and what reaches her when words do not.' },
   { match: 'BETWEEN', dm: 'Here is Between Touches: https://feelfullyyou.com/between-touches. What happens between you when nobody is touching is where the work starts.' },
