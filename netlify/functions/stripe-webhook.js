@@ -253,6 +253,8 @@ const PAYMENT_LINK_LABELS = {
   'plink_1UKxpqCCw18geY15NEqv2tyj': 'Couples VIP Full Day £5,000',
   'plink_1UThP0CCw18geY15zZHeEcsQ': '3 Month Intensive £1,700/mo x 3 (payment plan)',
   'plink_1UThdoCCw18geY15iWICtaFv': '3 Month Intensive £5,000 (pay in full)',
+  'plink_1UTszzCCw18geY15tWcXFDIo': 'The Beginning £8,997 (pay in full)',
+  'plink_1UTt4pCCw18geY15560fTMsf': 'The Beginning £3,222 x 3 (payment plan)',
 };
 
 // Tag + sequence by PAYMENT LINK, not by metadata.price_id.
@@ -357,6 +359,19 @@ const PAYMENT_LINK_PRODUCTS = {
     tagId: 24937591,      // "Bought: 3 Month Intensive"
     sequenceId: 2941427,  // "3 Month Intensive: Welcome"
     label: '3 Month Intensive £5,000 (pay in full)'
+  },
+  // The Beginning, new links 24 Oct 2026 (£8,997 PIF, £3,222 x 3). Tag only for
+  // now: the old welcome sequence 2825352 no longer exists in Kit. Set
+  // sequenceId once "The Beginning: Welcome" is rebuilt.
+  'plink_1UTszzCCw18geY15tWcXFDIo': {
+    tagId: 20794305,   // "the beginning"
+    sequenceId: null,
+    label: 'The Beginning £8,997 (pay in full)'
+  },
+  'plink_1UTt4pCCw18geY15560fTMsf': {
+    tagId: 20794305,   // "the beginning"
+    sequenceId: null,
+    label: 'The Beginning £3,222 x 3 (payment plan)'
   },
   'plink_1UThP0CCw18geY15zZHeEcsQ': {
     tagId: 24937591,      // "Bought: 3 Month Intensive"
