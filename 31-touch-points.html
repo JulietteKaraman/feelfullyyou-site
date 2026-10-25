@@ -504,6 +504,9 @@ gtag('config', 'G-SY8NKELMNZ');
 .tp-price{font-family:var(--display);font-weight:800;font-size:3.4rem;line-height:1;color:var(--ink)}
 .tp-small{font-size:.92rem!important;color:var(--brown)!important}
 .tp-visual{position:relative;min-height:520px}
+.tp-video{display:block;height:560px;aspect-ratio:9/16;width:auto;max-width:100%;object-fit:cover;margin-left:auto;margin-right:8%;border-radius:4px;box-shadow:0 20px 50px rgba(0,0,0,.18);background:#0D3535}
+@media(max-width:900px){.tp-video{height:auto;width:100%;max-width:340px;margin:0 auto}}
+
 .tp-photo{width:82%;height:520px;object-fit:cover;display:block;margin-left:auto}
 .tp-phone{position:absolute;left:0;bottom:-30px;width:210px;background:#070707;border-radius:30px;padding:10px;box-shadow:0 24px 50px rgba(7,7,7,.3)}
 .tp-phone.big{position:relative;left:auto;bottom:auto;width:250px;margin:0 auto}
@@ -631,7 +634,7 @@ gtag('config', 'G-SY8NKELMNZ');
       <p class="tp-small">Under a pound a day. Day one opens the minute you join.</p>
     </div>
     <div class="tp-visual">
-      <img src="media/tp-hero-juliette-alex.jpg" alt="Juliette laughing while Alex kisses her cheek" class="tp-photo">
+      <video class="tp-video" src="media/tp-you-may.mp4" poster="media/tp-you-may-poster.jpg" autoplay muted loop playsinline controls preload="metadata" aria-label="Juliette and Alex: You may. May I?"></video>
       </div>
     </div>
   </div>
