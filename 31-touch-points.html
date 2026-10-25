@@ -505,6 +505,10 @@ gtag('config', 'G-SY8NKELMNZ');
 .tp-small{font-size:.92rem!important;color:var(--brown)!important}
 .tp-visual{position:relative;min-height:520px}
 .tp-video{display:block;height:560px;aspect-ratio:9/16;width:auto;max-width:100%;object-fit:cover;margin-left:auto;margin-right:8%;border-radius:4px;box-shadow:0 20px 50px rgba(0,0,0,.18);background:#0D3535}
+.tp-vwrap{position:relative;width:max-content;max-width:100%;margin-left:auto;margin-right:8%}
+.tp-vwrap .tp-video{margin:0}
+.tp-sound{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);background:#0D3535;color:#fefcfa;border:0;border-radius:999px;padding:12px 20px;font:600 15px/1 Inter,sans-serif;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.3);white-space:nowrap}
+@media(max-width:900px){.tp-vwrap{margin:0 auto}}
 @media(max-width:900px){.tp-video{height:auto;width:100%;max-width:340px;margin:0 auto}}
 
 .tp-photo{width:82%;height:520px;object-fit:cover;display:block;margin-left:auto}
@@ -634,7 +638,10 @@ gtag('config', 'G-SY8NKELMNZ');
       <p class="tp-small">Under a pound a day. Day one opens the minute you join.</p>
     </div>
     <div class="tp-visual">
-      <video class="tp-video" src="media/tp-you-may.mp4" poster="media/tp-you-may-poster.jpg" autoplay muted loop playsinline controls preload="metadata" aria-label="Juliette and Alex: You may. May I?"></video>
+      <div class="tp-vwrap">
+        <video id="tpv" class="tp-video" src="media/tp-you-may.mp4" poster="media/tp-you-may-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Juliette and Alex: You may. May I?"></video>
+        <button type="button" id="tpsound" class="tp-sound" aria-label="Play with sound">&#128266; Tap for sound</button>
+      </div>
       </div>
     </div>
   </div>
@@ -731,6 +738,11 @@ gtag('config', 'G-SY8NKELMNZ');
 
 </main>
 
+<script>
+(function(){var v=document.getElementById('tpv'),b=document.getElementById('tpsound');if(!v||!b)return;
+function on(){v.muted=false;v.currentTime=0;v.controls=true;v.play();b.style.display='none';}
+b.addEventListener('click',on);v.addEventListener('click',function(){if(v.muted)on();});})();
+</script>
 <div class="sticky" id="sticky">
   <span><b>31 Touch Points</b> &middot; &pound;27</span>
   <a href="https://buy.stripe.com/7sYeVceOvgtydq5av30co2o">Buy now</a>
