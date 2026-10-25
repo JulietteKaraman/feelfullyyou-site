@@ -1,0 +1,751 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<base href="/the-trace-practice/">
+<meta name="description" content="Fully clothed. Non-sexual. Your body learns to accept touch, knowing it's not going to lead anywhere.">
+<meta property="og:title" content="The Trace"><meta property="og:description" content="Fully clothed. Non-sexual. Your body learns to accept touch, knowing it's not going to lead anywhere."><meta property="og:type" content="website"><meta property="og:url" content="https://feelfullyyou.com/the-trace-practice/"><meta property="og:image" content="https://feelfullyyou.com/the-trace-practice/og.jpg"><meta property="og:site_name" content="Feel Fully You">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="The Trace"><meta name="twitter:description" content="Fully clothed. Non-sexual. Your body learns to accept touch, knowing it's not going to lead anywhere."><meta name="twitter:image" content="https://feelfullyyou.com/the-trace-practice/og.jpg">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1a1814">
+<title>The Trace</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Poppins:wght@300;400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#1a1814; --bg2:#211e19; --ink:#f1ece2; --muted:#a79f90;
+  --line:rgba(221,201,142,.2); --accent:#DDC98E; --lemon:#EEDE80;
+  --teal:#0D3535; --gold:#a8843f;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:"Poppins",sans-serif;font-weight:300;font-size:17px;line-height:1.75;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+
+/* progress + chapter bar */
+.bar{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(26,24,20,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line);transform:translateY(-100%);transition:transform .35s ease}
+.bar.on{transform:none}
+.bar .prog{height:2px;background:var(--accent);width:0;transition:width .1s linear}
+.chips{display:flex;gap:6px;overflow-x:auto;padding:10px 16px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chips a{flex:none;font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--muted);padding:6px 12px;border:1px solid var(--line);border-radius:99px;transition:all .2s}
+.chips a.cur{color:var(--bg);background:var(--accent);border-color:var(--accent)}
+
+/* cover */
+.cover{position:relative;display:flex;flex-direction:column;background:var(--bg)}
+.cover .ph{position:relative;height:66svh;min-height:420px;overflow:hidden}
+.cover .ph img{width:100%;height:100%;object-fit:cover;object-position:35% 38%}
+.cover .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,24,20,.55) 0%,rgba(26,24,20,0) 22%,rgba(26,24,20,0) 62%,var(--bg) 100%)}
+.cover .in{position:relative;z-index:2;padding:0 24px 64px;margin:-64px auto 0;max-width:640px;width:100%}
+.brand{position:absolute;top:22px;left:0;right:0;z-index:3;text-align:center;font-family:"Jost",sans-serif;font-size:12px;letter-spacing:.42em;text-transform:uppercase;color:var(--ink)}
+.cover h1{font-family:"Jost",sans-serif;font-weight:400;font-size:clamp(56px,16vw,96px);line-height:.95;letter-spacing:.02em}
+.cover .line{margin-top:18px;font-size:19px;line-height:1.6;color:var(--ink);max-width:24ch}
+.cover .line em{font-style:normal;color:var(--accent)}
+.meta{margin-top:26px;display:flex;flex-wrap:wrap;gap:8px}
+.meta span{font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);border:1px solid rgba(241,236,226,.28);border-radius:99px;padding:6px 12px}
+.scroll{margin-top:34px;font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+@media (min-width:720px){.cover .ph{height:72svh}}
+
+/* sections */
+main{max-width:640px;margin:0 auto;padding:0 24px}
+section{padding:88px 0 8px}
+.kicker{font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;display:flex;align-items:center;gap:12px}
+.kicker::after{content:"";flex:1;height:1px;background:var(--line)}
+h2{font-family:"Jost",sans-serif;font-weight:400;font-size:clamp(32px,8vw,44px);line-height:1.12;margin-bottom:28px}
+h3{font-family:"Jost",sans-serif;font-weight:500;font-size:21px;line-height:1.3;margin:40px 0 12px}
+p{margin:0 0 18px}
+.lead{font-size:22px;line-height:1.5;color:var(--ink);font-weight:300}
+.big{font-family:"Jost",sans-serif;font-weight:400;font-size:clamp(26px,7vw,34px);line-height:1.25;margin:34px 0;color:var(--ink)}
+.big em{font-style:normal;color:var(--accent)}
+.quiet{color:var(--muted)}
+.thoughts{margin:26px 0 30px;padding-left:18px;border-left:1px solid var(--accent)}
+.thoughts p{font-style:italic;color:var(--accent);margin:0 0 6px;font-size:18px}
+blockquote{margin:34px 0;padding:28px 24px;background:var(--bg2);border:1px solid var(--line);border-radius:18px;font-size:19px;line-height:1.6;font-style:italic}
+blockquote cite{display:block;margin-top:14px;font-style:normal;font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.dots{list-style:none;margin:20px 0 28px}
+.dots li{position:relative;padding:12px 0 12px 26px;border-bottom:1px solid var(--line)}
+.dots li:last-child{border-bottom:0}
+.dots li::before{content:"";position:absolute;left:2px;top:24px;width:7px;height:7px;border-radius:50%;background:var(--accent)}
+.qs{list-style:none;margin:18px 0 26px;counter-reset:q}
+.qs li{counter-increment:q;position:relative;padding:14px 0 14px 44px;border-bottom:1px solid var(--line)}
+.qs li:last-child{border-bottom:0}
+.qs li::before{content:counter(q);position:absolute;left:0;top:14px;width:28px;height:28px;border-radius:50%;border:1px solid var(--accent);color:var(--accent);font-family:"Jost",sans-serif;font-size:14px;display:grid;place-items:center}
+.photo{margin:44px -24px;position:relative}
+.photo img{width:100%;max-height:78svh;object-fit:cover;object-position:30% 40%}
+.photo figcaption{position:absolute;left:24px;right:24px;bottom:22px;font-family:"Jost",sans-serif;font-size:26px;line-height:1.25;text-shadow:0 2px 18px rgba(0,0,0,.6)}
+.photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(26,24,20,.85))}
+.photo figcaption{z-index:2}
+
+/* steps */
+.steps{list-style:none;margin:10px 0 0}
+.steps li{display:grid;grid-template-columns:44px 1fr;gap:16px;padding:22px 0;border-bottom:1px solid var(--line)}
+.steps li:last-child{border-bottom:0}
+.steps .n{font-family:"Jost",sans-serif;font-size:30px;line-height:1;color:var(--accent)}
+.steps b{display:block;font-family:"Jost",sans-serif;font-weight:500;font-size:19px;margin-bottom:6px}
+.steps p{margin:0 0 8px;color:var(--ink)}
+.steps p.quiet{color:var(--muted)}
+
+/* media cards */
+.media{margin:30px 0;background:var(--bg2);border:1px solid var(--line);border-radius:22px;overflow:hidden}
+.media .hd{padding:20px 22px 16px}
+.media .lab{font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+.media .tt{font-family:"Jost",sans-serif;font-size:22px;line-height:1.25;margin-top:6px}
+.media .tt small{font-size:14px;color:var(--muted);font-family:"Poppins",sans-serif;margin-left:6px}
+.media .bd{padding:0 22px 20px;color:var(--muted);font-size:16px}
+.media .bd p{margin:0 0 8px}
+.vid{position:relative;background:#000}
+.vid.tall{aspect-ratio:9/16;max-height:72svh;margin:0 auto}
+.vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vlink{display:block;padding:12px 22px;font-family:"Inter",sans-serif;font-size:12px;letter-spacing:.08em;color:var(--muted);text-decoration:none;border-top:1px solid var(--line)}
+.vlink:hover{color:var(--accent)}
+
+/* audio player */
+.player{display:flex;align-items:center;gap:16px;padding:6px 22px 24px}
+.play{flex:none;width:68px;height:68px;border-radius:50%;border:0;background:var(--accent);color:var(--bg);display:grid;place-items:center;cursor:pointer;transition:transform .15s}
+.play:active{transform:scale(.95)}
+.play svg{width:24px;height:24px}
+.track{flex:1;min-width:0}
+.rail{position:relative;height:28px;cursor:pointer;touch-action:none}
+.rail::before{content:"";position:absolute;left:0;right:0;top:13px;height:2px;background:var(--line)}
+.fill{position:absolute;left:0;top:13px;height:2px;background:var(--accent);width:0}
+.knob{position:absolute;top:8px;width:12px;height:12px;border-radius:50%;background:var(--accent);left:0;margin-left:-6px}
+.times{display:flex;justify-content:space-between;font-family:"Inter",sans-serif;font-size:12px;color:var(--muted)}
+
+/* role picker */
+.roles{margin:34px 0 8px;padding:22px;border-radius:22px;background:var(--teal)}
+.roles .q{font-family:"Jost",sans-serif;font-size:21px;margin-bottom:14px;color:var(--ink)}
+.seg{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;background:rgba(0,0,0,.25);padding:5px;border-radius:99px}
+.seg button{border:0;background:transparent;color:var(--ink);font-family:"Inter",sans-serif;font-size:13px;letter-spacing:.04em;padding:11px 6px;border-radius:99px;cursor:pointer;transition:all .2s}
+.seg button.on{background:var(--ink);color:var(--bg)}
+.roles .hint{margin-top:12px;font-size:14px;color:rgba(241,236,226,.7)}
+[data-role]{transition:opacity .3s}
+body.r-give [data-role="receive"], body.r-receive [data-role="give"]{display:none}
+.rolecard{margin:24px 0;padding:24px 22px;border-radius:20px;border:1px solid var(--line);background:var(--bg2)}
+.rolecard .tag{display:inline-block;font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--bg);background:var(--accent);padding:5px 11px;border-radius:99px;margin-bottom:12px}
+.rolecard h3{margin-top:0}
+
+/* script accordion */
+details{border:1px solid var(--line);border-radius:20px;margin:30px 0;background:var(--bg2);overflow:hidden}
+summary{list-style:none;cursor:pointer;padding:20px 22px;display:flex;justify-content:space-between;align-items:center;gap:12px;font-family:"Jost",sans-serif;font-size:19px}
+summary::-webkit-details-marker{display:none}
+summary .pl{flex:none;width:30px;height:30px;border-radius:50%;border:1px solid var(--accent);color:var(--accent);display:grid;place-items:center;font-size:18px;transition:transform .25s}
+details[open] summary .pl{transform:rotate(45deg)}
+summary small{display:block;font-family:"Poppins",sans-serif;font-size:14px;color:var(--muted);margin-top:2px}
+.dbody{padding:0 22px 22px}
+.dbody h4{font-family:"Inter",sans-serif;font-weight:500;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:24px 0 10px}
+
+/* silence block */
+.silence{margin:56px -24px 0;padding:72px 28px;background:var(--teal);text-align:left}
+.silence .kicker{color:var(--accent)}
+.silence h2{margin-bottom:22px}
+.silence .no{list-style:none;margin:24px 0}
+.silence .no li{font-family:"Jost",sans-serif;font-size:21px;padding:10px 0;border-bottom:1px solid rgba(241,236,226,.15);color:rgba(241,236,226,.55);text-decoration:line-through;text-decoration-color:var(--accent);text-decoration-thickness:1px}
+.silence .last{font-family:"Jost",sans-serif;font-size:24px;line-height:1.35;margin-top:30px}
+
+/* faq */
+.faq details{margin:12px 0}
+.faq summary{font-size:18px}
+.faq .dbody p{color:var(--ink)}
+
+.end{padding:96px 0 40px}
+.endcard{margin-top:34px;padding:36px 26px;border-radius:24px;border:1px solid var(--accent);background:linear-gradient(160deg,var(--bg2),var(--bg))}
+.endcard .big{margin:0 0 6px}
+footer{text-align:center;padding:60px 24px 70px;font-family:"Jost",sans-serif;font-size:12px;letter-spacing:.42em;text-transform:uppercase;color:var(--muted)}
+
+@media (min-width:720px){
+  .photo{margin:56px 0;border-radius:24px;overflow:hidden}
+  .silence{margin:64px 0 0;border-radius:28px;padding:72px 48px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+:root{
+  --bg:#1a1814; --bg2:#211e19; --ink:#f1ece2; --muted:#a79f90;
+  --line:rgba(221,201,142,.2); --accent:#DDC98E; --lemon:#EEDE80;
+  --teal:#0D3535; --gold:#a8843f;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:"Poppins",sans-serif;font-weight:300;font-size:17px;line-height:1.75;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+
+/* progress + chapter bar */
+.bar{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(26,24,20,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line);transform:translateY(-100%);transition:transform .35s ease}
+.bar.on{transform:none}
+.bar .prog{height:2px;background:var(--accent);width:0;transition:width .1s linear}
+.chips{display:flex;gap:6px;overflow-x:auto;padding:10px 16px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chips a{flex:none;font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--muted);padding:6px 12px;border:1px solid var(--line);border-radius:99px;transition:all .2s}
+.chips a.cur{color:var(--bg);background:var(--accent);border-color:var(--accent)}
+
+/* cover */
+.cover{position:relative;display:flex;flex-direction:column;background:var(--bg)}
+.cover .ph{position:relative;height:54svh;min-height:340px;overflow:hidden}
+.cover .ph img{width:100%;height:100%;object-fit:cover;object-position:35% 38%}
+.cover .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,24,20,.55) 0%,rgba(26,24,20,0) 22%,rgba(26,24,20,0) 62%,var(--bg) 100%)}
+.cover .in{position:relative;z-index:2;padding:0 24px 64px;margin:-64px auto 0;max-width:640px;width:100%}
+.brand{position:absolute;top:22px;left:0;right:0;z-index:3;text-align:center;font-family:"Jost",sans-serif;font-size:12px;letter-spacing:.42em;text-transform:uppercase;color:var(--ink)}
+.cover h1{font-family:"Jost",sans-serif;font-weight:400;font-size:clamp(56px,16vw,96px);line-height:.95;letter-spacing:.02em}
+.cover .line{margin-top:18px;font-size:19px;line-height:1.6;color:var(--ink);max-width:24ch}
+.cover .line em{font-style:normal;color:var(--accent)}
+.meta{margin-top:26px;display:flex;flex-wrap:wrap;gap:8px}
+.meta span{font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);border:1px solid rgba(241,236,226,.28);border-radius:99px;padding:6px 12px}
+.scroll{margin-top:34px;font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+@media (min-width:720px){.cover .ph{height:72svh}}
+
+/* sections */
+main{max-width:640px;margin:0 auto;padding:0 24px}
+section{padding:88px 0 8px}
+.kicker{font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;display:flex;align-items:center;gap:12px}
+.kicker::after{content:"";flex:1;height:1px;background:var(--line)}
+h2{font-family:"Jost",sans-serif;font-weight:400;font-size:clamp(32px,8vw,44px);line-height:1.12;margin-bottom:28px}
+h3{font-family:"Jost",sans-serif;font-weight:500;font-size:21px;line-height:1.3;margin:40px 0 12px}
+p{margin:0 0 18px}
+.lead{font-size:22px;line-height:1.5;color:var(--ink);font-weight:300}
+.big{font-family:"Jost",sans-serif;font-weight:400;font-size:clamp(26px,7vw,34px);line-height:1.25;margin:34px 0;color:var(--ink)}
+.big em{font-style:normal;color:var(--accent)}
+.quiet{color:var(--muted)}
+.thoughts{margin:26px 0 30px;padding-left:18px;border-left:1px solid var(--accent)}
+.thoughts p{font-style:italic;color:var(--accent);margin:0 0 6px;font-size:18px}
+blockquote{margin:34px 0;padding:28px 24px;background:var(--bg2);border:1px solid var(--line);border-radius:18px;font-size:19px;line-height:1.6;font-style:italic}
+blockquote cite{display:block;margin-top:14px;font-style:normal;font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.dots{list-style:none;margin:20px 0 28px}
+.dots li{position:relative;padding:12px 0 12px 26px;border-bottom:1px solid var(--line)}
+.dots li:last-child{border-bottom:0}
+.dots li::before{content:"";position:absolute;left:2px;top:24px;width:7px;height:7px;border-radius:50%;background:var(--accent)}
+.qs{list-style:none;margin:18px 0 26px;counter-reset:q}
+.qs li{counter-increment:q;position:relative;padding:14px 0 14px 44px;border-bottom:1px solid var(--line)}
+.qs li:last-child{border-bottom:0}
+.qs li::before{content:counter(q);position:absolute;left:0;top:14px;width:28px;height:28px;border-radius:50%;border:1px solid var(--accent);color:var(--accent);font-family:"Jost",sans-serif;font-size:14px;display:grid;place-items:center}
+.photo{margin:44px -24px;position:relative}
+.photo img{width:100%;max-height:78svh;object-fit:cover;object-position:30% 40%}
+.photo figcaption{position:absolute;left:24px;right:24px;bottom:22px;font-family:"Jost",sans-serif;font-size:26px;line-height:1.25;text-shadow:0 2px 18px rgba(0,0,0,.6)}
+.photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(26,24,20,.85))}
+.photo figcaption{z-index:2}
+
+/* steps */
+.steps{list-style:none;margin:10px 0 0}
+.steps li{display:grid;grid-template-columns:44px 1fr;gap:16px;padding:22px 0;border-bottom:1px solid var(--line)}
+.steps li:last-child{border-bottom:0}
+.steps .n{font-family:"Jost",sans-serif;font-size:30px;line-height:1;color:var(--accent)}
+.steps b{display:block;font-family:"Jost",sans-serif;font-weight:500;font-size:19px;margin-bottom:6px}
+.steps p{margin:0 0 8px;color:var(--ink)}
+.steps p.quiet{color:var(--muted)}
+
+/* media cards */
+.media{margin:30px 0;background:var(--bg2);border:1px solid var(--line);border-radius:22px;overflow:hidden}
+.media .hd{padding:20px 22px 16px}
+.media .lab{font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+.media .tt{font-family:"Jost",sans-serif;font-size:22px;line-height:1.25;margin-top:6px}
+.media .tt small{font-size:14px;color:var(--muted);font-family:"Poppins",sans-serif;margin-left:6px}
+.media .bd{padding:0 22px 20px;color:var(--muted);font-size:16px}
+.media .bd p{margin:0 0 8px}
+.vid{position:relative;background:#000}
+.vid.tall{aspect-ratio:9/16;max-height:72svh;margin:0 auto}
+.vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vlink{display:block;padding:12px 22px;font-family:"Inter",sans-serif;font-size:12px;letter-spacing:.08em;color:var(--muted);text-decoration:none;border-top:1px solid var(--line)}
+.vlink:hover{color:var(--accent)}
+
+/* audio player */
+.player{display:flex;align-items:center;gap:16px;padding:6px 22px 24px}
+.play{flex:none;width:68px;height:68px;border-radius:50%;border:0;background:var(--accent);color:var(--bg);display:grid;place-items:center;cursor:pointer;transition:transform .15s}
+.play:active{transform:scale(.95)}
+.play svg{width:24px;height:24px}
+.track{flex:1;min-width:0}
+.rail{position:relative;height:28px;cursor:pointer;touch-action:none}
+.rail::before{content:"";position:absolute;left:0;right:0;top:13px;height:2px;background:var(--line)}
+.fill{position:absolute;left:0;top:13px;height:2px;background:var(--accent);width:0}
+.knob{position:absolute;top:8px;width:12px;height:12px;border-radius:50%;background:var(--accent);left:0;margin-left:-6px}
+.times{display:flex;justify-content:space-between;font-family:"Inter",sans-serif;font-size:12px;color:var(--muted)}
+
+/* role picker */
+.roles{margin:34px 0 8px;padding:22px;border-radius:22px;background:var(--teal)}
+.roles .q{font-family:"Jost",sans-serif;font-size:21px;margin-bottom:14px;color:var(--ink)}
+.seg{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;background:rgba(0,0,0,.25);padding:5px;border-radius:99px}
+.seg button{border:0;background:transparent;color:var(--ink);font-family:"Inter",sans-serif;font-size:13px;letter-spacing:.04em;padding:11px 6px;border-radius:99px;cursor:pointer;transition:all .2s}
+.seg button.on{background:var(--ink);color:var(--bg)}
+.roles .hint{margin-top:12px;font-size:14px;color:rgba(241,236,226,.7)}
+[data-role]{transition:opacity .3s}
+body.r-give [data-role="receive"], body.r-receive [data-role="give"]{display:none}
+.rolecard{margin:24px 0;padding:24px 22px;border-radius:20px;border:1px solid var(--line);background:var(--bg2)}
+.rolecard .tag{display:inline-block;font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--bg);background:var(--accent);padding:5px 11px;border-radius:99px;margin-bottom:12px}
+.rolecard h3{margin-top:0}
+
+/* script accordion */
+details{border:1px solid var(--line);border-radius:20px;margin:30px 0;background:var(--bg2);overflow:hidden}
+summary{list-style:none;cursor:pointer;padding:20px 22px;display:flex;justify-content:space-between;align-items:center;gap:12px;font-family:"Jost",sans-serif;font-size:19px}
+summary::-webkit-details-marker{display:none}
+summary .pl{flex:none;width:30px;height:30px;border-radius:50%;border:1px solid var(--accent);color:var(--accent);display:grid;place-items:center;font-size:18px;transition:transform .25s}
+details[open] summary .pl{transform:rotate(45deg)}
+summary small{display:block;font-family:"Poppins",sans-serif;font-size:14px;color:var(--muted);margin-top:2px}
+.dbody{padding:0 22px 22px}
+.dbody h4{font-family:"Inter",sans-serif;font-weight:500;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:24px 0 10px}
+
+/* silence block */
+.silence{margin:56px -24px 0;padding:72px 28px;background:var(--teal);text-align:left}
+.silence .kicker{color:var(--accent)}
+.silence h2{margin-bottom:22px}
+.silence .no{list-style:none;margin:24px 0}
+.silence .no li{font-family:"Jost",sans-serif;font-size:21px;padding:10px 0;border-bottom:1px solid rgba(241,236,226,.15);color:rgba(241,236,226,.55);text-decoration:line-through;text-decoration-color:var(--accent);text-decoration-thickness:1px}
+.silence .last{font-family:"Jost",sans-serif;font-size:24px;line-height:1.35;margin-top:30px}
+
+/* faq */
+.faq details{margin:12px 0}
+.faq summary{font-size:18px}
+.faq .dbody p{color:var(--ink)}
+
+.end{padding:96px 0 40px}
+.endcard{margin-top:34px;padding:36px 26px;border-radius:24px;border:1px solid var(--accent);background:linear-gradient(160deg,var(--bg2),var(--bg))}
+.endcard .big{margin:0 0 6px}
+footer{text-align:center;padding:60px 24px 70px;font-family:"Jost",sans-serif;font-size:12px;letter-spacing:.42em;text-transform:uppercase;color:var(--muted)}
+
+@media (min-width:720px){
+  .photo{margin:56px 0;border-radius:24px;overflow:hidden}
+  .silence{margin:64px 0 0;border-radius:28px;padding:72px 48px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* offers */
+.more{margin-top:56px;padding-top:8px}
+.offer{display:grid;grid-template-columns:96px 1fr;gap:16px;align-items:center;text-decoration:none;color:var(--ink);padding:14px;margin:12px 0;border:1px solid var(--line);border-radius:20px;background:var(--bg2);transition:border-color .2s,transform .2s}
+.offer:hover{border-color:var(--accent);transform:translateY(-2px)}
+.offer img{width:96px;height:120px;object-fit:cover;border-radius:12px}
+.offer b{display:block;font-family:"Jost",sans-serif;font-weight:500;font-size:19px;line-height:1.25;margin-bottom:6px}
+.offer span{display:block;font-size:14px;line-height:1.5;color:var(--muted)}
+.offer em{display:inline-block;margin-top:10px;font-style:normal;font-family:"Jost",sans-serif;font-size:16px;color:var(--bg);background:var(--accent);padding:7px 14px;border-radius:99px}
+
+</style>
+</head>
+<body>
+
+<div class="bar" id="bar">
+  <div class="prog" id="prog"></div>
+  <nav class="chips" id="chips">
+    <a href="#what">What's happening</a>
+    <a href="#date">Date night</a>
+    <a href="#start">Start here</a>
+    <a href="#do">Do The Trace</a>
+    <a href="#after">After</a>
+  </nav>
+</div>
+
+<header class="cover">
+  <div class="brand">Feel Fully You</div>
+  <div class="ph"><img src="media/trace-photo.jpg" alt="Juliette's jaw and neck being traced slowly by her partner's fingers"></div>
+  <div class="in">
+    <h1>The Trace</h1>
+    <p class="line">Fully clothed. Non-sexual. <em>Your body learns to accept touch, knowing it's not going to lead anywhere.</em></p>
+    <div class="meta"><span>12 min video</span><span>36 sec clip</span><span>3:36 guided audio</span></div>
+    <div class="scroll">Scroll to begin ↓</div>
+  </div>
+</header>
+
+<main>
+
+<!-- 1 -->
+<section id="what">
+  <div class="kicker">01</div>
+  <h2>What is actually happening</h2>
+  <p class="lead">You want to want it.</p>
+  <p>That is the part that is hard to say out loud, because it can sound like a complaint about your partner, and it isn't.</p>
+  <p>You love them. You're not bored. You may genuinely want closeness, intimacy and touch.</p>
+  <p class="big">And still, sometimes your body answers <em>before you've decided anything.</em></p>
+  <p>They reach for you and there's a tightening somewhere. A held breath. A small readiness. Maybe your attention leaves the sensation altogether.</p>
+  <p>Then comes the thinking.</p>
+  <div class="thoughts">
+    <p>Why did I do that?</p>
+    <p>Why can't I just enjoy this?</p>
+    <p>They're only trying to be affectionate.</p>
+    <p>What's wrong with me?</p>
+  </div>
+  <p>One of my clients described it like this:</p>
+  <blockquote>"Why do I tense up every time he touches me? It's like my body goes stiff, and I really want to appreciate and enjoy his touch, but I don't know why I'm stiffening up."<cite>One of my clients</cite></blockquote>
+  <p class="big">She is not doing it on purpose. <em>Neither are you.</em></p>
+  <p>This is the part I want you to begin noticing.</p>
+  <ul class="dots">
+    <li>A breath catching or shortening.</li>
+    <li>Shoulders creeping towards the ears.</li>
+    <li>A jaw setting.</li>
+    <li>Attention leaving the body and going up into the head.</li>
+    <li>Or going still and feeling almost nothing at all.</li>
+  </ul>
+  <p>Not because any of those responses mean something is wrong.</p>
+  <p>Not because you need to make them go away.</p>
+  <p>None of this necessarily means you don't want your partner, or that you don't want touch.</p>
+  <p>Trying harder to enjoy it isn't necessarily the answer.</p>
+  <p>The first step is simply being able to notice:</p>
+  <ol class="qs">
+    <li>What actually happens to me when I'm being touched?</li>
+    <li>What happens in my body?</li>
+    <li>What can I actually feel?</li>
+    <li>Where does my attention go?</li>
+    <li>What changes when there is no expectation of where the touch needs to lead?</li>
+  </ol>
+  <p class="big">That's what we're going to find out.</p>
+</section>
+
+<!-- 2 -->
+<section id="date">
+  <div class="kicker">02</div>
+  <h2>Why date night does not fix it</h2>
+  <p>A date night can have a destination.</p>
+  <p>Everyone at the table may know where the evening is supposed to end, which means every touch along the way can start to feel like a small step towards something.</p>
+  <p>His hand on your back at the restaurant is no longer just his hand on your back.</p>
+  <p class="big">It is <em>installment one.</em></p>
+  <p>When part of you is already anticipating where touch might lead, you're not only experiencing the touch that's happening now.</p>
+  <p>Part of you is already in what comes next.</p>
+  <p class="lead">So what happens if we take the destination away?</p>
+  <p>What happens when touch isn't the beginning of something else?</p>
+  <p>That is what The Trace does.</p>
+</section>
+
+<figure class="photo">
+  <img src="media/trace-photo.jpg" alt="Fingertips tracing slowly down Juliette's jaw towards her chin" loading="lazy">
+  <figcaption>Both of you fully clothed.<br>One person giving. One person receiving.</figcaption>
+</figure>
+
+<!-- 3 -->
+<section id="start" style="padding-top:40px">
+  <div class="kicker">03</div>
+  <h2>Start here</h2>
+  <ol class="steps">
+    <li><span class="n">1</span><div>
+      <b>Pick your time</b>
+      <p>Pick a morning, an afternoon, an early evening. Somewhere you both have energy.</p>
+      <p class="quiet">This one is worth protecting from the end of a long day.</p>
+    </div></li>
+    <li><span class="n">2</span><div>
+      <b>Phones away</b>
+      <p>Phones in another room. Keep one for the audio.</p>
+    </div></li>
+    <li><span class="n">3</span><div>
+      <b>Face each other</b>
+      <p>Sit or stand facing each other. Take one breath in through the nose, out through the mouth, together.</p>
+      <p>Then look at each other and notice what happens.</p>
+      <p class="quiet">You might laugh. You might look away. You might make a joke of it. You might simply look at each other. Whatever happens, notice it. It is information.</p>
+    </div></li>
+    <li><span class="n">4</span><div>
+      <b>Decide who gives and who receives</b>
+      <p>You are not going to change roles today.</p>
+      <p class="quiet">One of you gets the experience of giving, one gets the experience of receiving, and those are two completely different practices. The other way round is a separate sitting, another day.</p>
+    </div></li>
+  </ol>
+
+  <div class="media">
+    <div class="hd">
+      <div class="lab">Watch first</div>
+      <div class="tt">Before you do The Trace <small>12 minutes</small></div>
+    </div>
+    <div class="vid tall"><iframe src="https://player.vimeo.com/video/1231988543?badge=0&autopause=0&player_id=0&app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy" title="Before you do The Trace"></iframe></div>
+    <div class="bd" style="padding-top:18px">
+      <p>I'll explain why we're doing something this simple, what The Trace is really about, and what I want you to pay attention to when you try it yourselves.</p>
+    </div>
+    <a class="vlink" href="https://vimeo.com/1231988543" target="_blank" rel="noopener">Video not playing? Open it here ↗</a>
+  </div>
+</section>
+
+<!-- 4 -->
+<section id="do" style="padding-top:56px">
+  <div class="kicker">04</div>
+  <h2>Now over to you</h2>
+
+  <div class="media">
+    <div class="hd">
+      <div class="lab">First, watch The Trace</div>
+      <div class="tt">The original moment <small>36 seconds</small></div>
+    </div>
+    <div class="vid tall"><iframe src="https://player.vimeo.com/video/1223340072?badge=0&autopause=0&player_id=0&app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy" title="The Trace, 36 seconds"></iframe></div>
+    <div class="bd" style="padding-top:18px">
+      <p>Watch the original moment between Alex and me once.</p>
+      <p>Don't try to memorise it or copy every movement. Just notice the speed, simplicity and quality of the touch.</p>
+    </div>
+    <a class="vlink" href="https://vimeo.com/1223340072" target="_blank" rel="noopener">Video not playing? Open it here ↗</a>
+  </div>
+
+  <div class="media" id="audioCard">
+    <div class="hd">
+      <div class="lab">Now do The Trace</div>
+      <div class="tt">The guided Trace <small>3 minutes 36 seconds</small></div>
+    </div>
+    <div class="bd"><p>Get into position in the roles you've already chosen. Press play and let me guide you through it.</p></div>
+    <div class="player">
+      <button class="play" id="playBtn" aria-label="Play the guided Trace">
+        <svg id="icoPlay" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>
+        <svg id="icoPause" viewBox="0 0 24 24" fill="currentColor" style="display:none"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+      </button>
+      <div class="track">
+        <div class="rail" id="rail"><div class="fill" id="fill"></div><div class="knob" id="knob"></div></div>
+        <div class="times"><span id="cur">0:00</span><span id="dur">3:36</span></div>
+      </div>
+    </div>
+    <audio id="aud" src="media/trace-guided.m4a" preload="metadata"></audio>
+  </div>
+
+  <details>
+    <summary><span>Read the script beforehand<small>On the day, just follow the audio.</small></span><span class="pl">+</span></summary>
+    <div class="dbody">
+      <p class="quiet">What follows is what you will hear me say, written out so you can read it beforehand.</p>
+      <h4>Both of you, first</h4>
+      <p>Take a breath in through your nose, and exhale through your mouth. Again. In through the nose, out through the mouth.</p>
+      <h4>If you are giving, four questions</h4>
+      <ol class="qs">
+        <li>Can you follow the guidance rather than rushing ahead?</li>
+        <li>Can you slow down when you may want to speed up?</li>
+        <li>Can you actually follow the pace of my voice, without rushing ahead or trying to change what's happening?</li>
+        <li>Can you touch without trying to get somewhere, or create a particular reaction?</li>
+      </ol>
+      <h4>If you are receiving, four questions</h4>
+      <ol class="qs">
+        <li>Can you breathe, and can you soften enough to fully receive?</li>
+        <li>Can you, for the next two minutes, stop managing how you are being touched?</li>
+        <li>Can you allow your partner's touch to actually fully land, without the need to reciprocate?</li>
+        <li>Without anticipating what is happening next?</li>
+      </ol>
+      <h4>The touch itself</h4>
+      <p>Approach as the giver. Notice their jaw, their neck. Really look at it. Approach softly with your hand. You may ask them to close their eyes.</p>
+      <p>First, off the skin. Slowly, about one centimetre off the skin, start tracing with your hand from the earlobe, down the jaw, to the chin. Slightly off the skin the whole way.</p>
+      <p>Go back to the earlobe. This time let your fingers land, very softly.</p>
+      <p>Then the nail. If you can, with the nail, just stroke down to the chin.</p>
+      <p>Then the throat. Tilt their chin up, and bring those nails down the throat, lightly. Stop at the clavicle.</p>
+      <h4>While you are receiving</h4>
+      <p>Continue to receive.</p>
+      <p>Notice where you are actually looking at what they are doing, more than what you are receiving.</p>
+      <p>There is no right. There is no wrong in this. This is really what it is about. Learning to receive that sensation.</p>
+    </div>
+  </details>
+
+  <div class="roles">
+    <div class="q">Which one are you today?</div>
+    <div class="seg" role="tablist">
+      <button data-r="both" class="on" role="tab">Both</button>
+      <button data-r="give" role="tab">Giving</button>
+      <button data-r="receive" role="tab">Receiving</button>
+    </div>
+    <div class="hint" id="roleHint">Showing both practices. Tap yours to see only what's yours.</div>
+  </div>
+
+  <div class="rolecard" data-role="give">
+    <span class="tag">If you are giving</span>
+    <h3>Your job is not to impress anyone. It is to follow.</h3>
+    <p>You may notice yourself wanting to get ahead of me. You may think, yes, yes, Juliette, I have got it, can we speed this up. You may get properly annoyed at how slowly I am asking you to move. Good. Notice that.</p>
+    <ul class="dots">
+      <li>Can you follow anyway?</li>
+      <li>Can you slow down when I ask you to?</li>
+      <li>Can you resist turning a small movement into a bigger one?</li>
+      <li>Can you give touch without needing to get a reaction back?</li>
+    </ul>
+    <p class="big" style="margin:18px 0 0">Let simple be <em>enough.</em></p>
+  </div>
+
+  <div class="rolecard" data-role="receive">
+    <span class="tag">If you are receiving</span>
+    <h3>You have an entirely different practice.</h3>
+    <ul class="dots">
+      <li>Can you actually receive?</li>
+      <li>Can you slow your breath?</li>
+      <li>Can you let the touch land rather than tracking where the hand is going next?</li>
+      <li>Can you notice the impulse to manage the person touching you?</li>
+    </ul>
+    <p>To move towards their hand. To show them you like it. To give something back. To wonder what you are supposed to do.</p>
+    <p class="lead">For two minutes you do not have to do anything back.</p>
+    <p>Sink into the sensation that is actually here rather than reaching for the one you think should be here. Nothing needs manufacturing.</p>
+    <p class="quiet">A laugh might come. You might soften. You might feel very close to him. You might feel awkward. You might feel almost nothing at all.</p>
+    <p class="big" style="margin:18px 0 0">Whatever arrives is <em>information.</em></p>
+  </div>
+
+  <div class="silence">
+    <div class="kicker">When it finishes</div>
+    <h2>Say nothing.</h2>
+    <p>This is the part most couples get wrong, and it undoes the whole thing in one sentence.</p>
+    <ul class="no">
+      <li>Did you like that?</li>
+      <li>Was I doing it properly?</li>
+      <li>What did you feel?</li>
+    </ul>
+    <p>Every one of those is kind, and every one of those hands the other person a job. Now they are not feeling what happened. They are managing how you feel about what happened.</p>
+    <p>Let it be quiet. Do not fill it.</p>
+    <p class="last">The silence is the end of the practice, not an awkward gap before the real ending.</p>
+  </div>
+</section>
+
+<!-- 5 -->
+<section id="after">
+  <div class="kicker">05</div>
+  <h2>What you might notice</h2>
+  <p>The first time you do this, you might want to laugh, speak, speed it up or get ahead of the guidance.</p>
+  <ul class="dots">
+    <li>You might soften.</li>
+    <li>You might notice your breath change.</li>
+    <li>You might become very aware of the slowness.</li>
+    <li>You might notice yourself anticipating where the hand is going next.</li>
+    <li>You might want to help, perform, reciprocate or make something happen.</li>
+    <li>Or you might feel very little.</li>
+  </ul>
+  <p>None of those responses is the goal, and none of them means you've done it wrong.</p>
+  <p>The practice is noticing what happens when touch is allowed to be this simple, and when neither of you has to take it anywhere.</p>
+  <p>If you do The Trace again, don't try to recreate what happened the first time.</p>
+  <p class="big">Come back curious.<br><em>What can I feel today?</em></p>
+
+  <div class="faq">
+    <h3>If you're wondering, "Did we do it right?"</h3>
+    <details>
+      <summary><span>You laughed the whole way through.</span><span class="pl">+</span></summary>
+      <div class="dbody"><p>Fine. You laughed. Notice it. You don't need to decide what the laughter means. Try The Trace again another time and see what happens then.</p></div>
+    </details>
+    <details>
+      <summary><span>You felt almost nothing.</span><span class="pl">+</span></summary>
+      <div class="dbody"><p>Also information. Don't force yourself to feel more and don't make "nothing" mean something is wrong. You can come back to The Trace another day and notice whether the experience is the same or different.</p></div>
+    </details>
+    <details>
+      <summary><span>The giver sped up.</span><span class="pl">+</span></summary>
+      <div class="dbody"><p>If you do it again, ask for the pace you want. One clear sentence is enough: "I wanted it slower."</p></div>
+    </details>
+    <details>
+      <summary><span>Something came up that felt bigger than the exercise.</span><span class="pl">+</span></summary>
+      <div class="dbody"><p>Stop. Don't push through. This is a touch practice, not a therapy session. Stopping is allowed.</p></div>
+    </details>
+  </div>
+</section>
+
+<section class="end">
+  <div class="kicker">06</div>
+  <h2>When you're ready to talk about it</h2>
+  <p class="lead">Not immediately.</p>
+  <p>Let The Trace be complete first.</p>
+  <p>Let the silence be part of it. Let whatever you felt, or didn't feel, land without having to explain it to each other.</p>
+  <p>Then, later, there is another skill.</p>
+  <p>How do you talk about what happened without turning it into feedback, fixing, reassurance or "Did I do it right?"</p>
+  <p>Because being able to feel what happened is one thing.</p>
+  <p>Being able to put words to it, and really hear what happened for your partner, is another.</p>
+  <div class="endcard">
+    <p class="big">If you added <em>The Fifteen Minutes After</em> when you bought The Trace, that's where you go next.</p>
+    <p class="quiet" style="margin-top:14px">I'll give you a simple structure for that conversation, so you don't have to work out what to say or how to say it.</p>
+    <p style="margin:0">But not yet.</p>
+  </div>
+  <p class="big" style="margin-top:44px">For now, let The Trace <em>finish here.</em></p>
+
+  <div class="more"><div class="kicker">Keep going</div><a class="offer" href="https://buy.stripe.com/6oUcN4cGn1yE2LrdHf0co26"><img src="media/up-fifteen.jpg" alt="" loading="lazy"><div class="ot"><b>The Fifteen Minutes After</b><span>Something lands. You both feel it. Then one of you speaks, and within a sentence it can be gone.</span><em>£12 →</em></div></a><a class="offer" href="https://buy.stripe.com/00waEW49R5OUdq56eN0co27"><img src="media/up-ritual.jpg" alt="" loading="lazy"><div class="ot"><b>The 45-Minute Connection Ritual</b><span>Move from co-existing to connecting in 45 minutes.</span><em>£27 →</em></div></a></div>
+</section>
+
+</main>
+
+<footer>Feel Fully You</footer>
+
+<script>
+(function(){
+
+
+  // role picker
+  var hint=document.getElementById('roleHint');
+  var hints={both:"Showing both practices. Tap yours to see only what's yours.",give:"Showing only what's yours as the giver.",receive:"Showing only what's yours as the receiver."};
+  function setRole(r){
+    document.body.classList.remove('r-give','r-receive');
+    if(r!=='both')document.body.classList.add('r-'+r);
+    [].forEach.call(document.querySelectorAll('.seg button'),function(b){b.classList.toggle('on',b.dataset.r===r)});
+    hint.textContent=hints[r];
+    try{localStorage.setItem('trace-role',r)}catch(e){}
+  }
+  [].forEach.call(document.querySelectorAll('.seg button'),function(b){b.addEventListener('click',function(){setRole(b.dataset.r)})});
+  try{var saved=localStorage.getItem('trace-role');if(saved)setRole(saved)}catch(e){}
+
+  // audio player
+  var a=document.getElementById('aud'),btn=document.getElementById('playBtn'),ip=document.getElementById('icoPlay'),ipa=document.getElementById('icoPause');
+  var fill=document.getElementById('fill'),knob=document.getElementById('knob'),rail=document.getElementById('rail'),cur=document.getElementById('cur'),dur=document.getElementById('dur');
+  function fmt(t){t=Math.max(0,Math.floor(t||0));return Math.floor(t/60)+':'+('0'+t%60).slice(-2)}
+  function paint(){var p=a.duration?a.currentTime/a.duration*100:0;fill.style.width=p+'%';knob.style.left=p+'%';cur.textContent=fmt(a.currentTime)}
+  btn.addEventListener('click',function(){a.paused?a.play():a.pause()});
+  a.addEventListener('play',function(){ip.style.display='none';ipa.style.display='';btn.setAttribute('aria-label','Pause')});
+  a.addEventListener('pause',function(){ip.style.display='';ipa.style.display='none';btn.setAttribute('aria-label','Play the guided Trace')});
+  a.addEventListener('timeupdate',paint);
+  a.addEventListener('loadedmetadata',function(){dur.textContent=fmt(a.duration)});
+  function seek(e){var r=rail.getBoundingClientRect();var x=(e.touches?e.touches[0].clientX:e.clientX)-r.left;if(a.duration){a.currentTime=Math.min(1,Math.max(0,x/r.width))*a.duration;paint()}}
+  var drag=false;
+  rail.addEventListener('pointerdown',function(e){drag=true;seek(e)});
+  window.addEventListener('pointermove',function(e){if(drag)seek(e)});
+  window.addEventListener('pointerup',function(){drag=false});
+})();
+</script>
+<style>
+/* app-style screens */
+body.app .bar{transform:none}
+body.app.on-cover .bar{transform:translateY(-100%)}
+.screen{display:none;padding-bottom:110px}
+.screen.cur{display:block;animation:scr .35s ease}
+@keyframes scr{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+body.app main{padding-top:58px}
+body.app main > section:first-child,body.app .screen > section:first-child{padding-top:48px}
+.cover.screen{padding-bottom:0}
+.begin{display:inline-flex;align-items:center;gap:10px;margin-top:30px;border:0;border-radius:99px;background:var(--accent);color:var(--bg);font-family:"Jost",sans-serif;font-weight:500;font-size:18px;padding:16px 30px;cursor:pointer}
+body.app .cover .scroll{display:none}
+.nav{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(26,24,20,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line);display:none}
+body.app:not(.on-cover) .nav{display:block}
+.nav .in{max-width:640px;margin:0 auto;display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:center}
+.nav button{border:0;cursor:pointer;border-radius:99px;font-family:"Inter",sans-serif;font-size:14px;padding:15px 18px}
+.nav .bk{background:transparent;color:var(--muted);border:1px solid var(--line);width:52px;padding:15px 0;font-size:18px;line-height:1}
+.nav .nx{background:var(--accent);color:var(--bg);font-family:"Jost",sans-serif;font-weight:500;font-size:16px;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav .nx small{font-family:"Inter",sans-serif;font-weight:400;font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.65;margin-right:8px}
+.stepof{display:block;text-align:center;font-family:"Inter",sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+</style>
+<nav class="nav" id="appnav"><span class="stepof" id="stepof"></span><div class="in"><button class="bk" id="bk" aria-label="Back">←</button><button class="nx" id="nx"></button></div></nav>
+<script>
+(function(){
+  var main=document.querySelector('main'),cover=document.querySelector('header.cover');
+  var chips=[].slice.call(document.querySelectorAll('#chips a'));
+  var prog=document.getElementById('prog');
+  // group main's children into screens: a section with an id starts a screen; figures join the NEXT screen; id-less sections join the previous one
+  var kids=[].slice.call(main.children),screens=[],pending=[];
+  kids.forEach(function(el){
+    if(el.tagName==='SECTION'&&el.id){var s=document.createElement('div');s.className='screen';s.dataset.id=el.id;screens.push(s);pending.forEach(function(p){s.appendChild(p)});pending=[];s.appendChild(el)}
+    else if(el.tagName==='FIGURE'){pending.push(el)}
+    else if(screens.length){screens[screens.length-1].appendChild(el)}
+    else pending.push(el);
+  });
+  screens.forEach(function(s){main.appendChild(s)});
+  pending.forEach(function(p){screens[screens.length-1].appendChild(p)});
+  cover.classList.add('screen');
+  var all=[cover].concat(screens);
+  var names=screens.map(function(s){var c=chips.filter(function(a){return a.getAttribute('href')==='#'+s.dataset.id})[0];return c?c.textContent.trim():s.dataset.id});
+  // cover button
+  var b=document.createElement('button');b.className='begin';b.textContent='Begin →';cover.querySelector('.in').appendChild(b);
+  b.onclick=function(){go(1)};
+  document.body.classList.add('app');
+  var cur=0,key='ffy-step-'+location.pathname;
+  function stopMedia(){[].forEach.call(document.querySelectorAll('audio'),function(a){a.pause()})}
+  function go(i,noScroll){
+    i=Math.max(0,Math.min(all.length-1,i));
+    if(i!==cur)stopMedia();
+    all.forEach(function(s,k){s.classList.toggle('cur',k===i)});
+    cur=i;document.body.classList.toggle('on-cover',i===0);
+    chips.forEach(function(a,k){a.classList.toggle('cur',k===i-1)});
+    if(i>0){var c=chips[i-1];if(c)c.parentNode.scrollTo({left:c.offsetLeft-16,behavior:'smooth'})}
+    prog.style.width=(i/(all.length-1)*100)+'%';
+    document.getElementById('stepof').textContent=i>0?(i+' of '+screens.length):'';
+    var nx=document.getElementById('nx');
+    if(i<all.length-1){nx.innerHTML='<small>Next</small>'+names[i]+' →'}else{nx.innerHTML='Back to the start'}
+    // lazy iframes inside newly shown screen
+    [].forEach.call(all[i].querySelectorAll('iframe[data-src]'),function(f){if(!f.src&&!f.closest('[hidden]'))f.src=f.dataset.src});
+    if(!noScroll)window.scrollTo({top:0,behavior:'instant'});
+    try{localStorage.setItem(key,i)}catch(e){}
+    if(history.replaceState)history.replaceState(null,'',i>0?'#go-'+screens[i-1].dataset.id:location.pathname+location.search);
+  }
+  document.getElementById('nx').onclick=function(){go(cur<all.length-1?cur+1:0)};
+  document.getElementById('bk').onclick=function(){go(cur-1)};
+  chips.forEach(function(a,k){a.addEventListener('click',function(e){e.preventDefault();go(k+1)})});
+  // in-page links to a section (e.g. #after) switch screens
+  window.addEventListener('hashchange',function(){var id=location.hash.slice(1).replace(/^go-/,'');screens.forEach(function(s,k){if(s.dataset.id===id)go(k+1)})});
+  var start=0,h=location.hash.slice(1).replace(/^go-/,'');
+  if(h){screens.forEach(function(s,k){if(s.dataset.id===h)start=k+1})}
+  else{try{var v=+localStorage.getItem(key);if(v>0&&v<all.length)start=v}catch(e){}}
+  if('scrollRestoration' in history)history.scrollRestoration='manual';
+  go(start);
+  window.addEventListener('load',function(){setTimeout(function(){window.scrollTo({top:0,behavior:'instant'})},0)});
+  // progress bar is now the step bar, not scroll
+  window.addEventListener('scroll',function(){},{passive:true});
+})();
+</script>
+
+</body>
+</html>

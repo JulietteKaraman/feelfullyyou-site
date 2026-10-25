@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<base href="/the-fifteen-minutes-after/">
+<meta name="description" content="One communication. Thank you. Swap.">
+<meta property="og:title" content="The Fifteen Minutes After"><meta property="og:description" content="One communication. Thank you. Swap."><meta property="og:type" content="website"><meta property="og:url" content="https://feelfullyyou.com/the-fifteen-minutes-after/"><meta property="og:image" content="https://feelfullyyou.com/the-fifteen-minutes-after/og.jpg"><meta property="og:site_name" content="Feel Fully You">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="The Fifteen Minutes After"><meta name="twitter:description" content="One communication. Thank you. Swap."><meta name="twitter:image" content="https://feelfullyyou.com/the-fifteen-minutes-after/og.jpg">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1a1814">
+<title>The Fifteen Minutes After</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Poppins:wght@300;400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+
+:root{
+  --bg:#1a1814; --bg2:#211e19; --ink:#f1ece2; --muted:#a79f90;
+  --line:rgba(221,201,142,.2); --accent:#DDC98E; --lemon:#EEDE80;
+  --teal:#0D3535; --gold:#a8843f;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:"Poppins",sans-serif;font-weight:300;font-size:17px;line-height:1.75;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+
+/* progress + chapter bar */
+.bar{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(26,24,20,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line);transform:translateY(-100%);transition:transform .35s ease}
+.bar.on{transform:none}
+.bar .prog{height:2px;background:var(--accent);width:0;transition:width .1s linear}
+.chips{display:flex;gap:6px;overflow-x:auto;padding:10px 16px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chips a{flex:none;font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--muted);padding:6px 12px;border:1px solid var(--line);border-radius:99px;transition:all .2s}
+.chips a.cur{color:var(--bg);background:var(--accent);border-color:var(--accent)}
+
+/* cover */
+.cover{position:relative;display:flex;flex-direction:column;background:var(--bg)}
+.cover .ph{position:relative;height:54svh;min-height:340px;overflow:hidden}
+.cover .ph img{width:100%;height:100%;object-fit:cover;object-position:35% 38%}
+.cover .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,24,20,.55) 0%,rgba(26,24,20,0) 22%,rgba(26,24,20,0) 62%,var(--bg) 100%)}
+.cover .in{position:relative;z-index:2;padding:0 24px 64px;margin:-64px auto 0;max-width:640px;width:100%}
+.brand{position:absolute;top:22px;left:0;right:0;z-index:3;text-align:center;font-family:"Jost",sans-serif;font-size:12px;letter-spacing:.42em;text-transform:uppercase;color:var(--ink)}
+.cover h1{font-family:"Jost",sans-serif;font-weight:400;font-size:clamp(56px,16vw,96px);line-height:.95;letter-spacing:.02em}
+.cover .line{margin-top:18px;font-size:19px;line-height:1.6;color:var(--ink);max-width:24ch}
+.cover .line em{font-style:normal;color:var(--accent)}
+.meta{margin-top:26px;display:flex;flex-wrap:wrap;gap:8px}
+.meta span{font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);border:1px solid rgba(241,236,226,.28);border-radius:99px;padding:6px 12px}
+.scroll{margin-top:34px;font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+@media (min-width:720px){.cover .ph{height:72svh}}
+
+/* sections */
+main{max-width:640px;margin:0 auto;padding:0 24px}
+section{padding:88px 0 8px}
+.kicker{font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;display:flex;align-items:center;gap:12px}
+.kicker::after{content:"";flex:1;height:1px;background:var(--line)}
+h2{font-family:"Jost",sans-serif;font-weight:400;font-size:clamp(32px,8vw,44px);line-height:1.12;margin-bottom:28px}
+h3{font-family:"Jost",sans-serif;font-weight:500;font-size:21px;line-height:1.3;margin:40px 0 12px}
+p{margin:0 0 18px}
+.lead{font-size:22px;line-height:1.5;color:var(--ink);font-weight:300}
+.big{font-family:"Jost",sans-serif;font-weight:400;font-size:clamp(26px,7vw,34px);line-height:1.25;margin:34px 0;color:var(--ink)}
+.big em{font-style:normal;color:var(--accent)}
+.quiet{color:var(--muted)}
+.thoughts{margin:26px 0 30px;padding-left:18px;border-left:1px solid var(--accent)}
+.thoughts p{font-style:italic;color:var(--accent);margin:0 0 6px;font-size:18px}
+blockquote{margin:34px 0;padding:28px 24px;background:var(--bg2);border:1px solid var(--line);border-radius:18px;font-size:19px;line-height:1.6;font-style:italic}
+blockquote cite{display:block;margin-top:14px;font-style:normal;font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.dots{list-style:none;margin:20px 0 28px}
+.dots li{position:relative;padding:12px 0 12px 26px;border-bottom:1px solid var(--line)}
+.dots li:last-child{border-bottom:0}
+.dots li::before{content:"";position:absolute;left:2px;top:24px;width:7px;height:7px;border-radius:50%;background:var(--accent)}
+.qs{list-style:none;margin:18px 0 26px;counter-reset:q}
+.qs li{counter-increment:q;position:relative;padding:14px 0 14px 44px;border-bottom:1px solid var(--line)}
+.qs li:last-child{border-bottom:0}
+.qs li::before{content:counter(q);position:absolute;left:0;top:14px;width:28px;height:28px;border-radius:50%;border:1px solid var(--accent);color:var(--accent);font-family:"Jost",sans-serif;font-size:14px;display:grid;place-items:center}
+.photo{margin:44px -24px;position:relative}
+.photo img{width:100%;max-height:78svh;object-fit:cover;object-position:30% 40%}
+.photo figcaption{position:absolute;left:24px;right:24px;bottom:22px;font-family:"Jost",sans-serif;font-size:26px;line-height:1.25;text-shadow:0 2px 18px rgba(0,0,0,.6)}
+.photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(26,24,20,.85))}
+.photo figcaption{z-index:2}
+
+/* steps */
+.steps{list-style:none;margin:10px 0 0}
+.steps li{display:grid;grid-template-columns:44px 1fr;gap:16px;padding:22px 0;border-bottom:1px solid var(--line)}
+.steps li:last-child{border-bottom:0}
+.steps .n{font-family:"Jost",sans-serif;font-size:30px;line-height:1;color:var(--accent)}
+.steps b{display:block;font-family:"Jost",sans-serif;font-weight:500;font-size:19px;margin-bottom:6px}
+.steps p{margin:0 0 8px;color:var(--ink)}
+.steps p.quiet{color:var(--muted)}
+
+/* media cards */
+.media{margin:30px 0;background:var(--bg2);border:1px solid var(--line);border-radius:22px;overflow:hidden}
+.media .hd{padding:20px 22px 16px}
+.media .lab{font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+.media .tt{font-family:"Jost",sans-serif;font-size:22px;line-height:1.25;margin-top:6px}
+.media .tt small{font-size:14px;color:var(--muted);font-family:"Poppins",sans-serif;margin-left:6px}
+.media .bd{padding:0 22px 20px;color:var(--muted);font-size:16px}
+.media .bd p{margin:0 0 8px}
+.vid{position:relative;background:#000}
+.vid.tall{aspect-ratio:9/16;max-height:72svh;margin:0 auto}
+.vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vlink{display:block;padding:12px 22px;font-family:"Inter",sans-serif;font-size:12px;letter-spacing:.08em;color:var(--muted);text-decoration:none;border-top:1px solid var(--line)}
+.vlink:hover{color:var(--accent)}
+
+/* audio player */
+.player{display:flex;align-items:center;gap:16px;padding:6px 22px 24px}
+.play{flex:none;width:68px;height:68px;border-radius:50%;border:0;background:var(--accent);color:var(--bg);display:grid;place-items:center;cursor:pointer;transition:transform .15s}
+.play:active{transform:scale(.95)}
+.play svg{width:24px;height:24px}
+.track{flex:1;min-width:0}
+.rail{position:relative;height:28px;cursor:pointer;touch-action:none}
+.rail::before{content:"";position:absolute;left:0;right:0;top:13px;height:2px;background:var(--line)}
+.fill{position:absolute;left:0;top:13px;height:2px;background:var(--accent);width:0}
+.knob{position:absolute;top:8px;width:12px;height:12px;border-radius:50%;background:var(--accent);left:0;margin-left:-6px}
+.times{display:flex;justify-content:space-between;font-family:"Inter",sans-serif;font-size:12px;color:var(--muted)}
+
+/* role picker */
+.roles{margin:34px 0 8px;padding:22px;border-radius:22px;background:var(--teal)}
+.roles .q{font-family:"Jost",sans-serif;font-size:21px;margin-bottom:14px;color:var(--ink)}
+.seg{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;background:rgba(0,0,0,.25);padding:5px;border-radius:99px}
+.seg button{border:0;background:transparent;color:var(--ink);font-family:"Inter",sans-serif;font-size:13px;letter-spacing:.04em;padding:11px 6px;border-radius:99px;cursor:pointer;transition:all .2s}
+.seg button.on{background:var(--ink);color:var(--bg)}
+.roles .hint{margin-top:12px;font-size:14px;color:rgba(241,236,226,.7)}
+[data-role]{transition:opacity .3s}
+body.r-give [data-role="receive"], body.r-receive [data-role="give"]{display:none}
+.rolecard{margin:24px 0;padding:24px 22px;border-radius:20px;border:1px solid var(--line);background:var(--bg2)}
+.rolecard .tag{display:inline-block;font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--bg);background:var(--accent);padding:5px 11px;border-radius:99px;margin-bottom:12px}
+.rolecard h3{margin-top:0}
+
+/* script accordion */
+details{border:1px solid var(--line);border-radius:20px;margin:30px 0;background:var(--bg2);overflow:hidden}
+summary{list-style:none;cursor:pointer;padding:20px 22px;display:flex;justify-content:space-between;align-items:center;gap:12px;font-family:"Jost",sans-serif;font-size:19px}
+summary::-webkit-details-marker{display:none}
+summary .pl{flex:none;width:30px;height:30px;border-radius:50%;border:1px solid var(--accent);color:var(--accent);display:grid;place-items:center;font-size:18px;transition:transform .25s}
+details[open] summary .pl{transform:rotate(45deg)}
+summary small{display:block;font-family:"Poppins",sans-serif;font-size:14px;color:var(--muted);margin-top:2px}
+.dbody{padding:0 22px 22px}
+.dbody h4{font-family:"Inter",sans-serif;font-weight:500;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:24px 0 10px}
+
+/* silence block */
+.silence{margin:56px -24px 0;padding:72px 28px;background:var(--teal);text-align:left}
+.silence .kicker{color:var(--accent)}
+.silence h2{margin-bottom:22px}
+.silence .no{list-style:none;margin:24px 0}
+.silence .no li{font-family:"Jost",sans-serif;font-size:21px;padding:10px 0;border-bottom:1px solid rgba(241,236,226,.15);color:rgba(241,236,226,.55);text-decoration:line-through;text-decoration-color:var(--accent);text-decoration-thickness:1px}
+.silence .last{font-family:"Jost",sans-serif;font-size:24px;line-height:1.35;margin-top:30px}
+
+/* faq */
+.faq details{margin:12px 0}
+.faq summary{font-size:18px}
+.faq .dbody p{color:var(--ink)}
+
+.end{padding:96px 0 40px}
+.endcard{margin-top:34px;padding:36px 26px;border-radius:24px;border:1px solid var(--accent);background:linear-gradient(160deg,var(--bg2),var(--bg))}
+.endcard .big{margin:0 0 6px}
+footer{text-align:center;padding:60px 24px 70px;font-family:"Jost",sans-serif;font-size:12px;letter-spacing:.42em;text-transform:uppercase;color:var(--muted)}
+
+@media (min-width:720px){
+  .photo{margin:56px 0;border-radius:24px;overflow:hidden}
+  .silence{margin:64px 0 0;border-radius:28px;padding:72px 48px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* offers */
+.more{margin-top:56px;padding-top:8px}
+.offer{display:grid;grid-template-columns:96px 1fr;gap:16px;align-items:center;text-decoration:none;color:var(--ink);padding:14px;margin:12px 0;border:1px solid var(--line);border-radius:20px;background:var(--bg2);transition:border-color .2s,transform .2s}
+.offer:hover{border-color:var(--accent);transform:translateY(-2px)}
+.offer img{width:96px;height:120px;object-fit:cover;border-radius:12px}
+.offer b{display:block;font-family:"Jost",sans-serif;font-weight:500;font-size:19px;line-height:1.25;margin-bottom:6px}
+.offer span{display:block;font-size:14px;line-height:1.5;color:var(--muted)}
+.offer em{display:inline-block;margin-top:10px;font-style:normal;font-family:"Jost",sans-serif;font-size:16px;color:var(--bg);background:var(--accent);padding:7px 14px;border-radius:99px}
+
+/* page-specific */
+.cover .ph img{object-position:50% 45%}
+.resp{display:grid;gap:10px;margin:26px 0 10px}
+.resp button{all:unset;cursor:pointer;display:block;padding:20px 22px;border-radius:18px;border:1px solid var(--line);background:var(--bg2);transition:all .2s}
+.resp button b{display:block;font-family:"Jost",sans-serif;font-weight:500;font-size:22px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.resp button span{display:block;margin-top:2px;color:var(--ink)}
+.resp button i{display:none;font-style:normal;margin-top:12px;padding-top:12px;border-top:1px solid var(--line);color:var(--muted);font-size:15px}
+.resp button.on{background:var(--teal);border-color:var(--teal)}
+.resp button.on i{display:block;color:rgba(241,236,226,.8)}
+.tap{font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.loop{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px;margin:36px 0;padding:26px 18px;border-radius:22px;background:var(--teal);font-family:"Jost",sans-serif;font-size:19px;text-align:center}
+.loop span{white-space:nowrap}
+.loop .ar{color:var(--accent)}
+.three{list-style:none;margin:22px 0}
+.three li{display:grid;grid-template-columns:40px 1fr;gap:14px;align-items:start;padding:16px 0;border-bottom:1px solid var(--line)}
+.three li:last-child{border-bottom:0}
+.three .n{font-family:"Jost",sans-serif;font-size:26px;line-height:1.1;color:var(--accent)}
+.cta{display:block;text-decoration:none;text-align:center;margin:34px 0 14px;padding:22px 20px;border-radius:99px;background:var(--accent);color:var(--bg);font-family:"Jost",sans-serif;font-weight:500;font-size:19px;letter-spacing:.04em;box-shadow:0 10px 40px rgba(221,201,142,.18);transition:transform .15s}
+.cta:active{transform:scale(.98)}
+.cta small{display:block;font-family:"Inter",sans-serif;font-weight:400;font-size:11px;letter-spacing:.16em;text-transform:uppercase;opacity:.7;margin-top:4px}
+</style>
+</head>
+<body>
+
+<div class="bar" id="bar">
+  <div class="prog" id="prog"></div>
+  <nav class="chips" id="chips">
+    <a href="#why">Why</a>
+    <a href="#what">What it is</a>
+    <a href="#dyad">The Dyad</a>
+    <a href="#cards">Your cards</a>
+  </nav>
+</div>
+
+<header class="cover">
+  <div class="brand">Feel Fully You</div>
+  <div class="ph"><img src="media/cover.jpg" alt="Two people at a table, one holding a Communication and Intimacy card"></div>
+  <div class="in">
+    <h1 style="font-size:clamp(46px,12.5vw,84px)">The Fifteen Minutes After</h1>
+    <p class="line">One communication. Thank you. <em>Swap.</em></p>
+    <div class="meta"><span>15 minutes</span><span>3 prompts</span><span>In the app</span></div>
+    <div class="scroll">Scroll to begin ↓</div>
+  </div>
+</header>
+
+<main>
+
+<section id="why">
+  <div class="kicker">01</div>
+  <h2>Why this exists</h2>
+  <p class="lead">Something lands. You both feel it. Then one of you speaks, and within a sentence it can be gone.</p>
+  <div class="thoughts">
+    <p>Was that alright?</p>
+    <p>Did you like it?</p>
+    <p>Was I doing it properly?</p>
+    <p>What did you feel?</p>
+  </div>
+  <p>Every one of those is kind.</p>
+  <p class="big">And every one of those can hand the other person <em>a job.</em></p>
+  <p>Now, instead of simply noticing what happened for them, they may be thinking about how to answer you. Whether you did it right. Whether you're okay. Whether they need to reassure you.</p>
+  <p>The experience has become a review.</p>
+  <p>We tend to think communication means responding.</p>
+  <p>They say something. We explain. Reassure. Ask another question. Tell them what happened for us. Correct something they misunderstood. Reach over and touch them.</p>
+  <p class="big">But what happens if your only job is <em>to understand?</em></p>
+  <ul class="dots">
+    <li>Not agree.</li>
+    <li>Not fix.</li>
+    <li>Not make it better.</li>
+  </ul>
+  <p>Just let one clear communication land before either of you does anything with it.</p>
+  <p>That is what these fifteen minutes are for.</p>
+</section>
+
+<section id="what">
+  <div class="kicker">02</div>
+  <h2>What this actually is</h2>
+  <p class="big" style="margin-top:0">A <em>clearing.</em></p>
+  <p>Fifteen minutes where you both get to say what is actually present for you, and have it received without it immediately becoming a conversation.</p>
+  <p>You are not there to interject.</p>
+  <ul class="dots">
+    <li>Not to fix.</li>
+    <li>Not to agree.</li>
+    <li>Not to explain your side.</li>
+    <li>Not even to reach over and hug each other, however much you might want to.</li>
+  </ul>
+  <p class="lead">You are there to understand.</p>
+  <div class="loop"><span>One person communicates.</span><span class="ar">→</span><span>The other receives.</span><span class="ar">→</span><span>Then you swap.</span></div>
+  <p>You keep doing that, back and forth, with the same prompt for the full fifteen minutes.</p>
+  <p>It is simple.</p>
+  <p class="big">And the structure is what <em>makes it work.</em></p>
+  <p>Because for fifteen minutes, neither of you has to manage where the conversation is going.</p>
+  <p>You only have to be with what is actually here.</p>
+</section>
+
+<section id="dyad">
+  <div class="kicker">03</div>
+  <h2>The Dyad, properly</h2>
+  <div class="media">
+    <div class="hd"><div class="lab">Listen first</div><div class="tt">I'll explain the Dyad <small>1 minute</small></div></div>
+    <img src="media/welcome.jpg" alt="Juliette Karaman" style="width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%;margin-bottom:18px">
+    <div class="player" data-src="media/voice/welcome.m4a" data-dur="1:10"></div>
+  </div>
+  <p>This is the structure underneath everything I teach. I have used it with hundreds of couples and thousands of clients.</p>
+  <p>The structure is what matters.</p>
+  <ol class="three">
+    <li><span class="n">1</span><div>One of you asks the prompt.</div></li>
+    <li><span class="n">2</span><div>The other takes a breath, lets it land, and gives one clear communication.<br><span class="quiet">Not a monologue. Not everything you think about it. One thing. Finished. Out loud.</span></div></li>
+    <li><span class="n">3</span><div>Then the listener may say only one of three things:</div></li>
+  </ol>
+
+  <div class="tap">Tap each one</div>
+  <div class="resp" id="resp">
+    <button><b>Thank you</b><span>I've understood.</span><i>When the listener can say Thank you, you swap. Every single time.</i></button>
+    <button><b>Clarify that</b><span>Help me understand.</span><i>The person speaking responds. Then the listener chooses again.</i></button>
+    <button><b>Summarise that</b><span>Give me the bottom line.</span><i>The person speaking responds. Then the listener chooses again.</i></button>
+  </div>
+
+  <div class="loop"><span>One communication.</span><span class="ar">→</span><span>Thank you.</span><span class="ar">→</span><span>Swap.</span></div>
+
+  <p>Then the other person takes the same prompt fresh.</p>
+  <ul class="dots">
+    <li>You do not answer what your partner just said.</li>
+    <li>You do not continue their thread.</li>
+    <li>You do not explain your side.</li>
+  </ul>
+  <p>You take a breath, let the prompt land for you, and give your one clear communication.</p>
+  <p>Then: Thank you. Swap.</p>
+  <p>Back and forth, like this, with the same prompt for the whole fifteen minutes.</p>
+  <p>You may feel like you've answered it already.</p>
+  <p class="lead">Stay with it.</p>
+  <p>The first answer might be obvious. The next time the prompt comes back to you, something else may be there.</p>
+  <p>That is why you don't move on to another question.</p>
+  <p>Remember: understanding is the aim.</p>
+  <p class="big">Agreement has nothing <em>to do with it.</em></p>
+  <p>You do not have to agree with what your partner says. You do not even have to like it.</p>
+  <p>You are practising something much simpler:</p>
+  <blockquote style="font-style:normal;font-family:'Jost',sans-serif;font-size:23px">Can I receive what is true for you without immediately making it about me?</blockquote>
+  <p>There is no correct answer.</p>
+  <p>Just what is present for you right now.</p>
+</section>
+
+<figure class="photo">
+  <img src="media/app.jpg" alt="A hand holding a phone open on the Communication and Intimacy Cards app" loading="lazy">
+</figure>
+
+<section id="cards" style="padding-top:40px">
+  <div class="kicker">04</div>
+  <h2>Your cards are in the app</h2>
+  <p>Now you know the structure. Your three prompts and fifteen-minute timer are waiting for you in the app.</p>
+  <a class="cta" href="https://feelfullyyou.com/my-cards/?unlock=fifteen-after">Open your Fifteen Minutes After cards<small>Tap once and they're yours on this phone</small></a>
+  <p class="quiet" style="text-align:center;font-size:15px">Tap the link once and it's yours on that phone. Add it to your home screen and you can come straight back to it whenever you need it.</p>
+
+  <h3>Inside, you'll find three prompts, each for a different moment</h3>
+  <ol class="three">
+    <li><span class="n">1</span><div>One for any time.</div></li>
+    <li><span class="n">2</span><div>One for when something came up that you didn't expect.</div></li>
+    <li><span class="n">3</span><div>One for when it landed and you want more.</div></li>
+  </ol>
+  <p>Choose the one that matches what just happened.</p>
+  <p class="lead">One prompt. That's the one you stay with for the full fifteen minutes.</p>
+  <p>Turn the card over for the question, start the timer, and begin your Dyad.</p>
+  <p class="quiet">The timer sits underneath the card, keeps your screen awake, and chimes softly when your fifteen minutes are up.</p>
+  <a class="cta" href="https://feelfullyyou.com/my-cards/?unlock=fifteen-after" style="margin-top:40px">Open your cards</a>
+
+  <div class="more"><div class="kicker">Keep going</div><a class="offer" href="https://buy.stripe.com/00w7sKdKr5OU4Tz32B0co25"><img src="media/up-trace.jpg" alt="" loading="lazy"><div class="ot"><b>The Trace</b><span>Fully clothed. Non-sexual. Your body learns to accept touch, knowing it's not going to lead anywhere.</span><em>£17 →</em></div></a><a class="offer" href="https://buy.stripe.com/00waEW49R5OUdq56eN0co27"><img src="media/up-ritual.jpg" alt="" loading="lazy"><div class="ot"><b>The 45-Minute Connection Ritual</b><span>Move from co-existing to connecting in 45 minutes.</span><em>£27 →</em></div></a></div>
+</section>
+
+</main>
+
+<footer>Feel Fully You</footer>
+
+<script>
+(function(){
+
+  [].forEach.call(document.querySelectorAll('#resp button'),function(b){
+    b.addEventListener('click',function(){b.classList.toggle('on')});
+  });
+})();
+</script>
+<script>
+(function(){
+  function fmt(t){t=Math.max(0,Math.round(t));return Math.floor(t/60)+":"+("0"+t%60).slice(-2)}
+  /* audio players */
+  var ICO_P='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>';
+  var ICO_S='<svg viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>';
+  var all=[];
+  [].forEach.call(document.querySelectorAll('.player'),function(p){
+    p.innerHTML='<button class="play" aria-label="Play">'+ICO_P+'</button><div class="track"><div class="rail"><div class="fill"></div><div class="knob"></div></div><div class="times"><span class="cur">0:00</span><span class="dur">'+p.dataset.dur+'</span></div></div><audio preload="metadata" src="'+p.dataset.src+'"></audio>';
+    var a=p.querySelector('audio'),btn=p.querySelector('.play'),fill=p.querySelector('.fill'),knob=p.querySelector('.knob'),rail=p.querySelector('.rail'),cur=p.querySelector('.cur'),dur=p.querySelector('.dur');
+    all.push(a);
+    function paint(){var x=a.duration?a.currentTime/a.duration*100:0;fill.style.width=x+'%';knob.style.left=x+'%';cur.textContent=fmt(a.currentTime)}
+    btn.onclick=function(){if(a.paused){all.forEach(function(o){if(o!==a)o.pause()});a.play()}else a.pause()};
+    a.addEventListener('play',function(){btn.innerHTML=ICO_S});
+    a.addEventListener('pause',function(){btn.innerHTML=ICO_P});
+    a.addEventListener('timeupdate',paint);
+    a.addEventListener('loadedmetadata',function(){dur.textContent=fmt(a.duration)});
+    var drag=false;
+    function seek(e){var r=rail.getBoundingClientRect();if(a.duration){a.currentTime=Math.min(1,Math.max(0,(e.clientX-r.left)/r.width))*a.duration;paint()}}
+    rail.addEventListener('pointerdown',function(e){drag=true;seek(e)});
+    window.addEventListener('pointermove',function(e){if(drag)seek(e)});
+    window.addEventListener('pointerup',function(){drag=false});
+  });
+})();
+</script>
+<style>
+/* app-style screens */
+body.app .bar{transform:none}
+body.app.on-cover .bar{transform:translateY(-100%)}
+.screen{display:none;padding-bottom:110px}
+.screen.cur{display:block;animation:scr .35s ease}
+@keyframes scr{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+body.app main{padding-top:58px}
+body.app main > section:first-child,body.app .screen > section:first-child{padding-top:48px}
+.cover.screen{padding-bottom:0}
+.begin{display:inline-flex;align-items:center;gap:10px;margin-top:30px;border:0;border-radius:99px;background:var(--accent);color:var(--bg);font-family:"Jost",sans-serif;font-weight:500;font-size:18px;padding:16px 30px;cursor:pointer}
+body.app .cover .scroll{display:none}
+.nav{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(26,24,20,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line);display:none}
+body.app:not(.on-cover) .nav{display:block}
+.nav .in{max-width:640px;margin:0 auto;display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:center}
+.nav button{border:0;cursor:pointer;border-radius:99px;font-family:"Inter",sans-serif;font-size:14px;padding:15px 18px}
+.nav .bk{background:transparent;color:var(--muted);border:1px solid var(--line);width:52px;padding:15px 0;font-size:18px;line-height:1}
+.nav .nx{background:var(--accent);color:var(--bg);font-family:"Jost",sans-serif;font-weight:500;font-size:16px;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav .nx small{font-family:"Inter",sans-serif;font-weight:400;font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.65;margin-right:8px}
+.stepof{display:block;text-align:center;font-family:"Inter",sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+</style>
+<nav class="nav" id="appnav"><span class="stepof" id="stepof"></span><div class="in"><button class="bk" id="bk" aria-label="Back">←</button><button class="nx" id="nx"></button></div></nav>
+<script>
+(function(){
+  var main=document.querySelector('main'),cover=document.querySelector('header.cover');
+  var chips=[].slice.call(document.querySelectorAll('#chips a'));
+  var prog=document.getElementById('prog');
+  // group main's children into screens: a section with an id starts a screen; figures join the NEXT screen; id-less sections join the previous one
+  var kids=[].slice.call(main.children),screens=[],pending=[];
+  kids.forEach(function(el){
+    if(el.tagName==='SECTION'&&el.id){var s=document.createElement('div');s.className='screen';s.dataset.id=el.id;screens.push(s);pending.forEach(function(p){s.appendChild(p)});pending=[];s.appendChild(el)}
+    else if(el.tagName==='FIGURE'){pending.push(el)}
+    else if(screens.length){screens[screens.length-1].appendChild(el)}
+    else pending.push(el);
+  });
+  screens.forEach(function(s){main.appendChild(s)});
+  pending.forEach(function(p){screens[screens.length-1].appendChild(p)});
+  cover.classList.add('screen');
+  var all=[cover].concat(screens);
+  var names=screens.map(function(s){var c=chips.filter(function(a){return a.getAttribute('href')==='#'+s.dataset.id})[0];return c?c.textContent.trim():s.dataset.id});
+  // cover button
+  var b=document.createElement('button');b.className='begin';b.textContent='Begin →';cover.querySelector('.in').appendChild(b);
+  b.onclick=function(){go(1)};
+  document.body.classList.add('app');
+  var cur=0,key='ffy-step-'+location.pathname;
+  function stopMedia(){[].forEach.call(document.querySelectorAll('audio'),function(a){a.pause()})}
+  function go(i,noScroll){
+    i=Math.max(0,Math.min(all.length-1,i));
+    if(i!==cur)stopMedia();
+    all.forEach(function(s,k){s.classList.toggle('cur',k===i)});
+    cur=i;document.body.classList.toggle('on-cover',i===0);
+    chips.forEach(function(a,k){a.classList.toggle('cur',k===i-1)});
+    if(i>0){var c=chips[i-1];if(c)c.parentNode.scrollTo({left:c.offsetLeft-16,behavior:'smooth'})}
+    prog.style.width=(i/(all.length-1)*100)+'%';
+    document.getElementById('stepof').textContent=i>0?(i+' of '+screens.length):'';
+    var nx=document.getElementById('nx');
+    if(i<all.length-1){nx.innerHTML='<small>Next</small>'+names[i]+' →'}else{nx.innerHTML='Back to the start'}
+    // lazy iframes inside newly shown screen
+    [].forEach.call(all[i].querySelectorAll('iframe[data-src]'),function(f){if(!f.src&&!f.closest('[hidden]'))f.src=f.dataset.src});
+    if(!noScroll)window.scrollTo({top:0,behavior:'instant'});
+    try{localStorage.setItem(key,i)}catch(e){}
+    if(history.replaceState)history.replaceState(null,'',i>0?'#go-'+screens[i-1].dataset.id:location.pathname+location.search);
+  }
+  document.getElementById('nx').onclick=function(){go(cur<all.length-1?cur+1:0)};
+  document.getElementById('bk').onclick=function(){go(cur-1)};
+  chips.forEach(function(a,k){a.addEventListener('click',function(e){e.preventDefault();go(k+1)})});
+  // in-page links to a section (e.g. #after) switch screens
+  window.addEventListener('hashchange',function(){var id=location.hash.slice(1).replace(/^go-/,'');screens.forEach(function(s,k){if(s.dataset.id===id)go(k+1)})});
+  var start=0,h=location.hash.slice(1).replace(/^go-/,'');
+  if(h){screens.forEach(function(s,k){if(s.dataset.id===h)start=k+1})}
+  else{try{var v=+localStorage.getItem(key);if(v>0&&v<all.length)start=v}catch(e){}}
+  if('scrollRestoration' in history)history.scrollRestoration='manual';
+  go(start);
+  window.addEventListener('load',function(){setTimeout(function(){window.scrollTo({top:0,behavior:'instant'})},0)});
+  // progress bar is now the step bar, not scroll
+  window.addEventListener('scroll',function(){},{passive:true});
+})();
+</script>
+
+</body>
+</html>
