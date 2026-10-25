@@ -23,7 +23,10 @@
 # Pretty URLs — strip .html extension
 /cards                          /cards.html                     200
 /physical-cards                 /physical-cards.html            200
-/essence-cards                  /essence-cards.html             200
+# Essence deck moved into the cards app 25 Oct 2026; the old page is retired.
+/essence-cards                  /my-cards/?unlock=essence       302!
+/essence-cards.html             /my-cards/?unlock=essence       302!
+/reconnect-cards                /my-cards/?unlock=reconnect     302!
 /31-days-closer                 /31-days-closer.html            200
 /content-only                   /content-only.html              200
 /work-with-me                   /work-with-me.html              200
