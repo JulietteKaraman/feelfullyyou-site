@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<base href="/the-trust-and-repair/">
+<meta name="description" content="Fifty prompts for when the conversation is about something that happened between you.">
+<meta property="og:title" content="Trust &amp; Repair"><meta property="og:description" content="Fifty prompts for when the conversation is about something that happened between you."><meta property="og:type" content="website"><meta property="og:url" content="https://feelfullyyou.com/the-trust-and-repair/"><meta property="og:image" content="https://feelfullyyou.com/the-trust-and-repair/og.jpg"><meta property="og:site_name" content="Feel Fully You">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Trust &amp; Repair"><meta name="twitter:description" content="Fifty prompts for when the conversation is about something that happened between you."><meta name="twitter:image" content="https://feelfullyyou.com/the-trust-and-repair/og.jpg">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1a1814">
+<title>Trust &amp; Repair</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Poppins:wght@300;400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+
+:root{
+  --bg:#1a1814; --bg2:#211e19; --ink:#f1ece2; --muted:#a79f90;
+  --line:rgba(221,201,142,.2); --accent:#DDC98E; --lemon:#EEDE80;
+  --teal:#0D3535; --gold:#a8843f;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:"Poppins",sans-serif;font-weight:300;font-size:17px;line-height:1.75;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+
+/* progress + chapter bar */
+.bar{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(26,24,20,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line);transform:translateY(-100%);transition:transform .35s ease}
+.bar.on{transform:none}
+.bar .prog{height:2px;background:var(--accent);width:0;transition:width .1s linear}
+.chips{display:flex;gap:6px;overflow-x:auto;padding:10px 16px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chips a{flex:none;font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--muted);padding:6px 12px;border:1px solid var(--line);border-radius:99px;transition:all .2s}
+.chips a.cur{color:var(--bg);background:var(--accent);border-color:var(--accent)}
+
+/* cover */
+.cover{position:relative;display:flex;flex-direction:column;background:var(--bg)}
+.cover .ph{position:relative;height:54svh;min-height:340px;overflow:hidden}
+.cover .ph img{width:100%;height:100%;object-fit:cover;object-position:35% 38%}
+.cover .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,24,20,.55) 0%,rgba(26,24,20,0) 22%,rgba(26,24,20,0) 62%,var(--bg) 100%)}
+.cover .in{position:relative;z-index:2;padding:0 24px 64px;margin:-64px auto 0;max-width:640px;width:100%}
+.brand{position:absolute;top:22px;left:0;right:0;z-index:3;text-align:center;font-family:"Jost",sans-serif;font-size:12px;letter-spacing:.42em;text-transform:uppercase;color:var(--ink)}
+.cover h1{font-family:"Jost",sans-serif;font-weight:400;font-size:clamp(56px,16vw,96px);line-height:.95;letter-spacing:.02em}
+.cover .line{margin-top:18px;font-size:19px;line-height:1.6;color:var(--ink);max-width:24ch}
+.cover .line em{font-style:normal;color:var(--accent)}
+.meta{margin-top:26px;display:flex;flex-wrap:wrap;gap:8px}
+.meta span{font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);border:1px solid rgba(241,236,226,.28);border-radius:99px;padding:6px 12px}
+.scroll{margin-top:34px;font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+@media (min-width:720px){.cover .ph{height:72svh}}
+
+/* sections */
+main{max-width:640px;margin:0 auto;padding:0 24px}
+section{padding:88px 0 8px}
+.kicker{font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;display:flex;align-items:center;gap:12px}
+.kicker::after{content:"";flex:1;height:1px;background:var(--line)}
+h2{font-family:"Jost",sans-serif;font-weight:400;font-size:clamp(32px,8vw,44px);line-height:1.12;margin-bottom:28px}
+h3{font-family:"Jost",sans-serif;font-weight:500;font-size:21px;line-height:1.3;margin:40px 0 12px}
+p{margin:0 0 18px}
+.lead{font-size:22px;line-height:1.5;color:var(--ink);font-weight:300}
+.big{font-family:"Jost",sans-serif;font-weight:400;font-size:clamp(26px,7vw,34px);line-height:1.25;margin:34px 0;color:var(--ink)}
+.big em{font-style:normal;color:var(--accent)}
+.quiet{color:var(--muted)}
+.thoughts{margin:26px 0 30px;padding-left:18px;border-left:1px solid var(--accent)}
+.thoughts p{font-style:italic;color:var(--accent);margin:0 0 6px;font-size:18px}
+blockquote{margin:34px 0;padding:28px 24px;background:var(--bg2);border:1px solid var(--line);border-radius:18px;font-size:19px;line-height:1.6;font-style:italic}
+blockquote cite{display:block;margin-top:14px;font-style:normal;font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.dots{list-style:none;margin:20px 0 28px}
+.dots li{position:relative;padding:12px 0 12px 26px;border-bottom:1px solid var(--line)}
+.dots li:last-child{border-bottom:0}
+.dots li::before{content:"";position:absolute;left:2px;top:24px;width:7px;height:7px;border-radius:50%;background:var(--accent)}
+.qs{list-style:none;margin:18px 0 26px;counter-reset:q}
+.qs li{counter-increment:q;position:relative;padding:14px 0 14px 44px;border-bottom:1px solid var(--line)}
+.qs li:last-child{border-bottom:0}
+.qs li::before{content:counter(q);position:absolute;left:0;top:14px;width:28px;height:28px;border-radius:50%;border:1px solid var(--accent);color:var(--accent);font-family:"Jost",sans-serif;font-size:14px;display:grid;place-items:center}
+.photo{margin:44px -24px;position:relative}
+.photo img{width:100%;max-height:78svh;object-fit:cover;object-position:30% 40%}
+.photo figcaption{position:absolute;left:24px;right:24px;bottom:22px;font-family:"Jost",sans-serif;font-size:26px;line-height:1.25;text-shadow:0 2px 18px rgba(0,0,0,.6)}
+.photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(26,24,20,.85))}
+.photo figcaption{z-index:2}
+
+/* steps */
+.steps{list-style:none;margin:10px 0 0}
+.steps li{display:grid;grid-template-columns:44px 1fr;gap:16px;padding:22px 0;border-bottom:1px solid var(--line)}
+.steps li:last-child{border-bottom:0}
+.steps .n{font-family:"Jost",sans-serif;font-size:30px;line-height:1;color:var(--accent)}
+.steps b{display:block;font-family:"Jost",sans-serif;font-weight:500;font-size:19px;margin-bottom:6px}
+.steps p{margin:0 0 8px;color:var(--ink)}
+.steps p.quiet{color:var(--muted)}
+
+/* media cards */
+.media{margin:30px 0;background:var(--bg2);border:1px solid var(--line);border-radius:22px;overflow:hidden}
+.media .hd{padding:20px 22px 16px}
+.media .lab{font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+.media .tt{font-family:"Jost",sans-serif;font-size:22px;line-height:1.25;margin-top:6px}
+.media .tt small{font-size:14px;color:var(--muted);font-family:"Poppins",sans-serif;margin-left:6px}
+.media .bd{padding:0 22px 20px;color:var(--muted);font-size:16px}
+.media .bd p{margin:0 0 8px}
+.vid{position:relative;background:#000}
+.vid.tall{aspect-ratio:9/16;max-height:72svh;margin:0 auto}
+.vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vlink{display:block;padding:12px 22px;font-family:"Inter",sans-serif;font-size:12px;letter-spacing:.08em;color:var(--muted);text-decoration:none;border-top:1px solid var(--line)}
+.vlink:hover{color:var(--accent)}
+
+/* audio player */
+.player{display:flex;align-items:center;gap:16px;padding:6px 22px 24px}
+.play{flex:none;width:68px;height:68px;border-radius:50%;border:0;background:var(--accent);color:var(--bg);display:grid;place-items:center;cursor:pointer;transition:transform .15s}
+.play:active{transform:scale(.95)}
+.play svg{width:24px;height:24px}
+.track{flex:1;min-width:0}
+.rail{position:relative;height:28px;cursor:pointer;touch-action:none}
+.rail::before{content:"";position:absolute;left:0;right:0;top:13px;height:2px;background:var(--line)}
+.fill{position:absolute;left:0;top:13px;height:2px;background:var(--accent);width:0}
+.knob{position:absolute;top:8px;width:12px;height:12px;border-radius:50%;background:var(--accent);left:0;margin-left:-6px}
+.times{display:flex;justify-content:space-between;font-family:"Inter",sans-serif;font-size:12px;color:var(--muted)}
+
+/* role picker */
+.roles{margin:34px 0 8px;padding:22px;border-radius:22px;background:var(--teal)}
+.roles .q{font-family:"Jost",sans-serif;font-size:21px;margin-bottom:14px;color:var(--ink)}
+.seg{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;background:rgba(0,0,0,.25);padding:5px;border-radius:99px}
+.seg button{border:0;background:transparent;color:var(--ink);font-family:"Inter",sans-serif;font-size:13px;letter-spacing:.04em;padding:11px 6px;border-radius:99px;cursor:pointer;transition:all .2s}
+.seg button.on{background:var(--ink);color:var(--bg)}
+.roles .hint{margin-top:12px;font-size:14px;color:rgba(241,236,226,.7)}
+[data-role]{transition:opacity .3s}
+body.r-give [data-role="receive"], body.r-receive [data-role="give"]{display:none}
+.rolecard{margin:24px 0;padding:24px 22px;border-radius:20px;border:1px solid var(--line);background:var(--bg2)}
+.rolecard .tag{display:inline-block;font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--bg);background:var(--accent);padding:5px 11px;border-radius:99px;margin-bottom:12px}
+.rolecard h3{margin-top:0}
+
+/* script accordion */
+details{border:1px solid var(--line);border-radius:20px;margin:30px 0;background:var(--bg2);overflow:hidden}
+summary{list-style:none;cursor:pointer;padding:20px 22px;display:flex;justify-content:space-between;align-items:center;gap:12px;font-family:"Jost",sans-serif;font-size:19px}
+summary::-webkit-details-marker{display:none}
+summary .pl{flex:none;width:30px;height:30px;border-radius:50%;border:1px solid var(--accent);color:var(--accent);display:grid;place-items:center;font-size:18px;transition:transform .25s}
+details[open] summary .pl{transform:rotate(45deg)}
+summary small{display:block;font-family:"Poppins",sans-serif;font-size:14px;color:var(--muted);margin-top:2px}
+.dbody{padding:0 22px 22px}
+.dbody h4{font-family:"Inter",sans-serif;font-weight:500;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:24px 0 10px}
+
+/* silence block */
+.silence{margin:56px -24px 0;padding:72px 28px;background:var(--teal);text-align:left}
+.silence .kicker{color:var(--accent)}
+.silence h2{margin-bottom:22px}
+.silence .no{list-style:none;margin:24px 0}
+.silence .no li{font-family:"Jost",sans-serif;font-size:21px;padding:10px 0;border-bottom:1px solid rgba(241,236,226,.15);color:rgba(241,236,226,.55);text-decoration:line-through;text-decoration-color:var(--accent);text-decoration-thickness:1px}
+.silence .last{font-family:"Jost",sans-serif;font-size:24px;line-height:1.35;margin-top:30px}
+
+/* faq */
+.faq details{margin:12px 0}
+.faq summary{font-size:18px}
+.faq .dbody p{color:var(--ink)}
+
+.end{padding:96px 0 40px}
+.endcard{margin-top:34px;padding:36px 26px;border-radius:24px;border:1px solid var(--accent);background:linear-gradient(160deg,var(--bg2),var(--bg))}
+.endcard .big{margin:0 0 6px}
+footer{text-align:center;padding:60px 24px 70px;font-family:"Jost",sans-serif;font-size:12px;letter-spacing:.42em;text-transform:uppercase;color:var(--muted)}
+
+@media (min-width:720px){
+  .photo{margin:56px 0;border-radius:24px;overflow:hidden}
+  .silence{margin:64px 0 0;border-radius:28px;padding:72px 48px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* offers */
+.more{margin-top:56px;padding-top:8px}
+.offer{display:grid;grid-template-columns:96px 1fr;gap:16px;align-items:center;text-decoration:none;color:var(--ink);padding:14px;margin:12px 0;border:1px solid var(--line);border-radius:20px;background:var(--bg2);transition:border-color .2s,transform .2s}
+.offer:hover{border-color:var(--accent);transform:translateY(-2px)}
+.offer img{width:96px;height:120px;object-fit:cover;border-radius:12px}
+.offer b{display:block;font-family:"Jost",sans-serif;font-weight:500;font-size:19px;line-height:1.25;margin-bottom:6px}
+.offer span{display:block;font-size:14px;line-height:1.5;color:var(--muted)}
+.offer em{display:inline-block;margin-top:10px;font-style:normal;font-family:"Jost",sans-serif;font-size:16px;color:var(--bg);background:var(--accent);padding:7px 14px;border-radius:99px}
+
+/* page-specific */
+.cover .ph img{object-position:50% 50%}
+.terr{display:grid;gap:10px;margin:26px 0 10px}
+.terr button{all:unset;cursor:pointer;display:block;padding:20px 22px;border-radius:18px;border:1px solid var(--line);background:var(--bg2);transition:all .2s}
+.terr button b{display:block;font-family:"Jost",sans-serif;font-weight:500;font-size:21px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.terr button span{display:block;margin-top:4px;color:var(--ink)}
+.terr button .more2{display:none;margin-top:14px;padding-top:14px;border-top:1px solid var(--line);color:rgba(241,236,226,.85);font-size:15px}
+.terr button .more2 p{margin:0 0 6px}
+.terr button.on{background:var(--teal);border-color:var(--teal)}
+.terr button.on .more2{display:block}
+.terr button small{float:right;font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.14em;color:var(--muted);margin-top:6px}
+.tap{font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.loop{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px;margin:36px 0;padding:26px 18px;border-radius:22px;background:var(--teal);font-family:"Jost",sans-serif;font-size:19px;text-align:center}
+.loop span{white-space:nowrap}.loop .ar{color:var(--accent)}
+.trio{display:grid;gap:8px;margin:18px 0 24px}
+.trio div{padding:14px 18px;border-radius:14px;background:var(--bg2);border:1px solid var(--line)}
+.trio b{font-family:"Jost",sans-serif;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-right:8px}
+.rules{list-style:none;margin:18px 0}
+.rules li{padding:10px 0 10px 24px;position:relative}
+.rules li::before{content:"✕";position:absolute;left:0;top:10px;color:var(--accent);font-size:13px}
+.cta{display:block;text-decoration:none;text-align:center;margin:34px 0 14px;padding:22px 20px;border-radius:99px;background:var(--accent);color:var(--bg);font-family:"Jost",sans-serif;font-weight:500;font-size:19px;letter-spacing:.04em;box-shadow:0 10px 40px rgba(221,201,142,.18)}
+.cta small{display:block;font-family:"Inter",sans-serif;font-weight:400;font-size:11px;letter-spacing:.16em;text-transform:uppercase;opacity:.7;margin-top:4px}
+</style>
+</head>
+<body>
+
+<div class="bar" id="bar">
+  <div class="prog" id="prog"></div>
+  <nav class="chips" id="chips">
+    <a href="#what">What this is</a>
+    <a href="#territories">The territories</a>
+    <a href="#app">Your prompts</a>
+    <a href="#before">Before you use these</a>
+    <a href="#how">How to run it</a>
+    <a href="#lose">If you lose it</a>
+  </nav>
+</div>
+
+<header class="cover">
+  <div class="brand">Feel Fully You</div>
+  <div class="ph"><img src="media/cover.jpg" alt="Juliette's hands holding one card above a fan of Communication and Intimacy cards"></div>
+  <div class="in">
+    <h1>Trust &amp; Repair</h1>
+    <p class="line">Fifty prompts for when the conversation is about <em>something that happened between you.</em></p>
+    <div class="meta"><span>50 prompts</span><span>5 territories</span><span>In the app</span></div>
+    <div class="scroll">Scroll to begin ↓</div>
+  </div>
+</header>
+
+<main>
+
+<section id="what">
+  <div class="kicker">01</div>
+  <h2>What this is</h2>
+  <p class="lead">You already have the structure.</p>
+  <div class="loop"><span>One prompt.</span><span class="ar">·</span><span>Fifteen minutes.</span><span class="ar">·</span><span>The three answers.</span><span class="ar">·</span><span>Thank You. Swap.</span></div>
+  <p>Trust &amp; Repair gives you fifty prompts for the conversations that need a more careful place to land.</p>
+  <ul class="dots">
+    <li>A hurt that hasn't quite gone away.</li>
+    <li>Something that happened between you that still gets brought into other conversations.</li>
+    <li>Distance neither of you quite knows how to talk about.</li>
+    <li>Something one of you is carrying that the other hasn't fully understood.</li>
+    <li>Or a place where you know you want to come back towards each other, but don't know where to begin.</li>
+  </ul>
+  <p>The structure doesn't change.</p>
+  <p class="big">What changes is <em>what you're bringing into it.</em></p>
+  <p>These prompts aren't there to make you agree about what happened.</p>
+  <p>They're not there to decide who was right.</p>
+  <p>And they're not there to force a resolution in fifteen minutes.</p>
+  <p class="lead">They're there to give you one place to start.</p>
+  <p>One prompt. One clear communication at a time.</p>
+</section>
+
+<section id="territories">
+  <div class="kicker">02</div>
+  <h2>The five territories</h2>
+  <p>The fifty prompts sit across five territories. Ten prompts in each.</p>
+  <p>They aren't stages, and you don't need to work through them in order.</p>
+  <p>Choose the territory that feels closest to what is happening between you, or let the app draw for you.</p>
+  <div class="tap">Tap each one</div>
+  <div class="terr" id="terr">
+    <button><small>10</small><b>Out there</b><span>The pressure coming in from outside the two of you.</span>
+      <div class="more2"><p>Money. Work. Family. Responsibilities. The people you're both carrying.</p><p>Everything that arrives in the relationship from somewhere else.</p></div></button>
+    <button><small>10</small><b>What I'm carrying</b><span>The things one of you has been holding that the other may not fully know or understand.</span>
+      <div class="more2"><p>What hasn't been said.</p><p>What has felt difficult to put down.</p><p>What you've been carrying on your own.</p></div></button>
+    <button><small>10</small><b>The drift</b><span>The distance that can grow without one big event causing it.</span>
+      <div class="more2"><p>Not necessarily a row. Not necessarily something either of you chose.</p><p>Just the slow ways two people can find themselves further apart than they realised.</p></div></button>
+    <button><small>10</small><b>The body's record</b><span>What still shows up in your experience of each other, even when you thought you'd moved on.</span>
+      <div class="more2"><p>The places you tense. Pull away. Brace. Go quiet.</p><p>Or notice that something between you doesn't feel quite finished.</p><p>Not to diagnose what it means. To give you somewhere to begin talking about what you're actually noticing now.</p></div></button>
+    <button><small>10</small><b>Coming back</b><span>What reconnecting might look like from here.</span>
+      <div class="more2"><p>What you need. What you're willing to offer. What you want to rebuild.</p><p>What would help the two of you begin moving towards each other again.</p></div></button>
+  </div>
+  <p style="margin-top:22px">Ten prompts in each territory. Fifty altogether.</p>
+  <p>They shuffle, so you can draw rather than work through them one by one.</p>
+  <p class="big">When you already know where the conversation needs to begin, <em>choose the territory.</em></p>
+</section>
+
+<figure class="photo">
+  <img src="media/app.jpg" alt="A hand holding a phone open on the Communication and Intimacy Cards app" loading="lazy">
+</figure>
+
+<section id="app" style="padding-top:40px">
+  <div class="kicker">03</div>
+  <h2>Your fifty prompts are in the app</h2>
+  <p>Your fifty Trust &amp; Repair prompts live in the app, alongside your fifteen-minute timer.</p>
+  <a class="cta" href="https://feelfullyyou.com/gift/trust-repair">Open Trust &amp; Repair<small>Tap once and it's yours on this phone</small></a>
+  <p class="quiet" style="text-align:center;font-size:15px">Tap the link once and it's yours on that phone. Add it to your home screen and you can come straight back whenever you want to use it.</p>
+  <p>Choose the territory you want to explore, or let the app draw a prompt for you.</p>
+  <p class="big">One prompt. Fifteen minutes. <em>That's all you need.</em></p>
+</section>
+
+<section id="before">
+  <div class="kicker">04</div>
+  <h2>Before you use these</h2>
+  <p class="lead">These prompts can ask more of both of you than the ones you've already practised with.</p>
+  <p>So choose your moment.</p>
+  <ul class="rules">
+    <li>Don't start one when you're already in the middle of the row.</li>
+    <li>Don't use a card to prove a point, get an admission or make your partner understand your side.</li>
+  </ul>
+  <p>Come to it when you're both willing to give the structure fifteen minutes. A morning. An afternoon. A weekend.</p>
+  <p>It may well not be at the end of a long day when one or both of you are already exhausted.</p>
+  <p class="big">Then: one prompt. One sitting. <em>Then stop.</em></p>
+  <p>When something important opens, the instinct can be to keep going.</p>
+  <div class="thoughts">
+    <p>Now we're finally talking about it.</p>
+    <p>Let's finish this.</p>
+    <p>There's one more thing I need you to understand.</p>
+  </div>
+  <p class="lead">You don't have to.</p>
+  <p>When the timer goes, finish the communication you're in and reach Thank You. Then stop.</p>
+  <p>Fifteen minutes does not have to resolve the whole thing. Something can remain unfinished. You can come back another day.</p>
+  <div class="endcard" style="margin-top:28px">
+    <p class="big" style="margin:0">The purpose of the container is to give the conversation edges, <em>not to push everything through them at once.</em></p>
+  </div>
+</section>
+
+<section id="how">
+  <div class="kicker">05</div>
+  <h2>How to run it</h2>
+  <p>You already know the structure.</p>
+  <ol class="steps">
+    <li><span class="n">1</span><div><b>Choose the 15-minute timer in the app</b></div></li>
+    <li><span class="n">2</span><div><b>Choose your territory and draw one prompt</b></div></li>
+    <li><span class="n">3</span><div><b>One of you asks it</b><p>The other takes a breath, lets it land, and gives one clear communication.</p></div></li>
+    <li><span class="n">4</span><div><b>The listener responds with one of the three answers</b></div></li>
+  </ol>
+  <div class="trio">
+    <div><b>Thank you</b>I have understood.</div>
+    <div><b>Clarify that</b>Help me understand.</div>
+    <div><b>Summarise that</b>Give me the bottom line.</div>
+  </div>
+  <p>When you reach Thank You, swap. Same prompt. Other person.</p>
+  <p>Keep going back and forth with the same prompt until the timer goes.</p>
+  <ul class="rules">
+    <li>Don't ride on each other's communication.</li>
+    <li>Don't answer what they just said when your turn comes.</li>
+    <li>Don't use your turn to correct their version of what happened.</li>
+  </ul>
+  <p class="lead">Take the prompt fresh and give your own communication.</p>
+  <p>No fixing. No defending. No interrupting. No debating.</p>
+  <p class="big">Understanding is the aim. <em>Agreement isn't required.</em></p>
+  <p>And with these prompts, you may hear something you don't agree with at all.</p>
+  <p>You don't have to agree in order to understand what the other person is communicating.</p>
+  <p>When the timer goes, finish the communication you're in, reach Thank You, and stop.</p>
+  <p>You don't have to resolve it today.</p>
+</section>
+
+<section id="lose">
+  <div class="kicker">06</div>
+  <h2>If you lose the structure</h2>
+  <p>These prompts can bring you closer to things that still have some charge.</p>
+  <p class="lead">If you lose the structure, come back to the structure.</p>
+  <div class="faq">
+    <details>
+      <summary><span>One of you starts defending, explaining or debating.</span><span class="pl">+</span></summary>
+      <div class="dbody"><p>Pause. Don't get into another conversation about who just broke the rules. Simply say:</p><p>"We've left the three answers. Let's come back."</p><p>Then return to the prompt.</p></div>
+    </details>
+    <details>
+      <summary><span>One of you gets emotional.</span><span class="pl">+</span></summary>
+      <div class="dbody"><p>Take a moment. Tears don't automatically mean you need to stop. They don't mean you have to keep going either.</p><p>The person speaking gets to decide whether they want to continue, pause or stop.</p><p>You don't need to immediately comfort, reassure or make the feeling go away.</p><p>But equally, the structure never overrides someone's wish to stop.</p></div>
+    </details>
+    <details>
+      <summary><span>It turns into a row.</span><span class="pl">+</span></summary>
+      <div class="dbody"><p>Stop the timer. Don't try to finish the fifteen minutes just because you started them.</p><p>Leave the prompt there. Come back another day.</p><p>You might choose a different territory next time, or come back to the same one when you're both ready.</p></div>
+    </details>
+    <details>
+      <summary><span>Something opens that feels bigger than fifteen minutes.</span><span class="pl">+</span></summary>
+      <div class="dbody"><p>Stop cleanly.</p><p>You do not have to finish the conversation today. You do not have to get to the bottom of it.</p><p>You do not have to use this practice for something that needs more support than the two of you can give it in that moment.</p></div>
+    </details>
+  </div>
+  <div class="endcard">
+    <p class="big" style="margin:0 0 10px">This is a communication practice. <em>It isn't therapy.</em></p>
+    <p class="quiet" style="margin:0">Knowing when you've reached the edge of what this container can hold matters more than pushing past it.</p>
+  </div>
+
+  <div class="more"><div class="kicker">Keep going</div><a class="offer" href="https://buy.stripe.com/4gMbJ0gWD1yEbhX32B0co29"><img src="media/up-31dc.jpg" alt="" loading="lazy"><div class="ot"><b>31 Days Closer</b><span>One prompt a day, for thirty one days. Fifteen minutes each.</span><em>£17 →</em></div></a><a class="offer" href="https://feelfullyyou.com/31-touch-points"><img src="media/up-31tp.jpg" alt="" loading="lazy"><div class="ot"><b>31 Touch Points</b><span>31 days back to each other, through touch, fun and play. One small practice a day, in the app.</span><em>£27 →</em></div></a></div>
+</section>
+
+</main>
+
+<footer>Feel Fully You</footer>
+<script>
+(function(){[].forEach.call(document.querySelectorAll('#terr button'),function(b){b.addEventListener('click',function(){b.classList.toggle('on')})})})();
+</script>
+<style>
+/* app-style screens */
+body.app .bar{transform:none}
+body.app.on-cover .bar{transform:translateY(-100%)}
+.screen{display:none;padding-bottom:110px}
+.screen.cur{display:block;animation:scr .35s ease}
+@keyframes scr{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+body.app main{padding-top:58px}
+body.app main > section:first-child,body.app .screen > section:first-child{padding-top:48px}
+.cover.screen{padding-bottom:0}
+.begin{display:inline-flex;align-items:center;gap:10px;margin-top:30px;border:0;border-radius:99px;background:var(--accent);color:var(--bg);font-family:"Jost",sans-serif;font-weight:500;font-size:18px;padding:16px 30px;cursor:pointer}
+body.app .cover .scroll{display:none}
+.nav{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(26,24,20,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line);display:none}
+body.app:not(.on-cover) .nav{display:block}
+.nav .in{max-width:640px;margin:0 auto;display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:center}
+.nav button{border:0;cursor:pointer;border-radius:99px;font-family:"Inter",sans-serif;font-size:14px;padding:15px 18px}
+.nav .bk{background:transparent;color:var(--muted);border:1px solid var(--line);width:52px;padding:15px 0;font-size:18px;line-height:1}
+.nav .nx{background:var(--accent);color:var(--bg);font-family:"Jost",sans-serif;font-weight:500;font-size:16px;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav .nx small{font-family:"Inter",sans-serif;font-weight:400;font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.65;margin-right:8px}
+.stepof{display:block;text-align:center;font-family:"Inter",sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+</style>
+<nav class="nav" id="appnav"><span class="stepof" id="stepof"></span><div class="in"><button class="bk" id="bk" aria-label="Back">←</button><button class="nx" id="nx"></button></div></nav>
+<script>
+(function(){
+  var main=document.querySelector('main'),cover=document.querySelector('header.cover');
+  var chips=[].slice.call(document.querySelectorAll('#chips a'));
+  var prog=document.getElementById('prog');
+  // group main's children into screens: a section with an id starts a screen; figures join the NEXT screen; id-less sections join the previous one
+  var kids=[].slice.call(main.children),screens=[],pending=[];
+  kids.forEach(function(el){
+    if(el.tagName==='SECTION'&&el.id){var s=document.createElement('div');s.className='screen';s.dataset.id=el.id;screens.push(s);pending.forEach(function(p){s.appendChild(p)});pending=[];s.appendChild(el)}
+    else if(el.tagName==='FIGURE'){pending.push(el)}
+    else if(screens.length){screens[screens.length-1].appendChild(el)}
+    else pending.push(el);
+  });
+  screens.forEach(function(s){main.appendChild(s)});
+  pending.forEach(function(p){screens[screens.length-1].appendChild(p)});
+  cover.classList.add('screen');
+  var all=[cover].concat(screens);
+  var names=screens.map(function(s){var c=chips.filter(function(a){return a.getAttribute('href')==='#'+s.dataset.id})[0];return c?c.textContent.trim():s.dataset.id});
+  // cover button
+  var b=document.createElement('button');b.className='begin';b.textContent='Begin →';cover.querySelector('.in').appendChild(b);
+  b.onclick=function(){go(1)};
+  document.body.classList.add('app');
+  var cur=0,key='ffy-step-'+location.pathname;
+  function stopMedia(){[].forEach.call(document.querySelectorAll('audio'),function(a){a.pause()})}
+  function go(i,noScroll){
+    i=Math.max(0,Math.min(all.length-1,i));
+    if(i!==cur)stopMedia();
+    all.forEach(function(s,k){s.classList.toggle('cur',k===i)});
+    cur=i;document.body.classList.toggle('on-cover',i===0);
+    chips.forEach(function(a,k){a.classList.toggle('cur',k===i-1)});
+    if(i>0){var c=chips[i-1];if(c)c.parentNode.scrollTo({left:c.offsetLeft-16,behavior:'smooth'})}
+    prog.style.width=(i/(all.length-1)*100)+'%';
+    document.getElementById('stepof').textContent=i>0?(i+' of '+screens.length):'';
+    var nx=document.getElementById('nx');
+    if(i<all.length-1){nx.innerHTML='<small>Next</small>'+names[i]+' →'}else{nx.innerHTML='Back to the start'}
+    // lazy iframes inside newly shown screen
+    [].forEach.call(all[i].querySelectorAll('iframe[data-src]'),function(f){if(!f.src&&!f.closest('[hidden]'))f.src=f.dataset.src});
+    if(!noScroll)window.scrollTo({top:0,behavior:'instant'});
+    try{localStorage.setItem(key,i)}catch(e){}
+    if(history.replaceState)history.replaceState(null,'',i>0?'#go-'+screens[i-1].dataset.id:location.pathname+location.search);
+  }
+  document.getElementById('nx').onclick=function(){go(cur<all.length-1?cur+1:0)};
+  document.getElementById('bk').onclick=function(){go(cur-1)};
+  chips.forEach(function(a,k){a.addEventListener('click',function(e){e.preventDefault();go(k+1)})});
+  // in-page links to a section (e.g. #after) switch screens
+  window.addEventListener('hashchange',function(){var id=location.hash.slice(1).replace(/^go-/,'');screens.forEach(function(s,k){if(s.dataset.id===id)go(k+1)})});
+  var start=0,h=location.hash.slice(1).replace(/^go-/,'');
+  if(h){screens.forEach(function(s,k){if(s.dataset.id===h)start=k+1})}
+  else{try{var v=+localStorage.getItem(key);if(v>0&&v<all.length)start=v}catch(e){}}
+  if('scrollRestoration' in history)history.scrollRestoration='manual';
+  go(start);
+  window.addEventListener('load',function(){setTimeout(function(){window.scrollTo({top:0,behavior:'instant'})},0)});
+  // progress bar is now the step bar, not scroll
+  window.addEventListener('scroll',function(){},{passive:true});
+})();
+</script>
+
+</body>
+</html>
