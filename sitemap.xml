@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://feelfullyyou.com/10-touch-rituals</loc>
-    <lastmod>2026-07-07</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://feelfullyyou.com/31-touch-points</loc>
     <lastmod>2026-07-07</lastmod>
     <priority>0.5</priority>
@@ -19,11 +14,6 @@
     <loc>https://feelfullyyou.com/about</loc>
     <lastmod>2026-07-07</lastmod>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://feelfullyyou.com/be-touched-masterclass</loc>
-    <lastmod>2026-07-07</lastmod>
-    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://feelfullyyou.com/between-touches</loc>
@@ -50,11 +40,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://feelfullyyou.com/confidence</loc>
-    <lastmod>2026-07-07</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://feelfullyyou.com/connect-with-essence</loc>
     <lastmod>2026-07-07</lastmod>
     <priority>0.5</priority>
@@ -66,21 +51,6 @@
   </url>
   <url>
     <loc>https://feelfullyyou.com/couples-intensive</loc>
-    <lastmod>2026-07-07</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://feelfullyyou.com/for-both</loc>
-    <lastmod>2026-07-07</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://feelfullyyou.com/for-her</loc>
-    <lastmod>2026-07-07</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://feelfullyyou.com/for-him</loc>
     <lastmod>2026-07-07</lastmod>
     <priority>0.8</priority>
   </url>
@@ -120,14 +90,24 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://feelfullyyou.com/mens-six-week-intensive</loc>
-    <lastmod>2026-07-07</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://feelfullyyou.com/one-touch</loc>
     <lastmod>2026-07-07</lastmod>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://feelfullyyou.com/31-days-closer</loc>
+    <lastmod>2026-10-26</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://feelfullyyou.com/the-touch-reboot</loc>
+    <lastmod>2026-10-26</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://feelfullyyou.com/the-3-month-intensive</loc>
+    <lastmod>2026-10-26</lastmod>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://feelfullyyou.com/pattern-session</loc>
@@ -175,11 +155,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://feelfullyyou.com/the-touch-reset</loc>
-    <lastmod>2026-07-07</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://feelfullyyou.com/the-scrumptious-and-pleasure-candles</loc>
     <lastmod>2026-07-07</lastmod>
     <priority>0.5</priority>
@@ -200,27 +175,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://feelfullyyou.com/touch-point-live</loc>
-    <lastmod>2026-07-07</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://feelfullyyou.com/touch-point</loc>
-    <lastmod>2026-07-07</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://feelfullyyou.com/when-she-goes-quiet</loc>
     <lastmod>2026-07-07</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://feelfullyyou.com/womens-intensive</loc>
-    <lastmod>2026-07-07</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://feelfullyyou.com/womens-six-week-intensive</loc>
     <lastmod>2026-07-07</lastmod>
     <priority>0.5</priority>
   </url>
@@ -232,12 +192,6 @@
   <url>
     <loc>https://feelfullyyou.com/work-with-me</loc>
     <lastmod>2026-07-07</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url><loc>https://feelfullyyou.com/privacy</loc></url>
-  <url>
-    <loc>https://feelfullyyou.com/essays/</loc>
-    <lastmod>2026-07-18</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -438,11 +392,6 @@
   <url>
     <loc>https://feelfullyyou.com/questions/every-conversation-ends-in-silence</loc>
     <lastmod>2026-07-07</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://feelfullyyou.com/podcast/</loc>
-    <lastmod>2026-07-18</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -1582,116 +1531,6 @@
   </url>
   <url>
     <loc>https://feelfullyyou.com/touch</loc>
-    <lastmod>2026-08-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://feelfullyyou.com/why-we-stop-touching</loc>
-    <lastmod>2026-08-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://feelfullyyou.com/touch-languages/emotional</loc>
-    <lastmod>2026-08-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://feelfullyyou.com/touch-languages/energetic</loc>
-    <lastmod>2026-08-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://feelfullyyou.com/touch-languages/erotic</loc>
-    <lastmod>2026-08-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://feelfullyyou.com/touch-languages/physical</loc>
-    <lastmod>2026-08-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://feelfullyyou.com/touch-languages/spiritual</loc>
-    <lastmod>2026-08-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://feelfullyyou.com/touch-states</loc>
-    <lastmod>2026-08-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://feelfullyyou.com/pleasure-and-taboos</loc>
-    <lastmod>2026-08-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://feelfullyyou.com/body-shame-self-love</loc>
-    <lastmod>2026-08-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://feelfullyyou.com/authenticity-thriving</loc>
-    <lastmod>2026-08-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://feelfullyyou.com/power-of-presence</loc>
-    <lastmod>2026-08-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://feelfullyyou.com/feel-it-with-someone-else</loc>
-    <lastmod>2026-08-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://feelfullyyou.com/the-moment-my-body-knew</loc>
-    <lastmod>2026-08-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://feelfullyyou.com/you-booked-the-date-night</loc>
-    <lastmod>2026-08-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://feelfullyyou.com/grief-and-love</loc>
-    <lastmod>2026-08-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://feelfullyyou.com/slow-living-presence</loc>
-    <lastmod>2026-08-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://feelfullyyou.com/embodying-peace</loc>
-    <lastmod>2026-08-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://feelfullyyou.com/scrumptious-communication</loc>
-    <lastmod>2026-08-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://feelfullyyou.com/intimacy-into-pleasure</loc>
-    <lastmod>2026-08-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://feelfullyyou.com/why-he-pulls-away</loc>
-    <lastmod>2026-08-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://feelfullyyou.com/scrumptious-experiences</loc>
-    <lastmod>2026-08-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://feelfullyyou.com/embarking-scrumptious-life</loc>
     <lastmod>2026-08-08</lastmod>
     <priority>0.8</priority>
   </url>
