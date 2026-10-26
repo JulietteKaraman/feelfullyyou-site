@@ -504,6 +504,17 @@ gtag('config', 'G-SY8NKELMNZ');
 .tp-price{font-family:var(--display);font-weight:800;font-size:3.4rem;line-height:1;color:var(--ink)}
 .tp-small{font-size:.92rem!important;color:var(--brown)!important}
 .tp-visual{position:relative;min-height:520px}
+.tp-reels{max-width:760px;margin:10px auto 0;padding:0 20px;text-align:center}
+.tp-reels .kick{margin-bottom:14px}
+.tp-reels-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.tp-reel{position:relative;display:block;border:0;padding:0;background:none;cursor:pointer;border-radius:6px;overflow:hidden;box-shadow:0 14px 34px rgba(0,0,0,.16)}
+.tp-reel img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 30%}
+.tp-reel .pl{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:58px;height:58px;border-radius:50%;background:rgba(13,53,53,.85);color:#fefcfa;font-size:22px;display:flex;align-items:center;justify-content:center}
+.tp-reel .cap{position:absolute;left:0;right:0;bottom:0;padding:10px 12px;background:linear-gradient(transparent,rgba(7,7,7,.7));color:#fefcfa;font:600 14px/1.2 Inter,sans-serif;text-align:left}
+.tp-lb{position:fixed;inset:0;background:rgba(7,7,7,.88);display:none;align-items:center;justify-content:center;z-index:9999;padding:16px}
+.tp-lb.on{display:flex}.tp-lb video{max-height:88vh;max-width:100%;border-radius:6px}
+.tp-lb button{position:absolute;top:14px;right:18px;background:none;border:0;color:#fefcfa;font-size:34px;cursor:pointer}
+
 .tp-video{display:block;height:560px;aspect-ratio:9/16;width:auto;max-width:100%;object-fit:cover;margin-left:auto;margin-right:8%;border-radius:4px;box-shadow:0 20px 50px rgba(0,0,0,.18);background:#0D3535}
 .tp-vwrap{position:relative;width:max-content;max-width:100%;margin-left:auto;margin-right:8%}
 .tp-vwrap .tp-video{margin:0}
@@ -649,10 +660,28 @@ gtag('config', 'G-SY8NKELMNZ');
 
 <main class="ix">
 
+<!-- THE TWO REELS PEOPLE COMMENT TOUCH ON -->
+<section class="tp-reels">
+  <p class="kick">You've probably seen us</p>
+  <div class="tp-reels-row">
+    <button type="button" class="tp-reel" data-src="media/tp-you-may.mp4" aria-label="Play: You may"><img src="media/tp-you-may-still.jpg" alt="Juliette laughing while Alex kisses her cheek" loading="lazy"><span class="pl">&#9654;</span><span class="cap">You may</span></button>
+    <button type="button" class="tp-reel" data-src="media/tp-one-touch-point.mp4" aria-label="Play: One touch point"><img src="media/tp-one-touch-point-still.jpg" alt="Alex holding Juliette from behind on the terrace" loading="lazy"><span class="pl">&#9654;</span><span class="cap">One touch point</span></button>
+  </div>
+</section>
+<div class="tp-lb" id="tplb"><button type="button" aria-label="Close">&times;</button><video id="tplbv" controls playsinline></video></div>
+<script>
+(function(){var lb=document.getElementById('tplb'),v=document.getElementById('tplbv'),hv=document.getElementById('tpv');
+document.querySelectorAll('.tp-reel').forEach(function(b){b.addEventListener('click',function(){if(hv)hv.pause();v.src=b.getAttribute('data-src');v.muted=false;lb.classList.add('on');v.play();});});
+function close(){v.pause();v.removeAttribute('src');v.load();lb.classList.remove('on');}
+lb.querySelector('button').addEventListener('click',close);lb.addEventListener('click',function(e){if(e.target===lb)close();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});})();
+</script>
+
+
 <div class="tp-stats">
   <div><b>31</b><span>Days</span></div>
-  <div><b>18</b><span>Practices in my voice</span></div>
-  <div><b>14</b><span>Built-in timers</span></div>
+  <div><b>20</b><span>Days in my voice</span></div>
+  <div><b>12</b><span>Built-in timers</span></div>
   <div><b>3</b><span>Minutes to start</span></div>
 </div>
 
