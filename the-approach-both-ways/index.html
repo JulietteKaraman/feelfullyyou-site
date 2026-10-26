@@ -271,6 +271,7 @@ footer{text-align:center;padding:60px 24px 70px;font-family:"Jost",sans-serif;fo
 .whisper{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}
 .whisper span{padding:9px 16px;border-radius:99px;border:1px solid var(--line);font-family:"Jost",sans-serif;font-size:17px;color:var(--accent)}
 .photo.peek img{max-height:60svh}
+.vnote.speaking{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
 </style>
 </head>
 <body>
@@ -302,6 +303,7 @@ footer{text-align:center;padding:60px 24px 70px;font-family:"Jost",sans-serif;fo
 <main>
 
 <section id="why">
+  <div class="media vnote" id="vn-A1" data-welcome><div class="hd"><div class="lab">Start here</div><div class="tt">A minute from me</div></div><div class="player" data-src="media/voice/A1.m4a" data-dur="0:52"></div></div>
   <div class="kicker">01</div>
   <h2>Why the second half exists</h2>
   <p>In When She Stops Reaching, you spent five minutes finding out where she wanted you to stop.</p>
@@ -464,7 +466,9 @@ footer{text-align:center;padding:60px 24px 70px;font-family:"Jost",sans-serif;fo
   </div>
   <p>If they say Clarify That or Summarise That, answer them. They respond again. When you hear Thank You, swap. Every single time. Same prompt, fresh in the other direction.</p>
 
-  <div class="dyad" data-cat="Insights" data-prompt="Tell me a win, insight or learning you've had." data-back1="The Approach Ritual" data-back2="Both ways · Land it" data-min="15"></div>
+  <div class="media vnote" id="vn-dyad"><div class="hd"><div class="lab">Listen first</div><div class="tt">I'll explain the Dyad</div></div><div class="player" data-src="media/voice/welcome.m4a" data-dur="1:10"></div></div>
+  <div class="dyad" data-after="#vn-A2" data-cat="Insights" data-prompt="Tell me a win, insight or learning you've had." data-back1="The Approach Ritual" data-back2="Both ways · Land it" data-min="15"></div>
+  <div class="media vnote" id="vn-A2"><div class="hd"><div class="lab">When the timer ends</div><div class="tt">A last word from me</div></div><div class="bd"><p>Keep your phone where you can hear it. My voice starts on its own after the bell.</p></div><div class="player" data-src="media/voice/A2.m4a" data-dur="1:10"></div></div>
 
   <ul class="rules">
     <li>Don't answer what they just said.</li>
@@ -589,12 +593,16 @@ footer{text-align:center;padding:60px 24px 70px;font-family:"Jost",sans-serif;fo
   /* Juliette's voice, same clips and rules as the cards app: start on the turn, Thank you the first time, Clarify and Summarise every time, the bell at the end */
   var VO=null;
   function voice(f){try{document.querySelectorAll('audio').forEach(function(a){a.pause()});if(VO)VO.pause();VO=new Audio('media/voice/'+f);VO.play().catch(function(){})}catch(e){}}
+  function afterEl(el){var d=el.closest&&el.closest('.dyad');var s=el.dataset.after||(d&&d.dataset.after);return s?document.querySelector(s+' audio'):null}
+  function prime(el){var A=afterEl(el);if(!A||A._p)return;A._p=1;try{A.muted=true;var p=A.play();if(p&&p.then){p.then(function(){A.pause();A.currentTime=0;A.muted=false}).catch(function(){A.muted=false})}else{A.pause();A.muted=false}}catch(e){A.muted=false}}
+  function afterVoice(el,bell){var A=afterEl(el);if(!A)return;var done=false;function go2(){if(done)return;done=true;[].forEach.call(document.querySelectorAll('audio'),function(o){if(o!==A)o.pause()});if(typeof VO!=='undefined'&&VO&&VO!==A)VO.pause();try{A.currentTime=0}catch(e){}A.muted=false;var p=A.play();if(p&&p.catch)p.catch(function(){});var box=A.closest('.vnote');if(box){box.classList.add('speaking');box.scrollIntoView({behavior:'smooth',block:'center'})}}
+    if(bell&&typeof VO!=='undefined'&&VO){setTimeout(function(){if(VO&&!VO.paused&&!VO.ended){VO.addEventListener('ended',go2);setTimeout(go2,21000)}else go2()},900)}else setTimeout(go2,2600)}
   function makeTimer(el,min,onDone){
     el.innerHTML='<div><div class="lbl">Timer</div><div class="t">'+fmt(min*60)+'</div></div><div class="btns"><button class="go">Start</button><button class="rs">Reset</button></div>';
     var left=min*60,end=0,iv=null,t=el.querySelector('.t'),go=el.querySelector('.go'),rs=el.querySelector('.rs');
-    function tick(){left=(end-Date.now())/1000;if(left<=0){left=0;stop();el.classList.add('done');go.textContent='Done';if(onDone)onDone();else chime()}t.textContent=fmt(left)}
+    function tick(){left=(end-Date.now())/1000;if(left<=0){left=0;stop();el.classList.add('done');go.textContent='Done';if(onDone)onDone();else chime();afterVoice(el,!!onDone)}t.textContent=fmt(left)}
     function stop(){clearInterval(iv);iv=null;wake(false)}
-    go.onclick=function(){
+    go.onclick=function(){prime(el);
       if(el.classList.contains('done'))return;
       if(iv){stop();go.textContent='Resume'}else{try{actx=actx||new (window.AudioContext||window.webkitAudioContext)();actx.resume()}catch(e){};end=Date.now()+left*1000;iv=setInterval(tick,250);go.textContent='Pause';wake(true)}
     };
@@ -709,7 +717,7 @@ body.app:not(.on-cover) .nav{display:block}
   var names=screens.map(function(s){var c=chips.filter(function(a){return a.getAttribute('href')==='#'+s.dataset.id})[0];return c?c.textContent.trim():s.dataset.id});
   // cover button
   var b=document.createElement('button');b.className='begin';b.textContent='Begin →';cover.querySelector('.in').appendChild(b);
-  b.onclick=function(){go(1)};
+  b.onclick=function(){go(1);var w=document.querySelector('[data-welcome] audio');if(w){try{w.currentTime=0;var p=w.play();if(p&&p.catch)p.catch(function(){})}catch(e){}}};
   document.body.classList.add('app');
   var cur=0,key='ffy-step-'+location.pathname;
   function stopMedia(){[].forEach.call(document.querySelectorAll('audio'),function(a){a.pause()})}

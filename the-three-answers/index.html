@@ -201,6 +201,7 @@ footer{text-align:center;padding:60px 24px 70px;font-family:"Jost",sans-serif;fo
 .watchfor li:last-child{border-bottom:0}
 .watchfor li::before{content:counter(w);position:absolute;left:0;top:14px;width:28px;height:28px;border-radius:50%;border:1px solid var(--accent);color:var(--accent);font-family:"Jost",sans-serif;font-size:14px;display:grid;place-items:center}
 .photo.peek img{max-height:60svh}
+.vnote.speaking{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
 </style>
 </head>
 <body>
@@ -232,6 +233,7 @@ footer{text-align:center;padding:60px 24px 70px;font-family:"Jost",sans-serif;fo
 <main>
 
 <section id="what">
+  <div class="media vnote" id="vn-3-1" data-welcome><div class="hd"><div class="lab">Start here</div><div class="tt">A minute from me</div></div><div class="player" data-src="media/voice/3-1.m4a" data-dur="1:09"></div></div>
   <div class="kicker">01</div>
   <h2>What is actually happening</h2>
   <p class="lead">You have had this conversation before. Nine times, maybe more.</p>
@@ -449,6 +451,7 @@ footer{text-align:center;padding:60px 24px 70px;font-family:"Jost",sans-serif;fo
 </section>
 
 <section id="after">
+  <div class="media vnote" id="vn-3-2"><div class="hd"><div class="lab">When the timer goes</div><div class="tt">What to do next</div></div><div class="bd"><p>This plays by itself in the app when your fifteen minutes are up.</p></div><div class="player" data-src="media/voice/3-2.m4a" data-dur="0:38"></div></div>
   <div class="kicker">07</div>
   <h2>Afterwards</h2>
   <p>When the timer goes, finish the communication you're in and reach Thank You. Then stop.</p>
@@ -587,7 +590,7 @@ body.app:not(.on-cover) .nav{display:block}
   var names=screens.map(function(s){var c=chips.filter(function(a){return a.getAttribute('href')==='#'+s.dataset.id})[0];return c?c.textContent.trim():s.dataset.id});
   // cover button
   var b=document.createElement('button');b.className='begin';b.textContent='Begin →';cover.querySelector('.in').appendChild(b);
-  b.onclick=function(){go(1)};
+  b.onclick=function(){go(1);var w=document.querySelector('[data-welcome] audio');if(w){try{w.currentTime=0;var p=w.play();if(p&&p.catch)p.catch(function(){})}catch(e){}}};
   document.body.classList.add('app');
   var cur=0,key='ffy-step-'+location.pathname;
   function stopMedia(){[].forEach.call(document.querySelectorAll('audio'),function(a){a.pause()})}

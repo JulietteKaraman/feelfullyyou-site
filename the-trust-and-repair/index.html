@@ -194,6 +194,7 @@ footer{text-align:center;padding:60px 24px 70px;font-family:"Jost",sans-serif;fo
 .cta{display:block;text-decoration:none;text-align:center;margin:34px 0 14px;padding:22px 20px;border-radius:99px;background:var(--accent);color:var(--bg);font-family:"Jost",sans-serif;font-weight:500;font-size:19px;letter-spacing:.04em;box-shadow:0 10px 40px rgba(221,201,142,.18)}
 .cta small{display:block;font-family:"Inter",sans-serif;font-weight:400;font-size:11px;letter-spacing:.16em;text-transform:uppercase;opacity:.7;margin-top:4px}
 .photo.peek img{max-height:60svh}
+.vnote.speaking{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
 </style>
 </head>
 <body>
@@ -224,6 +225,7 @@ footer{text-align:center;padding:60px 24px 70px;font-family:"Jost",sans-serif;fo
 <main>
 
 <section id="what">
+  <div class="media vnote" id="vn-TR-1" data-welcome><div class="hd"><div class="lab">Start here</div><div class="tt">A minute from me</div></div><div class="player" data-src="media/voice/TR-1.m4a" data-dur="1:03"></div></div>
   <div class="kicker">01</div>
   <h2>What this is</h2>
   <p class="lead">You already have the structure.</p>
@@ -285,6 +287,7 @@ footer{text-align:center;padding:60px 24px 70px;font-family:"Jost",sans-serif;fo
 
 <figure class="photo peek"><img src="media/peek-buda1.jpg" alt="Juliette and Alex, foreheads together by the pool" loading="lazy" style="object-position:45% 45%"></figure>
 <section id="before">
+  <div class="media vnote" id="vn-TR-2"><div class="hd"><div class="lab">Before your first one</div><div class="tt">Please listen to this first</div></div><div class="player" data-src="media/voice/TR-2.m4a" data-dur="1:24"></div></div>
   <div class="kicker">04</div>
   <h2>Before you use these</h2>
   <p class="lead">These prompts can ask more of both of you than the ones you've already practised with.</p>
@@ -421,7 +424,7 @@ body.app:not(.on-cover) .nav{display:block}
   var names=screens.map(function(s){var c=chips.filter(function(a){return a.getAttribute('href')==='#'+s.dataset.id})[0];return c?c.textContent.trim():s.dataset.id});
   // cover button
   var b=document.createElement('button');b.className='begin';b.textContent='Begin →';cover.querySelector('.in').appendChild(b);
-  b.onclick=function(){go(1)};
+  b.onclick=function(){go(1);var w=document.querySelector('[data-welcome] audio');if(w){try{w.currentTime=0;var p=w.play();if(p&&p.catch)p.catch(function(){})}catch(e){}}};
   document.body.classList.add('app');
   var cur=0,key='ffy-step-'+location.pathname;
   function stopMedia(){[].forEach.call(document.querySelectorAll('audio'),function(a){a.pause()})}
@@ -458,5 +461,30 @@ body.app:not(.on-cover) .nav{display:block}
 })();
 </script>
 
+<script>
+(function(){
+  function fmt(t){t=Math.max(0,Math.round(t));return Math.floor(t/60)+":"+("0"+t%60).slice(-2)}
+  /* audio players */
+  var ICO_P='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>';
+  var ICO_S='<svg viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>';
+  var all=[];
+  [].forEach.call(document.querySelectorAll('.player'),function(p){
+    p.innerHTML='<button class="play" aria-label="Play">'+ICO_P+'</button><div class="track"><div class="rail"><div class="fill"></div><div class="knob"></div></div><div class="times"><span class="cur">0:00</span><span class="dur">'+p.dataset.dur+'</span></div></div><audio preload="metadata" src="'+p.dataset.src+'"></audio>';
+    var a=p.querySelector('audio'),btn=p.querySelector('.play'),fill=p.querySelector('.fill'),knob=p.querySelector('.knob'),rail=p.querySelector('.rail'),cur=p.querySelector('.cur'),dur=p.querySelector('.dur');
+    all.push(a);
+    function paint(){var x=a.duration?a.currentTime/a.duration*100:0;fill.style.width=x+'%';knob.style.left=x+'%';cur.textContent=fmt(a.currentTime)}
+    btn.onclick=function(){if(a.paused){all.forEach(function(o){if(o!==a)o.pause()});a.play()}else a.pause()};
+    a.addEventListener('play',function(){btn.innerHTML=ICO_S});
+    a.addEventListener('pause',function(){btn.innerHTML=ICO_P});
+    a.addEventListener('timeupdate',paint);
+    a.addEventListener('loadedmetadata',function(){dur.textContent=fmt(a.duration)});
+    var drag=false;
+    function seek(e){var r=rail.getBoundingClientRect();if(a.duration){a.currentTime=Math.min(1,Math.max(0,(e.clientX-r.left)/r.width))*a.duration;paint()}}
+    rail.addEventListener('pointerdown',function(e){drag=true;seek(e)});
+    window.addEventListener('pointermove',function(e){if(drag)seek(e)});
+    window.addEventListener('pointerup',function(){drag=false});
+  });
+})();
+</script>
 </body>
 </html>

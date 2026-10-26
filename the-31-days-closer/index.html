@@ -198,6 +198,7 @@ footer{text-align:center;padding:60px 24px 70px;font-family:"Jost",sans-serif;fo
 .cta{display:block;text-decoration:none;text-align:center;margin:34px 0 14px;padding:22px 20px;border-radius:99px;background:var(--accent);color:var(--bg);font-family:"Jost",sans-serif;font-weight:500;font-size:19px;letter-spacing:.04em;box-shadow:0 10px 40px rgba(221,201,142,.18)}
 .cta small{display:block;font-family:"Inter",sans-serif;font-weight:400;font-size:11px;letter-spacing:.16em;text-transform:uppercase;opacity:.7;margin-top:4px}
 .photo.peek img{max-height:60svh}
+.vnote.speaking{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
 </style>
 </head>
 <body>
@@ -228,6 +229,7 @@ footer{text-align:center;padding:60px 24px 70px;font-family:"Jost",sans-serif;fo
 <main>
 
 <section id="what">
+  <div class="media vnote" id="vn-31-1" data-welcome><div class="hd"><div class="lab">Start here</div><div class="tt">A minute from me</div></div><div class="player" data-src="media/voice/31-1.m4a" data-dur="0:48"></div></div>
   <div class="kicker">01</div>
   <h2>What this is</h2>
   <p class="lead">You already know the structure.</p>
@@ -350,6 +352,7 @@ footer{text-align:center;padding:60px 24px 70px;font-family:"Jost",sans-serif;fo
     <p>One prompt. Fifteen minutes. Then come back for the next one when it opens.</p>
     <p class="quiet" style="margin:0">Miss a day? Come back. Miss a week? Come back. You simply continue from where you left off.</p>
   </div>
+  <div class="media vnote" id="vn-31-2"><div class="hd"><div class="lab">If a few days get away from you</div><div class="tt">A quick word</div></div><div class="player" data-src="media/voice/31-2.m4a" data-dur="0:21"></div></div>
 </section>
 
 <figure class="photo peek"><img src="media/peek-her.jpg" alt="Juliette and Alex dancing in the kitchen" loading="lazy" style="object-position:55% 35%"></figure>
@@ -449,7 +452,7 @@ body.app:not(.on-cover) .nav{display:block}
   var names=screens.map(function(s){var c=chips.filter(function(a){return a.getAttribute('href')==='#'+s.dataset.id})[0];return c?c.textContent.trim():s.dataset.id});
   // cover button
   var b=document.createElement('button');b.className='begin';b.textContent='Begin →';cover.querySelector('.in').appendChild(b);
-  b.onclick=function(){go(1)};
+  b.onclick=function(){go(1);var w=document.querySelector('[data-welcome] audio');if(w){try{w.currentTime=0;var p=w.play();if(p&&p.catch)p.catch(function(){})}catch(e){}}};
   document.body.classList.add('app');
   var cur=0,key='ffy-step-'+location.pathname;
   function stopMedia(){[].forEach.call(document.querySelectorAll('audio'),function(a){a.pause()})}

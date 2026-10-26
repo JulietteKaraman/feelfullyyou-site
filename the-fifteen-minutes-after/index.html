@@ -192,6 +192,7 @@ footer{text-align:center;padding:60px 24px 70px;font-family:"Jost",sans-serif;fo
 .cta:active{transform:scale(.98)}
 .cta small{display:block;font-family:"Inter",sans-serif;font-weight:400;font-size:11px;letter-spacing:.16em;text-transform:uppercase;opacity:.7;margin-top:4px}
 .photo.peek img{max-height:60svh}
+.vnote.speaking{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
 </style>
 </head>
 <body>
@@ -220,6 +221,7 @@ footer{text-align:center;padding:60px 24px 70px;font-family:"Jost",sans-serif;fo
 <main>
 
 <section id="why">
+  <div class="media vnote" id="vn-15-1" data-welcome><div class="hd"><div class="lab">Start here</div><div class="tt">A minute from me</div></div><div class="player" data-src="media/voice/15-1.m4a" data-dur="0:47"></div></div>
   <div class="kicker">01</div>
   <h2>Why this exists</h2>
   <p class="lead">Something lands. You both feel it. Then one of you speaks, and within a sentence it can be gone.</p>
@@ -339,6 +341,7 @@ footer{text-align:center;padding:60px 24px 70px;font-family:"Jost",sans-serif;fo
   <a class="cta" href="https://feelfullyyou.com/my-cards/?unlock=fifteen-after" style="margin-top:40px">Open your cards</a>
 
   <div class="more"><div class="kicker">Keep going</div><a class="offer" href="https://buy.stripe.com/00w7sKdKr5OU4Tz32B0co25"><img src="media/up-trace.jpg" alt="" loading="lazy"><div class="ot"><b>The Trace</b><span>Fully clothed. Non-sexual. Your body learns to accept touch, knowing it's not going to lead anywhere.</span><em>£17 →</em></div></a><a class="offer" href="https://buy.stripe.com/00waEW49R5OUdq56eN0co27"><img src="media/up-ritual.jpg" alt="" loading="lazy"><div class="ot"><b>The 45-Minute Connection Ritual</b><span>Move from co-existing to connecting in 45 minutes.</span><em>£27 →</em></div></a></div>
+  <div class="media vnote" id="vn-15-2"><div class="hd"><div class="lab">When the chime goes</div><div class="tt">What to do next</div></div><div class="bd"><p>This plays by itself in the app when your fifteen minutes are up. Listen now if you want to know what to do.</p></div><div class="player" data-src="media/voice/15-2.m4a" data-dur="0:41"></div></div>
 </section>
 
 </main>
@@ -420,7 +423,7 @@ body.app:not(.on-cover) .nav{display:block}
   var names=screens.map(function(s){var c=chips.filter(function(a){return a.getAttribute('href')==='#'+s.dataset.id})[0];return c?c.textContent.trim():s.dataset.id});
   // cover button
   var b=document.createElement('button');b.className='begin';b.textContent='Begin →';cover.querySelector('.in').appendChild(b);
-  b.onclick=function(){go(1)};
+  b.onclick=function(){go(1);var w=document.querySelector('[data-welcome] audio');if(w){try{w.currentTime=0;var p=w.play();if(p&&p.catch)p.catch(function(){})}catch(e){}}};
   document.body.classList.add('app');
   var cur=0,key='ffy-step-'+location.pathname;
   function stopMedia(){[].forEach.call(document.querySelectorAll('audio'),function(a){a.pause()})}
