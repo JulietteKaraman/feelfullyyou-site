@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<base href="/the-31-days-closer-hub-k7/">
+<meta name="description" content="One prompt a day, for thirty one days. Fifteen minutes each.">
+<meta property="og:title" content="31 Days Closer"><meta property="og:description" content="One prompt a day, for thirty one days. Fifteen minutes each."><meta property="og:type" content="website"><meta property="og:url" content="https://feelfullyyou.com/the-31-days-closer/"><meta property="og:image" content="https://feelfullyyou.com/the-31-days-closer/og.jpg"><meta property="og:site_name" content="Feel Fully You">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="31 Days Closer"><meta name="twitter:description" content="One prompt a day, for thirty one days. Fifteen minutes each."><meta name="twitter:image" content="https://feelfullyyou.com/the-31-days-closer/og.jpg">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1a1814">
+<title>31 Days Closer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Poppins:wght@300;400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+
+:root{
+  --bg:#1a1814; --bg2:#211e19; --ink:#f1ece2; --muted:#a79f90;
+  --line:rgba(221,201,142,.2); --accent:#DDC98E; --lemon:#EEDE80;
+  --teal:#0D3535; --gold:#a8843f;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:"Poppins",sans-serif;font-weight:300;font-size:17px;line-height:1.75;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+
+/* progress + chapter bar */
+.bar{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(26,24,20,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line);transform:translateY(-100%);transition:transform .35s ease}
+.bar.on{transform:none}
+.bar .prog{height:2px;background:var(--accent);width:0;transition:width .1s linear}
+.chips{display:flex;gap:6px;overflow-x:auto;padding:10px 16px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chips a{flex:none;font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--muted);padding:6px 12px;border:1px solid var(--line);border-radius:99px;transition:all .2s}
+.chips a.cur{color:var(--bg);background:var(--accent);border-color:var(--accent)}
+
+/* cover */
+.cover{position:relative;display:flex;flex-direction:column;background:var(--bg)}
+.cover .ph{position:relative;height:54svh;min-height:340px;overflow:hidden}
+.cover .ph img{width:100%;height:100%;object-fit:cover;object-position:35% 38%}
+.cover .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,24,20,.55) 0%,rgba(26,24,20,0) 22%,rgba(26,24,20,0) 62%,var(--bg) 100%)}
+.cover .in{position:relative;z-index:2;padding:0 24px 64px;margin:-64px auto 0;max-width:640px;width:100%}
+.brand{position:absolute;top:22px;left:0;right:0;z-index:3;text-align:center;font-family:"Jost",sans-serif;font-size:12px;letter-spacing:.42em;text-transform:uppercase;color:var(--ink)}
+.cover h1{font-family:"Jost",sans-serif;font-weight:400;font-size:clamp(56px,16vw,96px);line-height:.95;letter-spacing:.02em}
+.cover .line{margin-top:18px;font-size:19px;line-height:1.6;color:var(--ink);max-width:24ch}
+.cover .line em{font-style:normal;color:var(--accent)}
+.meta{margin-top:26px;display:flex;flex-wrap:wrap;gap:8px}
+.meta span{font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);border:1px solid rgba(241,236,226,.28);border-radius:99px;padding:6px 12px}
+.scroll{margin-top:34px;font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+@media (min-width:720px){.cover .ph{height:72svh}}
+
+/* sections */
+main{max-width:640px;margin:0 auto;padding:0 24px}
+section{padding:88px 0 8px}
+.kicker{font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;display:flex;align-items:center;gap:12px}
+.kicker::after{content:"";flex:1;height:1px;background:var(--line)}
+h2{font-family:"Jost",sans-serif;font-weight:400;font-size:clamp(32px,8vw,44px);line-height:1.12;margin-bottom:28px}
+h3{font-family:"Jost",sans-serif;font-weight:500;font-size:21px;line-height:1.3;margin:40px 0 12px}
+p{margin:0 0 18px}
+.lead{font-size:22px;line-height:1.5;color:var(--ink);font-weight:300}
+.big{font-family:"Jost",sans-serif;font-weight:400;font-size:clamp(26px,7vw,34px);line-height:1.25;margin:34px 0;color:var(--ink)}
+.big em{font-style:normal;color:var(--accent)}
+.quiet{color:var(--muted)}
+.thoughts{margin:26px 0 30px;padding-left:18px;border-left:1px solid var(--accent)}
+.thoughts p{font-style:italic;color:var(--accent);margin:0 0 6px;font-size:18px}
+blockquote{margin:34px 0;padding:28px 24px;background:var(--bg2);border:1px solid var(--line);border-radius:18px;font-size:19px;line-height:1.6;font-style:italic}
+blockquote cite{display:block;margin-top:14px;font-style:normal;font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.dots{list-style:none;margin:20px 0 28px}
+.dots li{position:relative;padding:12px 0 12px 26px;border-bottom:1px solid var(--line)}
+.dots li:last-child{border-bottom:0}
+.dots li::before{content:"";position:absolute;left:2px;top:24px;width:7px;height:7px;border-radius:50%;background:var(--accent)}
+.qs{list-style:none;margin:18px 0 26px;counter-reset:q}
+.qs li{counter-increment:q;position:relative;padding:14px 0 14px 44px;border-bottom:1px solid var(--line)}
+.qs li:last-child{border-bottom:0}
+.qs li::before{content:counter(q);position:absolute;left:0;top:14px;width:28px;height:28px;border-radius:50%;border:1px solid var(--accent);color:var(--accent);font-family:"Jost",sans-serif;font-size:14px;display:grid;place-items:center}
+.photo{margin:44px -24px;position:relative}
+.photo img{width:100%;max-height:78svh;object-fit:cover;object-position:30% 40%}
+.photo figcaption{position:absolute;left:24px;right:24px;bottom:22px;font-family:"Jost",sans-serif;font-size:26px;line-height:1.25;text-shadow:0 2px 18px rgba(0,0,0,.6)}
+.photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(26,24,20,.85))}
+.photo figcaption{z-index:2}
+
+/* steps */
+.steps{list-style:none;margin:10px 0 0}
+.steps li{display:grid;grid-template-columns:44px 1fr;gap:16px;padding:22px 0;border-bottom:1px solid var(--line)}
+.steps li:last-child{border-bottom:0}
+.steps .n{font-family:"Jost",sans-serif;font-size:30px;line-height:1;color:var(--accent)}
+.steps b{display:block;font-family:"Jost",sans-serif;font-weight:500;font-size:19px;margin-bottom:6px}
+.steps p{margin:0 0 8px;color:var(--ink)}
+.steps p.quiet{color:var(--muted)}
+
+/* media cards */
+.media{margin:30px 0;background:var(--bg2);border:1px solid var(--line);border-radius:22px;overflow:hidden}
+.media .hd{padding:20px 22px 16px}
+.media .lab{font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+.media .tt{font-family:"Jost",sans-serif;font-size:22px;line-height:1.25;margin-top:6px}
+.media .tt small{font-size:14px;color:var(--muted);font-family:"Poppins",sans-serif;margin-left:6px}
+.media .bd{padding:0 22px 20px;color:var(--muted);font-size:16px}
+.media .bd p{margin:0 0 8px}
+.vid{position:relative;background:#000}
+.vid.tall{aspect-ratio:9/16;max-height:72svh;margin:0 auto}
+.vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vlink{display:block;padding:12px 22px;font-family:"Inter",sans-serif;font-size:12px;letter-spacing:.08em;color:var(--muted);text-decoration:none;border-top:1px solid var(--line)}
+.vlink:hover{color:var(--accent)}
+
+/* audio player */
+.player{display:flex;align-items:center;gap:16px;padding:6px 22px 24px}
+.play{flex:none;width:68px;height:68px;border-radius:50%;border:0;background:var(--accent);color:var(--bg);display:grid;place-items:center;cursor:pointer;transition:transform .15s}
+.play:active{transform:scale(.95)}
+.play svg{width:24px;height:24px}
+.track{flex:1;min-width:0}
+.rail{position:relative;height:28px;cursor:pointer;touch-action:none}
+.rail::before{content:"";position:absolute;left:0;right:0;top:13px;height:2px;background:var(--line)}
+.fill{position:absolute;left:0;top:13px;height:2px;background:var(--accent);width:0}
+.knob{position:absolute;top:8px;width:12px;height:12px;border-radius:50%;background:var(--accent);left:0;margin-left:-6px}
+.times{display:flex;justify-content:space-between;font-family:"Inter",sans-serif;font-size:12px;color:var(--muted)}
+
+/* role picker */
+.roles{margin:34px 0 8px;padding:22px;border-radius:22px;background:var(--teal)}
+.roles .q{font-family:"Jost",sans-serif;font-size:21px;margin-bottom:14px;color:var(--ink)}
+.seg{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;background:rgba(0,0,0,.25);padding:5px;border-radius:99px}
+.seg button{border:0;background:transparent;color:var(--ink);font-family:"Inter",sans-serif;font-size:13px;letter-spacing:.04em;padding:11px 6px;border-radius:99px;cursor:pointer;transition:all .2s}
+.seg button.on{background:var(--ink);color:var(--bg)}
+.roles .hint{margin-top:12px;font-size:14px;color:rgba(241,236,226,.7)}
+[data-role]{transition:opacity .3s}
+body.r-give [data-role="receive"], body.r-receive [data-role="give"]{display:none}
+.rolecard{margin:24px 0;padding:24px 22px;border-radius:20px;border:1px solid var(--line);background:var(--bg2)}
+.rolecard .tag{display:inline-block;font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--bg);background:var(--accent);padding:5px 11px;border-radius:99px;margin-bottom:12px}
+.rolecard h3{margin-top:0}
+
+/* script accordion */
+details{border:1px solid var(--line);border-radius:20px;margin:30px 0;background:var(--bg2);overflow:hidden}
+summary{list-style:none;cursor:pointer;padding:20px 22px;display:flex;justify-content:space-between;align-items:center;gap:12px;font-family:"Jost",sans-serif;font-size:19px}
+summary::-webkit-details-marker{display:none}
+summary .pl{flex:none;width:30px;height:30px;border-radius:50%;border:1px solid var(--accent);color:var(--accent);display:grid;place-items:center;font-size:18px;transition:transform .25s}
+details[open] summary .pl{transform:rotate(45deg)}
+summary small{display:block;font-family:"Poppins",sans-serif;font-size:14px;color:var(--muted);margin-top:2px}
+.dbody{padding:0 22px 22px}
+.dbody h4{font-family:"Inter",sans-serif;font-weight:500;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:24px 0 10px}
+
+/* silence block */
+.silence{margin:56px -24px 0;padding:72px 28px;background:var(--teal);text-align:left}
+.silence .kicker{color:var(--accent)}
+.silence h2{margin-bottom:22px}
+.silence .no{list-style:none;margin:24px 0}
+.silence .no li{font-family:"Jost",sans-serif;font-size:20px;line-height:1.35;font-style:italic;color:var(--ink);padding:8px 0 8px 16px;margin:0 0 8px;border-left:2px solid var(--accent)}
+.silence .last{font-family:"Jost",sans-serif;font-size:24px;line-height:1.35;margin-top:30px}
+
+/* faq */
+.faq details{margin:12px 0}
+.faq summary{font-size:18px}
+.faq .dbody p{color:var(--ink)}
+
+.end{padding:96px 0 40px}
+.endcard{margin-top:34px;padding:36px 26px;border-radius:24px;border:1px solid var(--accent);background:linear-gradient(160deg,var(--bg2),var(--bg))}
+.endcard .big{margin:0 0 6px}
+footer{text-align:center;padding:60px 24px 70px;font-family:"Jost",sans-serif;font-size:12px;letter-spacing:.42em;text-transform:uppercase;color:var(--muted)}
+
+@media (min-width:720px){
+  .photo{margin:56px 0;border-radius:24px;overflow:hidden}
+  .silence{margin:64px 0 0;border-radius:28px;padding:72px 48px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* offers */
+.more{margin-top:56px;padding-top:8px}
+.offer{display:grid;grid-template-columns:96px 1fr;gap:16px;align-items:center;text-decoration:none;color:var(--ink);padding:14px;margin:12px 0;border:1px solid var(--line);border-radius:20px;background:var(--bg2);transition:border-color .2s,transform .2s}
+.offer:hover{border-color:var(--accent);transform:translateY(-2px)}
+.offer img{width:96px;height:120px;object-fit:cover;border-radius:12px}
+.offer b{display:block;font-family:"Jost",sans-serif;font-weight:500;font-size:19px;line-height:1.25;margin-bottom:6px}
+.offer span{display:block;font-size:14px;line-height:1.5;color:var(--muted)}
+.offer em{display:inline-block;margin-top:10px;font-style:normal;font-family:"Jost",sans-serif;font-size:16px;color:var(--bg);background:var(--accent);padding:7px 14px;border-radius:99px}
+
+/* page-specific */
+.cover .ph img{object-position:50% 60%}
+.stretches{margin:26px 0}
+.st{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;padding:18px 0;border-bottom:1px solid var(--line);cursor:pointer}
+.st:last-child{border-bottom:0}
+.st .days{display:flex;gap:3px;flex-wrap:wrap;width:86px;padding-top:4px}
+.st .days i{width:9px;height:9px;border-radius:50%;background:var(--accent);opacity:.9}
+.st:nth-child(2) .days i{opacity:.75}.st:nth-child(3) .days i{opacity:.6}.st:nth-child(4) .days i{opacity:.45}
+.st:nth-child(5) .days i{background:var(--lemon)}
+.st b{display:block;font-family:"Jost",sans-serif;font-weight:500;font-size:19px;letter-spacing:.04em;text-transform:uppercase;color:var(--accent)}
+.st small{display:block;font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:2px 0 6px}
+.st p{margin:0;color:var(--ink)}
+.order{list-style:none;margin:20px 0}
+.order li{position:relative;padding:8px 0 8px 26px;font-family:"Jost",sans-serif;font-size:20px}
+.order li::before{content:"";position:absolute;left:6px;top:0;bottom:0;width:1px;background:var(--line)}
+.order li::after{content:"";position:absolute;left:2px;top:19px;width:9px;height:9px;border-radius:50%;background:var(--accent)}
+.loop{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px;margin:36px 0;padding:26px 18px;border-radius:22px;background:var(--teal);font-family:"Jost",sans-serif;font-size:19px;text-align:center}
+.loop span{white-space:nowrap}.loop .ar{color:var(--accent)}
+.trio{display:grid;gap:8px;margin:18px 0 24px}
+.trio div{padding:14px 18px;border-radius:14px;background:var(--bg2);border:1px solid var(--line)}
+.trio b{font-family:"Jost",sans-serif;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-right:8px}
+.rules{list-style:none;margin:18px 0}
+.rules li{padding:10px 0 10px 24px;position:relative}
+.rules li::before{content:"✕";position:absolute;left:0;top:10px;color:var(--accent);font-size:13px}
+.cta{display:block;text-decoration:none;text-align:center;margin:34px 0 14px;padding:22px 20px;border-radius:99px;background:var(--accent);color:var(--bg);font-family:"Jost",sans-serif;font-weight:500;font-size:19px;letter-spacing:.04em;box-shadow:0 10px 40px rgba(221,201,142,.18)}
+.cta small{display:block;font-family:"Inter",sans-serif;font-weight:400;font-size:11px;letter-spacing:.16em;text-transform:uppercase;opacity:.7;margin-top:4px}
+.photo.peek img{max-height:60svh}
+.vnote.speaking{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+.player .spd{border:1px solid var(--line);background:transparent;color:var(--accent);border-radius:99px;font:500 12px/1 "Inter",sans-serif;padding:5px 10px;cursor:pointer;letter-spacing:.04em}
+
+/* ---- interactive hub (27 Oct) ---- */
+.hub{margin-top:34px;border:1px solid var(--line);border-radius:22px;background:var(--bg2);padding:20px}
+.hubtop{display:flex;align-items:center;gap:16px;margin-bottom:14px}
+.ring{width:56px;height:56px;transform:rotate(-90deg);flex:none}
+.ring circle{fill:none;stroke-width:4}.ring .rt{stroke:rgba(221,201,142,.18)}.ring .rf{stroke:var(--accent);stroke-linecap:round;stroke-dasharray:119.4;stroke-dashoffset:119.4;transition:stroke-dashoffset .6s ease}
+.hubn{font-family:"Jost",sans-serif;font-size:22px;color:var(--ink)}.hubs{font-size:13px;color:var(--muted)}
+.hubcards{display:grid;gap:8px}
+.hubcard{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;text-align:left;background:transparent;border:1px solid var(--line);border-radius:14px;padding:13px 14px;color:var(--ink);font:400 16px/1.3 "Poppins",sans-serif;cursor:pointer}
+.hubcard .c{width:22px;height:22px;border-radius:50%;border:1.5px solid rgba(221,201,142,.55);flex:none;display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--bg)}
+.hubcard.done .c{background:var(--accent);border-color:var(--accent)}.hubcard.done .c::after{content:"✓"}
+.hubcard.next{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+.chips a.done::after{content:" ✓";color:var(--accent)}
+.didit{margin:44px 0 6px;border-top:1px solid var(--line);padding-top:26px;text-align:center}
+.didit .dw{font-size:14px;color:var(--muted);margin:0 0 14px}
+.didbtn,.sdone,.jsave{border:1px solid var(--accent);background:transparent;color:var(--accent);border-radius:99px;font:500 17px/1 "Jost",sans-serif;padding:15px 28px;cursor:pointer;min-height:48px}
+.didbtn.on,.sdone.on{background:var(--accent);color:var(--bg)}
+@keyframes glow{0%{box-shadow:0 0 0 0 rgba(221,201,142,.7)}100%{box-shadow:0 0 0 22px rgba(221,201,142,0)}}
+.glow{animation:glow .9s ease-out 2}
+.path{margin:26px 0}.path .lab{font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+.pbtns{display:flex;gap:10px;flex-wrap:wrap}.pbtns button{flex:1;min-width:140px;border:1px solid var(--line);background:var(--bg2);color:var(--ink);border-radius:16px;padding:16px;font:500 17px "Jost",sans-serif;cursor:pointer}
+.pbtns button.on{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent);color:var(--accent)}
+ul.check{list-style:none;margin:10px 0;padding:0;display:grid;gap:8px}
+ul.check button{display:flex;gap:14px;align-items:flex-start;width:100%;text-align:left;background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:14px;color:var(--ink);font:400 16px/1.45 "Poppins",sans-serif;cursor:pointer}
+ul.check .bx{width:24px;height:24px;border-radius:7px;border:1.5px solid var(--accent);flex:none;display:flex;align-items:center;justify-content:center;color:var(--bg);margin-top:1px}
+ul.check li.on .bx{background:var(--accent)}ul.check li.on .bx::after{content:"✓";font-size:14px}ul.check li.on span:last-child{color:var(--muted)}
+.ready{font-family:"Jost",sans-serif;font-size:22px;color:var(--accent);margin-top:14px}
+.golink{display:inline-block;margin:22px 0 4px;color:var(--accent);font:500 17px "Jost",sans-serif;text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:3px}
+.dstep{border:1px solid var(--line);border-radius:22px;background:var(--bg2);padding:20px;margin:22px 0}
+.dstep.done{border-color:var(--accent)}
+.dstep .dn{display:flex;gap:14px;align-items:center;margin-bottom:10px}.dstep .dn span{width:34px;height:34px;border-radius:50%;background:var(--accent);color:var(--bg);display:flex;align-items:center;justify-content:center;font:600 16px "Jost",sans-serif;flex:none}
+.dstep .dn b{font-family:"Jost",sans-serif;font-weight:400;font-size:22px;display:block}.dstep .dn small{color:var(--muted);font-size:13px}
+.dstep .player{padding-left:0;padding-right:0}
+.dstep .sdone{margin-top:14px;width:100%}
+.dstep .media.vnote{margin:16px 0 0}
+.jlab{display:block;font-size:13px;color:var(--muted);margin:14px 0 8px}
+.journal textarea,#jtxt{width:100%;box-sizing:border-box;background:var(--bg);border:1px solid var(--line);border-radius:14px;color:var(--ink);font:italic 18px/1.4 "Jost",sans-serif;padding:14px;resize:vertical}
+.jsave{margin-top:10px;padding:11px 20px;font-size:15px}
+.jlist{margin-top:14px;display:grid;gap:8px}.jlist div{border-left:2px solid var(--accent);padding:6px 0 6px 14px;font:italic 17px/1.4 "Jost",sans-serif;color:var(--ink)}.jlist small{display:block;font:400 12px "Inter",sans-serif;color:var(--muted);font-style:normal;margin-top:3px}
+.finish{text-align:center;border:1px solid var(--accent);border-radius:22px;padding:26px 20px;margin-top:26px}.finish .fx{width:56px;height:56px;margin:0 auto 12px;border-radius:50%;background:var(--accent);color:var(--bg);display:flex;align-items:center;justify-content:center;font-size:26px}
+
+/* ---- hub beauty (27 Oct) ---- */
+.welc{display:flex;align-items:center;gap:14px;margin:22px 0 0}
+.welc img{width:58px;height:58px;border-radius:50%;object-fit:cover;border:1.5px solid var(--accent);box-shadow:0 0 24px -6px rgba(221,201,142,.6)}
+.welc b{display:block;font:400 18px "Jost",sans-serif;color:var(--ink)}.welc small{color:var(--muted);font-size:14px}
+.hub{background:linear-gradient(180deg,rgba(13,53,53,.55),var(--bg2) 160px);padding:22px 16px}
+.hubcards{gap:12px}
+.hubcard{padding:10px;gap:14px;align-items:center;border-radius:18px;background:rgba(26,24,20,.55)}
+.hubcard .th{width:76px;height:76px;border-radius:14px;object-fit:cover;flex:none}
+.hubcard .tx{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px}
+.hubcard .tx small{font:500 10.5px "Inter",sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+.hubcard .tx b{font:400 19px/1.2 "Jost",sans-serif;color:var(--ink)}
+.hubcard .tx em{font:400 13.5px/1.35 "Poppins",sans-serif;font-style:normal;color:var(--muted)}
+.hubcard .c{margin-right:4px}
+.hubcard.done .th{filter:saturate(.6) brightness(.8)}
+.hubcard.feat{flex-direction:column;align-items:stretch;padding:0;overflow:hidden;border-color:var(--accent);position:relative}
+.hubcard.feat .fimg{display:block;position:relative;aspect-ratio:900/520;overflow:hidden}
+.hubcard.feat .fimg img{width:100%;height:100%;object-fit:cover;display:block}
+.hubcard.feat .fimg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,24,20,0) 40%,rgba(26,24,20,.9))}
+.hubcard.feat .tx{padding:0 16px 16px;margin-top:-46px;position:relative;z-index:1}
+.hubcard.feat .tx b{font-size:26px;color:var(--accent)}
+.hubcard.feat .c{position:absolute;top:12px;right:12px;background:rgba(26,24,20,.6)}
+.hubcard.next:not(.feat){border-color:var(--accent)}
+
+.journal{margin:18px 0}
+.ul-days{}
+</style>
+</head>
+<body>
+
+<div class="bar" id="bar">
+  <div class="prog" id="prog"></div>
+  <nav class="chips" id="chips">
+    <a href="#what">What this is</a>
+    <a href="#order">The order</a>
+    <a href="#app">Your prompts</a>
+    <a href="#how">How to run it</a>
+    <a href="#when">When</a>
+    <a href="#lose">If you lose it</a>
+  </nav>
+</div>
+
+<header class="cover">
+  <div class="brand">Feel Fully You</div>
+  <div class="ph"><img src="media/cover.jpg" alt="Juliette's hands holding her phone, a card open in the app"></div>
+  <div class="in">
+    <h1>31 Days Closer</h1>
+    <p class="line">One prompt a day, for thirty one days. <em>Fifteen minutes each.</em></p>
+    <div class="meta"><span>31 prompts</span><span>15 minutes a day</span><span>In the app</span></div>
+    <div class="scroll">Scroll to begin ↓</div>
+    <div class="welc" id="welc"><img src="media/hub/me.jpg" alt="Juliette"><div><b>A minute from me first</b><small>Tap Begin and I'll welcome you in.</small></div></div>
+    <div class="hub" id="hub">
+      <div class="hubtop"><svg class="ring" viewBox="0 0 44 44"><circle cx="22" cy="22" r="19" class="rt"/><circle cx="22" cy="22" r="19" class="rf" id="ringf"/></svg><div><div class="hubn" id="hubn">0 done</div><div class="hubs">One prompt a day, for thirty one days. Your progress saves on this phone.</div></div></div>
+      <div class="hubcards" id="hubcards"></div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<figure class="photo peek top"><img src="media/hub/top-what.jpg" alt="Juliette in the garden"></figure>
+<section id="what">
+  <div class="media vnote" id="vn-31-1" data-welcome><div class="hd"><div class="lab">Start here</div><div class="tt">A minute from me</div></div><div class="player" data-src="media/voice/31-1.m4a" data-dur="0:48"></div></div>
+  <div class="kicker">01</div>
+  <h2>What this is</h2>
+  <p class="lead">You already know the structure.</p>
+  <p class="big" style="margin-top:0">Now you need something <em>worth bringing into it.</em></p>
+  <p>31 Days Closer gives you thirty-one prompts, in a deliberate order, with one new prompt opening each morning in the app.</p>
+  <p>So there is nothing to choose.</p>
+  <ul class="rules">
+    <li>No scrolling through cards deciding which one you both feel like answering.</li>
+    <li>No "that one's too much tonight."</li>
+    <li>No spending the first five minutes negotiating what you're actually going to talk about.</li>
+  </ul>
+  <p>You open the app. Today's prompt is there.</p>
+  <p>That is the prompt you stay with for your fifteen minutes.</p>
+  <p>Tomorrow, the next one opens.</p>
+  <p>You can't race through them, and if life gets in the way, you haven't fallen behind.</p>
+  <div class="loop"><span>One day.</span><span class="ar">·</span><span>One prompt.</span><span class="ar">·</span><span>Fifteen minutes.</span></div>
+  <p>The structure stays the same.</p>
+  <p class="big">What changes is where the conversation <em>takes you.</em></p>
+</section>
+
+<figure class="photo peek top"><img src="media/hub/top-order.jpg" alt="Juliette in a yellow shawl among the flowers"></figure>
+<section id="order">
+  <div class="kicker">02</div>
+  <h2>The order is doing something</h2>
+  <p>These aren't thirty-one random prompts.</p>
+  <p>They move through five stretches, and they're in this order for a reason.</p>
+  <div class="stretches">
+    <div class="st"><div class="days"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div><b>Seeing each other</b><small>Days 1 to 7</small><p>Seven days of noticing each other again, including some of what you may have stopped noticing.</p></div></div>
+    <div class="st"><div class="days"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div><b>Understanding each other</b><small>Days 8 to 14</small><p>Seven days of getting underneath what is actually going on for each of you.</p></div></div>
+    <div class="st"><div class="days"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div><b>Touch and desire</b><small>Days 15 to 21</small><p>Seven days bringing touch, wanting and desire into the conversation.</p></div></div>
+    <div class="st"><div class="days"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div><b>Honesty and repair</b><small>Days 22 to 28</small><p>Seven days making room for some of what has been difficult to say, after you've had three weeks practising how to listen and be heard within the structure.</p></div></div>
+    <div class="st"><div class="days"><i></i><i></i><i></i></div><div><b>Choosing us</b><small>Days 29 to 31</small><p>Three days at the end looking at what you're choosing together and what you're both saying yes to.</p></div></div>
+  </div>
+  <p class="lead">The order matters.</p>
+  <p>You don't begin with the conversations that might ask the most of you.</p>
+  <ul class="order">
+    <li>You begin by seeing each other.</li>
+    <li>Then understanding each other.</li>
+    <li>Then you move into touch and desire.</li>
+    <li>Then honesty and repair.</li>
+    <li>And finally, what you're choosing together.</li>
+  </ul>
+  <p>By the time you reach the later prompts, you've spent weeks practising the same thing:</p>
+  <div class="loop"><span>One clear communication.</span><span class="ar">→</span><span>Receive it.</span><span class="ar">→</span><span>Thank You.</span><span class="ar">→</span><span>Swap.</span></div>
+  <p class="big" style="margin-top:0">So the questions can deepen while the structure <em>stays familiar.</em></p>
+</section>
+
+<figure class="photo">
+  <img src="media/app.jpg" alt="31 Days Closer in the app: Day 1, the Seeing Each Other card turned over" loading="lazy">
+</figure>
+
+<section id="app" style="padding-top:40px">
+  <div class="kicker">03</div>
+  <h2>Your thirty-one prompts are in the app</h2>
+  <p>Your thirty-one prompts live in the app, alongside your fifteen-minute timer.</p>
+
+  <div class="media">
+    <div class="hd"><div class="lab">Listen</div><div class="tt">How the 31 days work <small>23 seconds</small></div></div>
+    <div class="bd"><p>The same note from me that greets you on day one in the app.</p></div>
+    <div class="player" data-src="media/closer-day1.m4a" data-dur="0:23"></div>
+  </div>
+
+  <a class="cta" href="https://feelfullyyou.com/gift/31-days-closer">Open 31 Days Closer<small>Tap once and it's yours on this phone</small></a>
+  <p class="quiet" style="text-align:center;font-size:15px">Tap the link once and it's yours on that phone. Add it to your home screen and you can come straight back to it each day.</p>
+  <p>Today's prompt will be waiting for you. The next one opens the following morning.</p>
+  <ul class="rules">
+    <li>You don't need to choose which card to do.</li>
+    <li>You don't need to look ahead.</li>
+    <li>You don't need to remember where you got to.</li>
+  </ul>
+  <p class="big">Open the app. Today's card is there. <em>That's the one you do.</em></p>
+  <p>If you miss a day, nothing disappears. Come back when you can and carry on from where you left off.</p>
+</section>
+
+<figure class="photo peek"><img src="media/peek-buda2.jpg" alt="Juliette and Alex holding each other in the garden" loading="lazy" style="object-position:50% 55%"></figure>
+<section id="how">
+  <div class="kicker">04</div>
+  <h2>How to run it</h2>
+  <p>You already know the Dyad. This is the same structure, with a new prompt waiting for you each day.</p>
+  <ol class="steps">
+    <li><span class="n">1</span><div><b>Choose the 15-minute timer</b><p>In the app, with today's prompt.</p></div></li>
+    <li><span class="n">2</span><div><b>One of you asks today's prompt</b><p>The other takes a breath, lets it land, and gives one clear communication.</p><p class="quiet">Not a speech. One thing, finished, out loud.</p></div></li>
+    <li><span class="n">3</span><div><b>The listener responds with one of the three answers</b></div></li>
+  </ol>
+  <div class="trio">
+    <div><b>Thank you</b>I have understood.</div>
+    <div><b>Clarify that</b>Help me understand.</div>
+    <div><b>Summarise that</b>Give me the bottom line.</div>
+  </div>
+  <p>When you reach Thank You, swap. Same prompt. Other person.</p>
+  <p>Keep going back and forth with the same prompt until the timer goes.</p>
+  <p>Don't ride on each other's communication. When it's your turn, don't answer what they just said or continue their thread.</p>
+  <p class="lead">Take the prompt fresh and give your own communication.</p>
+  <ul class="rules">
+    <li>No fixing.</li><li>No defending.</li><li>No interrupting.</li><li>No debating.</li>
+  </ul>
+  <p class="big">Understanding is the aim. <em>Agreement isn't required.</em></p>
+  <p>When the timer goes, finish the communication you're in, reach Thank You, and stop.</p>
+  <p>Let what was said land.</p>
+</section>
+
+<figure class="photo peek top"><img src="media/hub/top-when.jpg" alt="Juliette on the beach"></figure>
+<section id="when">
+  <div class="kicker">05</div>
+  <h2>When to do it</h2>
+  <p>Choose a time when you both have some capacity for it. A morning. An afternoon. A weekend.</p>
+  <p>It may well not be at the end of a long day, when one or both of you are already tired or distracted.</p>
+  <p class="lead">You only need fifteen minutes. Protect those fifteen minutes.</p>
+  <ol class="steps">
+    <li><span class="n">1</span><div><b>Phones in another room</b><p>Keep one only for the app and timer.</p></div></li>
+    <li><span class="n">2</span><div><b>Sit or stand facing each other</b></div></li>
+    <li><span class="n">3</span><div><b>Open today's prompt</b><p>Begin.</p></div></li>
+  </ol>
+
+  <div class="rolecard" style="margin-top:34px">
+    <span class="tag">If a day gets away from you</span>
+    <h3>Don't double up.</h3>
+    <p>Just pick it up again the next day. The card will still be there.</p>
+    <p>You haven't fallen behind, and you don't need to catch up.</p>
+    <p>The point isn't to get through thirty-one prompts as quickly as possible.</p>
+    <p class="big" style="margin:14px 0">The point is to <em>stay with one.</em></p>
+    <p>One prompt. Fifteen minutes. Then come back for the next one when it opens.</p>
+    <p class="quiet" style="margin:0">Miss a day? Come back. Miss a week? Come back. You simply continue from where you left off.</p>
+  </div>
+  <div class="media vnote" id="vn-31-2"><div class="hd"><div class="lab">If a few days get away from you</div><div class="tt">A quick word</div></div><div class="player" data-src="media/voice/31-2.m4a" data-dur="0:21"></div></div>
+<p class="lead" style="margin-top:30px">Today</p><ul class="check" data-key="when"><li><button type="button"><span class="bx"></span><span>Phones in another room. One kept for the app and timer.</span></button></li><li><button type="button"><span class="bx"></span><span>Sitting or standing facing each other.</span></button></li><li><button type="button"><span class="bx"></span><span>Today's prompt is open.</span></button></li></ul><p class="ready" hidden>Begin.</p>
+</section>
+
+<figure class="photo peek"><img src="media/peek-her.jpg" alt="Juliette and Alex dancing in the kitchen" loading="lazy" style="object-position:55% 35%"></figure>
+<section id="lose">
+  <div class="kicker">06</div>
+  <h2>If you lose the structure</h2>
+  <p>You probably will at some point. That's okay.</p>
+  <div class="faq">
+    <details>
+      <summary><span>One of you starts defending, explaining or debating.</span><span class="pl">+</span></summary>
+      <div class="dbody"><p>Pause. You don't need to work out whose fault it was or how you got there. Just name it:</p><p>"We've left the three answers. Let's come back."</p><p>Then return to today's prompt and the structure.</p></div>
+    </details>
+    <details>
+      <summary><span>One of you gets emotional.</span><span class="pl">+</span></summary>
+      <div class="dbody"><p>Take a moment. Emotion doesn't automatically mean you need to stop. It doesn't mean you have to keep going either.</p><p>The person speaking gets to decide whether they want to continue or pause.</p><p>You don't need to immediately soothe them, pull more out of them or make the feeling go away.</p><p>The structure never overrides someone's wish to pause or stop.</p></div>
+    </details>
+    <details>
+      <summary><span>It turns into a row.</span><span class="pl">+</span></summary>
+      <div class="dbody"><p>Stop the timer. Don't force yourselves through the remaining minutes just because today's card is open.</p><p>Leave it there. Come back another day.</p><p>Stopping cleanly is part of knowing when the structure is no longer helping.</p></div>
+    </details>
+    <details>
+      <summary><span>Your partner doesn't want to do it.</span><span class="pl">+</span></summary>
+      <div class="dbody"><p>Do today's prompt on your own. Choose the 10-minute timer in the app.</p><p>Read the prompt out loud and answer it out loud to the room, or write your answer down.</p><p>When you run dry, read the same prompt again. Same question. Again. And again. Until the timer goes.</p><p>You can keep moving through the thirty-one days on your own.</p></div>
+    </details>
+  </div>
+
+  <div class="more"><div class="kicker">Keep going</div><a class="offer" href="https://buy.stripe.com/7sY7sK35Na5a99Pbz70co2a"><img src="media/up-tr.jpg" alt="" loading="lazy"><div class="ot"><b>Trust &amp; Repair</b><span>Fifty prompts for when the conversation is about something that happened between you.</span><em>£15 →</em></div></a><a class="offer" href="https://feelfullyyou.com/31-touch-points"><img src="media/up-31tp.jpg" alt="" loading="lazy"><div class="ot"><b>31 Touch Points</b><span>31 days back to each other, through touch, fun and play. One small practice a day, in the app.</span><em>£27 →</em></div></a></div>
+</section>
+
+</main>
+
+<footer>Feel Fully You</footer>
+<script>
+(function(){
+  function fmt(t){t=Math.max(0,Math.round(t));return Math.floor(t/60)+":"+("0"+t%60).slice(-2)}
+  /* audio players */
+  var ICO_P='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>';
+  var ICO_S='<svg viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>';
+  var all=[];
+  [].forEach.call(document.querySelectorAll('.player[data-src]'),function(p){
+    p.innerHTML='<button class="play" aria-label="Play">'+ICO_P+'</button><div class="track"><div class="rail"><div class="fill"></div><div class="knob"></div></div><div class="times"><span class="cur">0:00</span><button class="spd" type="button" aria-label="Playback speed">1×</button><span class="dur">'+p.dataset.dur+'</span></div></div><audio preload="metadata" src="'+p.dataset.src+'"></audio>';
+    var a=p.querySelector('audio'),btn=p.querySelector('.play'),fill=p.querySelector('.fill'),knob=p.querySelector('.knob'),rail=p.querySelector('.rail'),cur=p.querySelector('.cur'),dur=p.querySelector('.dur');
+    all.push(a);var spd=p.querySelector('.spd');function rate(){var r=1;try{r=+localStorage.getItem('ffy-voice-rate')||1}catch(e){}return r}function lab(n){return (n===1?'1':String(n))+'\u00d7'}spd.textContent=lab(rate());a.addEventListener('play',function(){a.playbackRate=rate()});spd.onclick=function(){var n={1:1.25,1.25:1.5,1.5:1}[rate()]||1;try{localStorage.setItem('ffy-voice-rate',n)}catch(e){}[].forEach.call(document.querySelectorAll('.player'),function(q){var b=q.querySelector('.spd'),x=q.querySelector('audio');if(b)b.textContent=lab(n);if(x)x.playbackRate=n})};
+    function paint(){var x=a.duration?a.currentTime/a.duration*100:0;fill.style.width=x+'%';knob.style.left=x+'%';cur.textContent=fmt(a.currentTime)}
+    btn.onclick=function(){if(a.paused){all.forEach(function(o){if(o!==a)o.pause()});a.play()}else a.pause()};
+    a.addEventListener('play',function(){btn.innerHTML=ICO_S});
+    a.addEventListener('pause',function(){btn.innerHTML=ICO_P});
+    a.addEventListener('timeupdate',paint);
+    a.addEventListener('loadedmetadata',function(){dur.textContent=fmt(a.duration)});
+    var drag=false;
+    function seek(e){var r=rail.getBoundingClientRect();if(a.duration){a.currentTime=Math.min(1,Math.max(0,(e.clientX-r.left)/r.width))*a.duration;paint()}}
+    rail.addEventListener('pointerdown',function(e){drag=true;seek(e)});
+    window.addEventListener('pointermove',function(e){if(drag)seek(e)});
+    window.addEventListener('pointerup',function(){drag=false});
+  });
+})();
+</script>
+<style>
+/* app-style screens */
+body.app .bar{transform:none}
+body.app.on-cover .bar{transform:translateY(-100%)}
+.screen{display:none;padding-bottom:110px}
+.screen.cur{display:block;animation:scr .35s ease}
+@keyframes scr{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+body.app main{padding-top:58px}
+body.app main > section:first-child,body.app .screen > section:first-child{padding-top:48px}
+.cover.screen{padding-bottom:0}
+.begin{display:inline-flex;align-items:center;gap:10px;margin-top:30px;border:0;border-radius:99px;background:var(--accent);color:var(--bg);font-family:"Jost",sans-serif;font-weight:500;font-size:18px;padding:16px 30px;cursor:pointer}
+body.app .cover .scroll{display:none}
+.nav{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(26,24,20,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line);display:none}
+body.app:not(.on-cover) .nav{display:block}
+.nav .in{max-width:640px;margin:0 auto;display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:center}
+.nav button{border:0;cursor:pointer;border-radius:99px;font-family:"Inter",sans-serif;font-size:14px;padding:15px 18px}
+.nav .bk{background:transparent;color:var(--muted);border:1px solid var(--line);width:52px;padding:15px 0;font-size:18px;line-height:1}
+.nav .nx{background:var(--accent);color:var(--bg);font-family:"Jost",sans-serif;font-weight:500;font-size:16px;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav .nx small{font-family:"Inter",sans-serif;font-weight:400;font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.65;margin-right:8px}
+.stepof{display:block;text-align:center;font-family:"Inter",sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+</style>
+<nav class="nav" id="appnav"><span class="stepof" id="stepof"></span><div class="in"><button class="bk" id="bk" aria-label="Back">←</button><button class="nx" id="nx"></button></div></nav>
+<script>
+(function(){
+  var main=document.querySelector('main'),cover=document.querySelector('header.cover');
+  var chips=[].slice.call(document.querySelectorAll('#chips a'));
+  var prog=document.getElementById('prog');
+  // group main's children into screens: a section with an id starts a screen; figures join the NEXT screen; id-less sections join the previous one
+  var kids=[].slice.call(main.children),screens=[],pending=[];
+  kids.forEach(function(el){
+    if(el.tagName==='SECTION'&&el.id){var s=document.createElement('div');s.className='screen';s.dataset.id=el.id;screens.push(s);pending.forEach(function(p){s.appendChild(p)});pending=[];s.appendChild(el)}
+    else if(el.tagName==='FIGURE'){pending.push(el)}
+    else if(screens.length){screens[screens.length-1].appendChild(el)}
+    else pending.push(el);
+  });
+  screens.forEach(function(s){main.appendChild(s)});
+  pending.forEach(function(p){screens[screens.length-1].appendChild(p)});
+  cover.classList.add('screen');
+  var all=[cover].concat(screens);
+  var names=screens.map(function(s){var c=chips.filter(function(a){return a.getAttribute('href')==='#'+s.dataset.id})[0];return c?c.textContent.trim():s.dataset.id});
+  // cover button
+  var b=document.createElement('button');b.className='begin';b.textContent='Begin →';cover.querySelector('.in').appendChild(b);
+  b.onclick=function(){go(1);var w=document.querySelector('[data-welcome] audio');if(w){try{w.currentTime=0;var p=w.play();if(p&&p.catch)p.catch(function(){})}catch(e){}}};
+  document.body.classList.add('app');
+  var cur=0,key='ffy-step-'+location.pathname;
+  function stopMedia(){[].forEach.call(document.querySelectorAll('audio'),function(a){a.pause()})}
+  function go(i,noScroll){
+    i=Math.max(0,Math.min(all.length-1,i));
+    if(i!==cur)stopMedia();
+    all.forEach(function(s,k){s.classList.toggle('cur',k===i)});
+    cur=i;document.body.classList.toggle('on-cover',i===0);
+    chips.forEach(function(a,k){a.classList.toggle('cur',k===i-1)});
+    if(i>0){var c=chips[i-1];if(c)c.parentNode.scrollTo({left:c.offsetLeft-16,behavior:'smooth'})}
+    prog.style.width=(i/(all.length-1)*100)+'%';
+    document.getElementById('stepof').textContent=i>0?(i+' of '+screens.length):'';
+    var nx=document.getElementById('nx');
+    if(i<all.length-1){nx.innerHTML='<small>Next</small>'+names[i]+' →'}else{nx.innerHTML='Back to the start'}
+    // lazy iframes inside newly shown screen
+    [].forEach.call(all[i].querySelectorAll('iframe[data-src]'),function(f){if(!f.src&&!f.closest('[hidden]'))f.src=f.dataset.src});
+    if(!noScroll)window.scrollTo({top:0,behavior:'instant'});
+    try{localStorage.setItem(key,i)}catch(e){}
+    if(history.replaceState)history.replaceState(null,'',i>0?'#go-'+screens[i-1].dataset.id:location.pathname+location.search);
+  }
+  document.getElementById('nx').onclick=function(){go(cur<all.length-1?cur+1:0)};
+  document.getElementById('bk').onclick=function(){go(cur-1)};
+  chips.forEach(function(a,k){a.addEventListener('click',function(e){e.preventDefault();go(k+1)})});
+  // in-page links to a section (e.g. #after) switch screens
+  window.addEventListener('hashchange',function(){var id=location.hash.slice(1).replace(/^go-/,'');screens.forEach(function(s,k){if(s.dataset.id===id)go(k+1)})});
+  var start=0,h=location.hash.slice(1).replace(/^go-/,'');
+  if(h){screens.forEach(function(s,k){if(s.dataset.id===h)start=k+1})}
+  else{try{var v=+localStorage.getItem(key);if(v>0&&v<all.length)start=v}catch(e){}}
+  if('scrollRestoration' in history)history.scrollRestoration='manual';
+  go(start);
+  window.addEventListener('load',function(){setTimeout(function(){window.scrollTo({top:0,behavior:'instant'})},0)});
+  // progress bar is now the step bar, not scroll
+  window.addEventListener('scroll',function(){},{passive:true});
+})();
+</script>
+
+<script>
+/* interactive hub (27 Oct): progress saves on this phone */
+(function(){
+  var P=location.pathname, KD='ffy-done-'+P, KS='ffy-steps-'+P, KC='ffy-check-'+P, KJ='ffy-true-'+P, KP='ffy-path-'+P;
+  function g(k,d){try{var v=JSON.parse(localStorage.getItem(k));return v==null?d:v}catch(e){return d}}
+  function put(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+  var CARD={"what": ["Read \u00b7 1 min", "You already know the structure.", "media/hub/what.jpg", "media/hub/top-what.jpg"], "order": ["Read \u00b7 1 min", "The order matters.", "media/hub/order.jpg", "media/hub/top-order.jpg"], "app": ["Do it \u00b7 15 min a day", "Your thirty-one prompts live in the app, alongside your fifteen-minute timer.", "media/hub/app.jpg", "media/app.jpg"], "how": ["Read \u00b7 1 min", "Take the prompt fresh and give your own communication.", "media/hub/how.jpg", "media/peek-buda2.jpg"], "when": ["Before you start", "You only need fifteen minutes. Protect those fifteen minutes.", "media/hub/when.jpg", "media/hub/top-when.jpg"], "lose": ["Read \u00b7 1 min", "You probably will at some point. That's okay.", "media/hub/lose.jpg", "media/peek-her.jpg"]}, WHEN={}, LAB={}, FEAT="app";
+  var chips=[].slice.call(document.querySelectorAll('#chips a')), ids=chips.map(function(a){return a.getAttribute('href').slice(1)});
+  var done=g(KD,{});
+  function paint(){
+    var n=0;ids.forEach(function(id,k){var d=!!done[id];if(d)n++;chips[k].classList.toggle('done',d)});
+    var tot=ids.length,f=document.getElementById('ringf');if(f)f.style.strokeDashoffset=119.4*(1-n/tot);
+    var hn=document.getElementById('hubn');if(hn)hn.textContent=n+' of '+tot+' done';
+    var first=ids.filter(function(id){return !done[id]})[0];
+    [].forEach.call(document.querySelectorAll('.hubcard'),function(c){c.classList.toggle('done',!!done[c.dataset.id]);c.classList.toggle('next',c.dataset.id===first)});
+    var b=document.querySelector('.begin');if(b)b.textContent=n===0?'Begin →':(first?'Pick up where you left off →':'Back to the start →');
+  }
+  var hc=document.getElementById('hubcards');
+  if(hc)ids.forEach(function(id,k){var c=document.createElement('button');c.type='button';var ft=id===FEAT;c.className='hubcard'+(ft?' feat':'');c.dataset.id=id;var m=CARD[id]||['','',''];
+    var img=m[2]?(ft?'<span class="fimg"><img src="'+m[3]+'" alt=""></span>':'<img class="th" src="'+m[2]+'" alt="">'):'';
+    c.innerHTML=img+'<span class="tx"><small>'+m[0]+'</small><b>'+chips[k].textContent.replace(/^\d\s/,'')+'</b><em>'+m[1]+'</em></span><span class="c"></span>';
+    c.onclick=function(){chips[k].click()};hc.appendChild(c)});
+  var b=document.querySelector('.begin');var hubEl=document.getElementById('hub');var wl=document.getElementById('welc');if(b&&hubEl){hubEl.parentNode.insertBefore(b,wl||hubEl)}var sc=document.querySelector('.cover .scroll');if(sc)sc.style.display='none';
+  if(b){var orig=b.onclick;b.onclick=function(e){var first=ids.filter(function(id){return !done[id]})[0];if(!Object.keys(done).length||!first){orig&&orig.call(b,e)}else{chips[ids.indexOf(first)].click()}}}
+  function mark(id,btn){done[id]=1;put(KD,done);if(btn){btn.classList.add('on','glow');btn.textContent='Done ✓'}paint()}
+  var last=ids[ids.length-1];
+  ids.forEach(function(id){
+    var sec=document.getElementById(id);if(!sec||sec.querySelector('.dstep'))return;
+    var practice=/^Practice|^Do/.test((CARD[id]||[''])[0]);
+    var label=LAB[id]||(id===last?'Finished':(practice?'I did it':'Got it'));
+    var w=document.createElement('div');w.className='didit';
+    w.innerHTML=(WHEN[id]?'<p class="dw">'+WHEN[id]+'</p>':'')+'<button type="button" class="didbtn">'+label+' ✓</button>';
+    sec.appendChild(w);var btn=w.querySelector('.didbtn');
+    if(done[id]){btn.classList.add('on');btn.textContent='Done ✓'}
+    btn.onclick=function(){var was=done[id];mark(id,btn);if(!was&&id!==last)setTimeout(function(){var nx=document.getElementById('nx');if(nx)nx.click()},900)};
+  });
+  // pick your path (generic): .path[data-key] buttons data-a, panels .p-<a>
+  var paths=g(KP,{});
+  [].forEach.call(document.querySelectorAll('.path'),function(pa){var key=pa.dataset.key||'path';
+    function show(){var v=paths[key]||'';[].forEach.call(pa.querySelectorAll('.pbtns button'),function(x){x.classList.toggle('on',x.dataset.a===v)});[].forEach.call(pa.querySelectorAll('[data-p]'),function(p){p.hidden=p.dataset.p!==v})}
+    [].forEach.call(pa.querySelectorAll('.pbtns button'),function(x){x.onclick=function(){paths[key]=x.dataset.a;put(KP,paths);show()}});show()});
+  // checklists that remember
+  var chk=g(KC,{});
+  [].forEach.call(document.querySelectorAll('ul.check'),function(ul){var items=[].slice.call(ul.querySelectorAll('li'));
+    function upd(){var all=items.every(function(li,i){return chk[ul.dataset.key+i]});var r=ul.parentNode.querySelector('.ready');if(r)r.hidden=!all}
+    items.forEach(function(li,i){var k=ul.dataset.key+i;li.classList.toggle('on',!!chk[k]);li.querySelector('button').onclick=function(){chk[k]=!chk[k];put(KC,chk);li.classList.toggle('on',!!chk[k]);if(chk[k])li.querySelector('.bx').classList.add('glow');upd()}});upd()});
+  // do-it-now steps
+  var st=g(KS,{});
+  function stepPaint(){var ds=document.querySelectorAll('.dstep');if(!ds.length)return;var all=true;[].forEach.call(ds,function(d){var n=d.dataset.step,on=!!st[n];d.classList.toggle('done',on);var b=d.querySelector('.sdone');b.classList.toggle('on',on);if(!on)all=false});
+    var fin=document.getElementById('finish');if(fin)fin.hidden=!all;var sid=ds[0].closest('section').id;if(all&&!done[sid]){mark(sid);if(fin)fin.classList.add('glow')}}
+  [].forEach.call(document.querySelectorAll('.dstep'),function(d){var b=d.querySelector('.sdone');b.onclick=function(){st[d.dataset.step]=!st[d.dataset.step];put(KS,st);if(st[d.dataset.step]){b.classList.add('glow');var nx=d.nextElementSibling;if(nx&&nx.classList.contains('dstep'))setTimeout(function(){nx.scrollIntoView({behavior:'smooth',block:'start'})},700)}stepPaint()}});
+  stepPaint();
+  // journals (generic): .journal[data-key] with textarea, .jsave, .jlist
+  var J=g(KJ,{});if(Array.isArray(J))J={main:J};
+  [].forEach.call(document.querySelectorAll('.journal'),function(jb){var key=jb.dataset.key||'main',jt=jb.querySelector('textarea'),jl=jb.querySelector('.jlist'),js=jb.querySelector('.jsave');J[key]=J[key]||[];
+    function jp(){jl.innerHTML='';J[key].slice().reverse().forEach(function(e){var d=document.createElement('div');d.textContent=e.t;var sm=document.createElement('small');sm.textContent=e.d;d.appendChild(sm);jl.appendChild(d)})}
+    js.onclick=function(){var t=(jt.value||'').trim();if(!t)return;J[key].push({t:t,d:new Date().toLocaleDateString('en-GB',{day:'numeric',month:'short'})});put(KJ,J);jt.value='';jp();js.textContent='Saved ✓';js.classList.add('glow');setTimeout(function(){js.textContent='Save it';js.classList.remove('glow')},1500)};jp()});
+  paint();
+  [].forEach.call(document.querySelectorAll('a.golink'),function(a){a.addEventListener('click',function(e){var id=a.getAttribute('href').slice(1),k=ids.indexOf(id);if(k>-1){e.preventDefault();chips[k].click()}})});
+})();
+</script>
+</body>
+</html>
