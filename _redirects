@@ -163,7 +163,10 @@ https://shop.feelfullyyou.com/*  https://feelfullyyou.com/my-cards/  301!
 /the-communication-kit-order-page /communication-reboot-kit        301
 /links                          /links.html                     200
 /connect-with-essence           /connect-with-essence.html      200
-/the-touch-reboot                /the-touch-reboot.html           200
+# 27 Oct 2026: Touch Reboot paused (being renamed). TEMPORARY 302 to Work With Me.
+# When the new programme page is live, change this target to the new page and make it 301.
+/the-touch-reboot                /work-with-me                    302!
+/the-touch-reboot.html           /work-with-me                    302!
 /the-touch-reset                 /the-touch-reboot                301!
 /the-touch-reset.html            /the-touch-reboot                301!
 /the-room                       /the-touch-reboot                301!
