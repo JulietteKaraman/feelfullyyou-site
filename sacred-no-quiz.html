@@ -108,6 +108,11 @@
   .today .t{font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--teal)}
   .today p{margin-top:6px;font-family:var(--display);font-size:1.1rem;line-height:1.35}
   .share{margin-top:16px}
+  #gate{display:none}
+  .gate h2{font-size:1.6rem;margin:6px 0 6px}
+  .gate .gsub{color:rgba(254,252,250,.8);font-weight:300;margin-bottom:18px}
+  .gate .small{font-size:.8rem;color:rgba(254,252,250,.6);margin-top:12px;text-align:center}
+  .capture input[type=text].name{width:100%;background:rgba(254,252,250,.07);border:1px solid rgba(221,201,142,.4);border-radius:14px;padding:14px 15px;color:var(--cream);font-family:var(--body);font-size:1rem;margin-bottom:10px}
   .capture{margin-top:22px;text-align:left}
   .capture label{display:block;font-size:.88rem;color:var(--gold-pale);margin-bottom:8px}
   .capture input[type=email]{width:100%;background:rgba(254,252,250,.07);border:1px solid rgba(221,201,142,.4);border-radius:14px;padding:14px 15px;color:var(--cream);font-family:var(--body);font-size:1rem;margin-bottom:10px}
@@ -177,6 +182,27 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
       </div>
     </section>
 
+    <!-- GATE: the score is free, the pattern needs an email (27 Oct, Juliette:
+         "dont give her her reading - but let them fill in the email first") -->
+    <section id="gate">
+      <div class="result gate rise">
+        <img class="resphoto" src="sacred-no-quiz-face.jpg" alt="">
+        <div class="big" id="gBigNum"></div>
+        <p class="bigline" id="gBigLine"></p>
+        <div class="divider"></div>
+        <h2>Your pattern is ready.</h2>
+        <p class="gsub">Tell me where to send it, and I'll show you straight away.</p>
+        <form class="capture" id="capForm" autocomplete="on" style="margin-top:0">
+          <input type="text" class="name" id="fname" name="fname" placeholder="Your first name" autocomplete="given-name">
+          <input type="email" id="email" name="email" placeholder="you@email.com" required>
+          <input type="text" class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button type="submit" class="btn block" id="sendBtn">Show me my pattern</button>
+          <div class="msg" id="msg"></div>
+        </form>
+        <p class="small">Your pattern, then your next step by email. Unsubscribe any time.</p>
+      </div>
+    </section>
+
     <!-- REVEAL -->
     <section id="reveal">
       <div class="result rise">
@@ -196,13 +222,6 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
         <div class="share"><button class="btn block ghost" id="shareBtn">Share my score</button></div>
       </div>
 
-      <form class="capture" id="capForm" autocomplete="on" style="display:none">
-        <label for="email">Where shall I send your full reading and your next step?</label>
-        <input type="email" id="email" name="email" placeholder="you@email.com" required>
-        <input type="text" class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <button type="submit" class="btn block" id="sendBtn">Send my reading</button>
-        <div class="msg" id="msg"></div>
-      </form>
 
       <div class="cta">
         <div class="clabel">Your next step</div>
@@ -343,18 +362,29 @@ window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);
     if(typeof gtag==='function')gtag('event','quiz_start',{quiz:'sacred_no_swipe'});
   });
   function archetypeFor(s){for(var k=0;k<ARCH.length;k++){if(s>=ARCH[k].min&&s<=ARCH[k].max)return ARCH[k];}return s<10?ARCH[0]:ARCH[ARCH.length-1];}
+  var DEMO=/^(localhost|127\.0\.0\.1)$/.test(location.hostname);
+  function bigLineText(){return overrides===1?'One yes when your body said no.':overrides?('You said yes '+overrides+' times when your body said no.'):'Not one yes your body disagreed with.';}
   function doReveal(){
     var a=archetypeFor(score);winner=a.name;
-    $('game').classList.add('hidden');$('reveal').style.display='block';
+    $('game').classList.add('hidden');
+    if(WIRED){
+      $('gBigNum').textContent=overrides+'/10';$('gBigLine').textContent=bigLineText();
+      $('gate').style.display='block';window.scrollTo({top:0,behavior:'smooth'});
+      if(typeof gtag==='function')gtag('event','quiz_complete',{quiz:'sacred_no_swipe',result:winner,score:score,overrides:overrides});
+      return;
+    }
+    showResult();
+  }
+  function showResult(){
+    var a=archetypeFor(score);
+    $('gate').style.display='none';$('reveal').style.display='block';
     $('bigNum').textContent=overrides+'/10';
-    $('bigLine').textContent=overrides===1?'One yes when your body said no.':overrides?('You said yes '+overrides+' times when your body said no.'):'Not one yes your body disagreed with.';
+    $('bigLine').textContent=bigLineText();
     $('typeName').textContent=winner;
     var parts=a.copy.match(/[^.?!]+[.?!]+/g)||[a.copy];
     $('typeLead').textContent=parts.slice(0,2).join(' ').trim();
     $('typeFull').textContent=parts.slice(2).join(' ').trim();
-    if(WIRED)$('capForm').style.display='block';
     window.scrollTo({top:0,behavior:'smooth'});
-    if(typeof gtag==='function')gtag('event','quiz_complete',{quiz:'sacred_no_swipe',result:winner,score:score,overrides:overrides});
   }
   $('moreBtn').addEventListener('click',function(){$('typeFull').style.display='block';this.style.display='none';});
   $('shareBtn').addEventListener('click',function(){
@@ -365,22 +395,23 @@ window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);
   });
   $('restart').addEventListener('click',function(){
     i=0;score=0;overrides=0;
-    $('reveal').style.display='none';$('capForm').style.display='none';$('typeFull').style.display='none';$('moreBtn').style.display='';
+    $('reveal').style.display='none';$('gate').style.display='none';$('typeFull').style.display='none';$('moreBtn').style.display='';
     $('msg').textContent='';$('email').value='';$('game').classList.remove('hidden');render();
   });
   $('capForm').addEventListener('submit',function(e){
     e.preventDefault();
     var email=$('email').value.trim();var msg=$('msg');msg.className='msg';
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){msg.className='msg err';msg.textContent='Please enter a valid email.';return;}
-    var btn=$('sendBtn');btn.disabled=true;btn.textContent='Sending…';
+    var btn=$('sendBtn');btn.disabled=true;btn.textContent='One moment…';
+    if(DEMO){setTimeout(showResult,400);return;}
     fetch('/.netlify/functions/subscribe',{
       method:'POST',headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({email:email,tagIds:TAGS[winner]?[TAGS[winner]]:[],sequenceId:SEQ,archetype:winner,website:$('capForm').website.value})
+      body:JSON.stringify({email:email,firstName:$('fname').value.trim(),tagIds:TAGS[winner]?[TAGS[winner]]:[],sequenceId:SEQ,archetype:winner,website:$('capForm').website.value})
     }).then(function(r){return r.json().catch(function(){return {};});})
       .then(function(d){
-        if(d&&d.ok){msg.className='msg ok';msg.textContent='On its way. Read it slowly.';if(typeof gtag==='function')gtag('event','quiz_optin',{quiz:'sacred_no_swipe',result:winner});}
+        if(d&&d.ok){if(typeof gtag==='function')gtag('event','quiz_optin',{quiz:'sacred_no_swipe',result:winner});showResult();}
         else{throw new Error('fail');}
-      }).catch(function(){btn.disabled=false;btn.textContent='Send my reading';msg.className='msg err';msg.textContent='Something went wrong. Please try again.';});
+      }).catch(function(){btn.disabled=false;btn.textContent='Show me my pattern';msg.className='msg err';msg.textContent='Something went wrong. Please try again.';});
   });
 })();
 </script>
