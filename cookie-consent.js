@@ -2,7 +2,12 @@
    The Meta Pixel only loads after the visitor taps Accept (UK PECR / GDPR).
    Choice is remembered in localStorage as ffy-consent = "yes" | "no".
    To show the banner again: localStorage.removeItem('ffy-consent'). */
+// SWITCHED OFF 27 Oct 2026 at Juliette's request: no cookie box for now.
+// While off, the Meta Pixel only runs for visitors who already said yes before.
+// To bring the box (and new ad tracking) back, set BANNER_ON to true.
+var BANNER_ON = false;
 (function () {
+  if (!BANNER_ON) return;
   var KEY = 'ffy-consent';
   var choice = null;
   try { choice = localStorage.getItem(KEY); } catch (e) {}
