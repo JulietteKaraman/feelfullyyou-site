@@ -372,6 +372,7 @@ window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);
     else if(said){kind='override';pts=1;overrides++;}
     else{kind='hold';pts=3;}
     score+=pts;
+    try{if(typeof gtag==='function')gtag('event','quiz_swipe',{quiz:'sacred_no_swipe',step:i+1,said:said?'yes':'no',body:body,kind:kind});}catch(e){}
     var deck=$('deck');deck.innerHTML='';
     var f=document.createElement('div');f.className='flash';
     var L=kind==='override'?{bg:'#eede80',fg:'#1c1714'}:(kind==='yesyes'||kind==='nono')?{bg:'#0d3535',fg:'#eede80'}:{bg:'#d8dfe1',fg:'#0d3535'};

@@ -861,6 +861,8 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
 
   // ===== Dark dial quiz, 27 Oct 2026 =====
   var DQ_RESULT=null;
+  function T(n,o){try{if(typeof gtag==='function')gtag('event',n,o||{});}catch(e){}}
+
   var PICS=[
     {img:'/touch-lace-closet-bw.jpg',line:'Black lace,<br><em>against your skin.</em>',pl:'Sexual'},
     {img:'/touch-scarf-silk-2.jpg',line:'Silk,<br><em>sliding slowly across you.</em>',pl:'Sensual'},
@@ -935,14 +937,14 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
   function up(){if(!dragging)return;dragging=false;hum(false);if(touched)g('dqNext').classList.add('show');}
   dial.addEventListener('pointerup',up);dial.addEventListener('pointercancel',up);
   function showPic(){resetDial();var P=PICS[pi];photo(P.img,false,P.pos);g('dqLine').innerHTML=P.line;progress(pi+1);show('sDial');}
-  g('dqNext').onclick=function(){vals[pi]=v;breath();pi++;
-    if(pi===5&&!g('sHalf')._seen){g('sHalf')._seen=1;photo('/touch-grey-chest.jpg',true);show('sHalf');bell([523,659,784],.07);return;}
+  g('dqNext').onclick=function(){vals[pi]=v;T('quiz_picture',{quiz:'touch_reset',step:pi+1,picture:PICS[pi].img.replace(/^\/|\.jpg$/g,''),feeling:WORDS[Math.min(5,Math.floor(v*6))],value:Math.round(v*100)});breath();pi++;
+    if(pi===5&&!g('sHalf')._seen){g('sHalf')._seen=1;photo('/touch-grey-chest.jpg',true);show('sHalf');bell([523,659,784],.07);T('quiz_halfway',{quiz:'touch_reset'});return;}
     if(pi<PICS.length)showPic();else showTap();};
   g('dqOn').onclick=function(){stopVoice();showPic();};
-  function showTap(){var T=TAPS[ti];photo(T.img,true);g('dqTapK').textContent=T.k;g('dqTapQ').innerHTML=T.q;progress(PICS.length+ti+1);
+  function showTap(){var TT=TAPS[ti];photo(TT.img,true);g('dqTapK').textContent=TT.k;g('dqTapQ').innerHTML=TT.q;progress(PICS.length+ti+1);
     var box=g('dqTaps');box.className='taps';box.innerHTML='';
-    T.a.forEach(function(x){var b=document.createElement('button');b.type='button';b.className='tap';b.textContent=x[0];
-      b.onclick=function(){if(box.classList.contains('done'))return;ac();box.classList.add('done');b.classList.add('pick');picks[T.key]=x[1];bell([587,880],.08);
+    TT.a.forEach(function(x){var b=document.createElement('button');b.type='button';b.className='tap';b.textContent=x[0];
+      b.onclick=function(){if(box.classList.contains('done'))return;ac();box.classList.add('done');b.classList.add('pick');picks[TT.key]=x[1];T('quiz_tap',{quiz:'touch_reset',question:TT.key,answer:x[1]});bell([587,880],.08);
         setTimeout(function(){breath();ti++;if(ti<TAPS.length)showTap();else finish();},750);};box.appendChild(b);});
     show('sTap');}
   g('dqBegin').onclick=function(){ac();stopVoice();bell([440,660],.06);showPic();if(typeof gtag==='function')gtag('event','quiz_start',{quiz:'touch_reset',version:'dial'});};

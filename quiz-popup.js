@@ -23,6 +23,7 @@
   var path = window.location.pathname.replace(/\/$/, '').replace(/\.html$/, '');
   if (!FORCE && path !== '' && path !== '/index') return;
 
+  function T(n,o){try{if(typeof gtag==='function')gtag('event',n,o||{});}catch(e){}}
   function build(){
     var fl=document.createElement('link');fl.rel='stylesheet';fl.href='https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;1,200&display=swap';document.head.appendChild(fl);
     var styleEl = document.createElement('style');
@@ -46,6 +47,7 @@
     document.body.appendChild(overlay);
 
     function close(){
+      T('popup_close',{popup:'touch_reset_quiz'});
       overlay.classList.remove('in');
       sessionStorage.setItem('trq_popup_seen', '1');
       setTimeout(function(){ overlay.classList.remove('show'); }, 300);
@@ -55,6 +57,8 @@
     overlay.querySelector('.trq-dismiss').addEventListener('click', close);
     document.addEventListener('keydown', function(e){ if (e.key === 'Escape') close(); });
 
+    overlay.querySelector('.trq-cta').addEventListener('click',function(){T('popup_click',{popup:'touch_reset_quiz'});});
+    T('popup_shown',{popup:'touch_reset_quiz'});
     overlay.classList.add('show');
     setTimeout(function(){ overlay.classList.add('in'); }, 20);
     sessionStorage.setItem('trq_popup_seen', '1');
