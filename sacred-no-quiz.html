@@ -3,111 +3,128 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Are You Saying Yes When You Mean No? | Juliette Karaman</title>
-<meta name="description" content="A body-based quiz that reveals the pattern you lead from, and your way back to a clean no. Twelve honest questions, one true reading.">
+<title>The Sacred No Swipe Test | Juliette Karaman</title>
+<meta name="description" content="Ten everyday requests. Swipe yes or no, fast. Then ask your body. Find out how often you say yes when you mean no.">
 <link rel="canonical" href="https://feelfullyyou.com/sacred-no-quiz">
-<meta property="og:title" content="Are You Saying Yes When You Mean No? | Juliette Karaman">
-<meta property="og:description" content="A body-based quiz that reveals the pattern you lead from, and your way back to a clean no. Twelve honest questions, one true reading.">
+<meta property="og:title" content="The Sacred No Swipe Test | Juliette Karaman">
+<meta property="og:description" content="Ten everyday requests. Swipe fast. Then ask your body. How often do you say yes when you mean no?">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://feelfullyyou.com/sacred-no-quiz">
 <meta property="og:image" content="https://feelfullyyou.com/julietteherobarstools.jpg">
 <meta property="og:site_name" content="Feel Fully You">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Are You Saying Yes When You Mean No?">
-<meta name="twitter:description" content="A body-based quiz that reveals the pattern you lead from, and your way back to a clean no.">
+<meta name="twitter:title" content="The Sacred No Swipe Test">
+<meta name="twitter:description" content="Ten everyday requests. Swipe fast. Then ask your body.">
 <meta name="twitter:image" content="https://feelfullyyou.com/julietteherobarstools.jpg">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<!-- 27 Oct 2026: The Sacred No Swipe Test (Juliette: "Love the swipe idea").
+     Swipe yes/no fast, then "Did your body agree?". Same 7 archetypes and her
+     copy, same Kit tags + sequence. Her palette only. Requests drafted by
+     Claude for her to change. -->
 <style>
   :root{
-    --cream:#fefcfa;--paper:#fdfbf8;--ink:#1c1714;--brown:#5d4a33;
-    --gold:#a88538;--gold-deep:#99680c;--gold-soft:#b4a074;--gold-pale:#ddc98e;
-    --teal:#0d3535;--teal-deep:#061a1a;--line-dark:#1d3a39;
+    --cream:#fefcfa;--ink:#1c1714;--gold:#a88538;--gold-pale:#ddc98e;--lemon:#eede80;--deep-gold:#c29a4e;
+    --teal:#0d3535;--teal-deep:#061a1a;--blue:#d8dfe1;
     --display:'Poppins',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{background:var(--teal-deep);color:var(--cream);font-family:var(--body);font-size:1.0625rem;line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden;min-height:100vh;display:flex;flex-direction:column}
+  body{background:#061a1a;color:var(--cream);font-family:var(--body);font-size:1.0625rem;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;min-height:100vh;display:flex;flex-direction:column}
   a{color:inherit}
-  ::selection{background:var(--gold);color:#fff}
-
-  .topbar{background:var(--teal);height:60px;display:flex;align-items:center;justify-content:center;position:relative}
+  .topbar{background:var(--teal);height:56px;display:flex;align-items:center;justify-content:center}
   .topbar .brand{font-family:var(--display);font-weight:600;font-size:15px;letter-spacing:.04em;color:var(--cream);text-decoration:none}
   .topbar .brand b{color:var(--gold-pale);font-weight:600}
-
-  main{flex:1;display:flex;align-items:center;justify-content:center;padding:44px 20px}
-
-  .stage{position:relative;width:100%;max-width:560px;background:var(--teal);border-radius:18px;padding:46px 40px 40px;overflow:hidden;box-shadow:0 1px 0 rgba(168,133,56,.28) inset,0 30px 80px -40px rgba(0,0,0,.6)}
-  .glow{position:absolute;left:50%;bottom:-60px;transform:translateX(-50%);width:420px;height:260px;background:radial-gradient(closest-side,rgba(168,133,56,.20),rgba(168,133,56,0));pointer-events:none}
-  .inner{position:relative}
-
-  .eyebrow{font-family:var(--body);font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-pale);font-weight:400}
-  h1{font-family:var(--display);font-weight:500;color:var(--cream);line-height:1.12;letter-spacing:-.01em}
-  .divider{width:40px;height:1px;background:rgba(221,201,142,.5);margin:22px auto}
+  main{flex:1;display:flex;justify-content:center;padding:0 16px 40px;position:relative;isolation:isolate}
+  .bgphoto{position:fixed;inset:0;z-index:-2;background:url(sacred-no-quiz-juliette.jpg) center 20%/cover no-repeat;filter:blur(18px) saturate(1.1);transform:scale(1.15);opacity:.38}
+  .bgglow{position:fixed;inset:0;z-index:-1;background:radial-gradient(60% 45% at 50% 30%,rgba(238,222,128,.22),rgba(6,26,26,0) 70%),linear-gradient(180deg,rgba(6,26,26,.35),rgba(6,26,26,.85))}
+  .stage{position:relative;width:100%;max-width:440px}
+  .eyebrow{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-pale)}
+  h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.15}
+  .btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;cursor:pointer;border:none;font-family:var(--display);font-weight:500;font-size:1rem;padding:15px 30px;border-radius:999px;background:var(--gold-pale);color:var(--teal);transition:transform .15s}
+  .btn:active{transform:scale(.96)}
+  .btn.block{width:100%}
+  .ghost{background:transparent;border:1px solid rgba(221,201,142,.5);color:var(--gold-pale)}
+  .hidden{display:none !important}
+  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  @keyframes pop{0%{transform:scale(.8);opacity:0}60%{transform:scale(1.06);opacity:1}100%{transform:scale(1)}}
+  .rise{animation:rise .45s ease both}
 
   /* intro */
   #intro{text-align:center}
-  #intro h1{font-size:2rem;margin:16px 0 0}
-  #intro .sub{color:rgba(254,252,250,.78);font-weight:300;font-size:1.02rem;line-height:1.7;margin:18px auto 0;max-width:42ch}
-  #intro .note{color:rgba(221,201,142,.85);font-style:italic;font-size:.85rem;margin-top:20px;font-weight:300}
+  .photo{width:calc(100% + 32px);margin:0 -16px;height:56vh;min-height:360px;object-fit:cover;object-position:50% 18%;display:block;-webkit-mask-image:linear-gradient(180deg,#000 60%,transparent);mask-image:linear-gradient(180deg,#000 60%,transparent)}
+  #intro{margin-top:0}
+  #intro .inner{margin-top:-90px;position:relative}
+  #intro h1{font-size:2.6rem;margin:10px 0 8px;text-shadow:0 4px 24px rgba(0,0,0,.5)}
+  #intro h1 em{font-style:normal;color:var(--lemon)}
+  #intro .sub{color:rgba(254,252,250,.82);font-weight:300;max-width:34ch;margin:0 auto 20px}
+  .how{display:flex;justify-content:center;gap:10px;margin:0 auto 22px;font-size:.88rem;color:rgba(254,252,250,.75)}
+  .how span{border:1px solid rgba(221,201,142,.4);border-radius:999px;padding:6px 12px}
 
-  .btn{display:inline-block;text-decoration:none;cursor:pointer;border:none;font-family:var(--display);font-weight:500;font-size:.95rem;letter-spacing:.01em;padding:13px 30px;border-radius:10px;background:var(--gold-pale);color:var(--teal);transition:transform .2s,background .2s}
-  .btn:hover{background:#e7d6a3;transform:translateY(-1px)}
-  .btn.block{width:100%;padding:14px 0;text-align:center}
-  .btn[disabled]{opacity:.35;pointer-events:none}
-  .btn-ghost{background:transparent;border:1px solid rgba(221,201,142,.4);color:var(--gold-pale);border-radius:10px;padding:11px 18px;font-family:var(--body);font-size:.85rem;cursor:pointer;font-weight:300}
+  /* game */
+  .asker{display:flex;align-items:center;gap:12px;margin:22px 0 14px}
+  .asker img{width:46px;height:46px;border-radius:50%;object-fit:cover;object-position:50% 15%;border:2px solid var(--gold-pale);box-shadow:0 0 20px -4px rgba(221,201,142,.7)}
+  .asker p{font-family:var(--display);font-size:1rem;line-height:1.2}
+  .asker small{display:block;font-family:var(--body);font-size:.78rem;color:rgba(254,252,250,.7)}
+  .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;font-size:.85rem;color:rgba(254,252,250,.7)}
+  .tally{color:var(--lemon);font-weight:500}
+  .deck{position:relative;height:420px}
+  .card{position:absolute;inset:0;border-radius:26px;padding:28px 24px;border:2px solid rgba(221,201,142,.9);display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 30px 60px -24px rgba(0,0,0,.9),0 0 50px -12px rgba(238,222,128,.45);touch-action:none;user-select:none;cursor:grab;will-change:transform}
+  .card.back{transform:scale(.94) translateY(16px);opacity:.55;pointer-events:none}
+  .card .num{font-size:11px;letter-spacing:.24em;text-transform:uppercase;opacity:.7}
+  .card .req{font-family:var(--display);font-size:1.85rem;line-height:1.2;font-weight:500}
+  .card .req:before{content:'\201C';display:block;font-size:4rem;line-height:.6;opacity:.35;margin-bottom:6px}
+  .card .hint{font-size:.85rem;opacity:.7;text-align:center}
+  .stamp{position:absolute;top:26px;padding:6px 14px;border-radius:10px;font-family:var(--display);font-weight:600;font-size:1.3rem;letter-spacing:.06em;border:3px solid;opacity:0;transform:rotate(-12deg)}
+  .stamp.yes{right:22px;color:#0d3535;border-color:#0d3535;background:var(--lemon)}
+  .stamp.no{left:22px;color:var(--cream);border-color:var(--cream);background:var(--teal);transform:rotate(12deg)}
+  .controls{display:flex;gap:12px;margin-top:18px}
+  .controls button{flex:1;padding:16px 0;border-radius:999px;font-family:var(--display);font-size:1.05rem;font-weight:500;cursor:pointer;border:none}
+  .controls .no{background:var(--teal);color:var(--cream);border:1.5px solid rgba(221,201,142,.5)}
+  .controls .yes{background:var(--lemon);color:var(--ink)}
 
-  /* progress */
-  .proghead{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:12px}
-  .proghead .l{width:24px;height:1px;background:rgba(221,201,142,.4)}
-  .track{height:2px;background:rgba(254,252,250,.1);border-radius:2px;overflow:hidden}
-  .track .bar{height:100%;width:0;background:var(--gold);transition:width .3s}
+  /* body check */
+  .bodycheck{position:absolute;inset:0;border-radius:26px;background:var(--cream);color:var(--teal);padding:28px 24px;display:flex;flex-direction:column;justify-content:center;text-align:center;animation:pop .35s ease both}
+  .bodycheck .you{font-size:.85rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+  .bodycheck h2{font-size:1.7rem;margin:10px 0 22px}
+  .bodycheck .row{display:flex;flex-direction:column;gap:10px}
+  .bodycheck button{padding:15px;border-radius:999px;font-family:var(--display);font-size:1.02rem;cursor:pointer;border:1.5px solid var(--teal);background:transparent;color:var(--teal)}
+  .bodycheck button.y{background:var(--teal);color:var(--cream)}
+  .flash{position:absolute;inset:0;border-radius:26px;display:flex;align-items:center;justify-content:center;text-align:center;padding:30px;font-family:var(--display);font-size:1.6rem;line-height:1.25;animation:pop .35s ease both}
 
-  /* question */
-  .qtext{font-family:var(--display);color:var(--cream);font-size:1.22rem;font-weight:500;line-height:1.4;text-align:center;margin:22px 0 22px}
-  .opts{display:flex;flex-direction:column;gap:9px}
-  .opt{font-family:var(--body);text-align:left;width:100%;background:rgba(254,252,250,.035);border:1px solid rgba(221,201,142,.26);border-radius:11px;padding:14px 17px;font-size:.95rem;color:rgba(254,252,250,.82);line-height:1.5;cursor:pointer;transition:border-color .18s,background .18s,color .18s;font-weight:300}
-  .opt:hover{border-color:rgba(221,201,142,.6);background:rgba(221,201,142,.07)}
-  .opt.sel{border-color:var(--gold-pale);border-width:1.5px;background:rgba(221,201,142,.13);color:var(--cream)}
-  .qfoot{text-align:center;margin-top:24px}
-
-  /* reveal */
-  #reveal{text-align:center;display:none}
-  #reveal h1{font-size:2.1rem;margin:14px 0 0}
-  #reveal .copy{color:rgba(254,252,250,.86);font-weight:300;font-size:1.02rem;line-height:1.8;margin:0 auto 24px;max-width:46ch;text-align:left}
-  .capture{max-width:380px;margin:0 auto}
-  .capture label{display:block;font-size:.82rem;color:var(--gold-pale);letter-spacing:.02em;margin-bottom:10px;font-weight:300}
-  .capture input[type=email]{width:100%;background:rgba(254,252,250,.06);border:1px solid rgba(221,201,142,.35);border-radius:10px;padding:13px 15px;color:var(--cream);font-family:var(--body);font-size:.95rem;margin-bottom:10px}
-  .capture input[type=email]::placeholder{color:rgba(254,252,250,.4)}
-  .capture input[type=email]:focus{outline:none;border-color:var(--gold-pale)}
+  /* result */
+  #reveal{display:none}
+  .resphoto{width:96px;height:96px;border-radius:50%;object-fit:cover;object-position:50% 15%;border:2px solid var(--gold-pale);margin:-70px auto 10px;display:block;box-shadow:0 0 30px -6px rgba(221,201,142,.8)}
+  .result{margin-top:60px;background:linear-gradient(160deg,rgba(13,53,53,.92),rgba(6,26,26,.95) 70%);border:1.5px solid var(--gold-pale);border-radius:26px;padding:28px 22px;text-align:center;box-shadow:0 0 60px -20px rgba(221,201,142,.55)}
+  .big{font-family:var(--display);font-size:4.2rem;line-height:1;color:var(--lemon);font-weight:500}
+  .bigline{font-size:1.15rem;margin-top:8px}
+  .divider{width:40px;height:1px;background:rgba(221,201,142,.5);margin:20px auto}
+  .result h1{font-size:2rem;color:var(--cream);margin:6px 0 12px}
+  .result .lead{font-size:1.05rem;line-height:1.6;font-weight:300}
+  .more{margin-top:12px;background:none;border:none;color:var(--gold-pale);text-decoration:underline;text-underline-offset:4px;cursor:pointer;font-size:.92rem;font-family:var(--body)}
+  .full{text-align:left;color:rgba(254,252,250,.85);font-weight:300;margin-top:12px;display:none}
+  .today{margin-top:16px;background:var(--lemon);color:var(--ink);border-radius:18px;padding:16px 18px;text-align:left}
+  .today .t{font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--teal)}
+  .today p{margin-top:6px;font-family:var(--display);font-size:1.1rem;line-height:1.35}
+  .share{margin-top:16px}
+  .capture{margin-top:22px;text-align:left}
+  .capture label{display:block;font-size:.88rem;color:var(--gold-pale);margin-bottom:8px}
+  .capture input[type=email]{width:100%;background:rgba(254,252,250,.07);border:1px solid rgba(221,201,142,.4);border-radius:14px;padding:14px 15px;color:var(--cream);font-family:var(--body);font-size:1rem;margin-bottom:10px}
   .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
-  .msg{font-size:.85rem;margin-top:12px;min-height:1.2em}
-  .msg.err{color:#e6b8b8}
-  .msg.ok{color:var(--gold-pale)}
-
-  /* challenge CTA */
-  .cta{margin:6px auto 0;max-width:420px;background:rgba(221,201,142,.07);border:1px solid rgba(221,201,142,.28);border-radius:14px;padding:24px 24px 26px}
-  .cta .clabel{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-pale);font-weight:400}
-  .cta h3{font-family:var(--display);font-weight:500;font-size:1.28rem;color:var(--cream);margin:10px 0 8px;line-height:1.25}
-  .cta p{color:rgba(254,252,250,.8);font-weight:300;font-size:.95rem;line-height:1.65;margin-bottom:18px}
-  .cta .price{color:var(--gold-pale);font-weight:400}
-
-  .again{margin-top:18px}
-  .again button{background:transparent;border:none;color:rgba(221,201,142,.8);font-size:.8rem;cursor:pointer;text-decoration:underline;font-weight:300;font-family:var(--body)}
-
-  footer{background:var(--gold);color:#fff;padding:20px 28px;font-size:13px}
+  .msg{font-size:.88rem;margin-top:10px;min-height:1.2em}
+  .msg.err{color:#f0d6a0}.msg.ok{color:var(--gold-pale)}
+  .cta{margin-top:22px;background:var(--cream);color:var(--ink);border-radius:22px;padding:22px;text-align:left}
+  .cta .clabel{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  .cta h3{font-size:1.4rem;margin:8px 0 6px;color:var(--teal)}
+  .cta p{font-weight:300;margin-bottom:16px}
+  .cta .btn{background:var(--teal);color:var(--cream)}
+  .again{margin-top:18px;text-align:center}
+  .again button{background:transparent;border:none;color:rgba(221,201,142,.8);font-size:.85rem;cursor:pointer;text-decoration:underline;font-family:var(--body)}
+  footer{background:var(--gold);color:#fff;padding:18px 22px;font-size:13px}
   footer .fwrap{max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
-  footer .fbrand{font-family:var(--display);font-weight:600;font-size:.95rem;color:#fff}
+  footer .fbrand{font-family:var(--display);font-weight:600;color:#fff}
   footer a{color:#fff}
-
-  @media(max-width:560px){
-    .stage{padding:38px 24px 32px}
-    #intro h1{font-size:1.7rem}
-    .qtext{font-size:1.12rem}
-    #reveal h1{font-size:1.85rem}
-  }
 </style>
 <!-- Meta Pixel Code (loads only after cookie consent, see /cookie-consent.js) -->
 <script>
@@ -132,55 +149,71 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
 <body>
 
 <div class="topbar"><a class="brand" href="/">Feel Fully <b>You</b></a></div>
+<div class="bgphoto" aria-hidden="true"></div><div class="bgglow" aria-hidden="true"></div>
 
 <main>
   <div class="stage">
-    <div class="glow"></div>
-    <div class="inner">
 
-      <!-- INTRO -->
-      <section id="intro">
-        <div class="eyebrow">The Sacred No</div>
-        <h1>Are you saying yes when you mean no?</h1>
-        <p class="sub">Twelve honest questions. Let your body answer first. At the end, the pattern you are leading from, and your way back to a clean no.</p>
-        <div style="margin-top:30px"><button class="btn" id="begin">Begin</button></div>
-        <p class="note">No right answers. Only true ones.</p>
-      </section>
+    <!-- INTRO -->
+    <section id="intro">
+      <img class="photo" src="sacred-no-quiz-juliette.jpg" alt="Juliette Karaman in a white dress and wide hat">
+      <div class="inner">
+      <div class="eyebrow">The Sacred No</div>
+      <h1>The <em>Swipe</em> Test</h1>
+      <p class="sub">Ten everyday requests. Swipe fast, don't think. Then ask your body if it agreed.</p>
+      <div class="how"><span>&larr; No</span><span>Yes &rarr;</span></div>
+      <button class="btn" id="begin">Start swiping</button>
+      </div>
+    </section>
 
-      <!-- QUIZ -->
-      <section id="quiz" style="display:none">
-        <div class="proghead"><span class="l"></span><span class="eyebrow" id="prog">01 / 12</span><span class="l"></span></div>
-        <div class="track"><div class="bar" id="bar"></div></div>
-        <h2 class="qtext" id="question"></h2>
-        <div class="opts" id="opts"></div>
-      </section>
+    <!-- GAME -->
+    <section id="game" class="hidden">
+      <div class="asker"><img src="sacred-no-quiz-face.jpg" alt=""><p>Quick, don't think.<small>Would you say yes?</small></p></div>
+      <div class="top"><span id="count">1 of 10</span><span class="tally" id="tally"></span></div>
+      <div class="deck" id="deck"></div>
+      <div class="controls" id="controls">
+        <button class="no" id="noBtn">&larr; No</button>
+        <button class="yes" id="yesBtn">Yes &rarr;</button>
+      </div>
+    </section>
 
-      <!-- REVEAL -->
-      <section id="reveal">
+    <!-- REVEAL -->
+    <section id="reveal">
+      <div class="result rise">
+        <img class="resphoto" src="sacred-no-quiz-face.jpg" alt="">
+        <div class="big" id="bigNum"></div>
+        <p class="bigline" id="bigLine"></p>
+        <div class="divider"></div>
         <div class="eyebrow">Your pattern</div>
         <h1 id="typeName"></h1>
-        <div class="divider"></div>
-        <p class="copy" id="typeCopy"></p>
-
-        <form class="capture" id="capForm" autocomplete="on" style="display:none">
-          <label for="email">Where shall I send your full reading and your next step?</label>
-          <input type="email" id="email" name="email" placeholder="you@email.com" required>
-          <input type="text" class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <button type="submit" class="btn block" id="sendBtn">Send my reading</button>
-          <div class="msg" id="msg"></div>
-        </form>
-
-        <div class="cta" id="cta">
-          <div class="clabel">Your next step</div>
-          <h3>The Sacred No</h3>
-          <p>Your no can become clean. A seven-day, body-based reset. A few minutes a day to feel your yes and your no in real time, and to stop softening what is true. <span class="price">&pound;27.</span></p>
-          <a href="/sacred-no" class="btn block">Step into The Sacred No</a>
+        <p class="lead" id="typeLead"></p>
+        <button class="more" id="moreBtn">Read your full reading</button>
+        <p class="full" id="typeFull"></p>
+        <div class="today">
+          <div class="t">Try today</div>
+          <p>Say one no without explaining it. Your no is a full sentence.</p>
         </div>
+        <div class="share"><button class="btn block ghost" id="shareBtn">Share my score</button></div>
+      </div>
 
-        <div class="again"><button id="restart">start again</button></div>
-      </section>
+      <form class="capture" id="capForm" autocomplete="on" style="display:none">
+        <label for="email">Where shall I send your full reading and your next step?</label>
+        <input type="email" id="email" name="email" placeholder="you@email.com" required>
+        <input type="text" class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button type="submit" class="btn block" id="sendBtn">Send my reading</button>
+        <div class="msg" id="msg"></div>
+      </form>
 
-    </div>
+      <div class="cta">
+        <div class="clabel">Your next step</div>
+        <h3>The Sacred No</h3>
+        <p>Your no can become clean. A seven-day, body-based reset. A few minutes a day to feel your yes and your no in real time, and to stop softening what is true. <b>&pound;17.</b></p>
+        <a href="/sacred-no" class="btn block">Step into The Sacred No</a>
+      </div>
+
+      <div class="again"><button id="restart">swipe again</button></div>
+    </section>
+
   </div>
 </main>
 
@@ -202,161 +235,142 @@ window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);
 
 <script>
 (function(){
-  // ---- KIT WIRING (fill once Kit is connected) ----
-  // One tag per archetype + one Sacred No nurture sequence.
-  // While these are 0, the email capture stays hidden and the quiz still
-  // delivers the full reading on-page + the paid CTA. Drop the real IDs in
-  // and set SEQ to switch the email capture on.
+  // ---- KIT WIRING (unchanged) ----
   var TAGS={
     'The Practiced Yes':20974673,'The Steady Giver':20974674,'The Armoured One':20974675,
     'The Rhythm Restorer':20974677,'The Living Signal':20974683,'The Embodied Current':20974684,'The Remembered One':20974685
   };
-  var SEQ=2820133; // Sacred No nurture sequence id
-  var WIRED = !!SEQ;
+  var SEQ=2820133;
+  var WIRED=!!SEQ;
 
-  // ---- ARCHETYPES (score bands rescaled for 12 questions, range 12-60) ----
+  // ---- ARCHETYPES: her copy unchanged. Bands for 10 cards (score 10-50). ----
   var ARCH=[
-    {name:'The Practiced Yes',min:12,max:22,copy:"You have learned to stay composed, considerate, capable. You are a master of managing the moment. Underneath the surface, your body is whispering that this is not it. You have softened your edges, held your breath, bitten your tongue to stay liked, needed, safe. Your system wants something truer now. Not more effort. Not more proving. More truth, more feeling, more choice."},
-    {name:'The Steady Giver',min:23,max:31,copy:"You have held it together. Provided. Anticipated everyone else's needs before your own. Your instinct is to give more, fix more, prove more, to stay useful and keep going. Your patterns were wise. They were woven through care, survival, and high standards. They are not the whole story anymore. Your body is asking for something more true, and it is time to feel it."},
-    {name:'The Armoured One',min:32,max:41,copy:"You are strong, sovereign, grounded. You know how to hold it all, and you do it well. Lately your body has been asking a quieter question. Is there another way to be held? You are not afraid of intensity. You are ready for a new kind of power. One that moves with clarity instead of force. One that holds without gripping. One that leads through presence, not pressure."},
-    {name:'The Rhythm Restorer',min:42,max:47,copy:"You are no longer rushing to meet the moment. You have started saying no. Creating space. Choosing slowness where you used to choose speed. It is tender, and sometimes unfamiliar. A rhythm is emerging underneath it all, and it is yours. You are not behind. You are in restoration. Every time you pause, you reclaim your power."},
-    {name:'The Living Signal',min:48,max:53,copy:"You are becoming the truth you used to withhold. You pause before replying. You listen before reacting. Your yes is clean. Your no is calm. People feel your clarity before you speak, because you are no longer adjusting your signal to be received. This next chapter is about sustaining it, so it does not flicker under pressure or fade in intimacy. It amplifies."},
-    {name:'The Embodied Current',min:54,max:57,copy:"You are not just clear. You are alive. You lead with your body. You speak from sensation. Your no does not need to explain itself. It simply is. You are magnetic because you pulse, not because you perform. What you are ready for now is deeper truth transmission, real-time refinement, and erotic self-trust."},
-    {name:'The Remembered One',min:58,max:60,copy:"You move from centre. You speak without seeking. You do not explain your no. You do not apologise for your yes. You live from the body, not from performance, not from pressure. Embodiment is a devotion, and what you carry now is not just for you."}
+    {name:'The Practiced Yes',min:10,max:18,copy:"You have learned to stay composed, considerate, capable. You are a master of managing the moment. Underneath the surface, your body is whispering that this is not it. You have softened your edges, held your breath, bitten your tongue to stay liked, needed, safe. Your system wants something truer now. Not more effort. Not more proving. More truth, more feeling, more choice."},
+    {name:'The Steady Giver',min:19,max:26,copy:"You have held it together. Provided. Anticipated everyone else's needs before your own. Your instinct is to give more, fix more, prove more, to stay useful and keep going. Your patterns were wise. They were woven through care, survival, and high standards. They are not the whole story anymore. Your body is asking for something more true, and it is time to feel it."},
+    {name:'The Armoured One',min:27,max:34,copy:"You are strong, sovereign, grounded. You know how to hold it all, and you do it well. Lately your body has been asking a quieter question. Is there another way to be held? You are not afraid of intensity. You are ready for a new kind of power. One that moves with clarity instead of force. One that holds without gripping. One that leads through presence, not pressure."},
+    {name:'The Rhythm Restorer',min:35,max:39,copy:"You are no longer rushing to meet the moment. You have started saying no. Creating space. Choosing slowness where you used to choose speed. It is tender, and sometimes unfamiliar. A rhythm is emerging underneath it all, and it is yours. You are not behind. You are in restoration. Every time you pause, you reclaim your power."},
+    {name:'The Living Signal',min:40,max:44,copy:"You are becoming the truth you used to withhold. You pause before replying. You listen before reacting. Your yes is clean. Your no is calm. People feel your clarity before you speak, because you are no longer adjusting your signal to be received. This next chapter is about sustaining it, so it does not flicker under pressure or fade in intimacy. It amplifies."},
+    {name:'The Embodied Current',min:45,max:47,copy:"You are not just clear. You are alive. You lead with your body. You speak from sensation. Your no does not need to explain itself. It simply is. You are magnetic because you pulse, not because you perform. What you are ready for now is deeper truth transmission, real-time refinement, and erotic self-trust."},
+    {name:'The Remembered One',min:48,max:50,copy:"You move from centre. You speak without seeking. You do not explain your no. You do not apologise for your yes. You live from the body, not from performance, not from pressure. Embodiment is a devotion, and what you carry now is not just for you."}
   ];
 
-  // ---- QUESTIONS (options ordered A..E = 1..5 points) ----
-  var Q=[
-    ["A friend texts: could you pick up my son from school today? Your afternoon is packed and you had a moment of rest planned. You:",
-      ["Say yes instantly. You don't want to seem selfish.",
-       "Say yes, then resent it and cancel your own plans.",
-       "Feel your body say no, but type sure anyway.",
-       "Pause, feel the tug, and reply: I would love to help, but I am not available today.",
-       "Say no, without apology or explanation."]],
-    ["Your partner reaches for intimacy when you are feeling emotionally off-centre. You:",
-      ["Go along with it to avoid hurting their feelings.",
-       "Smile and perform, even though you are not really into it.",
-       "Hesitate, then convince yourself to just do it.",
-       "Touch base with yourself and share what you do feel available for.",
-       "Gently say no and suggest a time that feels better for you."]],
-    ["You are invited to a social event after a draining week. Your body wants rest. You:",
-      ["Say yes. You don't want to disappoint anyone.",
-       "Say yes, then start plotting your early exit.",
-       "Delay answering, hoping it gets cancelled.",
-       "Thank them and decline.",
-       "Trust your no and celebrate your sacred rest."]],
-    ["Someone touches your arm in conversation. It lingers longer than you like. You:",
-      ["Feel uncomfortable but say nothing, hoping they stop.",
-       "Laugh it off and move slightly away.",
-       "Endure it. It is not a big deal.",
-       "Adjust your body or gently pull back.",
-       "Adjust yourself and clearly say: that is not comfortable for me."]],
-    ["During a massage or bodywork session, something feels off. You:",
-      ["Stay silent. You don't want to seem rude.",
-       "Tell yourself to just get through it.",
-       "Shift a little to make it seen, but you don't want to say it out loud.",
-       "Say: can we change the pressure? and guide what feels better.",
-       "Redirect the touch and the energy to how you want it."]],
-    ["A friend offers a hug. You are not feeling it. You:",
-      ["Hug them back and fake the warmth.",
-       "Freeze but let it happen. It is expected.",
-       "Smile and make it quick, even though it felt like a no.",
-       "Offer a wave or a smile instead.",
-       "Say: I am not feeling a hug right now, but I am happy to see you."]],
-    ["You are asked to explain why you are saying no. You:",
-      ["Overexplain to make it sound reasonable.",
-       "Apologise and justify with something valid.",
-       "Offer a little white lie to soften the edge.",
-       "Say I am not available, with groundedness.",
-       "Trust that your no is a full sentence. If needed, you offer a grounded truth without justifying."]],
-    ["In a conversation, someone shares something that crosses a line. You:",
-      ["Smile tightly and stay quiet.",
-       "Feel discomfort but don't want to make it a thing.",
-       "Change the subject quickly so nobody has to feel it.",
-       "Say: I actually don't find that funny.",
-       "Calmly let them know: that does not feel okay with me. I am not available for that."]],
-    ["You have shared what you are available for, and someone pushes back. You:",
-      ["Give in to keep the peace.",
-       "Feel shaky and start second-guessing yourself.",
-       "Overexplain or soften your stance to make it easier to receive.",
-       "Reaffirm your standard with calm clarity, even if it is uncomfortable.",
-       "Stay anchored. You express your truth, and if it is not respected, you remove yourself from the dynamic."]],
-    ["A friend looks you in the eyes and says: the way you move through the world is powerful, unforgettable. You:",
-      ["Shrink and deflect. Oh, this is nothing.",
-       "Make a joke. I had you fooled, then.",
-       "Say thank you, then feel the urge to compliment them straight back.",
-       "Breathe and smile, though part of you feels you have to earn being seen that way.",
-       "Receive it. Let it land. You simply let it be true."]],
-    ["You are used to being the strong one, the capable one. When you are struggling, you:",
-      ["Stay silent. You don't want to be a burden.",
-       "Wait for someone to notice, hoping they just know.",
-       "Drop hints. Sigh more. Hope your body gets read.",
-       "Ask, but only after you have reached breaking point.",
-       "Ask clearly for what you need, and how others can help."]],
-    ["When your body says no, but your mind says play nice now, you:",
-      ["Override it and default to what keeps things running smoothly.",
-       "Smile and stay agreeable. It is easier than disruption.",
-       "Notice the disconnect, then soften to keep the peace.",
-       "Try to honour your truth while managing their feelings.",
-       "Honour what your body knows, even if it disrupts the moment."]]
+  // ---- THE TEN REQUESTS (drafted for Juliette to change) ----
+  var REQ=[
+    "Mum wants to come for Christmas. All of Christmas.",
+    "Can you just quickly look over my CV? Tonight?",
+    "He's in the mood. You're half asleep.",
+    "Your friend needs a lift to the airport. At 5am.",
+    "Fancy one more glass?",
+    "Can you host book club this month? Your house is bigger.",
+    "A colleague wants “a quick call”. It's Saturday.",
+    "Your grown-up son asks to borrow money. Again.",
+    "Someone you've just met goes in for a hug.",
+    "Your partner wants to try something new in bed tonight."
   ];
+  var LOOK=[
+    {bg:'#fefcfa',fg:'#0d3535'},{bg:'#eede80',fg:'#1c1714'},{bg:'#d8dfe1',fg:'#0d3535'},
+    {bg:'#c29a4e',fg:'#1c1714'},{bg:'#ddc98e',fg:'#1c1714'}
+  ];
+  // Flash lines (drafted for Juliette to change)
+  var FLASH={
+    override:["Your mouth said yes. Your body didn't.","That yes cost you something.","Hello, people-pleaser."],
+    hold:["You said no to something your body wanted. Interesting.","Your body was up for it. You weren't."],
+    clean:["Clean.","That one landed in your body.","Your yes and your body agreed."],
+    unsure:["Not sure is information too."]
+  };
 
-  var i=0,score=0,winner='',locked=false;
   var $=function(id){return document.getElementById(id);};
-  var intro=$('intro'),quiz=$('quiz'),reveal=$('reveal');
-  var N=Q.length;
+  var i=0,score=0,overrides=0,winner='',busy=false,said=null;
+  var N=REQ.length;
 
-  function pad(n){return n<10?'0'+n:''+n;}
-  function renderQ(){
-    locked=false;
-    $('question').textContent=Q[i][0];
-    $('prog').textContent=pad(i+1)+' / '+N;
-    $('bar').style.width=Math.round(i/N*100+6)+'%';
-    var box=$('opts');box.innerHTML='';
-    Q[i][1].forEach(function(text,idx){
-      var b=document.createElement('button');
-      b.type='button';b.className='opt';b.textContent=text;
-      b.addEventListener('click',function(){
-        if(locked)return;
-        locked=true;
-        Array.prototype.forEach.call(box.children,function(c){c.classList.remove('sel');});
-        b.classList.add('sel');
-        score+=(idx+1);
-        setTimeout(function(){
-          if(i<Q.length-1){i++;renderQ();}else{doReveal();}
-        },340);
-      });
-      box.appendChild(b);
-    });
+  function pick(a){return a[Math.floor(Math.random()*a.length)];}
+  function render(){
+    var deck=$('deck');deck.innerHTML='';busy=false;said=null;
+    $('count').textContent=(i+1)+' of '+N;
+    $('tally').textContent=overrides?('Yes when body said no: '+overrides):'';
+    if(i+1<N){var b=makeCard(i+1);b.classList.add('back');deck.appendChild(b);}
+    var c=makeCard(i);deck.appendChild(c);drag(c);
+    $('controls').classList.remove('hidden');
   }
+  function makeCard(k){
+    var L=LOOK[k%LOOK.length],c=document.createElement('div');c.className='card';
+    c.style.background=L.bg;c.style.color=L.fg;
+    c.innerHTML='<div class="num">Request '+(k+1)+'</div><div class="req"></div><div class="hint">Swipe left for no, right for yes</div><div class="stamp no">NO</div><div class="stamp yes">YES</div>';
+    c.querySelector('.req').textContent=REQ[k];
+    return c;
+  }
+  function drag(c){
+    var x0=0,dx=0,down=false;
+    c.addEventListener('pointerdown',function(e){if(busy)return;down=true;x0=e.clientX;c.setPointerCapture(e.pointerId);c.style.transition='none';});
+    c.addEventListener('pointermove',function(e){if(!down)return;dx=e.clientX-x0;c.style.transform='translateX('+dx+'px) rotate('+(dx/18)+'deg)';
+      c.querySelector('.stamp.yes').style.opacity=Math.max(0,Math.min(1,dx/90));c.querySelector('.stamp.no').style.opacity=Math.max(0,Math.min(1,-dx/90));});
+    function up(){if(!down)return;down=false;c.style.transition='transform .3s ease';
+      if(dx>90)fly(c,true);else if(dx<-90)fly(c,false);else{c.style.transform='';c.querySelectorAll('.stamp').forEach(function(s){s.style.opacity=0;});}dx=0;}
+    c.addEventListener('pointerup',up);c.addEventListener('pointercancel',up);
+  }
+  function fly(c,yes){
+    if(busy)return;busy=true;said=yes;
+    c.style.transition='transform .35s ease, opacity .35s';c.querySelector('.stamp.'+(yes?'yes':'no')).style.opacity=1;
+    c.style.transform='translateX('+(yes?520:-520)+'px) rotate('+(yes?24:-24)+'deg)';c.style.opacity='0';
+    if(navigator.vibrate)try{navigator.vibrate(12);}catch(e){}
+    setTimeout(bodyCheck,320);
+  }
+  function bodyCheck(){
+    $('controls').classList.add('hidden');
+    var deck=$('deck');deck.innerHTML='';
+    var b=document.createElement('div');b.className='bodycheck';
+    b.innerHTML='<div class="you">You said '+(said?'yes':'no')+'</div><h2>Did your body agree?</h2><div class="row"><button class="y" data-v="yes">Yes, it did</button><button data-v="no">No, it didn’t</button><button data-v="unsure">Not sure</button></div>';
+    deck.appendChild(b);
+    b.querySelectorAll('button').forEach(function(btn){btn.addEventListener('click',function(){answer(btn.getAttribute('data-v'));});});
+  }
+  function answer(body){
+    var kind,pts;
+    if(body==='unsure'){kind='unsure';pts=3;}
+    else if(body==='yes'){kind='clean';pts=5;}
+    else if(said){kind='override';pts=1;overrides++;}
+    else{kind='hold';pts=3;}
+    score+=pts;
+    var deck=$('deck');deck.innerHTML='';
+    var f=document.createElement('div');f.className='flash';
+    var L=kind==='override'?{bg:'#eede80',fg:'#1c1714'}:kind==='clean'?{bg:'#0d3535',fg:'#eede80'}:{bg:'#d8dfe1',fg:'#0d3535'};
+    f.style.background=L.bg;f.style.color=L.fg;f.textContent=pick(FLASH[kind]);deck.appendChild(f);
+    setTimeout(function(){if(i<N-1){i++;render();}else{doReveal();}},1100);
+  }
+  $('yesBtn').addEventListener('click',function(){var c=$('deck').lastChild;if(c&&!busy)fly(c,true);});
+  $('noBtn').addEventListener('click',function(){var c=$('deck').lastChild;if(c&&!busy)fly(c,false);});
   $('begin').addEventListener('click',function(){
-    intro.style.display='none';quiz.style.display='block';renderQ();
-    if(typeof gtag==='function')gtag('event','quiz_start',{quiz:'sacred_no'});
+    $('intro').classList.add('hidden');$('game').classList.remove('hidden');render();
+    if(typeof gtag==='function')gtag('event','quiz_start',{quiz:'sacred_no_swipe'});
   });
-  function archetypeFor(s){
-    for(var k=0;k<ARCH.length;k++){if(s>=ARCH[k].min&&s<=ARCH[k].max)return ARCH[k];}
-    return s<12?ARCH[0]:ARCH[ARCH.length-1];
-  }
+  function archetypeFor(s){for(var k=0;k<ARCH.length;k++){if(s>=ARCH[k].min&&s<=ARCH[k].max)return ARCH[k];}return s<10?ARCH[0]:ARCH[ARCH.length-1];}
   function doReveal(){
-    var a=archetypeFor(score);
-    winner=a.name;
-    quiz.style.display='none';reveal.style.display='block';
+    var a=archetypeFor(score);winner=a.name;
+    $('game').classList.add('hidden');$('reveal').style.display='block';
+    $('bigNum').textContent=overrides+'/10';
+    $('bigLine').textContent=overrides===1?'One yes when your body said no.':overrides?('You said yes '+overrides+' times when your body said no.'):'Not one yes your body disagreed with.';
     $('typeName').textContent=winner;
-    $('typeCopy').textContent=a.copy;
+    var parts=a.copy.match(/[^.?!]+[.?!]+/g)||[a.copy];
+    $('typeLead').textContent=parts.slice(0,2).join(' ').trim();
+    $('typeFull').textContent=parts.slice(2).join(' ').trim();
     if(WIRED)$('capForm').style.display='block';
-    if(typeof gtag==='function')gtag('event','quiz_complete',{quiz:'sacred_no',result:winner,score:score});
+    window.scrollTo({top:0,behavior:'smooth'});
+    if(typeof gtag==='function')gtag('event','quiz_complete',{quiz:'sacred_no_swipe',result:winner,score:score,overrides:overrides});
   }
-  $('restart').addEventListener('click',function(){
-    i=0;score=0;locked=false;
-    reveal.style.display='none';$('capForm').style.display='none';
-    if($('msg'))$('msg').textContent='';if($('email'))$('email').value='';
-    quiz.style.display='block';renderQ();
+  $('moreBtn').addEventListener('click',function(){$('typeFull').style.display='block';this.style.display='none';});
+  $('shareBtn').addEventListener('click',function(){
+    var text='I said yes '+overrides+' times out of 10 when my body said no. I’m '+winner+'. Your turn:';var url='https://feelfullyyou.com/sacred-no-quiz';
+    if(navigator.share){navigator.share({title:'The Sacred No Swipe Test',text:text,url:url}).catch(function(){});}
+    else{try{navigator.clipboard.writeText(text+' '+url);this.textContent='Copied. Paste it anywhere.';}catch(e){}}
+    if(typeof gtag==='function')gtag('event','quiz_share',{quiz:'sacred_no_swipe',result:winner});
   });
-
+  $('restart').addEventListener('click',function(){
+    i=0;score=0;overrides=0;
+    $('reveal').style.display='none';$('capForm').style.display='none';$('typeFull').style.display='none';$('moreBtn').style.display='';
+    $('msg').textContent='';$('email').value='';$('game').classList.remove('hidden');render();
+  });
   $('capForm').addEventListener('submit',function(e){
     e.preventDefault();
-    var email=$('email').value.trim();
-    var msg=$('msg');msg.className='msg';
+    var email=$('email').value.trim();var msg=$('msg');msg.className='msg';
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){msg.className='msg err';msg.textContent='Please enter a valid email.';return;}
     var btn=$('sendBtn');btn.disabled=true;btn.textContent='Sending…';
     fetch('/.netlify/functions/subscribe',{
@@ -364,14 +378,9 @@ window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);
       body:JSON.stringify({email:email,tagIds:TAGS[winner]?[TAGS[winner]]:[],sequenceId:SEQ,archetype:winner,website:$('capForm').website.value})
     }).then(function(r){return r.json().catch(function(){return {};});})
       .then(function(d){
-        if(d&&d.ok){
-          msg.className='msg ok';msg.textContent='On its way. Read it slowly.';
-          if(typeof gtag==='function')gtag('event','quiz_optin',{quiz:'sacred_no',result:winner});
-        }else{throw new Error('fail');}
-      }).catch(function(){
-        btn.disabled=false;btn.textContent='Send my reading';
-        msg.className='msg err';msg.textContent='Something went wrong. Please try again.';
-      });
+        if(d&&d.ok){msg.className='msg ok';msg.textContent='On its way. Read it slowly.';if(typeof gtag==='function')gtag('event','quiz_optin',{quiz:'sacred_no_swipe',result:winner});}
+        else{throw new Error('fail');}
+      }).catch(function(){btn.disabled=false;btn.textContent='Send my reading';msg.className='msg err';msg.textContent='Something went wrong. Please try again.';});
   });
 })();
 </script>
