@@ -36,6 +36,10 @@ const PRACTICE_APP_DECK_TYPES = {
   'price_1TzO4DCCw18geY15u7X9j7iw': 'unspoken-distance', // The Unspoken Distance, £77 (old price, real buyers 31 Jul-1 Aug 2026)
   'price_1TnxAqCCw18geY153w22a2Ye': 'unspoken-distance', // The Unspoken Distance, £97 (current, back from £77 1 Aug 2026)
   'price_1UD0f6CCw18geY15BCSTDIlW': 'sacred-no', // The Sacred No £17, moved into the app 17 Oct 2026 (specs/sacred-no-in-app.md R12)
+  // One Touch, moved into the app 27 Oct 2026 (Juliette's yes). Same deck_type the
+  // cards app already uses for the One Touch deck, so one grant opens both.
+  'price_1Tpr13CCw18geY15W6ooICYF': 'one-touch', // £97, the current price
+  'price_1TzdQNCCw18geY15eh9S2uOe': 'one-touch', // £197 (1 Aug 2026 buyers)
 };
 
 // Tell Juliette the moment an app grant fails. Added 4 Oct 2026.
