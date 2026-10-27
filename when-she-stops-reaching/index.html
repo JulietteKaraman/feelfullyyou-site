@@ -863,5 +863,26 @@ var CARD={what:['Read · 2 min','She went quiet. Not a row. Nothing you can poin
   [].forEach.call(document.querySelectorAll('a.golink'),function(a){a.addEventListener('click',function(e){var id=a.getAttribute('href').slice(1),k=ids.indexOf(id);if(k>-1){e.preventDefault();chips[k].click()}})});
 })();
 </script>
+<style>
+.tellme{margin:30px 0 10px;border:1px solid var(--accent);border-radius:22px;padding:24px 20px;text-align:center;background:linear-gradient(180deg,rgba(13,53,53,.5),var(--bg2))}
+.tellme .lab{font:500 11px "Inter",sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.tellme h3{font:400 26px/1.25 "Jost",sans-serif;color:var(--ink);margin:0 0 10px}
+.tellme p{color:var(--muted);font-size:16px;margin:0 0 18px}
+.tellme a.tmbtn{display:inline-block;background:var(--accent);color:var(--bg);border-radius:99px;font:500 17px "Jost",sans-serif;padding:15px 26px;text-decoration:none}
+.tellme small{display:block;margin-top:14px;color:var(--muted);font-size:13px;font-style:italic}
+</style>
+<script>
+/* Tell me how it went (27 Oct): copies the first line, opens Instagram DM to @juliettekaraman */
+(function(){
+  var chips=document.querySelectorAll('#chips a');if(!chips.length)return;
+  var last=document.getElementById(chips[chips.length-1].getAttribute('href').slice(1));if(!last)return;
+  var name=((document.querySelector('.cover h1')||{}).textContent||document.title).trim();
+  var line='I just did '+name+'. What came up for me: ';
+  var d=document.createElement('div');d.className='tellme';
+  d.innerHTML='<div class="lab">Tell me how it went</div><h3>I’d love to hear what came up for you.</h3><p>What did you notice? What surprised you? A line is plenty.</p><a class="tmbtn" href="https://ig.me/m/juliettekaraman" target="_blank" rel="noopener">Message me on Instagram →</a><small>Tap, and your first line is ready to paste: “'+line.trim()+' …”</small>';
+  last.appendChild(d);
+  d.querySelector('.tmbtn').addEventListener('click',function(){var s=d.querySelector('small');try{navigator.clipboard.writeText(line).then(function(){s.textContent='Copied. Paste it in, then tell me what came up for you.'})}catch(e){}});
+})();
+</script>
 </body>
 </html>
