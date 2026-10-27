@@ -198,6 +198,7 @@ footer{text-align:center;padding:60px 24px 70px;font-family:"Jost",sans-serif;fo
 .examples div{padding:16px 20px;border-radius:16px;background:var(--teal);font-family:"Jost",sans-serif;font-size:19px}
 .photo.peek img{max-height:60svh}
 .vnote.speaking{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+.player .spd{border:1px solid var(--line);background:transparent;color:var(--accent);border-radius:99px;font:500 12px/1 "Inter",sans-serif;padding:5px 10px;cursor:pointer;letter-spacing:.04em}
 </style>
 </head>
 <body>
@@ -543,9 +544,9 @@ body.app:not(.on-cover) .nav{display:block}
   var ICO_S='<svg viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>';
   var all=[];
   [].forEach.call(document.querySelectorAll('.player'),function(p){
-    p.innerHTML='<button class="play" aria-label="Play">'+ICO_P+'</button><div class="track"><div class="rail"><div class="fill"></div><div class="knob"></div></div><div class="times"><span class="cur">0:00</span><span class="dur">'+p.dataset.dur+'</span></div></div><audio preload="metadata" src="'+p.dataset.src+'"></audio>';
+    p.innerHTML='<button class="play" aria-label="Play">'+ICO_P+'</button><div class="track"><div class="rail"><div class="fill"></div><div class="knob"></div></div><div class="times"><span class="cur">0:00</span><button class="spd" type="button" aria-label="Playback speed">1×</button><span class="dur">'+p.dataset.dur+'</span></div></div><audio preload="metadata" src="'+p.dataset.src+'"></audio>';
     var a=p.querySelector('audio'),btn=p.querySelector('.play'),fill=p.querySelector('.fill'),knob=p.querySelector('.knob'),rail=p.querySelector('.rail'),cur=p.querySelector('.cur'),dur=p.querySelector('.dur');
-    all.push(a);
+    all.push(a);var spd=p.querySelector('.spd');function rate(){var r=1;try{r=+localStorage.getItem('ffy-voice-rate')||1}catch(e){}return r}function lab(n){return (n===1?'1':String(n))+'\u00d7'}spd.textContent=lab(rate());a.addEventListener('play',function(){a.playbackRate=rate()});spd.onclick=function(){var n={1:1.25,1.25:1.5,1.5:1}[rate()]||1;try{localStorage.setItem('ffy-voice-rate',n)}catch(e){}[].forEach.call(document.querySelectorAll('.player'),function(q){var b=q.querySelector('.spd'),x=q.querySelector('audio');if(b)b.textContent=lab(n);if(x)x.playbackRate=n})};
     function paint(){var x=a.duration?a.currentTime/a.duration*100:0;fill.style.width=x+'%';knob.style.left=x+'%';cur.textContent=fmt(a.currentTime)}
     btn.onclick=function(){if(a.paused){all.forEach(function(o){if(o!==a)o.pause()});a.play()}else a.pause()};
     a.addEventListener('play',function(){btn.innerHTML=ICO_S});
