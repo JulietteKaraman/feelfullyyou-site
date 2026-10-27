@@ -1,0 +1,867 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<base href="/wssr-hub-preview-k7/">
+<meta name="description" content="Fifteen minutes. One sitting. You touch nobody until she says so.">
+<meta property="og:title" content="When She Stops Reaching"><meta property="og:description" content="Fifteen minutes. One sitting. You touch nobody until she says so."><meta property="og:type" content="website"><meta property="og:url" content="https://feelfullyyou.com/when-she-stops-reaching/"><meta property="og:image" content="https://feelfullyyou.com/when-she-stops-reaching/og.jpg"><meta property="og:site_name" content="Feel Fully You">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="When She Stops Reaching"><meta name="twitter:description" content="Fifteen minutes. One sitting. You touch nobody until she says so."><meta name="twitter:image" content="https://feelfullyyou.com/when-she-stops-reaching/og.jpg">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1a1814">
+<title>When She Stops Reaching</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Poppins:wght@300;400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+
+:root{
+  --bg:#1a1814; --bg2:#211e19; --ink:#f1ece2; --muted:#a79f90;
+  --line:rgba(221,201,142,.2); --accent:#DDC98E; --lemon:#EEDE80;
+  --teal:#0D3535; --gold:#a8843f;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:"Poppins",sans-serif;font-weight:300;font-size:17px;line-height:1.75;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+
+/* progress + chapter bar */
+.bar{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(26,24,20,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line);transform:translateY(-100%);transition:transform .35s ease}
+.bar.on{transform:none}
+.bar .prog{height:2px;background:var(--accent);width:0;transition:width .1s linear}
+.chips{display:flex;gap:6px;overflow-x:auto;padding:10px 16px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chips a{flex:none;font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--muted);padding:6px 12px;border:1px solid var(--line);border-radius:99px;transition:all .2s}
+.chips a.cur{color:var(--bg);background:var(--accent);border-color:var(--accent)}
+
+/* cover */
+.cover{position:relative;display:flex;flex-direction:column;background:var(--bg)}
+.cover .ph{position:relative;height:54svh;min-height:340px;overflow:hidden}
+.cover .ph img{width:100%;height:100%;object-fit:cover;object-position:35% 38%}
+.cover .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,24,20,.55) 0%,rgba(26,24,20,0) 22%,rgba(26,24,20,0) 62%,var(--bg) 100%)}
+.cover .in{position:relative;z-index:2;padding:0 24px 64px;margin:-64px auto 0;max-width:640px;width:100%}
+.brand{position:absolute;top:22px;left:0;right:0;z-index:3;text-align:center;font-family:"Jost",sans-serif;font-size:12px;letter-spacing:.42em;text-transform:uppercase;color:var(--ink)}
+.cover h1{font-family:"Jost",sans-serif;font-weight:400;font-size:clamp(56px,16vw,96px);line-height:.95;letter-spacing:.02em}
+.cover .line{margin-top:18px;font-size:19px;line-height:1.6;color:var(--ink);max-width:24ch}
+.cover .line em{font-style:normal;color:var(--accent)}
+.meta{margin-top:26px;display:flex;flex-wrap:wrap;gap:8px}
+.meta span{font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);border:1px solid rgba(241,236,226,.28);border-radius:99px;padding:6px 12px}
+.scroll{margin-top:34px;font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+@media (min-width:720px){.cover .ph{height:72svh}}
+
+/* sections */
+main{max-width:640px;margin:0 auto;padding:0 24px}
+section{padding:88px 0 8px}
+.kicker{font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;display:flex;align-items:center;gap:12px}
+.kicker::after{content:"";flex:1;height:1px;background:var(--line)}
+h2{font-family:"Jost",sans-serif;font-weight:400;font-size:clamp(32px,8vw,44px);line-height:1.12;margin-bottom:28px}
+h3{font-family:"Jost",sans-serif;font-weight:500;font-size:21px;line-height:1.3;margin:40px 0 12px}
+p{margin:0 0 18px}
+.lead{font-size:22px;line-height:1.5;color:var(--ink);font-weight:300}
+.big{font-family:"Jost",sans-serif;font-weight:400;font-size:clamp(26px,7vw,34px);line-height:1.25;margin:34px 0;color:var(--ink)}
+.big em{font-style:normal;color:var(--accent)}
+.quiet{color:var(--muted)}
+.thoughts{margin:26px 0 30px;padding-left:18px;border-left:1px solid var(--accent)}
+.thoughts p{font-style:italic;color:var(--accent);margin:0 0 6px;font-size:18px}
+blockquote{margin:34px 0;padding:28px 24px;background:var(--bg2);border:1px solid var(--line);border-radius:18px;font-size:19px;line-height:1.6;font-style:italic}
+blockquote cite{display:block;margin-top:14px;font-style:normal;font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.dots{list-style:none;margin:20px 0 28px}
+.dots li{position:relative;padding:12px 0 12px 26px;border-bottom:1px solid var(--line)}
+.dots li:last-child{border-bottom:0}
+.dots li::before{content:"";position:absolute;left:2px;top:24px;width:7px;height:7px;border-radius:50%;background:var(--accent)}
+.qs{list-style:none;margin:18px 0 26px;counter-reset:q}
+.qs li{counter-increment:q;position:relative;padding:14px 0 14px 44px;border-bottom:1px solid var(--line)}
+.qs li:last-child{border-bottom:0}
+.qs li::before{content:counter(q);position:absolute;left:0;top:14px;width:28px;height:28px;border-radius:50%;border:1px solid var(--accent);color:var(--accent);font-family:"Jost",sans-serif;font-size:14px;display:grid;place-items:center}
+.photo{margin:44px -24px;position:relative}
+.photo img{width:100%;max-height:78svh;object-fit:cover;object-position:30% 40%}
+.photo figcaption{position:absolute;left:24px;right:24px;bottom:22px;font-family:"Jost",sans-serif;font-size:26px;line-height:1.25;text-shadow:0 2px 18px rgba(0,0,0,.6)}
+.photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(26,24,20,.85))}
+.photo figcaption{z-index:2}
+
+/* steps */
+.steps{list-style:none;margin:10px 0 0}
+.steps li{display:grid;grid-template-columns:44px 1fr;gap:16px;padding:22px 0;border-bottom:1px solid var(--line)}
+.steps li:last-child{border-bottom:0}
+.steps .n{font-family:"Jost",sans-serif;font-size:30px;line-height:1;color:var(--accent)}
+.steps b{display:block;font-family:"Jost",sans-serif;font-weight:500;font-size:19px;margin-bottom:6px}
+.steps p{margin:0 0 8px;color:var(--ink)}
+.steps p.quiet{color:var(--muted)}
+
+/* media cards */
+.media{margin:30px 0;background:var(--bg2);border:1px solid var(--line);border-radius:22px;overflow:hidden}
+.media .hd{padding:20px 22px 16px}
+.media .lab{font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+.media .tt{font-family:"Jost",sans-serif;font-size:22px;line-height:1.25;margin-top:6px}
+.media .tt small{font-size:14px;color:var(--muted);font-family:"Poppins",sans-serif;margin-left:6px}
+.media .bd{padding:0 22px 20px;color:var(--muted);font-size:16px}
+.media .bd p{margin:0 0 8px}
+.vid{position:relative;background:#000}
+.vid.tall{aspect-ratio:9/16;max-height:72svh;margin:0 auto}
+.vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vlink{display:block;padding:12px 22px;font-family:"Inter",sans-serif;font-size:12px;letter-spacing:.08em;color:var(--muted);text-decoration:none;border-top:1px solid var(--line)}
+.vlink:hover{color:var(--accent)}
+
+/* audio player */
+.player{display:flex;align-items:center;gap:16px;padding:6px 22px 24px}
+.play{flex:none;width:68px;height:68px;border-radius:50%;border:0;background:var(--accent);color:var(--bg);display:grid;place-items:center;cursor:pointer;transition:transform .15s}
+.play:active{transform:scale(.95)}
+.play svg{width:24px;height:24px}
+.track{flex:1;min-width:0}
+.rail{position:relative;height:28px;cursor:pointer;touch-action:none}
+.rail::before{content:"";position:absolute;left:0;right:0;top:13px;height:2px;background:var(--line)}
+.fill{position:absolute;left:0;top:13px;height:2px;background:var(--accent);width:0}
+.knob{position:absolute;top:8px;width:12px;height:12px;border-radius:50%;background:var(--accent);left:0;margin-left:-6px}
+.times{display:flex;justify-content:space-between;font-family:"Inter",sans-serif;font-size:12px;color:var(--muted)}
+
+/* role picker */
+.roles{margin:34px 0 8px;padding:22px;border-radius:22px;background:var(--teal)}
+.roles .q{font-family:"Jost",sans-serif;font-size:21px;margin-bottom:14px;color:var(--ink)}
+.seg{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;background:rgba(0,0,0,.25);padding:5px;border-radius:99px}
+.seg button{border:0;background:transparent;color:var(--ink);font-family:"Inter",sans-serif;font-size:13px;letter-spacing:.04em;padding:11px 6px;border-radius:99px;cursor:pointer;transition:all .2s}
+.seg button.on{background:var(--ink);color:var(--bg)}
+.roles .hint{margin-top:12px;font-size:14px;color:rgba(241,236,226,.7)}
+[data-role]{transition:opacity .3s}
+body.r-give [data-role="receive"], body.r-receive [data-role="give"]{display:none}
+.rolecard{margin:24px 0;padding:24px 22px;border-radius:20px;border:1px solid var(--line);background:var(--bg2)}
+.rolecard .tag{display:inline-block;font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--bg);background:var(--accent);padding:5px 11px;border-radius:99px;margin-bottom:12px}
+.rolecard h3{margin-top:0}
+
+/* script accordion */
+details{border:1px solid var(--line);border-radius:20px;margin:30px 0;background:var(--bg2);overflow:hidden}
+summary{list-style:none;cursor:pointer;padding:20px 22px;display:flex;justify-content:space-between;align-items:center;gap:12px;font-family:"Jost",sans-serif;font-size:19px}
+summary::-webkit-details-marker{display:none}
+summary .pl{flex:none;width:30px;height:30px;border-radius:50%;border:1px solid var(--accent);color:var(--accent);display:grid;place-items:center;font-size:18px;transition:transform .25s}
+details[open] summary .pl{transform:rotate(45deg)}
+summary small{display:block;font-family:"Poppins",sans-serif;font-size:14px;color:var(--muted);margin-top:2px}
+.dbody{padding:0 22px 22px}
+.dbody h4{font-family:"Inter",sans-serif;font-weight:500;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:24px 0 10px}
+
+/* silence block */
+.silence{margin:56px -24px 0;padding:72px 28px;background:var(--teal);text-align:left}
+.silence .kicker{color:var(--accent)}
+.silence h2{margin-bottom:22px}
+.silence .no{list-style:none;margin:24px 0}
+.silence .no li{font-family:"Jost",sans-serif;font-size:20px;line-height:1.35;font-style:italic;color:var(--ink);padding:8px 0 8px 16px;margin:0 0 8px;border-left:2px solid var(--accent)}
+.silence .last{font-family:"Jost",sans-serif;font-size:24px;line-height:1.35;margin-top:30px}
+
+/* faq */
+.faq details{margin:12px 0}
+.faq summary{font-size:18px}
+.faq .dbody p{color:var(--ink)}
+
+.end{padding:96px 0 40px}
+.endcard{margin-top:34px;padding:36px 26px;border-radius:24px;border:1px solid var(--accent);background:linear-gradient(160deg,var(--bg2),var(--bg))}
+.endcard .big{margin:0 0 6px}
+footer{text-align:center;padding:60px 24px 70px;font-family:"Jost",sans-serif;font-size:12px;letter-spacing:.42em;text-transform:uppercase;color:var(--muted)}
+
+@media (min-width:720px){
+  .photo{margin:56px 0;border-radius:24px;overflow:hidden}
+  .silence{margin:64px 0 0;border-radius:28px;padding:72px 48px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* offers */
+.more{margin-top:56px;padding-top:8px}
+.offer{display:grid;grid-template-columns:96px 1fr;gap:16px;align-items:center;text-decoration:none;color:var(--ink);padding:14px;margin:12px 0;border:1px solid var(--line);border-radius:20px;background:var(--bg2);transition:border-color .2s,transform .2s}
+.offer:hover{border-color:var(--accent);transform:translateY(-2px)}
+.offer img{width:96px;height:120px;object-fit:cover;border-radius:12px}
+.offer b{display:block;font-family:"Jost",sans-serif;font-weight:500;font-size:19px;line-height:1.25;margin-bottom:6px}
+.offer span{display:block;font-size:14px;line-height:1.5;color:var(--muted)}
+.offer em{display:inline-block;margin-top:10px;font-style:normal;font-family:"Jost",sans-serif;font-size:16px;color:var(--bg);background:var(--accent);padding:7px 14px;border-radius:99px}
+
+/* page-specific */
+.cover .ph{height:auto;min-height:0;padding-top:56px;background:#000}
+.cover .ph img{height:auto;aspect-ratio:1280/860}
+.cover .in{margin-top:-30px}
+.parts{list-style:none;margin:24px 0}
+.parts li{display:grid;grid-template-columns:48px 1fr;gap:14px;padding:22px 0;border-bottom:1px solid var(--line)}
+.parts li:last-child{border-bottom:0}
+.parts .n{font-family:"Jost",sans-serif;font-size:30px;line-height:1;color:var(--accent)}
+.parts b{display:block;font-family:"Inter",sans-serif;font-weight:500;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+.parts p{margin:0 0 8px}
+.partno{font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.rules{list-style:none;margin:18px 0}
+.rules li{padding:10px 0 10px 24px;position:relative}
+.rules li::before{content:"✕";position:absolute;left:0;top:10px;color:var(--accent);font-size:13px}
+.say{margin:26px 0;padding:24px 22px;border-left:2px solid var(--accent);background:var(--bg2);border-radius:0 18px 18px 0;font-family:"Jost",sans-serif;font-size:21px;line-height:1.4}
+.say small{display:block;font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.lw{display:grid;grid-template-columns:1fr 1fr;gap:6px;background:rgba(0,0,0,.25);padding:5px;border-radius:99px;margin:0 22px 18px}
+.lw button{border:0;background:transparent;color:var(--ink);font-family:"Inter",sans-serif;font-size:13px;padding:11px 6px;border-radius:99px;cursor:pointer}
+.lw button.on{background:var(--ink);color:var(--bg)}
+.pane[hidden]{display:none}
+.timer{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:18px;padding:14px 16px;border-radius:18px;background:var(--teal)}
+.timer .t{font-family:"Jost",sans-serif;font-size:38px;font-variant-numeric:tabular-nums;line-height:1}
+.timer .lbl{font-family:"Inter",sans-serif;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(241,236,226,.65);margin-bottom:4px}
+.timer .btns{display:flex;gap:8px}
+.timer button{border:0;border-radius:99px;padding:12px 18px;font-family:"Inter",sans-serif;font-size:13px;cursor:pointer}
+.timer .go{background:var(--accent);color:var(--bg)}
+.timer .rs{background:rgba(0,0,0,.25);color:var(--ink)}
+.timer.done{background:#3a2f17}
+.hand{width:140px;margin:6px auto 22px}
+.shot{margin:30px 0;border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 20px 50px -25px rgba(0,0,0,.9)}
+.shot img{width:100%}
+.shotcap{font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:-18px 0 30px;text-align:right}
+.mantra{display:grid;gap:8px;margin:24px 0}
+.mantra div{padding:16px 20px;border-radius:16px;background:var(--teal);font-family:"Jost",sans-serif;font-size:20px}
+.photo.peek img{max-height:60svh}
+.vnote.speaking{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+.player .spd{border:1px solid var(--line);background:transparent;color:var(--accent);border-radius:99px;font:500 12px/1 "Inter",sans-serif;padding:5px 10px;cursor:pointer;letter-spacing:.04em}
+
+/* ---- interactive hub (27 Oct) ---- */
+.hub{margin-top:34px;border:1px solid var(--line);border-radius:22px;background:var(--bg2);padding:20px}
+.hubtop{display:flex;align-items:center;gap:16px;margin-bottom:14px}
+.ring{width:56px;height:56px;transform:rotate(-90deg);flex:none}
+.ring circle{fill:none;stroke-width:4}.ring .rt{stroke:rgba(221,201,142,.18)}.ring .rf{stroke:var(--accent);stroke-linecap:round;stroke-dasharray:119.4;stroke-dashoffset:119.4;transition:stroke-dashoffset .6s ease}
+.hubn{font-family:"Jost",sans-serif;font-size:22px;color:var(--ink)}.hubs{font-size:13px;color:var(--muted)}
+.hubcards{display:grid;gap:8px}
+.hubcard{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;text-align:left;background:transparent;border:1px solid var(--line);border-radius:14px;padding:13px 14px;color:var(--ink);font:400 16px/1.3 "Poppins",sans-serif;cursor:pointer}
+.hubcard .c{width:22px;height:22px;border-radius:50%;border:1.5px solid rgba(221,201,142,.55);flex:none;display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--bg)}
+.hubcard.done .c{background:var(--accent);border-color:var(--accent)}.hubcard.done .c::after{content:"✓"}
+.hubcard.next{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+.chips a.done::after{content:" ✓";color:var(--accent)}
+.didit{margin:44px 0 6px;border-top:1px solid var(--line);padding-top:26px;text-align:center}
+.didit .dw{font-size:14px;color:var(--muted);margin:0 0 14px}
+.didbtn,.sdone,.jsave{border:1px solid var(--accent);background:transparent;color:var(--accent);border-radius:99px;font:500 17px/1 "Jost",sans-serif;padding:15px 28px;cursor:pointer;min-height:48px}
+.didbtn.on,.sdone.on{background:var(--accent);color:var(--bg)}
+@keyframes glow{0%{box-shadow:0 0 0 0 rgba(221,201,142,.7)}100%{box-shadow:0 0 0 22px rgba(221,201,142,0)}}
+.glow{animation:glow .9s ease-out 2}
+.path{margin:26px 0}.path .lab{font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+.pbtns{display:flex;gap:10px;flex-wrap:wrap}.pbtns button{flex:1;min-width:140px;border:1px solid var(--line);background:var(--bg2);color:var(--ink);border-radius:16px;padding:16px;font:500 17px "Jost",sans-serif;cursor:pointer}
+.pbtns button.on{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent);color:var(--accent)}
+ul.check{list-style:none;margin:10px 0;padding:0;display:grid;gap:8px}
+ul.check button{display:flex;gap:14px;align-items:flex-start;width:100%;text-align:left;background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:14px;color:var(--ink);font:400 16px/1.45 "Poppins",sans-serif;cursor:pointer}
+ul.check .bx{width:24px;height:24px;border-radius:7px;border:1.5px solid var(--accent);flex:none;display:flex;align-items:center;justify-content:center;color:var(--bg);margin-top:1px}
+ul.check li.on .bx{background:var(--accent)}ul.check li.on .bx::after{content:"✓";font-size:14px}ul.check li.on span:last-child{color:var(--muted)}
+.ready{font-family:"Jost",sans-serif;font-size:22px;color:var(--accent);margin-top:14px}
+.golink{display:inline-block;margin:22px 0 4px;color:var(--accent);font:500 17px "Jost",sans-serif;text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:3px}
+.dstep{border:1px solid var(--line);border-radius:22px;background:var(--bg2);padding:20px;margin:22px 0}
+.dstep.done{border-color:var(--accent)}
+.dstep .dn{display:flex;gap:14px;align-items:center;margin-bottom:10px}.dstep .dn span{width:34px;height:34px;border-radius:50%;background:var(--accent);color:var(--bg);display:flex;align-items:center;justify-content:center;font:600 16px "Jost",sans-serif;flex:none}
+.dstep .dn b{font-family:"Jost",sans-serif;font-weight:400;font-size:22px;display:block}.dstep .dn small{color:var(--muted);font-size:13px}
+.dstep .player{padding-left:0;padding-right:0}
+.dstep .sdone{margin-top:14px;width:100%}
+.dstep .media.vnote{margin:16px 0 0}
+.jlab{display:block;font-size:13px;color:var(--muted);margin:14px 0 8px}
+#jtxt{width:100%;box-sizing:border-box;background:var(--bg);border:1px solid var(--line);border-radius:14px;color:var(--ink);font:italic 18px/1.4 "Jost",sans-serif;padding:14px;resize:vertical}
+.jsave{margin-top:10px;padding:11px 20px;font-size:15px}
+.jlist{margin-top:14px;display:grid;gap:8px}.jlist div{border-left:2px solid var(--accent);padding:6px 0 6px 14px;font:italic 17px/1.4 "Jost",sans-serif;color:var(--ink)}.jlist small{display:block;font:400 12px "Inter",sans-serif;color:var(--muted);font-style:normal;margin-top:3px}
+.finish{text-align:center;border:1px solid var(--accent);border-radius:22px;padding:26px 20px;margin-top:26px}.finish .fx{width:56px;height:56px;margin:0 auto 12px;border-radius:50%;background:var(--accent);color:var(--bg);display:flex;align-items:center;justify-content:center;font-size:26px}
+
+/* ---- hub beauty (27 Oct) ---- */
+.welc{display:flex;align-items:center;gap:14px;margin:22px 0 0}
+.welc img{width:58px;height:58px;border-radius:50%;object-fit:cover;border:1.5px solid var(--accent);box-shadow:0 0 24px -6px rgba(221,201,142,.6)}
+.welc b{display:block;font:400 18px "Jost",sans-serif;color:var(--ink)}.welc small{color:var(--muted);font-size:14px}
+.hub{background:linear-gradient(180deg,rgba(13,53,53,.55),var(--bg2) 160px);padding:22px 16px}
+.hubcards{gap:12px}
+.hubcard{padding:10px;gap:14px;align-items:center;border-radius:18px;background:rgba(26,24,20,.55)}
+.hubcard .th{width:76px;height:76px;border-radius:14px;object-fit:cover;flex:none}
+.hubcard .tx{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px}
+.hubcard .tx small{font:500 10.5px "Inter",sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+.hubcard .tx b{font:400 19px/1.2 "Jost",sans-serif;color:var(--ink)}
+.hubcard .tx em{font:400 13.5px/1.35 "Poppins",sans-serif;font-style:normal;color:var(--muted)}
+.hubcard .c{margin-right:4px}
+.hubcard.done .th{filter:saturate(.6) brightness(.8)}
+.hubcard.feat{flex-direction:column;align-items:stretch;padding:0;overflow:hidden;border-color:var(--accent);position:relative}
+.hubcard.feat .fimg{display:block;position:relative;aspect-ratio:900/520;overflow:hidden}
+.hubcard.feat .fimg img{width:100%;height:100%;object-fit:cover;display:block}
+.hubcard.feat .fimg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,24,20,0) 40%,rgba(26,24,20,.9))}
+.hubcard.feat .tx{padding:0 16px 16px;margin-top:-46px;position:relative;z-index:1}
+.hubcard.feat .tx b{font-size:26px;color:var(--accent)}
+.hubcard.feat .c{position:absolute;top:12px;right:12px;background:rgba(26,24,20,.6)}
+.hubcard.next:not(.feat){border-color:var(--accent)}
+</style>
+</head>
+<body>
+
+<div class="bar" id="bar">
+  <div class="prog" id="prog"></div>
+  <nav class="chips" id="chips">
+    <a href="#what">What's happening</a>
+    <a href="#this">What this is</a>
+    <a href="#setup">Setting it up</a>
+    <a href="#p1">1 Touch Base</a>
+    <a href="#p2">2 Approach</a>
+    <a href="#p3">3 Full Stop</a>
+    <a href="#now">Do it now</a>
+    <a href="#after">After</a>
+  </nav>
+</div>
+
+<header class="cover">
+  <div class="brand">Feel Fully You</div>
+  <div class="ph"><img src="media/cover.jpg" alt="Juliette and her partner standing apart on a lawn at sunset, practising the Approach Ritual"></div>
+  <div class="in">
+    <h1 style="font-size:clamp(44px,12vw,82px)">When She Stops Reaching</h1>
+    <p class="line">Fifteen minutes. One sitting. <em>You touch nobody until she says so.</em></p>
+    <div class="meta"><span>15 minutes</span><span>3 parts</span><span>For him</span></div>
+    <div class="scroll">Scroll to begin ↓</div>
+    <div class="welc" id="welc"><img src="media/hub/me.jpg" alt="Juliette"><div><b>A minute from me first</b><small>Tap Begin and I'll welcome you in.</small></div></div>
+    <div class="hub" id="hub">
+      <div class="hubtop"><svg class="ring" viewBox="0 0 44 44"><circle cx="22" cy="22" r="19" class="rt"/><circle cx="22" cy="22" r="19" class="rf" id="ringf"/></svg><div><div class="hubn" id="hubn">0 of 8 done</div><div class="hubs">Your fifteen minutes. Your progress saves on this phone.</div></div></div>
+      <div class="hubcards" id="hubcards"></div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<figure class="photo peek top"><img src="media/hub/top-what.jpg" alt="Juliette and Alex, his kiss on her shoulder"></figure>
+<section id="what">
+  <div class="media vnote" id="vn-W1" data-welcome><div class="hd"><div class="lab">Start here</div><div class="tt">A minute from me</div></div><div class="player" data-src="media/voice/W1.m4a" data-dur="1:18"></div></div>
+  <div class="kicker">01</div>
+  <h2>What is actually happening</h2>
+  <p class="lead">She went quiet.</p>
+  <p>Not a row. Nothing you can point at.</p>
+  <p>The temperature changed, and you noticed it before anyone said anything.</p>
+  <p>So you did the reasonable thing. You tried harder.</p>
+  <div class="thoughts">
+    <p>You asked if she was okay.</p>
+    <p>You asked again, differently.</p>
+    <p>You were attentive. You were patient. You gave her space.</p>
+    <p>Then you worried the space was the wrong move and came back in.</p>
+  </div>
+  <p class="big">And she got <em>further away.</em></p>
+  <p>Here is the piece nobody tells you.</p>
+  <p class="lead">Trying harder can become part of the problem.</p>
+  <p>Because when you're worried about the distance between you, your attempts to close it can start carrying something else with them.</p>
+  <div class="thoughts">
+    <p>Are we okay?</p>
+    <p>Are you okay?</p>
+    <p>Is this working?</p>
+    <p>Do you still want me?</p>
+  </div>
+  <p>You may not say any of that out loud.</p>
+  <p>But another check-in, another question, another attempt to get closer can start to feel like something she has to respond to.</p>
+  <p>So you feel the distance and try harder to close it. She wants more space. You feel that space and try again.</p>
+  <p>Now you're in a loop.</p>
+  <p>Not because you don't care.</p>
+  <p>Because you care, and you don't know what else to do with the distance.</p>
+  <p class="lead">This practice asks you to do something different.</p>
+  <p>Stop trying to close the gap.</p>
+  <p class="big">For five minutes, she gets to determine the distance. <em>Your job is to find out where she actually is.</em></p>
+</section>
+
+<figure class="photo peek top"><img src="media/hub/top-this.jpg" alt="Juliette and Alex dancing in the street at night"></figure>
+<section id="this">
+  <div class="kicker">02</div>
+  <h2>What this is</h2>
+  <p class="lead">Fifteen minutes. One sitting.</p>
+  <p class="big" style="margin-top:0">And you touch nobody <em>until she says so.</em></p>
+  <p>There are three parts, in order.</p>
+  <ol class="parts">
+    <li><span class="n">1</span><div><b>Touch Base · five minutes, on your own</b>
+      <p>Before you approach her, you spend five minutes with yourself.</p>
+      <p>One tiny point of contact between your thumb and forefinger. Slow enough to notice what you're actually doing rather than rushing towards the next part.</p>
+      <p class="quiet">Before you pay attention to her distance, you pay attention to yourself.</p></div></li>
+    <li><span class="n">2</span><div><b>The Approach Ritual · five minutes</b>
+      <p>You begin with space between you. You are the one who approaches. She determines the distance.</p>
+      <p>She can stop you. Invite you closer. Ask you to move back. Move towards you herself.</p>
+      <p class="quiet">For five minutes, you don't persuade, interpret or try to get somewhere. Your job is to listen.</p></div></li>
+    <li><span class="n">3</span><div><b>The Full Stop</b>
+      <p>At the end, you say one true thing about what you noticed. One sentence. Then you stop.</p>
+      <p class="quiet">No question. No fishing for reassurance. No turning it into a conversation about the relationship. Nothing she now has to answer.</p></div></li>
+  </ol>
+  <p class="big">One true thing. <em>Full stop.</em></p>
+  <p>That's the practice.</p>
+  <p>You'll notice there is no conversation about "us" anywhere in the fifteen minutes. That's deliberate.</p>
+  <p>For these fifteen minutes, you're not trying to solve the distance. You're learning to meet it differently.</p>
+</section>
+
+<figure class="photo peek"><img src="media/peek-selfie.jpg" alt="Alex's hand hovering near Juliette, not yet touching" loading="lazy" style="object-position:50% 35%"></figure>
+<section id="setup">
+  <div class="kicker">03</div>
+  <h2>Setting it up</h2>
+  <p class="lead">Ask her once, plainly. Don't sell it.</p>
+  <div class="say"><small>You can say</small>"There's a fifteen-minute thing I want to try. I don't talk about us, I don't touch you unless you say so, and you can stop it at any point."</div>
+  <p>Then leave the answer with her.</p>
+  <div class="path" id="path">
+    <div class="lab">What did she say?</div>
+    <div class="pbtns"><button type="button" data-a="yes">She said yes</button><button type="button" data-a="no">She said no</button></div>
+    <div class="pyes" hidden>
+      <p class="lead" style="margin-top:22px">Before you begin</p>
+      <ul class="check" data-key="setup">
+        <li><button type="button"><span class="bx"></span><span>A time you both have some capacity for it. A morning. An afternoon. Early evening.</span></button></li>
+        <li><button type="button"><span class="bx"></span><span>Not in the middle of a difficult conversation, or trying to repair a row.</span></button></li>
+        <li><button type="button"><span class="bx"></span><span>Phones in another room.</span></button></li>
+        <li><button type="button"><span class="bx"></span><span>A timer, and enough floor space to stand a few steps apart.</span></button></li>
+      </ul>
+      <p class="ready" hidden>That's it. You're ready.</p>
+    </div>
+    <div class="pno" hidden>
+      <p class="big" style="margin-top:22px">If she says no, <em>it's no.</em></p>
+      <p>Don't persuade her. Don't explain why it would be good for the two of you. Don't ask again differently.</p>
+      <p>Her no is already part of the practice.</p>
+      <p>You can still do the five-minute Touch Base on your own. Not as a way of getting her to change her mind. As a way of noticing yourself when you don't get the answer you wanted.</p>
+      <a class="golink" href="#p1">Go to Touch Base →</a>
+    </div>
+  </div>
+</section>
+
+<figure class="photo peek top"><img src="media/hub/top-p1.jpg" alt="Juliette, eyes soft, on her own"></figure>
+<section id="p1">
+  <div class="partno">Part one · five minutes, on your own</div>
+  <h2>Touch Base</h2>
+  <img class="hand" src="media/touchbase.png" alt="Touch Base, the gold hand emblem">
+  <p class="lead">Before you go anywhere near her, come back to your own body.</p>
+  <p>Thumb and forefinger. That's all of it.</p>
+
+  <div class="media" id="tb">
+    <div class="hd"><div class="lab">Watch once, then listen</div><div class="tt">Touch Base</div></div>
+    <div class="lw"><button class="on" data-p="tb-watch">▶ Watch</button><button data-p="tb-listen">🎧 Listen · 5 min</button></div>
+    <div class="pane" id="tb-watch"><div class="vid tall"><iframe data-src="https://player.vimeo.com/video/1223329859?badge=0&autopause=0&player_id=0&app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="Touch Base"></iframe></div><div class="bd" style="padding-top:16px"><p>Watch it once so you can see exactly what I'm doing with my hands. After that, the audio is all you need.</p></div></div>
+    <div class="pane" id="tb-listen" hidden><div class="player" data-src="media/touch-base.mp3" data-dur="5:02"></div></div>
+  </div>
+
+  <ol class="steps">
+    <li><span class="n">1</span><div><b>Set your timer for five minutes</b></div></li>
+    <li><span class="n">2</span><div><b>Start a centimetre apart</b><p>Don't touch yet. Notice the gap. Notice what you can actually feel before contact happens.</p><p class="quiet">Don't try to make yourself feel anything in particular. Just notice.</p></div></li>
+    <li><span class="n">3</span><div><b>Then land</b><p>Bring your thumb to the tip of your index finger, right at the corner of the nail. Stay there.</p><p>Notice the contact. Pressure. Temperature. Texture. Whatever is actually there.</p></div></li>
+    <li><span class="n">4</span><div><b>Make the smallest movement</b><p>Half a centimetre. Light. Slow like honey. Slower than that. Slower than you think slow is.</p></div></li>
+  </ol>
+  <a class="golink" href="#now">When you're ready, do all three on one screen →</a>
+  <p style="margin-top:26px">You aren't trying to calm yourself down. You aren't trying to get into the "right" state before you approach her.</p>
+  <p class="big">You're giving yourself five minutes to notice <em>how you're arriving.</em></p>
+
+  <details>
+    <summary><span>Why that spot<small>The corner of the nail on your index finger</small></span><span class="pl">+</span></summary>
+    <div class="dbody">
+      <p>In traditional Chinese medicine, this point is known as LI1, Shangyang, the first point on the Large Intestine meridian. That's where I want you to touch.</p>
+      <p>But you don't need to understand meridians, believe anything about energy, or make something happen through the point.</p>
+      <p>For this practice, its job is much simpler. It gives you one tiny, precise place to put your attention.</p>
+      <p>Instead of thinking about what she's going to do. What the distance between you means. Whether this is going to work. Whether you're about to get rejected.</p>
+      <p>You're here. Thumb. Finger. Contact. Movement. Something small enough to actually notice.</p>
+    </div>
+  </details>
+  <details>
+    <summary><span>Why it comes before you move<small>Noticing before acting</small></span><span class="pl">+</span></summary>
+    <div class="dbody">
+      <p>Because before you find out where she is, I want you to notice how you're arriving.</p>
+      <p>You may be impatient. Hopeful. Tense. Already trying to get a particular result. You may notice you're holding your breath or rushing even though nobody has asked you to hurry. Or you may notice very little.</p>
+      <p>There is no state you're supposed to achieve. Touch Base isn't five minutes of getting yourself "right" so that she'll respond differently. It's five minutes of noticing yourself before you start moving towards her.</p>
+      <p>Because in the next part, you're going to be asked to do something that may be unfamiliar: approach without deciding how close you get. Stop when she asks you to stop. Move back if she asks you to move back. Notice whatever comes up in you when the distance isn't yours to choose.</p>
+      <p>Touch Base is where you practise noticing before acting. Then you take that with you into the Approach Ritual.</p>
+    </div>
+  </details>
+</section>
+
+<section id="p2">
+  <div class="partno">Part two · five minutes</div>
+  <h2>The Approach Ritual</h2>
+
+  <div class="media" id="ap">
+    <div class="hd"><div class="lab">Watch us, or listen first</div><div class="tt">The Approach Ritual</div></div>
+    <div class="lw"><button class="on" data-p="ap-watch">▶ Watch the demo</button><button data-p="ap-listen">🎧 Listen · 2 min</button></div>
+    <div class="pane" id="ap-watch"><div class="vid" style="aspect-ratio:1/0.6716"><iframe data-src="https://player.vimeo.com/video/1235783730?badge=0&autopause=0&player_id=0&app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="The Approach Ritual"></iframe></div><div class="bd" style="padding-top:16px"><p>My partner and I demo it for you.</p></div></div>
+    <div class="pane" id="ap-listen" hidden><div class="bd"><p>Two minutes of me talking you through it before you begin. Or read it below.</p></div><div class="player" data-src="media/approach.m4a" data-dur="1:59"></div></div>
+  </div>
+
+  <ol class="steps">
+    <li><span class="n">1</span><div><b>Set a timer for five minutes</b><p>Stand facing each other with some distance between you.</p></div></li>
+    <li><span class="n">2</span><div><b>She stays where she is. You are the one who moves.</b><p>Walk towards her. Slowly. Much more slowly than feels natural. A step. Then a pause.</p></div></li>
+    <li><span class="n">3</span><div><b>She lets you know when to stop</b><p>She can say stop, put a hand out, or use whatever clear signal the two of you have agreed on before you begin.</p><p>When she says stop, you stop.</p></div></li>
+    <li><span class="n">4</span><div><b>Then explore the distance</b><p>She might ask you to take a small step back. She might invite you closer again. She might move towards you herself.</p><p class="quiet">Let the distance change for the whole five minutes.</p></div></li>
+  </ol>
+  <a class="golink" href="#now">When you're ready, do all three on one screen →</a>
+  <p style="margin-top:26px">Your job is very simple.</p>
+  <div class="mantra"><div>Listen.</div><div>Come closer when invited.</div><div>Stop when asked.</div><div>Move back when asked.</div><div>Don't try to get anywhere.</div></div>
+
+  <div class="silence">
+    <div class="kicker">The one thing you must not do</div>
+    <h2>Do not interpret the distance she chooses.</h2>
+    <p>This is the discipline of the ritual.</p>
+    <p>If she stops you at four feet, your mind may immediately start telling you a story.</p>
+    <ul class="no">
+      <li>Four feet means she doesn't want me.</li>
+      <li>Four feet means we're worse than I thought.</li>
+      <li>Four feet means I've done something wrong.</li>
+    </ul>
+    <p>But you don't actually know that.</p>
+    <p class="last">Four feet means four feet today. That's all the information you have.</p>
+  </div>
+
+  <p class="big" style="margin-top:44px">More space does not mean <em>less love.</em></p>
+  <p>This isn't a test of your relationship. It isn't a measure of how close either of you should want to be.</p>
+  <p>For five minutes, let her show you where her edges are today, without asking her to explain or justify them.</p>
+
+  <div class="shot"><img src="media/ritualpovman.jpg" alt="A man's message: She was much more comfortable when I took a step back. I could visibly see her shoulders drop and her exhale increase"></div>
+  <p class="shotcap">From a man who did it</p>
+
+  <details class="why">
+    <summary><span>What to notice in yourself<small>And what not to do with it</small></span><span class="pl">+</span></summary>
+    <div class="dbody">
+  <p>Notice what happens in you.</p>
+  <ul class="dots">
+    <li>If you feel disappointed when she asks you to move back, notice it.</li>
+    <li>If you feel relieved when she invites you closer, notice that too.</li>
+    <li>If your mind immediately starts trying to work out what the distance means, notice that.</li>
+  </ul>
+  <p>You don't need to make any of it her job.</p>
+  <ul class="rules">
+    <li>Don't persuade.</li>
+    <li>Don't bargain for another step.</li>
+    <li>Don't turn your reaction into something she now has to reassure you about.</li>
+  </ul>
+    </div>
+  </details>
+  <p class="big">She chooses the distance. <em>You practise listening to it.</em></p>
+</section>
+
+<figure class="photo peek"><img src="media/peek-buda1.jpg" alt="Juliette and Alex hugging on the terrace" loading="lazy" style="object-position:45% 45%"></figure>
+<section id="p3">
+  <div class="partno">Part three</div>
+  <h2>The Full Stop</h2>
+  <p class="lead">When the timer goes, stop. Then say one true thing out loud about what you noticed.</p>
+  <p>One sentence.</p>
+  <div class="say"><small>Like this</small>"I noticed I wanted to keep walking."</div>
+  <div class="say">"I noticed my chest got tight when you put your hand up."</div>
+  <div class="say">"I noticed you were further away than I expected, and I'm still here."</div>
+  <p>Then nothing.</p>
+  <ul class="rules">
+    <li>No question mark on the end.</li>
+    <li>No "How was that for you?"</li>
+    <li>No "What did you notice?"</li>
+    <li>No little look that asks her to tell you whether you did it right.</li>
+  </ul>
+  <details class="why">
+    <summary><span>Why no question on the end<small>In my words</small></span><span class="pl">+</span></summary>
+    <div class="dbody">
+  <p>That is a Full Stop.</p>
+  <p>You're saying something true about your experience without turning it into something she now has to answer. That's the discipline.</p>
+  <p>Because the moment you add a question, you've given her something else to do. Respond. Explain. Reassure. Tell you how she feels.</p>
+    </div>
+  </details>
+  <p class="big">Your honesty. <em>No invoice attached.</em></p>
+  <p>She may say something. She may say nothing. Either is fine.</p>
+  <p>You're not owed a response. You're not using the silence to get one.</p>
+  <div class="endcard" style="margin-top:30px">
+    <p class="lead" style="margin-bottom:10px">Then leave it.</p>
+    <p style="margin:0">Don't immediately discuss the ritual. Don't ask her how it was for her. Don't ask what the distance meant. Let the Full Stop actually be a full stop.</p>
+  </div>
+</section>
+
+<figure class="photo peek top"><img src="media/hub/top-now.jpg" alt="Juliette and Alex dancing by the Thames"></figure>
+<section id="now">
+  <div class="partno">All three, one screen</div>
+  <h2>Do it now</h2>
+  <p class="lead">Keep your phone where you can hear it. Do one, tap Done, then the next.</p>
+  <div class="dstep" data-step="1">
+    <div class="dn"><span>1</span><div><b>Touch Base</b><small>Five minutes, on your own</small></div></div>
+    <p>Press play. My voice guides the five minutes.</p>
+    <div class="player" data-src="media/touch-base.mp3" data-dur="5:02"></div>
+    <button type="button" class="sdone">Done ✓</button>
+  </div>
+  <div class="dstep" data-step="2">
+    <div class="dn"><span>2</span><div><b>The Approach Ritual</b><small>Five minutes, she chooses the distance</small></div></div>
+    <p>Stand facing each other with some distance between you. Start the timer. Walk towards her slowly. Stop when she says stop.</p>
+    <div class="timer" data-min="5" data-after="#vn-W2"></div>
+    <div class="media vnote" id="vn-W2"><div class="hd"><div class="lab">When the timer ends</div><div class="tt">I'll talk you into the Full Stop</div></div><div class="bd"><p>Keep your phone where you can hear it. My voice starts on its own when the timer ends.</p></div><div class="player" data-src="media/voice/W2.m4a" data-dur="1:19"></div></div>
+    <button type="button" class="sdone">Done ✓</button>
+  </div>
+  <div class="dstep" data-step="3">
+    <div class="dn"><span>3</span><div><b>The Full Stop</b><small>One true thing. Then stop.</small></div></div>
+    <p>Say one true thing out loud about what you noticed. One sentence. No question mark on the end.</p>
+    <label class="jlab" for="jtxt">Write down the one true thing you said</label>
+    <textarea id="jtxt" rows="3" placeholder="I noticed..."></textarea>
+    <button type="button" class="jsave">Save it</button>
+    <div class="jlist" id="jlist"></div>
+    <button type="button" class="sdone">Done ✓</button>
+  </div>
+  <div class="finish" id="finish" hidden>
+    <div class="fx">✓</div>
+    <p class="big">Five minutes with yourself. Five minutes letting her determine the distance. <em>One true thing. Full stop.</em></p>
+  </div>
+</section>
+
+<figure class="photo peek top"><img src="media/hub/top-after.jpg" alt="Juliette and Alex on the sofa with their dog"></figure>
+<section id="after">
+  <div class="media vnote" id="vn-W3"><div class="hd"><div class="lab">Before you go</div><div class="tt">A last word from me</div></div><div class="player" data-src="media/voice/W3.m4a" data-dur="1:38"></div></div>
+  <div class="kicker">After</div>
+  <h2>What you might notice</h2>
+  <p>This may feel strange. Slow. Awkward.</p>
+  <p>You may want to speed it up. You may want to make a joke. You may find yourself watching her face for clues about whether you're doing it right.</p>
+  <p>Notice that.</p>
+  <p>During the Approach Ritual, you might discover how quickly you make the distance mean something.</p>
+  <div class="thoughts">
+    <p>Closer feels good.</p>
+    <p>Further away feels bad.</p>
+    <p>A pause feels like rejection.</p>
+    <p>An invitation feels like reassurance.</p>
+  </div>
+  <p>Or you may notice something completely different.</p>
+  <p>The point isn't to have a particular reaction. It's to notice the reaction you actually have without immediately acting on it.</p>
+  <p>Afterwards, it might be quiet. Let it be quiet.</p>
+  <p>You don't need the ritual to produce a visible result in the room. You don't need to watch her the following day for evidence that it "worked." That would put you straight back into trying to get a result from her.</p>
+  <p>What you're practising is simpler:</p>
+  <ol class="qs">
+    <li>Can you notice yourself before you approach?</li>
+    <li>Can you let her determine the distance?</li>
+    <li>Can you hear stop without turning it into a story?</li>
+    <li>Can you receive an invitation without immediately reaching for more?</li>
+    <li>Can you say one true thing without requiring anything back?</li>
+  </ol>
+  <p>That's the skill the fifteen minutes is there to practise.</p>
+
+  <div class="faq">
+    <h3>If you lose the structure</h3>
+    <p>You might. That's okay.</p>
+    <details>
+      <summary><span>She doesn't want to do it.</span><span class="pl">+</span></summary>
+      <div class="dbody"><p>Don't persuade her. Don't explain why it would be good for the two of you. Don't ask again differently.</p><p>Her no is already part of the practice.</p><p>You can still do the five-minute Touch Base on your own. Not as a way of getting her to change her mind. As a way of noticing yourself when you don't get the answer you wanted.</p></div>
+    </details>
+    <details>
+      <summary><span>She stops you further away than you expected.</span><span class="pl">+</span></summary>
+      <div class="dbody"><p>Stop. That's the practice.</p><p>Don't ask why. Don't try again from a different angle. Don't negotiate another step. Don't decide what the distance says about your relationship.</p><p>Four feet means four feet today. Stay with what is actually happening rather than the story your mind makes about it.</p></div>
+    </details>
+    <details>
+      <summary><span>You interpret the distance out loud.</span><span class="pl">+</span></summary>
+      <div class="dbody"><p>Catch it. You can simply say:</p><p>"I made that mean something. That was me."</p><p>Then stop. No apology spiral. No explanation of why you reacted that way. Come back to the practice.</p></div>
+    </details>
+    <details>
+      <summary><span>It turns into a conversation about the relationship.</span><span class="pl">+</span></summary>
+      <div class="dbody"><p>Stop the ritual. You don't need to drag it back into shape. You don't need to use the remaining minutes because you started them.</p><p>Nothing has been lost. Come back another day if you both want to.</p><p>Keep the fifteen minutes to the fifteen minutes.</p></div>
+    </details>
+  </div>
+
+  <div class="endcard">
+    <div class="kicker">That's it</div>
+    <p>Five minutes with yourself. Five minutes letting her determine the distance. One true thing. Full stop.</p>
+    <p class="big" style="margin:10px 0">Touch Base. Approach. <em>Full Stop.</em></p>
+    <p>You weren't trying to make her come closer. You weren't trying to get reassurance that everything between you is okay. You weren't trying to solve the relationship in fifteen minutes.</p>
+    <p>You were practising something much smaller: noticing yourself. Listening to the distance. Not immediately trying to change it.</p>
+    <p style="margin:0">That's the practice.</p>
+  </div>
+
+  <div class="more"><div class="kicker">Keep going</div><a class="offer" href="https://buy.stripe.com/cNi6oG21J7X25XDeLj0co2c"><img src="media/up-fullstop.jpg" alt="" loading="lazy"><div class="ot"><b>The Full Stop</b><span>One true thing. No question on the end.</span><em>£9 →</em></div></a><a class="offer" href="https://buy.stripe.com/8x23cu0XFdhmcm10Ut0co2d"><img src="media/up-approach.jpg" alt="" loading="lazy"><div class="ot"><b>The Approach Ritual, Both Ways</b><span>Twenty minutes. Five minutes with the roles reversed. Fifteen minutes to land what you noticed.</span><em>£17 →</em></div></a><a class="offer" href="https://feelfullyyou.com/31-touch-points"><img src="media/up-31tp.jpg" alt="" loading="lazy"><div class="ot"><b>31 Touch Points</b><span>31 days back to each other, through touch, fun and play. One small practice a day, in the app.</span><em>£27 →</em></div></a></div>
+</section>
+
+</main>
+
+<footer>Feel Fully You</footer>
+<script>
+(function(){
+  [].forEach.call(document.querySelectorAll('.lw button'),function(b){b.addEventListener('click',function(){
+    var box=b.closest('.media');[].forEach.call(box.querySelectorAll('.lw button'),function(x){x.classList.toggle('on',x===b)});
+    [].forEach.call(box.querySelectorAll('.pane'),function(p){p.hidden=p.id!==b.dataset.p;var f=p.querySelector('iframe[data-src]');if(!p.hidden&&f&&!f.src)f.src=f.dataset.src});
+    [].forEach.call(box.querySelectorAll('audio'),function(a){a.pause()});
+  })});
+})();
+</script>
+<script>
+(function(){
+  function fmt(t){t=Math.max(0,Math.round(t));return Math.floor(t/60)+":"+("0"+t%60).slice(-2)}
+  /* audio players */
+  var ICO_P='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>';
+  var ICO_S='<svg viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>';
+  var all=[];
+  [].forEach.call(document.querySelectorAll('.player[data-src]'),function(p){
+    p.innerHTML='<button class="play" aria-label="Play">'+ICO_P+'</button><div class="track"><div class="rail"><div class="fill"></div><div class="knob"></div></div><div class="times"><span class="cur">0:00</span><button class="spd" type="button" aria-label="Playback speed">1×</button><span class="dur">'+p.dataset.dur+'</span></div></div><audio preload="metadata" src="'+p.dataset.src+'"></audio>';
+    var a=p.querySelector('audio'),btn=p.querySelector('.play'),fill=p.querySelector('.fill'),knob=p.querySelector('.knob'),rail=p.querySelector('.rail'),cur=p.querySelector('.cur'),dur=p.querySelector('.dur');
+    all.push(a);var spd=p.querySelector('.spd');function rate(){var r=1;try{r=+localStorage.getItem('ffy-voice-rate')||1}catch(e){}return r}function lab(n){return (n===1?'1':String(n))+'\u00d7'}spd.textContent=lab(rate());a.addEventListener('play',function(){a.playbackRate=rate()});spd.onclick=function(){var n={1:1.25,1.25:1.5,1.5:1}[rate()]||1;try{localStorage.setItem('ffy-voice-rate',n)}catch(e){}[].forEach.call(document.querySelectorAll('.player'),function(q){var b=q.querySelector('.spd'),x=q.querySelector('audio');if(b)b.textContent=lab(n);if(x)x.playbackRate=n})};
+    function paint(){var x=a.duration?a.currentTime/a.duration*100:0;fill.style.width=x+'%';knob.style.left=x+'%';cur.textContent=fmt(a.currentTime)}
+    btn.onclick=function(){if(a.paused){all.forEach(function(o){if(o!==a)o.pause()});a.play()}else a.pause()};
+    a.addEventListener('play',function(){btn.innerHTML=ICO_S});
+    a.addEventListener('pause',function(){btn.innerHTML=ICO_P});
+    a.addEventListener('timeupdate',paint);
+    a.addEventListener('loadedmetadata',function(){dur.textContent=fmt(a.duration)});
+    var drag=false;
+    function seek(e){var r=rail.getBoundingClientRect();if(a.duration){a.currentTime=Math.min(1,Math.max(0,(e.clientX-r.left)/r.width))*a.duration;paint()}}
+    rail.addEventListener('pointerdown',function(e){drag=true;seek(e)});
+    window.addEventListener('pointermove',function(e){if(drag)seek(e)});
+    window.addEventListener('pointerup',function(){drag=false});
+  });
+})();
+</script>
+<script>
+(function(){
+  /* sound + wake lock */
+  var actx=null;
+  function chime(){
+    try{actx=actx||new (window.AudioContext||window.webkitAudioContext)();
+      [0,0.45].forEach(function(d,i){var o=actx.createOscillator(),g=actx.createGain();o.type='sine';o.frequency.value=i?1046.5:784;
+        g.gain.setValueAtTime(0.0001,actx.currentTime+d);g.gain.exponentialRampToValueAtTime(0.35,actx.currentTime+d+0.02);g.gain.exponentialRampToValueAtTime(0.0001,actx.currentTime+d+2.2);
+        o.connect(g);g.connect(actx.destination);o.start(actx.currentTime+d);o.stop(actx.currentTime+d+2.3)});}catch(e){}
+  }
+  var lock=null;
+  function wake(on){try{if(on&&'wakeLock' in navigator){navigator.wakeLock.request('screen').then(function(l){lock=l}).catch(function(){})}else if(lock){lock.release();lock=null}}catch(e){}}
+
+  /* timers */
+  function fmt(t){t=Math.max(0,Math.round(t));return Math.floor(t/60)+':'+('0'+t%60).slice(-2)}
+  /* Juliette's voice, same clips and rules as the cards app: start on the turn, Thank you the first time, Clarify and Summarise every time, the bell at the end */
+  var VO=null;
+  function voice(f){try{document.querySelectorAll('audio').forEach(function(a){a.pause()});if(VO)VO.pause();VO=new Audio('media/voice/'+f);VO.play().catch(function(){})}catch(e){}}
+  function afterEl(el){var d=el.closest&&el.closest('.dyad');var s=el.dataset.after||(d&&d.dataset.after);return s?document.querySelector(s+' audio'):null}
+  function prime(el){var A=afterEl(el);if(!A||A._p)return;A._p=1;try{A.muted=true;var p=A.play();if(p&&p.then){p.then(function(){A.pause();A.currentTime=0;A.muted=false}).catch(function(){A.muted=false})}else{A.pause();A.muted=false}}catch(e){A.muted=false}}
+  function afterVoice(el,bell){var A=afterEl(el);if(!A)return;var done=false;function go2(){if(done)return;done=true;[].forEach.call(document.querySelectorAll('audio'),function(o){if(o!==A)o.pause()});if(typeof VO!=='undefined'&&VO&&VO!==A)VO.pause();try{A.currentTime=0}catch(e){}A.muted=false;var p=A.play();if(p&&p.catch)p.catch(function(){});var box=A.closest('.vnote');if(box){box.classList.add('speaking');box.scrollIntoView({behavior:'smooth',block:'center'})}}
+    if(bell&&typeof VO!=='undefined'&&VO){setTimeout(function(){if(VO&&!VO.paused&&!VO.ended){VO.addEventListener('ended',go2);setTimeout(go2,21000)}else go2()},900)}else setTimeout(go2,2600)}
+  function makeTimer(el,min,onDone){
+    el.innerHTML='<div><div class="lbl">Timer</div><div class="t">'+fmt(min*60)+'</div></div><div class="btns"><button class="go">Start</button><button class="rs">Reset</button></div>';
+    var left=min*60,end=0,iv=null,t=el.querySelector('.t'),go=el.querySelector('.go'),rs=el.querySelector('.rs');
+    function tick(){left=(end-Date.now())/1000;if(left<=0){left=0;stop();el.classList.add('done');go.textContent='Done';if(onDone)onDone();else chime();afterVoice(el,!!onDone)}t.textContent=fmt(left)}
+    function stop(){clearInterval(iv);iv=null;wake(false)}
+    go.onclick=function(){prime(el);
+      if(el.classList.contains('done'))return;
+      if(iv){stop();go.textContent='Resume'}else{try{actx=actx||new (window.AudioContext||window.webkitAudioContext)();actx.resume()}catch(e){};end=Date.now()+left*1000;iv=setInterval(tick,250);go.textContent='Pause';wake(true)}
+    };
+    rs.onclick=function(){stop();left=min*60;el.classList.remove('done');go.textContent='Start';t.textContent=fmt(left)};
+  }
+  [].forEach.call(document.querySelectorAll('.timer'),function(el){makeTimer(el,+el.dataset.min)});
+
+})();
+</script>
+
+<style>
+/* app-style screens */
+body.app .bar{transform:none}
+body.app.on-cover .bar{transform:translateY(-100%)}
+.screen{display:none;padding-bottom:110px}
+.screen.cur{display:block;animation:scr .35s ease}
+@keyframes scr{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+body.app main{padding-top:58px}
+body.app main > section:first-child,body.app .screen > section:first-child{padding-top:48px}
+.cover.screen{padding-bottom:0}
+.begin{display:inline-flex;align-items:center;gap:10px;margin-top:30px;border:0;border-radius:99px;background:var(--accent);color:var(--bg);font-family:"Jost",sans-serif;font-weight:500;font-size:18px;padding:16px 30px;cursor:pointer}
+body.app .cover .scroll{display:none}
+.nav{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(26,24,20,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line);display:none}
+body.app:not(.on-cover) .nav{display:block}
+.nav .in{max-width:640px;margin:0 auto;display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:center}
+.nav button{border:0;cursor:pointer;border-radius:99px;font-family:"Inter",sans-serif;font-size:14px;padding:15px 18px}
+.nav .bk{background:transparent;color:var(--muted);border:1px solid var(--line);width:52px;padding:15px 0;font-size:18px;line-height:1}
+.nav .nx{background:var(--accent);color:var(--bg);font-family:"Jost",sans-serif;font-weight:500;font-size:16px;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav .nx small{font-family:"Inter",sans-serif;font-weight:400;font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.65;margin-right:8px}
+.stepof{display:block;text-align:center;font-family:"Inter",sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+</style>
+<nav class="nav" id="appnav"><span class="stepof" id="stepof"></span><div class="in"><button class="bk" id="bk" aria-label="Back">←</button><button class="nx" id="nx"></button></div></nav>
+<script>
+(function(){
+  var main=document.querySelector('main'),cover=document.querySelector('header.cover');
+  var chips=[].slice.call(document.querySelectorAll('#chips a'));
+  var prog=document.getElementById('prog');
+  // group main's children into screens: a section with an id starts a screen; figures join the NEXT screen; id-less sections join the previous one
+  var kids=[].slice.call(main.children),screens=[],pending=[];
+  kids.forEach(function(el){
+    if(el.tagName==='SECTION'&&el.id){var s=document.createElement('div');s.className='screen';s.dataset.id=el.id;screens.push(s);pending.forEach(function(p){s.appendChild(p)});pending=[];s.appendChild(el)}
+    else if(el.tagName==='FIGURE'){pending.push(el)}
+    else if(screens.length){screens[screens.length-1].appendChild(el)}
+    else pending.push(el);
+  });
+  screens.forEach(function(s){main.appendChild(s)});
+  pending.forEach(function(p){screens[screens.length-1].appendChild(p)});
+  cover.classList.add('screen');
+  var all=[cover].concat(screens);
+  var names=screens.map(function(s){var c=chips.filter(function(a){return a.getAttribute('href')==='#'+s.dataset.id})[0];return c?c.textContent.trim():s.dataset.id});
+  // cover button
+  var b=document.createElement('button');b.className='begin';b.textContent='Begin →';cover.querySelector('.in').appendChild(b);
+  b.onclick=function(){go(1);var w=document.querySelector('[data-welcome] audio');if(w){try{w.currentTime=0;var p=w.play();if(p&&p.catch)p.catch(function(){})}catch(e){}}};
+  document.body.classList.add('app');
+  var cur=0,key='ffy-step-'+location.pathname;
+  function stopMedia(){[].forEach.call(document.querySelectorAll('audio'),function(a){a.pause()})}
+  function go(i,noScroll){
+    i=Math.max(0,Math.min(all.length-1,i));
+    if(i!==cur)stopMedia();
+    all.forEach(function(s,k){s.classList.toggle('cur',k===i)});
+    cur=i;document.body.classList.toggle('on-cover',i===0);
+    chips.forEach(function(a,k){a.classList.toggle('cur',k===i-1)});
+    if(i>0){var c=chips[i-1];if(c)c.parentNode.scrollTo({left:c.offsetLeft-16,behavior:'smooth'})}
+    prog.style.width=(i/(all.length-1)*100)+'%';
+    document.getElementById('stepof').textContent=i>0?(i+' of '+screens.length):'';
+    var nx=document.getElementById('nx');
+    if(i<all.length-1){nx.innerHTML='<small>Next</small>'+names[i]+' →'}else{nx.innerHTML='Back to the start'}
+    // lazy iframes inside newly shown screen
+    [].forEach.call(all[i].querySelectorAll('iframe[data-src]'),function(f){if(!f.src&&!f.closest('[hidden]'))f.src=f.dataset.src});
+    if(!noScroll)window.scrollTo({top:0,behavior:'instant'});
+    try{localStorage.setItem(key,i)}catch(e){}
+    if(history.replaceState)history.replaceState(null,'',i>0?'#go-'+screens[i-1].dataset.id:location.pathname+location.search);
+  }
+  document.getElementById('nx').onclick=function(){go(cur<all.length-1?cur+1:0)};
+  document.getElementById('bk').onclick=function(){go(cur-1)};
+  chips.forEach(function(a,k){a.addEventListener('click',function(e){e.preventDefault();go(k+1)})});
+  // in-page links to a section (e.g. #after) switch screens
+  window.addEventListener('hashchange',function(){var id=location.hash.slice(1).replace(/^go-/,'');screens.forEach(function(s,k){if(s.dataset.id===id)go(k+1)})});
+  var start=0,h=location.hash.slice(1).replace(/^go-/,'');
+  if(h){screens.forEach(function(s,k){if(s.dataset.id===h)start=k+1})}
+  else{try{var v=+localStorage.getItem(key);if(v>0&&v<all.length)start=v}catch(e){}}
+  if('scrollRestoration' in history)history.scrollRestoration='manual';
+  go(start);
+  window.addEventListener('load',function(){setTimeout(function(){window.scrollTo({top:0,behavior:'instant'})},0)});
+  // progress bar is now the step bar, not scroll
+  window.addEventListener('scroll',function(){},{passive:true});
+})();
+</script>
+
+<script>
+/* Watch / Listen switch: the chosen one says what is showing, the other says "instead" (27 Oct, a tap on the chosen one looked broken) */
+(function(){
+  [].forEach.call(document.querySelectorAll('.lw'),function(lw){
+    var bs=[].slice.call(lw.querySelectorAll('button'));
+    bs.forEach(function(b){var t=b.textContent,d=t.split('·')[1];b.dataset.dur=d?d.trim():'';b.dataset.kind=/watch/.test(b.dataset.p)?'w':'l';b.dataset.orig=t});
+    function paint(){bs.forEach(function(b){var on=b.classList.contains('on'),w=b.dataset.kind==='w',d=b.dataset.dur?' · '+b.dataset.dur:'';
+      b.textContent=on?(w?'Video below ↓':'Audio below ↓'):b.dataset.orig;b.setAttribute('aria-pressed',on)})}
+    bs.forEach(function(b){b.addEventListener('click',function(){setTimeout(paint,0)})});
+    paint();
+  });
+})();
+</script>
+<script>
+/* interactive hub (27 Oct): progress saves on this phone */
+(function(){
+  var P=location.pathname, KD='ffy-done-'+P, KS='ffy-steps-'+P, KC='ffy-check-'+P, KJ='ffy-true-'+P, KP='ffy-path-'+P;
+  function g(k,d){try{var v=JSON.parse(localStorage.getItem(k));return v==null?d:v}catch(e){return d}}
+  function put(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+  var chips=[].slice.call(document.querySelectorAll('#chips a')), ids=chips.map(function(a){return a.getAttribute('href').slice(1)});
+  var done=g(KD,{});
+  var LABEL={what:'Got it',this:'Got it',setup:"I'm ready",p1:'Got it',p2:'Got it',p3:'Got it',now:null,after:'Finished'};
+  var WHEN={setup:'Done when you have asked her once, and heard her answer.',p1:'Done when you know the spot, and the pace: slower than you think slow is.',p2:'Done when you know the one rule: she chooses the distance, you listen.',p3:'Done when you know how to say one true thing, and stop.',after:'Done when you have done the fifteen minutes once.'};
+  function paint(){
+    var n=0;ids.forEach(function(id,k){var d=!!done[id];if(d)n++;chips[k].classList.toggle('done',d)});
+    var tot=ids.length,f=document.getElementById('ringf');if(f)f.style.strokeDashoffset=119.4*(1-n/tot);
+    var hn=document.getElementById('hubn');if(hn)hn.textContent=n+' of '+tot+' done';
+    var first=ids.filter(function(id){return !done[id]})[0];
+    [].forEach.call(document.querySelectorAll('.hubcard'),function(c){c.classList.toggle('done',!!done[c.dataset.id]);c.classList.toggle('next',c.dataset.id===first)});
+    var b=document.querySelector('.begin');if(b)b.textContent=n===0?'Begin →':(first?'Pick up where you left off →':'Back to the start →');
+  }
+  // hub cards
+  var hc=document.getElementById('hubcards');
+var CARD={what:['Read · 2 min','She went quiet. Not a row. Nothing you can point at.'],this:['Read · 1 min','Fifteen minutes. One sitting. Three parts, in order.'],setup:['Before you start','Ask her once, plainly. Don\'t sell it.'],p1:['Part one · 5 min','Before you go anywhere near her, come back to your own body.'],p2:['Part two · 5 min','She chooses the distance. You practise listening to it.'],p3:['Part three','One true thing. No invoice attached.'],now:['Do it · 15 min','All three on one screen. My voice guides you through.'],after:['Afterwards','What you might notice.']};
+  if(hc)ids.forEach(function(id,k){var c=document.createElement('button');c.type='button';c.className='hubcard'+(id==='now'?' feat':'');c.dataset.id=id;var m=CARD[id]||['',''];
+    c.innerHTML=(id==='now'?'<span class="fimg"><img src="media/hub/now.jpg" alt=""></span>':'<img class="th" src="media/hub/'+id+'.jpg" alt="">')+'<span class="tx"><small>'+m[0]+'</small><b>'+chips[k].textContent.replace(/^\d\s/,'')+'</b><em>'+m[1]+'</em></span><span class="c"></span>';
+    c.onclick=function(){chips[k].click()};hc.appendChild(c)});
+  // begin = pick up where you left off
+  var b=document.querySelector('.begin');var hubEl=document.getElementById('hub');var wl=document.getElementById('welc');if(b&&hubEl){hubEl.parentNode.insertBefore(b,wl||hubEl)}var sc=document.querySelector('.cover .scroll');if(sc)sc.style.display='none';
+  if(b){var orig=b.onclick;b.onclick=function(e){var first=ids.filter(function(id){return !done[id]})[0];if(!Object.keys(done).length||!first){orig&&orig.call(b,e)}else{chips[ids.indexOf(first)].click()}}}
+  function mark(id,btn){done[id]=1;put(KD,done);if(btn){btn.classList.add('on','glow');btn.textContent='Done ✓'}paint()}
+  // I did it on every screen except Do it now
+  ids.forEach(function(id){
+    var sec=document.getElementById(id);if(!sec||!LABEL[id])return;
+    var w=document.createElement('div');w.className='didit';
+    w.innerHTML=(WHEN[id]?'<p class="dw">'+WHEN[id]+'</p>':'')+'<button type="button" class="didbtn">'+LABEL[id]+' ✓</button>';
+    sec.appendChild(w);var btn=w.querySelector('.didbtn');
+    if(done[id]){btn.classList.add('on');btn.textContent='Done ✓'}
+    btn.onclick=function(){var was=done[id];mark(id,btn);if(!was&&id!=='after')setTimeout(function(){var nx=document.getElementById('nx');if(nx)nx.click()},900)};
+  });
+  // pick your path + checklist
+  var path=g(KP,'');
+  function showPath(){[].forEach.call(document.querySelectorAll('.pbtns button'),function(x){x.classList.toggle('on',x.dataset.a===path)});var y=document.querySelector('.pyes'),n=document.querySelector('.pno');if(y)y.hidden=path!=='yes';if(n)n.hidden=path!=='no'}
+  [].forEach.call(document.querySelectorAll('.pbtns button'),function(x){x.onclick=function(){path=x.dataset.a;put(KP,path);showPath()}});showPath();
+  var chk=g(KC,{});
+  [].forEach.call(document.querySelectorAll('ul.check'),function(ul){var items=[].slice.call(ul.querySelectorAll('li'));
+    function upd(){var all=items.every(function(li,i){return chk[ul.dataset.key+i]});var r=ul.parentNode.querySelector('.ready');if(r)r.hidden=!all}
+    items.forEach(function(li,i){var k=ul.dataset.key+i;li.classList.toggle('on',!!chk[k]);li.querySelector('button').onclick=function(){chk[k]=!chk[k];put(KC,chk);li.classList.toggle('on',!!chk[k]);upd()}});upd()});
+  // Do it now steps
+  var st=g(KS,{});
+  function stepPaint(){var all=true;[].forEach.call(document.querySelectorAll('.dstep'),function(d){var n=d.dataset.step,on=!!st[n];d.classList.toggle('done',on);var b=d.querySelector('.sdone');b.classList.toggle('on',on);b.textContent=on?'Done ✓':'Done ✓';if(!on)all=false});
+    var fin=document.getElementById('finish');if(fin)fin.hidden=!all;if(all&&!done.now){mark('now');if(fin){fin.classList.add('glow')}}}
+  [].forEach.call(document.querySelectorAll('.dstep'),function(d){var b=d.querySelector('.sdone');b.onclick=function(){st[d.dataset.step]=!st[d.dataset.step];put(KS,st);if(st[d.dataset.step]){b.classList.add('glow');var nx=d.nextElementSibling;if(nx&&nx.classList.contains('dstep'))setTimeout(function(){nx.scrollIntoView({behavior:'smooth',block:'start'})},700)}stepPaint()}});
+  stepPaint();
+  // one true thing
+  var J=g(KJ,[]),jl=document.getElementById('jlist'),jt=document.getElementById('jtxt');
+  function jp(){if(!jl)return;jl.innerHTML='';J.slice().reverse().forEach(function(e){var d=document.createElement('div');d.textContent=e.t;var s=document.createElement('small');s.textContent=e.d;d.appendChild(s);jl.appendChild(d)})}
+  var js=document.querySelector('.jsave');if(js)js.onclick=function(){var t=(jt.value||'').trim();if(!t)return;J.push({t:t,d:new Date().toLocaleDateString('en-GB',{day:'numeric',month:'short'})});put(KJ,J);jt.value='';jp();js.textContent='Saved ✓';setTimeout(function(){js.textContent='Save it'},1500)};
+  jp();paint();
+  // in-page links to screens
+  [].forEach.call(document.querySelectorAll('a.golink'),function(a){a.addEventListener('click',function(e){var id=a.getAttribute('href').slice(1),k=ids.indexOf(id);if(k>-1){e.preventDefault();chips[k].click()}})});
+})();
+</script>
+</body>
+</html>
