@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Your Two Minute Touch | Juliette Karaman</title>
+<meta name="description" content="A two minute touch practice from Juliette Karaman. Your hands, your arm, and one question: the touch up, or the touch down?">
+<meta name="robots" content="noindex">
+<link rel="icon" href="/favicon.ico">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SY8NKELMNZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-SY8NKELMNZ');
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;1,200&display=swap" rel="stylesheet">
+<style>
+  :root{--black:#070707;--gold:#DDC98E;--lemon:#EEDE80;--cream:#F6EFE0}
+  *{box-sizing:border-box;margin:0}
+  html,body{background:var(--black);color:var(--cream);font-family:Poppins,system-ui,sans-serif}
+  body{min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:calc(22px + env(safe-area-inset-top)) 16px 40px;
+    background:radial-gradient(90% 60% at 50% 110%,rgba(194,154,78,.22),rgba(7,7,7,0) 70%),var(--black)}
+  .brand{font-weight:300;letter-spacing:.32em;font-size:.66rem;text-transform:uppercase;color:var(--gold);text-decoration:none}
+  .k{margin-top:34px;font-weight:200;letter-spacing:.34em;font-size:.62rem;text-transform:uppercase;color:var(--gold);opacity:.85;text-align:center}
+  h1{font-weight:200;font-size:clamp(2rem,8vw,2.8rem);line-height:1.12;text-align:center;margin-top:12px;letter-spacing:-.01em}
+  h1 em{font-style:italic;color:var(--gold)}
+  .sub{font-weight:200;font-size:.95rem;color:rgba(246,239,224,.72);text-align:center;max-width:32ch;line-height:1.6;margin-top:14px}
+  .frame{margin-top:26px;width:min(92vw,380px);border-radius:22px;overflow:hidden;border:1px solid rgba(221,201,142,.3);
+    box-shadow:0 40px 90px -30px rgba(0,0,0,.9),0 0 80px -40px rgba(194,154,78,.6);background:#000}
+  video{display:block;width:100%;height:auto;aspect-ratio:9/16;background:#000}
+  .after{margin-top:26px;text-align:center;font-weight:200;font-size:1.15rem;line-height:1.5;max-width:28ch}
+  .after em{font-style:italic;color:var(--gold)}
+  .foot{margin-top:40px;font-weight:200;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(246,239,224,.4);text-decoration:none}
+</style>
+</head>
+<body>
+  <a class="brand" href="/">Feel Fully You</a>
+  <div class="k">Your two minute touch</div>
+  <h1>Give me<br><em>two minutes.</em></h1>
+  <p class="sub">Somewhere quiet. Sleeves up. Sound on.</p>
+  <div class="frame">
+    <video id="v" src="/video/two-minute-touch.mp4" poster="/two-minute-touch-poster.jpg" controls playsinline preload="metadata"></video>
+  </div>
+  <p class="after">Then notice:<br><em>the touch up, or the touch down?</em></p>
+  <a class="foot" href="/">feelfullyyou.com</a>
+<script>
+  (function(){var v=document.getElementById('v'),sent={};
+    function T(n){if(sent[n])return;sent[n]=1;try{if(typeof gtag==='function')gtag('event',n,{video:'two_minute_touch'});}catch(e){}}
+    v.addEventListener('play',function(){T('video_play');});
+    v.addEventListener('ended',function(){T('video_complete');});
+  })();
+</script>
+</body>
+</html>
