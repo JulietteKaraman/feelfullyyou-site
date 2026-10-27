@@ -48,8 +48,10 @@ footer.tail .mark{font-weight:700;color:var(--figure)}
 footer.tail p{font-size:14px;opacity:.75}
 footer.tail a{color:var(--accent);font-weight:600}
 @media print{body{background:#fff}.wrap{padding:0;gap:24px}.card,.script,.principle{background:none}}
-</style><!-- Meta Pixel Code -->
+</style><!-- Meta Pixel Code (loads only after cookie consent, see /cookie-consent.js) -->
 <script>
+window.ffyLoadPixel=function(){
+if(window.ffyPixelOn)return;window.ffyPixelOn=1;
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -60,10 +62,10 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '412290651716612');
 fbq('track', 'PageView');
+};
+try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=412290651716612&ev=PageView&noscript=1"
-/></noscript>
+<script src="/cookie-consent.js" defer></script>
 <!-- End Meta Pixel Code -->
 </head><body>
 

@@ -565,8 +565,10 @@ gtag('config', 'G-SY8NKELMNZ');
 .sticky a{background:#A88538;color:#fff;font-weight:700;padding:11px 20px;border-radius:2px;white-space:nowrap;text-decoration:none}
 @media(max-width:900px){.tp-hero{padding:96px 20px 50px}.tp-hero-in{grid-template-columns:1fr;gap:30px}.tp-visual{min-height:0}.tp-photo{width:100%;height:380px}.tp-phone{width:170px;left:12px;bottom:-24px}.tp-stats{grid-template-columns:1fr 1fr;gap:24px}.tp-weeks{grid-template-columns:1fr}}
 </style>
-<!-- Meta Pixel Code -->
+<!-- Meta Pixel Code (loads only after cookie consent, see /cookie-consent.js) -->
 <script>
+window.ffyLoadPixel=function(){
+if(window.ffyPixelOn)return;window.ffyPixelOn=1;
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -577,10 +579,10 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '412290651716612');
 fbq('track', 'PageView');
+};
+try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=412290651716612&ev=PageView&noscript=1"
-/></noscript>
+<script src="/cookie-consent.js" defer></script>
 <!-- End Meta Pixel Code -->
 </head>
 <body>
