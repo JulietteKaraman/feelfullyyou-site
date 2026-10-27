@@ -69,6 +69,7 @@
   .asker small{display:block;font-family:var(--body);font-size:.78rem;color:rgba(254,252,250,.7)}
   .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;font-size:.85rem;color:rgba(254,252,250,.7)}
   .tally{color:var(--lemon);font-weight:500}
+  .snd{background:none;border:1px solid currentColor;color:inherit;opacity:.7;border-radius:999px;padding:3px 10px;font:inherit;font-size:.75rem;cursor:pointer}
   .deck{position:relative;height:420px}
   .card{position:absolute;inset:0;border-radius:26px;padding:28px 24px;border:2px solid rgba(221,201,142,.9);display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 30px 60px -24px rgba(0,0,0,.9),0 0 50px -12px rgba(238,222,128,.45);touch-action:none;user-select:none;cursor:grab;will-change:transform}
   .card.back{transform:scale(.94) translateY(16px);opacity:.55;pointer-events:none}
@@ -174,7 +175,7 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
     <!-- GAME -->
     <section id="game" class="hidden">
       <div class="asker"><img src="sacred-no-quiz-face.jpg" alt=""><p>Quick, don't think.<small>Would you say yes?</small></p></div>
-      <div class="top"><span id="count">1 of 10</span><span class="tally" id="tally"></span></div>
+      <div class="top"><span id="count">1 of 10</span><span class="tally" id="tally"></span><button type="button" id="snd" class="snd" aria-label="Sound on or off">Sound on</button></div>
       <div class="deck" id="deck"></div>
       <div class="controls" id="controls">
         <button class="no" id="noBtn">&larr; No</button>
@@ -292,11 +293,33 @@ window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);
   ];
   // Flash lines (drafted for Juliette to change)
   var FLASH={
-    override:["Your mouth said yes. Your body didn't.","That yes cost you something.","Hello, people-pleaser."],
-    hold:["You said no to something your body wanted. Interesting.","Your body was up for it. You weren't."],
-    clean:["Clean.","That one landed in your body.","Your yes and your body agreed."],
-    unsure:["Not sure is information too."]
+    yesyes:["A full-body yes. Delicious.","Yes, all the way down.","Your mouth and your body, holding hands.","Mmm. Scrumptious.","That is what a real yes feels like.","Clean. Your whole body said yes."],
+    nono:["A clean no. No apology needed.","No. Full stop. Gorgeous.","Your body backed you up on that one.","Look at you, not explaining yourself.","That no was kind to you.","Boundary, meet backbone."],
+    override:["Your mouth said yes. Your body didn't.","That yes cost you something.","Hello, people-pleaser.","There it is. The yes that slipped out.","Ouch. Your body noticed that one.","That yes was for them."],
+    hold:["You said no to something your body wanted. Interesting.","Your body was up for it. You weren't.","Ooh. A no your body didn't sign off on.","Careful. Sometimes no is a habit too."],
+    unsure:["Not sure is information too.","Fuzzy is fine. Notice where it went quiet.","Your body is still deciding. Let it.","Hmm. Put a pin in that one."]
   };
+  var BAG={};
+  function draw(k){if(!BAG[k]||!BAG[k].length){BAG[k]=FLASH[k].slice().sort(function(){return Math.random()-.5;});}return BAG[k].pop();}
+  // Sound: soft swipe whoosh + a little note per answer. Made in the browser, no files.
+  var AC=null,SOUND=true;
+  function ac(){try{if(!AC)AC=new (window.AudioContext||window.webkitAudioContext)();if(AC.state==='suspended')AC.resume();}catch(e){AC=null;}return AC;}
+  function whoosh(yes){if(!SOUND)return;var a=ac();if(!a)return;var t=a.currentTime,len=.32,
+      buf=a.createBuffer(1,Math.floor(a.sampleRate*len),a.sampleRate),d=buf.getChannelData(0);
+    for(var n=0;n<d.length;n++)d[n]=Math.random()*2-1;
+    var src=a.createBufferSource();src.buffer=buf;var f=a.createBiquadFilter();f.type='bandpass';f.Q.value=1.1;
+    f.frequency.setValueAtTime(yes?700:1600,t);f.frequency.exponentialRampToValueAtTime(yes?2400:500,t+len);
+    var g=a.createGain();g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.35,t+.05);g.gain.exponentialRampToValueAtTime(.0001,t+len);
+    src.connect(f);f.connect(g);g.connect(a.destination);src.start(t);src.stop(t+len);}
+  function tone(freqs,type,vol,gap){if(!SOUND)return;var a=ac();if(!a)return;var t=a.currentTime;
+    freqs.forEach(function(fr,k){var o=a.createOscillator(),g=a.createGain();o.type=type;o.frequency.value=fr;var s0=t+k*gap;
+      g.gain.setValueAtTime(.0001,s0);g.gain.exponentialRampToValueAtTime(vol,s0+.02);g.gain.exponentialRampToValueAtTime(.0001,s0+.45);
+      o.connect(g);g.connect(a.destination);o.start(s0);o.stop(s0+.5);});}
+  function answerSound(kind){
+    if(kind==='yesyes'||kind==='nono')tone([659,988],'sine',.18,.09);      // bright little chime
+    else if(kind==='override')tone([220,196],'triangle',.16,.14);          // low "hmm"
+    else tone([440],'sine',.1,0);                                          // soft tick
+  }
 
   var $=function(id){return document.getElementById(id);};
   var i=0,score=0,overrides=0,winner='',busy=false,said=null;
@@ -331,7 +354,7 @@ window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);
     if(busy)return;busy=true;said=yes;
     c.style.transition='transform .35s ease, opacity .35s';c.querySelector('.stamp.'+(yes?'yes':'no')).style.opacity=1;
     c.style.transform='translateX('+(yes?520:-520)+'px) rotate('+(yes?24:-24)+'deg)';c.style.opacity='0';
-    if(navigator.vibrate)try{navigator.vibrate(12);}catch(e){}
+    whoosh(yes);if(navigator.vibrate)try{navigator.vibrate(12);}catch(e){}
     setTimeout(bodyCheck,320);
   }
   function bodyCheck(){
@@ -345,19 +368,20 @@ window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);
   function answer(body){
     var kind,pts;
     if(body==='unsure'){kind='unsure';pts=3;}
-    else if(body==='yes'){kind='clean';pts=5;}
+    else if(body==='yes'){kind=said?'yesyes':'nono';pts=5;}
     else if(said){kind='override';pts=1;overrides++;}
     else{kind='hold';pts=3;}
     score+=pts;
     var deck=$('deck');deck.innerHTML='';
     var f=document.createElement('div');f.className='flash';
-    var L=kind==='override'?{bg:'#eede80',fg:'#1c1714'}:kind==='clean'?{bg:'#0d3535',fg:'#eede80'}:{bg:'#d8dfe1',fg:'#0d3535'};
-    f.style.background=L.bg;f.style.color=L.fg;f.textContent=pick(FLASH[kind]);deck.appendChild(f);
+    var L=kind==='override'?{bg:'#eede80',fg:'#1c1714'}:(kind==='yesyes'||kind==='nono')?{bg:'#0d3535',fg:'#eede80'}:{bg:'#d8dfe1',fg:'#0d3535'};
+    f.style.background=L.bg;f.style.color=L.fg;f.textContent=draw(kind);deck.appendChild(f);answerSound(kind);
     setTimeout(function(){if(i<N-1){i++;render();}else{doReveal();}},1100);
   }
   $('yesBtn').addEventListener('click',function(){var c=$('deck').lastChild;if(c&&!busy)fly(c,true);});
   $('noBtn').addEventListener('click',function(){var c=$('deck').lastChild;if(c&&!busy)fly(c,false);});
-  $('begin').addEventListener('click',function(){
+  $('snd').addEventListener('click',function(){SOUND=!SOUND;this.textContent=SOUND?'Sound on':'Sound off';if(SOUND)ac();});
+  $('begin').addEventListener('click',function(){ac();
     $('intro').classList.add('hidden');$('game').classList.remove('hidden');render();
     if(typeof gtag==='function')gtag('event','quiz_start',{quiz:'sacred_no_swipe'});
   });
