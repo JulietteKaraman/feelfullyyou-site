@@ -469,7 +469,7 @@ body.app:not(.on-cover) .nav{display:block}
   var ICO_P='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>';
   var ICO_S='<svg viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>';
   var all=[];
-  [].forEach.call(document.querySelectorAll('.player'),function(p){
+  [].forEach.call(document.querySelectorAll('.player[data-src]'),function(p){
     p.innerHTML='<button class="play" aria-label="Play">'+ICO_P+'</button><div class="track"><div class="rail"><div class="fill"></div><div class="knob"></div></div><div class="times"><span class="cur">0:00</span><button class="spd" type="button" aria-label="Playback speed">1×</button><span class="dur">'+p.dataset.dur+'</span></div></div><audio preload="metadata" src="'+p.dataset.src+'"></audio>';
     var a=p.querySelector('audio'),btn=p.querySelector('.play'),fill=p.querySelector('.fill'),knob=p.querySelector('.knob'),rail=p.querySelector('.rail'),cur=p.querySelector('.cur'),dur=p.querySelector('.dur');
     all.push(a);var spd=p.querySelector('.spd');function rate(){var r=1;try{r=+localStorage.getItem('ffy-voice-rate')||1}catch(e){}return r}function lab(n){return (n===1?'1':String(n))+'\u00d7'}spd.textContent=lab(rate());a.addEventListener('play',function(){a.playbackRate=rate()});spd.onclick=function(){var n={1:1.25,1.25:1.5,1.5:1}[rate()]||1;try{localStorage.setItem('ffy-voice-rate',n)}catch(e){}[].forEach.call(document.querySelectorAll('.player'),function(q){var b=q.querySelector('.spd'),x=q.querySelector('audio');if(b)b.textContent=lab(n);if(x)x.playbackRate=n})};
