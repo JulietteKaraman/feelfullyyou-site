@@ -336,9 +336,120 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
 </script>
 <script src="/cookie-consent.js" defer></script>
 <!-- End Meta Pixel Code -->
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;1,200;1,300&display=swap" rel="stylesheet">
+<style>
+/* ===== Dark dial quiz, 27 Oct 2026 (preview, waiting her yes) ===== */
+#intro,#funnel{display:none!important}
+#dq{position:fixed;inset:0;z-index:50;background:#070707;color:#F6EFE0;font-family:Poppins,system-ui,sans-serif;overflow:hidden;-webkit-user-select:none;user-select:none}
+#dq.gone{display:none}
+#dq .ph{position:absolute;inset:-4%;background-position:center;background-size:cover;background-repeat:no-repeat;opacity:0;
+  filter:brightness(var(--b,.4)) contrast(1.08) grayscale(var(--gr,.85)) sepia(var(--sep,0));transform:scale(var(--z,1.04));
+  transition:opacity 1s ease,filter .25s ease,transform 1.2s cubic-bezier(.2,.8,.2,1)}
+#dq .ph.on{opacity:1}
+#dq .veil{position:absolute;inset:0;pointer-events:none;background:radial-gradient(120% 70% at 50% 108%,rgba(7,7,7,.96) 30%,rgba(7,7,7,0) 70%),linear-gradient(180deg,rgba(7,7,7,.8) 0%,rgba(7,7,7,0) 28%)}
+#dq .veil.deep{background:rgba(7,7,7,.62)}
+#dq .glow{position:absolute;left:50%;bottom:-30vh;width:120vw;height:70vh;transform:translateX(-50%);border-radius:50%;pointer-events:none;background:radial-gradient(closest-side,rgba(194,154,78,var(--g,0)),rgba(194,154,78,0))}
+#dq .top{position:absolute;top:0;left:0;right:0;padding:calc(22px + env(safe-area-inset-top)) 22px 0;display:flex;justify-content:space-between;align-items:center;z-index:3}
+#dq .brand{font-weight:300;letter-spacing:.32em;font-size:.66rem;text-transform:uppercase;color:#DDC98E}
+#dq .step{font-weight:200;letter-spacing:.2em;font-size:.7rem;color:rgba(246,239,224,.6)}
+#dq .bars{position:absolute;top:calc(56px + env(safe-area-inset-top));left:22px;right:22px;display:flex;gap:5px;z-index:3}
+#dq .bars i{flex:1;height:1px;background:rgba(221,201,142,.22);transition:background .4s}
+#dq .bars i.on{background:#DDC98E}
+#dq .snd{position:absolute;right:22px;top:calc(72px + env(safe-area-inset-top));z-index:3;background:none;border:0;color:rgba(246,239,224,.45);font:200 .6rem Poppins;letter-spacing:.24em;text-transform:uppercase;cursor:pointer;padding:6px 0}
+#dq .screen{position:absolute;inset:0;z-index:2;display:none}
+#dq .screen.on{display:block;animation:dqin .8s cubic-bezier(.2,.8,.2,1) both}
+@keyframes dqin{from{opacity:0}to{opacity:1}}
+#dq .k{font-weight:200;letter-spacing:.34em;font-size:.62rem;text-transform:uppercase;color:#DDC98E;opacity:.85}
+#dq h1,#dq h2{font-weight:200;letter-spacing:-.01em;margin:0}
+#dq h1{font-size:clamp(2rem,8.5vw,3.1rem);line-height:1.12;margin-top:14px}
+#dq h1 em,#dq h2 em{font-style:italic;color:#DDC98E;font-weight:200}
+#dq .prompt{position:absolute;left:0;right:0;top:40%;text-align:center;padding:0 28px}
+#dq .dial{position:absolute;left:0;right:0;bottom:calc(22px + env(safe-area-inset-bottom));display:flex;flex-direction:column;align-items:center;touch-action:none;cursor:grab}
+#dq .dial svg{width:min(88vw,380px);height:auto;overflow:visible}
+#dq .word{margin-top:-58px;font-weight:200;font-size:1.65rem;font-style:italic;min-height:2.4rem;transition:color .2s,transform .2s}
+#dq .word.hot{color:#EEDE80;transform:scale(1.06)}
+#dq .hint{margin-top:10px;font-weight:200;letter-spacing:.24em;font-size:.6rem;text-transform:uppercase;color:rgba(246,239,224,.45);transition:opacity .4s}
+#dq .btn-g{background:none;border:1px solid #DDC98E;color:#DDC98E;border-radius:99px;padding:12px 32px;font:300 .72rem Poppins,sans-serif;letter-spacing:.3em;text-transform:uppercase;cursor:pointer;transition:opacity .5s,background .25s,color .25s}
+#dq .btn-g:hover,#dq .btn-g.fill{background:#DDC98E;color:#070707}
+#dq .next{margin-top:16px;opacity:0;pointer-events:none}
+#dq .next.show{opacity:1;pointer-events:auto}
+#dq .center{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);text-align:center;padding:0 28px}
+#dq .center p.sub{font-weight:200;font-size:.95rem;color:rgba(246,239,224,.72);margin:16px auto 0;max-width:30ch;line-height:1.6}
+#dq .taps{display:flex;flex-direction:column;gap:10px;max-width:360px;margin:28px auto 0}
+#dq .tap{background:rgba(7,7,7,.35);border:1px solid rgba(221,201,142,.4);color:#F6EFE0;border-radius:99px;padding:13px 20px;font:300 .95rem Poppins,sans-serif;cursor:pointer;transition:background .25s,color .25s,transform .2s,opacity .3s;backdrop-filter:blur(4px)}
+#dq .tap:hover{border-color:#EEDE80}
+#dq .tap.pick{background:#DDC98E;color:#070707;transform:scale(1.03)}
+#dq .taps.done .tap:not(.pick){opacity:.25}
+#dq .vp{display:inline-flex;flex-direction:column;align-items:center;gap:8px;margin-top:22px}
+#dq .vp-play{display:inline-flex;align-items:center;gap:10px;background:rgba(246,239,224,.06);border:1px solid rgba(221,201,142,.45);color:#F6EFE0;border-radius:999px;padding:7px 16px 7px 7px;font:300 .86rem Poppins,sans-serif;cursor:pointer}
+#dq .vp-play img,.vp3 .vp-play img{width:34px;height:34px;border-radius:50%;object-fit:cover}
+#dq .vp-play .ico{display:inline-flex;width:26px;height:26px;border-radius:50%;background:#DDC98E;color:#070707;align-items:center;justify-content:center;font-size:.62rem}
+#dq .vp-play .dur{opacity:.55;font-size:.76rem}
+#dq .vp-speed{display:flex;gap:6px}
+#dq .vp-speed button{background:none;border:1px solid rgba(221,201,142,.3);color:rgba(246,239,224,.6);border-radius:999px;padding:2px 9px;font:300 .68rem Poppins;cursor:pointer}
+#dq .vp-speed button.on{background:#DDC98E;color:#070707;border-color:#DDC98E}
+.vp3{text-align:center}
+.vp3 .vp{display:inline-flex;flex-direction:column;align-items:center;gap:8px;margin:20px auto 0}
+.vp3 .vp-play{display:inline-flex;align-items:center;gap:10px;background:rgba(246,239,224,.06);border:1px solid rgba(221,201,142,.45);color:#F6EFE0;border-radius:999px;padding:7px 16px 7px 7px;font:300 .86rem Poppins,sans-serif;cursor:pointer}
+.vp3 .vp-play .ico{display:inline-flex;width:26px;height:26px;border-radius:50%;background:#DDC98E;color:#070707;align-items:center;justify-content:center;font-size:.62rem}
+.vp3 .vp-play .dur{opacity:.55;font-size:.76rem}
+.vp3 .vp-speed{display:flex;gap:6px}
+.vp3 .vp-speed button{background:none;border:1px solid rgba(221,201,142,.3);color:rgba(246,239,224,.6);border-radius:999px;padding:2px 9px;font:300 .68rem Poppins;cursor:pointer}
+.vp3 .vp-speed button.on{background:#DDC98E;color:#070707;border-color:#DDC98E}
+</style>
 </head>
 <body>
 
+
+<div id="dq">
+  <div class="ph" id="phA"></div><div class="ph" id="phB"></div>
+  <div class="glow" id="dqGlow"></div>
+  <div class="veil" id="dqVeil"></div>
+  <div class="top"><span class="brand">Feel Fully You</span><span class="step" id="dqStep"></span></div>
+  <div class="bars" id="dqBars"></div>
+  <button class="snd" id="dqSnd" type="button">Sound on</button>
+
+  <section class="screen on" id="sIntro">
+    <div class="center">
+      <div class="k">Free · two minutes</div>
+      <h1>Where did<br><em>the touch go?</em></h1>
+      <p class="sub">Ten pictures. One dial. Your body answers.</p>
+      <div id="dqV1"></div>
+      <div style="margin-top:26px"><button class="btn-g fill" id="dqBegin" type="button">Begin</button></div>
+    </div>
+  </section>
+
+  <section class="screen" id="sDial">
+    <div class="prompt"><div class="k">How does this land</div><h1 id="dqLine"></h1></div>
+    <div class="dial" id="dqDial">
+      <svg viewBox="0 0 300 165" aria-hidden="true">
+        <defs><linearGradient id="dqgl" x1="0" x2="1"><stop offset="0" stop-color="#5d4a33"/><stop offset=".55" stop-color="#C29A4E"/><stop offset="1" stop-color="#EEDE80"/></linearGradient></defs>
+        <path d="M20 150 A130 130 0 0 1 280 150" fill="none" stroke="rgba(221,201,142,.16)" stroke-width="2"/>
+        <path id="dqArc" d="M20 150 A130 130 0 0 1 280 150" fill="none" stroke="url(#dqgl)" stroke-width="3" stroke-linecap="round" pathLength="100" stroke-dasharray="0 100"/>
+        <g id="dqTicks"></g>
+        <g id="dqNeedle"><line x1="150" y1="150" x2="150" y2="34" stroke="#EEDE80" stroke-width="1.4"/><circle cx="150" cy="34" r="7" fill="#EEDE80"/><circle cx="150" cy="34" r="16" fill="rgba(238,222,128,.18)"/></g>
+        <circle cx="150" cy="150" r="4" fill="#DDC98E"/>
+      </svg>
+      <div class="word" id="dqWord">&nbsp;</div>
+      <div class="hint" id="dqHint">Slide to how it feels</div>
+      <button class="btn-g next" id="dqNext" type="button">Next</button>
+    </div>
+  </section>
+
+  <section class="screen" id="sHalf">
+    <div class="center">
+      <div class="k">Five down</div>
+      <h1>Halfway.<br><em>Keep going.</em></h1>
+      <div id="dqV2"></div>
+      <div style="margin-top:26px"><button class="btn-g" id="dqOn" type="button">Keep going</button></div>
+    </div>
+  </section>
+
+  <section class="screen" id="sTap">
+    <div class="center"><div class="k" id="dqTapK"></div><h2 id="dqTapQ" style="font-size:clamp(1.6rem,6.6vw,2.4rem);line-height:1.2;margin-top:12px"></h2><div class="taps" id="dqTaps"></div></div>
+  </section>
+</div>
 <div class="topbar"><a class="brand" href="/">Feel Fully <b>You</b></a></div>
 
 <section id="intro" class="rband hero introhero">
@@ -382,6 +493,7 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
       <div class="hero-eyebrow">Your results</div>
       <h1 class="idline" id="idLine">That's everything I <span class="g">need.</span></h1>
       <p class="idsub" id="idSub">Two things came back. Where the touch actually went, and how you're wired for it.<br>Where shall I send them?</p>
+      <div id="dqV3" class="vp3"></div>
       <form class="capture" id="capForm" autocomplete="on" style="max-width:420px;margin:26px auto 0;text-align:left">
         <input type="email" id="email" name="email" placeholder="you@email.com" required>
         <input type="text" class="hp" name="hp_field" tabindex="-1" autocomplete="off" aria-hidden="true">
@@ -746,6 +858,126 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
     cardBg.classList.add('on');
   }
 
+
+  // ===== Dark dial quiz, 27 Oct 2026 =====
+  var DQ_RESULT=null;
+  var PICS=[
+    {img:'/touch-lace-closet-bw.jpg',line:'Black lace,<br><em>against your skin.</em>',pl:'Sexual'},
+    {img:'/touch-scarf-silk-2.jpg',line:'Silk,<br><em>sliding slowly across you.</em>',pl:'Sensual'},
+    {img:'/touch-hand-back.jpg',line:'A hand on<br><em>the small of your back.</em>',pl:'Kinky'},
+    {img:'/touch-neck-back.jpg',line:'Fingers, slowly,<br><em>through your hair.</em>',pl:'Sensual'},
+    {img:'/touch-singing-bowl.jpg',line:'A singing bowl,<br><em>humming over you.</em>',pl:'Energetic'},
+    {img:'/touch-rope-feet.jpg',line:'Rope,<br><em>wound slowly round your ankles.</em>',pl:'Kinky'},
+    {img:'/touch-sequin-arm.jpg',line:'Sequins,<br><em>dragged slowly across your arm.</em>',pl:'Shapeshifter'},
+    {img:'/touch-alex-behind.jpg',pos:'48% center',line:'A kiss on your neck,<br><em>from behind.</em>',pl:'Sexual'},
+    {img:'/touch-hand-heart.jpg',line:'A hand, resting<br><em>on your heart.</em>',pl:'Energetic'},
+    {img:'/touch-pulling-feet.jpg',line:'Someone<br><em>holding your feet.</em>',pl:'Sensual'}
+  ];
+  var TAPS=[
+    {k:'Three quick ones',q:'When touch isn’t quite right,<br><em>you…</em>',img:'/touch-bw.jpg',key:'pattern',a:[
+      ['hold it all together','Holder'],['fix it and move on','Operator'],['drift somewhere else','Wanderer']]},
+    {k:'Two more',q:'What do you<br><em>most want?</em>',img:'/touch-grey-cloth.jpg',key:'gap',a:[
+      ['to really feel it','want-feel'],['to stay with it','want-stay'],['to know what I want, and say it','want-ask'],['more of it','want-more'],['more of the good','want-good']]},
+    {k:'Last one',q:'Your touch, exactly like this,<br><em>a year from now.</em>',img:'/touch-cloth.jpg',key:'ready',a:[
+      ['fine, the same again','ready-good'],['never quite right','ready-wrongkind'],['something sinks','ready-stuck'],['sad, then I carry on','ready-sad'],['I’d rather have the awkward conversation','ready-yes'],['I want to start now','ready-now']]}
+  ];
+  var WORDS=['ick','nothing','nice','mmm','goosebumps','toes curl'];
+  var TOTALQ=PICS.length+TAPS.length, vals=[], picks={}, pi=0, ti=0, v=-1, dragging=false, touched=false, lastW=-1, buzzed=false;
+  var SOUND=true, AC=null, osc=null, gn=null;
+  var g=function(id){return document.getElementById(id);};
+  // progress bars
+  (function(){var h='';for(var k=0;k<TOTALQ;k++)h+='<i></i>';g('dqBars').innerHTML=h;})();
+  function progress(n){var bs=g('dqBars').children;for(var k=0;k<bs.length;k++)bs[k].classList.toggle('on',k<n);g('dqStep').textContent=n?(n+' / '+TOTALQ):'';}
+  // ticks
+  (function(){var h='';for(var k=0;k<=20;k++){var a=Math.PI*(1-k/20),r1=k%4===0?118:123;
+    h+='<line x1="'+(150+r1*Math.cos(a))+'" y1="'+(150-r1*Math.sin(a))+'" x2="'+(150+130*Math.cos(a))+'" y2="'+(150-130*Math.sin(a))+'" stroke="rgba(221,201,142,'+(k%4===0?.55:.25)+')" stroke-width="1"/>';}g('dqTicks').innerHTML=h;})();
+  // photos: two layers so they cross-fade
+  var front='phA';
+  function photo(src,deep,pos){var back=front==='phA'?'phB':'phA',b=g(back),f=g(front);
+    b.style.backgroundImage="url('"+src+"')";b.style.backgroundPosition=pos||'center';['--b','--gr','--sep','--z'].forEach(function(k){b.style.removeProperty(k);});
+    b.classList.add('on');f.classList.remove('on');front=back;g('dqVeil').classList.toggle('deep',!!deep);}
+  function cur(){return g(front);}
+  PICS.concat(TAPS).forEach(function(p){var im=new Image();im.src=p.img;});
+  function show(id){['sIntro','sDial','sHalf','sTap'].forEach(function(s){g(s).classList.toggle('on',s===id);});}
+  // sound
+  function ac(){try{if(!AC)AC=new (window.AudioContext||window.webkitAudioContext)();if(AC.state==='suspended')AC.resume();}catch(e){}return AC;}
+  function hum(on){var a=ac();if(!a||!SOUND)return;
+    if(on&&!osc){osc=a.createOscillator();gn=a.createGain();var f=a.createBiquadFilter();f.type='lowpass';f.frequency.value=900;
+      osc.type='sine';osc.connect(f);f.connect(gn);gn.connect(a.destination);gn.gain.value=.0001;osc.start();gn.gain.exponentialRampToValueAtTime(.06,a.currentTime+.15);}
+    if(!on&&osc){var o=osc,G=gn;G.gain.exponentialRampToValueAtTime(.0001,a.currentTime+.4);setTimeout(function(){try{o.stop();}catch(e){}},450);osc=null;gn=null;}}
+  function bell(fs,vol){var a=ac();if(!a||!SOUND)return;var t=a.currentTime;fs.forEach(function(f,k){var o=a.createOscillator(),G=a.createGain();o.type='sine';o.frequency.value=f;
+    G.gain.setValueAtTime(.0001,t+k*.08);G.gain.exponentialRampToValueAtTime(vol||.09,t+k*.08+.02);G.gain.exponentialRampToValueAtTime(.0001,t+k*.08+1.2);o.connect(G);G.connect(a.destination);o.start(t+k*.08);o.stop(t+k*.08+1.3);});}
+  function breath(){var a=ac();if(!a||!SOUND)return;var t=a.currentTime,len=.6,buf=a.createBuffer(1,Math.floor(a.sampleRate*len),a.sampleRate),d=buf.getChannelData(0);
+    for(var n=0;n<d.length;n++)d[n]=Math.random()*2-1;var src=a.createBufferSource();src.buffer=buf;var f=a.createBiquadFilter();f.type='bandpass';f.Q.value=.8;
+    f.frequency.setValueAtTime(500,t);f.frequency.exponentialRampToValueAtTime(1400,t+len);var G=a.createGain();G.gain.setValueAtTime(.0001,t);G.gain.exponentialRampToValueAtTime(.12,t+.2);G.gain.exponentialRampToValueAtTime(.0001,t+len);
+    src.connect(f);f.connect(G);G.connect(a.destination);src.start(t);src.stop(t+len);}
+  g('dqSnd').onclick=function(){SOUND=!SOUND;this.textContent=SOUND?'Sound on':'Sound off';if(!SOUND)hum(false);};
+  // dial
+  function setV(x){v=Math.max(0,Math.min(1,x));
+    g('dqNeedle').setAttribute('transform','rotate('+(-90+v*180)+' 150 150)');
+    g('dqArc').setAttribute('stroke-dasharray',(v*100)+' 100');
+    var w=Math.min(WORDS.length-1,Math.floor(v*WORDS.length));
+    if(w!==lastW){g('dqWord').textContent=WORDS[w];lastW=w;g('dqWord').classList.toggle('hot',w>=4);
+      if(w===5&&!buzzed){buzzed=true;if(navigator.vibrate)try{navigator.vibrate([18,40,18]);}catch(e){}bell([659,988,1319]);}
+      if(w<5)buzzed=false;}
+    var p=cur();p.style.setProperty('--b',(.3+v*.42).toFixed(3));p.style.setProperty('--gr',(.85-v*.6).toFixed(3));
+    p.style.setProperty('--sep',(v*.45).toFixed(3));p.style.setProperty('--z',(1.04+v*.06).toFixed(3));
+    g('dqGlow').style.setProperty('--g',(v*.55).toFixed(3));
+    if(osc)osc.frequency.setTargetAtTime(110+v*220,AC.currentTime,.05);}
+  function resetDial(){v=-1;lastW=-1;touched=false;buzzed=false;
+    g('dqNeedle').setAttribute('transform','rotate(-90 150 150)');g('dqArc').setAttribute('stroke-dasharray','0 100');
+    g('dqWord').innerHTML='&nbsp;';g('dqWord').classList.remove('hot');g('dqHint').style.opacity=1;g('dqNext').classList.remove('show');g('dqGlow').style.setProperty('--g',0);}
+  function fromEvent(e){var r=g('dqDial').querySelector('svg').getBoundingClientRect();var cx=r.left+r.width/2,cy=r.top+r.height*150/165;
+    var a=Math.atan2(cy-e.clientY,e.clientX-cx);if(a<0)a=e.clientX<cx?Math.PI:0;return 1-a/Math.PI;}
+  var dial=g('dqDial');
+  dial.addEventListener('pointerdown',function(e){if(e.target.id==='dqNext')return;dragging=true;touched=true;dial.setPointerCapture(e.pointerId);ac();hum(true);setV(fromEvent(e));g('dqHint').style.opacity=0;});
+  dial.addEventListener('pointermove',function(e){if(dragging)setV(fromEvent(e));});
+  function up(){if(!dragging)return;dragging=false;hum(false);if(touched)g('dqNext').classList.add('show');}
+  dial.addEventListener('pointerup',up);dial.addEventListener('pointercancel',up);
+  function showPic(){resetDial();var P=PICS[pi];photo(P.img,false,P.pos);g('dqLine').innerHTML=P.line;progress(pi+1);show('sDial');}
+  g('dqNext').onclick=function(){vals[pi]=v;breath();pi++;
+    if(pi===5&&!g('sHalf')._seen){g('sHalf')._seen=1;photo('/touch-grey-chest.jpg',true);show('sHalf');bell([523,659,784],.07);return;}
+    if(pi<PICS.length)showPic();else showTap();};
+  g('dqOn').onclick=function(){stopVoice();showPic();};
+  function showTap(){var T=TAPS[ti];photo(T.img,true);g('dqTapK').textContent=T.k;g('dqTapQ').innerHTML=T.q;progress(PICS.length+ti+1);
+    var box=g('dqTaps');box.className='taps';box.innerHTML='';
+    T.a.forEach(function(x){var b=document.createElement('button');b.type='button';b.className='tap';b.textContent=x[0];
+      b.onclick=function(){if(box.classList.contains('done'))return;ac();box.classList.add('done');b.classList.add('pick');picks[T.key]=x[1];bell([587,880],.08);
+        setTimeout(function(){breath();ti++;if(ti<TAPS.length)showTap();else finish();},750);};box.appendChild(b);});
+    show('sTap');}
+  g('dqBegin').onclick=function(){ac();stopVoice();bell([440,660],.06);showPic();if(typeof gtag==='function')gtag('event','quiz_start',{quiz:'touch_reset',version:'dial'});};
+  // scoring: same result shape the emails and Kit tags already use
+  function dqScore(){
+    var n=0,sum=0,by={Sensual:[],Sexual:[],Energetic:[],Kinky:[],Shapeshifter:[]};
+    PICS.forEach(function(P,k){var x=vals[k];if(x==null||x<0)return;n++;sum+=x;by[P.pl].push(x);});
+    var avg=n?sum/n:0, mean=function(a){return a.length?a.reduce(function(p,c){return p+c;},0)/a.length:0;};
+    var main=['Sensual','Sexual','Kinky','Energetic'].map(function(k){return [k,mean(by[k])];}).sort(function(a,b){return b[1]-a[1];});
+    var shp=mean(by.Shapeshifter), pleasure=main[0][0];
+    if(shp>=.67&&main[0][1]>=.5&&main[0][1]-main[3][1]<.18)pleasure='Shapeshifter';
+    var gap=picks.gap||null, pat=picks.pattern||'Holder', state;
+    if(avg<.3||(gap==='want-feel'&&avg<.5))state='Braced';
+    else if(gap==='want-stay'||(pat==='Wanderer'&&avg<.6)||avg<.45)state='The Fade';
+    else if(avg>=.65&&(gap==='want-good'||gap==='want-more'))state='Melted';
+    else state='Reaching';
+    return {state:state,pleasure:pleasure,pattern:pat,gap:gap,ready:picks.ready||null,F:Math.round(avg*100),S:0,A:0};
+  }
+  function finish(){DQ_RESULT=dqScore();hum(false);stopVoice();bell([523,659,784,1047],.08);
+    setTimeout(function(){g('dq').classList.add('gone');doReveal();},500);}
+  // voice notes: tap to play, never autoplay
+  var VA=null;
+  function stopVoice(){if(VA)VA.pause();document.querySelectorAll('.vp-play .ico').forEach(function(x){x.textContent='▶';});}
+  function voicePill(host,src,label,dur){if(!host)return;
+    host.innerHTML='<div class="vp"><button type="button" class="vp-play"><img src="/sacred-no-quiz-face.jpg" alt=""><span class="ico">▶</span><span class="lbl">'+label+'</span><span class="dur">'+dur+'</span></button><div class="vp-speed"><button type="button" data-r="1" class="on">1×</button><button type="button" data-r="1.25">1.25×</button><button type="button" data-r="1.5">1.5×</button></div></div>';
+    var play=host.querySelector('.vp-play'),ico=host.querySelector('.ico'),rate=1;
+    play.addEventListener('click',function(){if(VA&&VA._src===src&&!VA.paused){VA.pause();ico.textContent='▶';return;}
+      stopVoice();if(!VA||VA._src!==src){VA=new Audio(src);VA._src=src;VA.onended=function(){ico.textContent='▶';};}
+      VA.playbackRate=rate;VA.play();ico.textContent='❚❚';if(typeof gtag==='function')gtag('event','voice_play',{quiz:'touch_reset',clip:label});});
+    host.querySelectorAll('.vp-speed button').forEach(function(b){b.addEventListener('click',function(){rate=parseFloat(b.getAttribute('data-r'));
+      host.querySelectorAll('.vp-speed button').forEach(function(x){x.classList.toggle('on',x===b);});if(VA&&VA._src===src)VA.playbackRate=rate;});});}
+  voicePill(g('dqV1'),'/audio/touch-reset-quiz-1.m4a','Hear from me first','0:18');
+  voicePill(g('dqV2'),'/audio/touch-reset-quiz-2.m4a','A word from me','0:15');
+  voicePill(g('dqV3'),'/audio/touch-reset-quiz-3.m4a','Before you go','0:13');
+  photo('/touch-bw.jpg',true);progress(0);
   $('begin').addEventListener('click',function(){
     intro.style.display='none';funnel.style.display='flex';quiz.style.display='block';renderQ();
     if(typeof gtag==='function')gtag('event','quiz_start',{quiz:'touch_reset'});
@@ -833,7 +1065,7 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
 }
 
   function doReveal(){
-    result=score();
+    result=DQ_RESULT||score();
     quiz.style.display='none';funnel.style.display='none';
     resultPage.style.display='block';window.scrollTo(0,0);
     if(typeof gtag==='function')gtag('event','quiz_complete',{quiz:'touch_reset',state:result.state,pleasure:result.pleasure,pattern:result.pattern,ready:result.ready});
@@ -891,7 +1123,7 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
     });
   });
 
-  $('restart').addEventListener('click',function(){
+  $('restart').addEventListener('click',function(){location.reload();return;
     i=0;answers=new Array(TOTAL).fill(null);locked=false;
     resultPage.style.display='none';funnel.style.display='flex';reveal.style.display='none';
 
