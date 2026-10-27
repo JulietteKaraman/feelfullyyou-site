@@ -976,7 +976,7 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
       VA.playbackRate=rate;VA.play();ico.textContent='❚❚';if(typeof gtag==='function')gtag('event','voice_play',{quiz:'touch_reset',clip:label});});
     host.querySelectorAll('.vp-speed button').forEach(function(b){b.addEventListener('click',function(){rate=parseFloat(b.getAttribute('data-r'));
       host.querySelectorAll('.vp-speed button').forEach(function(x){x.classList.toggle('on',x===b);});if(VA&&VA._src===src)VA.playbackRate=rate;});});}
-  voicePill(g('dqV1'),'/audio/touch-reset-quiz-1.m4a','Hear from me first','0:18');
+  voicePill(g('dqV1'),'/audio/touch-reset-quiz-1b.m4a','Hear from me first','0:22');
   voicePill(g('dqV2'),'/audio/touch-reset-quiz-2.m4a','A word from me','0:15');
   voicePill(g('dqV3'),'/audio/touch-reset-quiz-3.m4a','Before you go','0:13');
   photo('/touch-bw.jpg',true);progress(0);
