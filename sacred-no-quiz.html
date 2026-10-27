@@ -166,7 +166,7 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
       <div class="inner">
       <div class="eyebrow">The Sacred No</div>
       <h1>The <em>Swipe</em> Test</h1>
-      <p class="sub">Ten everyday requests. Swipe fast, don't think. Then ask your body if it agreed.</p>
+      <p class="sub">Ten everyday requests. Swipe fast, don't think. Then check what your body said.</p>
       <div class="how"><span>&larr; No</span><span>Yes &rarr;</span></div>
       <button class="btn" id="begin">Start swiping</button>
       </div>
@@ -361,9 +361,12 @@ window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);
     $('controls').classList.add('hidden');
     var deck=$('deck');deck.innerHTML='';
     var b=document.createElement('div');b.className='bodycheck';
-    b.innerHTML='<div class="you">You said '+(said?'yes':'no')+'</div><h2>Did your body agree?</h2><div class="row"><button class="y" data-v="yes">Yes, it did</button><button data-v="no">No, it didn’t</button><button data-v="unsure">Not sure</button></div>';
+    b.innerHTML='<div class="you">You said <b>'+(said?'YES':'NO')+'</b></div><h2>What did your body say?</h2><div class="row"><button class="y" data-b="yes">Yes</button><button data-b="no">No</button><button data-b="unsure">Not sure</button></div>';
     deck.appendChild(b);
-    b.querySelectorAll('button').forEach(function(btn){btn.addEventListener('click',function(){answer(btn.getAttribute('data-v'));});});
+    b.querySelectorAll('button').forEach(function(btn){btn.addEventListener('click',function(){
+      var bs=btn.getAttribute('data-b');
+      // body's own answer -> did it match the mouth? (scoring unchanged)
+      answer(bs==='unsure'?'unsure':((bs==='yes')===said?'yes':'no'));});});
   }
   function answer(body){
     var kind,pts;
@@ -388,7 +391,7 @@ window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);
   });
   function archetypeFor(s){for(var k=0;k<ARCH.length;k++){if(s>=ARCH[k].min&&s<=ARCH[k].max)return ARCH[k];}return s<10?ARCH[0]:ARCH[ARCH.length-1];}
   var DEMO=/^(localhost|127\.0\.0\.1)$/.test(location.hostname);
-  function bigLineText(){return overrides===1?'One yes when your body said no.':overrides?('You said yes '+overrides+' times when your body said no.'):'Not one yes your body disagreed with.';}
+  function bigLineText(){return overrides===1?'One yes when your body said no.':overrides?('You said yes '+overrides+' times when your body said no.'):'Not once did you say yes when your body said no.';}
   function doReveal(){
     var a=archetypeFor(score);winner=a.name;
     $('game').classList.add('hidden');
