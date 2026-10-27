@@ -352,6 +352,7 @@ ul.check li.on .bx{background:var(--accent)}ul.check li.on .bx::after{content:"�
     <a href="#hard">The hard part</a>
     <a href="#finish">Full Stop</a>
     <a href="#land">Land it</a>
+    <a href="#now">Do it now</a>
     <a href="#after">After</a>
   </nav>
 </div>
@@ -566,6 +567,36 @@ ul.check li.on .bx{background:var(--accent)}ul.check li.on .bx::after{content:"�
   <p>Or it might have nothing to do with those examples. Don't go looking for the right insight. Tell the truth about what you noticed.</p>
   <p class="big">Thank You. Swap. <em>Same prompt.</em></p>
 </section>
+
+<figure class="photo peek top"><img src="media/hub/top-now.jpg" alt="Juliette leaning on a lamp post in Budapest"></figure>
+<section id="now">
+  <div class="partno">All three, one screen</div>
+  <h2>Do it now</h2>
+  <p class="lead">Keep your phone where you can hear it. Do one, tap Done, then the next.</p>
+  <div class="dstep" data-step="1">
+    <div class="dn"><span>1</span><div><b>The Approach, roles reversed</b><small>Five minutes. You choose the distance</small></div></div>
+    <p>This time, you stay where you are. She moves towards you. Slowly. A step. Then a pause. When you want her to stop, tell her.</p>
+    <div class="timer" data-min="5"></div>
+    <button type="button" class="sdone">Done ✓</button>
+  </div>
+  <div class="dstep" data-step="2">
+    <div class="dn"><span>2</span><div><b>The Full Stop</b><small>One true thing. Then stop.</small></div></div>
+    <p>Say one true thing about what you noticed. One sentence. Then stop talking. No question on the end.</p>
+    <div class="journal" data-key="fs"><label class="jlab">Write down the one true thing you said</label><textarea rows="3" placeholder="I noticed I wanted you closer than I expected."></textarea><button type="button" class="jsave">Save it</button><div class="jlist"></div></div>
+    <button type="button" class="sdone">Done ✓</button>
+  </div>
+  <div class="dstep" data-step="3">
+    <div class="dn"><span>3</span><div><b>Land it</b><small>Fifteen minutes in the Dyad</small></div></div>
+    <p>One prompt for the whole fifteen minutes. One clear communication. Thank you, Clarify that, Summarise that. Then swap.</p>
+    <div class="dyad" data-after="#vn-A2" data-cat="Insights" data-prompt="Tell me a win, insight or learning you've had." data-back1="The Approach Ritual" data-back2="Both ways · Do it now" data-min="15"></div>
+    <button type="button" class="sdone">Done ✓</button>
+  </div>
+  <div class="finish" id="finish" hidden>
+    <div class="fx">✓</div>
+    <p class="big">Five minutes with the roles reversed. Fifteen minutes to land what you noticed. <em>Same practice. Both directions.</em></p>
+  </div>
+</section>
+
 
 <figure class="photo peek top"><img src="media/hub/top-after.jpg" alt="Juliette and Alex hugging in the kitchen, their dog beside them"></figure>
 <section id="after">
@@ -852,7 +883,7 @@ body.app:not(.on-cover) .nav{display:block}
   var P=location.pathname, KD='ffy-done-'+P, KS='ffy-steps-'+P, KC='ffy-check-'+P, KJ='ffy-true-'+P, KP='ffy-path-'+P;
   function g(k,d){try{var v=JSON.parse(localStorage.getItem(k));return v==null?d:v}catch(e){return d}}
   function put(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
-  var CARD={"why": ["Read \u00b7 1 min", "In When She Stops Reaching, you spent five minutes finding out where she wanted you to\u2026", "media/hub/why.jpg", "media/hub/top-why.jpg"], "her": ["Read \u00b7 1 min", "Where do you actually want the distance to be right now?", "media/hub/her.jpg", "media/peek-selfie.jpg"], "run": ["Practice \u00b7 5 min", "When you want her to stop, tell her.", "media/hub/run.jpg", "media/hub/top-run.jpg"], "hard": ["Read \u00b7 2 min", "Is this actually the distance I want right now?", "media/hub/hard.jpg", "media/hub/top-hard.jpg"], "finish": ["Practice", "When the five-minute timer goes, stop. Say one true thing about what you noticed.", "media/hub/finish.jpg", "media/hub/top-finish.jpg"], "land": ["Practice \u00b7 15 min", "Now you get to put some of what you noticed into words.", "media/hub/land.jpg", "media/peek-buda1.jpg"], "after": ["Read \u00b7 3 min", "Can I notice what I want with the distance between us, and let you know?", "media/hub/after.jpg", "media/hub/top-after.jpg"]}, WHEN={}, LAB={}, FEAT="run";
+  var CARD={"why": ["Read \u00b7 1 min", "In When She Stops Reaching, you spent five minutes finding out where she wanted you to\u2026", "media/hub/why.jpg", "media/hub/top-why.jpg"], "her": ["Read \u00b7 1 min", "Where do you actually want the distance to be right now?", "media/hub/her.jpg", "media/peek-selfie.jpg"], "run": ["Practice \u00b7 5 min", "When you want her to stop, tell her.", "media/hub/run.jpg", "media/hub/top-run.jpg"], "hard": ["Read \u00b7 2 min", "Is this actually the distance I want right now?", "media/hub/hard.jpg", "media/hub/top-hard.jpg"], "finish": ["Practice", "When the five-minute timer goes, stop. Say one true thing about what you noticed.", "media/hub/finish.jpg", "media/hub/top-finish.jpg"], "land": ["Practice \u00b7 15 min", "Now you get to put some of what you noticed into words.", "media/hub/land.jpg", "media/peek-buda1.jpg"], "after": ["Read \u00b7 3 min", "Can I notice what I want with the distance between us, and let you know?", "media/hub/after.jpg", "media/hub/top-after.jpg"], "now": ["Do it \u00b7 20 min", "All three on one screen. My voice and the timers guide you.", "media/hub/now.jpg", "media/hub/top-now.jpg"]}, WHEN={}, LAB={}, FEAT="now";
   var chips=[].slice.call(document.querySelectorAll('#chips a')), ids=chips.map(function(a){return a.getAttribute('href').slice(1)});
   var done=g(KD,{});
   function paint(){
