@@ -23,6 +23,7 @@ https://shop.feelfullyyou.com/*  https://feelfullyyou.com/my-cards/  301!
 /gift/three-answers             /my-cards/?unlock=three-answers                     302
 # Listener gift for Soraya Mansour, Hot Flushes & Higher Self podcast (27 Oct 2026)
 /gift/hotflushes                /my-cards/?unlock=31-days-closer                    302
+/hotflushes                     /my-cards/?unlock=31-days-closer                    302
 /gift/both                      /my-cards/?unlock=couples,friends-family            302
 /gift/everything                /my-cards/?unlock=couples,friends-family,trust-repair,touch-languages,31-days-closer,three-answers  302
 /gift                           /cards                                              302
