@@ -5,6 +5,10 @@ https://shop.feelfullyyou.com/*  https://feelfullyyou.com/my-cards/  301!
 
 # The cards app, served on Juliette's own domain instead of a netlify.app
 # address. Proxied (status 200) so the address bar stays feelfullyyou.com.
+# Prices: people search for a prices page; the work-with-me ladder already lists every price.
+/prices                         /work-with-me#ladder   301
+/pricing                        /work-with-me#ladder   301
+
 /my-cards/*                     https://feelfullyyou-cards.netlify.app/app/:splat   200
 /my-cards                       https://feelfullyyou-cards.netlify.app/app/         200
 
