@@ -319,6 +319,14 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
 <script src="/cookie-consent.js" defer></script>
 <!-- End Meta Pixel Code -->
 <style>/* more-groups */.dropdown.more-g{min-width:290px;padding:6px 0 8px}.more-g .mg-h,.mobile-nav .mg-h{display:block;padding:14px 18px 4px;font-size:10.5px!important;letter-spacing:.18em;text-transform:uppercase;color:#ddc98e!important;font-weight:600;font-family:inherit}.more-g .mg-h:first-child{padding-top:8px}.more-g .mg-sep,.mobile-nav .mg-sep{display:block;height:1px;margin:8px 18px;background:rgba(255,255,255,.12)}.mobile-nav .mg-h{padding:18px 28px 4px}</style>
+<style>/* try-app phone */
+.try-app{position:relative;z-index:6;overflow:visible}.try-app>p{text-align:center!important;margin-left:auto!important;margin-right:auto!important}
+.try-phone{position:absolute;left:max(24px,calc(50% - 560px));top:50%;transform:translateY(-50%) rotate(-4deg);width:170px;padding:7px;background:#070707;border-radius:30px;box-shadow:0 22px 50px rgba(0,0,0,.45),0 0 0 1px rgba(221,201,142,.35);z-index:7;transition:transform .3s}
+.try-phone:hover{transform:translateY(-50%) rotate(-1deg) scale(1.03)}
+.try-phone img{display:block;width:100%;border-radius:23px}
+.try-phone::before{content:"";position:absolute;top:13px;left:50%;transform:translateX(-50%);width:44px;height:11px;border-radius:8px;background:#070707;z-index:2}
+@media(max-width:860px){.try-app{padding-top:20px!important}.try-phone{position:relative;left:auto;top:auto;transform:rotate(-3deg);display:block;width:118px;margin:-90px auto 16px;border-radius:22px;padding:5px}.try-phone img{border-radius:18px}.try-phone::before{top:9px;width:32px;height:8px}.try-phone:hover{transform:rotate(-1deg)}}
+</style>
 </head>
 <body>
 
@@ -418,7 +426,8 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
 </header>
 
 <!-- TRY THE APP, FREE (28 Oct 2026): the free example day, The Fruit -->
-<section style="background:#0D3535;padding:26px 24px;text-align:center">
+<section class="try-app" style="background:#0D3535;padding:26px 24px;text-align:center">
+  <a href="https://app.feelfullyyou.com/taste/31-touch-points" class="try-phone" aria-label="Try one free in the app"><img src="media/app-dark-taste-fruit-phone.jpg" alt="The Fruit, the free example day, open in the Feel Fully You app" loading="lazy"></a>
   <p style="margin:0;color:#ddc98e;font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600">Try the app, free</p>
   <p style="margin:10px auto 16px;max-width:560px;color:#fefcfa;font-size:18px;line-height:1.5">Grab a strawberry. One touch point, three minutes, with me talking the two of you through it.</p>
   <a href="https://app.feelfullyyou.com/taste/31-touch-points" class="btn light">Try one free &rarr;</a>
