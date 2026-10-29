@@ -375,6 +375,11 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
 #dq .next{margin-top:16px;opacity:0;pointer-events:none}
 #dq .next.show{opacity:1;pointer-events:auto}
 #dq .center{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);text-align:center;padding:0 28px}
+/* tap screens: never let a long question ride up under the progress bar (29 Oct) */
+#dq #sTap .center{top:calc(96px + env(safe-area-inset-top));bottom:calc(16px + env(safe-area-inset-bottom));transform:none;display:flex;flex-direction:column;overflow-y:auto;scrollbar-width:none}
+#dq #sTap .center::-webkit-scrollbar{display:none}
+#dq #sTap .center>:first-child{margin-top:auto}
+#dq #sTap .center>:last-child{margin-bottom:auto}
 #dq .center p.sub{font-weight:200;font-size:.95rem;color:rgba(246,239,224,.72);margin:16px auto 0;max-width:30ch;line-height:1.6}
 #dq .taps{display:flex;flex-direction:column;gap:10px;max-width:360px;margin:28px auto 0}
 #dq .tap{background:rgba(7,7,7,.35);border:1px solid rgba(221,201,142,.4);color:#F6EFE0;border-radius:99px;padding:13px 20px;font:300 .95rem Poppins,sans-serif;cursor:pointer;transition:background .25s,color .25s,transform .2s,opacity .3s;backdrop-filter:blur(4px)}
@@ -424,6 +429,9 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
   #dq{inset:auto;top:50%;left:62%;transform:translate(-50%,-50%);width:400px;height:min(840px,calc(100vh - 56px));border-radius:46px;border:12px solid #070707;box-shadow:0 40px 90px -30px rgba(7,7,7,.55),0 0 0 1px rgba(7,7,7,.2)}
   #dq h1{font-size:2.15rem}
   #dq .dial svg{width:330px}
+  #dq .taps{margin-top:20px;gap:8px}
+  #dq .tap{padding:10px 18px;font-size:.86rem}
+  #dq #dqTapQ{font-size:1.6rem!important}
   #dq .glow{width:500px;height:420px;bottom:-200px}
   #dq:not(.gone) ~ .dq-side{display:block;position:fixed;top:50%;left:8%;transform:translateY(-50%);width:min(380px,30vw);color:#0D3535;font-family:Poppins,system-ui,sans-serif}
   .dq-side .k{font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:#7a6236;font-weight:600}
