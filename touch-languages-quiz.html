@@ -952,6 +952,30 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
       ['singing bowls, and space','Energetic'],
       ['all of it. A different thing every night.','Shapeshifter']]}
   ];
+  // 29 Oct: her own "where did the touch go" scenes (cut in the October
+  // shortening) replace the abstract pattern tap. Answers word for word from her
+  // ALL bank; the value is her pattern tag (H Holder, O Operator, W Wanderer, - none).
+  var SCENES=[
+    {k:'Be honest',q:'Think about yesterday.<br><em>What touch actually happened?</em>',img:'/touch-heart-hands-bw.jpg',key:'s1',a:[
+      ['None that I can remember.','-'],
+      ['The functional kind. A peck, a hand on a shoulder, passing something over.','-'],
+      ['Hands on me for a while, and my mind was somewhere else for most of it.','W'],
+      ['Hands on me for a while, and I can still feel where.','-'],
+      ['More than I wanted. I was relieved when it stopped.','-']]},
+    {k:'Picture it',q:'Your partner comes up behind you in the kitchen,<br><em>grabs you and spins you round.</em>',img:'/touch-embrace-bw.jpg',key:'s2',a:[
+      ["I laugh. This is one of my favourite things about us.",'-'],
+      ['I laugh, and then I want them to slow down and actually hold me.','-'],
+      ["I tense. I wasn't ready for that.",'-'],
+      ["We don't really do that any more.",'-'],
+      ["I'd go along with it, waiting to see where it's heading.",'H']]},
+    {k:'Picture it',q:'Your partner kisses the back of your neck<br><em>while you’re doing something else.</em>',img:'/touch-neck-demo.jpg',key:'s3',a:[
+      ['Everything stops. I feel it right down my spine.','-'],
+      ['I tilt my head and give them more of it.','-'],
+      ["I notice it and carry on with what I'm doing.",'W'],
+      ["I flinch. I wasn't expecting it.",'-'],
+      ["It's nice. Not much actually happens in my body.",'-'],
+      ['I turn round and kiss them back.','O']]}
+  ];
   var TAPS={
     pattern:{k:'Three quick ones',q:'When touch isn’t quite right,<br><em>you…</em>',img:'/touch-bw.jpg',key:'pattern',a:[
       ['hold it all together','Holder'],['fix it and move on','Operator'],['drift somewhere else','Wanderer']]},
@@ -963,10 +987,12 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
       ['fine, the same again','ready-good'],['never quite right','ready-wrongkind'],['something sinks','ready-stuck'],['sad, then I carry on','ready-sad'],['I’d rather have the awkward conversation','ready-yes'],['I want to start now','ready-now']]}
   };
   // the running order
+  // halfway = after 8 of the 16 counted steps (moved 29 Oct, her note)
   var STEPS=[{t:'pic',i:0},{t:'pic',i:1},{t:'pic',i:2},{t:'tap',d:WIRE[0]},{t:'tap',d:WIRE[1]},
+             {t:'pic',i:3},{t:'pic',i:4},{t:'pic',i:5},
              {t:'half'},
-             {t:'pic',i:3},{t:'pic',i:4},{t:'pic',i:5},{t:'tap',d:WIRE[2]},{t:'tap',d:WIRE[3]},
-             {t:'tap',d:TAPS.pattern},{t:'tap',d:TAPS.gap},{t:'tap',d:TAPS.ask},
+             {t:'tap',d:WIRE[2]},{t:'tap',d:WIRE[3]},
+             {t:'tap',d:SCENES[0]},{t:'tap',d:SCENES[1]},{t:'tap',d:SCENES[2]},{t:'tap',d:TAPS.gap},{t:'tap',d:TAPS.ask},
              {t:'mirror'},{t:'tap',d:TAPS.ready}];
   var COUNTED=STEPS.filter(function(x){return x.t==='pic'||x.t==='tap';}).length;
   var WORDS=['ick','nothing','nice','mmm','goosebumps','toes curl'];
@@ -1060,7 +1086,10 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
       pleasure=Object.keys(tie).sort(function(x,y){return tie[y]-tie[x];})[0];
       if(Object.keys(tie).every(function(k){return pl[k]<=1;})&&pl.Shapeshifter===1)pleasure='Shapeshifter';}
     // WHERE THE TOUCH WENT from how she reacted on the dial
-    var gap=picks.gap||null, pat=picks.pattern||'Holder', ask=picks.ask||null;
+    var gap=picks.gap||null, ask=picks.ask||null;
+    // pattern from her scene answers: most-tagged wins, ties go Wanderer > Operator > Holder; none tagged = Holder (the old default)
+    var pc={H:0,O:0,W:0};['s1','s2','s3'].forEach(function(k){var x=picks[k];if(x&&pc[x]!=null)pc[x]++;});
+    var pat=pc.W&&pc.W>=pc.O&&pc.W>=pc.H?'Wanderer':(pc.O&&pc.O>=pc.H?'Operator':'Holder');
     var ick=0,nothing=0,pulledBack=0,hesitated=0;
     PICS.forEach(function(P,k){var x=vals[k];if(x==null||x<0)return;
       if(x<1/6)ick++;else if(x<2/6)nothing++;
