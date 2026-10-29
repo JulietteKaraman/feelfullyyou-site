@@ -100,7 +100,9 @@ https://shop.feelfullyyou.com/*  https://feelfullyyou.com/my-cards/  301!
 /feel-like-a-woman-again        /how-to-feel-like-a-woman       301!
 /scrumptious-stroking           /how-to-feel-like-a-woman       301!
 /sacred-no                      /sacred-no.html                 200
-/communication-reboot-kit       /communication-reboot-kit.html  200
+/how-to-invite-your-partner     /how-to-invite-your-partner.html 200
+/communication-reboot-kit       /31-touch-points                301!
+/communication-reboot-kit.html  /31-touch-points                301!
 /romantic-relationship-repair-kit /romantic-relationship-repair-kit.html 200
 /between-touches                /between-touches.html           200
 /when-she-goes-quiet            /when-she-goes-quiet.html       200
@@ -203,8 +205,10 @@ https://shop.feelfullyyou.com/*  https://feelfullyyou.com/my-cards/  301!
 /sacred-no-quiz                 /sacred-no-quiz.html            200
 /the-no-quiz                    /sacred-no-quiz.html            200
 /no-quiz                        /sacred-no-quiz.html            200
-/repair-kit-portal              /repair-kit-portal.html         200
-/repair-portal                  /repair-kit-portal.html         200
+/repair-kit-portal              /my-cards/?unlock=repair-kit    302!
+/repair-kit-portal.html         /my-cards/?unlock=repair-kit    302!
+/repair-portal                  /my-cards/?unlock=repair-kit    302!
+/gift/repair-kit                /my-cards/?unlock=repair-kit    302
 /members                        /members.html                   200
 /membership                     /members.html                   200
 
