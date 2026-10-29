@@ -271,6 +271,19 @@ const PAYMENT_LINK_LABELS = {
 // reliable key. Consulted only when PRODUCT_MAP misses, so it can never
 // override an existing metadata-tagged product.
 const PAYMENT_LINK_PRODUCTS = {
+  // THE TOUCH MAP £197 (29 Oct 2026). Dashboard payment link, so the plink is
+  // the key. Tag + the three buyer emails (sequence 2949125, live 29 Oct).
+  'plink_1UL6EFCCw18geY15XlehyUTm': {
+    tagId: 25170094,      // "touch-map-buyer"
+    sequenceId: 2949125,  // "Touch Map buyers"
+    label: 'The Touch Map £197'
+  },
+  // The Touch Map Couples £297 opens the same app, same welcome.
+  'plink_1UL6EyCCw18geY15vqERbKhf': {
+    tagId: 25170094,
+    sequenceId: 2949125,
+    label: 'The Touch Map Couples £297'
+  },
   // 31 Touch Points £27, 30 Sep 2026. Existing tag and delivery sequence from
   // the PDF era. NOTE: sequence 2817543 still delivers the 41-page PDF and
   // needs rewriting to send people to the app instead.
@@ -393,6 +406,11 @@ const PAYMENT_LINK_APP_DECKS = {
   'plink_1ULQHUCCw18geY15FZP1jMYR': '31-touch-points',
   // The Sacred No £17, buy.stripe.com/dRm6oG7m39162Lr6eN0co1Q (17 Oct 2026).
   'plink_1UD0gtCCw18geY15E6gj9XGx': 'sacred-no',
+  // The Touch Map £197, buy.stripe.com/aFaaEWfSz916eu9bz70co2e (29 Oct 2026,
+  // links from Juliette's Stripe links doc). The Couples £297 link opens the
+  // same app product, so a couples buyer is never left with nothing.
+  'plink_1UL6EFCCw18geY15XlehyUTm': 'touch-map',
+  'plink_1UL6EyCCw18geY15vqERbKhf': 'touch-map', // The Touch Map Couples £297, buy.stripe.com/fZueVcayf6SY4Tz9qZ0co2f
 };
 
 const PRODUCT_MAP = {

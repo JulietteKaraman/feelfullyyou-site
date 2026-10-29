@@ -197,9 +197,8 @@ https://shop.feelfullyyou.com/*  https://feelfullyyou.com/my-cards/  301!
 # was giving away the five pleasure languages, the A/B method, the stoplight and
 # the twelve month region table, which is the paid product's spine.
 # touch-map.html is LEFT ON DISK untouched so the paid build can reuse it.
-# TO REOPEN AS THE PAID PAGE: delete the 301 line and restore the 200 line.
-/touch-map                       /touch-reset-quiz                301!
-# /touch-map                     /touch-map.html                  200
+# REOPENED 29 Oct 2026 as the paid £197 sales page (her yes).
+/touch-map                       /touch-map.html                  200
 /felt-sense                      /felt-sense.html                 200
 /the-dyad                        /the-dyad-protocol               301
 /the-room-members               /the-touch-reboot                 301
