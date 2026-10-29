@@ -101,19 +101,100 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
   gtag('js', new Date());
   gtag('config', 'G-SY8NKELMNZ');
 </script>
+<style>/* standard site header on the older pages, 29 Oct 2026 */
+.ffyh{--teal:#0d3535;--teal-deep:#061a1a;--cream:#fefcfa;--gold:#a88538;--gold-pale:#ddc98e;--line-dark:#1d3a39;--display:'Poppins',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;position:sticky;top:0;z-index:9999;font-family:var(--body)}
+.ffyh *{box-sizing:border-box}
+.ffyh .topbar{background:var(--teal);padding:0 28px;height:64px;display:flex;align-items:center;justify-content:space-between}
+.ffyh .topbar .brand{font-family:var(--display);font-weight:700;font-size:16px;letter-spacing:.02em;color:var(--cream)!important;text-decoration:none}
+.ffyh .topbar .brand b{color:var(--gold-pale)}
+.ffyh .topbar nav{background:transparent!important;padding:0!important;display:flex;flex-wrap:nowrap;gap:26px;align-items:center}
+.ffyh .topbar nav>a,.ffyh .topbar nav .more-wrap>a{font-size:14px;color:var(--cream)!important;font-weight:500;text-decoration:none;letter-spacing:0;text-transform:none}
+.ffyh .topbar nav>a:hover{color:var(--gold-pale)!important}
+.ffyh .more-wrap{position:relative;display:inline-flex;align-items:center}
+.ffyh .more-wrap>button{background:none;border:none;cursor:pointer;font-size:14px;color:var(--cream);font-weight:500;font-family:var(--body);display:flex;align-items:center;gap:5px;padding:0}
+.ffyh .dropdown{position:absolute;top:calc(100% + 10px);right:0;background:var(--teal-deep);border:1px solid var(--line-dark);border-radius:3px;min-width:200px;padding:6px 0;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .18s,transform .18s;z-index:9999}
+.ffyh .more-wrap.open .dropdown{opacity:1;pointer-events:all;transform:none}
+@media(hover:hover){.ffyh #moreWrap:hover .dropdown{opacity:1;pointer-events:all;transform:none}}
+.ffyh .dropdown a{display:block;padding:9px 18px;font-size:13px;color:var(--cream)!important;font-weight:500;text-decoration:none;letter-spacing:0;text-transform:none;white-space:nowrap}
+.ffyh .dropdown a:hover{background:var(--teal);color:var(--gold-pale)!important}
+.ffyh .ham{display:none;background:none;border:none;cursor:pointer;padding:6px;color:var(--cream)}
+.ffyh .mobile-nav{display:none;position:fixed;top:64px;left:0;right:0;max-height:calc(100vh - 64px);overflow-y:auto;background:var(--teal)!important;z-index:9998;padding:16px 0!important;border-top:1px solid rgba(255,255,255,.1);flex-direction:column;flex-wrap:nowrap}
+.ffyh .mobile-nav.open{display:flex}
+.ffyh .mobile-nav{align-items:stretch!important;text-align:left!important}.ffyh .mobile-nav a,.ffyh .mobile-nav summary{text-align:left!important;font-weight:500!important;width:auto!important;margin:0!important}
+.ffyh .mobile-nav a{display:block;padding:13px 28px;font-size:15px;color:var(--cream)!important;font-weight:500;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.07);letter-spacing:0;text-transform:none}
+.ffyh .mnav3 details{border-bottom:1px solid rgba(255,255,255,.07)}
+.ffyh .mnav3 summary{list-style:none;cursor:pointer;padding:13px 28px 13px 44px;font-size:15px;color:var(--cream);display:flex;justify-content:space-between}
+.ffyh .mnav3 summary::-webkit-details-marker{display:none}
+.ffyh .mnav3 summary small{opacity:.6;font-size:12px;margin-left:6px}
+.ffyh .mnav3 summary::after{content:"\25BE";opacity:.7}
+.ffyh .mnav3 details[open] summary::after{content:"\25B4"}
+.ffyh .mnav3 details a{padding:9px 28px 9px 60px!important;font-size:14px!important;opacity:.85;border-bottom:none!important}
+@media(max-width:900px){.ffyh .topbar nav{display:none}.ffyh .ham{display:block}}
+</style>
 </head>
 <body>
-<nav>
-  <div class="logo">Juliette Karaman <span>· Feel Fully You</span></div>
-  <ul>
-    <li><a href="touch-hub.html">Home</a></li>
-    <li><a href="touch-that-lands.html">Touch That Lands</a></li>
-    <li><a href="touch-base.html">Touch Base®</a></li>
-    <li><a href="safety.html">Safety</a></li>
-    <li><a href="touch-reset.html">Touch Reset</a></li>
-    <li><a href="https://feelfullyyou.com">Main Site →</a></li>
-  </ul>
+<div class="ffyh">
+<div class="topbar">
+  <a href="/" class="brand">Feel Fully <b>You</b></a>
+  <button class="ham" id="hamBtn" aria-label="Open menu" aria-expanded="false">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+  <nav>
+    <a href="/">Home</a>
+    <div class="more-wrap" id="workWrap">
+      <a href="/work-with-me" style="font-size:14px;color:var(--cream);font-weight:500;transition:color .2s;text-decoration:none">Work With Me</a><button onclick="document.getElementById('workWrap').classList.toggle('open')" aria-label="Sub-pages" style="background:none;border:none;cursor:pointer;color:var(--cream);padding:0 0 0 5px;display:inline-flex;align-items:center;transition:color .2s"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg></button>
+      <div class="dropdown mega"><style>@media(hover:hover){#workWrap:hover .dropdown{opacity:1;pointer-events:all;transform:none}}#workWrap .dropdown.mega{min-width:0;width:min(780px,92vw);display:grid;grid-template-columns:repeat(3,1fr);gap:0;padding:20px 8px 18px;max-height:none;overflow:visible}#workWrap .mega .mcol{padding:0 14px;border-left:1px solid rgba(255,255,255,.08)}#workWrap .mega .mcol:first-child{border-left:none}#workWrap .mega .mh{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-pale);font-weight:600}#workWrap .mega .ms{font-size:12px;color:var(--cream);opacity:.65;margin:2px 0 10px}#workWrap .mega a{display:block;padding:6px 0;font-size:13.5px;white-space:normal;line-height:1.35}#workWrap .mega a span{opacity:.6;white-space:nowrap}#workWrap .mega a:hover{background:none;color:var(--gold-pale)}#workWrap .mega .mall{grid-column:1/-1;text-align:center;margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,.08)}#workWrap .mega .mall a{display:inline;color:var(--gold-pale);text-decoration:underline}.mnav3 details{border-bottom:1px solid rgba(255,255,255,.07)}.mnav3 summary{list-style:none;cursor:pointer;padding:13px 28px 13px 44px;font-size:15px;color:var(--cream);display:flex;justify-content:space-between}.mnav3 summary::-webkit-details-marker{display:none}.mnav3 summary small{opacity:.6;font-size:12px;margin-left:6px}.mnav3 summary::after{content:"\25BE";opacity:.7}.mnav3 details[open] summary::after{content:"\25B4"}.mnav3 details a{padding:9px 28px 9px 60px!important;font-size:14px!important;opacity:.85;border-bottom:none!important}</style>
+        <div class="mcol"><div class="mh">On your own</div><div class="ms">In the app, from £17</div><a href="/31-touch-points">31 Touch Points <span>&middot; £27</span></a><a href="/31-days-closer">31 Days Closer <span>&middot; £17</span></a><a href="/sacred-no">The Sacred No <span>&middot; £17</span></a><a href="/cards">The Cards <span>&middot; £55</span></a><a href="/one-touch">One Touch <span>&middot; £97</span></a><a href="/the-unspoken-distance">The Unspoken Distance, for men <span>&middot; £97</span></a></div>
+        <div class="mcol"><div class="mh">One day with me</div><div class="ms">From £1,500</div><a href="/half-day-vip-women">The Half Day, for women <span>&middot; £1,500</span></a><a href="/womens-intensive">Women&#39;s VIP Day <span>&middot; £3,000</span></a><a href="/mens-intensive">Men&#39;s VIP Day <span>&middot; from £1,500</span></a><a href="/couples-intensive">Couples VIP Day <span>&middot; £5,000</span></a></div>
+        <div class="mcol"><div class="mh">Three months with me</div><div class="ms">From £5,000</div><a href="/the-3-month-intensive">The 3 Month Intensive <span>&middot; £5,000</span></a><a href="/the-beginning">The Beginning, for couples <span>&middot; £8,997</span></a></div>
+        <div class="mall"><a href="/work-with-me">See all the ways to work with me &rarr;</a></div>
+      </div>
+    </div>
+    <a href="/cards">The Cards</a>
+    <a href="/shop">Shop</a>
+    <div class="more-wrap" id="moreWrap">
+      <button onclick="document.getElementById('moreWrap').classList.toggle('open')" aria-expanded="false">
+        More <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg>
+      </button>
+      <div class="dropdown">
+        <a href="/about">About Juliette</a>
+        <a href="/touch">The Method</a>
+        <a href="/free-resources">Free Resources</a>
+        <a href="/touch-reset-quiz">The Touch Reset Quiz</a>
+        <a href="/podcast/">Podcast</a>
+        <a href="/essays/">Essays</a>
+        <a href="/questions/">Questions</a>
+        <a href="/press">Press</a>
+        <a href="/media-and-pr">Media &amp; PR</a>
+        <a href="/contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<nav class="mobile-nav" id="mobileNav">
+  <a href="/">Home</a>
+  <a href="/work-with-me" style="font-weight:600;color:var(--gold-pale)">Work With Me</a>
+  <div class="mnav3">
+  <details><summary><span>On your own<small>From £17</small></span></summary><a href="/31-touch-points">31 Touch Points &middot; £27</a><a href="/31-days-closer">31 Days Closer &middot; £17</a><a href="/sacred-no">The Sacred No &middot; £17</a><a href="/cards">The Cards &middot; £55</a><a href="/one-touch">One Touch &middot; £97</a><a href="/the-unspoken-distance">The Unspoken Distance, for men &middot; £97</a></details>
+  <details><summary><span>One day with me<small>From £1,500</small></span></summary><a href="/half-day-vip-women">The Half Day, for women &middot; £1,500</a><a href="/womens-intensive">Women&#39;s VIP Day &middot; £3,000</a><a href="/mens-intensive">Men&#39;s VIP Day &middot; from £1,500</a><a href="/couples-intensive">Couples VIP Day &middot; £5,000</a></details>
+  <details><summary><span>Three months with me<small>From £5,000</small></span></summary><a href="/the-3-month-intensive">The 3 Month Intensive &middot; £5,000</a><a href="/the-beginning">The Beginning, for couples &middot; £8,997</a></details>
+  </div>
+    <a href="/cards">The Cards</a>
+  <a href="/shop">Shop</a>
+  <a href="/about">About Juliette</a>
+  <a href="/touch">The Method</a>
+  <a href="/free-resources">Free Resources</a>
+  <a href="/touch-reset-quiz">The Touch Reset Quiz</a>
+  <a href="/podcast/">Podcast</a>
+  <a href="/essays/">Essays</a>
+  <a href="/questions/">Questions</a>
+  <a href="/press">Press</a>
+  <a href="/media-and-pr">Media &amp; PR</a>
+  <a href="/contact">Contact</a>
 </nav>
+</div>
+<script>(function(){var b=document.getElementById('hamBtn'),n=document.getElementById('mobileNav');if(b&&n){b.addEventListener('click',function(){n.classList.toggle('open');b.setAttribute('aria-expanded',n.classList.contains('open'))});}})();</script>
 
 <section class="page-hero">
   <p class="eyebrow">Method · Juliette Karaman</p>
