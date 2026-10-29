@@ -487,7 +487,6 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
     <div class="center">
       <div class="k">Halfway</div>
       <h1>Halfway.<br><em>Keep going.</em></h1>
-      <div id="dqV2"></div>
       <div style="margin-top:26px"><button class="btn-g" id="dqOn" type="button">Keep going</button></div>
     </div>
   </section>
@@ -995,13 +994,13 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
       ['fine, the same again','ready-good'],['never quite right','ready-wrongkind'],['something sinks','ready-stuck'],['sad, then I carry on','ready-sad'],['I’d rather have the awkward conversation','ready-yes'],['I want to start now','ready-now']]}
   };
   // the running order
-  // halfway = after 8 of the 16 counted steps (moved 29 Oct, her note)
+  // the mirror sits at the halfway point, straight after the six touches (29 Oct, her yes); it replaces the old Halfway screen
   var STEPS=[{t:'pic',i:0},{t:'pic',i:1},{t:'pic',i:2},{t:'tap',d:WIRE[0]},{t:'tap',d:WIRE[1]},
              {t:'pic',i:3},{t:'pic',i:4},{t:'pic',i:5},
-             {t:'half'},
+             {t:'mirror'},
              {t:'tap',d:WIRE[2]},{t:'tap',d:WIRE[3]},
              {t:'tap',d:SCENES[0]},{t:'tap',d:SCENES[1]},{t:'tap',d:SCENES[2]},{t:'tap',d:TAPS.gap},{t:'tap',d:TAPS.ask},
-             {t:'mirror'},{t:'tap',d:TAPS.ready}];
+             {t:'tap',d:TAPS.ready}];
   var COUNTED=STEPS.filter(function(x){return x.t==='pic'||x.t==='tap';}).length;
   var WORDS=['ick','nothing','nice','mmm','goosebumps','toes curl'];
   var vals=[],peaks=[],waits=[],picks={},si=-1,pi=0,done=0,shownAt=0,v=-1,dragging=false,touched=false,lastW=-1,buzzed=false;
@@ -1127,7 +1126,7 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
     host.querySelectorAll('.vp-speed button').forEach(function(b){b.addEventListener('click',function(){rate=parseFloat(b.getAttribute('data-r'));
       host.querySelectorAll('.vp-speed button').forEach(function(x){x.classList.toggle('on',x===b);});if(VA&&VA._src===src)VA.playbackRate=rate;});});}
   voicePill(g('dqV1'),'/audio/touch-reset-quiz-1b.m4a','Hear from me first','0:22');
-  voicePill(g('dqV2'),'/audio/touch-reset-quiz-2.m4a','A word from me','0:15');
+  // halfway voice note ('A word from me') removed 29 Oct, her call
   voicePill(g('dqV3'),'/audio/touch-reset-quiz-3.m4a','Before you go','0:13');
   photo('/touch-bw.jpg',true);progress(0);
   $('begin').addEventListener('click',function(){
