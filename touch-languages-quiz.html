@@ -398,6 +398,44 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
 .vp3 .vp-speed button{background:none;border:1px solid rgba(221,201,142,.3);color:rgba(246,239,224,.6);border-radius:999px;padding:2px 9px;font:300 .68rem Poppins;cursor:pointer}
 .vp3 .vp-speed button.on{background:#DDC98E;color:#070707;border-color:#DDC98E}
 </style>
+<style>
+/* ===== v4 readability + phone frame, 29 Oct 2026 (Juliette: "really dark, very difficult to see") ===== */
+#dq .ph{filter:brightness(calc(var(--b,.4) + .32)) contrast(1.04) grayscale(var(--gr,.85)) sepia(var(--sep,0))}
+#dq .veil{background:radial-gradient(120% 60% at 50% 110%,rgba(7,7,7,.82) 25%,rgba(7,7,7,0) 68%),linear-gradient(180deg,rgba(7,7,7,.55) 0%,rgba(7,7,7,0) 24%)}
+#dq .veil.deep{background:rgba(7,7,7,.42)}
+#dq h1,#dq h2,#dq h1 em,#dq h2 em{font-weight:500;text-shadow:0 2px 18px rgba(7,7,7,.55)}
+#dq .k{font-weight:500;font-size:.72rem;opacity:1}
+#dq .brand{font-weight:500}
+#dq .step{font-weight:400;color:rgba(246,239,224,.9)}
+#dq .center p.sub{font-weight:400;font-size:1.02rem;color:rgba(246,239,224,.95);text-shadow:0 1px 12px rgba(7,7,7,.6)}
+#dq .word{font-weight:500}
+#dq .hint{font-weight:400;color:rgba(246,239,224,.85);font-size:.66rem}
+#dq .snd{font-weight:400;color:rgba(246,239,224,.85)}
+#dq .btn-g{font-weight:600;font-size:.8rem}
+#dq .tap{font-weight:400;background:rgba(7,7,7,.55)}
+#dq .vp-play,.vp3 .vp-play{font-weight:400;background:rgba(7,7,7,.5)}
+#dq .vp-play .dur,.vp3 .vp-play .dur{opacity:.85}
+#dq .vp-speed button,.vp3 .vp-speed button{color:rgba(246,239,224,.85);font-weight:400}
+.rdesc,.bandtext,.idsub{font-weight:400!important}
+.bandhead{font-weight:500!important}
+.dq-side{display:none}
+@media (min-width:900px){
+  html,body{background:#D8DFE1!important;background-image:none!important}
+  #dq{inset:auto;top:50%;left:62%;transform:translate(-50%,-50%);width:400px;height:min(840px,calc(100vh - 56px));border-radius:46px;border:12px solid #070707;box-shadow:0 40px 90px -30px rgba(7,7,7,.55),0 0 0 1px rgba(7,7,7,.2)}
+  #dq h1{font-size:2.15rem}
+  #dq .dial svg{width:330px}
+  #dq .glow{width:500px;height:420px;bottom:-200px}
+  #dq:not(.gone) ~ .dq-side{display:block;position:fixed;top:50%;left:8%;transform:translateY(-50%);width:min(380px,30vw);color:#0D3535;font-family:Poppins,system-ui,sans-serif}
+  .dq-side .k{font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:#7a6236;font-weight:600}
+  .dq-side h2{font-size:2.6rem;line-height:1.1;font-weight:600;margin:14px 0 16px;color:#0D3535}
+  .dq-side h2 em{color:#A88538;font-style:italic}
+  .dq-side p{font-size:1.05rem;line-height:1.6;color:#1c1714;margin:0 0 10px}
+  #resultPage{max-width:520px;margin:28px auto;background:#070707;border-radius:28px;overflow:hidden;box-shadow:0 40px 90px -30px rgba(7,7,7,.5)}
+  body>footer{background:transparent;color:#1c1714}
+  body>.topbar{display:none}
+  #dq:not(.gone) ~ footer{display:none}
+}
+</style>
 </head>
 <body>
 
@@ -494,6 +532,12 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
   </div>
 </main>
 
+<div class="dq-side" aria-hidden="true">
+  <div class="k">The Touch Reset Quiz · free</div>
+  <h2>Where did <em>the touch go?</em></h2>
+  <p>Six touches. A few quick taps. Your body answers.</p>
+  <p>Two minutes. Best with your sound on.</p>
+</div>
 <div id="resultPage">
 
   <section class="rband hero">
