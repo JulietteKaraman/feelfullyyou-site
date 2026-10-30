@@ -593,8 +593,8 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
 
   <section class="rband green">
     <div class="rin">
-      <h2 class="bandhead" id="ctaHead" style="text-align:center">The rest is in your inbox.</h2>
-      <p class="bandtext" style="max-width:42ch;margin:18px auto 0;text-align:center">Your fuller reading, and a two minute self-touch experience, are on their way to you now.</p>
+      <h2 class="bandhead" id="ctaHead" style="text-align:center">Your full reading is in your inbox.</h2>
+      <p class="bandtext" style="max-width:42ch;margin:18px auto 0;text-align:center">What it means for you, and a two minute touch from me to start with. Open it now.</p>
       <div id="ctaBtnWrap" style="text-align:center;display:none;margin-top:32px;padding-top:28px;border-top:1px solid rgba(221,201,142,.28)">
         <p class="bandtext" id="ctaBody" style="max-width:42ch;margin:0 auto 20px;text-align:center"></p>
         <a class="btn" id="ctaBtn" href="https://feelfullyyou.com/touch-audit">Start your Touch Audit</a>
@@ -1248,13 +1248,13 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
   function paintResult(){
     var set=function(id,txt){var el=$(id);if(el)el.textContent=txt;};
     var sg=STAGE[STATE_STAGE[result.state]||'reach'], pl=PLEASURE[result.pleasure];
-    set('stageHead',sg.head);set('stageDesc',sg.res);
-    if(pl){set('pleasureName',pl.name);set('pleasureDesc',pl.res);}
-    var w=$('ctaBtnWrap');
-    if(READY_CALL[result.ready]){
-      set('ctaBody','You said you are ready. Thirty minutes, free, and we look at what would actually move this.');
-      if(w)w.style.display='block';
-    }else if(w){w.style.display='none';}
+    // 30 Oct, Juliette: "it's giving everything away again". The page now gives the NAME and one line;
+    // the full reading lives only in her email, so they open it.
+    var tl=STATE_TAGLINE[result.state]||'';set('stageHead',sg.head);set('stageDesc',tl?tl.charAt(0).toUpperCase()+tl.slice(1)+'.':'');
+    if(pl){set('pleasureName',pl.name);set('pleasureDesc',pl.tease||'');}
+    // 30 Oct, Juliette: no Touch Audit straight after a quiz ("too quick... I would never book a call").
+    // Kit data agreed: 0 clicks. The call is offered later, by email, to people who are ready.
+    var w=$('ctaBtnWrap');if(w)w.style.display='none';
   }
 
   function revealBands(){
