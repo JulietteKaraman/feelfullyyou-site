@@ -508,7 +508,7 @@ gtag('config', 'G-SY8NKELMNZ');
 .tp-taste .fig{max-width:320px;margin-left:auto;margin-right:auto}.tp-taste .fig img{border-radius:6px;display:block;width:100%}
 .tp-reels{max-width:760px;margin:10px auto 0;padding:0 20px;text-align:center}
 .tp-reels .kick{margin-bottom:14px}
-.tp-reels-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.tp-reels-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .tp-reel{position:relative;display:block;border:0;padding:0;background:none;cursor:pointer;border-radius:6px;overflow:hidden;box-shadow:0 14px 34px rgba(0,0,0,.16)}
 .tp-reel img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 30%}
 .tp-reel .pl{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:58px;height:58px;border-radius:50%;background:rgba(13,53,53,.85);color:#fefcfa;font-size:22px;display:flex;align-items:center;justify-content:center}
@@ -679,7 +679,8 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
     </div>
     <div class="tp-visual">
       <div class="tp-vwrap">
-        <video id="tpv" class="tp-video" src="media/tp-you-may.mp4" poster="media/tp-you-may-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Juliette and Alex: You may. May I?"></video>
+        <!-- 30 Oct 2026, Juliette: the neck-kiss steer reel (300K and climbing) is what people should see when they land. "You may" moved to the reels below. -->
+        <video id="tpv" class="tp-video" src="media/tp-neck-kiss.mp4" poster="media/tp-neck-kiss-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Alex kissing Juliette's neck while she steers him"></video>
         <button type="button" id="tpsound" class="tp-sound" aria-label="Play with sound">&#128266; Tap for sound</button>
       </div>
       </div>
@@ -689,14 +690,7 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
 
 <main class="ix">
 
-<!-- THE TWO REELS PEOPLE COMMENT TOUCH ON -->
-<section class="tp-reels">
-  <p class="kick">You've probably seen us</p>
-  <div class="tp-reels-row">
-    <button type="button" class="tp-reel" data-src="media/tp-itv-raspberry.mp4" aria-label="Play: Feeding Ferne on ITV"><img src="media/tp-itv-raspberry-still.jpg" alt="Juliette feeding Ferne McCann a raspberry on ITV" loading="lazy"><span class="pl">&#9654;</span><span class="cap">Feeding Ferne on ITV</span></button>
-    <button type="button" class="tp-reel" data-src="media/tp-one-touch-point.mp4" aria-label="Play: One touch point"><img src="media/tp-one-touch-point-still.jpg" alt="Alex holding Juliette from behind on the terrace" loading="lazy"><span class="pl">&#9654;</span><span class="cap">One touch point</span></button>
-  </div>
-</section>
+<!-- 30 Oct 2026, Juliette: "I dont think it should have that many". Reels row parked: just the blue one (neck kiss) at the top, then the free taste with Ferne. Restore from git 59ba62b if wanted. -->
 <div class="tp-lb" id="tplb"><button type="button" aria-label="Close">&times;</button><video id="tplbv" controls playsinline></video></div>
 <script>
 (function(){var lb=document.getElementById('tplb'),v=document.getElementById('tplbv'),hv=document.getElementById('tpv');
