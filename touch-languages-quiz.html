@@ -211,6 +211,7 @@
     .sval{font-size:1.05rem}
   }
   @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}.btn.pulse{animation:none}.rin{opacity:1;transform:none}}
+.mirl{list-style:none;margin:22px auto 0;padding:0;max-width:340px;text-align:left}.mirl li{display:flex;justify-content:space-between;gap:12px;padding:9px 2px;border-bottom:1px solid rgba(221,201,142,.2);font-size:.98rem}.mirl li b{font-weight:500;color:rgba(254,252,250,.6)}.mirl li b.hot{color:#EEDE80}
 </style>
 <style>
   /* ===== DARK THEME, same look as the cards app ("Dyad mode + dark look") =====
@@ -503,6 +504,7 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
       <div class="k" id="dqMirK"></div>
       <h1 id="dqMirH"></h1>
       <p class="sub" id="dqMirS"></p>
+      <ul class="mirl" id="dqMirL"></ul>
       <div style="margin-top:28px"><button class="btn-g" id="dqMirGo" type="button">Keep going</button></div>
     </div>
   </section>
@@ -613,7 +615,6 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
       <a href="https://feelfullyyou.com/terms" style="color:rgba(255,255,255,.75);text-decoration:none" target="_blank" rel="noopener">Terms</a>
     </div>
   </div>
-<nav class="ffy-where" aria-label="Where I work" style="display:block!important;max-width:1140px;margin:14px auto 0;font-size:12px;line-height:1.9;opacity:.85;text-align:center;color:inherit">Where I work: <a href="/intimacy-coach-tunbridge-wells" style="color:inherit">Intimacy coach near Tunbridge Wells</a> · <a href="/couples-intimacy-coaching-tunbridge-wells" style="color:inherit">Couples near Tunbridge Wells</a> · <a href="/intimacy-coach-london" style="color:inherit">Intimacy coach in London</a> · <a href="/relationship-coach-uk" style="color:inherit">Relationship coaching</a> · <a href="/couples-intensive" style="color:inherit">Couples VIP day</a> · <a href="/half-day-vip-women" style="color:inherit">The half day for women</a> · <a href="/menopause-libido-help" style="color:inherit">Menopause and your libido</a></nav>
 </footer>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SY8NKELMNZ"></script>
@@ -1077,12 +1078,20 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
   // the mirror: her own answers, shown back to her, so she feels the gap
   var NUM=['None','One','Two','Three','Four','Five','Six'];
   function showMirror(){
-    var n=0,low=0,high=0,curl=0;PICS.forEach(function(P,k){var x=vals[k];if(x==null||x<0)return;n++;if(x<2/6)low++;if(x>=.5)high++;if(x>=5/6)curl++;});
-    var h,s2;
-    if(low>=Math.ceil(n/2)){h=NUM[n]+' touches.<br><em>'+NUM[low]+' barely reached you.</em>';s2=(curl?NUM[curl]+' made your toes curl.':'Not one made your toes curl.')+' This is what your body has been living with.';}
-    else if(high>=n-1){h=NUM[n]+' touches.<br><em>'+NUM[high]+' reached you.</em>';s2='Imagine touch landing like that every single day.';}
-    else{h=NUM[n]+' touches.<br><em>'+NUM[high]+' reached you. '+NUM[n-high]+' didn’t.</em>';s2=(curl?NUM[curl]+' made your toes curl.':'Not one made your toes curl.')+' Your body knows what it’s missing.';}
-    g('dqMirK').textContent='What your body just told you';g('dqMirH').innerHTML=h;g('dqMirS').textContent=s2;
+    // 30 Oct, Juliette: "really give the proper reading: 6 touches, 2 made your toes curl...
+    // reflect back what they reached, not generic crap". Her own dial words, counted, then each touch.
+    var SHORT=['Black lace','Silk','A singing bowl','Rope round your ankles','A kiss on your neck','A hand on your heart'];
+    var ONE=['was an ick','did nothing','was just nice','was "mmm"','gave you goosebumps','made your toes curl'];
+    var MANY=['were an ick','did nothing','were just nice','were "mmm"','gave you goosebumps','made your toes curl'];
+    var n=0,low=0,high=0,curl=0,cnt=[0,0,0,0,0,0],rows=[];
+    PICS.forEach(function(P,k){var x=vals[k];if(x==null||x<0)return;n++;if(x<2/6)low++;if(x>=4/6)high++;if(x>=5/6)curl++;
+      var w=Math.min(5,Math.floor(x*6));cnt[w]++;rows.push({k:k,x:x,w:w});});
+    var parts=[];for(var w=5;w>=0;w--){if(cnt[w])parts.push(NUM[cnt[w]]+' '+(cnt[w]===1?ONE[w]:MANY[w])+'.');}
+    rows.sort(function(a,b){return b.x-a.x;});
+    var h=NUM[n]+' touches.<br><em>'+parts.slice(0,2).join(' ')+'</em>';
+    var list=rows.map(function(r){return '<li><span>'+SHORT[r.k]+'</span><b'+(r.w>=4?' class="hot"':'')+'>'+WORDS[r.w]+'</b></li>';}).join('');
+    var s2=parts.length>2?parts.slice(2).join(' '):'';
+    g('dqMirK').textContent='What your body just told you';g('dqMirH').innerHTML=h;g('dqMirS').textContent=s2;g('dqMirL').innerHTML=list;
     photo('/touch-reset-quiz-bw.jpg',true);show('sMirror');bell([392,494],.06);T('quiz_mirror',{quiz:'touch_reset',low:low,high:high,curl:curl});}
   g('dqBegin').onclick=function(){ac();stopVoice();bell([440,660],.06);next();T('quiz_start',{quiz:'touch_reset',version:'v3'});};
   // scoring: same result shape the emails and Kit tags already use
