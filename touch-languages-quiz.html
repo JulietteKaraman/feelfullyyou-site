@@ -430,6 +430,22 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
   #dq .center{max-width:620px;margin-left:auto;margin-right:auto}
 }
 </style>
+<style>
+/* 30 Oct: quiz cover = the home pop-up card (Juliette) */
+#sIntro .popcard{max-width:440px;margin:0 auto;background:#fefcfa;border-radius:22px;overflow:hidden;box-shadow:0 30px 80px -20px rgba(0,0,0,.7)}
+#sIntro .popph{height:230px;background:url('/touch-embrace-bw.jpg') 50% 30%/cover no-repeat;position:relative}
+#sIntro .popph:after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:100px;background:linear-gradient(rgba(254,252,250,0),rgba(254,252,250,.8) 55%,#fefcfa 85%)}
+#sIntro .popin{padding:0 24px 26px;margin-top:-14px;position:relative}
+#sIntro .k{color:#7a6236!important;font-weight:600!important;letter-spacing:.3em}
+#sIntro h1{color:#0D3535!important;font-weight:600!important;text-shadow:none!important;font-size:2rem;line-height:1.08;margin:8px 0 10px}
+#sIntro h1 em{color:#A88538!important;font-weight:600!important;text-shadow:none!important}
+#sIntro p.sub{color:#1c1714!important;text-shadow:none!important;font-size:.98rem;margin:0 0 14px}
+#sIntro .vp-play{background:#f4f1ec!important;border-color:rgba(168,133,56,.5)!important;color:#0D3535!important}
+#sIntro .vp-speed button{color:#5b4a2e!important;border-color:rgba(168,133,56,.4)!important}
+#sIntro .vp-speed button.on{background:#0D3535!important;color:#fefcfa!important;border-color:#0D3535!important}
+#sIntro .btn-g.fill{background:#0D3535!important;color:#fefcfa!important;border-color:#0D3535!important;letter-spacing:.24em;padding:14px 34px}
+@media (max-width:520px){#sIntro .popph{height:190px}#sIntro h1{font-size:1.75rem}}
+</style>
 </head>
 <body>
 
@@ -444,11 +460,16 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
 
   <section class="screen on" id="sIntro">
     <div class="center">
-      <div class="k">Free · two minutes</div>
-      <h1>Where did<br><em>the touch go?</em></h1>
-      <p class="sub">Six touches. A few quick taps. Your body answers.</p>
-      <div id="dqV1"></div>
-      <div style="margin-top:26px"><button class="btn-g fill" id="dqBegin" type="button">Begin</button></div>
+      <div class="popcard">
+        <div class="popph" role="img" aria-label="Juliette laughing while Alex kisses her cheek"></div>
+        <div class="popin">
+          <div class="k">Free · two minutes</div>
+          <h1>Where did<br><em>the touch go?</em></h1>
+          <p class="sub">Six touches. A few quick taps. Your body answers.</p>
+          <div id="dqV1"></div>
+          <div style="margin-top:20px"><button class="btn-g fill" id="dqBegin" type="button">Begin</button></div>
+        </div>
+      </div>
     </div>
   </section>
 
