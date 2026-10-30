@@ -8,9 +8,9 @@
     + "#trq-pop-overlay.show{display:flex}#trq-pop-overlay.show.in{opacity:1}"
     + "#trq-pop{position:relative;background:#fefcfa;color:#0D3535;border:1px solid rgba(168,133,56,.35);border-radius:20px;max-width:380px;width:100%;overflow:hidden;text-align:center;box-shadow:0 40px 90px -30px rgba(7,7,7,.6);font-family:'Poppins',system-ui,sans-serif;opacity:0;transform:translateY(18px) scale(.97);transition:opacity .6s cubic-bezier(.2,.8,.2,1),transform .6s cubic-bezier(.2,.8,.2,1)}"
     + "#trq-pop-overlay.show.in #trq-pop{opacity:1;transform:none}"
-    + "#trq-pop-photo{position:relative;width:100%;height:250px;background:url('/touch-embrace-bw.jpg') 50% 30%/cover no-repeat}"
-    + "#trq-pop-photo:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(254,252,250,0) 55%,#fefcfa 100%)}"
-    + "#trq-pop-body{padding:4px 30px 30px;margin-top:-34px;position:relative}"
+    + "#trq-pop-photo{position:relative;width:100%;height:250px;background:url('/touch-reset-quiz-bw.jpg') 50% 24%/cover no-repeat}"
+    + "#trq-pop-photo:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(254,252,250,0) 89%,#fefcfa 100%)}"
+    + "#trq-pop-body{padding:14px 30px 30px;position:relative}"
     + "#trq-pop-close{position:absolute;top:12px;right:12px;z-index:2;background:rgba(254,252,250,.9);border:1px solid rgba(13,53,53,.25);font-size:17px;line-height:1;color:#0D3535;cursor:pointer;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center}"
     + "#trq-pop .trq-eyebrow{font-size:10px;letter-spacing:.34em;text-transform:uppercase;color:#7a6236;font-weight:600;margin:0 0 12px}"
     + "#trq-pop h3{font-family:'Poppins',system-ui,sans-serif;font-weight:600;font-size:2rem;color:#0D3535;margin:0 0 12px;line-height:1.12;letter-spacing:-.01em}"
@@ -39,7 +39,7 @@
       + '<div id="trq-pop-body">'
       + '<p class="trq-eyebrow">Free &middot; two minutes</p>'
       + '<h3>Where did<br><em>the touch go?</em></h3>'
-      + '<p class="trq-line">Six touches. A few quick taps. Your body answers.</p>'
+      + '<p class="trq-line">Sixteen quick taps. Your body answers.</p>'
       + '<a class="trq-cta" href="https://feelfullyyou.com/touch-reset-quiz">Take the quiz</a>'
       + '<button class="trq-dismiss">Not now</button>'
       + '</div>'
