@@ -107,7 +107,10 @@ https://shop.feelfullyyou.com/*  https://feelfullyyou.com/my-cards/  301!
 /communication-reboot-kit.html  /31-touch-points                301!
 /romantic-relationship-repair-kit /romantic-relationship-repair-kit.html 200
 /between-touches                /between-touches.html           200
-/when-she-goes-quiet            /when-she-goes-quiet.html       200
+# 30 Oct 2026 PARKED (Juliette): When She Goes Quiet off the site for now. Page file kept. To bring back: restore the line below.
+# /when-she-goes-quiet            /when-she-goes-quiet.html       200
+/when-she-goes-quiet            /the-unspoken-distance          302!
+/when-she-goes-quiet.html       /the-unspoken-distance          302!
 /shop                           /shop.html                      200
 /media-and-pr                   /media-and-pr.html              200
 /free-resources                 /free-resources.html            200
@@ -165,7 +168,7 @@ https://shop.feelfullyyou.com/*  https://feelfullyyou.com/my-cards/  301!
 /couples-intensive785342        https://shop.feelfullyyou.com/couples-intensive785342        301
 /mens-intensive-3894            https://shop.feelfullyyou.com/mens-intensive-3894            301
 /the-touch-reboot-kit-payment-9978 https://shop.feelfullyyou.com/the-touch-reboot-kit-payment-9978 301
-/when-she-has-gone-quiet-guide-234440 /when-she-goes-quiet             301
+/when-she-has-gone-quiet-guide-234440 /the-unspoken-distance           302
 /between-touches-checkout       /between-touches                301
 /telegram-support               https://shop.feelfullyyou.com/telegram-support               301
 /touch-base-anchor              /touch-base-anchor.html         200
