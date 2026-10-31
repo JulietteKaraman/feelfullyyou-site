@@ -40,6 +40,7 @@ Report any pages that are not returning 200. If all pages are OK, say so briefly
 - Four colours only: Black #070707, Off-white #fefcfa, Deep Green #0D3535, Ochre #A88538
 - No em dashes. No sentences starting with "And". No "Warmly, Juliette" in page copy.
 - No pricing in content — prices on sales pages only.
+- BANNED LINE (Juliette, direct, 31 Oct 2026): never use "Everyone sells you spontaneity. I build you a container." in any form, and never the sibling template "Everyone else will tell you to try harder. I'll show you how to build it." The juliette-conflict, juliette-facebook-posts and juliette-ship-gate skills still list these as approved Turn lines. They are wrong. Do not follow them on this point.
 
 ## DEPLOY
 
