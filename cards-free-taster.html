@@ -47,9 +47,17 @@
 
   .card-img{width:170px;margin:0 auto 24px;filter:drop-shadow(0 16px 40px rgba(0,0,0,.22))}
   .card-img img{width:100%;height:auto;display:block}
+  .phone{position:relative;width:200px;margin:0 auto 24px;padding:30px 8px 10px;border-radius:40px;background:#0b0b0b;box-shadow:0 0 0 2px #2a2a2a,0 24px 50px rgba(0,0,0,.35)}
+  .phone::before{content:"";position:absolute;top:9px;left:50%;transform:translateX(-50%);width:58px;height:15px;border-radius:12px;background:#000;z-index:2}
+  .phone video{display:block;width:100%;height:auto;aspect-ratio:720/1288;object-fit:cover;border-radius:6px 6px 28px 28px;background:#0d3535}
+  .phone-sound{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:3;display:inline-flex;align-items:center;gap:8px;white-space:nowrap;padding:9px 16px;border:0;border-radius:999px;background:#DDC98E;color:#0b0b0b;font-weight:600;font-size:13px;line-height:1;font-family:inherit;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.35)}
+  .phone-sound .ic{width:0;height:0;border-left:9px solid #0b0b0b;border-top:6px solid transparent;border-bottom:6px solid transparent}
+  .phone-sound.on .ic{width:9px;height:11px;border:0;border-left:3px solid #0b0b0b;border-right:3px solid #0b0b0b}
   .eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-deep);font-weight:700;margin-bottom:20px}
   h1{font-family:var(--display);font-size:clamp(1.8rem,4.5vw,2.6rem);font-weight:700;color:var(--teal);line-height:1.12;letter-spacing:-.022em;margin-bottom:16px}
   h1 em{font-style:italic;color:var(--gold)}
+  .pop{font-family:var(--display);font-weight:700;font-size:1.5rem;line-height:1.3;color:var(--teal);margin:6px 0 22px;letter-spacing:-.01em}
+  .pop em{font-style:italic;color:var(--gold)}
   .sub{font-size:1.05rem;color:var(--brown);line-height:1.7;margin-bottom:40px}
 
   .form-label{font-family:var(--display);font-size:1.1rem;font-weight:600;color:var(--teal);margin-bottom:14px}
@@ -103,12 +111,16 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
 
 <main class="main">
   <div class="card">
-    <div class="card-img">
-      <img src="/media/cards-app-sitting-iphone.png" alt="The cards app on a phone: one card, a fifteen minute timer, and the three answers">
+    <div class="phone">
+      <video src="/media/free-cards-app.mp4" autoplay muted loop playsinline preload="metadata" aria-label="The free cards app on a phone: a card turns over, then the two of you choose who speaks first"></video>
+      <button type="button" class="phone-sound" id="phoneSound" aria-label="Play Juliette's voice"><span class="ic" aria-hidden="true"></span><span class="tx">Hear Juliette</span></button>
+      <audio id="phoneVoice" src="/media/free-cards-voice.m4a" preload="none"></audio>
     </div>
     <div class="eyebrow">FREE TASTER · INTIMACY &amp; COMMUNICATION CARDS</div>
-    <h1>Pick a card. Ask a question. <em>Three answers only.</em> Notice what happens.</h1>
-    <p class="sub">Six free cards on your phone. Three for the two of you, three for the people you have known longest. Free, straight to you.</p>
+    <h1>You've had this talk a hundred times. <em>It still ends in the same row.</em></h1>
+    <p class="sub" style="margin-bottom:14px">Six free cards on your phone, three for the two of you and three for the people you have known longest. One card, fifteen minutes, and whoever is listening can only say three things back.</p>
+    <p class="pop">Nobody defends.<br>Nobody fixes.<br><em>You both get heard.</em></p>
+    <p class="sub">The app walks you through it. Put your names in and it tells you whose turn it is, keeps the time, and holds your place.</p>
 
     <p class="form-label">Where do we send your six free cards?</p>
     <form id="signupForm">
@@ -125,6 +137,18 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
 <nav class="ffy-where" aria-label="Where I work" style="display:block!important;max-width:1140px;margin:14px auto 0;font-size:12px;line-height:1.9;opacity:.85;text-align:center;color:inherit">Where I work: <a href="/intimacy-coach-tunbridge-wells" style="color:inherit">Intimacy coach near Tunbridge Wells</a> · <a href="/couples-intimacy-coaching-tunbridge-wells" style="color:inherit">Couples near Tunbridge Wells</a> · <a href="/intimacy-coach-london" style="color:inherit">Intimacy coach in London</a> · <a href="/relationship-coach-uk" style="color:inherit">Relationship coaching</a> · <a href="/couples-intensive" style="color:inherit">Couples VIP day</a> · <a href="/half-day-vip-women" style="color:inherit">The half day for women</a> · <a href="/menopause-libido-help" style="color:inherit">Menopause and your libido</a></nav>
 </footer>
 
+<script>
+(function(){
+  var b=document.getElementById('phoneSound'), a=document.getElementById('phoneVoice'), v=document.querySelector('.phone video');
+  if(!b||!a) return;
+  function ui(on){ b.classList.toggle('on',on); b.querySelector('.tx').textContent = on ? 'Listening' : 'Hear Juliette'; b.setAttribute('aria-label', on ? 'Pause Juliette' : "Play Juliette's voice"); }
+  b.addEventListener('click',function(){
+    if(a.paused){ if(a.ended||a.currentTime===0){ a.currentTime=0; if(v){ v.currentTime=0; v.play().catch(function(){}); } } a.play().catch(function(){}); }
+    else a.pause();
+  });
+  a.addEventListener('play',function(){ui(true)}); a.addEventListener('pause',function(){ui(false)}); a.addEventListener('ended',function(){ui(false); a.currentTime=0;});
+})();
+</script>
 <script>
   const REDIRECT_URL = '/thankyou-cards-taster';
 
