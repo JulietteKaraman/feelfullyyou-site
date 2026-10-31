@@ -390,6 +390,12 @@
     .hk-tile.door{grid-column:1/-1}
   }
   .hk-hero .hk-lines li{color:#fefcfa;border-color:rgba(254,252,250,.18)}
+  .hk-vphone{margin:0;justify-self:center;width:min(290px,70vw);border:11px solid #0a0a0a;border-radius:44px;overflow:hidden;background:#000;box-shadow:0 0 0 2px #3a3a3c,0 30px 60px rgba(0,0,0,.45)}
+  .hk-vphone video{display:block;width:100%;height:auto}
+  .hk-cardsband{background:#070707}
+  .hk-cardsband img{width:100%;height:460px;object-fit:cover;object-position:center 55%;display:block}
+  @media(max-width:860px){.hk-cardsband img{height:300px}}
+  @media(min-width:861px){.hk-band::after{background:linear-gradient(90deg,rgba(7,7,7,.1) 15%,rgba(7,7,7,.9) 60%)}}
 </style>
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -520,7 +526,7 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
       </div>
       <p class="priceline reveal">Opens on your phone the minute you pay.</p>
     </div>
-    <figure class="hk-fig reveal"><img src="/media/cards-app-kingsx-family.jpg" alt="Juliette's hands holding her phone with the Family card open in the app"></figure>
+    <figure class="hk-vphone reveal"><video src="/media/holiday-app.mp4" poster="/media/holiday-app-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="The Holiday Survival Kit in the app: a card from The Table turned over, then the fifteen minute timer"></video></figure>
   </div>
 </header>
 
@@ -542,7 +548,7 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
 </section>
 
 <section class="hk-band" id="how">
-  <img src="/media/holiday-cooking-together.jpg" alt="Juliette and Alex cooking together in the kitchen" loading="lazy" decoding="async">
+  <img src="/media/holiday-table.jpg" alt="Juliette's table laid for a gathering, red tulips, candles and paper garlands" loading="lazy" decoding="async">
   <div class="hk-in">
     <div class="bandcopy">
       <h2 class="reveal">How it <em>works.</em></h2>

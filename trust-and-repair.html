@@ -397,6 +397,63 @@
   .tr-phone::before{display:none}
   .tr-phone img{height:auto;object-fit:contain;box-shadow:none;filter:drop-shadow(0 30px 50px rgba(0,0,0,.55))}
   @media(max-width:860px){.tr-phone img{height:auto}}
+  /* Lighter Trust & Repair (31 Oct 2026) */
+  .tr-light{background:linear-gradient(180deg,#fefcfa 0%,#f6f4f1 100%);color:var(--brown)}
+  .tr-light .eyebrow{color:var(--gold)}
+  .tr-light h1{color:var(--teal)}
+  .tr-light h1 em{color:var(--gold)}
+  .tr-light p{color:var(--brown)}
+  .tr-light p strong{color:var(--ink)}
+  .tr-light .hk-lines li{color:var(--ink);border-color:var(--line)}
+  .tr-light .priceline{color:var(--gold-deep)}
+  .tr-light .tr-phone img{filter:drop-shadow(0 30px 50px rgba(13,53,53,.28))}
+  .tr-how{background:#fff;padding:96px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .tr-how .hk-in{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center}
+  .tr-fan{position:relative;height:440px}
+  .tr-fan img{position:absolute;top:30px;width:230px;border:1px solid var(--line);box-shadow:0 22px 44px rgba(13,53,53,.16);background:#fff}
+  .tr-fan img:nth-child(1){left:8%;transform:rotate(-8deg)}
+  .tr-fan img:nth-child(2){left:30%;top:10px;z-index:2}
+  .tr-fan img:nth-child(3){left:52%;transform:rotate(8deg)}
+  .tr-howcopy h2{color:var(--teal);font-size:clamp(1.8rem,3.6vw,2.6rem);margin:0 0 18px}
+  .tr-howcopy h2 em{font-style:normal;color:var(--gold)}
+  .tr-howcopy ol{margin:0;padding:0;list-style:none;counter-reset:s}
+  .tr-howcopy li{counter-increment:s;position:relative;padding:12px 0 12px 44px;line-height:1.5;color:var(--brown);border-top:1px solid var(--line)}
+  .tr-howcopy li::before{content:counter(s);position:absolute;left:0;top:8px;font-family:var(--display);font-weight:800;font-size:1.6rem;color:var(--gold)}
+  .hk-buy{background:#0d3535}
+  @media(max-width:860px){
+    .tr-how{padding:64px 0}
+    .tr-how .hk-in{grid-template-columns:1fr;gap:28px}
+    .tr-fan{height:330px}
+    .tr-fan img{width:44%;top:20px}
+    .tr-fan img:nth-child(1){left:2%}
+    .tr-fan img:nth-child(2){left:28%;top:0}
+    .tr-fan img:nth-child(3){left:54%}
+  }
+  .tr-vphone{margin:0;justify-self:center;width:min(290px,70vw);border:11px solid #0a0a0a;border-radius:44px;overflow:hidden;background:#000;box-shadow:0 0 0 2px #3a3a3c,0 30px 60px rgba(13,53,53,.28)}
+  .tr-vphone video{display:block;width:100%;height:auto}
+  .tr-light h1 em{font-style:italic}
+  .tr-pain{background:#fefcfa;padding:96px 0}
+  .tr-pain .hk-in{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+  .tr-pain .eyebrow{color:var(--gold);display:block;margin-bottom:14px}
+  .tr-pain h2{color:var(--teal);font-size:clamp(1.9rem,3.8vw,2.8rem);line-height:1.1;margin:0 0 20px}
+  .tr-pain h2 em{font-style:italic;color:var(--gold)}
+  .tr-pain p{color:var(--brown);margin:0 0 16px;max-width:52ch}
+  .tr-painfig{margin:0;border-radius:6px;overflow:hidden;box-shadow:0 30px 60px rgba(13,53,53,.18)}
+  .tr-painfig img{width:100%;height:560px;object-fit:cover;object-position:center 40%}
+  .hk-sec.alt h2 em{font-style:italic}
+  .tr-grid{counter-reset:tr;gap:0 28px}
+  .tr-grid .hk-tile{background:transparent;border:none;border-top:1px solid var(--gold);padding:22px 0 10px;text-align:left;counter-increment:tr;position:relative}
+  .tr-grid .hk-tile::before{content:"0" counter(tr);display:block;font-family:var(--display);font-weight:500;font-style:italic;font-size:1.6rem;color:var(--gold);margin-bottom:6px}
+  .tr-grid .hk-tile h3{color:var(--teal)}
+  @media(max-width:860px){
+    .tr-pain{padding:64px 0}
+    .tr-pain .hk-in{grid-template-columns:1fr;gap:32px}
+    .tr-painfig img{height:420px}
+    .tr-grid{grid-template-columns:1fr}
+  }
+  .tr-howfig{margin:0;border-radius:6px;overflow:hidden;box-shadow:0 30px 60px rgba(13,53,53,.18)}
+  .tr-howfig img{width:100%;height:520px;object-fit:cover;object-position:center 45%}
+  @media(max-width:860px){.tr-howfig img{height:380px}}
 </style>
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -511,7 +568,7 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
 </nav>
 
 <!-- TRUST & REPAIR (own page, 31 Oct 2026) -->
-<header class="hk-hero">
+<header class="hk-hero tr-light">
   <div class="hk-in">
     <div>
       <p class="eyebrow reveal">TRUST &amp; REPAIR · ON YOUR PHONE</p>
@@ -527,9 +584,21 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
       </div>
       <p class="priceline reveal">Opens on your phone the minute you pay.</p>
     </div>
-    <figure class="hk-fig tr-phone reveal"><img src="/media/trust-repair-phone.png" alt="A Trust &amp; Repair card open in the app on a phone: Tell me what you are still not over." width="640" height="1309"></figure>
+    <figure class="tr-vphone reveal"><video src="/media/trust-repair-app.mp4" poster="/media/trust-repair-app-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Juliette's Trust &amp; Repair cards in the app: a card turned over, then With a partner"></video></figure>
   </div>
 </header>
+
+<section class="tr-pain">
+  <div class="hk-in">
+    <div class="tr-paincopy">
+      <p class="eyebrow reveal">WHAT KEEPS HAPPENING</p>
+      <h2 class="reveal">The same thing comes up. <em>Again.</em></h2>
+      <p class="reveal">A small comment lands wrong, and suddenly you're both back in the old hurt. One of you goes quiet. The other one pushes. Nobody chose the distance, and neither of you knows how to talk about it without a row.</p>
+      <p class="reveal">Trust &amp; Repair gives that conversation somewhere careful to land. One card. Fifteen minutes. You each get heard.</p>
+    </div>
+    <figure class="tr-painfig reveal"><img src="/media/tr-couple-garden.jpg" alt="Juliette and Alex holding each other in the garden at golden hour" loading="lazy" decoding="async"></figure>
+  </div>
+</section>
 
 <section class="hk-sec alt">
   <div class="hk-in hk-center">
@@ -546,10 +615,10 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
   </div>
 </section>
 
-<section class="hk-band" id="how">
-  <img src="/media/cards-app-kingsx-stories.jpg" alt="Juliette holding her phone with the cards app open" loading="lazy" decoding="async">
+<section class="tr-how" id="how">
   <div class="hk-in">
-    <div class="bandcopy">
+    <figure class="tr-howfig reveal"><img src="/media/tr-cards-hands.jpg" alt="Juliette holding one of her cards, the deck fanned out on a dark table" loading="lazy" decoding="async"></figure>
+    <div class="tr-howcopy">
       <h2 class="reveal">How it <em>works.</em></h2>
       <ol class="reveal">
         <li>Pick a card. Set the timer for fifteen minutes.</li>
