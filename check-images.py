@@ -14,7 +14,7 @@ bans={}
 for k in ['INT-01','INT-02','INT-03','INT-05','INT-06','INT-07','INT-08','INT-09','INT-10','INT-11']:  # INT-04 removed 29 Oct: Juliette says it is her REAL train selfie with Alex
     h=dh(f'{LIB}/thumbs/{k}.jpg');
     if h: bans[k+(' (AI, never)' if k in ('INT-05','INT-06','INT-07') else ' (unverified stock, avoid)')]=h
-for f,why in [('dyad-hands.jpg','AI candle/fruit photo'),('cards-app-taster.jpg','OLD cards app (5 cards)'),('media/app-home-iphone.png','OLD light app home'),('media/app-library-screenshot.jpg','OLD app library'),('media/app-library-courses-iphone.png','OLD light app library'),('media/app-unspoken-distance-library.jpg','OLD Unspoken Distance library list'),('media/31dc-hero.jpg','candle scene with OLD light 31 Days Closer phone (use media/31dc-hero-dark.jpg)')]:
+for f,why in [('cards-app-taster.jpg','OLD cards app (5 cards)'),('media/app-home-iphone.png','OLD light app home'),('media/app-library-screenshot.jpg','OLD app library'),('media/app-library-courses-iphone.png','OLD light app library'),('media/app-unspoken-distance-library.jpg','OLD Unspoken Distance library list'),('media/31dc-hero.jpg','candle scene with OLD light 31 Days Closer phone (use media/31dc-hero-dark.jpg)')]:
     h=dh(f)
     if h: bans[f+' = '+why]=h
 pages=[f for f in glob.glob('**/*.html',recursive=True) if not re.search(r'_preview|_review|\.bak|node_modules|/bak',f)]
