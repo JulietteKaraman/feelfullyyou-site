@@ -313,6 +313,7 @@ section{padding-block:clamp(80px,11vw,140px);position:relative}
 .itvbox .vid.tall video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#000}
 .attn{font-family:var(--display);font-weight:700;font-size:clamp(2rem,4.2vw,3.3rem);line-height:1.1;letter-spacing:-.01em;color:var(--gold);margin:26px 0 0;padding-top:24px;border-top:2px solid var(--copper);max-width:16ch}
 .attn em{font-style:italic;color:var(--copper)}
+@media (max-width:560px){.top .brand{font-size:17px;white-space:nowrap}.top nav{display:flex;gap:16px}.top nav a{margin-left:0;font-size:11px;letter-spacing:.12em;white-space:nowrap}}
 /* not ready */
 .notready{background:var(--night-2);padding-block:64px;text-align:center}
 .notready p{max-width:52ch;margin:12px auto 22px}
@@ -559,7 +560,6 @@ footer{padding:36px 20px calc(36px + env(safe-area-inset-bottom,0px));text-align
 </section>
 
 <footer>Feel Fully You · Juliette Karaman, intimacy and touch expert · The Touch Reset</footer>
-<div class="preview-flag">Preview · not live</div>
 
 <script>
 document.getElementById('wl').addEventListener('submit',function(e){
