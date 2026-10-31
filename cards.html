@@ -581,47 +581,19 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
   </div>
   <div class="deck-grid">
 
-    <div class="deck-card reveal">
-      <p class="deck-eye">START HERE</p>
-      <h3>31 Days Closer</h3>
-      <div class="price">£17</div>
+    <div class="deck-card featured reveal" id="bundleCard" style="grid-column:1/-1">
+      <div class="badge">MOST POPULAR</div>
+      <p class="deck-eye">BOTH DECKS</p>
+      <h3>Couples <em>and</em> Friends &amp; Family</h3>
+      <div class="price" id="bundlePrice">£55</div>
       <ul>
-        <li>31 cards, already in the right order</li>
-        <li>One a day, you never have to choose</li>
-        <li>Fifteen minutes and the three answers built in</li>
-        <li>Straight onto the cards, no password</li>
+        <li>Couples deck included</li>
+        <li>Friends &amp; Family deck included</li>
+        <li>Ten sections, so there is one for wherever you are</li>
+        <li>£70 of decks, yours for £55</li>
+        <li>Both live in the same app</li>
       </ul>
-      <a href="https://buy.stripe.com/6oUcN47m3gty71H1Yx0co1U" class="btn">Start 31 Days Closer</a>
-    </div>
-
-    <div class="deck-card reveal" id="trustRepairCard">
-      <p class="deck-eye">AFTER SOMETHING HAS HAPPENED</p>
-      <h3>Trust &amp; Repair</h3>
-      <div class="price" id="trustRepairPrice">£15</div>
-      <p style="color:#d7d0c4;font-size:15px;line-height:1.55;margin:0">For the conversation you keep circling. A hurt that hasn't quite gone. A distance neither of you knows how to talk about. One card gives it a careful place to land.</p>
-      <ul>
-        <li>50 cards, ten in each of five sections</li>
-        <li><strong>Out There</strong> · the world and the news, coming into the house</li>
-        <li><strong>What I'm Carrying</strong> · what one of you has held alone</li>
-        <li><strong>The Drift</strong> · the distance nobody chose</li>
-        <li><strong>The Body's Record</strong> · where you still brace</li>
-        <li><strong>Coming Back</strong> · trust, apology, forgiveness</li>
-      </ul>
-      <a href="https://buy.stripe.com/7sY7sK35Na5a99Pbz70co2a" class="btn" id="trustRepairCta">Get Trust &amp; Repair</a>
-    </div>
-
-    <div class="deck-card reveal" style="grid-column:1/-1">
-      <p class="deck-eye">SEASONAL</p>
-      <h3><a href="/holiday-survival-kit" style="color:inherit;text-decoration:none">Holiday Survival Kit</a></h3>
-      <div class="price">£17</div>
-      <ul>
-        <li>37 cards for the four days you are trapped in a house with everyone</li>
-        <li>Arriving · The Table · The Way We Do It · What It Costs · Us · After</li>
-        <li>One card at the table changes the whole conversation</li>
-        <li>Behind the Door held out of the shuffle, for when everyone has gone to bed</li>
-      </ul>
-      <a href="/holiday-survival-kit" style="display:block;color:var(--gold-pale);font-size:14px;text-decoration:underline;text-underline-offset:3px">For Thanksgiving and Christmas: see the whole kit &rarr;</a>
-      <a href="https://buy.stripe.com/28E3cugWDb9e5XD6eN0co1Z" class="btn">Get the Holiday Kit</a>
+      <a href="https://buy.stripe.com/eVq4gycGn2CIadTfPn0co1V" class="btn" id="bundleCta">Get Access</a>
     </div>
 
     <div class="deck-card reveal">
@@ -656,20 +628,20 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
       <a href="https://buy.stripe.com/cNi8wOayf0uAcm1eLj0co1X" class="btn">Get Friends &amp; Family</a>
     </div>
 
-    <div class="deck-card featured reveal" id="bundleCard" style="grid-column:1/-1">
-      <div class="badge">MOST POPULAR</div>
-      <p class="deck-eye">BOTH DECKS</p>
-      <h3>Couples <em>and</em> Friends &amp; Family</h3>
-      <div class="price" id="bundlePrice">£55</div>
+    <div class="deck-card reveal" style="grid-column:1/-1">
+      <p class="deck-eye">OR START SMALLER</p>
+      <h3>31 Days Closer</h3>
+      <div class="price">£17</div>
       <ul>
-        <li>Couples deck included</li>
-        <li>Friends &amp; Family deck included</li>
-        <li>Ten sections, so there is one for wherever you are</li>
-        <li>£70 of decks, yours for £55</li>
-        <li>Both live in the same app</li>
+        <li>31 cards, already in the right order</li>
+        <li>One a day, you never have to choose</li>
+        <li>Fifteen minutes and the three answers built in</li>
+        <li>Straight onto the cards, no password</li>
       </ul>
-      <a href="https://buy.stripe.com/eVq4gycGn2CIadTfPn0co1V" class="btn" id="bundleCta">Get Access</a>
+      <a href="https://buy.stripe.com/6oUcN47m3gty71H1Yx0co1U" class="btn">Start 31 Days Closer</a>
     </div>
+
+    <p style="grid-column:1/-1;text-align:center;font-size:15px;margin-top:6px">Also in the app: <a href="/holiday-survival-kit" style="color:var(--gold);text-decoration:underline;text-underline-offset:3px">Holiday Survival Kit</a> &middot; <a href="/trust-and-repair" style="color:var(--gold);text-decoration:underline;text-underline-offset:3px">Trust &amp; Repair</a></p>
 
   </div>
 </section>
