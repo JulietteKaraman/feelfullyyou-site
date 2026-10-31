@@ -2,6 +2,8 @@
 # shop.feelfullyyou.com/cards-1. The old shop is gone, so every shop address
 # lands on the same cards page the business card QR reaches. Must stay first.
 https://shop.feelfullyyou.com/*  https://feelfullyyou.com/my-cards/  301!
+/scrumptious-turn-on-activation       /scrumptious-touch-reset   301!
+/scrumptious-turn-on-activation.html  /scrumptious-touch-reset   301!
 
 # The cards app, served on Juliette's own domain instead of a netlify.app
 # address. Proxied (status 200) so the address bar stays feelfullyyou.com.
