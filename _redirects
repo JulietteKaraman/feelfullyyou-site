@@ -1,6 +1,9 @@
 # Printed taster deck boxes (about 100 in stock, two countries) carry a QR to
 # shop.feelfullyyou.com/cards-1. The old shop is gone, so every shop address
 # lands on the same cards page the business card QR reaches. Must stay first.
+# 1 Nov 2026, Juliette: the Instagram bio link (shop.feelfullyyou.com) must land on the HOME page, not the cards.
+# Root only: the printed deck QR (shop.feelfullyyou.com/cards-1) still goes to the cards via the next line.
+https://shop.feelfullyyou.com/  https://feelfullyyou.com/  301!
 https://shop.feelfullyyou.com/*  https://feelfullyyou.com/my-cards/  301!
 /scrumptious-turn-on-activation       /scrumptious-touch-reset   301!
 /scrumptious-turn-on-activation.html  /scrumptious-touch-reset   301!
