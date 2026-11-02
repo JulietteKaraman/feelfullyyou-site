@@ -102,7 +102,8 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
   <div class="card">
     <div class="eyebrow">FREE PRACTICE · YOUR 15-MINUTE TOUCH DATE</div>
     <h1>How to stay present with <em>touch and sensation.</em></h1>
-    <p class="sub">A guided practice in around fifteen minutes. Enter your email and it's yours, straight away.</p>
+    <p class="sub">A guided practice in around fifteen minutes. Enter your email and it lands in your inbox in a few minutes.</p>
+    <p class="sub" style="font-weight:400;font-style:italic">Most people think they want a long, long lovemaking session. The first thing I do is take sex off the table and teach them to touch themselves. Fifteen minutes sounds like very little. It's actually a long time to keep your attention on yourself.</p>
     <p class="no-partner">You don't need a partner for this.</p>
 
     <p class="form-label">Where do we send it?</p>
@@ -121,7 +122,11 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
 </footer>
 
 <script>
-  const REDIRECT_URL = '/the-15-minute-touch-date.html';
+  // 2 Nov 2026: VSL first (CCA / Giulia Guerri order). The practice itself arrives in email 1.
+  const REDIRECT_URL = '/watch-the-touch-reset';
+  // ?src=ig (the SCRUMPTIOUS RESET DM) tags into the Scrumptious Touch Reset waitlist; no src = speaking-event gift bags, tagged as before.
+  const SRC = new URLSearchParams(location.search).get('src') || '';
+  const TAGS = SRC === 'ig' ? [23717789, 25243380] : [23717789, 23718116, 25243380];
 
   document.getElementById('signupForm').addEventListener('submit', async function(e) {
     e.preventDefault();
@@ -134,7 +139,7 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
     fetch('/.netlify/functions/subscribe', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({email, website: document.getElementById('td_hp').value, tagIds: [23717789, 23718116], sequenceId: 2898047 /* "15-Minute Touch Date — Welcome (One Touch to Touch Reset)", built 18 Sep for speaking-gift goodie bags (multiple events, not one). Tag 23717789 = touch-date-signup, tag 23718116 = speaking-gift-signup (generic, event-agnostic). Redirects to the existing, already-built the-15-minute-touch-date.html, which stays ungated for its other existing use inside the Touch Reset Quiz nurture sequence. */})
+      body: JSON.stringify({email, website: document.getElementById('td_hp').value, tagIds: TAGS, sequenceId: 2898047 /* "15-Minute Touch Date — Welcome (One Touch to Touch Reset)", built 18 Sep for speaking-gift goodie bags (multiple events, not one). Tag 23717789 = touch-date-signup, tag 23718116 = speaking-gift-signup (generic, event-agnostic). Redirects to the existing, already-built the-15-minute-touch-date.html, which stays ungated for its other existing use inside the Touch Reset Quiz nurture sequence. */})
     }).catch(() => {});
 
     await new Promise(r => setTimeout(r, 600));

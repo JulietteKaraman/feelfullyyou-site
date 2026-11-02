@@ -87,6 +87,26 @@
   @media(max-width:860px){.why .split{grid-template-columns:1fr}.why .photo{min-height:0;aspect-ratio:4/5}.why .copy{padding:48px 24px}}
 
   footer{padding:40px 0;text-align:center;font-size:.85rem;color:var(--gold-deep)}
+.tonight{font-family:var(--display);font-weight:600;color:var(--ink);font-size:1.15rem;margin:30px auto 0;max-width:40ch}
+.fine-c{font-size:.9rem;color:var(--gold-deep);margin-top:10px;text-align:center}
+.fornot{display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:1000px;margin:0 auto}
+.fornot .fn{background:#fff;border:1px solid var(--line);padding:30px 30px 22px}
+.fornot .fn.no{background:transparent}
+.fornot ul{list-style:none;padding:0;margin:14px 0 0}
+.fornot li{padding:10px 0 10px 28px;position:relative;border-top:1px solid var(--line);line-height:1.5}
+.fornot .yes li::before{content:"\2713";position:absolute;left:0;color:var(--gold-deep);font-weight:700}
+.fornot .no li::before{content:"\00d7";position:absolute;left:2px;color:var(--brown);font-weight:700}
+@media(max-width:760px){.fornot{grid-template-columns:1fr}}
+.callsteps{max-width:46ch;margin:22px auto 6px;text-align:left}
+.callsteps p{margin:0 0 12px}
+.faqw details{border-top:1px solid var(--line);padding:16px 0;max-width:720px;margin:0 auto}
+.faqw details:last-of-type{border-bottom:1px solid var(--line)}
+.faqw summary{cursor:pointer;font-family:var(--display);font-weight:600;color:var(--ink);font-size:1.08rem;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faqw summary::-webkit-details-marker{display:none}
+.faqw summary::after{content:"+";color:var(--gold-deep);font-weight:700}
+.faqw details[open] summary::after{content:"\2212"}
+.faqw details p{margin-top:12px}
+.faqw h2{margin-bottom:26px}
 </style>
 <!-- Meta Pixel Code (loads only after cookie consent, see /cookie-consent.js) -->
 <script>
@@ -120,11 +140,10 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
 
 <section class="hero-intro" style="padding-top:80px">
   <div class="wrap">
-    <div class="eyebrow center">Before Your Practice Arrives</div>
-    <h1 class="center">What If You Learned to Feel What's Actually There, Before Adding One More Technique?</h1>
     <div class="not-yet">Your 15-Minute Touch Date is on its way to your inbox.</div>
-    <p class="sub center">Before you do it, watch this short video.</p>
-    <p class="sub center">I'll show you why being touched and actually feeling touch are two very different things, and why learning to stay present with sensation can change what becomes available.</p>
+    <div class="eyebrow center" style="margin-top:22px">Before you do it, watch this</div>
+    <h1 class="center">"I just don't feel much. Is this it?"</h1>
+    <p class="sub center">Why you can be touched and still barely feel it, and what changes when you learn to feel what's actually there.</p>
   </div>
 </section>
 
@@ -132,11 +151,24 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
   <div class="wrap">
     <div class="video-wrap">
       <div class="video-frame">
-        <iframe src="https://player.vimeo.com/video/1223698486?app_id=122963" title="vsl" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe src="https://share.descript.com/embed/8bAB2CnwLxQ" title="vsl" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
     </div>
+    <p class="center tonight">Then do your Touch Date. Fifteen minutes, just you. It's waiting in your inbox.</p>
     <div class="center">
       <a href="https://tidycal.com/juliette2/the-touch-reset-call" class="btn" target="_blank" rel="noopener">Book your Touch Reset Call</a>
+      <p class="fine-c">If something in you already knows you want this.</p>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--cream-2);border-top:1px solid var(--line)">
+  <div class="wrap-wide center">
+    <div class="eyebrow">What women say</div>
+    <div class="quote-grid">
+      <div class="quote-card"><p>"I feel softer and more relaxed, less hardened. It's weird. I was on high alert and braced and had forgotten I'd stayed that way."</p><span>Sarah</span></div>
+      <div class="quote-card"><p>"Oh my God, you have given me the biggest gift. You have given me back my body. I now use it as a compass."</p><span>Deidre</span></div>
+      <div class="quote-card"><p>"After our sessions, a lot more of my feelings about sexuality came up... For the first time, sex feels integrated with who I am, not just a set of activities."</p><span>Miki</span></div>
     </div>
   </div>
 </section>
@@ -190,14 +222,42 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
   </div>
 </section>
 
-<section style="background:var(--cream-2);border-top:1px solid var(--line)">
-  <div class="wrap-wide center">
-    <div class="eyebrow">What Clients Say</div>
-    <div class="quote-grid">
-      <div class="quote-card"><p>"I feel softer and more relaxed, less hardened. It's weird. I was on high alert and braced and had forgotten I'd stayed that way."</p><span>Sarah</span></div>
-      <div class="quote-card"><p>"Oh my God, you have given me the biggest gift. You have given me back my body. I now use it as a compass."</p><span>Deidre</span></div>
-      <div class="quote-card"><p>"After our sessions, a lot more of my feelings about sexuality came up... For the first time, sex feels integrated with who I am, not just a set of activities."</p><span>Miki</span></div>
+
+
+<section>
+  <div class="wrap-wide">
+    <div class="fornot">
+      <div class="fn yes">
+        <div class="eyebrow">This is for you if</div>
+        <ul>
+          <li>You're a woman, and touch has gone quiet somewhere along the way.</li>
+          <li>You love him, or her, or you're on your own, and you want to feel turned on again in your own body.</li>
+          <li>You've tried date nights, books, talking about it, and your body still braces or goes flat.</li>
+          <li>You're willing to go slowly, starting with your hands and your arms.</li>
+        </ul>
+      </div>
+      <div class="fn no">
+        <div class="eyebrow">It's not the right fit if</div>
+        <ul>
+          <li>You want a quick technique to perform.</li>
+          <li>You're hoping someone will fix your partner for you.</li>
+          <li>You need one-to-one therapy or medical care right now. Look after that first, and come back when you're ready.</li>
+        </ul>
+      </div>
     </div>
+  </div>
+</section>
+
+<section style="background:var(--cream-2);border-top:1px solid var(--line)">
+  <div class="wrap center">
+    <div class="eyebrow">Your Touch Reset Call</div>
+    <h2>What happens on the call</h2>
+    <div class="callsteps">
+      <p><b>1.</b> We look at what you felt, and didn't feel, in your Touch Date.</p>
+      <p><b>2.</b> Where touch went quiet for you, and what you'd love instead.</p>
+      <p><b>3.</b> Whether The Scrumptious Touch Reset is right for you. If it isn't, I'll tell you what might be.</p>
+    </div>
+    <a href="https://tidycal.com/juliette2/the-touch-reset-call" class="btn" target="_blank" rel="noopener">Book your Touch Reset Call</a>
   </div>
 </section>
 
@@ -228,6 +288,18 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
         <img src="https://feelfullyyou.com/media/67226660e141300c3c4236e2.png" alt="Mindvalley" loading="lazy">
       </div>
     </div>
+  </div>
+</section>
+
+<section class="faqw">
+  <div class="wrap">
+    <div class="eyebrow center">Before you decide</div>
+    <h2 class="center">Questions you might have</h2>
+    <details><summary>Do I need a partner?</summary><p>No. It begins with your relationship with your own body. If you have a partner, they don't need to join. There are practices you can choose to explore together, and their taking part is never required.</p></details>
+    <details><summary>What if I have a history of trauma?</summary><p>I have been working with trauma and the body for the last 10 years, and I experience it deeply myself. This is designed to meet you where you are. You will never be asked to push through a no, override your body's response or share anything you don't want to share. It's a group programme, and it doesn't replace individual therapy or medical care.</p></details>
+    <details><summary>What if I'm nervous about being seen?</summary><p>Most women are, at the start. Camera on or off, your choice, and you choose how much you share. The group goes gently, a little more each week.</p></details>
+    <details><summary>How much time will it take?</summary><p>About two hours a week at most, the live call included. Every call is recorded, so you can always catch up.</p></details>
+    <details><summary>How much is it?</summary><p>There are a few ways to pay, and we go through them on your Touch Reset Call, once we both know this is right for you.</p></details>
   </div>
 </section>
 
