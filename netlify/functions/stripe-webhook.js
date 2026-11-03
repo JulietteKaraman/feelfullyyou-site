@@ -1119,3 +1119,7 @@ exports.handler = async function(event) {
   });
   return { statusCode: 200, body: JSON.stringify({ ok: true, note: 'unknown product, tagged as purchased' }) };
 };
+
+// Shared with ghl-sale.js, so a GHL sale is recorded by exactly the same code.
+exports.addToKit = addToKit;
+exports.grantPracticeAppEntitlement = grantPracticeAppEntitlement;
