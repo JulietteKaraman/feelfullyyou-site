@@ -4,17 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Scrumptious Confessions | Juliette Karaman</title>
-<meta name="description" content="Scrumptious Confessions. Juliette Karaman's voice, in your ear, with the things she doesn't say on Instagram. Opens to everyone on 17 November. Join the waitlist.">
+<meta name="description" content="Scrumptious Confessions. Juliette Karaman's voice, in your ear, with the things she doesn't say on Instagram. Opens to everyone in the third week of November. Join the waitlist.">
 <link rel="canonical" href="https://feelfullyyou.com/scrumptious-confessions">
 <meta property="og:title" content="Scrumptious Confessions | Juliette Karaman">
-<meta property="og:description" content="My voice, in your ear, with the things I don't say on Instagram. Opens to everyone on 17 November.">
+<meta property="og:description" content="My voice, in your ear, with the things I don't say on Instagram. Opens to everyone in the third week of November.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://feelfullyyou.com/scrumptious-confessions">
 <meta property="og:image" content="https://feelfullyyou.com/scrumptious-confessions-og.jpg">
 <meta property="og:site_name" content="Feel Fully You">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Scrumptious Confessions | Juliette Karaman">
-<meta name="twitter:description" content="My voice, in your ear, with the things I don't say on Instagram. Opens to everyone on 17 November.">
+<meta name="twitter:description" content="My voice, in your ear, with the things I don't say on Instagram. Opens to everyone in the third week of November.">
 <meta name="twitter:image" content="https://feelfullyyou.com/scrumptious-confessions-og.jpg">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -75,7 +75,7 @@ footer{padding:40px 20px 56px;text-align:center;font-size:14px;color:var(--soft)
       <span class="eyebrow">Scrumptious Confessions</span>
       <h1>People tell me they could listen to my voice for hours. So I built an app where you can.</h1>
       <p>My voice, in your ear, with the things I don't say on Instagram.</p>
-      <p>I made it for my women's group. It opens to everyone on 17 November.</p>
+      <p>I made this for my women's group, but so many of you have been asking me to open it up. So I am, in the third week of November.</p>
       <form id="wl" novalidate>
         <label for="wl-name" style="position:absolute;left:-9999px">First name</label>
         <input id="wl-name" type="text" placeholder="First name" autocomplete="given-name">
@@ -84,8 +84,8 @@ footer{padding:40px 20px 56px;text-align:center;font-size:14px;color:var(--soft)
         <input id="wl-hp" type="text" name="hp_field" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;flex:none">
         <button class="btn" type="submit">Join the waitlist</button>
       </form>
-      <p class="note">You'll hear from me first when it opens.</p>
-      <p class="done-msg" id="wl-done" hidden>You're on the list. You'll hear from me first on 17 November.</p>
+      <p class="note">Get on the waitlist and you'll be the first to know when it opens.</p>
+      <p class="done-msg" id="wl-done" hidden>You're on the list. You'll be the first to know when it opens.</p>
     </div>
   </section>
 
@@ -107,7 +107,7 @@ document.getElementById('wl').addEventListener('submit',function(e){
   fetch('/.netlify/functions/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},
     body:JSON.stringify({email:email,firstName:name,hp_field:document.getElementById('wl-hp').value,tagIds:[25487963],sequenceIds:[2959098]})})
   .then(function(r){if(!r.ok)throw new Error(r.status);
-    f.hidden=true;document.querySelector('.note').hidden=true;done.textContent="You're on the list. You'll hear from me first on 17 November.";done.hidden=false;
+    f.hidden=true;document.querySelector('.note').hidden=true;done.textContent="You're on the list. You'll be the first to know when it opens.";done.hidden=false;
     if(typeof gtag==='function')gtag('event','generate_lead',{form:'confessions-waitlist'});})
   .catch(function(){btn.disabled=false;btn.textContent='Join the waitlist';done.textContent="That didn't go through. Try again, or email juliette@feelfullyyou.com and I'll add you.";done.hidden=false;});
 });
