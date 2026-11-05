@@ -674,11 +674,14 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
         <a href="https://buy.stripe.com/7sYeVceOvgtydq5av30co2o" class="btn">Buy now</a>
       </div>
       <p class="tp-small">Less than lunch out for two. Day one opens the minute you join.</p>
+      <!-- 5 Nov 2026 (Edward page audit): real 31 Touch Points proof up top. Verbatim from a current client's message (image lower down), name withheld. -->
+      <figure class="tp-quote"><blockquote>&ldquo;It took a minute for him to come around and want to do these, but I&rsquo;m so happy we did. We&rsquo;re connecting in a new way.&rdquo;</blockquote><figcaption>A client, doing 31 Touch Points with her husband</figcaption></figure>
     </div>
     <div class="tp-visual">
       <div class="tp-vwrap">
         <!-- 30 Oct 2026, Juliette: the neck-kiss steer reel (300K and climbing) is what people should see when they land. "You may" moved to the reels below. -->
-        <video id="tpv" class="tp-video" src="media/tp-neck-kiss.mp4" poster="media/tp-neck-kiss-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Alex kissing Juliette's neck while she steers him"></video>
+        <!-- 5 Nov 2026, Juliette: the steer reel "may be too much for them" (me adjusting him). Back to "You may" (Day 2 of the month), lighter and playful. Steer reel kept in media/ as an ad test candidate. -->
+        <video id="tpv" class="tp-video" src="media/tp-you-may.mp4" poster="media/tp-you-may-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Juliette and Alex: You may. May I?"></video>
         <button type="button" id="tpsound" class="tp-sound" aria-label="Play with sound">&#128266; Tap for sound</button>
       </div>
       </div>
@@ -717,6 +720,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});}
       </div>
       <p class="tp-listen-h">The Fruit &middot; 3 minutes</p>
       <audio id="tpFruit" src="media/tp-taste-fruit.m4a" controls preload="none" style="width:100%"></audio>
+      <div class="tp-speed" role="group" aria-label="Playback speed"><span>Speed</span><button type="button" data-r="1" class="on">1&times;</button><button type="button" data-r="1.25">1.25&times;</button><button type="button" data-r="1.5">1.5&times;</button></div>
       <div class="tp-after">
         <p><strong>Why only one way.</strong> When you both give at the same time, nobody gets to receive. One of you leads. One of you lets it happen. For a lot of people it&rsquo;s the first time in years.</p>
         <p><strong>There&rsquo;s no right reaction.</strong> A laugh. A blush. A &ldquo;not my thing&rdquo;. Each one tells you something.</p>
@@ -732,6 +736,27 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});}
 .tp-ready-h,.tp-listen-h{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep,#A88538);margin:0 0 10px;font-weight:600}
 .tp-ready label{display:flex;gap:10px;align-items:flex-start;margin:8px 0;cursor:pointer;line-height:1.5}
 .tp-ready input{margin-top:5px;width:18px;height:18px;accent-color:#A88538;flex:none}
+.tp-speed{display:flex;align-items:center;gap:8px;margin-top:10px;flex-wrap:wrap}
+.tp-speed span{font-size:13px;color:#6b6358;margin-right:2px}
+.tp-speed button{min-height:40px;min-width:56px;padding:0 12px;border-radius:999px;border:1.5px solid rgba(168,133,56,.55);background:transparent;color:#070707;font:600 14px var(--body,inherit);cursor:pointer}
+.tp-speed button.on{background:#A88538;border-color:#A88538;color:#fff}
+.tp-quote{margin:26px 0 0;padding:16px 18px;border-left:3px solid #A88538;background:rgba(168,133,56,.07);border-radius:0 10px 10px 0;max-width:520px}
+.tp-quote blockquote{margin:0;font-size:16px;line-height:1.55;font-style:italic;color:#070707}
+.tp-quote figcaption{margin-top:8px;font-size:13px;color:#6b6358}
+.tp-get{list-style:none;padding:0;margin:14px auto 0;max-width:560px;text-align:left}
+.tp-get li{position:relative;padding:8px 0 8px 30px;border-bottom:1px solid rgba(7,7,7,.08);line-height:1.5}
+.tp-get li::before{content:"";position:absolute;left:4px;top:15px;width:10px;height:10px;border-radius:50%;background:#A88538}
+.tp-for{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:18px}
+.tp-for-h{font-weight:700;margin:0 0 8px}
+.tp-for ul{margin:0;padding:0;list-style:none}
+.tp-for li{position:relative;margin:0 0 16px;padding-left:46px;line-height:1.55;min-height:34px}
+.tp-for li::before{position:absolute;left:0;top:-2px;font-size:30px;line-height:1}
+.tp-for ul.yes li::before{content:"\2705"}
+.tp-for ul.no li::before{content:"\274C"}
+@media(max-width:700px){.tp-for{grid-template-columns:1fr}}
+/* 5 Nov 2026 (Edward page audit): no ways off this page except buying. Logo, support email and terms stay. */
+.topbar nav,.topbar .ham,.mobile-nav{display:none!important}
+footer a[aria-label]{display:none!important}
 .tp-after{margin-top:18px}
 .tp-after p{margin:0 0 10px}
 .tp-wall2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;max-width:820px;margin:40px auto 0;align-items:start}
@@ -739,7 +764,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});}
 @media(max-width:700px){.tp-wall2{grid-template-columns:1fr;max-width:440px}}
 </style>
 <script>
-(function(){var a=document.getElementById('tpFruit');if(!a)return;a.addEventListener('play',function(){try{if(navigator.audioSession)navigator.audioSession.type='playback';}catch(e){}var h=document.getElementById('tpv');if(h&&!h.muted)h.pause();});})();
+(function(){var a=document.getElementById('tpFruit');if(!a)return;var r=1;document.querySelectorAll('.tp-speed button').forEach(function(b){b.addEventListener('click',function(){r=parseFloat(b.getAttribute('data-r'));a.playbackRate=r;a.defaultPlaybackRate=r;document.querySelectorAll('.tp-speed button').forEach(function(x){x.classList.toggle('on',x===b);});});});a.addEventListener('loadedmetadata',function(){a.playbackRate=r;});a.addEventListener('play',function(){try{if(navigator.audioSession)navigator.audioSession.type='playback';}catch(e){}var h=document.getElementById('tpv');if(h&&!h.muted)h.pause();});})();
 </script>
 
 <!-- 30 Oct 2026: numbers strip removed (page trim) -->
@@ -750,14 +775,24 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});}
     <p class="kick">Life got in the way</p>
     <h2>You're still in love. <em>You're just out of practice.</em></h2>
     <p>Nobody decided to stop touching. It just slipped. This is one way back in: three minutes a day, and some of them will make you laugh.</p>
+    <!-- 5 Nov 2026: the research's biggest finding, in their words ("just a cuddle may seem like you're trying to initiate...") -->
+    <p>Somewhere along the way, a cuddle started to feel like a question. So one of you stopped reaching, and the other stopped asking.</p>
+    <p class="bigline" style="margin-top:14px">Every touch in here is just a touch. <em>It isn&rsquo;t asking for anything more.</em></p>
   </div>
 </section>
 
 <!-- HOW IT WORKS (trimmed 30 Oct 2026) -->
 <section class="sec tp-blue">
   <div class="tight center">
-    <p class="kick">How it works</p>
-    <p>Opens on your phone &middot; I talk you through it &middot; Miss a day, it waits &middot; None of it is sexual</p>
+    <p class="kick">What you get</p>
+    <ul class="tp-get">
+      <li>31 days. One touch a day, a few minutes each.</li>
+      <li>My voice on most days, talking you both through it.</li>
+      <li>It lives on your phone. Day one opens the minute you join.</li>
+      <li>Miss a day, it waits for you.</li>
+      <li>Little messages to send your partner, when you want to invite them in.</li>
+      <li>None of it is sexual. Some of it will make you laugh.</li>
+    </ul>
     <p class="bigline" style="margin-top:14px">Does the sexy stuff come back too? <em>Yes.</em></p>
   </div>
 </section>
@@ -776,12 +811,41 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});}
   </div>
 </section>
 
-<!-- ME (trimmed 30 Oct 2026) -->
-<section class="sec cream2">
-  <div class="tight center">
-    <p class="kick">Who I am</p>
-    <p>I'm Juliette, intimacy and touch expert. For fifteen years I've helped couples find their way back to each other.</p>
-    <p class="tp-press">As seen on ITV, and in Forbes, The Times, Marie Claire, the Telegraph and Newsweek</p>
+<!-- WHO IT'S FOR (5 Nov 2026, Edward page audit) -->
+<section class="sec">
+  <div class="tight">
+    <div class="center"><p class="kick">Who it's for</p></div>
+    <div class="tp-for">
+      <div>
+        <p class="tp-for-h">For you if</p>
+        <ul class="yes">
+          <li>You still love each other, and somewhere along the way you stopped reaching.</li>
+          <li>One of you is keener than the other. That&rsquo;s most couples. It took one husband a minute to come around too.</li>
+          <li>You want something small you can start tonight, with no big conversation first.</li>
+        </ul>
+      </div>
+      <div>
+        <p class="tp-for-h">Not for you if</p>
+        <ul class="no">
+          <li>Your relationship is in crisis. If trust between you has gone, a touch a day won&rsquo;t hold that on its own.</li>
+          <li>You&rsquo;re looking for a sex course. This is the touch that comes before all of that.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ME (5 Nov 2026, Juliette: "doesn't look as good as the other pages, make it more dynamic, add a photo". Split + photo restored from before the 30 Oct trim, on light blue) -->
+<section class="sec tp-blue">
+  <div class="in split rev">
+    <div>
+      <p class="kick">Who I am</p>
+      <h2>I'm Juliette, <em>intimacy and touch expert.</em></h2>
+      <p>For fifteen years I've helped couples find their way back to each other.</p>
+      <p>Today I live in England with my fianc&eacute;, Alex. Yes, the man in the videos, with the long classical guitar nails on one hand.</p>
+      <p class="tp-press">As seen on ITV, and in Forbes, The Times, Marie Claire, the Telegraph and Newsweek</p>
+    </div>
+    <div class="ph"><figure class="fig" style="max-width:240px;margin-left:auto;margin-right:auto"><img src="media/6a26a7defc95b24549c0479e.jpg" alt="Juliette Karaman, hands crossed over her chest, smiling against a brick wall" loading="lazy"><figcaption class="tag"><small>Juliette Karaman</small>Intimacy and touch expert</figcaption></figure></div>
   </div>
 </section>
 
