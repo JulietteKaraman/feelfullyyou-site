@@ -112,6 +112,17 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '412290651716612');
 fbq('track', 'PageView');
+// 5 Nov 2026 (Edward setup): tell Meta a 31 Touch Points sale happened. Fires only for someone arriving
+// from Stripe checkout (or with ?session_id= from Stripe's redirect), once per sale, never on a revisit.
+try{
+  var sid=(location.search.match(/[?&]session_id=([^&#]+)/)||[])[1]||'';
+  var fromStripe=sid||/stripe\.com/.test(document.referrer||'');
+  var key='ffy-purchase-31tp-'+(sid||new Date().toISOString().slice(0,10));
+  if(fromStripe&&!localStorage.getItem(key)){
+    fbq('track','Purchase',{value:27,currency:'GBP',content_name:'31 Touch Points',content_type:'product'},sid?{eventID:sid}:{});
+    localStorage.setItem(key,'1');
+  }
+}catch(e){}
 };
 try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
 </script>
@@ -189,6 +200,8 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
   <div class="next-inner">
     <div class="eyebrow">Where this goes next</div>
     <h2>A month of touch, and a month of talking.</h2>
+    <!-- 5 Nov 2026, Juliette: "Kind of boring - needs a photo of the cards". Real photo at her home (candle, oranges) with the 31 Days Closer app. -->
+    <img src="media/31dc-hero.jpg" alt="The Communication and Intimacy Cards on a table with a candle and oranges, and 31 Days Closer open on a phone" style="display:block;width:100%;max-width:560px;height:auto;margin:18px auto 22px;border-radius:14px;box-shadow:0 8px 26px rgba(7,7,7,.18)" loading="lazy">
     <p>The practice works better with something to say. <strong>31 Days Closer</strong> is the other half: thirty one conversation prompts, one a day, fifteen minutes each. Touch reopens the door. Words are how you walk back through it.</p>
     <a href="https://buy.stripe.com/6oUcN47m3gty71H1Yx0co1U" class="btn" target="_blank" rel="noopener">Add 31 Days Closer, &pound;17 &rarr;</a>
     <p class="small">Already have it? Then you are holding the whole kit. Start today.</p>
