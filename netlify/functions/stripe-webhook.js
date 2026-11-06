@@ -1124,6 +1124,26 @@ exports.handler = async function(event) {
       }
     }
 
+    // 31 Days Closer order bump on the 31 Touch Points link (6 Nov 2026,
+    // Juliette: "31 days closer as bump"). Stripe's cross-sell tick box adds a
+    // second line item to the same checkout, but the session still carries
+    // only the 31 Touch Points payment link, so without this the bump buyer
+    // pays £17 and gets nothing. amount_subtotal is the list price before any
+    // discount code, so £27 + £17 = 4400 means the box was ticked.
+    // 31 Days Closer access is the Kit tag alone: card-engine's restore.mts
+    // reads tag 23849459 and opens the cards. Same tag + welcome sequence the
+    // card-engine webhook uses for a normal 31 Days Closer sale. card-engine
+    // never sees this sale (it does not list the 31 Touch Points link), so no
+    // double welcome.
+    if (paymentLink === 'plink_1ULQ4yCCw18geY15H3JjWZcy' && (session?.amount_subtotal || 0) >= 2700 + 1700) {
+      try {
+        console.log(`31 Days Closer bump on 31 Touch Points: tagging ${email}`);
+        await addToKit(email, firstName, 23849459, 2903192, apiSecret, phone);
+      } catch (err) {
+        console.error('31 Days Closer bump tagging failed:', err);
+      }
+    }
+
     // Exit point 3 (row 3): checkout.session.completed, metadata.price_id in map — labelled.
     await notifyPayment({
       label: product.label, amountPence: session?.amount_total, subtotalPence: subtotal,
