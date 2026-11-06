@@ -666,9 +666,10 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
   <div class="tp-hero-in">
     <div class="tp-copy">
       <p class="kick">31 Touch Points · on your phone</p>
-      <h1>Remember when you couldn't keep your hands off <em>each other?</em></h1>
-      <p class="tp-sub">31 days to get it back. Through touch. Through fun. Through play.</p>
-      <p>Three minutes a day to start. I talk you through it on your phone.</p>
+      <!-- 6 Nov 2026, Juliette: what she hears most is "living like roommates" and "we don't make time". Headline matches the ad headline (Edward: same promise on ad and page). -->
+      <h1>Living like <em>roommates?</em></h1>
+      <p class="tp-sub">Remember when you couldn't keep your hands off each other? 31 days to get it back. Through touch. Through fun. Through play.</p>
+      <p>No time? They start at three minutes. I talk you through it on your phone, and if you miss a day, it waits for you.</p>
       <div class="tp-buy">
         <span class="tp-price">£27</span>
         <a href="https://buy.stripe.com/7sYeVceOvgtydq5av30co2o" class="btn">Buy now</a>
@@ -701,6 +702,19 @@ lb.querySelector('button').addEventListener('click',close);lb.addEventListener('
 document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});})();
 </script>
 
+
+<!-- 6 Nov 2026: moved above the free taster so they feel the situation before trying one -->
+<!-- LIFE (trimmed 30 Oct 2026, Juliette: "do all what you said") -->
+<section class="sec">
+  <div class="tight center">
+    <p class="kick">Life got in the way</p>
+    <h2>You're still in love. <em>You're just out of practice.</em></h2>
+    <p>Nobody decided to stop touching. It just slipped. This is one way back in: three minutes a day, and some of them will make you laugh.</p>
+    <!-- 5 Nov 2026: the research's biggest finding, in their words ("just a cuddle may seem like you're trying to initiate...") -->
+    <p>Somewhere along the way, a cuddle started to feel like a question. So one of you stopped reaching, and the other stopped asking.</p>
+    <p class="bigline" style="margin-top:14px">Every touch in here is just a touch. <em>It isn&rsquo;t asking for anything more.</em></p>
+  </div>
+</section>
 
 <!-- TRY ONE FREE: 5 Nov 2026, Juliette: "play the taster one in the sales page- not take them out of it". The Fruit plays right here (same recording and ITV clip as app.feelfullyyou.com/taste/31-touch-points). -->
 <section class="sec tp-taste" id="taste">
@@ -769,18 +783,6 @@ footer a[aria-label]{display:none!important}
 
 <!-- 30 Oct 2026: numbers strip removed (page trim) -->
 
-<!-- LIFE (trimmed 30 Oct 2026, Juliette: "do all what you said") -->
-<section class="sec">
-  <div class="tight center">
-    <p class="kick">Life got in the way</p>
-    <h2>You're still in love. <em>You're just out of practice.</em></h2>
-    <p>Nobody decided to stop touching. It just slipped. This is one way back in: three minutes a day, and some of them will make you laugh.</p>
-    <!-- 5 Nov 2026: the research's biggest finding, in their words ("just a cuddle may seem like you're trying to initiate...") -->
-    <p>Somewhere along the way, a cuddle started to feel like a question. So one of you stopped reaching, and the other stopped asking.</p>
-    <p class="bigline" style="margin-top:14px">Every touch in here is just a touch. <em>It isn&rsquo;t asking for anything more.</em></p>
-  </div>
-</section>
-
 <!-- HOW IT WORKS (trimmed 30 Oct 2026) -->
 <section class="sec tp-blue">
   <div class="tight center">
@@ -841,7 +843,7 @@ footer a[aria-label]{display:none!important}
     <div>
       <p class="kick">Who I am</p>
       <h2>I'm Juliette, <em>intimacy and touch expert.</em></h2>
-      <p>For fifteen years I've helped couples find their way back to each other.</p>
+      <p>For 27 years I've worked with bodies and emotions, helping people get back in touch with themselves. For the last fifteen, that's been women and couples finding their way back to each other.</p>
       <p>Today I live in England with my fianc&eacute;, Alex. Yes, the man in the videos, with the long classical guitar nails on one hand.</p>
       <p class="tp-press">As seen on ITV, and in Forbes, The Times, Marie Claire, the Telegraph and Newsweek</p>
     </div>
@@ -853,6 +855,7 @@ footer a[aria-label]{display:none!important}
 <section class="sec tp-faq">
   <div class="tight">
     <p class="kick">Questions</p>
+    <details><summary>We're too busy for this.</summary><p>They start short, about three minutes. Miss a day and it waits for you, so there's nothing to fall behind on.</p></details>
     <details><summary>What if my partner isn't keen?</summary><p>Send them this. It&rsquo;s one of mine, copy it as it is:</p><blockquote id="tpInvite" style="margin:12px 0;padding:14px 16px;border-left:3px solid var(--gold-deep,#A88538);border-radius:0;background:rgba(168,133,56,.08);font-style:italic">Hi love, I found us something. A month of little touch moments, a few minutes a day. Would you try one with me? No pressure, just a chance to feel closer.</blockquote><button type="button" id="tpInviteCopy" class="btn" style="margin:0 0 14px">Copy the message</button><p>Then try the free one together, <a href="#taste" style="text-decoration:underline">The Fruit</a>. One strawberry, three minutes. Inside the month there are more messages like this, for every mood.</p><script>(function(){var b=document.getElementById("tpInviteCopy");if(!b)return;b.addEventListener("click",function(){var t=document.getElementById("tpInvite").innerText;(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){b.textContent="Copied. Now send it";},function(){b.textContent="Press and hold the message to copy";});});})();</script></details>
     <details><summary>Is any of it sexual?</summary><p>No. Every one fits inside an ordinary day. Fair warning, though: when the small touches come back, the bigger ones tend to follow. With the couples I work with, the bedroom often warms up on its own, and nobody had to push for it.</p></details>
     
