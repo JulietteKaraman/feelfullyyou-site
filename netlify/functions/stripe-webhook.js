@@ -937,6 +937,60 @@ async function notifyPayment({ label, amountPence, subtotalPence, currency, emai
   }
 }
 
+// ─── META CONVERSIONS API (added 5 Nov 2026, Edward ads setup) ───────────────
+// Tells Meta about every paid checkout from the server, so ads can learn who buys
+// even when the browser pixel is blocked or the visitor never gave cookie consent.
+// Dataset 890672130717294 ("Juliette Karaman-van Schaardenburg", in her business
+// portfolio). Token lives in Netlify env META_CAPI_TOKEN (Juliette put it there;
+// never in code). event_id = Checkout Session id, the same id the thank-you page
+// pixel uses, so Meta counts a sale once even when both report it.
+// Test mode: while env META_CAPI_TEST_CODE is set, events go to Events Manager >
+// Test events only (and £0 test buys are included so a 100% code can be used).
+// Never throws, never delays delivery for long: 4 second cap, errors only logged.
+const META_DATASET_ID = '890672130717294';
+function sha256(v) { return crypto.createHash('sha256').update(String(v).trim().toLowerCase()).digest('hex'); }
+async function sendMetaPurchase(session, label) {
+  const token = process.env.META_CAPI_TOKEN;
+  if (!token || !session) return;
+  const testCode = process.env.META_CAPI_TEST_CODE || '';
+  const paid = Number(session.amount_total || 0);
+  if (!paid && !testCode) return; // a 100% code is not a sale
+  const d = session.customer_details || {};
+  const user_data = {};
+  if (d.email) user_data.em = [sha256(d.email)];
+  if (d.email) user_data.external_id = [sha256(d.email)];
+  if (d.phone) user_data.ph = [sha256(String(d.phone).replace(/[^0-9]/g, ''))];
+  const first = (d.name || '').split(' ')[0];
+  if (first) user_data.fn = [sha256(first)];
+  if (d.address?.country) user_data.country = [sha256(d.address.country)];
+  const pence = paid || Number(session.amount_subtotal || 0);
+  const body = {
+    data: [{
+      event_name: 'Purchase',
+      event_time: Math.floor(Date.now() / 1000),
+      event_id: session.id,
+      action_source: 'website',
+      event_source_url: 'https://feelfullyyou.com/',
+      user_data,
+      custom_data: { value: pence / 100, currency: String(session.currency || 'gbp').toUpperCase(), content_name: label || 'Feel Fully You purchase' },
+    }],
+  };
+  if (testCode) body.test_event_code = testCode;
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), 4000);
+  try {
+    const res = await fetch(`https://graph.facebook.com/v21.0/${META_DATASET_ID}/events?access_token=${encodeURIComponent(token)}`, {
+      method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body), signal: ctrl.signal,
+    });
+    const txt = await res.text();
+    console.log(`Meta CAPI ${testCode ? '(TEST) ' : ''}${res.status}: ${txt.slice(0, 300)}`);
+  } catch (err) {
+    console.error('Meta CAPI send failed (delivery unaffected):', err && err.message);
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
 exports.handler = async function(event) {
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: 'Method Not Allowed' };
@@ -1041,6 +1095,8 @@ exports.handler = async function(event) {
   // metadata.price_id first (every older product sets it), then the payment link.
   const product = PRODUCT_MAP[priceId] || PAYMENT_LINK_PRODUCTS[paymentLink];
   const linkLabel = PAYMENT_LINK_LABELS[paymentLink] || null;
+  // Report the sale to Meta (5 Nov 2026). Wrapped so it can never stop delivery below.
+  try { await sendMetaPurchase(session, (product && product.label) || linkLabel); } catch (e) { console.error('Meta CAPI wrapper:', e && e.message); }
   // amount_total is what was actually charged (0 on a 100% code);
   // amount_subtotal is what the deck lists at. The notifier shows both.
   const subtotal = session?.amount_subtotal;
