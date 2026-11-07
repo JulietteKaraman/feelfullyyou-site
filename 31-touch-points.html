@@ -721,9 +721,14 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});}
   <!-- 7 Nov 2026, Juliette: the ITV video here was removed ("both is overkill"); the same touch now opens the app video in What you get. Voice player stays. -->
   <div class="tight">
     <div>
-      <p class="kick">Try one now, free</p>
+      <!-- 7 Nov 2026, Juliette: "all in one place... a little taste of what the app is like. Try it first." App video moved here from What you get. -->
+      <p class="kick">Try it first</p>
       <h2>Feel it before you buy it.</h2>
-      <p>Grab a strawberry, a raspberry or a grape. Press play, and I&rsquo;ll take the two of you through it. One of you leads, one of you receives. Three minutes.</p>
+      <p>Here&rsquo;s a little taste of what the app is like.</p>
+      <!-- 7 Nov 2026, Juliette: show the app, not only the ITV couple. Her screen recording, edited to 44s (full ITV touch kept, her Fruit voice over the quiet app part, 7 Nov). Loops silently; button plays it with sound. The Fruit voice player above stays. -->
+    <figure style="margin:22px auto 26px;max-width:300px;text-align:center"><video id="tpAppV" src="media/tp-app-walkthrough.mp4?v=2" poster="media/tp-app-walkthrough-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="One day of 31 Touch Points in the app, start to finish" style="display:block;width:100%;aspect-ratio:9/16;border-radius:14px;box-shadow:0 20px 50px rgba(0,0,0,.18);background:#0D3535"></video><button type="button" id="tpAppSound" style="margin-top:14px;min-height:44px;padding:0 20px;border-radius:999px;border:1.5px solid #A88538;background:#A88538;color:#fff;font:inherit;font-weight:600;cursor:pointer">&#128264; Play it with my voice</button><figcaption style="font-size:13px;color:#6b6358;margin-top:10px">One whole day in the app, start to finish.</figcaption></figure>
+    <script>(function(){var v=document.getElementById('tpAppV'),b=document.getElementById('tpAppSound');if(!v||!b)return;b.addEventListener('click',function(){if(v.muted){v.muted=false;v.loop=false;v.currentTime=0;v.play();b.innerHTML='&#128263; Sound off';}else{v.muted=true;v.loop=true;b.innerHTML='&#128264; Play it with my voice';}});v.addEventListener('ended',function(){v.muted=true;v.loop=true;v.play();b.innerHTML='&#128264; Play it with my voice';});})();</script>
+      <p>Then try one together. Grab a strawberry, a raspberry or a grape. Press play, and I&rsquo;ll take the two of you through it. One of you leads, one of you receives. Three minutes.</p>
       <div class="tp-ready">
         <p class="tp-ready-h">Before you press play</p>
         <label><input type="checkbox"> One strawberry, raspberry or grape. Soft and juicy, nothing crunchy.</label>
@@ -793,9 +798,6 @@ footer a[aria-label]{display:none!important}
       <li>Little messages to send your partner, when you want to invite them in.</li>
       <li>None of it is sexual. Some of it will make you laugh.</li>
     </ul>
-    <!-- 7 Nov 2026, Juliette: show the app, not only the ITV couple. Her screen recording, edited to 44s (full ITV touch kept, her Fruit voice over the quiet app part, 7 Nov). Loops silently; button plays it with sound. The Fruit voice player above stays. -->
-    <figure style="margin:28px auto 6px;max-width:300px"><video id="tpAppV" src="media/tp-app-walkthrough.mp4?v=2" poster="media/tp-app-walkthrough-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="One day of 31 Touch Points in the app, start to finish" style="display:block;width:100%;aspect-ratio:9/16;border-radius:14px;box-shadow:0 20px 50px rgba(0,0,0,.18);background:#0D3535"></video><button type="button" id="tpAppSound" style="margin-top:14px;min-height:44px;padding:0 20px;border-radius:999px;border:1.5px solid #A88538;background:#A88538;color:#fff;font:inherit;font-weight:600;cursor:pointer">&#128264; Play it with my voice</button><figcaption style="font-size:13px;color:#6b6358;margin-top:10px">One whole day in the app, start to finish.</figcaption></figure>
-    <script>(function(){var v=document.getElementById('tpAppV'),b=document.getElementById('tpAppSound');if(!v||!b)return;b.addEventListener('click',function(){if(v.muted){v.muted=false;v.loop=false;v.currentTime=0;v.play();b.innerHTML='&#128263; Sound off';}else{v.muted=true;v.loop=true;b.innerHTML='&#128264; Play it with my voice';}});v.addEventListener('ended',function(){v.muted=true;v.loop=true;v.play();b.innerHTML='&#128264; Play it with my voice';});})();</script>
     <p class="bigline" style="margin-top:14px">Does the sexy stuff come back too? <em>Yes.</em></p>
   </div>
 </section>
