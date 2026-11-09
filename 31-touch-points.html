@@ -669,13 +669,16 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
       <!-- 6 Nov 2026, Juliette: what she hears most is "living like roommates" and "we don't make time". Headline matches the ad headline (Edward: same promise on ad and page). -->
       <h1>Living like <em>roommates?</em></h1>
       <p class="tp-sub"><strong>From roommates to touch mates in 31 days.</strong></p>
-      <p class="tp-sub">Remember when you couldn't keep your hands off each other? 31 days to get it back. Through touch. Through fun. Through play.</p>
+      <p class="tp-sub">Remember when you couldn't keep your hands off each other?</p>
+      <!-- 9 Nov 2026, Juliette: "make these pop too... BOLD IN YELLOW... all in bold and underneath each other" -->
+      <p class="tp-sub" style="margin-top:14px;font-weight:800;font-size:clamp(1.5rem,4.2vw,1.9rem);line-height:1.2;color:#c9a227">31 days to get it back.</p>
+      <p class="tp-sub" style="margin-top:10px;font-weight:800;font-size:clamp(1.2rem,3.4vw,1.45rem);line-height:1.4">Through touch.<br>Through fun.<br>Through play.</p>
       <p>No time? They start at three minutes. I talk you through it on your phone, and if you miss a day, it waits for you.</p>
       <div class="tp-buy">
         <span class="tp-price">£27</span>
         <a href="https://buy.stripe.com/7sYeVceOvgtydq5av30co2o" class="btn">Buy now</a>
       </div>
-      <p class="tp-small">Less than lunch out for two. Day one opens the minute you join.</p>
+      <p class="tp-small">Less than lunch out for two. Day one opens the minute you join. <strong>Money-back guarantee.</strong></p>
       <!-- 5 Nov 2026 (Edward page audit): real 31 Touch Points proof up top. Verbatim from a current client's message (image lower down), name withheld. -->
       <figure class="tp-quote"><blockquote>&ldquo;It took a minute for him to come around and want to do these, but I&rsquo;m so happy we did. We&rsquo;re connecting in a new way.&rdquo;</blockquote><figcaption>A client, doing 31 Touch Points with her husband</figcaption></figure>
     </div>
@@ -729,7 +732,14 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});}
       <!-- 7 Nov 2026, Juliette: show the app, not only the ITV couple. Her screen recording, edited to 44s (full ITV touch kept, her Fruit voice over the quiet app part, 7 Nov). Loops silently; button plays it with sound. The Fruit voice player above stays. -->
     <figure style="margin:22px auto 26px;max-width:300px;text-align:center"><video id="tpAppV" src="media/tp-app-walkthrough.mp4?v=2" poster="media/tp-app-walkthrough-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="One day of 31 Touch Points in the app, start to finish" style="display:block;width:100%;aspect-ratio:9/16;border-radius:14px;box-shadow:0 20px 50px rgba(0,0,0,.18);background:#0D3535"></video><button type="button" id="tpAppSound" style="margin-top:14px;min-height:44px;padding:0 20px;border-radius:999px;border:1.5px solid #A88538;background:#A88538;color:#fff;font:inherit;font-weight:600;cursor:pointer">&#128264; Play it with my voice</button><figcaption style="font-size:13px;color:#6b6358;margin-top:10px">One whole day in the app, start to finish.</figcaption></figure>
     <script>(function(){var v=document.getElementById('tpAppV'),b=document.getElementById('tpAppSound');if(!v||!b)return;b.addEventListener('click',function(){if(v.muted){v.muted=false;v.loop=false;v.currentTime=0;v.play();b.innerHTML='&#128263; Sound off';}else{v.muted=true;v.loop=true;b.innerHTML='&#128264; Play it with my voice';}});v.addEventListener('ended',function(){v.muted=true;v.loop=true;v.play();b.innerHTML='&#128264; Play it with my voice';});})();</script>
-      <p>Then try one together. Grab a strawberry, a raspberry or a grape. Press play, and I&rsquo;ll take the two of you through it. One of you leads, one of you receives. Three minutes.</p>
+      <!-- 9 Nov 2026, Juliette: "this needs to be spread out a bit and pop". -->
+      <div class="tp-try-pop" style="margin:30px 0 26px;text-align:center">
+        <p style="margin:0 0 14px">Then try one together.</p>
+        <p style="margin:0 0 6px;font-size:1.15rem">&#127827; Grab a strawberry, a raspberry or a grape.</p>
+        <p style="margin:0 0 22px;font-size:1.15rem">Press play, and I&rsquo;ll take the two of you through it.</p>
+        <p class="bigline" style="margin:0;font-size:clamp(1.7rem,4.6vw,2.4rem);line-height:1.2">One of you leads.<br><em>One of you receives.</em></p>
+        <p style="margin:16px auto 0;display:inline-block;padding:6px 16px;border:1.5px solid var(--gold-deep,#A88538);border-radius:999px;font-size:.8rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep,#A88538)">Three minutes</p>
+      </div>
       <div class="tp-ready">
         <p class="tp-ready-h">Before you press play</p>
         <label><input type="checkbox"> One strawberry, raspberry or grape. Soft and juicy, nothing crunchy.</label>
@@ -862,6 +872,7 @@ footer a[aria-label]{display:none!important}
     <details><summary>We're too busy for this.</summary><p>They start short, about three minutes. Miss a day and it waits for you, so there's nothing to fall behind on.</p></details>
     <details><summary>What if we buy it and never do it?</summary><p>Most of us have a course or two sitting there unopened. Here's what I see: the couples who actually do the month are closer than ever, and yes, the physical intimacy comes back too. These days won't do themselves though &#128521; Put it in the diary. Same time every day. I'm domming you here now.</p></details>
     <details><summary>What if my partner isn't keen?</summary><p>Send them this. It&rsquo;s one of mine, copy it as it is:</p><blockquote id="tpInvite" style="margin:12px 0;padding:14px 16px;border-left:3px solid var(--gold-deep,#A88538);border-radius:0;background:rgba(168,133,56,.08);font-style:italic">Hi love, I found us something. A month of little touch moments, a few minutes a day. Would you try one with me? No pressure, just a chance to feel closer.</blockquote><button type="button" id="tpInviteCopy" class="btn" style="margin:0 0 14px">Copy the message</button><p>Then try the free one together, <a href="#taste" style="text-decoration:underline">The Fruit</a>. One strawberry, three minutes. Inside the month there are more messages like this, for every mood.</p><script>(function(){var b=document.getElementById("tpInviteCopy");if(!b)return;b.addEventListener("click",function(){var t=document.getElementById("tpInvite").innerText;(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){b.textContent="Copied. Now send it";},function(){b.textContent="Press and hold the message to copy";});});})();</script></details>
+    <details><summary>Is there a money-back guarantee?</summary><p>Yes, with one condition: you actually try it. These days won&rsquo;t do themselves. Do at least 21 of the 31 days in the app, filling each one in, and if it still does nothing for you, email me at <a href="mailto:support@feelfullyyou.com" style="text-decoration:underline">support@feelfullyyou.com</a> any time between day 31 and day 60 after you bought it. I&rsquo;ll check which days you did and refund your £27. I only ever see which days you did, never what you wrote. Full wording in the <a href="/terms#31-touch-points-guarantee" style="text-decoration:underline">terms</a>.</p></details>
     <details><summary>Is any of it sexual?</summary><p>No. Every one fits inside an ordinary day. Fair warning, though: when the small touches come back, the bigger ones tend to follow. With the couples I work with, the bedroom often warms up on its own, and nobody had to push for it.</p></details>
     
     
@@ -875,6 +886,9 @@ footer a[aria-label]{display:none!important}
     <p class="bigline" style="margin-top:10px"><em>Or thirty-one days from now, laughing in the hallway.</em></p>
     <p class="tp-price" style="margin:26px 0 6px">£27</p>
     <a href="https://buy.stripe.com/7sYeVceOvgtydq5av30co2o" class="btn" style="margin-top:14px">Buy now · £27</a>
+    <!-- 9 Nov 2026: Juliette's "do the work" guarantee. 21 of 31 days, claim day 31 to day 60. -->
+    <p style="margin:26px auto 8px;display:inline-block;padding:6px 16px;border:1.5px solid var(--gold-deep,#A88538);border-radius:999px;font-size:.8rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep,#A88538)">Money-back guarantee</p>
+    <p class="tp-small" style="margin-top:8px;max-width:46ch;margin-left:auto;margin-right:auto"><strong>My guarantee has one condition: you actually try it.</strong> Do at least 21 of the 31 days, filled in, and if it still does nothing for you, email me between day 31 and day 60 and I&rsquo;ll refund you.</p>
   </div>
 </section>
 
