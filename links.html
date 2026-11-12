@@ -54,6 +54,9 @@
   .row .rtext{flex:1;min-width:0}
   .row .rtitle{font-family:'Poppins',sans-serif;font-weight:600;font-size:.9rem;letter-spacing:-.01em;line-height:1.2;margin-bottom:2px}
   .row .rdesc{font-size:11.5px;color:var(--brown);line-height:1.4}
+  .row .rtag{font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--gold-deep);margin-bottom:3px}
+  .row.green .rtag{color:var(--gold-pale)}
+  .row.gold .rtag,.row.black .rtag{color:#fff}
   .row.green .rdesc{color:var(--gold-pale)}
   .row.gold .rdesc,.row.black .rdesc{color:rgba(255,255,255,.8)}
   .row .rarr{color:var(--teal);font-size:14px;flex-shrink:0;margin-left:4px}
@@ -136,43 +139,67 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
        in the app shelf or on the full site. -->
 
   <!-- 31 Oct 2026, Juliette: "put it in my links". The Scrumptious Touch Reset waitlist, first. -->
-  <a href="https://feelfullyyou.com/scrumptious-touch-reset" class="row gold">
-    <img src="https://feelfullyyou.com/media/activation/neck-touch.jpg" alt="A hand with a gold bracelet at the nape of a woman's neck" style="object-position:center 45%">
-    <div class="rtext">
-      <div class="rtitle">The Scrumptious Touch Reset</div>
-      <div class="rdesc">12 weeks to feel turned on again. Join the waitlist.</div>
-    </div>
-    <span class="rarr">&rarr;</span>
-  </a>
-
+  <!-- 12 Nov 2026, Juliette: Touch Map on the links, Substack back, "make it really clear what they get where".
+       Each row now carries a small line saying what it is and where it opens. -->
+  <div class="slabel">Free, try it now</div>
   <a href="https://app.feelfullyyou.com/taste/31-touch-points" class="row black">
     <img src="https://feelfullyyou.com/media/tp-itv-raspberry-still.jpg" alt="Juliette feeding Ferne McCann a raspberry on ITV" style="object-position:center 45%">
     <div class="rtext">
-      <div class="rtitle">Try one touch point, free</div>
+      <div class="rtag">Free &middot; opens in the app</div>
+      <div class="rtitle">Try one touch point</div>
       <div class="rdesc">Grab a strawberry. Three minutes, in my voice.</div>
     </div>
     <span class="rarr">&rarr;</span>
   </a>
-
-  <a href="https://app.feelfullyyou.com" class="row green">
+  <a href="https://juliettekaraman.substack.com" class="row " target="_blank" rel="noopener">
+    <img src="https://feelfullyyou.com/media/6a0b2c2f2e98e28fa19dbe5a.jpg" alt="What the Body Knows on Substack" style="object-position:center">
+    <div class="rtext">
+      <div class="rtag">Free &middot; essays on Substack</div>
+      <div class="rtitle">What the Body Knows</div>
+      <div class="rdesc">My weekly essay, straight to your inbox.</div>
+    </div>
+    <span class="rarr">&rarr;</span>
+  </a>
+  <div class="slabel">Buy, and keep it for life</div>
+  <a href="https://feelfullyyou.com/touch-map" class="row green">
+    <img src="https://feelfullyyou.com/media/tm-hero-grid.jpg" alt="The Touch Map" style="object-position:center">
+    <div class="rtext">
+      <div class="rtag">&pound;197 &middot; in the app</div>
+      <div class="rtitle">The Touch Map</div>
+      <div class="rdesc">Your Pleasure Language, then touch dates built for you. On your own or the two of you.</div>
+    </div>
+    <span class="rarr">&rarr;</span>
+  </a>
+  <a href="https://feelfullyyou.com/shop" class="row ">
+    <img src="https://feelfullyyou.com/media/67a084ac1719d410dec5986a.png" alt="The Art of Scrumptious Living: Touch Base, poems of strength and resilience" style="object-position:center top">
+    <div class="rtext">
+      <div class="rtag">Paperback &middot; UK and US</div>
+      <div class="rtitle">Touch Base &middot; the poem book</div>
+      <div class="rdesc">Poems of strength and resilience.</div>
+    </div>
+    <span class="rarr">&rarr;</span>
+  </a>
+  <div class="slabel">Women, in a group</div>
+  <a href="https://feelfullyyou.com/scrumptious-touch-reset" class="row gold">
+    <img src="https://feelfullyyou.com/media/activation/neck-touch.jpg" alt="A hand with a gold bracelet at the nape of a woman's neck" style="object-position:center 45%">
+    <div class="rtext">
+      <div class="rtag">Waitlist &middot; 12 weeks</div>
+      <div class="rtitle">The Scrumptious Touch Reset</div>
+      <div class="rdesc">Feel turned on again, in your own body.</div>
+    </div>
+    <span class="rarr">&rarr;</span>
+  </a>
+  <div class="slabel">Already bought something?</div>
+  <a href="https://app.feelfullyyou.com" class="row ">
     <img src="https://feelfullyyou.com/media/app-row.jpg" alt="The Feel Fully You App" style="object-position:center">
     <div class="rtext">
+      <div class="rtag">Sign in &middot; the app</div>
       <div class="rtitle">The Feel Fully You App</div>
-      <div class="rdesc">Free practices and everything you own, in one place.</div>
+      <div class="rdesc">Everything you own, plus free practices, in one place.</div>
     </div>
     <span class="rarr">&rarr;</span>
   </a>
-
-  <a href="https://feelfullyyou.com/shop" class="row">
-    <img src="https://feelfullyyou.com/media/67a084ac1719d410dec5986a.png" alt="The Art of Scrumptious Living: Touch Base, poems of strength and resilience">
-    <div class="rtext">
-      <div class="rtitle">Touch Base &middot; the poem book</div>
-      <div class="rdesc">Poems of strength and resilience. Buy UK/US.</div>
-    </div>
-    <span class="rarr">&rarr;</span>
-  </a>
-
-  <p style="text-align:center;margin:26px 0 6px;font-size:14px"><a href="https://feelfullyyou.com" style="color:inherit;text-decoration:underline">Everything else is on feelfullyyou.com</a></p>
+  <p style="text-align:center;margin:26px 0 6px;font-size:14px"><a href="https://feelfullyyou.com/work-with-me" style="color:inherit;text-decoration:underline">Every way to work with me is on feelfullyyou.com</a></p>
 
   <div class="socials">
     <a href="https://www.instagram.com/juliettekaraman" target="_blank" rel="noopener" aria-label="Instagram">
