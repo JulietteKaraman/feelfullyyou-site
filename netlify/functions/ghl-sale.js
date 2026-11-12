@@ -26,6 +26,29 @@ const PRODUCTS = [
   { label: 'The Approach Ritual, Both Ways', match: ['approach ritual', 'approach both ways'] },
 ];
 
+// 12 Nov 2026, Juliette's yes: funnel buyers who did NOT take 31 Touch Points get the
+// 3-email bridge to it (Kit sequence "Funnel buyers: bridge to 31 Touch Points").
+// Anyone who already owns 31 Touch Points is skipped. A Kit rule (5701149) also takes
+// people out of the bridge the moment the 31 Touch Points tag is added later.
+const BRIDGE_SEQUENCE_ID = 2968350;
+const TOUCH_POINTS_TAG_ID = 20794225;
+
+async function ownsTouchPoints(email, apiKey) {
+  try {
+    const h = { 'X-Kit-Api-Key': apiKey, Accept: 'application/json' };
+    const r = await fetch(`https://api.kit.com/v4/subscribers?email_address=${encodeURIComponent(email)}&status=all`, { headers: h });
+    const subs = r.ok ? ((await r.json()).subscribers || []) : [];
+    for (const s of subs) {
+      const t = await fetch(`https://api.kit.com/v4/subscribers/${s.id}/tags?per_page=500`, { headers: h });
+      const tags = t.ok ? ((await t.json()).tags || []) : [];
+      if (tags.some((x) => x.id === TOUCH_POINTS_TAG_ID)) return true;
+    }
+  } catch (err) {
+    console.error('ghl-sale: could not check 31 Touch Points ownership', err);
+  }
+  return false;
+}
+
 function findProduct(name) {
   const n = norm(name);
   return PRODUCTS.find((p) => p.match.some((m) => n.includes(m)));
@@ -99,9 +122,11 @@ exports.handler = async function (event) {
     const p = findProduct(n);
     if (p) { if (!known.includes(p)) known.push(p); } else unknown.push(n);
   }
+  const boughtTouchPoints = known.some((p) => p.tagId === TOUCH_POINTS_TAG_ID);
   const plan = {
     email,
     matched: known.map((p) => ({ product: p.label, tag: p.tagId || null, welcomeEmails: !!p.sequenceId, appAccess: p.deckType || null })),
+    bridgeEmails: known.length > 0 && !boughtTouchPoints,
     unknown,
   };
 
@@ -128,10 +153,27 @@ exports.handler = async function (event) {
     if (p.deckType) await grantPracticeAppEntitlement(email, p.deckType, orderRef);
   }
 
-  const lines = [`GHL sale · ${email}`, known.map((p) => p.label).join(', ') || 'No known product'];
+  // Bridge to 31 Touch Points, once per order, after the product tags are on.
+  let bridge = 'not needed';
+  if (plan.bridgeEmails) {
+    if (await ownsTouchPoints(email, apiKey)) {
+      bridge = 'skipped, already owns 31 Touch Points';
+    } else {
+      try {
+        await addToKit(email, firstName, null, BRIDGE_SEQUENCE_ID, apiKey, '');
+        bridge = 'started';
+      } catch (err) {
+        console.error('ghl-sale: bridge enrol failed', err);
+        failed.push('bridge emails');
+        bridge = 'failed';
+      }
+    }
+  }
+
+  const lines = [`GHL sale · ${email}`, known.map((p) => p.label).join(', ') || 'No known product', `Bridge emails: ${bridge}`];
   if (unknown.length) lines.unshift('⚠️ PRODUCT NOT RECOGNISED'), lines.push(`Not recognised: ${unknown.join(', ')}`);
   if (failed.length) lines.unshift('🚨 KIT FAILED'), lines.push(`Check Kit for: ${failed.join(', ')}`);
   await tell(lines.join('\n'));
 
-  return reply(200, { ok: true, ...plan, failed });
+  return reply(200, { ok: true, ...plan, bridge, failed });
 };
