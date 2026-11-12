@@ -414,6 +414,18 @@ const PAYMENT_LINK_APP_DECKS = {
 };
 
 const PRODUCT_MAP = {
+  // SCRUMPTIOUS CONFESSIONS £97 a month (12 Nov 2026), buy.stripe.com/6oU4gydKrgtybhXcDb0co2y
+  // (plink_1UavMcCCw18geY15Ook0CqRG). Subscription, so it is tagged by invoice.paid,
+  // which reads this price off the invoice line: tag every month, welcome email on
+  // the first invoice only. App access is NOT granted from this webhook: the
+  // practice app's own webhook extends it month by month on the same price, so
+  // access ends when payments stop. Never add it to PRACTICE_APP_DECK_TYPES or
+  // PAYMENT_LINK_APP_DECKS, which grant for ever.
+  'price_1UaYZICCw18geY15j9xNbIhd': {
+    tagId: 25769563,      // "Scrumptious Confessions: Member"
+    sequenceId: 2968362,  // "Scrumptious Confessions: Welcome", email 10583425
+    label: 'Scrumptious Confessions £97/month'
+  },
   // THE 3 MONTH INTENSIVE, pay in full £5,000, buy.stripe.com/dRm5kC21Jb9e99P0Ut0co1C.
   // Created 6 Jul 2026 (as the 2 Month Intensive) WITH metadata.price_id, so the
   // price id is the key. Renamed in Stripe and made buy-now on the page 23 Oct 2026.
