@@ -271,6 +271,16 @@ const PAYMENT_LINK_LABELS = {
 // reliable key. Consulted only when PRODUCT_MAP misses, so it can never
 // override an existing metadata-tagged product.
 const PAYMENT_LINK_PRODUCTS = {
+  // SCRUMPTIOUS CONFESSIONS £97 a month. The welcome is sent HERE, on the
+  // checkout, because the 12 Nov 2026 test purchase showed this endpoint
+  // receives checkout.session.completed but NOT invoice.paid for it. The
+  // PRODUCT_MAP entry below stays for renewals if invoice.paid is ever
+  // enabled. App access is never granted by this webhook (see PRODUCT_MAP note).
+  'plink_1UavMcCCw18geY15Ook0CqRG': {
+    tagId: 25769563,      // "Scrumptious Confessions: Member"
+    sequenceId: 2968362,  // "Scrumptious Confessions: Welcome"
+    label: 'Scrumptious Confessions £97/month'
+  },
   // THE TOUCH MAP £197 (29 Oct 2026). Dashboard payment link, so the plink is
   // the key. Tag + the three buyer emails (sequence 2949125, live 29 Oct).
   'plink_1UL6EFCCw18geY15XlehyUTm': {
