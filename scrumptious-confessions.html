@@ -64,7 +64,18 @@ footer{padding:40px 20px 56px;text-align:center;font-size:14px;color:var(--soft)
   .top{grid-template-columns:1fr}
   .cover{max-width:300px;margin:0 auto}
 }
-.inside{margin:18px 0 8px;padding:0;border:0;list-style:none;text-align:left}.inside li{margin:8px 0;padding:0 0 0 22px;border:0;line-height:1.5;text-align:left;position:relative;list-style:none}.inside li::before{content:'';position:absolute;left:4px;top:.62em;width:7px;height:7px;border-radius:50%;background:#DDC98E}
+.incl{margin:18px 0 8px;padding:0;list-style:none}.incl li{margin:8px 0;padding:0 0 0 22px;line-height:1.5;position:relative}.incl li::before{content:'';position:absolute;left:4px;top:.62em;width:7px;height:7px;border-radius:50%;background:#DDC98E}
+.block{max-width:760px;margin:0 auto;padding-block:clamp(40px,7vw,80px);border-top:1px solid var(--line)}
+.block h2{font-family:var(--display);font-weight:600;font-size:clamp(1.6rem,3.2vw,2.3rem);line-height:1.15;color:var(--ink);margin-top:10px}
+.months{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:10px}
+.months li{display:grid;grid-template-columns:5.5em 1fr;gap:14px;align-items:baseline;padding:14px 16px;border:1px solid var(--line);border-radius:4px;line-height:1.4}
+.months b{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.months span small{display:block;font-size:15px;color:var(--soft);margin-top:2px}
+.steps{margin:20px 0 0 1.2em;padding:0}.steps li{margin:10px 0;line-height:1.5}
+.plain{margin-top:22px;padding:22px 24px;border:1px solid var(--gold-deep);border-radius:4px;background:rgba(255,255,255,.02)}
+.plain p:first-child{margin-top:0}
+.care{font-size:16px;color:var(--soft)}
+.again{display:inline-block;margin-top:26px;text-decoration:none}
 </style>
 </head>
 <body>
@@ -77,12 +88,12 @@ footer{padding:40px 20px 56px;text-align:center;font-size:14px;color:var(--soft)
       <h1>People tell me they could listen to my voice for hours. So I built an app where you can.</h1>
       <p>My voice, in your ear, with the things I don't say on Instagram.</p>
       <p>It started in my women's group. Now it's open to women and men, and <strong>the first two weeks are free: Monday 23 November to Sunday 6 December.</strong></p>
-      <ul class="inside">
+      <ul class="incl">
         <li>A new confession from me, every Monday.</li>
         <li>Your questions, asked with no name on them, answered every week.</li>
         <li>Five minutes of Touch Base a day, with your tracker.</li>
-        <li>A private Telegram group where you can share your own.</li>
-        <li>Something new opens every month you stay, starting with my Holiday Survival Kit.</li>
+        <li>A private Telegram group where you're anonymous from the moment you join. No one can see who asks the questions.</li>
+        <li>All my programmes in one place, opening one by one the longer you stay.</li>
       </ul>
       <p>No card, just your email. After the two weeks it's &pound;111 a month, if you want to stay.</p>
       <form id="wl" novalidate>
@@ -96,6 +107,44 @@ footer{padding:40px 20px 56px;text-align:center;font-size:14px;color:var(--soft)
       <p class="note">On Monday 23 November I'll send you the way in.</p>
       <p class="done-msg" id="wl-done" hidden>You're in. On Monday 23 November I'll send you the way in.</p>
     </div>
+  </section>
+
+  <section class="block">
+    <span class="eyebrow">Everything in one place</span>
+    <h2>The longer you stay, the more opens up.</h2>
+    <p>For years my work has lived in little pieces. A card deck here, a 31-day practice there, each one bought on its own.</p>
+    <p>Now it all lives in one place. Something new opens every month you stay:</p>
+    <ol class="months">
+      <li><b>Month 1</b><span>Holiday Survival Kit<small>Cards for the season: the drive there, the table, who isn't here.</small></span></li>
+      <li><b>Month 1</b><span>Quiet Isn't Yes<small>For men: when she goes quiet, and what it really means.</small></span></li>
+      <li><b>Month 2</b><span>31 Touch Points<small>A touch a day, for a month.</small></span></li>
+      <li><b>Month 3</b><span>One Touch<small>One touch, learned properly.</small></span></li>
+      <li><b>Month 4</b><span>The Sacred No<small>The no that lets your yes mean something.</small></span></li>
+      <li><b>Month 5</b><span>The Unspoken Distance<small>Written for men, worth reading for women.</small></span></li>
+      <li><b>Month 6</b><span>Communication Reboot Kit<small>The talking side of being close.</small></span></li>
+    </ol>
+    <p>Already bought one of these? It stays yours.</p>
+  </section>
+
+  <section class="block">
+    <span class="eyebrow">How it works</span>
+    <h2>Three steps.</h2>
+    <ol class="steps">
+      <li><strong>Save your free place</strong> today, with your email.</li>
+      <li><strong>On Monday 23 November</strong> I send you the way in. On your phone, open it and tap Share, then Add to Home Screen. It sits there like any other app.</li>
+      <li><strong>After two weeks</strong>, stay for &pound;111 a month. Or simply don't. There's no card to cancel.</li>
+    </ol>
+  </section>
+
+  <section class="block">
+    <span class="eyebrow">Said plainly</span>
+    <div class="plain">
+      <p><strong>What it is:</strong> my voice every Monday, your questions answered every week, an anonymous group where no one can see who asks the questions, and a library that grows the longer you stay.</p>
+      <p><strong>What it isn't:</strong> therapy, a course you fall behind on, or a place where anyone sees who you are.</p>
+      <p><strong>Stopping:</strong> email me at juliette@feelfullyyou.com and it stops. No forms, no questions.</p>
+    </div>
+    <p class="care">If something in here stirs up something heavy, please talk to someone you trust, or your GP. You don't have to carry it on your own.</p>
+    <a class="btn again" href="#waitlist">Save my free place</a>
   </section>
 
   <section class="inside">
