@@ -380,6 +380,14 @@ const PAYMENT_LINK_PRODUCTS = {
     sequenceId: 2885669,  // "Sacred No — Welcome"
     label: 'The Sacred No £17'
   },
+  // THE SACRED NO back to £55 (18 Nov 2026, Juliette: "it was 55"). New link
+  // buy.stripe.com/8x28wO8q79161HndHf0co2A, plink from her dashboard URL. The
+  // £17 link above is switched off; its entry stays for old buyers' records.
+  'plink_1Ud8VWCCw18geY15V1gHjPrs': {
+    tagId: 20913133,      // "sacred-no-buyer"
+    sequenceId: 2885669,  // "Sacred No — Welcome"
+    label: 'The Sacred No £55'
+  },
   // THE 3 MONTH INTENSIVE, payment plan £1,700/mo x 3. Link created by Juliette
   // 23 Oct 2026, buy.stripe.com/28EaEWayf3GM99P32B0co2r. A dashboard link, so no
   // metadata.price_id: the plink is the key. sequenceId is the welcome she
@@ -423,6 +431,7 @@ const PAYMENT_LINK_APP_DECKS = {
   'plink_1ULQHUCCw18geY15FZP1jMYR': '31-touch-points',
   // The Sacred No £17, buy.stripe.com/dRm6oG7m39162Lr6eN0co1Q (17 Oct 2026).
   'plink_1UD0gtCCw18geY15E6gj9XGx': 'sacred-no',
+  'plink_1Ud8VWCCw18geY15V1gHjPrs': 'sacred-no', // The Sacred No £55, buy.stripe.com/8x28wO8q79161HndHf0co2A (18 Nov 2026)
   // The Touch Map £197, buy.stripe.com/aFaaEWfSz916eu9bz70co2e (29 Oct 2026,
   // links from Juliette's Stripe links doc). The Couples £297 link opens the
   // same app product, so a couples buyer is never left with nothing.
