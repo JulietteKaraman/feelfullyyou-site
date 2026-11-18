@@ -141,8 +141,8 @@ footer{padding:40px 20px 56px;text-align:center;font-size:14px;color:var(--soft)
         <input id="wl-hp" type="text" name="hp_field" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;flex:none">
         <button class="btn" type="submit">Save my free place</button>
       </form>
-      <p class="note">No card. After two weeks it's &pound;111 a month, if you want to stay.</p>
-      <p class="done-msg" id="wl-done" hidden>You're in. On Monday 23 November I'll send you the way in.</p>
+      <p class="note">No card. From Monday 7 December it's &pound;111 a month, if you want to stay.</p>
+      <p class="done-msg" id="wl-done" hidden>You're in. Your way in is waiting in your inbox.</p>
     </div>
   </section>
 
@@ -163,8 +163,7 @@ footer{padding:40px 20px 56px;text-align:center;font-size:14px;color:var(--soft)
       <div class="about-copy">
         <span class="eyebrow">Whose voice is this?</span>
         <h2>I'm <em>Juliette</em>.</h2>
-        <p>Intimacy and touch expert. I teach The Touch Reset: finding the patterns that close the door to touch, aliveness and connection, and learning how to open it again.</p>
-        <p>Before I was the one in the room, I was the woman on the other side of it.</p>
+        <p>Intimacy and Touch Expert. I teach The Touch Reset: finding the patterns that close the door to Touch, aliveness and connection, and opening it again.</p>
         <p class="noname">Everything in this app, I learned in my own body first.</p>
         <div class="press"><img src="/press/forbes.png" alt="Forbes" loading="lazy"><img src="/press/times.png" alt="The Times" loading="lazy"><img src="/press/marieclaire.png" alt="Marie Claire" loading="lazy"><img src="/press/itv.png" alt="ITV" loading="lazy"></div>
       </div>
@@ -174,45 +173,16 @@ footer{padding:40px 20px 56px;text-align:center;font-size:14px;color:var(--soft)
   <section class="sec">
     <span class="eyebrow">What you get</span>
     <h2>Everything I'd tell you if we were alone.</h2>
-    <ul class="tiles">
-      <li><i>Mon</i>A new confession in my voice, every week.</li>
-      <li><i>?</i>Your questions, with no name on them, answered.</li>
-      <li><i>5</i>Minutes of Touch Base a day, with your tracker.</li>
-      <li><i>0</i>People who can see you in our private channel.</li>
-    </ul>
     <ul class="phones">
-      <li><div class="phone"><div class="screen"><img src="media/confessions/phone-player.webp" loading="lazy" alt="A confession playing in the app"></div></div><p>Every Monday, a confession.</p></li>
+      <li><div class="phone"><div class="screen"><img src="media/confessions/phone-player.webp" loading="lazy" alt="A confession playing in the app"></div></div><p>Every Monday, a confession in my voice.</p></li>
       <li><div class="phone"><div class="screen"><img src="media/confessions/phone-card.webp" loading="lazy" alt="This week's card in the app"></div></div><p>A card for your week.</p></li>
       <li><div class="phone"><div class="screen"><img src="media/confessions/phone-touch-base.webp" loading="lazy" alt="Touch Base in the app, with a 31-day tracker"></div></div><p>Touch Base, every day.</p></li>
-      <li><div class="phone"><div class="screen"><img src="media/confessions/phone-question.webp" loading="lazy" alt="The question box, which sends your question with no name on it"></div></div><p>Ask me anything. No name.</p></li>
+      <li><div class="phone"><div class="screen"><img src="media/confessions/phone-question.webp" loading="lazy" alt="The question box, which sends your question with no name on it"></div></div><p>Your questions, answered. No name on them.</p></li>
     </ul>
+    <p class="lead" style="margin-top:34px">Something new opens every month you stay.</p>
   </section>
 
-  <section class="band">
-    <span class="eyebrow">The longer you stay</span>
-    <h2>The more opens up.</h2>
-    <ol class="road">
-      <li><b>Month 1</b><span>Holiday Survival Kit + Quiet Isn't Yes</span></li>
-      <li><b>Month 2</b><span>Between Touches + 31 Touch Points</span></li>
-      <li><b>Month 3</b><span>31 Days Closer</span></li>
-      <li><b>Month 4</b><span>The Sacred No</span></li>
-      <li><b>Month 5</b><span>One Touch</span></li>
-      <li><b>Month 6</b><span>The Unspoken Distance</span></li>
-      <li><b>Month 7</b><span>Communication Reboot Kit</span></li>
-      <li class="more"><span>&hellip;and many others to follow.</span></li>
-    </ol>
-  </section>
 
-  <section class="sec">
-    <span class="eyebrow">How it works</span>
-    <h2>Three steps.</h2>
-    <ol class="steps3">
-      <li>Save your free place today.</li>
-      <li>On Monday 23 November I send you the way in, straight to your phone.</li>
-      <li>After two weeks, stay for &pound;111 a month. Or don't. There's no card to cancel.</li>
-    </ol>
-    <a class="btn cta" href="#waitlist">Save my free place</a>
-  </section>
 
   <section class="inside">
     <p class="why-q">Why "scrumptious"?</p>
@@ -220,7 +190,7 @@ footer{padding:40px 20px 56px;text-align:center;font-size:14px;color:var(--soft)
   </section>
 </div>
 
-<footer>Feel Fully You · Juliette Karaman, intimacy and touch expert · The Touch Reset</footer>
+<footer>Feel Fully You · Juliette Karaman, Intimacy and Touch Expert · The Touch Reset</footer>
 
 <script>
 document.getElementById('wl').addEventListener('submit',function(e){
@@ -233,7 +203,7 @@ document.getElementById('wl').addEventListener('submit',function(e){
   fetch('/.netlify/functions/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},
     body:JSON.stringify({email:email,firstName:name,hp_field:document.getElementById('wl-hp').value,tagIds:[25487963],sequenceIds:[2959098]})})
   .then(function(r){if(!r.ok)throw new Error(r.status);
-    f.hidden=true;document.querySelector('.note').hidden=true;done.textContent="You're in. On Monday 23 November I'll send you the way in.";done.hidden=false;
+    f.hidden=true;document.querySelector('.note').hidden=true;done.textContent="You're in. Your way in is waiting in your inbox.";done.hidden=false;
     if(typeof gtag==='function')gtag('event','generate_lead',{form:'confessions-waitlist'});})
   .catch(function(){btn.disabled=false;btn.textContent='Save my free place';done.textContent="That didn't go through. Try again, or email support@feelfullyyou.com and I'll add you.";done.hidden=false;});
 });
