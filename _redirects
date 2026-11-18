@@ -15,6 +15,10 @@ https://shop.feelfullyyou.com/*  https://feelfullyyou.com/my-cards/  301!
 /the-three-answers          https://app.feelfullyyou.com/practice/the-three-answers          301!
 /the-31-days-closer         https://app.feelfullyyou.com/practice/the-31-days-closer         301!
 /the-trust-and-repair       https://app.feelfullyyou.com/practice/the-trust-and-repair       301!
+# 18 Nov 2026, Juliette: How to Feel Like a Woman is closed to new buyers ("we need to stop that now").
+# The sales page goes to Scrumptious Confessions. 302 so it can be undone. The welcome page is untouched.
+/how-to-feel-like-a-woman       /scrumptious-confessions   302!
+/how-to-feel-like-a-woman.html  /scrumptious-confessions   302!
 /scrumptious-turn-on-activation       /scrumptious-touch-reset   301!
 /scrumptious-turn-on-activation.html  /scrumptious-touch-reset   301!
 
