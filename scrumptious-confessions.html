@@ -112,6 +112,14 @@ footer{padding:40px 20px 56px;text-align:center;font-size:14px;color:var(--soft)
   .road{grid-template-columns:repeat(2,minmax(0,1fr))}
   .steps3{grid-template-columns:1fr}
 }
+.road .more{grid-column:1/-1;border:0;background:none;text-align:center}.road .more span{font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-size:22px;color:var(--gold)}
+.about-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,5vw,64px);align-items:center;max-width:980px;margin:0 auto;text-align:left}
+.about-photo img{width:100%;height:auto;border-radius:6px;box-shadow:0 40px 90px rgba(0,0,0,.7),0 0 0 1px rgba(221,201,142,.3)}
+.about-copy p{font-size:18px}
+.noname{margin-top:.6em;font-weight:700;font-size:clamp(1.2rem,2.2vw,1.5rem);color:var(--gold)}
+.press{display:flex;flex-wrap:wrap;gap:22px;align-items:center;margin-top:26px}
+.press img{height:18px;width:auto;filter:brightness(0) invert(1);opacity:.6}
+@media (max-width:760px){.about-grid{grid-template-columns:1fr}.about-photo{max-width:320px;margin:0 auto}}
 </style>
 <link rel="stylesheet" href="media/confessions/luxe.css">
 </head>
@@ -149,6 +157,20 @@ footer{padding:40px 20px 56px;text-align:center;font-size:14px;color:var(--soft)
     </div>
   </section>
 
+  <section class="sec about">
+    <div class="about-grid">
+      <div class="about-photo"><img src="/juliettekingsxaboutmesalespages.jpg" width="933" height="1400" loading="lazy" alt="Juliette Karaman"></div>
+      <div class="about-copy">
+        <span class="eyebrow">Whose voice is this?</span>
+        <h2>I'm <em>Juliette</em>.</h2>
+        <p>Intimacy and touch expert. I teach The Touch Reset: finding the patterns that close the door to touch, aliveness and connection, and learning how to open it again.</p>
+        <p>Before I was the one in the room, I was the woman on the other side of it.</p>
+        <p class="noname">Everything in this app, I learned in my own body first.</p>
+        <div class="press"><img src="/press/forbes.png" alt="Forbes" loading="lazy"><img src="/press/times.png" alt="The Times" loading="lazy"><img src="/press/marieclaire.png" alt="Marie Claire" loading="lazy"><img src="/press/itv.png" alt="ITV" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
   <section class="sec">
     <span class="eyebrow">What you get</span>
     <h2>Everything I'd tell you if we were alone.</h2>
@@ -171,12 +193,13 @@ footer{padding:40px 20px 56px;text-align:center;font-size:14px;color:var(--soft)
     <h2>The more opens up.</h2>
     <ol class="road">
       <li><b>Month 1</b><span>Holiday Survival Kit + Quiet Isn't Yes</span></li>
-      <li><b>Month 2</b><span>31 Touch Points</span></li>
-      <li><b>Month 3</b><span>One Touch</span></li>
+      <li><b>Month 2</b><span>Between Touches + 31 Touch Points</span></li>
+      <li><b>Month 3</b><span>31 Days Closer</span></li>
       <li><b>Month 4</b><span>The Sacred No</span></li>
-      <li><b>Month 5</b><span>The Unspoken Distance</span></li>
-      <li><b>Month 6</b><span>Communication Reboot Kit</span></li>
-      <li><b>Month 7</b><span>31 Days Closer</span></li>
+      <li><b>Month 5</b><span>One Touch</span></li>
+      <li><b>Month 6</b><span>The Unspoken Distance</span></li>
+      <li><b>Month 7</b><span>Communication Reboot Kit</span></li>
+      <li class="more"><span>&hellip;and many others to follow.</span></li>
     </ol>
   </section>
 
