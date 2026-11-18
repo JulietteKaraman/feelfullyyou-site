@@ -29,7 +29,7 @@ gtag('config', 'G-SY8NKELMNZ');
 <script src="/cookie-consent.js" defer></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Poppins:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
   --night:#0d0c0b; --ink:#fbf7f1; --text:#ece6dc; --soft:#d6cfc4;
@@ -137,15 +137,16 @@ footer{padding:40px 20px 56px;text-align:center;font-size:14px;color:var(--soft)
 .gap{font-family:var(--display);font-weight:600;font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.25;color:var(--ink);margin-top:0;max-width:640px;margin-inline:auto}
 @media (max-width:760px){.tiles.six{grid-template-columns:repeat(2,minmax(0,1fr))}.stack li{grid-template-columns:4.8em 1fr auto}}
 </style>
+<link rel="stylesheet" href="media/confessions/luxe.css">
 </head>
 <body>
 
 <div class="wrap">
   <section class="top" id="join">
-    <div class="cover"><img src="media/confessions/cover.jpg" alt="Scrumptious Confessions cover: Juliette with red lips, in purple light"></div>
+    <div class="hero-art"><div class="cover"><img src="media/confessions/cover.jpg" alt="Scrumptious Confessions cover: Juliette with red lips, in purple light"></div><div class="phone"><div class="screen"><img src="media/confessions/phone-mondays.webp" alt="The Scrumptious Confessions app on a phone"></div></div></div>
     <div>
       <span class="eyebrow">Scrumptious Confessions &middot; the membership</span>
-      <h1>The question you've never asked anyone. Ask me, with no name on it.</h1>
+      <h1>The question you've never asked anyone. <em>Ask me, with no name on it.</em></h1>
       <p class="lead">Every Monday, a confession in my voice. Your questions, answered. Something new opens every month you stay. For women and men.</p>
       <div class="lock">
         <p class="price">&pound;111 <small>a month</small></p>
@@ -160,7 +161,11 @@ footer{padding:40px 20px 56px;text-align:center;font-size:14px;color:var(--soft)
     <span class="eyebrow">Hear a taste</span>
     <h2>The first minute of the first confession.</h2>
     <p>Put your headphones in.</p>
-    <audio controls preload="metadata" src="media/confessions/taster-tolerated-touch.m4a">Your browser can't play this here.</audio>
+    <div class="player" data-src="media/confessions/taster-tolerated-touch-v2.m4a">
+      <button class="pp" type="button" aria-label="Play"></button>
+      <div class="track"><div class="bar" aria-hidden="true"><span></span></div><div class="times"><span class="cur">0:00</span><span class="dur">1:18</span></div></div>
+      <div class="speeds" role="group" aria-label="Playback speed"><button type="button" data-r="1" class="on" aria-pressed="true">1&times;</button><button type="button" data-r="1.1" aria-pressed="false">1.1&times;</button><button type="button" data-r="1.25" aria-pressed="false">1.25&times;</button><button type="button" data-r="1.5" aria-pressed="false">1.5&times;</button></div>
+    </div>
   </section>
 
   <section class="sec story">
@@ -183,10 +188,11 @@ footer{padding:40px 20px 56px;text-align:center;font-size:14px;color:var(--soft)
       <li><i>0</i>People who can see you in our private channel.</li>
       <li><i>257</i>Pieces in the library: 71 answers, 50 essays, 136 podcast episodes.</li>
     </ul>
-    <ul class="shots">
-      <li><img src="media/confessions/shot-monday.webp" width="640" height="794" loading="lazy" alt="A confession playing in the app, with buttons to say how it landed"><p>Every Monday, a confession.</p></li>
-      <li><img src="media/confessions/shot-touch-base.webp" width="640" height="950" loading="lazy" alt="Touch Base in the app: five minutes a day, with a 31-day tracker"><p>Touch Base, every day.</p></li>
-      <li><img src="media/confessions/shot-question.webp" width="640" height="700" loading="lazy" alt="The question box in the app, which sends your question with no name on it"><p>Ask me anything. No name.</p></li>
+    <ul class="phones">
+      <li><div class="phone"><div class="screen"><img src="media/confessions/phone-player.webp" loading="lazy" alt="A confession playing in the app"></div></div><p>Every Monday, a confession.</p></li>
+      <li><div class="phone"><div class="screen"><img src="media/confessions/phone-card.webp" loading="lazy" alt="This week's card in the app"></div></div><p>A card for your week.</p></li>
+      <li><div class="phone"><div class="screen"><img src="media/confessions/phone-touch-base.webp" loading="lazy" alt="Touch Base in the app, with a 31-day tracker"></div></div><p>Touch Base, every day.</p></li>
+      <li><div class="phone"><div class="screen"><img src="media/confessions/phone-question.webp" loading="lazy" alt="The question box, which sends your question with no name on it"></div></div><p>Ask me anything. No name.</p></li>
     </ul>
   </section>
 
@@ -239,5 +245,6 @@ footer{padding:40px 20px 56px;text-align:center;font-size:14px;color:var(--soft)
 
 <footer>Feel Fully You · Juliette Karaman, intimacy and touch expert · The Touch Reset</footer>
 
+<script src="media/confessions/player.js" defer></script>
 </body>
 </html>

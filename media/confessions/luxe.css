@@ -1,0 +1,50 @@
+/* Scrumptious Confessions luxe layer (18 Nov 2026): serif display, gold light, phones, player with speeds */
+h1,.band h2,.sec h2,.block h2{font-family:"Cormorant Garamond","Poppins",Georgia,serif;font-weight:600;letter-spacing:0}
+h1{font-size:clamp(2.5rem,5.4vw,4rem);line-height:1.04}
+.band h2,.sec h2{font-size:clamp(2.1rem,4.2vw,3.2rem);line-height:1.08}
+h1 em,.sec h2 em,.band h2 em{font-style:italic;color:var(--gold)}
+.eyebrow{letter-spacing:.32em;font-size:12px}
+body{background:radial-gradient(90% 50% at 85% 0%,rgba(221,201,142,.10),transparent 60%),radial-gradient(70% 40% at 0% 35%,rgba(120,60,140,.12),transparent 60%),var(--night)}
+.btn{background:linear-gradient(180deg,#ecd9a4,#c9ad6a);box-shadow:0 10px 30px rgba(201,173,106,.25)}
+.btn:hover{background:linear-gradient(180deg,#f3e4b9,#d3b878)}
+.rule{width:64px;height:1px;background:var(--gold);margin:22px auto 0;opacity:.7}
+/* hero art: cover with a phone in front */
+.hero-art{position:relative;padding-bottom:40px}
+.hero-art .cover{width:78%;transform:rotate(-4deg);box-shadow:0 40px 90px rgba(0,0,0,.7),0 0 0 1px rgba(221,201,142,.25)}
+.hero-art .phone{position:absolute;right:0;bottom:0;width:44%}
+/* phone frame */
+.phone{aspect-ratio:9/18.5;border-radius:40px;padding:9px;background:linear-gradient(145deg,#3a332b,#0c0b0a 45%,#2a251f);box-shadow:0 0 0 1px rgba(221,201,142,.45),0 30px 70px rgba(0,0,0,.75),inset 0 0 0 1px rgba(255,255,255,.06);position:relative}
+.phone::before{content:"";position:absolute;top:16px;left:50%;width:30%;height:16px;margin-left:-15%;border-radius:10px;background:#050505;z-index:2}
+.phone .screen{height:100%;border-radius:32px;overflow:hidden;background:#0a0f0e}
+.phone img{width:100%;height:100%;object-fit:cover;object-position:top;padding-top:30px;background:#0a0f0e}
+/* gallery */
+.phones{list-style:none;margin:44px auto 0;padding:0 0 10px;max-width:1000px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;align-items:end}
+.phones li:nth-child(even){transform:translateY(-34px)}
+.phones p{margin-top:16px;font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-size:20px;line-height:1.25;color:var(--ink)}
+/* player */
+.player{max-width:600px;margin:30px auto 0;padding:20px 22px;border-radius:22px;border:1px solid rgba(221,201,142,.4);background:linear-gradient(180deg,rgba(26,38,36,.9),rgba(12,14,13,.9));box-shadow:0 24px 60px rgba(0,0,0,.5);display:grid;grid-template-columns:auto 1fr;gap:14px 18px;align-items:center;text-align:left}
+.pp{width:62px;height:62px;border-radius:50%;border:0;cursor:pointer;background:linear-gradient(180deg,#ecd9a4,#c9ad6a);display:grid;place-items:center;box-shadow:0 8px 24px rgba(201,173,106,.35)}
+.pp svg{width:24px;height:24px;fill:#0d0c0b}
+.bar{height:6px;border-radius:3px;background:rgba(255,255,255,.12);cursor:pointer;position:relative}
+.bar span{position:absolute;left:0;top:0;bottom:0;width:0;border-radius:3px;background:var(--gold)}
+.times{display:flex;justify-content:space-between;margin-top:8px;font-size:13px;color:var(--soft);font-variant-numeric:tabular-nums}
+.speeds{grid-column:1/-1;display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.speeds button{font:600 14px var(--body);color:var(--gold);background:transparent;border:1px solid rgba(221,201,142,.45);border-radius:999px;padding:7px 14px;cursor:pointer}
+.speeds button.on{background:var(--gold);color:var(--night)}
+.speeds button:focus-visible,.pp:focus-visible{outline:2px solid var(--copper);outline-offset:3px}
+@media (max-width:760px){
+  .hero-art{max-width:340px;margin:0 auto}
+  .phones{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:16px;margin-inline:-20px;padding:10px 20px 20px;align-items:flex-start}
+  .phones li{flex:0 0 62%;scroll-snap-align:center}
+  .phones li:nth-child(even){transform:none}
+}
+.story .big,.gap{font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-weight:600;font-size:clamp(1.7rem,3vw,2.3rem);line-height:1.2}
+.tiles i,.price,.stack .total em,.why-q{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600}
+.tiles i{font-size:34px}
+.why-q{font-style:italic;font-size:clamp(2.4rem,5vw,3.4rem)}
+.tiles li,.road li,.lock{background:linear-gradient(180deg,rgba(221,201,142,.06),rgba(255,255,255,.01))}
+.tiles i,.price,.stack em,.why-q,h1,h2{font-variant-numeric:lining-nums}
+.phone img{height:auto;object-fit:initial}
+.phone .screen{display:flex;flex-direction:column}
+.phones .phone{aspect-ratio:9/15.5}
+.phone .screen{background:linear-gradient(180deg,#0a0f0e,#0b0c0b)}

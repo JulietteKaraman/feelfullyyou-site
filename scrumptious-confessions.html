@@ -29,7 +29,7 @@ gtag('config', 'G-SY8NKELMNZ');
 <script src="/cookie-consent.js" defer></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Poppins:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
   --night:#0d0c0b; --ink:#fbf7f1; --text:#ece6dc; --soft:#d6cfc4;
@@ -113,15 +113,16 @@ footer{padding:40px 20px 56px;text-align:center;font-size:14px;color:var(--soft)
   .steps3{grid-template-columns:1fr}
 }
 </style>
+<link rel="stylesheet" href="media/confessions/luxe.css">
 </head>
 <body>
 
 <div class="wrap">
   <section class="top" id="waitlist">
-    <div class="cover"><img src="media/confessions/cover.jpg" alt="Scrumptious Confessions cover: Juliette with red lips, in purple light"></div>
+    <div class="hero-art"><div class="cover"><img src="media/confessions/cover.jpg" alt="Scrumptious Confessions cover: Juliette with red lips, in purple light"></div><div class="phone"><div class="screen"><img src="media/confessions/phone-mondays.webp" alt="The Scrumptious Confessions app on a phone"></div></div></div>
     <div>
       <span class="eyebrow">Scrumptious Confessions</span>
-      <h1>People tell me they could listen to my voice for hours. So I built an app where you can.</h1>
+      <h1>People tell me they could listen to my voice for hours. So I built an app <em>where you can.</em></h1>
       <p class="lead">My voice, in your ear, with the things I don't say on Instagram. For women and men.</p>
       <span class="badge">Free 23 November to 6 December</span>
       <form id="wl" novalidate>
@@ -141,7 +142,11 @@ footer{padding:40px 20px 56px;text-align:center;font-size:14px;color:var(--soft)
     <span class="eyebrow">Hear a taste</span>
     <h2>The first minute of the first confession.</h2>
     <p>Put your headphones in.</p>
-    <audio controls preload="metadata" src="media/confessions/taster-tolerated-touch.m4a">Your browser can't play this here.</audio>
+    <div class="player" data-src="media/confessions/taster-tolerated-touch-v2.m4a">
+      <button class="pp" type="button" aria-label="Play"></button>
+      <div class="track"><div class="bar" aria-hidden="true"><span></span></div><div class="times"><span class="cur">0:00</span><span class="dur">1:18</span></div></div>
+      <div class="speeds" role="group" aria-label="Playback speed"><button type="button" data-r="1" class="on" aria-pressed="true">1&times;</button><button type="button" data-r="1.1" aria-pressed="false">1.1&times;</button><button type="button" data-r="1.25" aria-pressed="false">1.25&times;</button><button type="button" data-r="1.5" aria-pressed="false">1.5&times;</button></div>
+    </div>
   </section>
 
   <section class="sec">
@@ -153,10 +158,11 @@ footer{padding:40px 20px 56px;text-align:center;font-size:14px;color:var(--soft)
       <li><i>5</i>Minutes of Touch Base a day, with your tracker.</li>
       <li><i>0</i>People who can see you in our private channel.</li>
     </ul>
-    <ul class="shots">
-      <li><img src="media/confessions/shot-monday.webp" width="640" height="794" loading="lazy" alt="A confession playing in the app, with buttons to say how it landed"><p>Every Monday, a confession.</p></li>
-      <li><img src="media/confessions/shot-touch-base.webp" width="640" height="950" loading="lazy" alt="Touch Base in the app: five minutes a day, with a 31-day tracker"><p>Touch Base, every day.</p></li>
-      <li><img src="media/confessions/shot-question.webp" width="640" height="700" loading="lazy" alt="The question box in the app, which sends your question with no name on it"><p>Ask me anything. No name.</p></li>
+    <ul class="phones">
+      <li><div class="phone"><div class="screen"><img src="media/confessions/phone-player.webp" loading="lazy" alt="A confession playing in the app"></div></div><p>Every Monday, a confession.</p></li>
+      <li><div class="phone"><div class="screen"><img src="media/confessions/phone-card.webp" loading="lazy" alt="This week's card in the app"></div></div><p>A card for your week.</p></li>
+      <li><div class="phone"><div class="screen"><img src="media/confessions/phone-touch-base.webp" loading="lazy" alt="Touch Base in the app, with a 31-day tracker"></div></div><p>Touch Base, every day.</p></li>
+      <li><div class="phone"><div class="screen"><img src="media/confessions/phone-question.webp" loading="lazy" alt="The question box, which sends your question with no name on it"></div></div><p>Ask me anything. No name.</p></li>
     </ul>
   </section>
 
@@ -208,5 +214,6 @@ document.getElementById('wl').addEventListener('submit',function(e){
   .catch(function(){btn.disabled=false;btn.textContent='Save my free place';done.textContent="That didn't go through. Try again, or email support@feelfullyyou.com and I'll add you.";done.hidden=false;});
 });
 </script>
+<script src="media/confessions/player.js" defer></script>
 </body>
 </html>
