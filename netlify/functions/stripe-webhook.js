@@ -1129,7 +1129,9 @@ exports.handler = async function(event) {
   // Price ID comes through in metadata (set this in each Stripe payment link)
   const priceId = session?.metadata?.price_id || '';
   // Always present on a Payment Link checkout, and unaffected by discount codes.
-  const paymentLink = session?.payment_link || '';
+  // A checkout made by the app's own button (Scrumptious Confessions, free week from doors open,
+  // 19 Nov 2026) has no payment_link, so it names the link it stands for in metadata.
+  const paymentLink = session?.payment_link || session?.metadata?.payment_link || '';
   // metadata.price_id first (every older product sets it), then the payment link.
   const product = PRODUCT_MAP[priceId] || PAYMENT_LINK_PRODUCTS[paymentLink];
   const linkLabel = PAYMENT_LINK_LABELS[paymentLink] || null;

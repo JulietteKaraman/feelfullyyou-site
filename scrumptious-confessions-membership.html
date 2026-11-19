@@ -141,6 +141,9 @@ footer{padding:40px 20px 56px;text-align:center;font-size:14px;color:var(--soft)
 .steps b{flex:0 0 34px;height:34px;border-radius:50%;background:var(--gold);color:#070707;display:flex;align-items:center;justify-content:center;font-size:16px}
 .tour-phone{width:min(300px,78vw);margin:30px auto 0}
 .tour-phone video{width:100%;height:100%;object-fit:cover;object-position:top;display:block;background:#0a0f0e}
+.howfree{list-style:none;padding:0;margin:20px 0 0;text-align:left}
+.howfree li{display:grid;grid-template-columns:96px 1fr;gap:12px;padding:10px 0;border-top:1px solid var(--line);font-size:16px;line-height:1.45}
+.howfree b{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);padding-top:3px}
 .faq dl{max-width:620px;margin:26px auto 0;text-align:left}
 .faq dt{font-family:var(--display);font-weight:700;font-size:19px;color:var(--gold);margin-top:22px}
 .faq dd{margin:6px 0 0;font-size:17px;line-height:1.55}
@@ -158,8 +161,8 @@ footer{padding:40px 20px 56px;text-align:center;font-size:14px;color:var(--soft)
 </style>
 <link rel="stylesheet" href="media/confessions/luxe.css">
 <script>
-/* Juliette 19 Nov 2026: "waitlist until Monday, so we can iron out anything and create hype".
-   Before Mon 23 Nov 00:00 UK the page shows the waitlist; from then on the 7-day-free button. */
+/* Juliette 19 Nov 2026: card in now, nothing charged and nothing opens until Monday.
+   Before Mon 23 Nov 00:00 UK the page explains the free week starts Monday; after, the plain wording. */
 if(Date.now()>=Date.UTC(2026,10,23,0,0,0))document.documentElement.classList.add('open');
 </script>
 <style>html:not(.open) .after-open{display:none!important}html.open .before-open{display:none!important}</style>
@@ -170,7 +173,7 @@ if(Date.now()>=Date.UTC(2026,10,23,0,0,0))document.documentElement.classList.add
   <section class="top" id="join">
     <div class="hero-art"><div class="cover"><img src="media/confessions/cover.jpg" alt="Scrumptious Confessions cover: Juliette with red lips, in purple light"></div><div class="phone"><div class="screen"><img src="media/confessions/phone-mondays.webp" alt="The Scrumptious Confessions app on a phone"></div></div></div>
     <div>
-      <p class="doors before-open">Doors open Monday 23 November. Join the waitlist and you&rsquo;ll hear first, the moment they open.</p>
+      <p class="doors before-open">Doors open Monday 23 November. Start now, and your 7 free days begin that Monday.</p>
       <p class="doors after-open">Doors are open. Start your 7 days free, and you&rsquo;re in for the first confession.</p>
       <span class="eyebrow">Scrumptious Confessions &middot; the membership</span>
       <h1>The question you've never asked anyone. <em>Ask me, with no name on it.</em></h1>
@@ -178,16 +181,12 @@ if(Date.now()>=Date.UTC(2026,10,23,0,0,0))document.documentElement.classList.add
       <div class="lock">
         <p class="price">&pound;111 <small>a month</small></p>
         <p>This is the first price. It goes up to <strong>&pound;222 a month</strong> for new members.</p>
-        <a class="btn after-open" href="https://buy.stripe.com/cNi8wOfSzfpucm11Yx0co2z">Start my 7 days free</a>
-        <form id="wl" class="before-open" novalidate>
-          <label for="wl-name" style="position:absolute;left:-9999px">First name</label>
-          <input id="wl-name" type="text" placeholder="First name" autocomplete="given-name">
-          <label for="wl-email" style="position:absolute;left:-9999px">Email</label>
-          <input id="wl-email" type="email" placeholder="Email" autocomplete="email">
-          <input id="wl-hp" type="text" name="hp_field" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;flex:none">
-          <button class="btn" type="submit">Join the waitlist</button>
-        </form>
-        <p class="done-msg" id="wl-done" hidden>You&rsquo;re on the list. I&rsquo;ll email you the moment doors open on Monday.</p>
+        <a class="btn" href="https://app.feelfullyyou.com/api/confessions/checkout">Start my 7 days free</a>
+        <ol class="howfree before-open">
+          <li><b>Today</b>Put your card in. Nothing is charged.</li>
+          <li><b>Mon 23 Nov</b>Doors open. Your 7 free days start, with my first confession.</li>
+          <li><b>Mon 30 Nov</b>Your first month, &pound;111. Stop before then and you pay nothing.</li>
+        </ol>
         <p class="keep">Join now and your &pound;111 never goes up. When new members pay &pound;222, you still pay &pound;111, every month you stay a member. If you stop and come back later, you&rsquo;d join at the new price.</p>
       </div>
     </div>
@@ -309,7 +308,7 @@ if(Date.now()>=Date.UTC(2026,10,23,0,0,0))document.documentElement.classList.add
     <p class="vip"><b>Plus the library.</b> Most of what I'd tell you on a &pound;3,000 VIP day is already answered in there.</p>
     <p>Stay nine months and it's all open, on top of every confession and every card.</p>
     <p class="soft">Already bought one of these? It stays yours.</p>
-    <a class="btn cta after-open" href="https://buy.stripe.com/cNi8wOfSzfpucm11Yx0co2z">Start my 7 days free</a><a class="btn cta before-open" href="#join">Join the waitlist</a>
+    <a class="btn cta" href="https://app.feelfullyyou.com/api/confessions/checkout">Start my 7 days free</a>
   </section>
 
   <section class="band faq">
@@ -324,7 +323,7 @@ if(Date.now()>=Date.UTC(2026,10,23,0,0,0))document.documentElement.classList.add
       <dt>&ldquo;What do I get in my free week?&rdquo;</dt>
       <dd>A taste of everything. The confessions, the cards and Touch Base. Every question in the library. Ten pages of the Journal. Three meditations. The rest opens on day 8.</dd>
       <dt>&ldquo;When am I charged?&rdquo;</dt>
-      <dd>Your card goes in to start. Nothing is charged for 7 days, then it&rsquo;s &pound;111 a month. Stop before day 8 and you pay nothing.</dd>
+      <dd>Your card goes in to start. Nothing is charged during your 7 free days, then it&rsquo;s &pound;111 a month. <span class="before-open">Join before Monday 23 November and your free days start that Monday, when doors open, so your first payment is on Monday 30 November.</span> Stop before your first payment and you pay nothing.</dd>
       <dt>&ldquo;Will the price go up?&rdquo;</dt>
       <dd>Not for you. Join now and your &pound;111 never goes up. When new members pay &pound;222, you still pay &pound;111, every month you stay a member. If you stop and come back later, you&rsquo;d join at the new price.</dd>
       <dt>&ldquo;Do I need a partner?&rdquo;</dt>
@@ -340,7 +339,7 @@ if(Date.now()>=Date.UTC(2026,10,23,0,0,0))document.documentElement.classList.add
 
   <section class="sec">
     <p class="gap">Picture a year from now, with that question still unasked&hellip;.</p>
-    <a class="btn cta after-open" href="https://buy.stripe.com/cNi8wOfSzfpucm11Yx0co2z">Start my 7 days free</a><a class="btn cta before-open" href="#join">Join the waitlist</a>
+    <a class="btn cta" href="https://app.feelfullyyou.com/api/confessions/checkout">Start my 7 days free</a>
     <p class="note">&pound;111 now, &pound;222 later. Join now and your &pound;111 never goes up while you&rsquo;re a member.</p>
   </section>
 
@@ -353,21 +352,6 @@ if(Date.now()>=Date.UTC(2026,10,23,0,0,0))document.documentElement.classList.add
 <footer>Feel Fully You · Juliette Karaman, intimacy and Touch Expert · The Touch Reset</footer>
 
 <script src="media/confessions/player.js" defer></script>
-<script>
-document.getElementById('wl').addEventListener('submit',function(e){
-  e.preventDefault();
-  var f=this,email=document.getElementById('wl-email').value.trim(),name=document.getElementById('wl-name').value.trim();
-  var done=document.getElementById('wl-done'),btn=f.querySelector('button');
-  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){done.textContent='Pop your email in so I can reach you.';done.hidden=false;return;}
-  btn.disabled=true;btn.textContent='Adding you...';
-  /* Kit tag "Scrumptious Confessions: Waitlist" (25487963) + its welcome email (sequence 2959098). */
-  fetch('/.netlify/functions/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},
-    body:JSON.stringify({email:email,firstName:name,hp_field:document.getElementById('wl-hp').value,tagIds:[25487963],sequenceIds:[2959098]})})
-  .then(function(r){if(!r.ok)throw new Error(r.status);
-    f.hidden=true;done.textContent="You\u2019re on the list. I\u2019ll email you the moment doors open on Monday.";done.hidden=false;
-    if(typeof gtag==='function')gtag('event','generate_lead',{form:'confessions-waitlist'});})
-  .catch(function(){btn.disabled=false;btn.textContent='Join the waitlist';done.textContent="That didn\u2019t go through. Try again, or email support@feelfullyyou.com and I\u2019ll add you.";done.hidden=false;});
-});
-</script>
+
 </body>
 </html>
