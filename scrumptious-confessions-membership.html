@@ -122,10 +122,11 @@ footer{padding:40px 20px 56px;text-align:center;font-size:14px;color:var(--soft)
 .story .big{font-family:var(--display);font-weight:600;font-size:clamp(1.3rem,2.4vw,1.7rem);line-height:1.3;color:var(--ink);margin-top:1.4em}
 .tiles.six{grid-template-columns:repeat(3,minmax(0,1fr))}
 .stack{list-style:none;margin:30px auto 0;padding:0;max-width:620px;text-align:left}
-.stack li{display:grid;grid-template-columns:6em 1fr auto;gap:12px;align-items:baseline;padding:14px 4px;border-bottom:1px solid var(--line)}
-.stack b{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.stack li{display:grid;grid-template-columns:8.2em 1fr auto;gap:12px;align-items:baseline;padding:14px 4px;border-bottom:1px solid var(--line)}
+.stack b{white-space:nowrap;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600}
 .stack span{font-family:var(--display);font-weight:500;font-size:18px;color:var(--ink)}
-.stack small{font-family:var(--body);font-size:14px;color:var(--soft);margin-left:6px}
+.stack small{display:block;font-family:var(--body);font-size:14px;color:var(--soft);margin:4px 0 0}
+.vip{max-width:620px;margin:22px auto 0;font-family:var(--display);font-size:22px;line-height:1.35}.vip b{color:var(--gold);font-weight:600}
 .stack em{font-style:normal;font-weight:600;color:var(--gold)}
 .stack .total{grid-template-columns:1fr auto;border-bottom:0;border-top:2px solid var(--gold);margin-top:4px}
 .stack .total span{font-size:20px}
@@ -135,7 +136,7 @@ footer{padding:40px 20px 56px;text-align:center;font-size:14px;color:var(--soft)
 .faq dt{font-family:var(--display);font-weight:700;font-size:19px;color:var(--gold);margin-top:22px}
 .faq dd{margin:6px 0 0;font-size:17px;line-height:1.55}
 .gap{font-family:var(--display);font-weight:600;font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.25;color:var(--ink);margin-top:0;max-width:640px;margin-inline:auto}
-@media (max-width:760px){.tiles.six{grid-template-columns:repeat(2,minmax(0,1fr))}.stack li{grid-template-columns:4.8em 1fr auto}}
+@media (max-width:760px){.tiles.six{grid-template-columns:repeat(2,minmax(0,1fr))}.stack li{grid-template-columns:7.4em 1fr auto;gap:10px}.stack b{letter-spacing:.1em}}
 .keep{margin-top:14px;font-weight:700;color:var(--gold);text-align:center}
 .noname{margin-top:.6em;font-weight:700;font-size:clamp(1.2rem,2.2vw,1.5rem);color:var(--gold)}
 .about-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,5vw,64px);align-items:center;max-width:980px;margin:0 auto;text-align:left}
@@ -226,26 +227,13 @@ footer{padding:40px 20px 56px;text-align:center;font-size:14px;color:var(--soft)
     <span class="eyebrow">The longer you stay</span>
     <h2>Everything I've made opens, one month at a time.</h2>
     <ol class="stack">
-      <li><b>Day one</b><span>The library <small>136 podcast episodes &middot; 50 essays &middot; 71 questions answered</small></span><em>included</em></li>
-      <li><b>Month 1</b><span>Holiday Survival Kit</span><em>&pound;17</em></li>
-      <li><b>Month 1</b><span>Quiet Isn't Yes <small>for men</small></span><em>included</em></li>
-      <li><b>Month 1</b><span>The Trace</span><em>&pound;17</em></li>
-      <li><b>Month 2</b><span>When She Stops Reaching <small>the Approach Ritual, for men</small></span><em>&pound;17</em></li>
-      <li><b>Month 2</b><span>The Fifteen Minutes After</span><em>&pound;12</em></li>
-      <li><b>Month 2</b><span>Between Touches</span><em>included</em></li>
-      <li><b>Month 3</b><span>31 Touch Points</span><em>&pound;27</em></li>
-      <li><b>Month 3</b><span>The Full Stop</span><em>&pound;9</em></li>
-      <li><b>Month 4</b><span>The Three Answers</span><em>&pound;17</em></li>
-      <li><b>Month 4</b><span>31 Days Closer</span><em>&pound;17</em></li>
-      <li><b>Month 5</b><span>The 45-Minute Connection Ritual</span><em>&pound;27</em></li>
-      <li><b>Month 5</b><span>Trust &amp; Repair</span><em>&pound;15</em></li>
-      <li><b>Month 6</b><span>The Sacred No</span><em>&pound;55</em></li>
-      <li><b>Month 7</b><span>One Touch</span><em>&pound;97</em></li>
-      <li><b>Month 8</b><span>The Unspoken Distance</span><em>&pound;97</em></li>
-      <li><b>Month 9</b><span>Communication Reboot Kit</span><em>&pound;37</em></li>
+      <li><b>Day one</b><span>The library and the Scrumptiousness Journal <small>136 podcast episodes &middot; 50 essays &middot; 71 questions answered</small></span><em>included</em></li>
+      <li><b>Months 1&ndash;5</b><span>12 short practices <small>The Trace, When She Stops Reaching, The Fifteen Minutes After, 31 Touch Points and more</small></span><em>&pound;175</em></li>
+      <li><b>Months 6&ndash;9</b><span>The four programmes <small>The Sacred No, One Touch, The Unspoken Distance, Communication Reboot Kit</small></span><em>&pound;286</em></li>
       <li class="more"><span>&hellip;and many others to follow.</span></li>
       <li class="total"><span>Bought one by one</span><em>&pound;461</em></li>
     </ol>
+    <p class="vip"><b>Plus the library.</b> Most of what I'd tell you on a &pound;3,000 VIP day is already answered in there.</p>
     <p>Stay nine months and it's all open, on top of every confession and every card.</p>
     <p class="soft">Already bought one of these? It stays yours.</p>
     <a class="btn cta" href="https://buy.stripe.com/cNi8wOfSzfpucm11Yx0co2z">Join for &pound;111 a month</a>
