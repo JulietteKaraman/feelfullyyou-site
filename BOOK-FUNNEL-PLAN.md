@@ -75,7 +75,7 @@ Each buyer is told which chapter to start with based on her state. One book, wit
 
 ## Open decisions for Juliette
 
-- Book price (the book should pay for ads, so low but not free).
+- Book price: DECIDED 19 Nov, £17 (Juliette). Shown on the sales page only, never inside the book or emails. Optional later test against £27 if buyers are plentiful. Optional single order bump: the book read aloud by Juliette.
 - Call format and length. Is the call free?
 - Rolling fortnight versus fixed dates for the Confessions trial.
 - Whether to record Touch Reset Module 1 before sending ad traffic to the call.
