@@ -4,17 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Scrumptious Confessions | Juliette Karaman</title>
-<meta name="description" content="Scrumptious Confessions. Juliette Karaman's voice, in your ear, with the things she doesn't say on Instagram. Free for two weeks, 23 November to 6 December. No card, just your email.">
+<meta name="description" content="Scrumptious Confessions. Juliette Karaman's voice, in your ear, with the things she doesn't say on Instagram. 7 days free, then £111 a month. Stop any time.">
 <link rel="canonical" href="https://feelfullyyou.com/scrumptious-confessions">
 <meta property="og:title" content="Scrumptious Confessions | Juliette Karaman">
-<meta property="og:description" content="My voice, in your ear, with the things I don't say on Instagram. Free for two weeks, 23 November to 6 December.">
+<meta property="og:description" content="My voice, in your ear, with the things I don't say on Instagram. 7 days free, then £111 a month.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://feelfullyyou.com/scrumptious-confessions">
 <meta property="og:image" content="https://feelfullyyou.com/scrumptious-confessions-og.jpg">
 <meta property="og:site_name" content="Feel Fully You">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Scrumptious Confessions | Juliette Karaman">
-<meta name="twitter:description" content="My voice, in your ear, with the things I don't say on Instagram. Free for two weeks, 23 November to 6 December.">
+<meta name="twitter:description" content="My voice, in your ear, with the things I don't say on Instagram. 7 days free, then £111 a month.">
 <meta name="twitter:image" content="https://feelfullyyou.com/scrumptious-confessions-og.jpg">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -132,17 +132,8 @@ footer{padding:40px 20px 56px;text-align:center;font-size:14px;color:var(--soft)
       <span class="eyebrow">Scrumptious Confessions</span>
       <h1>People tell me they could listen to my voice for hours. So I built an app <em>where you can.</em></h1>
       <p class="lead">My voice, in your ear, with the things I don't say on Instagram. For women and men.</p>
-      <span class="badge">Free 23 November to 6 December</span>
-      <form id="wl" novalidate>
-        <label for="wl-name" style="position:absolute;left:-9999px">First name</label>
-        <input id="wl-name" type="text" placeholder="First name" autocomplete="given-name">
-        <label for="wl-email" style="position:absolute;left:-9999px">Email</label>
-        <input id="wl-email" type="email" placeholder="Email" autocomplete="email">
-        <input id="wl-hp" type="text" name="hp_field" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;flex:none">
-        <button class="btn" type="submit">Save my free place</button>
-      </form>
-      <p class="note">No card. From Monday 7 December it's &pound;111 a month, if you want to stay.</p>
-      <p class="done-msg" id="wl-done" hidden>You're in. Your way in is waiting in your inbox.</p>
+      <a class="btn" href="https://buy.stripe.com/cNi8wOfSzfpucm11Yx0co2z" style="display:inline-block;margin-top:26px;text-decoration:none">Start my 7 days free</a>
+      <p class="note">Your card goes in to start. Nothing is charged for 7 days, then it's &pound;111 a month. Stop before day 8 and you pay nothing.</p>
     </div>
   </section>
 
@@ -193,7 +184,7 @@ footer{padding:40px 20px 56px;text-align:center;font-size:14px;color:var(--soft)
 <footer>Feel Fully You · Juliette Karaman, Intimacy and Touch Expert · The Touch Reset</footer>
 
 <script>
-document.getElementById('wl').addEventListener('submit',function(e){
+(document.getElementById('wl')||{addEventListener:function(){}}).addEventListener('submit',function(e){
   e.preventDefault();
   var f=this,email=document.getElementById('wl-email').value.trim(),name=document.getElementById('wl-name').value.trim();
   var done=document.getElementById('wl-done'),btn=f.querySelector('button');
