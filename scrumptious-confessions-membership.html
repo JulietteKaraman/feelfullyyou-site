@@ -122,15 +122,16 @@ footer{padding:40px 20px 56px;text-align:center;font-size:14px;color:var(--soft)
 .story p{font-size:19px}
 .story .big{font-family:var(--display);font-weight:600;font-size:clamp(1.3rem,2.4vw,1.7rem);line-height:1.3;color:var(--ink);margin-top:1.4em}
 .tiles.six{grid-template-columns:repeat(3,minmax(0,1fr))}
+.tiles .dyad{display:block;margin-top:6px;font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-size:17px;color:var(--gold)}
 .shelves{list-style:none;margin:28px auto 0;padding:0;max-width:760px;display:flex;flex-wrap:wrap;justify-content:center;gap:10px}.shelves li{padding:9px 16px;border:1px solid var(--gold);border-radius:999px;color:var(--gold);font-weight:600;font-size:15px}
 .stack{list-style:none;margin:30px auto 0;padding:0;max-width:620px;text-align:left}
-.stack li{display:grid;grid-template-columns:8.2em 1fr auto;gap:12px;align-items:baseline;padding:14px 4px;border-bottom:1px solid var(--line)}
+.stack li{display:grid;grid-template-columns:8.2em 1fr;gap:12px;align-items:baseline;padding:14px 4px;border-bottom:1px solid var(--line)}
 .stack b{white-space:nowrap;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600}
 .stack span{font-family:var(--display);font-weight:500;font-size:18px;color:var(--ink)}
 .stack small{display:block;font-family:var(--body);font-size:14px;color:var(--soft);margin:4px 0 0}
 .vip{max-width:620px;margin:22px auto 0;font-family:var(--display);font-size:22px;line-height:1.35}.vip b{color:var(--gold);font-weight:600}
 .stack em{font-style:normal;font-weight:600;color:var(--gold)}
-.stack .total{grid-template-columns:1fr auto;border-bottom:0;border-top:2px solid var(--gold);margin-top:4px}
+.stack .total{grid-template-columns:1fr;border-bottom:0;border-top:2px solid var(--gold);margin-top:4px}
 .stack .total span{font-size:20px}
 .stack .total em{font-family:var(--display);font-size:24px}
 .soft{color:var(--soft);font-size:16px}
@@ -138,7 +139,7 @@ footer{padding:40px 20px 56px;text-align:center;font-size:14px;color:var(--soft)
 .faq dt{font-family:var(--display);font-weight:700;font-size:19px;color:var(--gold);margin-top:22px}
 .faq dd{margin:6px 0 0;font-size:17px;line-height:1.55}
 .gap{font-family:var(--display);font-weight:600;font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.25;color:var(--ink);margin-top:0;max-width:640px;margin-inline:auto}
-@media (max-width:760px){.tiles.six{grid-template-columns:repeat(2,minmax(0,1fr))}.stack li{grid-template-columns:7.4em 1fr auto;gap:10px}.stack b{letter-spacing:.1em}}
+@media (max-width:760px){.tiles.six{grid-template-columns:repeat(2,minmax(0,1fr))}.stack li{grid-template-columns:1fr;gap:4px 14px}.stack b{grid-column:1/-1;letter-spacing:.16em}.stack .total,.stack .more{grid-template-columns:1fr auto}}
 .keep{margin-top:14px;font-weight:700;color:var(--gold);text-align:center}
 .noname{margin-top:.6em;font-weight:700;font-size:clamp(1.2rem,2.2vw,1.5rem);color:var(--gold)}
 .about-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,5vw,64px);align-items:center;max-width:980px;margin:0 auto;text-align:left}
@@ -212,7 +213,7 @@ footer{padding:40px 20px 56px;text-align:center;font-size:14px;color:var(--soft)
     <h2>A little every week. <em>Something bigger every month.</em></h2>
     <ul class="tiles six">
       <li><i>Mon</i>A new confession in my voice.</li>
-      <li><i>Mon + Thu</i>A card to take into your week.</li>
+      <li><i>Mon + Thu</i>A card to practise the Dyad, my communication method. <em class="dyad">Thank you. Clarify that. Summarise that.</em></li>
       <li><i>Wed</i>A new page of my poems.</li>
       <li><i>Fri</i>A new meditation. Three are waiting on day one.</li>
       <li><i>Daily</i>Five minutes of Touch Base, with your tracker.</li>
@@ -252,11 +253,15 @@ footer{padding:40px 20px 56px;text-align:center;font-size:14px;color:var(--soft)
     <span class="eyebrow">Every month you stay</span>
     <h2>Everything I've made opens, one month at a time.</h2>
     <ol class="stack">
-      <li><b>Day one</b><span>The library and the Scrumptiousness Journal <small>136 podcast episodes &middot; 50 essays &middot; 71 questions answered</small></span><em>included</em></li>
-      <li><b>Months 1&ndash;5</b><span>12 short practices <small>The Trace, When She Stops Reaching, The Fifteen Minutes After, 31 Touch Points and more</small></span><em>&pound;175</em></li>
-      <li><b>Months 6&ndash;9</b><span>The four programmes <small>The Sacred No, One Touch, The Unspoken Distance, Communication Reboot Kit</small></span><em>&pound;286</em></li>
-      <li class="more"><span>&hellip;and many others to follow.</span></li>
-      <li class="total"><span>Bought one by one</span><em>&pound;461</em></li>
+      <li><b>Day one</b><span>The Scrumptiousness Journal <small>103 pages to write in</small></span></li>
+      <li><b>Day one</b><span>The library <small>136 podcast episodes &middot; 50 essays &middot; 71 questions answered</small></span></li>
+      <li><b>Fridays</b><span>40+ meditations in my voice <small>three on day one, then a new one every Friday</small></span></li>
+      <li><b>Weekly</b><span>A card to practise the Dyad <small>my communication method, from my Communication and Intimacy set</small></span></li>
+      <li><b>Wednesdays</b><span>A poem from my book <small>a new one every week</small></span></li>
+      <li><b>Months 1&ndash;5</b><span>12 short practices <small>The Trace, When She Stops Reaching, The Fifteen Minutes After, 31 Touch Points and more</small></span></li>
+      <li><b>Months 6&ndash;9</b><span>The four programmes <small>The Sacred No, One Touch, The Unspoken Distance, Communication Reboot Kit</small></span></li>
+      <li class="more"><span>&hellip;and I keep adding more.</span></li>
+      <li class="total"><span>Well over &pound;1,400 of value, the longer you stay.</span></li>
     </ol>
     <p class="vip"><b>Plus the library.</b> Most of what I'd tell you on a &pound;3,000 VIP day is already answered in there.</p>
     <p>Stay nine months and it's all open, on top of every confession and every card.</p>
