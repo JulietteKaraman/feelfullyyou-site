@@ -52,7 +52,11 @@ Do it somewhere that is actually safe. A room where you can close the door. A ch
 
 Then come back when you are ready. The book will still be here.
 
+> **[Design note, not book text]** Place the Touch Base emblem here in gold (#A88538), with a QR code beside it that opens the audio. Emblem file: `touch-base-logo.png`.
+
 I am glad you are here.
+
+Warmly,
 
 Juliette
 
@@ -70,6 +74,7 @@ Juliette
 1. **The exact Touch Base link.** From Canon, Touch Base is a free tile in the app library, and it asks for first name and email (no password) before opening everything but the photo and title. The page `/touch-base` explains it but has no direct app link in this repo. I have not put any link in the book yet.
 2. **Email sequence.** Touch Base signups join Kit sequence 2825130, which last I could see ended on a 31 Touch Points door and a reply invite. Canon wants one direction. If the book sends readers there, that sequence should end at Confessions, or the book should link to the practice without capturing an email.
 3. **Video, audio, or both.** I wrote "a video and an audio" from your message. Please confirm that is what readers will find.
-4. **Sign-off.** Just "Juliette", or "Love always, Juliette" as in your emails?
+4. **Sign-off.** Decided by Juliette: "Warmly, Juliette". Your CLAUDE.md bans "Warmly, Juliette" in website page copy, so I applied your instruction to the book only. Do not carry it onto site pages.
+7. **QR code.** Not made yet. It needs the exact link readers should land on. The only app link I found in the repo is `app.feelfullyyou.com/practice/touch-base`. Please confirm that is the right one, and whether you want a source tag on it (like `?src=book`) so you can see book readers separately. Print it black on off-white, not gold, so phones can scan it. The emblem alone is gold.
 5. **Single readers.** One line assumes a partner ("a person you love"). Should it change?
 6. **Chapter numbers.** Chapters 2 to 5 do not exist yet, so the numbers here come from the outline.
