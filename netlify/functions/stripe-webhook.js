@@ -241,6 +241,8 @@ const LAST_RESORT_LABEL_BY_PENCE = {
 
 const PAYMENT_LINK_LABELS = {
   'plink_1ULQ4yCCw18geY15H3JjWZcy': '31 Touch Points £27 (app)',
+  'plink_1Udy8MCCw18geY155vpQ03Qe': 'The Trace £17 (own checkout)',
+  'plink_1UdyCJCCw18geY15RxaHNJ56': '45-Minute Connection Ritual £27 (own checkout)',
   'plink_1ULQHUCCw18geY15FZP1jMYR': '31 Day Connection Kit £35 (both 31s)',
   'plink_1UIqnGCCw18geY15MahlIFxj': 'Cards: 31 Days Closer £17',
   'plink_1UIwiyCCw18geY15dZkdExIa': 'Cards: Couples and Friends & Family £55',
@@ -271,6 +273,21 @@ const PAYMENT_LINK_LABELS = {
 // reliable key. Consulted only when PRODUCT_MAP misses, so it can never
 // override an existing metadata-tagged product.
 const PAYMENT_LINK_PRODUCTS = {
+  // THE TRACE £17, her own checkout (20 Nov 2026, Juliette: "let's make a £17 link
+  // little sales page for us ourselves"). feelfullyyou.com/the-trace. The product is the
+  // open app page, so delivery is the welcome email with the link. Bump (Stripe cross-sell):
+  // The 15 Minutes After £12, handled below by amount_subtotal.
+  // 45-MINUTE CONNECTION RITUAL £27, the one-time offer on thankyou-the-trace (20 Nov 2026).
+  'plink_1UdyCJCCw18geY15RxaHNJ56': {
+    tagId: 26237085,      // "45-Minute Connection Ritual buyer"
+    sequenceId: 2980393,  // "45-Minute Connection Ritual buyers: welcome"
+    label: '45-Minute Connection Ritual £27 (own checkout)'
+  },
+  'plink_1Udy8MCCw18geY155vpQ03Qe': {
+    tagId: 26237029,      // "The Trace buyer"
+    sequenceId: 2980389,  // "The Trace buyers: welcome"
+    label: 'The Trace £17 (own checkout)'
+  },
   // SCRUMPTIOUS CONFESSIONS £97 a month. The welcome is sent HERE, on the
   // checkout, because the 12 Nov 2026 test purchase showed this endpoint
   // receives checkout.session.completed but NOT invoice.paid for it. The
@@ -1181,6 +1198,18 @@ exports.handler = async function(event) {
         await addToKit(email, firstName, 23849459, 2903192, apiSecret, phone);
       } catch (err) {
         console.error('31 Days Closer bump tagging failed:', err);
+      }
+    }
+
+    // The 15 Minutes After £12 bump on The Trace link (20 Nov 2026). Same reason as the
+    // 31 Days Closer bump above: the cross-sell adds a line item but the session only names
+    // The Trace link. £17 + £12 = 2900 list price means the box was ticked.
+    if (paymentLink === 'plink_1Udy8MCCw18geY155vpQ03Qe' && (session?.amount_subtotal || 0) >= 1700 + 1200) {
+      try {
+        console.log(`15 Minutes After bump on The Trace: tagging ${email}`);
+        await addToKit(email, firstName, 25334942, 2980390, apiSecret, phone);
+      } catch (err) {
+        console.error('15 Minutes After bump tagging failed:', err);
       }
     }
 
