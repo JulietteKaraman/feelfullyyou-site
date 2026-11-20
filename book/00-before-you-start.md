@@ -44,7 +44,13 @@ Go slowly.
 
 This is a book about the body, and the body does not hurry. Read a chapter, then put the book down and let it settle before you pick it up again.
 
-If anything in these pages touches something that feels too big to carry alone, stop there. Put the book down, put your feet on the floor, and look after yourself first. It will still be here.
+If anything in these pages stirs something big, do not push through it. Stop, and go to Touch Base.
+
+Touch Base is the practice I made for exactly this moment. It is a video and an audio. You press your thumb against your forefinger and slowly trace every ridge, while my voice reminds your body what it most needs to hear: there is no tiger. You are safe to feel this.
+
+Do it somewhere that is actually safe. A room where you can close the door. A chair, your feet on the floor, nobody behind you. Your body cannot learn it is safe while part of it is still watching the door, so choose the place first.
+
+Then come back when you are ready. The book will still be here.
 
 I am glad you are here.
 
@@ -58,8 +64,12 @@ Juliette
 
 **"Start with the earlier one":** this follows the quiz's own scoring rule, which is built to name the earliest place a person gets stuck.
 
-**Decisions for you:**
-1. The safety paragraph is mine. Do you want it, and do you want a resource line under it (a helpline, or your support email)?
-2. The sign-off is just "Juliette". Do you want "Love always, Juliette", as in your emails, or nothing?
-3. "Each one will show you something about a person you love" assumes a partner. If the reader is single, that line should change.
-4. Chapters 2 to 5 do not exist yet, so the chapter numbers here are from the outline.
+**Safety note, decided by Juliette 20 Nov 2026:** the note now sends readers to Touch Base (her video or audio) and asks them to do it somewhere actually safe, "no tiger behind them". The tiger line is hers: Touch Base's own page says "There's no tiger. I don't have to brace."
+
+**To confirm before print:**
+1. **The exact Touch Base link.** From Canon, Touch Base is a free tile in the app library, and it asks for first name and email (no password) before opening everything but the photo and title. The page `/touch-base` explains it but has no direct app link in this repo. I have not put any link in the book yet.
+2. **Email sequence.** Touch Base signups join Kit sequence 2825130, which last I could see ended on a 31 Touch Points door and a reply invite. Canon wants one direction. If the book sends readers there, that sequence should end at Confessions, or the book should link to the practice without capturing an email.
+3. **Video, audio, or both.** I wrote "a video and an audio" from your message. Please confirm that is what readers will find.
+4. **Sign-off.** Just "Juliette", or "Love always, Juliette" as in your emails?
+5. **Single readers.** One line assumes a partner ("a person you love"). Should it change?
+6. **Chapter numbers.** Chapters 2 to 5 do not exist yet, so the numbers here come from the outline.
