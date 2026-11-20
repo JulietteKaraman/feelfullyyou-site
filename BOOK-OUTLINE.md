@@ -14,8 +14,8 @@ Voice rules for every chapter: start in the moment, not the lesson. Short lines.
 
 | # | Chapter | Words | Purpose |
 |---|---|---|---|
-| 0 | Before you start | 300 | One page. How to read it. Start with your state chapter. |
-| 1 | Yesterday | 1,800 | The hook. What touch actually happened yesterday? Mirrors the quiz's first question. Reader recognises herself. |
+| 0 | Before you start | 450 | DRAFTED (book/00-before-you-start.md). Letter, what this is not, find your state, how to read. |
+| 1 | Yesterday | 900 | The hook. What touch actually happened yesterday? Mirrors the quiz's first question. Reader recognises herself. |
 | 2 | The Brace | 3,000 | State 1. Almost nothing is arriving. |
 | 3 | The Fade | 3,000 | State 2. It arrives, then you go. |
 | 4 | The Reach | 3,000 | State 3. You feel it and cannot ask for it. |
@@ -26,7 +26,7 @@ Voice rules for every chapter: start in the moment, not the lesson. Short lines.
 | 9 | Why I built Scrumptious Confessions | 1,200 | Her story, the bridge. |
 | 10 | Your next fortnight | 500 | One door: the free fortnight. |
 
-Total about 21,800.
+Total about 21,200. Chapter 1 is DRAFTED (book/01-yesterday.md) and kept at about 860 words by Juliette.
 
 ## Chapter sources (existing writing to mine)
 

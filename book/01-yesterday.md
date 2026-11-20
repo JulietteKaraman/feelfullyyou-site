@@ -98,7 +98,7 @@ There are four places your Touch can go. The next four chapters take them one at
 - I rewrote lines in the essay's "It is not attraction. It is the absence of stakes" shape, because your rules say no "Not x, but y" constructions.
 - Touch is capital T as a noun, per Canon. I kept verb forms lowercase (touched, touching). If you want the verb capitalised too, say so and I will change it everywhere.
 
-**Needs your decision before it can be printed:**
-1. **The woman and the nineteen years.** Is this a composite or a real client? If real, you need her consent or enough changed details. The twenty-three years couple is the same: confirm you are happy to use it, and that "second honeymoon" is accurate.
-2. **Length.** This draft is about 1,200 words and the outline asks for 1,800. It could grow with a second "yesterday" scene (the hairdresser's wash from your essay "Why is my haircut the only time anyone") or a short moment of your own.
-3. **The last line.** "You will recognise your own" assumes the reader has met the four states. If someone buys the book from an ad and never took the quiz, chapter 0 needs to give them a way to find theirs.
+**Decided by Juliette, 20 Nov 2026:**
+1. **Consent.** Juliette confirmed she has the woman's consent to use this story. The twenty-three years couple was not covered by that answer, so confirm it separately before print.
+2. **Length.** Keep it at about 860 words. No second scene.
+3. **Finding your state.** A reader who has not taken the quiz now finds her chapter in "Before you start" (book/00-before-you-start.md), so the last line of this chapter works as written.
