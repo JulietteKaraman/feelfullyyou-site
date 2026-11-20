@@ -23,6 +23,9 @@ https://shop.feelfullyyou.com/*  https://feelfullyyou.com/my-cards/  301!
 # full sales page. 302 so it can be undone; the old sign-up page stays in the repo.
 /scrumptious-confessions        /scrumptious-confessions-membership   302!
 /scrumptious-confessions.html   /scrumptious-confessions-membership   302!
+# 20 Nov 2026: the old join page sends everyone to the one sales page. 302 so it can be undone; the HTML file stays in the repo.
+/scrumptious-confessions-join        /scrumptious-confessions-membership   302!
+/scrumptious-confessions-join.html   /scrumptious-confessions-membership   302!
 /scrumptious-turn-on-activation       /scrumptious-touch-reset   301!
 /scrumptious-turn-on-activation.html  /scrumptious-touch-reset   301!
 
