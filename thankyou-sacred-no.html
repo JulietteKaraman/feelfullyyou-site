@@ -91,6 +91,42 @@
     .guide-wrap,.inside,.next,.signoff{padding-left:20px;padding-right:20px}
     .guide-card{padding:28px 20px}
   }
+
+  /* 20 Nov 2026: warmer page. Photo hero, gold button, Confessions feature card */
+  .hero2{max-width:1040px;margin:0 auto;padding:104px 28px 24px;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+  .hero2 .txt{text-align:left}
+  .hero2 .check{margin:0 0 24px}
+  .hero2 h1{font-size:clamp(2.2rem,5vw,3.4rem)}
+  .hero2 .hero-sub{margin:0;max-width:40ch}
+  .hero2 .pic{position:relative;border-radius:6px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 24px 60px rgba(13,53,53,.25)}
+  .hero2 .pic img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block}
+  .hero2 .pic:after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 1px rgba(221,201,142,.5);border-radius:6px}
+  .guide-card .btn-open{display:inline-block;background:var(--gold-pale);color:var(--teal-deep);font-family:var(--display);font-weight:700;font-size:16px;padding:16px 32px;border-radius:999px;transition:transform .2s,background .2s}
+  .guide-card .btn-open:hover{background:#fff;transform:translateY(-2px)}
+  .quote{max-width:640px;margin:64px auto 0;padding:0 28px;text-align:center}
+  .quote p{font-family:var(--display);font-weight:600;font-size:clamp(1.4rem,3.2vw,2rem);line-height:1.25;color:var(--ink);letter-spacing:-.015em}
+  .quote span{display:block;margin-top:14px;font-family:var(--display);color:var(--gold-deep);font-weight:600}
+  .conf{max-width:720px;margin:72px auto 24px;padding:0 28px}
+  .conf-card{display:grid;grid-template-columns:240px 1fr;background:#120b1c;border-radius:6px;overflow:hidden;color:#f3ecf8}
+  .conf-card img{width:100%;height:auto;aspect-ratio:652/672;object-fit:cover;display:block;align-self:center}
+  .conf-body{padding:30px 30px 32px}
+  .conf-body .k{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-pale);font-weight:600}
+  .conf-body h3{font-family:var(--display);font-weight:700;font-size:1.6rem;color:#fff;margin:8px 0 10px;letter-spacing:-.01em}
+  .conf-body p{font-size:15px;line-height:1.6;color:rgba(243,236,248,.8)}
+  .conf-body ul{list-style:none;margin:16px 0 22px;padding:0}
+  .conf-body li{font-size:15px;line-height:1.5;padding:5px 0 5px 20px;position:relative;color:#f3ecf8}
+  .conf-body li:before{content:"";position:absolute;left:0;top:13px;width:7px;height:7px;border-radius:50%;background:var(--gold-pale)}
+  .conf-body .btn-open{display:inline-block;background:var(--gold-pale);color:#120b1c;font-family:var(--display);font-weight:700;font-size:16px;padding:15px 30px;border-radius:999px}
+  .conf-body .small{margin-top:12px;font-size:13px;color:rgba(243,236,248,.6)}
+  @media(max-width:760px){
+    .hero2{grid-template-columns:1fr;gap:28px;padding:88px 20px 16px}
+    .hero2 .pic{order:-1;aspect-ratio:1/1}
+    .hero2 .txt{text-align:center}
+    .hero2 .check{margin:0 auto 20px}
+    .hero2 .hero-sub{margin:0 auto}
+    .conf-card{grid-template-columns:1fr}
+    .conf-card img{aspect-ratio:1/1;height:auto}
+  }
 </style>
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -137,13 +173,16 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
 </nav>
 
 <!-- HERO -->
-<div class="hero">
-  <div class="check">
-    <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+<div class="hero2">
+  <div class="txt">
+    <div class="check">
+      <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+    </div>
+    <div class="eyebrow">Payment confirmed</div>
+    <h1>Your Sacred No begins now.</h1>
+    <p class="hero-sub">You just said yes to yourself. The Sacred No is waiting for you in the Feel Fully You App.</p>
   </div>
-  <div class="eyebrow">Payment confirmed</div>
-  <h1>Your Sacred No begins now.</h1>
-  <p class="hero-sub">Payment received. The Sacred No is waiting for you in the Feel Fully You App.</p>
+  <div class="pic"><img src="sn-dom04-tophat.jpg" alt="Juliette in a top hat"></div>
 </div>
 
 <!-- GUIDE CARD -->
@@ -152,8 +191,8 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
     <div class="label">The Sacred No</div>
     <h2>Open it in the app</h2>
     <p>Sign in with the email you paid with. That email is your key, so use the same one, and day 1 is open and waiting.</p>
-    <p style="margin-top:18px"><a href="https://app.feelfullyyou.com/practice/the-sacred-no" style="display:inline-block;background:var(--teal,#2F4F4F);color:#fff;font-family:'Poppins',sans-serif;font-weight:700;padding:14px 26px;border-radius:3px;text-decoration:none">Open The Sacred No &rarr;</a></p>
-    <p style="margin-top:14px;font-size:14px">app.feelfullyyou.com. Your welcome email is on its way too, with the same link.</p>
+    <p style="margin-top:18px"><a href="https://app.feelfullyyou.com/practice/the-sacred-no" class="btn-open">Open The Sacred No &rarr;</a></p>
+    <p style="margin-top:14px;margin-bottom:0;font-size:14px">app.feelfullyyou.com. Your welcome email is on its way too, with the same link.</p>
     
   </div>
 </div>
@@ -185,23 +224,38 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
 </div>
 
 <!-- SIGNOFF -->
-<div class="signoff">
-  <p>A no that comes from the body changes what every yes means. That is what these seven days are for.</p>
-  <p style="margin-top:14px">Any questions, email <a href="mailto:support@feelfullyyou.com" style="color:var(--gold-deep)">support@feelfullyyou.com</a></p>
-  <div class="name">Juliette</div>
-  <p style="font-family:'Poppins',sans-serif;font-weight:700;color:#A88538;font-size:clamp(17px,2.3vw,22px);letter-spacing:-.01em;margin-top:20px">Being touched isn't the same as feeling touch. Patterns can be changed.</p>
+<div class="quote">
+  <p>"A no that comes from the body changes what every yes means."</p>
+  <span>Juliette</span>
+</div>
+
+<!-- CONFESSIONS -->
+<div class="conf">
+  <div class="conf-card">
+    <img src="media/confessions/cover.jpg" alt="Scrumptious Confessions">
+    <div class="conf-body">
+      <div class="k">When you want more of my voice</div>
+      <h3>Scrumptious Confessions</h3>
+      <p>People tell me they could listen to my voice for hours. So I built an app where you can.</p>
+      <ul>
+        <li>Monday: a confession in my voice</li>
+        <li>Wednesday: a poem</li>
+        <li>Thursday: my answers to your questions, never your name</li>
+        <li>Friday: a meditation, with music</li>
+      </ul>
+      <a href="/scrumptious-confessions-membership" class="btn-open">Start my 7 days free &rarr;</a>
+      <p class="small">Then £111 a month for the first 50 members. Stop before day 8 and you pay nothing.</p>
+    </div>
+  </div>
+</div>
+
+<div class="signoff" style="padding-top:24px">
+  <p>Any questions, email <a href="mailto:support@feelfullyyou.com" style="color:var(--gold-deep)">support@feelfullyyou.com</a></p>
 </div>
 
 <!-- NEXT STEPS -->
 <div class="next">
-  <div class="next-label">If you want to go further</div>
-  <a href="/scrumptious-confessions-membership" class="next-row">
-    <div class="next-row-text">
-      <h3>Scrumptious Confessions</h3>
-      <p>My voice in your ear, something new every day: a confession, a poem, my answers to your questions, a meditation. 7 days free, then £111 a month.</p>
-    </div>
-    <span class="next-arr">→</span>
-  </a>
+  <div class="next-label">Other ways to go further</div>
   <a href="/one-touch" class="next-row">
     <div class="next-row-text">
       <h3>One Touch</h3>
