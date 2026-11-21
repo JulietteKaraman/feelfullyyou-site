@@ -150,7 +150,11 @@ footer{padding:40px 20px 56px;text-align:center;font-size:14px;color:var(--soft)
 .gap{font-family:var(--display);font-weight:600;font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.25;color:var(--ink);margin-top:0;max-width:640px;margin-inline:auto}
 @media (max-width:760px){.tiles.six{grid-template-columns:repeat(2,minmax(0,1fr))}.stack li{grid-template-columns:1fr;gap:4px 14px}.stack b{grid-column:1/-1;letter-spacing:.16em}.stack .total,.stack .more{grid-template-columns:1fr auto}}
 .keep{margin-top:14px;font-weight:700;color:var(--gold);text-align:center}
-.gift{margin:12px 0 14px;padding:12px 14px;border:1px solid var(--gold);border-radius:12px;text-align:center}
+.gift{margin:18px 0 18px;padding:20px 20px 18px;border:2px solid var(--gold);border-radius:16px;background:rgba(221,201,142,.12);text-align:center}
+.gift .gt{margin:0 0 8px;font-size:.78rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:700}
+.gift .gh{margin:0 0 10px;font-size:clamp(1.15rem,2.2vw,1.4rem);line-height:1.3;font-weight:700}
+.gift p{margin:0 0 8px}
+.gift .gs{margin:0;font-weight:700;color:var(--gold)}
 .noname{margin-top:.6em;font-weight:700;font-size:clamp(1.2rem,2.2vw,1.5rem);color:var(--gold)}
 .about-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,5vw,64px);align-items:center;max-width:980px;margin:0 auto;text-align:left}
 .about-photo img{width:100%;height:auto;border-radius:6px;box-shadow:0 40px 90px rgba(0,0,0,.7),0 0 0 1px rgba(221,201,142,.3)}
@@ -182,7 +186,12 @@ if(Date.now()>=Date.UTC(2026,10,23,0,0,0))document.documentElement.classList.add
       <div class="lock">
         <p class="price">&pound;111 <small>a month</small></p>
         <p><strong>The first 50 members pay &pound;111.</strong> After that, the price goes up for new members.</p>
-        <p class="gift"><strong>My gift to you:</strong> start your 7 free days and the Holiday Survival Kit and Quiet Isn&rsquo;t Yes are yours to keep, whatever you decide.</p>
+        <div class="gift">
+          <p class="gt">My gift to you</p>
+          <p class="gh">Start your 7 free days and the Holiday Survival Kit is yours to keep. <span style="color:var(--gold)">I normally charge &pound;17 for it.</span></p>
+          <p>It&rsquo;s on your phone from your first day. Cards for any holiday season: the drive there, the table, who isn&rsquo;t here this year. Or use them any night of the year with your partner, your kids, your family, your friends. Quiet Isn&rsquo;t Yes, my guide for men, comes with it.</p>
+          <p class="gs">Even if it&rsquo;s not for you and you stop, they stay yours.</p>
+        </div>
         <a class="btn" href="https://app.feelfullyyou.com/api/confessions/checkout">Start my 7 days free</a>
         <ol class="howfree before-open">
           <li><b>Today</b>Put your card in. Nothing is charged.</li>
