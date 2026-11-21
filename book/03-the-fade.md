@@ -158,7 +158,7 @@ You already want it.
 
 Staying is the part nobody built.
 
-Chapter 8 builds it, one small piece at a time. For now, you have three minutes.
+Chapter 8 builds it, and Chapter 10 turns it into your first 31 days. For now, you have three minutes.
 
 ---
 

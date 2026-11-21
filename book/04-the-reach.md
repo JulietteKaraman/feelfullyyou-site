@@ -244,7 +244,7 @@ Then stop talking.
 
 Your body knows what it wants. It has been waiting to be asked.
 
-You have been closing the gap alone for a long time. Chapter 8 shows you how it becomes shared.
+You have been closing the gap alone for a long time. Chapter 8 shows you how it becomes shared, and Chapter 10 gives you the plan.
 
 ---
 

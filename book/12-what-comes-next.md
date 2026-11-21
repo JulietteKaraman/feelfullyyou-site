@@ -22,7 +22,7 @@ It is open to women and men. The first seven days are free.
 
 ## If you are a woman, and you want the whole of this held
 
-The Scrumptious Touch Reset is eight weeks, for women. Recorded modules, with live support. It follows the four stages you have been walking through in this book. Recognise. Discern. Discover. Ask and Receive.
+The Scrumptious Touch Reset is eight weeks, for women. Recorded modules, with live support. It runs in four stages: Recognise, Discern, Discover, Ask and Receive. You have already taken the first steps of the first.
 
 I open it in January. If you want to know whether it is right for you, I will invite you to a Touch Reset call.
 
