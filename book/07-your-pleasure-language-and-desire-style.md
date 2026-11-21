@@ -120,6 +120,8 @@ If you are turned on by being told what to do, or by telling someone else what t
 
 *A light tap.* Alternate a light tap, a firmer tap and a pause. Try the same on the inside of the knee, then the top of the shoulder. Which place surprised you?
 
+*The scarf.* Lay a soft scarf beside your partner and do not touch them yet. What happens in their body just from seeing it? Then gently bring their wrists together and loop the scarf around them. Not tight, only enough to signal containment. Does being held bring comfort, resistance, something else? With their hands loosely tied, resting in their lap or above their head, hover your fingers over their forearm or collarbone without touching. Drag the scarf slowly along a shoulder, just enough to create friction. Then, if they want to, ask them to close their eyes and play with pausing, hovering, adding Touch in unexpected places. Keep your green, yellow and red words close, and untie them the moment they say yellow or red. Afterwards ask one question: when the scarf came off or your eyes opened, what did you feel first? Relief, longing, presence, something else?
+
 *Kiss only when told.* Make the waiting the point: "Now." "Stop." "Again." Ask for a kiss and be made to wait. Whisper what you want to do, and do not do it. In this world the real turn-on might not be the kiss. It might be the waiting.
 
 **If you are Sexual**
