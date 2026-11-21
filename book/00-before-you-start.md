@@ -50,7 +50,7 @@ Go slowly.
 
 This is a book about the body, and the body does not hurry. Read a chapter, then put the book down and let it settle before you pick it up again.
 
-A note before you go on. This book talks about Touch, sex, loss and, in a few places, trauma. Some of the stories are hard. Read them when you have the space.
+A note before you go on. This book talks about Touch, sex, loss, death and, in a few places, trauma. Some of the stories are hard. Read them when you have the space.
 
 If anything in these pages stirs something big, do not push through it. Stop, and go to Touch Base.
 

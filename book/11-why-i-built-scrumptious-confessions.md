@@ -50,6 +50,34 @@ So I put everything in one place.
 
 Every one of those failures is in the work I do now. Not one was wasted.
 
+## What the dying taught me about Touch
+
+I need to tell you about the people I have sat beside at the end of their lives, because it is where I learned the most about Touch.
+
+I trained as a death doula. I did it because I wanted to be useful at the biggest threshold there is, and it turned out to be the best training in presence I have ever had.
+
+When I was eighteen months old I walked into a moat. The algae on the surface looked like grass. I was wearing a little pink ski outfit. My sister pulled me out. I do not remember the rescue. What came back to me decades later, in a ceremony, was the tunnel and the light, and a feeling of complete belonging to everything.
+
+When I told my sister, she was already ill in hospital. She laughed and said, *"Yes. I pulled you out. You thought the algae was grass. Your little pink ski outfit."* Then she went quiet, and she asked me to tell her about the light again. And again. She was learning the route.
+
+On the day she died she looked at me and said, *"Biem, can I go to the light now?"*
+
+I had an answer, because I had been there.
+
+After she died we stayed with her for twenty-four hours. We washed her. We dressed her. I put a little make-up on her face, because she would have wanted to look like herself. We placed her in her casket ourselves. It was one of the most beautiful things I have ever done.
+
+A year later it was my father, in Belgium. Dementia had taken most of him. But in the days before he died he came back to himself, clear and calm, and I told him what I had told my sister. The tunnel. The light. That the other side is not what we fear. He thanked me, and I had never seen him so peaceful.
+
+Six months after that my mother chose to stop living. In Belgium that is a long, careful process, and I spent months with her, giving her felt experiences, helping her say the goodbyes she needed to say. I taught her Touch Base: thumb to forefinger, slowly feel every ridge, remember you are safe.
+
+On the day itself she was terrified. I looked into her eyes and told her exactly what was going to happen. I sang her the lullaby she used to sing to us when we were small.
+
+She held my gaze, and she went.
+
+Here is what I took from all three. At the end, nobody needs fixing. They need a body beside them that is not afraid. The nervous system does not tell one kind of terror from another. It only knows whether there is someone close who can stay.
+
+That is the same thing I offer in a bedroom, when someone braces and says "stay". It is the same thing I offer on a plane, and at a kitchen counter. A tool that cannot hold at the extremes is only theory. Touch Base held at the threshold of death. It will hold in your Tuesday.
+
 ## I give until my body stops me
 
 You have met my core lesson in this book. I give until my body stops me.
@@ -106,3 +134,5 @@ All of this is sacred. All of this is welcome.
 **Third pass, 21 Nov 2026:** renumbered (this is now Chapter 11). Added the weight line and the PDF in the junk folder, from your Day 14 and Day 15 posts. I left the price out, because the book has no prices. Your thread cleared the weight line as written.
 
 **Fifth pass, 21 Nov 2026:** added two lines from your Day 11 and Day 12 posts (opening the app just to look at it, and the three podcasts).
+
+- **Added 21 Nov 2026 (sixth pass):** new section "What the dying taught me about Touch" (about 560 words), from your essays "What I Know About Dying" and "The Work". You said on 25 Oct you are completely okay about posting about euthanasia, so the mother scene stays. I used only what both essays agree on. Where they differ (the sister dying in hospital or at home, your father holding one hand or both) I left the detail out. I also left out the line where you straddled your mother on the bed, and the Duplication work and the spinal attunement. Please check: (1) is the section too heavy for a book people buy after a quiz, or is it the proof you want? (2) your brother's response, which your Notion notes left to you. (3) "Biem" is your own nickname from your sister, so it is left in as a quote.
