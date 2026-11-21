@@ -168,9 +168,10 @@ If anything in this chapter stirred something big, stop and go to Touch Base. Do
 - **The Dan comment thread and the "daughter" comment** from the "She Tightened" essay. They are real people from social media. I kept only the idea of the man who stays, written without names.
 - **Porges, Levine and the other citations.** The book is scene-led. Say if you want a short sources list at the back.
 
-**Please confirm before print:**
-1. **The woman from the call.** She is also in "The Body Does Not Open on Command". Is she the same client as chapter 1's pilates woman, or someone else? If she is the same, chapter 1 and chapter 2 need to read as one person.
-2. **The three-minute Touch Date** follows Canon (Touch Dates start at 3 minutes, then 15, then 30). The exact wording of the instructions, including "each say one word", is mine, adapted from your Breath Bridge practice. Is it right as a first step?
+**Decided by Juliette, 21 Nov 2026:** consent is in place for everyone in the book, and the book uses he and she. That settles the pronoun question on the partner section below.
+
+**Still open:**
+1. **The woman from the call.** She is also in "The Body Does Not Open on Command". Is she the same client as chapter 1's pilates woman? If so, chapters 1 and 2 need to read as one person.
+2. **The three-minute Touch Date** follows Canon (Touch Dates start at 3 minutes, then 15, then 30). The exact wording, including "each say one word", is mine, adapted from your Breath Bridge practice. Is it right as a first step?
 3. **"Chapter 8 shows you how."** Chapter 8 is not written yet.
 4. **The Touch Base reminder at the end** repeats chapter 0 on purpose. Do you want it at the end of every state chapter, or only here?
-5. **Partner section.** "If you are the one who reached" is written to a reader who is the man or the partner. It assumes a heterosexual couple in its pronouns ("he" and "she"). Should it be written more neutrally?

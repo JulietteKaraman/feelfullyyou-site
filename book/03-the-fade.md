@@ -4,7 +4,7 @@
 
 ---
 
-A hand arrives on the small of your back.
+His hand arrives on the small of your back.
 
 You feel the weight of it. The warmth of it. Nothing else.
 
@@ -69,7 +69,7 @@ The way back is the opposite of a grand gesture. You go so small it feels almost
 Try this tonight.
 
 **If you are with someone**
-Ask for three minutes of Touch that is not allowed to lead anywhere. A hand on your arm. Your back stroked. You receive, and that is all. Nothing to perform, nothing to give back.
+Ask him for three minutes of Touch that is not allowed to lead anywhere. A hand on your arm. Your back stroked. You receive, and that is all. Nothing to perform, nothing to give back.
 
 While it happens, do one thing with your attention. Do not chase whether it feels sexy. Notice what your body is doing, in plain physical facts. Warmth here. Tightness there. A flutter. A held breath. A wish to pull away.
 
@@ -90,7 +90,7 @@ Some bodies learned early that closeness arrives with intensity. A spike in the 
 
 So when the storm of the early months settles, and someone is calm, kind and still here, the body scans for the old charge, cannot find it, and calls the flatness the end of love.
 
-I know this from the inside. For decades I did not understand what my body was holding. After my two children were born I could not bring myself to have sex, or it took a great deal to get anywhere near it. I would cry afterwards, and neither of us knew why. My body was running a programme I could not see, and it did not care that my husband was a safe man.
+I know this from the inside. For decades I did not understand what my body was holding. After my two children were born I could not bring myself to have sex, or it took a great deal to get anywhere near it. I would cry afterwards, and neither of us knew why. My body was running a programme I could not see, and it did not care that Karim was a safe man.
 
 The quiet months can be the first time a body has ever shared a room with someone safe, and had no idea what to do with that. Many of my clients find tolerating safety the hardest thing of all.
 
@@ -100,15 +100,15 @@ The first week will seem too small to matter. That is the point. A body that has
 
 Then you start to notice things. A warmth you had stopped checking for. A moment where you stayed, instead of leaving halfway through.
 
-One woman I worked with could not receive her partner's attention without turning it straight back onto him. After an attunement with me, she was no longer afraid of his attention. She began directing him in ways she had been too shy to ask for.
+One woman I worked with could not receive her husband's attention without turning it straight back onto him. After an attunement with me, she was no longer afraid of his attention. She began directing him in ways she had been too shy to ask for.
 
 Her desire came back when the window got wide enough for it to walk through.
 
-## If you are the one wondering where they went
+## If you are the one wondering where she went
 
-They ran out of room.
+She ran out of room.
 
-Do not ask for more. Ask for three minutes that lead nowhere, and let them have all of it.
+Do not ask for more. Ask for three minutes that lead nowhere, and let her have all of it.
 
 ## The way back
 
@@ -137,9 +137,11 @@ Chapter 8 builds it, one small piece at a time. For now, you have three minutes.
 - Programme details from the essay's Part Eight (The Beginning, twelve weeks). They are out of date against Canon.
 - "She Opened. Then She Went Quiet." It is about the days after closeness, so it fits The Melt better.
 
-**Please confirm before print:**
-1. **Your own story.** I used your essay's lines about your marriage, two children, not being able to have sex and crying afterwards. I wrote "my husband" and did not name him. Are you comfortable with that going in a book, and with that wording?
-2. **The woman who could not receive attention.** The line comes from your list of client results. I kept it close to your original wording, but she needs your confirmation or her consent.
-3. **The practice.** This chapter gives the receiving-only version of the three-minute Touch Date (one person receives, no giving back), while chapter 2 gave the version where each person says one word at the end. Do you want the same practice in both, or different ones for different states?
-4. **Neutral language.** I wrote this chapter without he or she in the scene ("a hand arrives", "your partner", "they"). Chapter 2 uses he and she. Which do you prefer for the whole book?
-5. **Touch Base.** It appears once inside the solo practice here, not as a separate safety note. Tell me if you want the safety note at the end of every state chapter.
+**Decided by Juliette, 21 Nov 2026:**
+- Consent is in place for everyone in the book, and her ex-husband is fine to name. The chapter now says Karim.
+- The book uses he and she, because most of her clients are women or men. I changed this chapter to match chapter 2.
+
+**Still open:**
+1. **The practice.** This chapter gives the receiving-only version of the three-minute Touch Date, while chapter 2 has each person say one word at the end. Same practice throughout, or different ones per state?
+2. **The paywalled essay.** If you paste the full "Why Do I Feel Nothing When My Partner Touches Me?" essay, I can add the full sequence of how the feeling comes back.
+3. **Touch Base.** It appears once inside the solo practice here. Do you want the safety note at the end of every state chapter?
