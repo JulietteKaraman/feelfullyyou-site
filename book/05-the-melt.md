@@ -32,6 +32,14 @@ In Chapter 3 you read about a window, the space your body can stay present and f
 
 Most of us leave right when it gets good. A thought arrives. A joke. A sudden need to check something. Your body steps back from more than it is used to holding.
 
+## Remembering a part I had shut down
+
+I lost half my body weight, twice. Then I took burlesque.
+
+I walked in heels. I swayed my hips. I remembered a part of me I had shut down.
+
+More does not have to be a big gesture. Sometimes it is a hip, moving.
+
 ## Three kinds of more
 
 The more you are reaching for is your own. It tends to take one of three shapes.
@@ -157,3 +165,5 @@ I have updated the outline.
 **Update 21 Nov 2026 (second pass), from Juliette:** the specific testimonial is a public quote from your Watch the Touch Reset page, and the closing scene echoes the opening of Chapter 3. Juliette confirmed the Sunday and Tuesday couple is real, and told in the third person.
 
 **Third pass, 21 Nov 2026:** your own line (58, post-menopausal, the best intimacy of her life) from your bio and Day 12 post, and a "Questions I get asked about The Melt" section from your site answers on sex and intimacy and on sensual Touch. **To confirm:** you say "in the diary, with a timer". That comes from your Day 10 post.
+
+**Fifth pass, 21 Nov 2026:** added the burlesque story from your Day 9 post.

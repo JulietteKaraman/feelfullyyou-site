@@ -42,6 +42,8 @@ If you are single, nothing here is closed to you. Every practice has a version y
 
 If you are reading this for the person you love, or with them, Chapter 9 is written to him, and to the two of you.
 
+A word about he and she. I write he and she because most of the people I work with are women and men. Change the words to fit you. The body works the same way.
+
 ## How to read this
 
 Go slowly.
@@ -88,3 +90,5 @@ Juliette
 **Update 21 Nov 2026 (second pass), from Juliette:** a paragraph for single readers, the Touch Base practice page now described as a video, an audio and a 31-day tracker, and a short content note, because the book now includes her mother's hospital story. The safety note stays in this chapter and Chapter 2 only. She said she was not sure it was needed at the end of every state chapter.
 
 **Third pass, 21 Nov 2026:** the QR code and gold emblem are now made and saved in the repo (`book/assets`). The QR opens your Touch Base Experience page, which has the practice video, the audio guide and the 31-Day Touch Base Tracker. I found all of this in your site and Notion.
+
+**Fifth pass, 21 Nov 2026:** added a short note on he and she, from your decision to use them. Is the wording right?

@@ -104,6 +104,8 @@ We still loved each other. We walked into the lawyer's office having already agr
 
 I divorced my husband without knowing why. My body knew.
 
+So I went looking. At 44, I was walking around in a red T-shirt that said "orgasm expert". My eldest asked me, very politely, to make my profile private. His friends already thought I was a MILF.
+
 It had been trying to tell me in other ways, too. You will hear about the half landing, and the vase, in Chapter 6.
 
 That is why I ask you to start with yesterday and nothing grander. I have been the body in this story. I lived years inside a body that braced against the people closest to it, and I found my way back one signal at a time. It is where the way back begins.
@@ -128,3 +130,5 @@ There are four places your Touch can go. The next four chapters take them one at
 3. **Finding your state.** A reader who has not taken the quiz now finds her chapter in "Before you start" (book/00-before-you-start.md), so the last line of this chapter works as written.
 
 **Update 21 Nov 2026 (second pass), from Juliette:** the new section "How I learned to read a room", with four of her origin stories: the drawing for her grandmother at about four, driving her mother to hospital as a teenager, the night of the boarding school and the divorce, and a pointer to the half landing in Chapter 6. Juliette said the son's name stays out. **To confirm:** (1) "Twenty kilos" is what you told me on 21 Nov. Your Day 17 post said "a hundred kilos". Which do you want? (2) The mother's hospital story is the heaviest thing in the book so far. Chapter 0 now has a short content note. Do you want a longer one? (3) "I drove my mother to hospital to have her stomach pumped" is as you said it. Your Day 9 carousel adds an empty bottle of sleeping pills, which I left out.
+
+**Fifth pass, 21 Nov 2026:** added the red T-shirt, from your Day 9 post. I left out the harder things in that same post (the assault, the baby losses), because they are very heavy for this book. Say if you want any of them in.

@@ -48,6 +48,8 @@ That is why I have people do it time and time and time again. It becomes the anc
 
 I have taught men who were terrified of flying. After two sessions they flew with no medication and no alcohol, and it still works for them years later. I have used it with couples in the middle of a storm. I have used it with my mother, at the threshold of her last breath. It held.
 
+One woman told me, *"When I get triggered, I now ask: what would Juliette do?"*
+
 ## Capacity is built like fitness
 
 Everything else in this chapter is the same idea. You do not start with the five-hour session.
@@ -202,3 +204,5 @@ That is why I built something. Chapter 9 is for him, and for the two of you. Cha
 **Third pass, 21 Nov 2026:** "Hearing a no" comes from your Confession 2 script ("No is a complete sentence"). It opens to members on 30 Nov, so this puts a short version in the book first. Is that fine? Chapter numbers: 9 is the new chapter for him, 10 is the plan, 11 is why you built Confessions, 12 is what comes next.
 
 **Third pass, 21 Nov 2026:** added your tracker's real rhythm (two three-minute practices a day, scored 1 to 10 before and after) from your Touch Base Experience page. The book still says that once you know Touch Base, it takes about two minutes.
+
+**Fifth pass, 21 Nov 2026:** added a client line from your testimonials notes. Is it fine to include?

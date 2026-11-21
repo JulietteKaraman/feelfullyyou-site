@@ -38,7 +38,7 @@ This is my second go at it.
 
 Two years ago I started Scrumptious Confessions. I recorded four or five episodes and ran out of steam. I did not have the practice myself yet.
 
-This time I built the app with my own hands, by talking to Claude, one fussy change at a time. For a while my voice was silent on every iPhone.
+This time I built the app with my own hands, by talking to Claude, one fussy change at a time. For a while my voice was silent on every iPhone. I still open it just to look at it.
 
 I lost half my body weight. Twice. Which means I put it back on.
 
@@ -54,7 +54,7 @@ Every one of those failures is in the work I do now. Not one was wasted.
 
 You have met my core lesson in this book. I give until my body stops me.
 
-A little girl in Holland, drawing a picture for her grandmother to bring the light back into a room. A partner and all his children. Nine months of fainting in and out of hospital. Bacon at half six in the morning for a lunch nobody had asked for.
+A little girl in Holland, drawing a picture for her grandmother to bring the light back into a room. A partner and all his children. Nine months of fainting in and out of hospital. Bacon at half six in the morning for a lunch nobody had asked for. Three podcast interviews on the day of my sister's anniversary, when I never do more than two.
 
 Every time, my body knew first.
 
@@ -104,3 +104,5 @@ All of this is sacred. All of this is welcome.
 **Update 21 Nov 2026 (second pass), from Juliette:** this is now Chapter 10, because Chapter 9 is the 31-day plan. Juliette said naming Claude is fine and to keep it. The divorce story was trimmed here, because it is now told in full in Chapter 1.
 
 **Third pass, 21 Nov 2026:** renumbered (this is now Chapter 11). Added the weight line and the PDF in the junk folder, from your Day 14 and Day 15 posts. I left the price out, because the book has no prices. Your thread cleared the weight line as written.
+
+**Fifth pass, 21 Nov 2026:** added two lines from your Day 11 and Day 12 posts (opening the app just to look at it, and the three podcasts).
