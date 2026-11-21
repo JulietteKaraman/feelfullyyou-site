@@ -112,11 +112,11 @@ I do not tell you this to impress you. I tell you because it is who I am. I am a
 
 There is one more thing I need to tell you, because it is the reason I take your Touch so seriously.
 
-I was abused as a child, by family members. Later, in Spain, I was date raped.
+I was abused as a child, by family members. Later, in Spain, when I was eighteen, five men raped me.
 
-For twenty-five years I did not know. My psyche kept it hidden for me. It put it somewhere I could not reach, the way a body will keep something safe until there is enough ground under it to be handled. I was a high-functioning, giving woman with a body that braced, and no story to explain why.
+For twenty-five years I did not remember what happened in Spain. My psyche kept it hidden for me. It put it somewhere I could not reach, the way a body will keep something safe until there is enough ground under it to be handled. I was a high-functioning, giving woman with a body that braced, and no story to explain why.
 
-I did not find out by thinking. I was 44, at a workshop in San Francisco, being flogged between the shoulders, and I knew something was about to pop. So I asked the facilitator and her assistant to both flog me, one with leather and one with suede, so that I could remember. My partner was not able to hold that, and I knew I needed people who could.
+I did not find out by thinking. I was 44, at a BDSM workshop in San Francisco, being flogged between the shoulders, and I knew something was about to pop. So I asked the facilitator and her assistant to both flog me, one with leather and one with suede, so that I could remember. My partner was not able to hold that, and I knew I needed people who could.
 
 Before we began they asked me what I needed for aftercare. I said: "A blanket, water, and someone hugging me to say that I am okay."
 
@@ -193,3 +193,5 @@ All of this is sacred. All of this is welcome.
 - **Confirmed by Juliette 21 Nov 2026:** (a) the VIP client has given her consent to the "What opens when Touch is the door" story; (b) "her breath stopped, then her heart" stays as written; (c) Bufo, the toad medicine, stays named; (d) how Anouk died is settled (kitchen, four minutes). Still open: "leading work in London" (kept as written unless you say otherwise), and whether the abuse section should mention San Francisco and "twenty-five years".
 
 - **Added 21 Nov 2026 (from Juliette):** the abuse section now says the memory came back at 44, at a workshop in San Francisco, 25 years after, while being flogged between the shoulders (leather and suede, facilitator and assistant, partner unable to hold it, aftercare: blanket, water, a hug). I wrote "the memory" and did not say which one came back. Your message said "abuse" and your Day 9 post says date rape. Please tell me which, or if both. I did not name the workshop or the facilitator. Is it right that this is a BDSM workshop, named as such, in a book read by people who do not know your history? I wrote "a workshop" and kept the floggers. Say if you want "BDSM" in the text.
+
+- **Updated 21 Nov 2026 (Juliette):** the memory that came back at the San Francisco BDSM workshop was the rape in Spain at 18, by five men. The section now says so plainly ("five men raped me", "at eighteen"), and names the workshop as a BDSM workshop, floggers kept. Those are your own words from your message. If you would rather not give the number or the age in a book, say so and I will take them out. Whether the childhood abuse was also remembered later is not stated in the book.
