@@ -99,3 +99,12 @@ The book now runs: Before you start, Chapters 1 to 11, and About the author and 
 New numbering: 9 For Him, and For the Two of You (new), 10 Your First 31 Days, 11 Why I Built Scrumptious Confessions, 12 What Comes Next, then About the author and credits.
 
 More of Juliette's own stories went into Chapters 2 to 8 (the kitchen, being touched while somewhere else, the VIP client and the food, the television couple, the strawberry, the relationship coach, hearing a no), and Chapters 2 to 5 each now have a "Questions I get asked" section from her site answers.
+
+## Update, 21 Nov 2026 (fourth pass)
+
+- Front matter: `00a-title-and-forewords.md` (title, four subtitle options, and a request to send to coaches for forewords).
+- Back matter: `13-the-toolkit.md` (every practice, phrases, 12 conversation questions, the Felt Sense lists, a weekly checklist, more from Juliette) and `14-about-the-author-and-credits.md`.
+- Assets in `book/assets`: gold Touch Base emblem, QR code for the Touch Base practice page, QR code for Scrumptious Confessions (PNG and SVG).
+- Touch Base now follows the real 31-Day Tracker: two three-minute practices a day, scored 1 to 10 before and after.
+- More results added in Chapters 2, 3, 7, 9 and 10 (all public testimonials or Juliette's own stories).
+- Read-through done: no em dashes, no stray "And" openings, no pound signs, Touch capitalised.

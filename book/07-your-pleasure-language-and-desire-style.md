@@ -105,6 +105,8 @@ If your wiring runs responsive, you have spent years waiting for a feeling that 
 
 Touch comes first. Wanting follows. That is the order your body runs in.
 
+One woman told me, *"I was able to find my mojo back. To have fun and feel erotic."*
+
 ## What to do with it
 
 Never wait to feel like it first.

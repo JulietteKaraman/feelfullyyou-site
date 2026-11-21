@@ -12,7 +12,7 @@ So I teach them something. It takes ten seconds to explain.
 
 Thumb to forefinger.
 
-> **[Design note, not book text]** Place the Touch Base emblem here in gold (#A88538), with a QR code beside it that opens the Touch Base practice page, with the video, the audio and the 31-day tracker. Emblem file: `touch-base-logo.png`.
+> **[Design note, not book text]** Place the Touch Base emblem here in gold, with a QR code beside it that opens the Touch Base practice page (the video, the audio guide and the 31-day tracker). Files: `book/assets/touch-base-emblem.png` and `book/assets/qr-touch-base.png` (opens feelfullyyou.com/touch-base-experience). Print the QR code black on off-white.
 
 Scan the code for the Touch Base practice page. There is a video, an audio and a 31-day tracker. It is a small taste of what it is like inside Scrumptious Confessions.
 
@@ -33,6 +33,8 @@ Your breath may start to slow. You may yawn. That yawn is your body telling you 
 ## Why every day, for 31 days
 
 I ask people to do this every day for 31 days. Sixty is better.
+
+The tracker on the practice page asks for six minutes a day, split into two three-minute practices, morning and evening. Rate yourself from 1 to 10 before, and 1 to 10 after. That gives you real proof it is working. A number you wrote down yourself.
 
 Because somewhere around then, something funny happens. It gets so quick that you only need to tap your thumb and forefinger together.
 
@@ -198,3 +200,5 @@ That is why I built something. Chapter 9 is for him, and for the two of you. Cha
 **Update 21 Nov 2026 (second pass), from Juliette:** Touch Base takes about two minutes once you know it, and longer the first time. Alex is now "my fiancé Alex". The practice page (video, audio and the 31-day tracker) is described as a taste of Confessions. Two new sections: "If you are single" and "When it brings up too much". **To check:** the two UK helpline numbers (Samaritans 116 123, National Domestic Abuse Helpline 0808 2000 247) are well known, but please check they are current before print. Also: does your free Touch Base page already have the 31-day tracker? If not, it needs adding before the book goes out.
 
 **Third pass, 21 Nov 2026:** "Hearing a no" comes from your Confession 2 script ("No is a complete sentence"). It opens to members on 30 Nov, so this puts a short version in the book first. Is that fine? Chapter numbers: 9 is the new chapter for him, 10 is the plan, 11 is why you built Confessions, 12 is what comes next.
+
+**Third pass, 21 Nov 2026:** added your tracker's real rhythm (two three-minute practices a day, scored 1 to 10 before and after) from your Touch Base Experience page. The book still says that once you know Touch Base, it takes about two minutes.

@@ -48,6 +48,16 @@ One word back is enough. *Braced. Fine. Fried.* Whatever it is, you are not fixi
 
 If the answer is braced, you do not reach. You just know, and knowing is the whole win. If the answer is open, that is when the hand you have been building evidence for gets to land.
 
+## One sentence
+
+A man wrote to me about his wife. They were, in his words, stuck in the roommate phase. He tried one sentence.
+
+*Tell me what makes you feel most seen by me.*
+
+It changed something in her. He listened with what he called unshakable presence, and he told me it helped him know her better, and that she softened.
+
+Try the sentence. Then stop talking.
+
 ## Hover your hands
 
 A couple I worked with put it simply. He learned to hover his hands. She felt truly seen.
@@ -61,6 +71,12 @@ Try it with a question. *May I?* Then wait for the answer.
 A couple in London had done decades of personal development, and believed there was nothing left to learn. They came for four days. They were close to divorce. Afterwards they wrote, *"Not so much what she did that changed us, but her complete presence and acceptance of all our parts."*
 
 A woman who is a relationship coach herself did a VIP day with her husband. Afterwards she wrote to me, *"What have you done with my husband? This was the most beautiful time we have spent together. He was tender and strong all at once."*
+
+A couple wrote to me after trying a repair script on a Sunday morning, when they had barely spoken all week. *"We ended up holding hands, just like the old days."*
+
+A man who worked with me wrote, *"I wanted to create something meaningful, not just for her, but for us. Your guidance gave me confidence. I stopped second-guessing. For the first time in years, I knew what she needed. Watching her soften, open, and receive was everything."*
+
+Another couple put it simply. *"We don't require anything fancy to connect. Just intention, and the space Juliette created."*
 
 ## What one session could not do
 
@@ -113,3 +129,5 @@ You will get it wrong. Stay anyway.
 2. **The London couple and the relationship coach.** Both quotes are from your results list and neither is named. Are they fine?
 3. **The last section** is adapted from your site answer for a woman whose husband hates being touched. Is it right to say it this way?
 4. **"Hover your hands".** I used your testimonial wording exactly. Do you want to add how you teach it?
+
+**Third pass, 21 Nov 2026:** four more results, all public testimonials from your site, plus the "one sentence" from a man's testimonial on your Unspoken Distance page.

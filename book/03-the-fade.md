@@ -128,6 +128,8 @@ One woman I worked with could not receive her husband's attention without turnin
 
 Her desire came back when the window got wide enough for it to walk through.
 
+Another woman had not been intimate with anyone for over five years. After one Touch exercise, something flickered back on. She found herself dancing. Humming. Wanting to touch.
+
 ## If you are the one wondering where she went
 
 She ran out of room.

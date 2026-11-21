@@ -18,7 +18,7 @@ Every Monday, a confession in my voice. Touch Base every day, with a tracker. Yo
 
 It is open to women and men. The first seven days are free.
 
-> **[Design note, not book text]** QR code and link here to Scrumptious Confessions. Please confirm which page: feelfullyyou.com/scrumptious-confessions or feelfullyyou.com/scrumptious-confessions-membership.
+> **[Design note, not book text]** QR code and link here to Scrumptious Confessions. File: `book/assets/qr-scrumptious-confessions.png` (opens feelfullyyou.com/scrumptious-confessions).
 
 ## If you are a woman, and you want the whole of this held
 
@@ -60,3 +60,5 @@ Juliette
 5. **Sign-off.** "Warmly, Juliette", as you chose.
 
 **Third pass, 21 Nov 2026:** renumbered (this is now Chapter 12).
+
+**Third pass, 21 Nov 2026:** I made the QR code (it opens feelfullyyou.com/scrumptious-confessions, the page your latest Notion posts use). One thing to check, which I could not see from here: the committed copy of that page in the repo still shows the old "free 23 November to 6 December" wording, while your Notion thread says 7 days free with the card going in. Please check the live page.

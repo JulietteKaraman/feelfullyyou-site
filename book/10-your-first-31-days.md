@@ -14,6 +14,8 @@ Remember the bike, and the gym. You do not start with the five-hour session. You
 
 Fill in one dot for every day you do Touch Base. A missed day is a missed dot. Start again the next morning, with no speech to yourself about it.
 
+If you can, score yourself from 1 to 10 before each practice, and 1 to 10 after. That gives you real proof it is working. A number you wrote down yourself.
+
 ○○○○○○○ Week 1
 
 ○○○○○○○ Week 2
@@ -26,7 +28,7 @@ Fill in one dot for every day you do Touch Base. A missed day is a missed dot. S
 
 ## Week 1, days 1 to 7: arrive
 
-Touch Base, once a day, two minutes. Before you get out of bed, or just before you sleep.
+Touch Base, morning and evening if you can, three minutes each, with your score before and after. If that is too much, once a day for two minutes is a fine start. Before you get out of bed, or just before you sleep.
 
 Once a day, catch the half second. Something touches you. A hand, a cat, a doorframe. What did your jaw do? Your shoulders? Your breath? Write one word.
 
@@ -66,6 +68,12 @@ Then keep Touch Base going until day 60. That is when it starts to become automa
 
 **The Melt.** Try fifteen minutes in week 3, and stay one breath longer all the way through.
 
+## Why small works
+
+One woman in my 30-day women's group, Denise Stewart, said it better than I can. *"In the beginning I didn't want to be visible at all, but then it got easier and easier due to being supported throughout... the pace of the exercises were good because they gradually asked a little more of us each time."*
+
+That is the whole method. A little more, each time.
+
 ## If you miss days
 
 You will. Everyone does. Come back to the dot you were on. The tracker is there to show you the pattern, and a gap is part of the pattern.
@@ -102,3 +110,5 @@ When you have filled it in, you have done what most people never do. You have a 
 3. The map has nine lines. Do you want fewer?
 
 **Third pass, 21 Nov 2026:** renumbered (this is now Chapter 10).
+
+**Third pass, 21 Nov 2026:** Touch Base now follows your tracker (morning and evening, three minutes each, scored 1 to 10), and Denise Stewart's public testimonial is added. Her name is on your site. Fine to use here?

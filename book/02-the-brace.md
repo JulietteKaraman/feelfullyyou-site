@@ -215,6 +215,8 @@ Last, it gets neutral. A hand lands on you and it is just a hand.
 
 The woman from the call came back to me some weeks into this. The first time her husband reached for her in the kitchen and her body did not brace, she cried. This time it was not the tantra-weekend kind that fades in a fortnight. Something had moved in the part of her that decides.
 
+Another woman wrote to me, *"I feel softer and more relaxed. I'd forgotten I'd been braced for years, until I finally felt myself soften."*
+
 ## If you are the one who reached
 
 You might be reading this chapter for her.

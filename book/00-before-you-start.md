@@ -40,6 +40,8 @@ Read your chapter first. Then read the others in any order you like. Each one wi
 
 If you are single, nothing here is closed to you. Every practice has a version you can do on your own, and the parts about a partner show you what to ask for when someone arrives.
 
+If you are reading this for the person you love, or with them, Chapter 9 is written to him, and to the two of you.
+
 ## How to read this
 
 Go slowly.
@@ -56,7 +58,7 @@ Do it somewhere that is actually safe. A room where you can close the door. A ch
 
 Then come back when you are ready. The book will still be here.
 
-> **[Design note, not book text]** Place the Touch Base emblem here in gold (#A88538), with a QR code beside it that opens the Touch Base practice page, with the video, the audio and the 31-day tracker. Emblem file: `touch-base-logo.png`.
+> **[Design note, not book text]** Place the Touch Base emblem here in gold, with a QR code beside it that opens the Touch Base practice page (the video, the audio guide and the 31-day tracker). Files: `book/assets/touch-base-emblem.png` and `book/assets/qr-touch-base.png` (opens feelfullyyou.com/touch-base-experience). Print the QR code black on off-white.
 
 I am glad you are here.
 
@@ -84,3 +86,5 @@ Juliette
 6. **Chapter numbers.** Chapters 2 to 5 do not exist yet, so the numbers here come from the outline.
 
 **Update 21 Nov 2026 (second pass), from Juliette:** a paragraph for single readers, the Touch Base practice page now described as a video, an audio and a 31-day tracker, and a short content note, because the book now includes her mother's hospital story. The safety note stays in this chapter and Chapter 2 only. She said she was not sure it was needed at the end of every state chapter.
+
+**Third pass, 21 Nov 2026:** the QR code and gold emblem are now made and saved in the repo (`book/assets`). The QR opens your Touch Base Experience page, which has the practice video, the audio guide and the 31-Day Touch Base Tracker. I found all of this in your site and Notion.
