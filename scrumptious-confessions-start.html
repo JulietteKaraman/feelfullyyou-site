@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Build your first week | Scrumptious Confessions</title>
+<meta name="description" content="Five quick taps, and you see exactly what opens for you in Scrumptious Confessions, day by day.">
+<link rel="canonical" href="https://feelfullyyou.com/scrumptious-confessions-start">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#0d0c0b">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SY8NKELMNZ"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-SY8NKELMNZ');
+</script>
+<!-- Meta Pixel Code (loads only after cookie consent, see /cookie-consent.js) -->
+<script>
+window.ffyLoadPixel=function(){
+if(window.ffyPixelOn)return;window.ffyPixelOn=1;
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '890672130717294');
+fbq('track', 'PageView');
+};
+try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
+</script>
+<script src="/cookie-consent.js" defer></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+/* Restyled to match the dark "Where did the touch go?" quiz: full-bleed black and white photos, thin segmented bars, gold italic, tap pills, cream cards */
+:root{
+  --bg:#070707; --cream:#fefcfa; --ink:#1c1714; --teal:#0D3535; --gold:#DDC98E; --gold-deep:#A88538; --brown:#7a6236; --lemon:#EEDE80;
+  --txt:#F6EFE0; --foot:150px;
+  --font:Poppins,system-ui,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--bg);-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--txt);font-family:var(--font);font-weight:300;font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow:hidden}
+button{font-family:inherit}
+a{color:var(--gold)}
+:focus-visible{outline:2px solid var(--lemon);outline-offset:3px}
+
+.app{position:fixed;inset:0;overflow:hidden;background:var(--bg)}
+.ph{position:absolute;inset:-4%;background-position:center;background-size:cover;background-repeat:no-repeat;opacity:0;filter:brightness(.72) contrast(1.04) grayscale(.85);transform:scale(1.04);transition:opacity 1s ease}
+.ph.on{opacity:1}
+.veil{position:absolute;inset:0;pointer-events:none;background:radial-gradient(120% 60% at 50% 110%,rgba(7,7,7,.82) 25%,rgba(7,7,7,0) 68%),linear-gradient(180deg,rgba(7,7,7,.55) 0%,rgba(7,7,7,.2) 24%,rgba(7,7,7,.2) 100%);transition:background .6s}
+.veil.deep{background:rgba(7,7,7,.62)}
+.glow{position:absolute;left:50%;bottom:-30vh;width:120vw;height:70vh;transform:translateX(-50%);border-radius:50%;pointer-events:none;background:radial-gradient(closest-side,rgba(194,154,78,.18),rgba(194,154,78,0))}
+
+/* header strip and thin segmented bars */
+.top{position:absolute;top:0;left:0;right:0;padding:calc(18px + env(safe-area-inset-top,0px)) 22px 0;display:flex;align-items:center;gap:6px;z-index:4;height:calc(52px + env(safe-area-inset-top,0px))}
+.back{flex:none;width:40px;height:40px;margin-left:-12px;display:grid;place-items:center;border:0;border-radius:50%;background:transparent;color:var(--gold);cursor:pointer}
+.back[hidden]{display:none}
+.back svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.brand{font-weight:500;letter-spacing:.32em;font-size:.66rem;text-transform:uppercase;color:var(--gold)}
+.stepno{margin-left:auto;font-weight:400;letter-spacing:.2em;font-size:.7rem;color:rgba(246,239,224,.9)}
+.segs{position:absolute;top:calc(56px + env(safe-area-inset-top,0px));left:22px;right:22px;display:flex;gap:5px;z-index:4}
+.segs i{flex:1;height:1px;background:rgba(221,201,142,.22);transition:background .4s}
+.segs i.on{background:var(--gold)}
+
+/* the screen area scrolls, the button bar floats over it */
+main{position:absolute;left:0;right:0;top:calc(72px + env(safe-area-inset-top,0px));bottom:0;z-index:2;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;padding:12px 22px var(--foot);scrollbar-width:none}
+main::-webkit-scrollbar{display:none}
+.sc{max-width:480px;margin:0 auto;min-height:100%;display:flex;flex-direction:column;animation:qin .6s cubic-bezier(.2,.8,.2,1) both}
+.sc>:first-child{margin-top:auto}
+.sc>:last-child{margin-bottom:auto}
+@keyframes qin{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.sc.top-aligned>:first-child{margin-top:0}
+
+.k{font-weight:500;letter-spacing:.34em;font-size:.68rem;text-transform:uppercase;color:var(--gold);text-shadow:0 1px 10px rgba(7,7,7,.8)}
+h1,h2{font-weight:500;letter-spacing:-.01em;color:#fff;text-shadow:0 2px 18px rgba(7,7,7,.55);text-wrap:balance}
+h1:focus,h2:focus{outline:none}
+h1 em,h2 em{font-style:italic;font-weight:500;color:var(--gold)}
+h2.q{font-size:clamp(1.6rem,6.6vw,2.2rem);line-height:1.2;margin-top:12px}
+p.sub{font-weight:400;font-size:1.02rem;color:rgba(246,239,224,.95);text-shadow:0 1px 12px rgba(7,7,7,.6);margin-top:14px;line-height:1.6}
+
+/* tap answers, like the quiz */
+.taps{display:flex;flex-direction:column;gap:10px;margin-top:26px}
+.tap{background:rgba(7,7,7,.55);border:1px solid rgba(221,201,142,.4);color:var(--txt);border-radius:30px;padding:14px 22px;min-height:52px;font:400 .95rem/1.4 var(--font);text-align:center;cursor:pointer;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);transition:background .25s,color .25s,transform .2s,border-color .25s;-webkit-tap-highlight-color:transparent}
+.tap:hover{border-color:var(--lemon)}
+.tap[aria-checked="true"]{background:var(--gold);color:#070707;border-color:var(--gold)}
+.taps .tap{animation:qin .5s cubic-bezier(.2,.8,.2,1) backwards}
+.taps .tap:nth-child(2){animation-delay:.05s}.taps .tap:nth-child(3){animation-delay:.1s}.taps .tap:nth-child(4){animation-delay:.15s}
+
+/* intro: the quiz's cream pop card */
+.popcard{background:var(--cream);border-radius:22px;overflow:hidden;box-shadow:0 30px 80px -20px rgba(0,0,0,.7);text-align:center}
+.popph{height:250px;background-size:cover;background-position:50% 72%;position:relative}
+.popph::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:28px;background:linear-gradient(rgba(254,252,250,0),var(--cream))}
+.popin{padding:14px 24px 26px;position:relative}
+.popcard .k{text-shadow:none;color:var(--brown);font-weight:600;letter-spacing:.18em;font-size:.6rem}
+.popcard h1{color:var(--teal);font-weight:600;text-shadow:none;font-size:1.9rem;line-height:1.1;margin:10px 0}
+.popcard h1 em{color:var(--gold-deep);font-weight:600}
+.popcard p.sub{color:var(--ink);text-shadow:none;font-size:.98rem;margin:0 0 14px}
+.btn-g{background:none;border:1px solid var(--gold);color:var(--gold);border-radius:99px;padding:14px 34px;font:600 .8rem var(--font);letter-spacing:.24em;text-transform:uppercase;cursor:pointer}
+.popcard .btn-g{background:var(--teal);color:var(--cream);border-color:var(--teal)}
+
+/* voice player, same as the quiz */
+.vp{display:inline-flex;flex-direction:column;align-items:center;gap:8px;margin-top:8px}
+.vp-play{display:inline-flex;align-items:center;gap:10px;background:#f4f1ec;border:1px solid rgba(168,133,56,.5);color:var(--teal);border-radius:999px;padding:7px 16px 7px 7px;font:400 .86rem var(--font);cursor:pointer}
+.vp-play img{width:34px;height:34px;border-radius:50%;object-fit:cover}
+.vp-play .ico{display:inline-flex;width:26px;height:26px;border-radius:50%;background:var(--gold);color:#070707;align-items:center;justify-content:center;font-size:.62rem}
+.vp-play .dur{opacity:.7;font-size:.76rem}
+.vp-speed{display:flex;gap:6px}
+.vp-speed button{background:none;border:1px solid rgba(168,133,56,.4);color:#5b4a2e;border-radius:999px;padding:3px 10px;font:400 .7rem var(--font);cursor:pointer}
+.vp-speed button.on{background:var(--teal);color:var(--cream);border-color:var(--teal)}
+
+/* made for you, plan, offer: cream cards */
+.card{background:var(--cream);color:var(--ink);border-radius:22px;padding:24px 22px;box-shadow:0 30px 80px -24px rgba(0,0,0,.75);margin-top:18px}
+.card .k{text-shadow:none;color:var(--brown);font-weight:600;letter-spacing:.26em;font-size:.62rem}
+.card h3{font-weight:600;font-size:1.3rem;line-height:1.2;color:var(--teal);letter-spacing:-.01em;margin-top:6px}
+.card h3.sm{font-size:1.05rem}
+.made-card{text-align:center;padding:30px 24px}
+.made-card h2{color:var(--teal);text-shadow:none;font-weight:600;font-size:clamp(1.7rem,7vw,2.2rem);line-height:1.12;margin-top:10px}
+.made-card .lines{margin-top:20px}
+.made-card .lines p{font-size:1.06rem;line-height:1.7;font-weight:400;color:var(--ink);margin-top:10px}
+.made-card .close{margin-top:24px;padding-top:22px;border-top:1px solid rgba(168,133,56,.35);font-style:italic;font-weight:400;font-size:1.2rem;line-height:1.5;color:var(--gold-deep)}
+.made-card .small{margin-top:22px;font-size:.84rem;font-weight:500;letter-spacing:.02em;color:var(--brown)}
+.rv{opacity:0;animation:rv .7s ease forwards;animation-delay:calc(var(--i)*.4s + .1s)}
+@keyframes rv{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* app screens: floating phone mockups */
+.apps .lines-plain{margin-top:14px;color:rgba(246,239,224,.95);font-size:1rem;line-height:1.55;font-weight:400;text-shadow:0 1px 12px rgba(7,7,7,.6)}
+.apps .lines-plain span{display:block;margin-top:3px}
+.mock{position:relative;width:min(70vw,270px);margin:34px auto 16px;transform:rotate(-3deg);animation:float 7s ease-in-out infinite}
+.mock.r{transform:rotate(3deg)}
+.mock::before{content:"";position:absolute;inset:-18% -28%;background:radial-gradient(closest-side,rgba(221,201,142,.34),rgba(221,201,142,0));z-index:-1;pointer-events:none}
+@keyframes float{0%,100%{translate:0 0}50%{translate:0 -8px}}
+.phone{border-radius:40px;padding:9px;background:linear-gradient(145deg,#3a332b,#0c0b0a 45%,#2a251f);box-shadow:0 0 0 1px rgba(221,201,142,.45),0 30px 70px rgba(0,0,0,.75),inset 0 0 0 1px rgba(255,255,255,.06);position:relative}
+.phone::before{content:"";position:absolute;top:16px;left:50%;width:30%;height:16px;margin-left:-15%;border-radius:10px;background:#050505;z-index:2}
+.phone .screen{border-radius:32px;overflow:hidden;display:flex;flex-direction:column;background:linear-gradient(180deg,#0a0f0e,#0b0c0b)}
+.phone img{display:block;width:100%;height:auto;padding-top:30px;background:#0a0f0e}
+
+/* building */
+.build{text-align:center}
+.face{width:76px;height:76px;border-radius:50%;object-fit:cover;margin:0 auto 18px;border:1px solid rgba(221,201,142,.55);box-shadow:0 0 40px -6px rgba(221,201,142,.45)}
+.bars{list-style:none;margin-top:30px;display:grid;gap:20px;text-align:left}
+.bars .row{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:.98rem;font-weight:400;color:#fff;margin-bottom:8px}
+.tick{width:20px;height:20px;border-radius:50%;background:var(--gold);display:grid;place-items:center;opacity:0;transform:scale(.6);transition:opacity .25s,transform .25s}
+.tick svg{width:11px;height:11px;fill:none;stroke:#070707;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.bars li.done .tick{opacity:1;transform:none}
+.track{height:2px;border-radius:2px;background:rgba(254,252,250,.14);overflow:hidden}
+.track i{display:block;height:100%;width:0;background:var(--gold);transition:width .55s ease}
+.bars li.fill .track i{width:100%}
+
+/* email capture, like the quiz */
+.mail form{margin-top:24px;display:grid;gap:14px}
+.field{display:grid;gap:6px}
+.field label{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:500}
+.field input{width:100%;font-family:var(--font);font-weight:300;font-size:16px;padding:14px 18px;min-height:52px;background:rgba(7,7,7,.55);border:1px solid rgba(221,201,142,.4);border-radius:14px;color:#fff}
+.field input::placeholder{color:rgba(254,252,250,.42)}
+.field input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 1px rgba(221,201,142,.35),0 0 28px -6px rgba(221,201,142,.4)}
+.hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;opacity:0;overflow:hidden}
+.err{min-height:1.4em;color:#e9b9b9;font-size:.88rem;text-align:center}
+
+/* plan */
+.plan h2{margin-top:10px}
+.here{list-style:none;margin-top:14px;display:grid;gap:14px}
+.card.start{border-left:4px solid var(--gold-deep)}
+.here .lab{display:block;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--brown);font-weight:600;margin-bottom:2px}
+.here .val{font-weight:500;font-size:1rem;line-height:1.4;color:var(--teal)}
+.tl{list-style:none;position:relative;margin-top:14px;padding-left:28px}
+.tl::before{content:"";position:absolute;left:5px;top:12px;bottom:14px;width:1px;background:rgba(168,133,56,.5)}
+.tl li{position:relative;padding:10px 0 12px}
+.tl li::before{content:"";position:absolute;left:-28px;top:16px;width:11px;height:11px;border-radius:50%;background:var(--gold-deep);box-shadow:0 0 0 4px rgba(168,133,56,.2)}
+.tl .dd{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--brown);font-weight:600}
+.tl .dd span{letter-spacing:.06em;margin-left:6px;font-weight:400}
+.tl .dc{font-weight:500;font-size:.98rem;line-height:1.35;color:var(--teal);margin-top:2px}
+.tl .dc small{display:block;margin-top:2px;font-weight:300;font-size:.8rem;color:var(--ink);opacity:.75}
+.months-h{margin-top:30px;font-size:1.2rem;line-height:1.25;font-weight:500;color:#fff;text-shadow:0 2px 18px rgba(7,7,7,.55)}
+.months-h em{font-style:normal}
+details{background:var(--cream);color:var(--ink);border-radius:18px;margin-top:10px;box-shadow:0 20px 50px -26px rgba(0,0,0,.75)}
+summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;padding:14px 16px;min-height:52px;font-weight:400;font-size:.9rem;color:var(--ink)}
+summary::-webkit-details-marker{display:none}
+summary .pill{flex:none;background:var(--gold);color:var(--teal);border-radius:999px;padding:4px 12px;font-weight:600;font-size:.78rem;letter-spacing:.02em}
+summary::after{content:"";margin-left:auto;flex:none;width:8px;height:8px;border-right:2px solid var(--gold-deep);border-bottom:2px solid var(--gold-deep);transform:rotate(45deg);transition:transform .2s}
+details[open] summary::after{transform:rotate(-135deg)}
+.progs{list-style:none;padding:2px 18px 14px;display:grid;gap:12px}
+.progs b{display:block;font-weight:600;font-size:.95rem;color:var(--teal)}
+.progs span{display:block;font-size:.86rem;line-height:1.45;color:var(--ink);font-weight:300}
+.progs-note{padding:0 18px 16px;font-size:.85rem;font-weight:600;color:var(--gold-deep)}
+.map{font-weight:500;font-size:.95rem;line-height:1.45;color:var(--teal)}
+
+/* offer */
+.offer h2{margin-top:10px}
+.terms{list-style:none;padding:0}
+.terms li{padding:14px 0;border-top:1px solid rgba(168,133,56,.3);font-size:.98rem;line-height:1.55;font-weight:400;color:var(--ink)}
+.terms li:first-child{border-top:0;padding-top:0}
+.terms .big{display:block;font-weight:600;font-size:clamp(2rem,9vw,2.6rem);line-height:1.05;letter-spacing:-.02em;color:var(--teal);margin-bottom:8px}
+
+/* fixed bottom bar */
+.foot{position:absolute;left:0;right:0;bottom:0;z-index:6;max-width:480px;margin:0 auto;padding:30px 22px calc(env(safe-area-inset-bottom,0px) + 16px);background:linear-gradient(0deg,#070707 62%,rgba(7,7,7,0))}
+.foot[hidden]{display:none}
+.btn{display:flex;align-items:center;justify-content:center;width:100%;min-height:54px;padding:14px 28px;background:var(--gold);color:#070707;border:0;border-radius:999px;text-decoration:none;text-align:center;font:500 1rem var(--font);letter-spacing:.02em;cursor:pointer;transition:background .25s,transform .25s,opacity .2s}
+.btn:hover{background:#e9d9a8;transform:translateY(-2px)}
+.btn[disabled]{opacity:.35;pointer-events:none}
+.fine{margin-top:12px;text-align:center;font-size:.8rem;color:rgba(246,239,224,.8);font-weight:400}
+.sub-link{display:block;margin-top:14px;text-align:center;font-size:.85rem;font-weight:400;color:var(--gold)}
+
+@media (min-width:700px){.card{padding:28px 28px}}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv{opacity:1}
+}
+</style>
+</head>
+<body>
+<noscript><p style="padding:24px;text-align:center"><a href="/scrumptious-confessions-membership">Read the full page</a></p></noscript>
+<div class="app" id="app">
+  <div class="ph" id="phA"></div><div class="ph" id="phB"></div>
+  <div class="veil" id="veil"></div>
+  <div class="glow"></div>
+  <header class="top">
+    <button type="button" class="back" id="back" aria-label="Back" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="15 5 8 12 15 19"></polyline></svg></button>
+    <span class="brand">Feel Fully You</span>
+    <span class="stepno" id="stepno"></span>
+  </header>
+  <div class="segs" id="segs" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+  <main id="screen" aria-live="polite"></main>
+  <div class="foot" id="foot" hidden></div>
+</div>
+
+<script>
+(function(){
+'use strict';
+
+/* ---------- constants ---------- */
+var STORE='ffy.confessions.start.v1';
+var APP='https://app.feelfullyyou.com/practice/scrumptious-confessions';
+var CHECKOUT='https://app.feelfullyyou.com/api/confessions/checkout';
+var OPEN=Date.UTC(2026,10,23);          /* Monday 23 Nov 2026, doors open */
+var DAY=86400000;
+var LAST=13;
+
+var TAG_PLAN=26270408;                  /* Confessions: built my plan */
+var TAG_WHO={woman:21000823,man:21000824};
+var TAG_STATE={braced:24122590,fade:24122591,reaching:24122592,melted:24122593};
+
+/* ---------- copy ---------- */
+var WHO=[['woman','Me, a woman'],['man','Me, a man'],['both','The two of us']];
+var STATES=[
+  ['braced','Almost nothing is arriving'],
+  ['fade','It arrives, and then I go somewhere else'],
+  ['reaching','I feel it, and I can’t ask for what I want'],
+  ['melted','All of it reaches me. I want more']
+];
+var BODY=[['meno','Menopause, or perimenopause'],['baby','After having a baby'],['mlow','Just not so turned on anymore'],['none','Nothing like that']];
+var BODY_MAN=[['stress','Stress, or exhaustion'],['erect','Erection worries'],['mlow','Just not so turned on anymore'],['meno','She’s in menopause, or perimenopause'],['baby','We’ve had a baby'],['none','Nothing like that']];
+var COMPANY=[['own','On my own'],['together','With my partner'],['stopped','My partner has stopped reaching for me']];
+var WANT=[['feel','To really feel it'],['stay','To stay with it'],['ask','To know what I want, and say it'],['more','More of it']];
+
+var MADE={
+  braced:{lines:['Almost nothing is getting through.','Not the Touch, not the wanting.','Your body took up a position a long time ago and never put it down.'],close:'Positions don’t respond to being told to relax.'},
+  fade:{lines:['It starts. Your body picks it up.','Then somewhere in the middle you’re gone.','You come back at the end and realise you missed most of it.'],close:'You already want it. Staying is the part nobody built.'},
+  reaching:{lines:['You know when something isn’t quite right.','You know it while it’s happening.','By the time you’ve worked out how to say it, the moment has gone.'],close:'You’re the one closing the gap. Every time.'},
+  melted:{lines:['A look across the kitchen.','Your own hand on your own arm.','Most of what passes other people by reaches you.'],close:'Nothing here to repair. The question at your end is range.'}
+};
+
+var DOOR={
+  meno:['Menopause','menopause'],
+  man:['For men','men'],
+  mstress:['For men','men'],
+  merect:['For men','men'],
+  mmeno:['Menopause','menopause'],
+  mlow:['Desire and pleasure','desire'],
+  baby:['Touch and the body','touch'],
+  braced:['Feeling nothing','numb'],
+  fade:['Touch and the body','touch'],
+  reaching:['Him, her, us','us'],
+  melted:['Desire and pleasure','desire']
+};
+var CARD={
+  meno:'Why don’t I want my husband to touch me during menopause?',
+  man:'Why doesn’t my wife want to be intimate with me anymore?',
+  mstress:'How to get turned on when you feel disconnected from your body',
+  merect:'How do I stop worrying about the outcome and just be present?',
+  mmeno:'Why has Touch she used to love stopped landing now that she’s in menopause?',
+  mlow:'Responsive vs spontaneous desire: what is the difference?',
+  baby:'Why can’t I stand to be touched after having a baby?',
+  braced:'Why don’t I feel anything when my partner touches me anymore?',
+  fade:'Why do I go through the motions during intimacy and check out halfway through?',
+  reaching:'How do I tell him what I want without ruining the mood?',
+  melted:'How do I figure out what I actually like in bed?'
+};
+var MED={
+  bodyfirst:'Body Confidence and Peace',
+  braced:'Feeling Safe & Touch Base',
+  fade:'Feeling Safe & Touch Base',
+  reaching:'Pleasure Boost',
+  melted:'Pleasure Boost'
+};
+
+var DAYS=[
+  /* Sunday first, matching getUTCDay() */
+  'Touch Base and your week',
+  'A confession in my voice',
+  'A card',
+  'A poem',
+  'My answers to your questions',
+  'A meditation',
+  'A card'
+];
+var WEEKDAY=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+var MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+var MONTHS=[
+  [['The Trace','Fully clothed. Non-sexual. One Touch point that creates connection.']],
+  [['When She Stops Reaching','For men: Touch Base, the Approach Ritual, the Full Stop.'],['The Fifteen Minutes After','One communication. Thank you. Swap.'],['Between Touches','What happens in the moments between.']],
+  [['31 Touch Points','A touch a day for a month.'],['The Full Stop','One true thing. No question on the end.']],
+  [['The Three Answers','One prompt. Fifteen minutes. Seven sittings.'],['31 Days Closer','31 cards, one a day, to bring you closer.']],
+  [['The 45-Minute Connection Ritual','From co-existing to connecting, in 45 minutes.'],['Trust & Repair','Fifty prompts for when something happened between you.']],
+  [['The Sacred No','The no that lets your yes mean something.']],
+  [['One Touch','One touch, learned properly.']],
+  [['The Unspoken Distance','Written for men, worth reading for women.']],
+  [['Communication Reboot Kit','The talking side of being close.']]
+];
+
+var BUILD=['Where your Touch went','Your first door','Your first meditation','Your programmes','Your first week'];
+
+/* ---------- state ---------- */
+var S={who:'',state:'',body:'',company:'',want:'',name:'',email:''};
+var step=0;
+var timers=[];
+var lastSent='';
+
+/* ---------- helpers ---------- */
+function $(id){return document.getElementById(id);}
+function esc(t){return String(t).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+function T(n,o){try{if(typeof gtag==='function')gtag('event',n,o||{});}catch(e){}}
+function clearTimers(){while(timers.length)clearTimeout(timers.pop());}
+
+/* dates are kept as UTC-midnight timestamps, so adding days never drifts across clock changes */
+function ukToday(){
+  var p={};
+  try{
+    new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/London',year:'numeric',month:'2-digit',day:'2-digit'})
+      .formatToParts(new Date(Date.now())).forEach(function(x){p[x.type]=x.value;});
+    return Date.UTC(+p.year,+p.month-1,+p.day);
+  }catch(e){
+    var d=new Date(Date.now());return Date.UTC(d.getFullYear(),d.getMonth(),d.getDate());
+  }
+}
+function fmt(ts){var d=new Date(ts);return d.getUTCDate()+' '+MON[d.getUTCMonth()];}
+function isoDate(ts){var d=new Date(ts);return d.getUTCFullYear()+'-'+('0'+(d.getUTCMonth()+1)).slice(-2)+'-'+('0'+d.getUTCDate()).slice(-2);}
+/* The same month counting the app uses (lib/entitlements/config.ts membershipMonth), so the
+   dates on the plan are the dates the app really opens each programme. */
+function memMonth(since,now){
+  var a=new Date(since),b=new Date(now);
+  var m=(b.getUTCFullYear()-a.getUTCFullYear())*12+(b.getUTCMonth()-a.getUTCMonth());
+  if(b.getUTCDate()<a.getUTCDate())m-=1;
+  return Math.max(1,m+1);
+}
+function opensOn(since,n){
+  if(n<=1)return since;
+  for(var t=since;t<since+400*DAY;t+=DAY){if(memMonth(since,t)>=n)return t;}
+  return since;
+}
+function addMonths(ts,n){
+  var d=new Date(ts),y=d.getUTCFullYear(),m=d.getUTCMonth()+n,day=d.getUTCDate();
+  var last=new Date(Date.UTC(y,m+1,0)).getUTCDate();
+  return Date.UTC(y,m,Math.min(day,last));
+}
+
+/* ---------- routing ---------- */
+function route(a){
+  // Men's own body: stress and erections (Juliette 21 Nov 2026).
+  var key=(a.who==='man'&&a.body==='stress')?'mstress':((a.who==='man'&&a.body==='erect')?'merect':((a.body==='mlow')?'mlow':(a.body==='meno'?(a.who==='man'?'mmeno':'meno'):(a.who==='man'?'man':(a.body==='baby'?'baby':a.state)))));
+  var door=DOOR[key];
+  var med=(a.body==='meno'||a.body==='baby')?MED.bodyfirst:(key==='mlow'?'Pleasure Boost':MED[a.state]);
+  return {
+    key:key,
+    doorName:door[0],
+    doorUrl:APP+'?tab=library&topic='+door[1],
+    card:CARD[key],
+    meditation:med,
+    men:a.who==='man',
+    askLine:key==='merect'?'Anything more about erections: ask me on the questions wall, with no name on it. I answer every Thursday, in my voice.':(key==='mstress'?'Stress and tiredness: ask me on the questions wall, with no name on it. I answer every Thursday.':'')
+  };
+}
+
+function buildPlan(){
+  var today=ukToday();
+  var before=today<OPEN;
+  var start=before?OPEN:today;
+  var r=route(S);
+  return {today:today,before:before,start:start,route:r};
+}
+
+function savePlan(p){
+  try{
+    localStorage.setItem(STORE,JSON.stringify({
+      v:1,
+      who:S.who,state:S.state,body:S.body,company:S.company,want:S.want,
+      name:S.name,
+      start:isoDate(p.start),
+      doorName:p.route.doorName,
+      doorUrl:p.route.doorUrl,
+      card:p.route.card,
+      meditation:p.route.meditation,
+      men:p.route.men
+    }));
+  }catch(e){}
+}
+
+/* ---------- screens ---------- */
+var PHOTO={
+  0:['/touch-bw.jpg','center',true],
+  1:['/touch-embrace-bw.jpg','center',false],
+  2:['/touch-heart-hands-bw.jpg','center',false],
+  3:['/touch-hand-heart.jpg','center',false],
+  4:['/touch-alex-behind.jpg','48% center',false],
+  5:['/touch-scarf-silk-2.jpg','center',false],
+  6:['/touch-lace-closet-bw.jpg','center',false],
+  7:['/touch-bw.jpg','center',true],
+  8:['/touch-grey-chest.jpg','center',true],
+  9:['/touch-neck-back.jpg','center',true],
+  10:['/touch-bw.jpg','center',true],
+  11:['/touch-cloth.jpg','center',true],
+  12:['/touch-reset-quiz-bw.jpg','center',true],
+  13:['/touch-reset-quiz-bw.jpg','center',true]
+};
+var FACE='/sacred-no-quiz-face.jpg';
+var TASTER='/media/confessions/taster-tolerated-touch-v2.m4a';
+
+function tapsHtml(list,key){
+  var h='<div class="taps" role="radiogroup" aria-labelledby="q">';
+  list.forEach(function(o){
+    h+='<button type="button" class="tap" role="radio" data-key="'+key+'" data-val="'+o[0]+'" aria-checked="'+(S[key]===o[0]?'true':'false')+'">'+esc(o[1])+'</button>';
+  });
+  return h+'</div>';
+}
+function mockHtml(src,alt,cls){
+  return '<div class="mock'+(cls?' '+cls:'')+'"><div class="phone"><div class="screen"><img src="/media/confessions/'+src+'" width="640" alt="'+esc(alt)+'"></div></div></div>';
+}
+function qHead(n,html){
+  return '<div class="k">'+n+' of 5</div><h2 class="q" id="q" tabindex="-1">'+html+'</h2>';
+}
+
+var SCREENS={
+  0:function(){
+    return {html:'<div class="popcard"><div class="popph" style="background-image:url(/media/confessions/cover.jpg)" role="img" aria-label="Scrumptious Confessions cover: Juliette with red lips, in purple light"></div><div class="popin"><div class="k">Scrumptious Confessions · One minute</div><h1 id="q" tabindex="-1">Let me build<br><em>your first week.</em></h1><p class="sub">Five quick taps. About a minute. Then you’ll see exactly what opens for you, day by day.</p><div id="vp0"></div><div style="margin-top:20px"><button type="button" class="btn-g" id="cta">Begin</button></div></div></div>',
+      foot:{label:'Begin',enabled:true,inline:true},
+      after:function(){voicePill($('vp0'),TASTER,'Hear me first','1:18');}};
+  },
+  1:function(){
+    return {html:qHead(1,'Who’s this <em>for?</em>')+tapsHtml(WHO,'who'),foot:{label:'Continue',enabled:!!S.who}};
+  },
+  2:function(){
+    return {html:qHead(2,'Where did <em>the Touch go?</em>')+'<p class="sub">Answer for how it is right now.</p>'+tapsHtml(STATES,'state'),foot:{label:'Continue',enabled:!!S.state}};
+  },
+  3:function(){
+    return {html:qHead(3,S.who==='man'?'Is anything changing <em>for the two of you?</em>':'Is anything changing <em>in your body?</em>')+tapsHtml(S.who==='man'?BODY_MAN:BODY,'body'),foot:{label:'Continue',enabled:!!S.body}};
+  },
+  4:function(){
+    return {html:qHead(4,'On your own, <em>or together?</em>')+tapsHtml(COMPANY,'company'),foot:{label:'Continue',enabled:!!S.company}};
+  },
+  5:function(){
+    return {html:qHead(5,'What do you <em>most want?</em>')+tapsHtml(WANT,'want'),foot:{label:'Continue',enabled:!!S.want}};
+  },
+  6:function(){
+    var m=MADE[S.state];
+    var h='<div class="card made-card"><div class="k">Scrumptious Confessions</div><h2 id="q" tabindex="-1">This was made for you.</h2><div class="lines">';
+    var i=0;
+    m.lines.forEach(function(l){h+='<p class="rv" style="--i:'+(i++)+'">'+esc(l)+'</p>';});
+    h+='<p class="close rv" style="--i:'+(i++)+'">'+esc(m.close)+'</p>';
+    h+='<p class="small rv" style="--i:'+(i++)+'">Being touched isn’t the same as feeling Touch.</p>';
+    h+='</div></div>';
+    return {html:h,foot:{label:'Continue',enabled:true}};
+  },
+  7:function(){
+    return {html:'<div class="apps"><div class="k">Scrumptious Confessions</div><h2 class="q" id="q" tabindex="-1">Something <em>opens every day.</em></h2><div class="lines-plain"><span>Monday, a confession in my voice.</span><span>Tuesday and Saturday, a card.</span><span>Wednesday, a poem.</span><span>Thursday, I answer your questions.</span><span>Friday, a meditation.</span><span>Every day, Touch Base: five minutes, in my voice.</span></div>'+mockHtml('phone-mondays.webp','The Scrumptious Confessions app, showing Today and the week ahead')+'</div>',
+      foot:{label:'Continue',enabled:true}};
+  },
+  8:function(){
+    return {html:'<div class="apps"><div class="k">Scrumptious Confessions</div><h2 class="q" id="q" tabindex="-1">My voice, <em>in your pocket.</em></h2><p class="sub">Every recording is in my voice, and you can speed me up.</p>'+mockHtml('phone-player.webp','A confession playing in the Scrumptious Confessions app','r')+'</div>',
+      foot:{label:'Continue',enabled:true}};
+  },
+  9:function(){
+    return {html:'<div class="apps"><div class="k">Scrumptious Confessions</div><h2 class="q" id="q" tabindex="-1">Ask me anything. <em>No name, ever.</em></h2><p class="sub">Your question goes on the wall with no name on it. Others tap Me too. I answer every Thursday, and my answers stay in your library.</p>'+mockHtml('phone-question.webp','The question box in the Scrumptious Confessions app, which sends your question with no name on it')+'</div>',
+      foot:{label:'Continue',enabled:true}};
+  },
+  10:function(){
+    var h='<div class="build"><img class="face" src="'+FACE+'" alt="" width="76" height="76"><h2 class="q" id="q" tabindex="-1" style="margin-top:0">Building your <em>first week…</em></h2><ul class="bars">';
+    BUILD.forEach(function(l,i){
+      h+='<li data-i="'+i+'"><div class="row"><span>'+esc(l)+'</span><span class="tick" aria-hidden="true"><svg viewBox="0 0 12 12"><polyline points="2 6.5 5 9.5 10 3"></polyline></svg></span></div><div class="track"><i></i></div></li>';
+    });
+    h+='</ul></div>';
+    return {html:h,foot:null,after:function(){
+      var rows=document.querySelectorAll('.bars li');
+      var reduced=false;try{reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;}catch(e){}
+      var each=reduced?120:600;
+      [].forEach.call(rows,function(li,i){
+        timers.push(setTimeout(function(){li.classList.add('fill');},i*each+120));
+        timers.push(setTimeout(function(){li.classList.add('done');},i*each+120+(reduced?20:560)));
+      });
+      timers.push(setTimeout(function(){go(11,'replace');},rows.length*each+(reduced?200:650)));
+    }};
+  },
+  11:function(){
+    var h='<div class="mail"><div class="k">Scrumptious Confessions</div><h2 class="q" id="q" tabindex="-1">Your first week is ready. <em>Where shall I send it?</em></h2>'+
+      '<form id="mailForm" novalidate>'+
+        '<div class="field"><label for="fName">First name (optional)</label><input id="fName" name="firstName" type="text" autocomplete="given-name" value="'+esc(S.name)+'"></div>'+
+        '<div class="field"><label for="fEmail">Email</label><input id="fEmail" name="email" type="email" inputmode="email" autocomplete="email" required value="'+esc(S.email)+'"></div>'+
+        '<input type="text" class="hp" name="hp_field" tabindex="-1" autocomplete="off" aria-hidden="true">'+
+        '<p class="err" id="mailErr" role="alert"></p>'+
+      '</form></div>';
+    return {html:h,foot:{label:'Show me my first week',enabled:true,submit:'mailForm',fine:'No card yet. Your answers stay private.'},after:bindMail};
+  },
+  12:function(){
+    var p=buildPlan();
+    savePlan(p);
+    T('confessions_start_plan',{state:S.state,who:S.who});
+    var r=p.route;
+    var h='<div class="plan"><div class="k">Scrumptious Confessions</div><h2 class="q" id="q" tabindex="-1">'+(S.name?esc(S.name)+', here’s <em>your first week.</em>':'Here’s <em>your first week.</em>')+'</h2>';
+
+    h+='<section class="card start"><h3>Start here</h3><ul class="here">';
+    h+='<li><span class="lab">Your first library door</span><span class="val">'+esc(r.doorName)+'</span></li>';
+    h+='<li><span class="lab">Your first answer card</span><span class="val">“'+esc(r.card)+'”</span></li>';
+    h+='<li><span class="lab">Your first meditation</span><span class="val">'+esc(r.meditation)+'</span></li>';
+    h+='<li><span class="val">The Holiday Survival Kit, free in your first week and yours to keep.</span></li>';
+    if(r.men)h+='<li><span class="val">Quiet Isn’t Yes, free in your first week.</span></li>';
+    if(r.askLine)h+='<li><span class="val">'+esc(r.askLine)+'</span></li>';
+    h+='</ul></section>';
+
+    h+='<section class="card"><h3>Your first seven days</h3><ul class="tl">';
+    for(var i=0;i<7;i++){
+      var ts=p.start+i*DAY,wd=new Date(ts).getUTCDay();
+      var what=DAYS[wd];
+      // Launch week: the real titles from the app's schedule (Juliette 21 Nov: "it is still pretty vague").
+      var LAUNCH={0:'A confession in my voice: The touch you tolerate. The Touch Map opens your first place, the wrist.',2:'A poem in my voice: The Gift of Seeing',4:'A meditation: The Haven of Peace',3:'My answers to the week\u2019s questions, in my voice'};
+      if(p.start===OPEN&&LAUNCH[i])what=LAUNCH[i];
+      else if(i===0)what=what+'. The Touch Map opens your first place, the wrist.';
+      h+='<li><div class="dd">'+WEEKDAY[wd]+'<span>'+fmt(ts)+'</span></div><div class="dc">'+esc(what)+'<small>Touch Base, 5 minutes</small></div></li>';
+    }
+    h+='</ul></section>';
+
+    // Juliette 21 Nov 2026: the free week gives everyone the Holiday Survival Kit (and Quiet Isn't Yes);
+    // the paid programmes start at the first payment and move with each person's own join date.
+    var base=p.start+7*DAY;
+    h+='<section class="card"><h3>Free in your first week</h3><ul class="progs">';
+    h+='<li><b>Holiday Survival Kit</b><span>Cards for the season: the drive there, the table, who isn’t here. Yours to keep, even if you stop.</span></li>';
+    h+='<li><b>Quiet Isn’t Yes</b><span>For men: when she goes quiet, and what it really means. Yours to keep.</span></li>';
+    h+='</ul></section>';
+    h+='<h3 class="months-h">From your first payment, more opens every month. Yours to keep.</h3>';
+    h+='<p class="progs-note" style="padding:0 2px 10px">Your dates count from the day you join. Join later, and everything moves with you.</p>';
+    MONTHS.forEach(function(progs,n){
+      var from=opensOn(base,n+1);
+      h+='<details open><summary><span class="pill">Month '+(n+1)+'</span><span>opens '+(WEEKDAY[new Date(from).getUTCDay()])+' '+fmt(from)+'</span></summary><ul class="progs">';
+      progs.forEach(function(pr){h+='<li><b>'+esc(pr[0])+'</b><span>'+esc(pr[1])+'</span></li>';});
+      h+='</ul>';
+      if(n===0)h+='<p class="progs-note">Your first payment opens this one.</p>';
+      h+='</details>';
+    });
+
+    h+='<section class="card"><p class="map">The Touch Map: your wrist in your first week, then a new place every month, on a Monday.</p></section>';
+    h+='</div>';
+    return {html:h,foot:{label:'Continue',enabled:true},ctx:p};
+  },
+  13:function(){
+    var p=buildPlan();
+    var h='<div class="offer"><div class="k">Scrumptious Confessions</div><h2 class="q" id="q" tabindex="-1">Start your <em>7 days free.</em></h2><div class="card"><ul class="terms">'+
+      '<li><span class="big">£111 a month</span> for the first 50 members, and you keep £111 for as long as you stay. After 50, the price goes up.</li>'+
+      '<li>Your free week comes with the Holiday Survival Kit, normally £17, and it’s yours to keep even if you stop.</li>'+
+      '<li>Your card goes in today. Nothing is charged for 7 days. Stop before day 8 and you pay nothing.</li>';
+    if(p.before)h+='<li>Doors open Monday 23 November. Your first £111 is on Monday 30 November.</li>';
+    h+='<li>Women and men. Everything in my voice.</li></ul></div></div>';
+    var href=CHECKOUT+(S.email?'?email='+encodeURIComponent(S.email):'');
+    return {html:h,foot:{label:'Start my 7 days free',enabled:true,href:href,below:'<a class="sub-link" href="/scrumptious-confessions-membership">Questions first? Read the full page</a>'}};
+  }
+};
+
+/* ---------- voice player (same as the quiz) ---------- */
+var VA=null;
+function stopVoice(){if(VA)VA.pause();[].forEach.call(document.querySelectorAll('.vp-play .ico'),function(x){x.textContent='▶';});}
+function voicePill(host,src,label,dur){
+  if(!host)return;
+  host.innerHTML='<div class="vp"><button type="button" class="vp-play"><img src="'+FACE+'" alt=""><span class="ico">▶</span><span class="lbl">'+esc(label)+'</span><span class="dur">'+esc(dur)+'</span></button><div class="vp-speed"><button type="button" data-r="1" class="on">1×</button><button type="button" data-r="1.25">1.25×</button><button type="button" data-r="1.5">1.5×</button></div></div>';
+  var play=host.querySelector('.vp-play'),ico=host.querySelector('.ico'),rate=1;
+  play.addEventListener('click',function(){
+    if(VA&&VA._src===src&&!VA.paused){VA.pause();ico.textContent='▶';return;}
+    stopVoice();
+    if(!VA||VA._src!==src){VA=new Audio(src);VA._src=src;VA.onended=function(){ico.textContent='▶';};}
+    VA.playbackRate=rate;
+    var pr=VA.play();if(pr&&pr.catch)pr.catch(function(){ico.textContent='▶';});
+    ico.textContent='❚❚';
+    T('voice_play',{page:'confessions_start',clip:label});
+  });
+  [].forEach.call(host.querySelectorAll('.vp-speed button'),function(b){
+    b.addEventListener('click',function(){
+      rate=parseFloat(b.getAttribute('data-r'));
+      [].forEach.call(host.querySelectorAll('.vp-speed button'),function(x){x.classList.toggle('on',x===b);});
+      if(VA&&VA._src===src)VA.playbackRate=rate;
+    });
+  });
+}
+
+/* ---------- background photos ---------- */
+var front='phA';
+function photo(n){
+  var p=PHOTO[n]||PHOTO[0];
+  var back=front==='phA'?'phB':'phA',b=$(back),f=$(front);
+  b.style.backgroundImage="url('"+p[0]+"')";
+  b.style.backgroundPosition=p[1];
+  b.classList.add('on');f.classList.remove('on');front=back;
+  $('veil').classList.toggle('deep',!!p[2]);
+}
+Object.keys(PHOTO).forEach(function(k){var im=new Image();im.src=PHOTO[k][0];});
+
+/* ---------- rendering ---------- */
+var screenEl=$('screen'),footEl=$('foot'),backEl=$('back'),segsEl=$('segs'),stepEl=$('stepno');
+(function(){var h='';for(var i=0;i<LAST;i++)h+='<i></i>';segsEl.innerHTML=h;})();
+
+function render(){
+  var sc=SCREENS[step]();
+  screenEl.innerHTML='<div class="sc">'+sc.html+'</div>';
+  screenEl.scrollTop=0;
+
+  /* header: thin segmented bars, step count, back arrow */
+  var bs=segsEl.children;
+  for(var k=0;k<bs.length;k++)bs[k].classList.toggle('on',k<step);
+  segsEl.setAttribute('aria-valuenow',String(Math.round(step/LAST*100)));
+  stepEl.textContent=step?(step+' / '+LAST):'';
+  backEl.hidden=(step===0);
+  photo(step);
+
+  /* fixed bottom bar */
+  var f=sc.foot;
+  if(!f||f.inline){footEl.hidden=true;footEl.innerHTML='';}
+  else{
+    var b;
+    if(f.href){b='<a class="btn" id="cta" href="'+esc(f.href)+'">'+esc(f.label)+'</a>';}
+    else if(f.submit){b='<button type="submit" form="'+f.submit+'" class="btn" id="cta">'+esc(f.label)+'</button>';}
+    else{b='<button type="button" class="btn" id="cta"'+(f.enabled?'':' disabled')+'>'+esc(f.label)+'</button>';}
+    footEl.innerHTML=b+(f.fine?'<p class="fine">'+esc(f.fine)+'</p>':'')+(f.below||'');
+    footEl.hidden=false;
+  }
+  fitFoot();
+
+  /* answers */
+  [].forEach.call(screenEl.querySelectorAll('.tap'),function(btn){
+    btn.addEventListener('click',function(){
+      S[btn.getAttribute('data-key')]=btn.getAttribute('data-val');
+      [].forEach.call(screenEl.querySelectorAll('.tap'),function(o){o.setAttribute('aria-checked',o===btn?'true':'false');});
+      var c=$('cta');if(c)c.disabled=false;
+    });
+  });
+  var cta=$('cta');
+  if(cta&&!f.href&&!f.submit)cta.addEventListener('click',next);
+  if(cta&&f.href)cta.addEventListener('click',function(){T('confessions_start_checkout',{state:S.state,who:S.who});});
+
+  if(sc.after)sc.after();
+
+  var q=$('q');if(q){try{q.focus({preventScroll:true});}catch(e){}}
+}
+
+function fitFoot(){
+  /* the site's cookie box sits at the bottom on a first visit: lift the button above it */
+  var cc=document.getElementById('ffy-cc');
+  var lift=(cc&&cc.offsetHeight)?cc.offsetHeight+16:0;
+  footEl.style.bottom=lift?lift+'px':'';
+  var h=footEl.hidden?0:footEl.offsetHeight;
+  document.documentElement.style.setProperty('--foot',(h+lift+24)+'px');
+}
+window.addEventListener('resize',fitFoot);
+try{new MutationObserver(fitFoot).observe(document.body,{childList:true});}catch(e){}
+
+/* ---------- navigation ---------- */
+function firstMissing(){
+  if(!S.who)return 1;
+  if(!S.state)return 2;
+  if(!S.body)return 3;
+  if(!S.company)return 4;
+  if(!S.want)return 5;
+  return 0;
+}
+function allowed(n){
+  var m=firstMissing();
+  if(n>=2&&n<=6&&m&&m<n)return m;
+  if(n>=7&&m)return m;
+  if(n>=12&&!S.email)return 11;
+  return n;
+}
+function go(n,mode){
+  clearTimers();
+  stopVoice();
+  n=allowed(n);
+  step=n;
+  if(mode==='push')history.pushState({s:n},'');
+  else if(mode==='replace')history.replaceState({s:n},'');
+  render();
+}
+function next(){
+  if(step===0)T('confessions_start_begin');
+  go(step+1,'push');
+}
+backEl.addEventListener('click',function(){
+  if(history.state&&history.state.s>0)history.back();
+  else go(Math.max(0,step-1),'replace');
+});
+window.addEventListener('popstate',function(e){
+  var s=(e.state&&typeof e.state.s==='number')?e.state.s:0;
+  go(s,'pop');
+});
+
+/* ---------- email ---------- */
+function bindMail(){
+  var form=$('mailForm');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var email=form.email.value.trim();
+    var name=form.firstName.value.trim();
+    var err=$('mailErr');err.textContent='';
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){err.textContent='Please enter a valid email.';form.email.focus();return;}
+    S.email=email;S.name=name;
+    var btn=$('cta');btn.disabled=true;
+
+    var tags=[TAG_PLAN];
+    if(TAG_WHO[S.who])tags.push(TAG_WHO[S.who]);
+    if(TAG_STATE[S.state])tags.push(TAG_STATE[S.state]);
+    var payload=JSON.stringify({email:email,firstName:name,tagIds:tags,hp_field:form.hp_field.value});
+
+    var moved=false;
+    function carryOn(){
+      if(moved)return;moved=true;
+      go(12,'push');
+    }
+    T('confessions_start_email',{state:S.state,who:S.who});
+
+    /* same email and answers already sent, no need to post twice */
+    if(payload===lastSent){carryOn();return;}
+
+    function attempt(n){
+      return fetch('/.netlify/functions/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:payload})
+        .then(function(r){return r.json().catch(function(){return {};});})
+        .then(function(d){if(d&&d.ok)return d;throw new Error('fail');})
+        .catch(function(er){if(n>0){return new Promise(function(res){setTimeout(res,1200);}).then(function(){return attempt(n-1);});}throw er;});
+    }
+    /* never block the person: whatever happens, they get their plan */
+    var guard=setTimeout(carryOn,6000);
+    attempt(1).then(function(){lastSent=payload;},function(){}).then(function(){clearTimeout(guard);carryOn();});
+  });
+}
+
+/* ---------- start ---------- */
+/* the quiz can send ?state=...&who=...&email=... : pre-select those answers, ignore anything unknown */
+(function(){
+  try{
+    var q=new URLSearchParams(location.search);
+    var st={'braced':'braced','the fade':'fade','reaching':'reaching','melted':'melted'}[(q.get('state')||'').trim().toLowerCase()];
+    if(st)S.state=st;
+    var w=(q.get('who')||'').trim().toLowerCase();
+    if(w==='woman'||w==='man')S.who=w;
+    var em=(q.get('email')||'').trim();
+    if(em.length<=254&&/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em))S.email=em;
+  }catch(e){}
+})();
+history.replaceState({s:0},'',location.pathname);
+render();
+})();
+</script>
+</body>
+</html>

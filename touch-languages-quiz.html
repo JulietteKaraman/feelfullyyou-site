@@ -1254,7 +1254,17 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
     if(pl){set('pleasureName',pl.name);set('pleasureDesc',pl.tease||'');}
     // 30 Oct, Juliette: no Touch Audit straight after a quiz ("too quick... I would never book a call").
     // Kit data agreed: 0 clicks. The call is offered later, by email, to people who are ready.
-    var w=$('ctaBtnWrap');if(w)w.style.display='none';
+    // 21 Nov 2026, Juliette: the quiz leads to Scrumptious Confessions (book, then quiz, then app).
+    // One button to the first-week flow, carrying what they just told me so it starts where they are.
+    var w=$('ctaBtnWrap'),b=$('ctaBtn'),cb=$('ctaBody');
+    if(w&&b){
+      var who=(identity==='woman'||identity==='man')?identity:'';
+      var em=(($('capForm')||{}).email||{}).value||'';
+      b.textContent='Build my first week';
+      b.href='/scrumptious-confessions-start?state='+encodeURIComponent(result.state||'')+(who?'&who='+who:'')+(em?'&email='+encodeURIComponent(em):'');
+      if(cb)cb.textContent="Want me in your pocket? Scrumptious Confessions opens with 7 days free. I'll build your first week from what you've just told me.";
+      w.style.display='block';
+    }
   }
 
   function revealBands(){
