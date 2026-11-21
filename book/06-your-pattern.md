@@ -180,4 +180,4 @@ Next comes the part that is much more fun. What actually turns you on, once your
 
 **Third pass, 21 Nov 2026:** the relationship coach who spent more than a quarter of a million pounds on personal development, from your key proof stories. The quote is hers, from your notes. She is not named, so please check that she has agreed.
 
-**Added 21 Nov 2026 (fifth pass):** Katarina the dermatologist, from your essay "Why do I feel guilty the second I..." (she is already anonymised there, and it says she is a Holder). Please confirm you are happy for her to appear in print.
+**Added 21 Nov 2026 (fifth pass):** Katarina the dermatologist, from your essay "Why do I feel guilty the second I..." (she is already anonymised there, and it says she is a Holder). CONFIRMED by Juliette 21 Nov 2026: happy for her to appear in print.
