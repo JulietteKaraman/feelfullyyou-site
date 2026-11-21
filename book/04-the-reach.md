@@ -127,7 +127,7 @@ One of those will have landed more than the other. That is your body answering a
 
 Try three or four different places. Some will light up. Some won't. You are building the first page of your own map.
 
-In a course I ran this autumn, that was the hardest and most useful part. A woman finds she feels very little in one part of her body, and a great deal in another. For some women that was triggering.
+I use Scrumptious Stroking, and my How to Feel Like a Woman Again course, to work with this. It is the hardest and most useful part. A woman finds she feels very little in one part of her body, and a great deal in another. For some women that was triggering.
 
 It is also the way in. You start where you can feel, and move from there to the part that cannot yet, a little at a time. That is called titration.
 
@@ -237,7 +237,7 @@ You have been closing the gap alone for a long time. Chapter 8 shows you how it 
 - **Numbers and citations.** The essay's "980+ women and 20 countries", Gottman, Porges, Levine, Löken and the others.
 - **The longer men's section**, with the five Small Bid examples, the "braced to open" question and the Three-Minute Reset. It belongs in Chapter 8 or in Confessions.
 
-**Added 21 Nov 2026, from Juliette:** the paragraph about the course ("How to Feel Like a Woman"), where women found they felt little in one part and plenty in another, and how that becomes titration. I wrote "a course I ran this autumn" because your Canon says the course will not re-run. Do you want it named?
+**Added 21 Nov 2026, from Juliette:** the paragraph about women feeling little in one part of the body and a great deal in another, and how that becomes titration. Juliette told me to say "I use Scrumptious Stroking and my How to Feel Like a Woman Again course." One thing to check: your Canon lists two courses, How to Feel Like a Woman (the four-week course that ended 18 Nov) and Feel Like a Woman Again (the self-pleasure course for after 40). The book uses the name you gave me.
 
 **Decided by Juliette, 21 Nov 2026:**
 - Zeinab's name stays in.

@@ -40,7 +40,7 @@ You are driving in traffic. Somebody pulls out in front of you. You get activate
 
 Your body starts working normally again.
 
-That is why I have people do it time and time and time again. It becomes the anchor you reach for when you are up in your thinking. When you are overwhelmed and stressed. And right before intimacy.
+That is why I have people do it time and time and time again. It becomes the anchor you reach for when you are up in your thinking. When you are overwhelmed and stressed, and right before intimacy.
 
 I have taught men who were terrified of flying. After two sessions they flew with no medication and no alcohol, and it still works for them years later. I have used it with couples in the middle of a storm. I have used it with my mother, at the threshold of her last breath. It held.
 

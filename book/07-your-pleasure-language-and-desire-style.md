@@ -136,7 +136,7 @@ Chapter 8 shows you what to do with all three.
 **Jaiya is credited** in the first section, as Canon requires.
 
 **Please confirm before print:**
-1. **The 30% of women and 5% of men** are "by her citation" in your Substack essay. I have not checked them against Nagoski's book. Do you want the figures in, or a softer line like "most women run at least partly responsive"?
+1. **The 30% of women and 5% of men** stay in, as you decided on 21 Nov. They are "by her citation" in your Substack essay, and I have not checked them against Nagoski's book.
 2. **The Desire Check** is your wording from your course notes. Your notes say it is original. Is it fine to reuse in the book?
 3. **The line about medicine** ("filed a body that needed Touch... under a disorder") is from your Substack essay. It needs a fact-check before print.
 4. **The Desire Style is not scored by the quiz.** The book tells readers to use the Desire Check instead. If you decide to add it to the quiz later, the book should say so.

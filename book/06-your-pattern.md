@@ -56,7 +56,7 @@ I know this one from the inside. I was the Operator.
 
 I got so good at managing everyone's life that I could not feel my own body. I spent years helping children on the spectrum learn that connection was safe. I knew what every person around me needed, and I made sure they got it. The one body I kept missing was mine.
 
-So my body forced me to stop. I woke up on the half landing of my own house, my wrist cut, in a pool of my own blood. A vase had shattered beside me. I had no memory of fainting.
+So my body forced me to stop. I woke up on the half landing of my own house, my wrist cut, in a pool of my own blood. An antique Chinese vase had shattered beside me. I had no memory of fainting.
 
 Lying there, I made one clear decision, from somewhere underneath all the managing.
 
@@ -150,8 +150,8 @@ Next comes the part that is much more fun. What actually turns you on, once your
 
 **Added 21 Nov 2026:** the bacon story, from your visibility challenge posts ("He said 'at'. I heard 'for'."). It is the funny half of the Operator: she gives until her body stops her, then does it again with bacon. Your thread says it can be used. I left out the friend's name and your line about your love languages.
 
-**Please confirm before print:**
-1. **The vase.** Your Notion posts say "an antique vase" and your About page says "a Chinese vase". I wrote "a vase".
-2. **The half landing story** is graphic, and you have published it before. Is it right for this book?
-3. **The three "small reps"** are my adaptations from your Pattern page (the tea, the timed container and slow exhale, and a stop word). Are they right?
-4. **"Him"** in the Holder and Wanderer reps follows your he and she decision.
+**Decided by Juliette, 21 Nov 2026:** the vase is "an antique Chinese vase". The half landing story stays graphic. Juliette wants to look at the three small reps herself, so they are still open.
+
+**Still open:**
+1. **The three "small reps"** are my adaptations from your Pattern page (the tea, the timed container and slow exhale, and a stop word). You said you would look at them.
+2. **"Him"** in the Holder and Wanderer reps follows your he and she decision.
