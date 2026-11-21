@@ -22,8 +22,8 @@ Voice rules for every chapter: start in the moment, not the lesson. Short lines.
 | 5 | The Melt | 2,500 | State 4. It is good. You want more. |
 | 6 | Your Pattern | 1,200 | DRAFTED (book/06-your-pattern.md). Holder, Operator, Wanderer, with Juliette's Operator story. |
 | 7 | Your Pleasure Language and Your Desire Style | 1,800 | DRAFTED (book/07-your-pleasure-language-and-desire-style.md).  Sensual, Sexual, Energetic, Kinky, Shapeshifter (Jaiya's Erotic Blueprints credited). Then Desire Style, responsive or spontaneous (Basson and Nagoski credited, original exercises). Chapter 2 points forward to this. |
-| 8 | The way back | 2,500 | Capacity built like fitness: the window of tolerance, small wins, titration, Touch Dates (3, 15, 30 minutes), Touch Base, the conversation. Spine from Juliette, 21 Nov. |
-| 9 | Why I built Scrumptious Confessions | 1,200 | Her story, the bridge. |
+| 8 | The way back | 1,300 | DRAFTED (book/08-the-way-back.md).  Capacity built like fitness: the window of tolerance, small wins, titration, Touch Dates (3, 15, 30 minutes), Touch Base, the conversation. Spine from Juliette, 21 Nov. |
+| 9 | Why I built Scrumptious Confessions | 750 | DRAFTED (book/09-why-i-built-scrumptious-confessions.md). Her story, the bridge. |
 | 10 | Your next fortnight | 500 | One door: the free fortnight. |
 
 Total about 21,200. Chapter 1 is DRAFTED (book/01-yesterday.md) and kept at about 860 words by Juliette.

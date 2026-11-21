@@ -64,6 +64,20 @@ Lying there, I made one clear decision, from somewhere underneath all the managi
 
 That was when I understood that being needed had never been the same as being felt.
 
+I would love to tell you the lesson stuck.
+
+Last year, at half six in the morning, I was standing in my kitchen, naked, frying bacon for a lunch nobody had asked me to make. Alex had said a friend was coming at lunchtime. I had heard "for lunch".
+
+He came downstairs and looked at me. "What are you doing, frying bacon naked?"
+
+"Making you lunch. You said he's coming for lunch."
+
+"That's not what I said. I said he's coming at lunchtime."
+
+One word. He never asked me to cook a thing.
+
+Strange, I know, for a Touch expert who spends all day teaching people to hear what is actually being asked.
+
 Your strength: you are highly capable, and things get done because of you.
 
 What is missing: staying with what you feel instead of moving straight on to the next thing.
@@ -133,6 +147,8 @@ Next comes the part that is much more fun. What actually turns you on, once your
 **Left out on purpose:** the fight, flight, freeze and fawn labels and the "nervous system research" wording from your Pattern page. That page itself says those links are your own reading, not a study, and the book is scene-led. Say if you want them in.
 
 **Callbacks:** the Holders in Chapters 3 and 4 are named as Holders here. In Chapter 3 it is the woman who could not receive her husband's attention. In Chapter 4 it is the woman who knew how everyone else took their tea.
+
+**Added 21 Nov 2026:** the bacon story, from your visibility challenge posts ("He said 'at'. I heard 'for'."). It is the funny half of the Operator: she gives until her body stops her, then does it again with bacon. Your thread says it can be used. I left out the friend's name and your line about your love languages.
 
 **Please confirm before print:**
 1. **The vase.** Your Notion posts say "an antique vase" and your About page says "a Chinese vase". I wrote "a vase".

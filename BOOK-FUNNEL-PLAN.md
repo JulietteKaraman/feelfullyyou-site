@@ -88,3 +88,13 @@ Each buyer is told which chapter to start with based on her state. One book, wit
 - The live site could not be reached from this session (network blocked), so the quiz was read from the repo copy, not the live page.
 - The content of the four state email sequences (2910584, 2910585, 2910587, 2910588) was not read.
 - Whether `/touch-date` and its 5-email sequence currently send people to book a call or only to the waitlist.
+
+## Update, 21 Nov 2026: Confessions facts changed
+
+From the Notion page "Decided 20 to 21 Nov 2026: Confessions launch thread". This replaces what this plan said about the free fortnight.
+
+- The trial is now **7 days free, with the card going in**, and nothing charged for 7 days. It is a rolling 7 days from sign-up, not a fixed fortnight. That settles the question this plan raised about a rolling trial.
+- Doors opened Monday 23 November. The first 50 members keep the starting price for as long as they stay.
+- Telegram, "two weeks free", the old lower price, the waitlist and Sunday answers are all marked dead.
+- Something opens most days: a Monday confession, cards, a Wednesday poem, Thursday answers, a Friday meditation, and Touch Base every day. The Touch Map starts with the wrist in week one.
+- Your Day 14 post says you no longer sell work for £17 and that everything under £200 lives in Confessions. The £17 book is an exception, as a front door. Decide whether to say so.
