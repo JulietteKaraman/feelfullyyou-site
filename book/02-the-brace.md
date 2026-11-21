@@ -32,6 +32,28 @@ I want you to hear something before anything else.
 
 Whatever this is, it is not a verdict on whether you love him.
 
+## A whole room, in ten seconds
+
+I watch this happen for a living.
+
+I was once introduced on a stage by a woman called Lyn. She told a room of women that I am a Touch and intimacy expert. Then I walked on, and I said it back to them.
+
+"Lyn has just given you my title. Touch and intimacy expert."
+
+Then I stopped talking.
+
+I let the silence sit. It got uncomfortable fast.
+
+"Yes. That one. Your shoulders have just crept up a centimetre towards your ears. Let them drop. Let go of whatever else just clenched, because something did."
+
+Somebody laughed. It was the small laugh that lets the pressure out of a room that has decided it is not safe to be serious.
+
+Then I told them the cameras were rolling. Backs straightened, all at once.
+
+Nobody decided to do any of that. Nobody had time to.
+
+That is the half second. Your thought about the word came later. Your body moved first.
+
 ## What your body is bracing against
 
 A hug lasts about fifteen seconds. On its own it is almost nothing. A hand on your lower back weighs about half a kilo.
@@ -187,6 +209,13 @@ If anything in this chapter stirred something big, stop and go to Touch Base. Do
 **Decided by Juliette, 21 Nov 2026:** consent is in place for everyone in the book, and the book uses he and she. That settles the pronoun question on the partner section below.
 
 **Added 21 Nov 2026, agreed with Juliette:** the "Two ways desire arrives" section, so that when the chapter mentions spontaneity it also gives the spontaneous versus responsive distinction, as Canon requires. It credits Basson and Nagoski, as the quiz code does. It is in plain words, not taken from Nagoski's book or workbook. Chapter 7 will carry the full Desire Style section.
+
+**Added 21 Nov 2026, from Juliette's Just Woman Live (Event 5) notes and what she told me:** the section "A whole room, in ten seconds". It uses her recollection of Lyn's introduction, the silence, the shoulders and the cameras. The reactions I kept are the ones her own clip notes record: the giggle, the shoulders climbing and everyone straightening up when the camera was mentioned. I left out specifics that only appear in her planned script (hair, crossed legs).
+
+**To confirm about that section:**
+1. **The event's name.** Her notes spell it both "Just Woman Live" and "Just Women Live". I left it out of the book. Do you want it named?
+2. **Lyn.** Is it fine to name her?
+3. **The line about clenching.** You told me you said, "clench your butt holes, because all of a sudden you went tight." Your notes do not have that line, and I have used "Let go of whatever else just clenched" instead. Do you want your own words in?
 
 **Still open:**
 1. **The woman from the call.** She is also in "The Body Does Not Open on Command". Is she the same client as chapter 1's pilates woman? If so, chapters 1 and 2 need to read as one person.

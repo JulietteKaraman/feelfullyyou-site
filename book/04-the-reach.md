@@ -62,7 +62,21 @@ Desire needs somewhere to land. A body that has given for years without letting 
 
 I have a name for this pattern, and you will meet it in Chapter 6.
 
-## Two small things to try
+## Yes, or nothing
+
+At that same event, I asked the room to run a fingertip along the inside of their own wrist. A centimetre, up and down. Every time they felt something, they were to say yes out loud.
+
+For some women it was Meg Ryan in the deli. *Yes. Yes. Give me more.*
+
+For others it was a quiet yes.
+
+For a lot of them it was nothing at all. *What am I even feeling here? Is there anything there?*
+
+The nothing is the part that stops a room. It is the first time many of them notice how far the volume has gone down, without anyone ever choosing it.
+
+If you try it now and get very little, you are far from alone, and nothing about you is wrong. Your body turned the dial down to look after you.
+
+## Three small things to try
 
 **Same place, two ways**\
 Begin with Touch Base. Thumb to forefinger, slowly, every ridge, for two minutes. Say inwardly, *There is no tiger in the room, and no one here to hurt me.*
@@ -85,6 +99,21 @@ Ask him to make it exactly as you described, and to say it back to you first, so
 Before you drink, pause. Is it right? If it is slightly off, even when it is almost perfect, say so. "Thank you, I love this, and I would love it even more if the bag came out a touch sooner."
 
 Notice the flinch that rises as you ask for the small correction. For many women that flinch is the whole pattern, alive in a kitchen, over a cup of tea. It is a place to practise wanting something and saying so, where the sky does not fall.
+
+**Say it out loud**\
+I asked the room one question. *Tell me how you want to be touched.* Everyone answered at once, so nobody could hear anybody.
+
+Mouths opened and nothing came. To say how you want to be touched, you first have to let yourself know, and most of us were quietly taught not to.
+
+Some women said "gently." Gently is a mood. A request has detail.
+
+*I want your nails on the inside of my wrist, about two centimetres up from the top of my hand, running maybe ten centimetres up my arm. Ever so slowly, upwards. Then stop, and hold.*
+
+Or: *I want you to push my hair behind my ear, and slowly put your lips on the outside of my earlobe.*
+
+Say yours out loud, in detail, to an empty kitchen. You will hear yourself say it. That is the point.
+
+The more you say out loud what you want, the more likely you are to get it.
 
 ## What to expect
 
@@ -144,6 +173,13 @@ You have been closing the gap alone for a long time. Chapter 8 shows you how it 
 - "Chris and Leila, with names changed" stays as written.
 - Touch Base is taught with "There is no tiger in the room, and no one here to hurt me." The chapter, and Before you start, now use that wording.
 - The original line "You do not have low desire. You have an unpaid receiving account." is back. Juliette prefers it to my rewrite. (Her voice rules ban the "not x, but y" shape in general, but she chose this one.)
+
+**Added 21 Nov 2026, from Juliette's Just Woman Live (Event 5) notes:** the section "Yes, or nothing" (the wrist exercise, with Meg Ryan in the deli and the nothing), and the third practice "Say it out loud", including her two example requests and her line "The more you say out loud what you want, the more likely you are to get it."
+
+**To confirm about those:**
+1. **How long was the wrist exercise?** You told me five minutes. Your notes describe it as about a minute (a centimetre, up and down, saying yes). I did not state a time in the book.
+2. **The two example requests** (nails on the wrist, and the hair behind the ear with lips on the earlobe) are from your talk script. Are they right for a book, or should they be softer?
+3. **The woman who said "I think I'm a bit frigid"** (Clip F in your notes) is not in the book. Your notes say she needs to give written consent before anything with her is used. Do you have it, and do you want her in?
 
 **Still open:**
 1. **Is one section for the man enough?** Or should he have more?
