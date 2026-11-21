@@ -17,7 +17,7 @@
 
 ## Forewords
 
-Juliette is going to ask three people to write a foreword: Naomi Cambridge (a relationship coach), Sue Ann (a coach and trainer; surname to be confirmed) and Christine Borschneck (a trauma expert and coach). Each one is 300 to 400 words, and they run one after another, with the author's name and a line about who they are. Three is the most. Any other kind words go on the cover and the sales page as short quotes.
+Juliette is going to ask three people to write a foreword: Naomi Cambridge (a relationship coach), SueAnn Maccara (a coach and trainer) and Christine Borschneck (a trauma expert and coach). Each one is 300 to 400 words, and they run one after another, with the author's name and a line about who they are. Three is the most. Any other kind words go on the cover and the sales page as short quotes.
 
 ---
 

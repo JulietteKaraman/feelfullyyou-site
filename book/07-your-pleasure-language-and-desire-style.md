@@ -74,6 +74,62 @@ Knowing the name of your language is the first movement. It is not the whole map
 
 You may be speaking a completely different language from your partner. The candles-and-a-playlist person and the let's-just-get-on-with-it person, sharing one bed for fifteen years, each quietly convinced the other is the problem. Neither of you ever knew the languages existed.
 
+## Things to try in your language
+
+Reading about a language only gets you so far. Your body will tell you more in five minutes than I can in five pages. These come from my Touch Menu, the written vault I use with my private clients. Pick the one that matches your language and try a single practice this week.
+
+Mark each one as you go. **Yes** means I want this. **Maybe** means I am open to trying. **No** means not right for me right now. A No is a complete answer, and it is also useful information. Do them alone first. Then, if you have a partner, compare notes.
+
+**If you are Energetic**
+
+You are the one who flinches when a hug comes too fast, and who picks up on pace and unspoken signals long before anyone speaks. For you the missing piece was never more Touch. It was more precision, and more felt presence. So we begin with less.
+
+*The wrist, no contact.* Hover one hand about five inches above your other wrist. Do not touch. Can you feel heat, tingling, a subtle pressure? Take a slow breath with your hand there. Then bring it closer, inch by inch. Does your body want to lean in, or pull away? Can you stay with the sensation without rushing? Afterwards ask yourself one question: what did I notice in my body when Touch was suggested but not delivered?
+
+*Elbow to armpit.* Hover your fingertips above the soft inside of your elbow. Then let the Touch land, barely brushing the skin. Was there a change the moment it landed? Trace slowly towards the armpit. Try it with your non-dominant hand.
+
+*With a partner: the approach.* One of you stands still. The other walks towards them, one step at a time. The still one signals stop, with a hand or a word, when the distance feels exactly right. Then they ask for one step back. Swap. Finish with a breath together. Many people discover they have never once been asked what distance feels right.
+
+*Breathing together.* Sit facing each other, close but not touching. Breathe in slowly through the nose, hold gently at the top, breathe out through the mouth. Keep going for two or three minutes until it turns into a rhythm. Do you feel more connected than when you started?
+
+**If you are Sensual**
+
+Sensual Touch is the art of turning awareness into foreplay. It is not about arousal. It is about attention: to texture, scent, sound, temperature, the way silk brushes your collarbone, or how a ripe piece of fruit stays on your lips a little longer than it should. It teaches you to let a moment linger, and it is often the forgotten doorway back into your body when you have gone a bit numb.
+
+*Texture.* Choose something with a clear feel, such as silk, a feather or a piece of fruit. Let it travel slowly over your skin. Can you feel the texture clearly? Do you get goosebumps, pleasure, irritation? What happens as the sensation disappears? Do you want more?
+
+*Scent and taste.* Pick a scent you love. Does it make you feel grounded, sensual or activated? Trace it along your lips, then take a slow bite of something, if it is edible, and chew with full attention. How does eating this way change your state?
+
+*Hot and cold.* Try a cool object, then a warm cloth. Alternate slowly. Does the contrast sharpen the sensation, or make it uncomfortable? There is no right answer.
+
+*The mirror.* Stand in front of a mirror, fully clothed. Look at yourself as if you were your own lover. Slowly begin to undress, one piece at a time, letting each piece of clothing brush your skin on its way off. No rush, no agenda. Whisper something affectionate to your reflection. Then notice what arose in you.
+
+*Dance, then hug.* Put on a track and move. How does it feel to dance as if nobody is watching, and then as if somebody is? With a partner, try the sensual hug: it is not about holding tight, it is about holding true. Slow it down. Add breath. Try it with your eyes open, then closed.
+
+**If you are Kinky**
+
+This is the flavour most people misunderstand. It is not about pain or punishment, and it has little to do with 50 Shades. It is about precision, power and the thrill of the unexpected. A simple instruction, a light tap or a well-timed pause can carry more charge than anything else. What makes it potent is the intention behind it. It needs safety, clarity and presence. Done well, it can unlock parts of you that you did not know were there.
+
+If you are turned on by being told what to do, or by telling someone else what to do with care, this may be your doorway.
+
+*Agree the words first.* Before anything else, agree on green, yellow and red. Green means keep going. Yellow means slow down. Red means stop. Ask your partner to rate each moment out loud. Notice whether speaking up was easy or hard. That in itself is the practice.
+
+*One instruction.* Stand behind your partner and speak low and close to their ear. Say: "Look down." Does a clear instruction feel grounding, or confronting? Then swap roles and give the same instruction.
+
+*Eyes closed.* Ask your partner to close their eyes. Move slowly around them so they can hear your breathing, and do not touch yet. Then place one hand on their shoulder without warning, and hold it still. Does the not-seeing sharpen their awareness, or make them uneasy?
+
+*A light tap.* Alternate a light tap, a firmer tap and a pause. Try the same on the inside of the knee, then the top of the shoulder. Which place surprised you?
+
+*Kiss only when told.* Make the waiting the point: "Now." "Stop." "Again." Ask for a kiss and be made to wait. Whisper what you want to do, and do not do it. In this world the real turn-on might not be the kiss. It might be the waiting.
+
+**If you are Sexual**
+
+Sexual Touch gets more direct, but it is never only about the act. The practice here is presence, build-up and anticipation: exploring desire, and what sexual means to you, with permission to slow down. If you are Sexual, notice what happens to your arousal when you take your time. The three-minute Touch Date in Chapter 8 is a good place to practise: the timer gives you permission to stay in the build-up. The Touch Menu holds no technique here. It holds permission.
+
+**If you are a Shapeshifter**
+
+You crave all the flavours, or you know it is you because none of them feel right. For you the whole menu is permission. Take one practice from each language above, mark each one Yes, Maybe or No, and let the pattern show you what you actually want. The place for permission, permission, permission.
+
 ## The order the wanting arrives in
 
 In Chapter 2 you read that there are two ways desire turns up. Here is how to find yours.
@@ -146,3 +202,4 @@ Chapter 8 shows you what to do with all three.
 6. **The Kinky entry** keeps your wording and adds "inside a clear yes and a clear stop" from your essay.
 
 **Fact-check, 21 Nov 2026 (second pass):** Juliette asked me to figure out the figures. I searched. The 30% of women and 5% of men circulate in secondhand summaries of Nagoski, but other summaries give different numbers, and in the 2021 edition of *Come As You Are* Nagoski says she has yet to find useful statistics about who has which desire style. So the book no longer states them as fact, and the six-to-twelve-months line is gone because I could not verify it. Basson's model (2000) is correct, but "first to document" was too strong, so it now says she "described a different model". The line about medicine is softened to "the medical definitions of low desire assumed that wanting always comes first". Your Substack and course notes use the stronger numbers, so you may want to correct them there too. Sources: Psychology Today, WBUR, GoodTherapy and Wikipedia on Nagoski.
+- NEW SECTION "Things to try in your language" (about 1,100 words). Built only from your Touch Menu (Energetic wrist/elbow/approach/breathing, Sensual texture/scent/hot-cold/mirror/dance/hug, Power, Play & Permission instructions/tap/kiss, green-yellow-red). The Sexual and Shapeshifter parts are short because the Menu itself gives only an intro there, no practices. I left out the scarf restraint. Please check the Kinky list is what you want in a £17 book.
