@@ -17,7 +17,7 @@
 
 ## Forewords
 
-Juliette is going to ask several coaches to write a foreword. Each one is 300 to 400 words, and they can run one after another, with the author's name and a line about who they are.
+Juliette is going to ask three coaches to write a foreword: Naomi Cambridge, Suean McMara and Christine Borsnick (spellings to be confirmed). Each one is 300 to 400 words, and they run one after another, with the author's name and a line about who they are. Three is the most. Any other kind words go on the cover and the sales page as short quotes.
 
 ---
 
