@@ -64,6 +64,18 @@ The weekend away. The lingerie. The big date night you are both secretly hoping 
 
 You are asking a body with a slit of a window to throw the doors open. It cannot. It braces harder, and you both go to bed quietly defeated, more certain than ever that something is wrong.
 
+## Love is not desire
+
+Love and desire are not the same thing. Nobody taught you the difference.
+
+You can love someone completely and feel nothing when his hand lands. Desire does not come back by forcing it. It comes back when your body trusts that a Touch can start, and stop, and ask nothing of you.
+
+## Move it to the morning
+
+Date night at nine o'clock, after the day you have just had, is a scheduling error dressed up as romance. A tired body does not open.
+
+Try a morning instead, with a timer, and the phones in another room. You will meet my own Sunday mornings in Chapter 8.
+
 ## Capacity is built like fitness
 
 I keep saying it is like riding a bike, or going to the gym. You do not start with a five-hour session.
@@ -80,7 +92,7 @@ The way back is the opposite of a grand gesture. You go so small it feels almost
 
 Try this tonight.
 
-**If you are with someone**
+**A Touch Date with a partner**
 Ask him for three minutes of Touch that is not allowed to lead anywhere. A hand on your arm. Your back stroked. You receive, and that is all. Nothing to perform, nothing to give back.
 
 While it happens, do one thing with your attention. Do not chase whether it feels sexy. Notice what your body is doing, in plain physical facts. Warmth here. Tightness there. A flutter. A held breath. A wish to pull away.
@@ -89,7 +101,7 @@ If your body wants to flinch, let it, and notice that too.
 
 When the three minutes are up, stop on purpose, while it still feels safe. Tomorrow, three minutes again.
 
-**If you are on your own**
+**A self-touch date**
 Do Touch Base first. Then rest one hand on your own forearm for three minutes, and notice the same plain facts.
 
 You are widening the window that desire can walk back through. Feeling it can wait.
@@ -159,3 +171,5 @@ Chapter 8 builds it, one small piece at a time. For now, you have three minutes.
 1. **The practice.** This chapter gives the receiving-only version of the three-minute Touch Date, while chapter 2 has each person say one word at the end. Same practice throughout, or different ones per state?
 2. **The paywalled essay.** If you paste the full "Why Do I Feel Nothing When My Partner Touches Me?" essay, I can add the full sequence of how the feeling comes back.
 3. **Touch Base.** It appears once inside the solo practice here. Do you want the safety note at the end of every state chapter?
+
+**Update 21 Nov 2026 (second pass), from Juliette's notes:** two new short sections, "Love is not desire" (from your reel) and "Move it to the morning" (the scheduling-error line is from your list of column ideas). The practices are now called "a self-touch date" and "a Touch Date with a partner".

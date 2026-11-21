@@ -95,11 +95,11 @@ None of these is better than the others. It can shift with age, stress or the le
 
 ## What the research says
 
-Rosemary Basson was the first to document this properly, in 2000, working from women's own reported experience instead of the older straight-line model everyone had assumed applied to everybody.
+Rosemary Basson described a different model of women's desire in 2000. She worked from women's own reported experience, instead of the older straight-line model everyone had assumed applied to everybody.
 
-Emily Nagoski's *Come As You Are* later brought it to a wide audience. By her citation, roughly 30% of women run mostly responsive, against about 5% of men. Responsive also tends to become the more common style after the first six to twelve months of any relationship.
+Emily Nagoski's *Come As You Are* later brought it to a wide audience. You will see figures quoted, such as 30% of women and 5% of men running mostly responsive. Nagoski herself says there are no good statistics on who has which style. What holds up is the idea. Responsive desire is common, and many people sit somewhere in between.
 
-For decades, medicine filed a body that needed Touch or context before wanting arrived under a disorder, something to medicate. The body was never malfunctioning. The research had not caught up yet.
+For years, the medical definitions of low desire assumed that wanting always comes first. A body that needed Touch or context first could end up labelled as having a disorder. The body was never malfunctioning. The definition was too small.
 
 If your wiring runs responsive, you have spent years waiting for a feeling that was never going to come first.
 
@@ -142,3 +142,5 @@ Chapter 8 shows you what to do with all three.
 4. **The Desire Style is not scored by the quiz.** The book tells readers to use the Desire Check instead. If you decide to add it to the quiz later, the book should say so.
 5. **"Candles-and-a-playlist person"** is my example, not a client story. Is it fine?
 6. **The Kinky entry** keeps your wording and adds "inside a clear yes and a clear stop" from your essay.
+
+**Fact-check, 21 Nov 2026 (second pass):** Juliette asked me to figure out the figures. I searched. The 30% of women and 5% of men circulate in secondhand summaries of Nagoski, but other summaries give different numbers, and in the 2021 edition of *Come As You Are* Nagoski says she has yet to find useful statistics about who has which desire style. So the book no longer states them as fact, and the six-to-twelve-months line is gone because I could not verify it. Basson's model (2000) is correct, but "first to document" was too strong, so it now says she "described a different model". The line about medicine is softened to "the medical definitions of low desire assumed that wanting always comes first". Your Substack and course notes use the stronger numbers, so you may want to correct them there too. Sources: Psychology Today, WBUR, GoodTherapy and Wikipedia on Nagoski.

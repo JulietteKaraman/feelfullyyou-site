@@ -97,6 +97,10 @@ When three minutes of Touch feels easy, grow it. Fifteen minutes. Then thirty. L
 
 Weeks in, this is what I hear repeatedly. Touch that used to need translating just arrives now, direct. Sensation people had genuinely stopped expecting to feel again. A real, physical shift in how much of it actually reaches you.
 
+One woman wrote to me after our sessions, *"A lot more of my feelings about sexuality came up... For the first time, sex feels integrated with who I am, not just a set of activities."*
+
+A hand arrives on the small of your back. You feel the weight of it, and the warmth. It lasts longer than you expected, and you stay. You feel it in your knees.
+
 ## The way back
 
 Nothing here to repair.
@@ -129,3 +133,5 @@ I have updated the outline.
 3. **"Stay one breath longer"** is from your essay for men. It is written here for any reader. Is that right?
 4. **"If you are the one who got Sunday"** assumes a heterosexual couple (he and she). Fine, as you decided he and she for the whole book.
 5. **Chapters 6 and 8** are not written yet.
+
+**Update 21 Nov 2026 (second pass), from Juliette:** the specific testimonial is a public quote from your Watch the Touch Reset page, and the closing scene echoes the opening of Chapter 3. Juliette confirmed the Sunday and Tuesday couple is real, and told in the third person.

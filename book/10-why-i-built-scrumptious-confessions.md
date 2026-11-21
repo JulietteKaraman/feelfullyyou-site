@@ -1,4 +1,4 @@
-# Chapter 9: Why I Built Scrumptious Confessions
+# Chapter 10: Why I Built Scrumptious Confessions
 
 *Draft 1, 21 Nov 2026. Built from the Confessions sales page, the Confessions launch thread (the stories Juliette confirmed for the book), her visibility challenge posts, and her confession scripts. Review notes are at the bottom of this file and are not part of the book.*
 
@@ -66,9 +66,7 @@ On Mondays you get the confession. On Thursdays you get your answer.
 
 ## The little patterns
 
-My marriage did not end in one big argument. It ended in years of little patterns that nobody called out.
-
-We still loved each other. Ten years later, every Christmas, we are all at one table, and he is still my best friend. I divorced my husband without knowing why. My body knew.
+My marriage ended in years of little patterns that nobody called out. You read about it in Chapter 1.
 
 So this is somewhere the little patterns get called out. Gently, with no name on them, before they become the years.
 
@@ -94,3 +92,5 @@ All of this is sacred. All of this is welcome.
 5. **"Every Thursday".** Your thread says answers are Thursdays, never Sundays. Correct?
 6. **The wrist in week one** is from your thread's line about the Touch Map. Is it still right?
 7. **Your £17 book and your Day 14 post.** On 20 Nov you posted that you no longer sell work for £17 and that everything under £200 lives in Confessions. A £17 book is an exception, as a front door. Do you want the book to say so, or should it live inside Confessions instead?
+
+**Update 21 Nov 2026 (second pass), from Juliette:** this is now Chapter 10, because Chapter 9 is the 31-day plan. Juliette said naming Claude is fine and to keep it. The divorce story was trimmed here, because it is now told in full in Chapter 1.

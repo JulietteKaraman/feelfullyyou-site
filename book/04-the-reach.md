@@ -82,11 +82,11 @@ I had asked women to feel something in a room full of strangers. A room full of 
 
 ## A word about that word
 
-For centuries, *frigid* was a word about men who could not perform. Somewhere along the way it was handed to women, and by 1952 it sat in the psychiatrists' manual as a disorder, listed next to male impotence.
+For centuries, *frigid* was a word about men who could not perform. Somewhere along the way it was handed to women. By 1952 it had a place in the psychiatrists' manual, as a term for a body reacting to the mind, and it stayed there until 1980.
 
-Nobody had accurately mapped the clitoris until 1998, when an Australian urologist called Helen O'Connell did it.
+In 1998, an Australian urologist called Helen O'Connell published dissection work that showed a structure far larger than most textbooks had drawn.
 
-So for decades, women were diagnosed as the faulty part by people who had not yet looked. Nobody asked what room she was in, or whether anyone had ever asked her what she wanted.
+So for decades, women were diagnosed as the faulty part by people who had not yet looked properly. Nobody asked what room she was in, or whether anyone had ever asked her what she wanted.
 
 The wiring was always fine. What went missing was the asking.
 
@@ -258,3 +258,5 @@ You have been closing the gap alone for a long time. Chapter 8 shows you how it 
 **Still open:**
 1. **Is one section for the man enough?** Or should he have more?
 2. **"I have a name for this pattern, and you will meet it in Chapter 6."** Chapter 6 is not written yet.
+
+**Fact-check, 21 Nov 2026 (second pass):** I softened three lines in "A word about that word" after checking. (1) The first psychiatric manual (DSM-I, 1952) did not give frigidity its own diagnosis. It appeared as a supplementary term under a heading for the body reacting to the mind, and the 1980 manual (DSM-III) replaced it, so "listed next to male impotence" is not supported. (2) A German anatomist, Kobelt, drew the clitoris accurately in 1844, so "nobody had mapped it until 1998" overstates it. Helen O'Connell's 1998 dissection paper is real and important. The book now says it showed a structure far larger than most textbooks had drawn. Sources: PMC3549574 (the DSM history), and the Open University and Wikipedia accounts of O'Connell and Kobelt. Your Substack uses the stronger wording, so you may want to correct it there too.

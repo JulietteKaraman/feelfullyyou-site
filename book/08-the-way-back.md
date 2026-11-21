@@ -12,7 +12,9 @@ So I teach them something. It takes ten seconds to explain.
 
 Thumb to forefinger.
 
-> **[Design note, not book text]** Place the Touch Base emblem here in gold (#A88538), with a QR code beside it that opens the audio. Emblem file: `touch-base-logo.png`.
+> **[Design note, not book text]** Place the Touch Base emblem here in gold (#A88538), with a QR code beside it that opens the Touch Base practice page, with the video, the audio and the 31-day tracker. Emblem file: `touch-base-logo.png`.
+
+Scan the code for the Touch Base practice page. There is a video, an audio and a 31-day tracker. It is a small taste of what it is like inside Scrumptious Confessions.
 
 ## Touch Base®
 
@@ -22,7 +24,7 @@ Press your thumb gently against your forefinger. Breathe out slowly. Trace every
 
 *There is no tiger in the room, and no one here to hurt me.*
 
-That is all. Two minutes is enough to start.
+That is all. Once you know it, it takes about two minutes. The first time you learn it, it takes a little longer.
 
 What you are teaching your body, through your own skin, is that right now, in this moment, there is no danger. So it can let go.
 
@@ -50,7 +52,7 @@ Everything else in this chapter is the same idea. You do not start with the five
 
 A Touch Date is timed, and it is non-sexual. One of you touches, and one of you receives, with nowhere for it to go. You start at three minutes. When three minutes feels easy, you try fifteen. Then thirty. Your body says yes at each step before you take the next.
 
-Every Sunday morning, Alex and I have our Touch Date. Forty-five to ninety minutes. Phones in another room. A timer on.
+Every Sunday morning, my fiancé Alex and I have our Touch Date. Forty-five to ninety minutes. Phones in another room. A timer on.
 
 People think a timer kills the romance. It does the opposite.
 
@@ -110,6 +112,26 @@ A surprise leaves your body no time to agree. The hand arrives first, your yes a
 
 It took years.
 
+## If you are single
+
+Everything in this book has a version for one.
+
+Touch Base is yours. The self-touch date is yours: three minutes, your forearm or your wrist, a timer, and the question *is that a yes?* Say it out loud is yours, to an empty kitchen. The cup of tea is yours. Make it exactly as you want it, and notice how rarely you do. Stay one breath longer is yours, in a hug with a friend, or with your own arms around your own ribs.
+
+What you are building is capacity, and capacity belongs to you. When someone arrives, you will know what you like, how to say it, and what your body does before you decide anything. You will arrive with a map.
+
+## When it brings up too much
+
+Sometimes a practice opens something bigger than you expected. A memory. A flood of grief. A wave of nothing at all.
+
+It does not mean you are doing it wrong. It means your body has found a door.
+
+Stop. Put your feet on the floor. Look around the room, slowly, and let your eyes land on three things. Do Touch Base. Ask yourself the question. *Is there a tiger in the room?* Then decide whether to go on, or to come back tomorrow. Smaller is always allowed.
+
+If it keeps coming up, or it is about something that happened to you, please do not do this alone. Find a trauma-informed therapist or counsellor, and tell them what you are doing. This book is a way into the body. It is no substitute for therapy.
+
+If you are in danger, or thinking about harming yourself, contact your local emergency number now. In the UK you can ring Samaritans on 116 123 at any time, and the National Domestic Abuse Helpline on 0808 2000 247.
+
 ## Start where your chapter sent you
 
 **If you are in The Brace:** begin with the half second, and Touch Base every day.
@@ -130,7 +152,7 @@ You can do all of this on your own. It goes better with company.
 
 A structure that keeps turning up. A voice in your ear. Somewhere to take the questions that come up when you do it.
 
-That is why I built something. Chapter 9 tells you why.
+That is why I built something. Chapter 9 gives you a plan, and Chapter 10 tells you why.
 
 ---
 
@@ -150,3 +172,5 @@ That is why I built something. Chapter 9 tells you why.
 5. **The Dyad credit** is from your essay (Ava and Charles Berner). Is it right as written?
 6. **Alex.** Named as "Alex", as in your posts. Your reels call him your fiancé in places. The book does not say fiancé.
 7. **The research study** your Version B notes mention (nearly 13,000 people, short and regular beats long) is not in the chapter. Do you want it?
+
+**Update 21 Nov 2026 (second pass), from Juliette:** Touch Base takes about two minutes once you know it, and longer the first time. Alex is now "my fiancé Alex". The practice page (video, audio and the 31-day tracker) is described as a taste of Confessions. Two new sections: "If you are single" and "When it brings up too much". **To check:** the two UK helpline numbers (Samaritans 116 123, National Domestic Abuse Helpline 0808 2000 247) are well known, but please check they are current before print. Also: does your free Touch Base page already have the 31-day tracker? If not, it needs adding before the book goes out.

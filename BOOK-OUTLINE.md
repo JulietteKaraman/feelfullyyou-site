@@ -82,3 +82,14 @@ The last page points only to the Confessions free fortnight. The Touch Reset cal
 3. **Is it one book for everyone?** Women and men both buy through the quiz. The plan so far: one book, written to her, with a short note to partners in chapter 8.
 4. **Who is the narrator talking to?** "You" (the reader) in all chapters, or her stories as "she" in the state chapters, as the essays do now.
 5. **Are the quiz's four state names the chapter titles?** The Brace, The Fade, The Reach, The Melt, taken from the quiz result page.
+
+## Update, 21 Nov 2026 (second pass)
+
+The book now runs: Before you start, Chapters 1 to 11, and About the author and credits.
+
+- 1 Yesterday now has the origin stories (drawing at four, mother's hospital, the divorce night).
+- 8 The way back now has "If you are single" and "When it brings up too much".
+- 9 Your First 31 Days is new: a week-by-week plan, the 31-dot tracker and a one-page map.
+- 10 Why I built Scrumptious Confessions (was 9).
+- 11 What comes next is new: the ladder after the book, no prices.
+- Fact-check changes: the frigid history (chapter 4) and the Nagoski figures and medicine line (chapter 7) were softened after checking.

@@ -82,7 +82,31 @@ You do not have to fix any of it. You do not have to decide what it means.
 
 Just notice what your body did with an ordinary day.
 
-I have been the body in this story. I lived years inside a body that braced against the people closest to it, and I found my way back one signal at a time. That is why I ask you to start here, with yesterday and nothing grander. It is where the way back begins.
+## How I learned to read a room
+
+I did not set out to be a Touch expert. I set out, at about four years old, to make a room feel better.
+
+I was a little girl in Holland, and I could feel the tension between the adults before anyone said a word. So I made my grandmother a drawing. I handed it over, and I watched the whole room lift.
+
+That is the first thing I ever learned about Touch, though I would not have called it that for fifty years. If I gave something, the room got lighter. If the room got lighter, I was safe.
+
+As a teenager with no licence, I drove my mother to hospital to have her stomach pumped. That was the moment I recognised that I needed to take care of a lot of people.
+
+I got very good at it.
+
+Years later I was married, with four children, still taking care of everyone. One night our son asked whether he could at least try for boarding school, like his friends. I told him to ask his dad. His dad said, "That's not what I had in mind for you." I saw my son's face fall.
+
+We fought. My husband said, "Maybe we should get divorced."
+
+I did not sleep. I was torn between the family I had built and the woman I was becoming. By morning, it felt like twenty kilos had lifted off my shoulders.
+
+We still loved each other. We walked into the lawyer's office having already agreed the houses, the belongings and how we would share the children. Ten years later, every Christmas, we are all at one table, and he is still my best friend.
+
+I divorced my husband without knowing why. My body knew.
+
+It had been trying to tell me in other ways, too. You will hear about the half landing, and the vase, in Chapter 6.
+
+That is why I ask you to start with yesterday and nothing grander. I have been the body in this story. I lived years inside a body that braced against the people closest to it, and I found my way back one signal at a time. It is where the way back begins.
 
 There are four places your Touch can go. The next four chapters take them one at a time, and you will recognise your own.
 
@@ -102,3 +126,5 @@ There are four places your Touch can go. The next four chapters take them one at
 1. **Consent.** Juliette confirmed she has the woman's consent to use this story. The twenty-three years couple was not covered by that answer, so confirm it separately before print.
 2. **Length.** Keep it at about 860 words. No second scene.
 3. **Finding your state.** A reader who has not taken the quiz now finds her chapter in "Before you start" (book/00-before-you-start.md), so the last line of this chapter works as written.
+
+**Update 21 Nov 2026 (second pass), from Juliette:** the new section "How I learned to read a room", with four of her origin stories: the drawing for her grandmother at about four, driving her mother to hospital as a teenager, the night of the boarding school and the divorce, and a pointer to the half landing in Chapter 6. Juliette said the son's name stays out. **To confirm:** (1) "Twenty kilos" is what you told me on 21 Nov. Your Day 17 post said "a hundred kilos". Which do you want? (2) The mother's hospital story is the heaviest thing in the book so far. Chapter 0 now has a short content note. Do you want a longer one? (3) "I drove my mother to hospital to have her stomach pumped" is as you said it. Your Day 9 carousel adds an empty bottle of sleeping pills, which I left out.

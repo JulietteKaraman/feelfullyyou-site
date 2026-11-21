@@ -114,6 +114,12 @@ Other people feel it second. The wanting arrives after the Touch begins, once th
 
 Both are normal. Both are healthy.
 
+I once told a couple that it can take forty minutes for a woman's body to warm up. He said, "Oh yeah, I don't have time for that."
+
+Her body answered before she did. *I'm not good enough. I'm not quick enough.*
+
+Nothing was wrong with her. Her way in takes longer, and desire often arrives after the Touch begins.
+
 The culture only ever shows you the first kind. So a woman whose desire is the second kind waits for a feeling that was never going to arrive on its own, and decides something is wrong with her.
 
 Rosemary Basson mapped this, and Emily Nagoski brought it to a wide audience in *Come As You Are*. I teach it in my own words.
@@ -142,12 +148,12 @@ Once the body stops predicting the arc, a hand goes back to being a hand. It can
 
 Here is a way to start. It takes three minutes.
 
-**If you are with someone**
+**A Touch Date with a partner**
 Set a timer for three minutes. Agree before you begin that nothing will lead anywhere, and that either of you can stop at any time. Then sit, or stand, with a hand resting on an arm or a shoulder. Nothing more. When the timer ends, stop, and each say one word.
 
-That is a Touch Date. It is the smallest one.
+That is a Touch Date. It is the smallest one. If you can, do the self-touch date below first, for a few days, and then ask for this one.
 
-**If you are on your own**
+**A self-touch date**
 Do Touch Base. Thumb to forefinger, slowly, every ridge. Then place one hand on your own forearm for three minutes, with nowhere for it to go.
 
 **Either way, for the first week, do just one thing.**
@@ -222,3 +228,5 @@ If anything in this chapter stirred something big, stop and go to Touch Base. Do
 2. **The three-minute Touch Date** follows Canon (Touch Dates start at 3 minutes, then 15, then 30). The exact wording, including "each say one word", is mine, adapted from your Breath Bridge practice. Is it right as a first step?
 3. **"Chapter 8 shows you how."** Chapter 8 is not written yet.
 4. **The Touch Base reminder at the end** repeats chapter 0 on purpose. Do you want it at the end of every state chapter, or only here?
+
+**Update 21 Nov 2026 (second pass), from Juliette:** the two practices are now called "a self-touch date" and "a Touch Date with a partner", and the forty-minutes story comes from your reel script. Juliette confirmed the woman here is not the same woman as in Chapter 1.
