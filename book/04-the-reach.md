@@ -64,19 +64,57 @@ I have a name for this pattern, and you will meet it in Chapter 6.
 
 ## Yes, or nothing
 
-At that same event, I asked the room to run a fingertip along the inside of their own wrist. A centimetre, up and down. Every time they felt something, they were to say yes out loud.
+At a live event, in the orangery of a pub, I asked a room of women to run a fingertip along the inside of their own wrist. Slowly. Every time they felt something, they were to say yes out loud. The strokes they could not feel, they left alone.
 
-For some women it was Meg Ryan in the deli. *Yes. Yes. Give me more.*
+I demonstrated. I gave them the diner scene from *When Harry Met Sally*, the full **YES. YES. YES.** The room roared.
 
-For others it was a quiet yes.
+For some women it was a quiet yes.
 
 For a lot of them it was nothing at all. *What am I even feeling here? Is there anything there?*
 
-The nothing is the part that stops a room. It is the first time many of them notice how far the volume has gone down, without anyone ever choosing it.
+Over two events, four women came and told me they must be frigid.
 
-If you try it now and get very little, you are far from alone, and nothing about you is wrong. Your body turned the dial down to look after you.
+One of them was the host. She was running the evening with a microphone in her hand, and she was good at it. She said it with a camera pointing at her. *I didn't feel anything. I think I must just be frigid.* She had said the same thing to me the time before.
 
-## Three small things to try
+Nobody in either room was frigid. The mistake was mine.
+
+I had asked women to feel something in a room full of strangers. A room full of strangers has no edges, and a body only stops scanning when it can see the edges of the room it is in. Their bodies were doing exactly the right thing. I had handed them an exercise that needs safety, in the one place that could not give it.
+
+## A word about that word
+
+For centuries, *frigid* was a word about men who could not perform. Somewhere along the way it was handed to women, and by 1952 it sat in the psychiatrists' manual as a disorder.
+
+Nobody had properly mapped the clitoris until 1998, when an Australian urologist called Helen O'Connell did it.
+
+So for decades, women were diagnosed as the faulty part by people who had not yet looked. Nobody asked what room she was in, or whether anyone had ever asked her what she wanted.
+
+The wiring was always fine. What went missing was the asking.
+
+If you try the wrist now and get very little, you are far from alone, and nothing about you is wrong. Your body turned the dial down to look after you. Try it somewhere with edges. A room with the door closed, your back against something solid.
+
+## Yes, please
+
+I once dragged a suitcase full of tea up a flight of stairs at a railway station.
+
+Ten kinds of tea, most of them herbal. Cups with saucers, chunky mugs, thin-rimmed ones, because some women will only drink from a thin rim, and they are right. Honey. Agave. Oat milk, soya, coconut, lactose free. A tub of homemade tomato soup, because apparently I cannot help myself.
+
+I got to the foot of the stairs and stopped.
+
+A man came up behind me and asked if he could help. I said, "Yes, please."
+
+I did not say *no, I've got it*, a sentence I have said a thousand times while not having it. I did not have it. He carried it up.
+
+After that I stopped waiting to be offered. I asked. Another man took it down the other side. Another one on the tube. Every single one of them lit up. "Oh my God, you've made my day. Thank you so much, it was so heavy." A man got to be useful for a minute, and it visibly improved his morning.
+
+Then a woman at the retreat asked for lemon.
+
+I had no lemon.
+
+I had planned for every preference I could imagine, and I still could not guess hers. You cannot guess. Not when you love someone. Not when you are trying your hardest. Not when you have brought five different milks.
+
+You have to ask.
+
+## Four small things to try
 
 **Same place, two ways**\
 Begin with Touch Base. Thumb to forefinger, slowly, every ridge, for two minutes. Say inwardly, *There is no tiger in the room, and no one here to hurt me.*
@@ -94,11 +132,38 @@ This one looks like play. It rehearses the exact muscle that asking for Touch dr
 
 Describe your ideal cup of tea in full detail. Skip the reasonable one and describe the one you actually want. The mug, the tea, how hot, how long the bag stays in.
 
-Ask him to make it exactly as you described, and to say it back to you first, so you know you were heard. If you are on your own, make it for yourself, and notice how unusual that feels.
+Ask him to make it exactly as you described, and to say it back to you before he moves, so you know you were heard. It is the step everyone skips.
+
+I once asked a co-leader to mirror back my order. She looked at me and said, "Oh, shit. I didn't prepare for that. You didn't tell me." She had not been listening. She had been waiting, halfway to the kettle in her head, to be useful.
+
+If you are on your own, make it for yourself, and notice how unusual that feels.
 
 Before you drink, pause. Is it right? If it is slightly off, even when it is almost perfect, say so. "Thank you, I love this, and I would love it even more if the bag came out a touch sooner."
 
 Notice the flinch that rises as you ask for the small correction. For many women that flinch is the whole pattern, alive in a kitchen, over a cup of tea. It is a place to practise wanting something and saying so, where the sky does not fall.
+
+Three things come up every time I run this.
+
+*"I am happy to make it for everyone else, but when it came to asking, I didn't know what I liked."*
+
+*"I felt ungrateful adjusting her."*
+
+*"If I asked that of my husband, he would just say, make your own tea from now on, then."*
+
+Not one of the men on that staircase resented being asked. Her husband is no worse a man than a stranger on a staircase. She has simply never put it to the vote.
+
+I asked one room, "Would you want to be on your deathbed and then find out you have been making a cup of tea the way your partner does not like for decades?"
+
+Nobody laughed.
+
+**Receive and Adjust**\
+Then move it into the body. Set a timer for three minutes. The timer is not decoration. A thing with a clear end is a thing a body will relax into.
+
+One of you touches the other somewhere completely unsexual. A forearm, the back of a hand, the scalp. Nowhere this is heading. For three minutes the receiver adjusts out loud, in real time. *Slower. Firmer. A little higher. Stay there. Lighter. Yes, like that.*
+
+The giver says nothing and takes no offence. The giver follows. Then swap.
+
+On your own, do it on your own forearm. Do that first either way.
 
 **Say it out loud**\
 I asked the room one question. *Tell me how you want to be touched.* Everyone answered at once, so nobody could hear anybody.
@@ -174,12 +239,16 @@ You have been closing the gap alone for a long time. Chapter 8 shows you how it 
 - Touch Base is taught with "There is no tiger in the room, and no one here to hurt me." The chapter, and Before you start, now use that wording.
 - The original line "You do not have low desire. You have an unpaid receiving account." is back. Juliette prefers it to my rewrite. (Her voice rules ban the "not x, but y" shape in general, but she chose this one.)
 
-**Added 21 Nov 2026, from Juliette's Just Woman Live (Event 5) notes:** the section "Yes, or nothing" (the wrist exercise, with Meg Ryan in the deli and the nothing), and the third practice "Say it out loud", including her two example requests and her line "The more you say out loud what you want, the more likely you are to get it."
+**Added 21 Nov 2026, from Juliette's Notion notes (the Confidence Magazine column "Four women told me they were frigid. Both times, it was my fault", the Just Woman Live clip notes, and the podcast script "Four Women And One Wrist"):** the sections "Yes, or nothing", "A word about that word" and "Yes, please", the mirror-back story and the three tea quotes, the deathbed question, "Receive and Adjust", and "Say it out loud". They keep your own wording as closely as I could. Your voice rules ban "not x but y" shapes and em dashes, so I changed a few lines to avoid them.
 
-**To confirm about those:**
-1. **How long was the wrist exercise?** You told me five minutes. Your notes describe it as about a minute (a centimetre, up and down, saying yes). I did not state a time in the book.
-2. **The two example requests** (nails on the wrist, and the hair behind the ear with lips on the earlobe) are from your talk script. Are they right for a book, or should they be softer?
-3. **The woman who said "I think I'm a bit frigid"** (Clip F in your notes) is not in the book. Your notes say she needs to give written consent before anything with her is used. Do you have it, and do you want her in?
+**To confirm before print:**
+1. **The host and the word.** The host is the MC who said she thought she was frigid, and your Clip F note says she must give written consent before anything with her is used. The book says "the host", with no name. Do you have her written consent? If not, I can take her out and leave "four women".
+2. **How long was the wrist exercise?** You told me five minutes. Your podcast script gives three minutes in total, and your talk notes describe about a minute. The book states no time.
+3. **The frigid history** (the 1952 psychiatrists' manual, Helen O'Connell and 1998) needs the fact-check your notes list: Helen O'Connell's 1998 anatomy study, the DSM-I of 1952 and its 1980 revision. I removed your line that it was "listed next to male impotence" until it is checked.
+4. **Swearing.** Your column uses it ("Oh, shit", "five different fucking milks"). I kept "Oh, shit" because it is a quote, and wrote "five different milks". Do you want it back in?
+5. **Receive and Adjust** is one of your 31 Touch Points practices. It is also in your published column. Is it fine to give it in the book?
+6. **The two example requests** in "Say it out loud" (nails on the wrist, hair behind the ear) are from your talk script. Are they right for a book?
+7. **The reader's names.** "A woman at the retreat" and "a co-leader" are not named. Are you happy with that?
 
 **Still open:**
 1. **Is one section for the man enough?** Or should he have more?
