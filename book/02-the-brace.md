@@ -162,8 +162,6 @@ Nothing was wrong with her. Her way in takes longer, and desire often arrives af
 
 The culture only ever shows you the first kind. So a woman whose desire is the second kind waits for a feeling that was never going to arrive on its own, and decides something is wrong with her.
 
-Rosemary Basson mapped this, and Emily Nagoski brought it to a wide audience in *Come As You Are*. I teach it in my own words.
-
 If your desire is the responsive kind, it will not come on command. It comes inside a container it trusts. In Chapter 7 you will find out which kind you are.
 
 ## Three things that do not work
