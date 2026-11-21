@@ -46,7 +46,7 @@ This is a book about the body, and the body does not hurry. Read a chapter, then
 
 If anything in these pages stirs something big, do not push through it. Stop, and go to Touch Base.
 
-Touch Base is the practice I made for exactly this moment. It is a video and an audio. You press your thumb against your forefinger and slowly trace every ridge, while my voice reminds your body what it most needs to hear: there is no tiger. You are safe to feel this.
+Touch Base is the practice I made for exactly this moment. It is a video and an audio. You press your thumb against your forefinger and slowly trace every ridge, while my voice reminds your body what it most needs to hear: there is no tiger in the room, and no one here to hurt you.
 
 Do it somewhere that is actually safe. A room where you can close the door. A chair, your feet on the floor, nobody behind you. Your body cannot learn it is safe while part of it is still watching the door, so choose the place first.
 

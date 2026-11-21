@@ -54,7 +54,9 @@ You sense what everyone needs before they ask. You say yes at eleven at night be
 
 When giving is your whole way of staying connected, sex turns into one more thing you manage. It joins the list with making his coffee and remembering his mother's birthday. A body that spends all day supplying what is needed has very little left to find its own wanting, because wanting was never the assignment. Keeping the connection steady was.
 
-What looks like low desire is an unpaid receiving account.
+You do not have low desire.
+
+You have an unpaid receiving account.
 
 Desire needs somewhere to land. A body that has given for years without letting anything in has nowhere for wanting to arrive.
 
@@ -63,7 +65,7 @@ I have a name for this pattern, and you will meet it in Chapter 6.
 ## Two small things to try
 
 **Same place, two ways**\
-Begin with Touch Base. Thumb to forefinger, slowly, every ridge, for two minutes. Say inwardly, *I am safe right now.*
+Begin with Touch Base. Thumb to forefinger, slowly, every ridge, for two minutes. Say inwardly, *There is no tiger in the room, and no one here to hurt me.*
 
 Then choose one place on your own skin. Your forearm is a good start. Touch it one way, slow and barely there, for thirty seconds. Notice what happens. Does your breath change? Does your skin ask for more, or ask you to stop?
 
@@ -90,7 +92,7 @@ It does not resolve in one night. Something moves the first time, though: the mu
 
 After weeks of this, you stop performing your pleasure and start reading it. You stop needing someone else to tell you what you like, because you have started asking your own skin, and it has started answering.
 
-A woman in Beirut told me afterwards, "I'm no longer looking to others for the answers. I now trust myself." Her marriage rekindled. She asks for what she wants now, without fear of being too much.
+Zeinab, in Beirut, told me afterwards, "I'm no longer looking to others for the answers. I now trust myself." Her marriage rekindled. She asks for what she wants now, without fear of being too much.
 
 ## If you are the one who needs Touch and cannot say it
 
@@ -137,10 +139,12 @@ You have been closing the gap alone for a long time. Chapter 8 shows you how it 
 - **Numbers and citations.** The essay's "980+ women and 20 countries", Gottman, Porges, Levine, Löken and the others.
 - **The longer men's section**, with the five Small Bid examples, the "braced to open" question and the Three-Minute Reset. It belongs in Chapter 8 or in Confessions.
 
-**Please confirm before print:**
-1. **The woman in Beirut.** The quote comes from your list of client results. I kept it close to your wording and left her name out. Is that right?
-2. **Chris and Leila.** The essay says the names are fictional. I kept that note in the book. Do you want it, or just "a couple I worked with"?
-3. **"I am safe right now."** I took it from the essay's Touch Base instructions. Is that how you teach it?
-4. **The script at the end** ("I want to tell you something about me...") is word for word from the essay. Is that how you want it in the book?
-5. **A reader who is a man.** This chapter is written to her, with one section for him. Is that enough, or should he have more?
-6. **"I have a name for this pattern, and you will meet it in Chapter 6."** Chapter 6 is not written yet.
+**Decided by Juliette, 21 Nov 2026:**
+- Zeinab's name stays in.
+- "Chris and Leila, with names changed" stays as written.
+- Touch Base is taught with "There is no tiger in the room, and no one here to hurt me." The chapter, and Before you start, now use that wording.
+- The original line "You do not have low desire. You have an unpaid receiving account." is back. Juliette prefers it to my rewrite. (Her voice rules ban the "not x, but y" shape in general, but she chose this one.)
+
+**Still open:**
+1. **Is one section for the man enough?** Or should he have more?
+2. **"I have a name for this pattern, and you will meet it in Chapter 6."** Chapter 6 is not written yet.
