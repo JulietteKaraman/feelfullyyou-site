@@ -52,11 +52,8 @@ Total about 21,200. Chapter 1 is DRAFTED (book/01-yesterday.md) and kept at abou
 - `essays/why-do-i-feel-like-i-have-to-fake.html`
 - `essays/why-people-pleasers-struggle-to-want.html`
 
-**5. The Melt.**
-- `essays/when-it-finally-feels-held.html`
-- `essays/the-body-still-reaches.html`
-- `essays/why-it-was-so-spicy-at-the-beginning.html`
-- `essays/what-one-taste-gave-me.html`
+**5. The Melt.** DRAFTED (book/05-the-melt.md). Sources: the quiz's own Melted wording and the "more" lines for each Pattern, plus "She Opened. Then She Went Quiet" (the cost of opening) and the Touch Date growth from Canon.
+- Checked and NOT used: "When It Finally Feels Held" (a grooming story), "The Body Still Reaches" (divorce grief), "What One Taste Gave Me" (One Taste, sensitive). They do not fit this state.
 
 **6 and 7.** Pattern and Pleasure Language come from the live quiz result copy and `pleasure-languages.html`. Never call a Pattern a "Language". Do not mix in the Touch Languages (Emotional, Energetic, Erotic, Physical, Spiritual), which stay a separate project.
 
