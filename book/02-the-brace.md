@@ -36,9 +36,9 @@ Whatever this is, it is not a verdict on whether you love him.
 
 I watch this happen for a living.
 
-I was once introduced on a stage by the host of the evening. She told a room of women that I am a Touch and intimacy expert. Then I walked on, and I said it back to them.
+I was once introduced on a stage by Lyn, who hosts Just Woman Live. She told a room of women that I am a Touch and intimacy expert. Then I walked on, and I said it back to them.
 
-"She has just given you my title. Touch and intimacy expert."
+"Lyn has just given you my title. Touch and intimacy expert."
 
 Then I stopped talking.
 
@@ -212,10 +212,10 @@ If anything in this chapter stirred something big, stop and go to Touch Base. Do
 
 **Added 21 Nov 2026, from Juliette's Just Woman Live (Event 5) notes and what she told me:** the section "A whole room, in ten seconds". It uses her recollection of Lyn's introduction, the silence, the shoulders and the cameras. The reactions I kept are the ones her own clip notes record: the giggle, the shoulders climbing and everyone straightening up when the camera was mentioned. I left out specifics that only appear in her planned script (hair, crossed legs).
 
+**Decided by Juliette, 21 Nov 2026:** Lyn hosts Just Woman Live and is named in the book. The event is named too. Juliette spoke at it twice, in June and September.
+
 **To confirm about that section:**
-1. **The host.** In your notes the host (called Lyn in one of your reel notes) is also the MC who said she thought she was frigid, and your notes say that story needs her written consent. So I removed the name from the book and wrote "the host of the evening". Say if you have her consent and want Lyn named.
-2. **The event.** You spoke in June and September. I left the event name out. Do you want it named?
-3. **The line about clenching.** You told me you said, "clench your butt holes, because all of a sudden you went tight." Your notes do not have that line, and I used "Let go of whatever else just clenched". Do you want your own words in?
+1. **The line about clenching.** You told me you said, "clench your butt holes, because all of a sudden you went tight." Your notes do not have that line, and I used "Let go of whatever else just clenched". Do you want your own words in?
 
 **Still open:**
 1. **The woman from the call.** She is also in "The Body Does Not Open on Command". Is she the same client as chapter 1's pilates woman? If so, chapters 1 and 2 need to read as one person.

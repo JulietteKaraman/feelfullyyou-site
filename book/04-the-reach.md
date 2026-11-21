@@ -64,7 +64,7 @@ I have a name for this pattern, and you will meet it in Chapter 6.
 
 ## Yes, or nothing
 
-At a live event, in the orangery of a pub, I asked a room of women to run a fingertip along the inside of their own wrist. Slowly. Every time they felt something, they were to say yes out loud. The strokes they could not feel, they left alone.
+At a live event, in the orangery of a pub, I asked a room of women to run a fingertip along the inside of their own wrist. Slowly. Every time they felt something, they were to say yes out loud. The strokes they could not feel, they left alone. It takes between three and five minutes.
 
 I demonstrated. I gave them the diner scene from *When Harry Met Sally*, the full **YES. YES. YES.** The room roared.
 
@@ -74,7 +74,7 @@ For a lot of them it was nothing at all. *What am I even feeling here? Is there 
 
 Over two events, four women came and told me they must be frigid.
 
-One of them was the host. She was running the evening with a microphone in her hand, and she was good at it. She said it with a camera pointing at her. *I didn't feel anything. I think I must just be frigid.* She had said the same thing to me the time before.
+One of them was the MC. She was running the evening with a microphone in her hand, and she was good at it. She said it with a camera pointing at her. *I didn't feel anything. I think I must just be frigid.* She had said the same thing to me the time before.
 
 Nobody in either room was frigid. The mistake was mine.
 
@@ -82,9 +82,9 @@ I had asked women to feel something in a room full of strangers. A room full of 
 
 ## A word about that word
 
-For centuries, *frigid* was a word about men who could not perform. Somewhere along the way it was handed to women, and by 1952 it sat in the psychiatrists' manual as a disorder.
+For centuries, *frigid* was a word about men who could not perform. Somewhere along the way it was handed to women, and by 1952 it sat in the psychiatrists' manual as a disorder, listed next to male impotence.
 
-Nobody had properly mapped the clitoris until 1998, when an Australian urologist called Helen O'Connell did it.
+Nobody had accurately mapped the clitoris until 1998, when an Australian urologist called Helen O'Connell did it.
 
 So for decades, women were diagnosed as the faulty part by people who had not yet looked. Nobody asked what room she was in, or whether anyone had ever asked her what she wanted.
 
@@ -110,7 +110,7 @@ Then a woman at the retreat asked for lemon.
 
 I had no lemon.
 
-I had planned for every preference I could imagine, and I still could not guess hers. You cannot guess. Not when you love someone. Not when you are trying your hardest. Not when you have brought five different milks.
+I had planned for every preference I could imagine, and I still could not guess hers. You cannot guess. Not when you love someone. Not when you are trying your hardest. Not when you have brought five different f*king milks.
 
 You have to ask.
 
@@ -157,7 +157,7 @@ I asked one room, "Would you want to be on your deathbed and then find out you h
 Nobody laughed.
 
 **Receive and Adjust**\
-Then move it into the body. Set a timer for three minutes. The timer is not decoration. A thing with a clear end is a thing a body will relax into.
+This one is from 31 Touch Points, my month of daily practices. Move the tea into the body. Set a timer for three minutes. The timer is not decoration. A thing with a clear end is a thing a body will relax into.
 
 One of you touches the other somewhere completely unsexual. A forearm, the back of a hand, the scalp. Nowhere this is heading. For three minutes the receiver adjusts out loud, in real time. *Slower. Firmer. A little higher. Stay there. Lighter. Yes, like that.*
 
@@ -241,14 +241,13 @@ You have been closing the gap alone for a long time. Chapter 8 shows you how it 
 
 **Added 21 Nov 2026, from Juliette's Notion notes (the Confidence Magazine column "Four women told me they were frigid. Both times, it was my fault", the Just Woman Live clip notes, and the podcast script "Four Women And One Wrist"):** the sections "Yes, or nothing", "A word about that word" and "Yes, please", the mirror-back story and the three tea quotes, the deathbed question, "Receive and Adjust", and "Say it out loud". They keep your own wording as closely as I could. Your voice rules ban "not x but y" shapes and em dashes, so I changed a few lines to avoid them.
 
-**To confirm before print:**
-1. **The host and the word.** The host is the MC who said she thought she was frigid, and your Clip F note says she must give written consent before anything with her is used. The book says "the host", with no name. Do you have her written consent? If not, I can take her out and leave "four women".
-2. **How long was the wrist exercise?** You told me five minutes. Your podcast script gives three minutes in total, and your talk notes describe about a minute. The book states no time.
-3. **The frigid history** (the 1952 psychiatrists' manual, Helen O'Connell and 1998) needs the fact-check your notes list: Helen O'Connell's 1998 anatomy study, the DSM-I of 1952 and its 1980 revision. I removed your line that it was "listed next to male impotence" until it is checked.
-4. **Swearing.** Your column uses it ("Oh, shit", "five different fucking milks"). I kept "Oh, shit" because it is a quote, and wrote "five different milks". Do you want it back in?
-5. **Receive and Adjust** is one of your 31 Touch Points practices. It is also in your published column. Is it fine to give it in the book?
-6. **The two example requests** in "Say it out loud" (nails on the wrist, hair behind the ear) are from your talk script. Are they right for a book?
-7. **The reader's names.** "A woman at the retreat" and "a co-leader" are not named. Are you happy with that?
+**Decided by Juliette, 21 Nov 2026:**
+- The MC said it on camera and Juliette is fine with it. The book says "the MC", with no name.
+- The wrist exercise takes "between three and five minutes".
+- The frigid history stays, in the wording from her Substack, including "listed next to male impotence" and "accurately mapped".
+- Receive and Adjust is fine to include and is credited to 31 Touch Points.
+- Swearing is fine in small amounts. "Oh, shit" stays and "fucking" is written "f*king".
+- The two example requests in "Say it out loud" stay.
 
 **Still open:**
 1. **Is one section for the man enough?** Or should he have more?
