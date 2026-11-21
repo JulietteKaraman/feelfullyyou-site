@@ -78,6 +78,18 @@ Here is what I took from all three. At the end, nobody needs fixing. They need a
 
 That is the same thing I offer in a bedroom, when someone braces and says "stay". It is the same thing I offer on a plane, and at a kitchen counter. A tool that cannot hold at the extremes is only theory. Touch Base held at the threshold of death. It will hold in your Tuesday.
 
+## What my psyche kept for me
+
+There is one more thing I need to tell you, because it is the reason I take your Touch so seriously.
+
+I was abused as a child, by my uncle and by my brother. Later, in Spain, I was date raped.
+
+For over twenty years I did not know. My psyche kept it hidden for me. It put it somewhere I could not reach, the way a body will keep something safe until there is enough ground under it to be handled. I was a high-functioning, giving woman with a body that braced, and no story to explain why.
+
+I did not find out by thinking. The memory came back through my body, when I was ready and when there was enough around me to hold it. That is how I know, from the inside, what I mean when I say your body is on your side. It was protecting you. It knew what it was doing long before you did.
+
+I am telling you this so you know where this work comes from. I am not asking you to go looking for anything. If you have never had a memory, you do not need one. Nothing in this book needs you to uncover a past. We only work with what is in your body today, at the pace it chooses.
+
 ## I give until my body stops me
 
 You have met my core lesson in this book. I give until my body stops me.
@@ -136,3 +148,5 @@ All of this is sacred. All of this is welcome.
 **Fifth pass, 21 Nov 2026:** added two lines from your Day 11 and Day 12 posts (opening the app just to look at it, and the three podcasts).
 
 - **Added 21 Nov 2026 (sixth pass):** new section "What the dying taught me about Touch" (about 560 words), from your essays "What I Know About Dying" and "The Work". You said on 25 Oct you are completely okay about posting about euthanasia, so the mother scene stays. I used only what both essays agree on. Where they differ (the sister dying in hospital or at home, your father holding one hand or both) I left the detail out. I also left out the line where you straddled your mother on the bed, and the Duplication work and the spinal attunement. Please check: (1) is the section too heavy for a book people buy after a quiz, or is it the proof you want? (2) your brother's response, which your Notion notes left to you. (3) "Biem" is your own nickname from your sister, so it is left in as a quote.
+
+- **Added 21 Nov 2026 (sixth pass):** new section "What my psyche kept for me" (about 230 words), from your message: the abuse by your uncle and your brother, the date rape in Spain, and your psyche keeping it hidden. I used only what you told me, with no scenes, ages or detail. The reader is told nothing needs uncovering. This is the most exposed material in the book, so please check: (1) is this exactly how you want to say it, and do you want it in the book at all? (2) your uncle and brother are real people. Do you want them named by relationship (as now), or just "family members"? Your family could recognise themselves. (3) I wrote that the memory came back "through my body". Is that right? (4) "For over twenty years" is from your last message. Is that the right span?\n
