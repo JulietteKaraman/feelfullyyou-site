@@ -318,13 +318,21 @@ summary{color:#fefcfa}
    Before Mon 23 Nov 00:00 UK the page explains the free week starts Monday; after, the plain wording. */
 if(Date.now()>=Date.UTC(2026,10,23,0,0,0))document.documentElement.classList.add('open');
 </script>
-</head>
+<style id="phonehero">
+.hero-photo{height:560px}
+.hero .tilt{left:50%;right:auto;top:auto;bottom:28px;width:min(230px,58vw);transform:translateX(-50%) rotate(0deg);box-shadow:0 0 0 1px var(--ochre),0 0 60px rgba(221,201,142,.28),0 30px 70px rgba(7,7,7,.8)}
+.hero-copy{margin-top:-10px}
+@media (min-width:900px){
+ .hero-photo{height:680px}
+ .hero .tilt{width:250px;left:34%;bottom:50%;transform:translate(-50%,50%) rotate(-3deg)}
+}
+</style></head>
 <body>
 
 <!-- 1. HERO -->
 <header class="hero s-black" id="join">
   <div class="hero-photo">
-    <img class="bg" src="/touch-embrace-bw.jpg" width="1032" height="1600" fetchpriority="high" alt="">
+    <img class="bg" src="/media/confessions/photos/juliette-boudoir-chin.jpg" width="1400" height="934" fetchpriority="high" alt="Juliette Karaman" style="object-position:30% 40%;filter:brightness(.8)">
     <p class="doors before-open">Doors open Monday 23 November.</p>
     <p class="doors after-open">Doors are open.</p>
     <div class="phone tilt"><img src="media/confessions/phone-mondays.webp" width="640" height="973" alt="The Scrumptious Confessions app on a phone"></div>
@@ -452,9 +460,19 @@ if(Date.now()>=Date.UTC(2026,10,23,0,0,0))document.documentElement.classList.add
   </ul>
 </section>
 
+<section class="sec s-black" style="padding-block:56px">
+  <div class="wrap" style="max-width:1000px;margin:auto;padding-inline:20px">
+    <span class="eyebrow">Alex and me</span>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:16px">
+      <img src="/media/confessions/photos/juliette-alex-birthday-garden.jpg" style="width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:18px" loading="lazy" alt="Juliette and Alex">
+      <img src="/media/confessions/photos/juliette-alex-sunglasses.jpg" style="width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:18px" loading="lazy" alt="Juliette and Alex">
+      <img src="/media/confessions/photos/juliette-alex-selfie.jpg" style="width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 30%;border-radius:18px" loading="lazy" alt="Juliette and Alex">
+    </div>
+  </div>
+</section>
 <!-- 6. ASK ME ANYTHING, photo + glass cards -->
 <section class="photo sec s-black">
-  <img class="bg" src="/touch-heart-hands-bw.jpg" width="1066" height="1600" loading="lazy" alt="" style="object-position:50% 40%">
+  <img class="bg" src="/media/confessions/photos/juliette-boudoir-hands-mouth.jpg" loading="lazy" alt="" style="object-position:70% 35%;filter:brightness(.75)">
   <div class="wrap askwrap">
     <span class="eyebrow">Your questions</span>
     <h2 class="sec-h">Ask me anything. <em>No one sees your name.</em></h2>
@@ -490,7 +508,7 @@ if(Date.now()>=Date.UTC(2026,10,23,0,0,0))document.documentElement.classList.add
 
 <!-- 6b. SMUT STORIES (Juliette 21 Nov 2026: the late night shelf, in her voice) -->
 <section class="photo sec s-black">
-  <img class="bg" src="/touch-lace-closet-bw.jpg" loading="lazy" alt="" style="object-position:50% 40%">
+  <img class="bg" src="/media/confessions/photos/juliette-boudoir-blue.jpg" loading="lazy" alt="" style="object-position:50% 30%;filter:brightness(.75)">
   <div class="wrap askwrap">
     <span class="eyebrow">Late at night</span>
     <h2 class="sec-h">Smut Stories. <em>In my voice.</em></h2>
@@ -503,7 +521,7 @@ if(Date.now()>=Date.UTC(2026,10,23,0,0,0))document.documentElement.classList.add
 <!-- 8. WHO I AM -->
 <section class="sec s-cream">
   <div class="wrap who">
-    <div class="ph"><img src="/rk-hero07-juliette.jpg" width="933" height="1400" loading="lazy" alt="Juliette Karaman"></div>
+    <div class="ph"><img src="/media/confessions/photos/juliette-boudoir-coat.jpg" loading="lazy" alt="Juliette Karaman" width="1400" height="1043"></div>
     <div>
       <span class="eyebrow">Who I am</span>
       <h2>I&rsquo;m <em>Juliette.</em></h2>
