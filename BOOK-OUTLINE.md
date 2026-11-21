@@ -21,7 +21,7 @@ Voice rules for every chapter: start in the moment, not the lesson. Short lines.
 | 4 | The Reach | 3,000 | State 3. You feel it and cannot ask for it. |
 | 5 | The Melt | 2,500 | State 4. It is good. You want more. |
 | 6 | How you are wired: Pattern | 2,000 | Holder, Operator, Wanderer. |
-| 7 | How you are wired: Pleasure Language | 2,000 | Sensual, Sexual, Energetic, Kinky, Shapeshifter. Jaiya's Erotic Blueprints credited. |
+| 7 | How you are wired: Pleasure Language and Desire Style | 2,500 | Sensual, Sexual, Energetic, Kinky, Shapeshifter (Jaiya's Erotic Blueprints credited). Then Desire Style, responsive or spontaneous (Basson and Nagoski credited, original exercises). Chapter 2 points forward to this. |
 | 8 | The way back | 2,500 | Touch Base, the 15-Minute Touch Date, the conversation. |
 | 9 | Why I built Scrumptious Confessions | 1,200 | Her story, the bridge. |
 | 10 | Your next fortnight | 500 | One door: the free fortnight. |

@@ -82,6 +82,22 @@ She had been sold spontaneity. Spark, chemistry, it should just flow. So when it
 
 That story has it backwards. The body does not open on command, and it never did. It opens inside a container it trusts. Clear walls. A way in. A way back. A guarded body does not let go in open space. It lets go inside structure.
 
+## Two ways desire arrives
+
+There are two ways desire turns up.
+
+Some people feel it first. The wanting appears, out of nowhere, and then they act on it. That is spontaneous desire.
+
+Other people feel it second. The wanting arrives after the Touch begins, once they are relaxed and the stakes have dropped. That is responsive desire.
+
+Both are normal. Both are healthy.
+
+The culture only ever shows you the first kind. So a woman whose desire is the second kind waits for a feeling that was never going to arrive on its own, and decides something is wrong with her.
+
+Rosemary Basson mapped this, and Emily Nagoski brought it to a wide audience in *Come As You Are*. I teach it in my own words.
+
+If your desire is the responsive kind, it will not come on command. It comes inside a container it trusts. In Chapter 7 you will find out which kind you are.
+
 ## Three things that do not work
 
 You have probably tried all three.
@@ -169,6 +185,8 @@ If anything in this chapter stirred something big, stop and go to Touch Base. Do
 - **Porges, Levine and the other citations.** The book is scene-led. Say if you want a short sources list at the back.
 
 **Decided by Juliette, 21 Nov 2026:** consent is in place for everyone in the book, and the book uses he and she. That settles the pronoun question on the partner section below.
+
+**Added 21 Nov 2026, agreed with Juliette:** the "Two ways desire arrives" section, so that when the chapter mentions spontaneity it also gives the spontaneous versus responsive distinction, as Canon requires. It credits Basson and Nagoski, as the quiz code does. It is in plain words, not taken from Nagoski's book or workbook. Chapter 7 will carry the full Desire Style section.
 
 **Still open:**
 1. **The woman from the call.** She is also in "The Body Does Not Open on Command". Is she the same client as chapter 1's pilates woman? If so, chapters 1 and 2 need to read as one person.
