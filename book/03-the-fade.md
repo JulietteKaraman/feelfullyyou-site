@@ -42,6 +42,8 @@ Here is what nobody names.
 
 Your body has a window. A range it can stay present and feel inside. Stress, exhaustion and years of bracing all shrink that window, until there is barely any room left in it.
 
+In Somatic Experiencing we call it the window of tolerance, and it is the whole basis of how we build capacity.
+
 When Touch arrives at the edge of a window narrowed to a slit, your body does the only intelligent thing left. It checks out. It goes numb, because feeling has become more than it can hold right now, even though nothing in you has gone.
 
 You know the signs, even without names for them.
@@ -61,6 +63,16 @@ First you make room.
 The weekend away. The lingerie. The big date night you are both secretly hoping will fix it.
 
 You are asking a body with a slit of a window to throw the doors open. It cannot. It braces harder, and you both go to bed quietly defeated, more certain than ever that something is wrong.
+
+## Capacity is built like fitness
+
+I keep saying it is like riding a bike, or going to the gym. You do not start with a five-hour session.
+
+You start small, and you build, so that you have a win each time. The mind, the psyche and the body all learn the same thing.
+
+*Oh. I can do this.*
+
+Three minutes is the right size. It is a win your body can recognise, and the next one builds on it.
 
 ## Start smaller than you think
 
@@ -136,6 +148,8 @@ Chapter 8 builds it, one small piece at a time. For now, you have three minutes.
 - The detail that your body was holding "a violation I had no conscious memory of". That is very personal, and it is your call whether it belongs in a £17 book.
 - Programme details from the essay's Part Eight (The Beginning, twelve weeks). They are out of date against Canon.
 - "She Opened. Then She Went Quiet." It is about the days after closeness, so it fits The Melt better.
+
+**Added 21 Nov 2026, from Juliette:** the window of tolerance line and the section "Capacity is built like fitness", using her own bike and gym comparison. Please check the credit. The phrase "window of tolerance" was coined by Dan Siegel and is widely used in Somatic Experiencing. The book says "in Somatic Experiencing we call it the window of tolerance". Do you want Siegel named?
 
 **Decided by Juliette, 21 Nov 2026:**
 - Consent is in place for everyone in the book, and her ex-husband is fine to name. The chapter now says Karim.

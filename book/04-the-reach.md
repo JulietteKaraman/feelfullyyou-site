@@ -127,6 +127,10 @@ One of those will have landed more than the other. That is your body answering a
 
 Try three or four different places. Some will light up. Some won't. You are building the first page of your own map.
 
+In a course I ran this autumn, that was the hardest and most useful part. A woman finds she feels very little in one part of her body, and a great deal in another. For some women that was triggering.
+
+It is also the way in. You start where you can feel, and move from there to the part that cannot yet, a little at a time. That is called titration.
+
 **The cup of tea**\
 This one looks like play. It rehearses the exact muscle that asking for Touch draws on.
 
@@ -232,6 +236,8 @@ You have been closing the gap alone for a long time. Chapter 8 shows you how it 
 - **The name "The Touch Map".** The essay gives away a version of the Touch Map mechanic for free. In the book it is called "same place, two ways", so it does not step on the paid Touch Map.
 - **Numbers and citations.** The essay's "980+ women and 20 countries", Gottman, Porges, Levine, Löken and the others.
 - **The longer men's section**, with the five Small Bid examples, the "braced to open" question and the Three-Minute Reset. It belongs in Chapter 8 or in Confessions.
+
+**Added 21 Nov 2026, from Juliette:** the paragraph about the course ("How to Feel Like a Woman"), where women found they felt little in one part and plenty in another, and how that becomes titration. I wrote "a course I ran this autumn" because your Canon says the course will not re-run. Do you want it named?
 
 **Decided by Juliette, 21 Nov 2026:**
 - Zeinab's name stays in.
