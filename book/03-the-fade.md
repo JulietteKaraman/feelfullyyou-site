@@ -134,6 +134,22 @@ She ran out of room.
 
 Do not ask for more. Ask for three minutes that lead nowhere, and let her have all of it.
 
+## Questions I get asked about The Fade
+
+**Why do I go through the motions and check out halfway through?**
+
+Checking out is your body's way of staying safe while keeping the peace. It arrives at Touch it has not agreed to yet, so it performs the motions while you leave the room inside yourself. Within a minute of him reaching for you, you are expected somewhere your body has not arrived at yet. It is still at the sink, still running the day. It never got the chance to catch up.
+
+Trying harder to stay makes it worse. Every attempt to force presence teaches your body that its absence will be overridden too. Give it Touch in doses small enough to stay for, with a real way out.
+
+**Why am I never in the mood, but I enjoy it once we start?**
+
+Most likely your desire is responsive. The wanting turns up after Touch and closeness begin, instead of before. It is a normal way for a body to be wired. Stop waiting for the mood to arrive first. You will read more about it in Chapter 7.
+
+**Is it normal to feel nothing when my partner touches me?**
+
+Yes. It is so ordinary that it no longer surprises me when a woman tells me. Feeling is a capacity, and a capacity that never gets used goes quiet. Most of the women who tell me this are not numb everywhere. They have spent years reading everyone else's body instead of their own. The sensation is still there. The line back to you is what went down.
+
 ## The way back
 
 You already want it.
@@ -173,3 +189,5 @@ Chapter 8 builds it, one small piece at a time. For now, you have three minutes.
 3. **Touch Base.** It appears once inside the solo practice here. Do you want the safety note at the end of every state chapter?
 
 **Update 21 Nov 2026 (second pass), from Juliette's notes:** two new short sections, "Love is not desire" (from your reel) and "Move it to the morning" (the scheduling-error line is from your list of column ideas). The practices are now called "a self-touch date" and "a Touch Date with a partner".
+
+**Third pass, 21 Nov 2026:** a "Questions I get asked about The Fade" section, drawn from your site answers on going through the motions and never being in the mood, and your podcast script on feeling nothing.

@@ -1,4 +1,4 @@
-# Chapter 9: Your First 31 Days
+# Chapter 10: Your First 31 Days
 
 *Draft 1, 21 Nov 2026. A plan built from the practices in Chapters 2 to 8, the Touch Base 31-day rhythm Juliette described, and the Touch Date ladder in Canon (3, then 15, then 30 minutes). The week-by-week order is a proposal. Review notes are at the bottom of this file and are not part of the book.*
 
@@ -100,3 +100,5 @@ When you have filled it in, you have done what most people never do. You have a 
 1. Is week 2's "three self-touch dates a week" right?
 2. Is "partner Touch Date in week 3" the right moment?
 3. The map has nine lines. Do you want fewer?
+
+**Third pass, 21 Nov 2026:** renumbered (this is now Chapter 10).

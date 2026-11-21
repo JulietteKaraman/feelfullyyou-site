@@ -1,4 +1,4 @@
-# Chapter 10: Why I Built Scrumptious Confessions
+# Chapter 11: Why I Built Scrumptious Confessions
 
 *Draft 1, 21 Nov 2026. Built from the Confessions sales page, the Confessions launch thread (the stories Juliette confirmed for the book), her visibility challenge posts, and her confession scripts. Review notes are at the bottom of this file and are not part of the book.*
 
@@ -39,6 +39,14 @@ This is my second go at it.
 Two years ago I started Scrumptious Confessions. I recorded four or five episodes and ran out of steam. I did not have the practice myself yet.
 
 This time I built the app with my own hands, by talking to Claude, one fussy change at a time. For a while my voice was silent on every iPhone.
+
+I lost half my body weight. Twice. Which means I put it back on.
+
+I also priced my work like a nice day out. For years. Lots of little things, a bit here and a bit there. People watched the reels, and they wanted it, and they bought it. Then hardly anyone did them.
+
+One Sunday I got an email. *I've paid for a PDF and I can't access it.* It was not a PDF. It was an app where I walk you through every step, and the email telling him how to get in was sitting in his junk folder. I got my laptop out on a Sunday to show him.
+
+So I put everything in one place.
 
 Every one of those failures is in the work I do now. Not one was wasted.
 
@@ -94,3 +102,5 @@ All of this is sacred. All of this is welcome.
 7. **Your £17 book and your Day 14 post.** On 20 Nov you posted that you no longer sell work for £17 and that everything under £200 lives in Confessions. A £17 book is an exception, as a front door. Do you want the book to say so, or should it live inside Confessions instead?
 
 **Update 21 Nov 2026 (second pass), from Juliette:** this is now Chapter 10, because Chapter 9 is the 31-day plan. Juliette said naming Claude is fine and to keep it. The divorce story was trimmed here, because it is now told in full in Chapter 1.
+
+**Third pass, 21 Nov 2026:** renumbered (this is now Chapter 11). Added the weight line and the PDF in the junk folder, from your Day 14 and Day 15 posts. I left the price out, because the book has no prices. Your thread cleared the weight line as written.

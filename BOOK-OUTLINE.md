@@ -93,3 +93,9 @@ The book now runs: Before you start, Chapters 1 to 11, and About the author and 
 - 10 Why I built Scrumptious Confessions (was 9).
 - 11 What comes next is new: the ladder after the book, no prices.
 - Fact-check changes: the frigid history (chapter 4) and the Nagoski figures and medicine line (chapter 7) were softened after checking.
+
+## Update, 21 Nov 2026 (third pass)
+
+New numbering: 9 For Him, and For the Two of You (new), 10 Your First 31 Days, 11 Why I Built Scrumptious Confessions, 12 What Comes Next, then About the author and credits.
+
+More of Juliette's own stories went into Chapters 2 to 8 (the kitchen, being touched while somewhere else, the VIP client and the food, the television couple, the strawberry, the relationship coach, hearing a no), and Chapters 2 to 5 each now have a "Questions I get asked" section from her site answers.

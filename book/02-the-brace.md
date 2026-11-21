@@ -54,6 +54,34 @@ Nobody decided to do any of that. Nobody had time to.
 
 That is the half second. Your thought about the word came later. Your body moved first.
 
+## The kitchen
+
+It happens to me, too. It still can.
+
+Alex reached for my waist in the kitchen. I was cooking, in my own rhythm. His hand rested there. Normal. Familiar.
+
+My body reacted before my mind did. Shoulders up. Breath caught. A tightening low in my belly.
+
+I was still standing there, but I was not there. I was eight.
+
+Someone in my family had touched me inappropriately, and my body remembered it, in a split second.
+
+Alex felt the shift. He paused. He could have pulled away and thought he had done something wrong. I could have smiled, and kept cooking, and overridden it.
+
+Instead I said, "Stay."
+
+Everything in me wanted to get back to normal. To make it go away. So I said what was real. "I'm getting a flashback. My body is tightening."
+
+No story. No blame. Just what was real.
+
+He stayed. He did not fix it, or apologise, or make it about him. He just stayed.
+
+Something in my body started to soften its grip. Not all at once. Enough.
+
+Later, when we were both grounded, he said, "Tell me what happened for you there." I could answer from awareness, instead of reaction.
+
+Intimacy wears down in the small moments. The ones where your body says something, and it either gets met, or gets left.
+
 ## What your body is bracing against
 
 A hug lasts about fifteen seconds. On its own it is almost nothing. A hand on your lower back weighs about half a kilo.
@@ -67,6 +95,12 @@ He puts his arms around you meaning I love you.
 Your body receives here we go again.
 
 Both of those are true accounts of the same fifteen seconds.
+
+I know how a body learns this. For years I was very good at being touched while being somewhere else entirely. I could be making a shopping list, planning tomorrow, waiting for it to be over. From the outside, nobody would ever have known.
+
+Every time I tolerated a Touch, my body learned something. It learned that a hand arriving means brace. Get through it. Leave if you need to.
+
+So years later, a hand I really did want, from someone I loved, landed on me, and my shoulders still climbed. My breath still stopped. My body was doing exactly what I had taught it to do.
 
 ## The order a body says no
 
@@ -103,6 +137,12 @@ Nothing was wrong with her. Her body was being accurate.
 She had been sold spontaneity. Spark, chemistry, it should just flow. So when it went quiet, she assumed the love had gone, because the love was supposed to keep it flowing all on its own.
 
 That story has it backwards. The body does not open on command, and it never did. It opens inside a container it trusts. Clear walls. A way in. A way back. A guarded body does not let go in open space. It lets go inside structure.
+
+One of my VIP clients came to my house for a day and said something I have not stopped thinking about. "When I'm in your house, or when I'm with you, I try foods that I would never dare try, because I just feel like I can. If I don't like them, I just tell you, and I just don't eat them. Normally, I wouldn't do that."
+
+Food. Nothing to do with Touch. Which is why it is the best proof I have. She was feeling more because she was somewhere she could try a thing, stop it halfway, and nobody would make her finish it.
+
+That is what a container is.
 
 ## Two ways desire arrives
 
@@ -187,6 +227,24 @@ The difference is that with her, your own body gets activated first. Her closing
 
 Your steadiness is the safest thing you have.
 
+## Questions I get asked about The Brace
+
+**Does the flinch mean I don't want my partner?**
+
+Very often it does not. Couples describe a kind hand, a person they love, and a body that braced anyway. Notice which Touches your body receives well. The ones you saw coming, or the ones that appeared from behind? That tells you what your body is asking for.
+
+**Why do I cringe when my partner touches me, because it always leads to sex?**
+
+That is pressure. Your body has learned to read every Touch as the opening move of something bigger, so it braces before the hand even lands. Even holding hands stops being just holding hands once every Touch has a destination. The pattern is learnable, and it is changeable, without cutting Touch out of your relationship.
+
+**Why doesn't "just say no" fix it?**
+
+Because the bracing happens at the first Touch, before there is any choice to make. By the time you say no, you have already flinched.
+
+**Why can't I stand to be touched after having a baby?**
+
+Your body has spent all day being climbed on, fed from and held by someone who cannot reach for anything themselves. By evening there is no bandwidth left, not even for the hand you love. It is not who you are now. It is where your body is, and it moves.
+
 ## The way back
 
 Your body braced because it learned something true, once, in a particular place, with a particular person or no person at all. It has not yet been told that this kitchen, this man, this moment is different.
@@ -230,3 +288,5 @@ If anything in this chapter stirred something big, stop and go to Touch Base. Do
 4. **The Touch Base reminder at the end** repeats chapter 0 on purpose. Do you want it at the end of every state chapter, or only here?
 
 **Update 21 Nov 2026 (second pass), from Juliette:** the two practices are now called "a self-touch date" and "a Touch Date with a partner", and the forty-minutes story comes from your reel script. Juliette confirmed the woman here is not the same woman as in Chapter 1.
+
+**Third pass, 21 Nov 2026, from Juliette ("use many more stories"):** four new stories and a questions section. (1) "The kitchen" is your own Kitchen Post, almost word for word. It is the heaviest story in the chapter, with a flashback to when you were eight. Chapter 0 has a content note. Do you want it in? (2) Being touched while somewhere else comes from your Confession 1 script. (3) The VIP client and the food comes from your podcast script. (4) "Questions I get asked about The Brace" is drawn from four of your site Q&A answers, in lightly edited form.

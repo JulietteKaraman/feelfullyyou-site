@@ -78,6 +78,28 @@ That no is what made it safe to go anywhere at all.
 
 When you know you can stop, your body can let go.
 
+## Hearing a no
+
+For a long time, hearing no felt like a slap.
+
+Someone said no, or not now, or can you do it differently, and straight away my body went: *oh my God, I've done something wrong. I'm too much. I'm not wanted.*
+
+We are meaning-making machines. A no lands, and within half a second we have written a story about what it says about us.
+
+So a no is just a no. It can mean not now. It can mean not yet. It can mean just no. Very rarely does it mean you are a terrible person.
+
+Here is a game I have played in workshops for years. Play it with your partner, or a friend. Set a timer for five minutes.
+
+One of you asks five questions, and the other can only answer no. *Would you like to go out to dinner with me? No. Can I make you a cup of tea? No.* Notice what happens in your body when you say it. Take a breath.
+
+Then five questions where the answer is only yes. Notice that too.
+
+Then five where you answer whatever is true.
+
+There is one rule. You do not act on any of it. If the answer is yes to a Touch on the neck, you do not do it. You stay with the sensation. That is the practice.
+
+When you can feel your own no, it gets much easier to receive someone else's, and to stop making it about you.
+
 ## The conversation
 
 This structure is older than my work. The Dyad was originated by Ava Berner in the 1960s, and her husband Charles Berner built the Enlightenment Intensive around it. I came to know it as pulling withholds, and I needed it myself when my sister was dying.
@@ -152,7 +174,7 @@ You can do all of this on your own. It goes better with company.
 
 A structure that keeps turning up. A voice in your ear. Somewhere to take the questions that come up when you do it.
 
-That is why I built something. Chapter 9 gives you a plan, and Chapter 10 tells you why.
+That is why I built something. Chapter 9 is for him, and for the two of you. Chapter 10 gives you a plan, and Chapter 11 tells you why.
 
 ---
 
@@ -174,3 +196,5 @@ That is why I built something. Chapter 9 gives you a plan, and Chapter 10 tells 
 7. **The research study** your Version B notes mention (nearly 13,000 people, short and regular beats long) is not in the chapter. Do you want it?
 
 **Update 21 Nov 2026 (second pass), from Juliette:** Touch Base takes about two minutes once you know it, and longer the first time. Alex is now "my fiancé Alex". The practice page (video, audio and the 31-day tracker) is described as a taste of Confessions. Two new sections: "If you are single" and "When it brings up too much". **To check:** the two UK helpline numbers (Samaritans 116 123, National Domestic Abuse Helpline 0808 2000 247) are well known, but please check they are current before print. Also: does your free Touch Base page already have the 31-day tracker? If not, it needs adding before the book goes out.
+
+**Third pass, 21 Nov 2026:** "Hearing a no" comes from your Confession 2 script ("No is a complete sentence"). It opens to members on 30 Nov, so this puts a short version in the book first. Is that fine? Chapter numbers: 9 is the new chapter for him, 10 is the plan, 11 is why you built Confessions, 12 is what comes next.

@@ -146,6 +146,12 @@ Before you drink, pause. Is it right? If it is slightly off, even when it is alm
 
 Notice the flinch that rises as you ask for the small correction. For many women that flinch is the whole pattern, alive in a kitchen, over a cup of tea. It is a place to practise wanting something and saying so, where the sky does not fall.
 
+I once did this with a couple on national television. She wanted more than "wham, bam". He heard "rose petals", and her body collapsed. They could not agree on a single thing.
+
+So I took them to the kitchen, and asked him to make her a cup of tea. Extremely specific. Which cup, which tea, which milk, saucer or no saucer, stirred or not. He resisted. Then I offered to make him one, and I listened to exactly what he wanted, and said it back. He corrected me. I went out, and brought it back.
+
+That is the lesson. How conditioned we are about who gives and who receives. How we settle for "that is as good as it gets". How uncomfortable it is to ask for exactly what we want.
+
 Three things come up every time I run this.
 
 *"I am happy to make it for everyone else, but when it came to asking, I didn't know what I liked."*
@@ -191,6 +197,26 @@ It does not resolve in one night. Something moves the first time, though: the mu
 After weeks of this, you stop performing your pleasure and start reading it. You stop needing someone else to tell you what you like, because you have started asking your own skin, and it has started answering.
 
 Zeinab, in Beirut, told me afterwards, "I'm no longer looking to others for the answers. I now trust myself." Her marriage rekindled. She asks for what she wants now, without fear of being too much.
+
+## Questions I get asked about The Reach
+
+**How do I ask for the touch I want?**
+
+Adjust it while it is happening, in plain words. *A bit slower. A bit to the left.* Keep adjusting until it is just right. Asking is a skill, and it starts with saying yes out loud when something lands.
+
+A woman in my room once told her husband exactly what she wanted. A strawberry, fed to her from his mouth. He pulled a face. "Oh no, that's disgusting." A hard no, in front of me.
+
+She giggled, and I watched what the giggle was doing. Her body was working out the sum. *I asked for what I want, and I can't have it.*
+
+So I slowed everything down. I asked her permission. I read her body. Often that is what is missing. The asking for permission, and the slowness.
+
+I start couples with asking for small things outside the bedroom, because once that works, the same asking can move into Touch.
+
+**I already know what is wrong and what would help. Why can't I make myself act?**
+
+Knowing was never the missing step. Acting on it means admitting the relationship is not fine as it is. A common cover story is waiting for him to change first. That keeps you in motion without moving, and it keeps the decision in his hands. It was always yours first.
+
+I hear this nearly every day. She already knows the fix. She agrees with me. She does not book it. Being afraid makes sense, and it is allowed.
 
 ## If you are the one who needs Touch and cannot say it
 
@@ -260,3 +286,5 @@ You have been closing the gap alone for a long time. Chapter 8 shows you how it 
 2. **"I have a name for this pattern, and you will meet it in Chapter 6."** Chapter 6 is not written yet.
 
 **Fact-check, 21 Nov 2026 (second pass):** I softened three lines in "A word about that word" after checking. (1) The first psychiatric manual (DSM-I, 1952) did not give frigidity its own diagnosis. It appeared as a supplementary term under a heading for the body reacting to the mind, and the 1980 manual (DSM-III) replaced it, so "listed next to male impotence" is not supported. (2) A German anatomist, Kobelt, drew the clitoris accurately in 1844, so "nobody had mapped it until 1998" overstates it. Helen O'Connell's 1998 dissection paper is real and important. The book now says it showed a structure far larger than most textbooks had drawn. Sources: PMC3549574 (the DSM history), and the Open University and Wikipedia accounts of O'Connell and Kobelt. Your Substack uses the stronger wording, so you may want to correct it there too.
+
+**Third pass, 21 Nov 2026:** the couple on national television (from your key proof stories, unnamed, and I left out the raspberry part), and a "Questions I get asked about The Reach" section from your site answers on asking for the Touch you want, and on knowing what is wrong and not acting. The strawberry story is yours, from the same page. **To confirm:** is it fine to tell the television story without naming the couple?

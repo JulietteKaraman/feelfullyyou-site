@@ -101,6 +101,26 @@ One woman wrote to me after our sessions, *"A lot more of my feelings about sexu
 
 A hand arrives on the small of your back. You feel the weight of it, and the warmth. It lasts longer than you expected, and you stay. You feel it in your knees.
 
+I am 58. I am post-menopausal, and I have the best intimacy of my life.
+
+It did not arrive on its own. I put it in the diary, and I set a timer.
+
+## Questions I get asked about The Melt
+
+**What is the difference between sex and intimacy?**
+
+Sex is one way into closeness. Intimacy is the closeness itself, and plenty of people reach it by another road.
+
+Ask me what intimacy means, and my answer has no sex in it. For me it is someone who reads my body signals so well that they know I want to be held in a certain way. Ask your partner the same question. Their answer might be looking into your eyes, seeing them sparkle, and feeling deeply loved.
+
+Neither answer is wrong. A couple who has never swapped them is guessing at each other.
+
+**What is sensual Touch, and how is it different from sexual Touch?**
+
+Sensual Touch feeds the senses. Skin, scent, warmth and pace, with no finish line. Sexual Touch heads for orgasm.
+
+Picture a blanket in a field, music playing, and your partner feeding you grapes. For one of you that is *oh wow, give me more, please.* For the other it is *okay, when can we actually get to it?* Same blanket, same grapes, two bodies, two ways in.
+
 ## The way back
 
 Nothing here to repair.
@@ -135,3 +155,5 @@ I have updated the outline.
 5. **Chapters 6 and 8** are not written yet.
 
 **Update 21 Nov 2026 (second pass), from Juliette:** the specific testimonial is a public quote from your Watch the Touch Reset page, and the closing scene echoes the opening of Chapter 3. Juliette confirmed the Sunday and Tuesday couple is real, and told in the third person.
+
+**Third pass, 21 Nov 2026:** your own line (58, post-menopausal, the best intimacy of her life) from your bio and Day 12 post, and a "Questions I get asked about The Melt" section from your site answers on sex and intimacy and on sensual Touch. **To confirm:** you say "in the diary, with a timer". That comes from your Day 10 post.

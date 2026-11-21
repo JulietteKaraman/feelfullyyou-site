@@ -44,6 +44,14 @@ The question to ask: *What do I want when I stop tracking everyone else?*
 
 You have already met some Holders. The woman in Chapter 3 who could not receive her husband's attention without turning it straight back onto him. The woman in Chapter 4 who could tell you exactly how everyone else took their tea.
 
+Another Holder came to me after spending more than a quarter of a million pounds on personal development. She is a relationship coach herself. She was convinced the problem was her husband. He was not following through. He was not showing up. She was tracking him, and not herself.
+
+I slowed her right down. I taught her to read the first two lines of one of his texts, and to notice what happened in her body. She told me her body was angry. I said that is an emotion, and I kept bringing her back to the felt sense. The temperature. The tightening. The softening. Where it was.
+
+After a while she noticed her jaw tighten when his name came up on her phone. A pit in her stomach.
+
+She wrote to me afterwards. *"You have given me the biggest gift. I now understand the felt experience of using my body as a compass."*
+
 ## The Operator
 
 You fix things. You make decisions. You keep moving. When something needs handling, you handle it, and you are genuinely good at it.
@@ -155,3 +163,5 @@ Next comes the part that is much more fun. What actually turns you on, once your
 **Still open:**
 1. **The three "small reps"** are my adaptations from your Pattern page (the tea, the timed container and slow exhale, and a stop word). You said you would look at them.
 2. **"Him"** in the Holder and Wanderer reps follows your he and she decision.
+
+**Third pass, 21 Nov 2026:** the relationship coach who spent more than a quarter of a million pounds on personal development, from your key proof stories. The quote is hers, from your notes. She is not named, so please check that she has agreed.

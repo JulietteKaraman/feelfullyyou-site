@@ -1,4 +1,4 @@
-# Chapter 11: What Comes Next
+# Chapter 12: What Comes Next
 
 *Draft 1, 21 Nov 2026. Built from Canon, the Confessions launch thread and the Scrumptious Touch Reset page. No prices. Review notes are at the bottom of this file and are not part of the book.*
 
@@ -58,3 +58,5 @@ Juliette
 3. **Which link** for Confessions: the `scrumptious-confessions` page or the `-membership` page? Your Notion posts use both.
 4. **Is a long list too many doors?** Canon wants one direction. The order here is: keep going, then Confessions, then the Touch Reset (women) or The Beginning and a VIP day (couples).
 5. **Sign-off.** "Warmly, Juliette", as you chose.
+
+**Third pass, 21 Nov 2026:** renumbered (this is now Chapter 12).
