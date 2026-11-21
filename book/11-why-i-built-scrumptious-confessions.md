@@ -114,9 +114,13 @@ There is one more thing I need to tell you, because it is the reason I take your
 
 I was abused as a child, by family members. Later, in Spain, I was date raped.
 
-For over twenty years I did not know. My psyche kept it hidden for me. It put it somewhere I could not reach, the way a body will keep something safe until there is enough ground under it to be handled. I was a high-functioning, giving woman with a body that braced, and no story to explain why.
+For twenty-five years I did not know. My psyche kept it hidden for me. It put it somewhere I could not reach, the way a body will keep something safe until there is enough ground under it to be handled. I was a high-functioning, giving woman with a body that braced, and no story to explain why.
 
-I did not find out by thinking. The memory came back through my body, when I was ready and when there was enough around me to hold it. That is how I know, from the inside, what I mean when I say your body is on your side. It was protecting you. It knew what it was doing long before you did.
+I did not find out by thinking. I was 44, at a workshop in San Francisco, being flogged between the shoulders, and I knew something was about to pop. So I asked the facilitator and her assistant to both flog me, one with leather and one with suede, so that I could remember. My partner was not able to hold that, and I knew I needed people who could.
+
+Before we began they asked me what I needed for aftercare. I said: "A blanket, water, and someone hugging me to say that I am okay."
+
+The memory came back, in my body, when I was ready and when there was enough around me to hold it. That is how I know, from the inside, what I mean when I say your body is on your side. It was protecting you. It knew what it was doing long before you did.
 
 I am telling you this so you know where this work comes from. I am not asking you to go looking for anything. If you have never had a memory, you do not need one. Nothing in this book needs you to uncover a past. We only work with what is in your body today, at the pace it chooses.
 
@@ -186,3 +190,5 @@ All of this is sacred. All of this is welcome.
 - **Added 21 Nov 2026 (sixth pass):** new section "What opens when Touch is the door" (about 230 words), from your Conduit week Day 8 script (the 11:11 drum, the sarcophagus, the Tulum text). Please check: (1) her consent. Your own Notion page says to get her yes before her story or texts go public, and a book is more public than Instagram. (2) "her breath stopped, then her heart" is in your script as you tell it. A book is read more carefully than a reel. Do you want that exact wording, or something like "she went somewhere I could not follow, and then she came back"? (3) I used "half-day private session" for "half-day VIP intensive", because the book names no offers. (4) One thing I noticed in your Day 9 and Day 17 posts: you say the date rape memory came back at 44, at a workshop in San Francisco, 25 years after it happened. If so, the section "What my psyche kept for me" could say that, and "twenty-five years" would be exact. Your call. The book currently says only "for over twenty years", and I have not added San Francisco.
 
 - **Confirmed by Juliette 21 Nov 2026:** (a) the VIP client has given her consent to the "What opens when Touch is the door" story; (b) "her breath stopped, then her heart" stays as written; (c) Bufo, the toad medicine, stays named; (d) how Anouk died is settled (kitchen, four minutes). Still open: "leading work in London" (kept as written unless you say otherwise), and whether the abuse section should mention San Francisco and "twenty-five years".
+
+- **Added 21 Nov 2026 (from Juliette):** the abuse section now says the memory came back at 44, at a workshop in San Francisco, 25 years after, while being flogged between the shoulders (leather and suede, facilitator and assistant, partner unable to hold it, aftercare: blanket, water, a hug). I wrote "the memory" and did not say which one came back. Your message said "abuse" and your Day 9 post says date rape. Please tell me which, or if both. I did not name the workshop or the facilitator. Is it right that this is a BDSM workshop, named as such, in a book read by people who do not know your history? I wrote "a workshop" and kept the floggers. Say if you want "BDSM" in the text.
