@@ -50,6 +50,10 @@ So I put everything in one place.
 
 Every one of those failures is in the work I do now. Not one was wasted.
 
+## Where it all comes from
+
+Everything in this app, I learned in my own body first. Before the practices and before the Touch Map, there were the people I sat beside, the rooms I stood in, and the years it took me to remember my own story. I owe you that, before I ask you to trust me with yours.
+
 ## What the dying taught me about Touch
 
 I need to tell you about the people I have sat beside at the end of their lives, because it is where I learned the most about Touch.
@@ -152,7 +156,7 @@ My marriage ended in years of little patterns that nobody called out. You read a
 
 So this is somewhere the little patterns get called out. Gently, with no name on them, before they become the years.
 
-Everything in this app, I learned in my own body first.
+Everything in this app, I learned in my own body first, and I am still learning.
 
 All of this is sacred. All of this is welcome.
 
@@ -195,3 +199,5 @@ All of this is sacred. All of this is welcome.
 - **Added 21 Nov 2026 (from Juliette):** the abuse section now says the memory came back at 44, at a workshop in San Francisco, 25 years after, while being flogged between the shoulders (leather and suede, facilitator and assistant, partner unable to hold it, aftercare: blanket, water, a hug). I wrote "the memory" and did not say which one came back. Your message said "abuse" and your Day 9 post says date rape. Please tell me which, or if both. I did not name the workshop or the facilitator. Is it right that this is a BDSM workshop, named as such, in a book read by people who do not know your history? I wrote "a workshop" and kept the floggers. Say if you want "BDSM" in the text.
 
 - **Updated 21 Nov 2026 (Juliette):** the memory that came back at the San Francisco BDSM workshop was the rape in Spain at 18, by five men. The section now says so plainly ("five men raped me", "at eighteen"), and names the workshop as a BDSM workshop, floggers kept. Those are your own words from your message. If you would rather not give the number or the age in a book, say so and I will take them out. Whether the childhood abuse was also remembered later is not stated in the book.
+
+- **Added 21 Nov 2026 (sixth pass):** a short bridge section "Where it all comes from" before the dying, the conduit and the psyche sections, so the chapter moves from the app into your life on purpose. Chapter 11 is now about 2,900 words, the longest back-of-book chapter. Tell me if you would rather this life material become its own chapter ("Where this comes from") with Confessions kept short, and I will renumber.
