@@ -88,6 +88,20 @@ Here is what I took from all three. At the end, nobody needs fixing. They need a
 
 That is the same thing I offer in a bedroom, when someone braces and says "stay". It is the same thing I offer on a plane, and at a kitchen counter. A tool that cannot hold at the extremes is only theory. Touch Base held at the threshold of death. It will hold in your Tuesday.
 
+## What opens when Touch is the door
+
+I used to call myself a Touch expert, and I am. Touch is the door. What happens once it opens is much bigger than Touch.
+
+A woman came to me for a half-day private session. At 11:11 she picked up my drum. She drummed, and she spoke a language she has never learned. Two minutes exactly. I turned my phone round so she could see the clock.
+
+Later, on my table, her breath stopped. Then her heart. I put my hand on her chest and said, "You can come back now."
+
+She came back on one huge breath. She told me she had been lying in a sarcophagus, with gold being poured over her.
+
+Not even a week later she texted me. *"Mexico. Tulum. Just happened. And a job offer. All out of the blue."* I wrote back, "Of course. Not even a week and it moves." She wrote, "Eeeek."
+
+I do not tell you this to impress you. I tell you because it is who I am. I am a conduit. I hold the wire in one hand and yours in the other, and I do not flinch.
+
 ## What my psyche kept for me
 
 There is one more thing I need to tell you, because it is the reason I take your Touch so seriously.
@@ -162,3 +176,5 @@ All of this is sacred. All of this is welcome.
 - **Added 21 Nov 2026 (sixth pass):** new section "What my psyche kept for me" (about 230 words), from your message: the abuse by your uncle and your brother, the date rape in Spain, and your psyche keeping it hidden. I used only what you told me, with no scenes, ages or detail. The reader is told nothing needs uncovering. This is the most exposed material in the book, so please check: (1) is this exactly how you want to say it, and do you want it in the book at all? (2) your uncle and brother are real people. Do you want them named by relationship (as now), or just "family members"? Your family could recognise themselves. (3) I wrote that the memory came back "through my body". Is that right? (4) "For over twenty years" is from your last message. Is that the right span?\n- **Decided by Juliette 21 Nov 2026:** the abusers are "family members", not named by relationship. Your brother's calls after your mother's death (video calling, asking to see that she was dead, you refusing) are NOT in the book. You have not said you want them in.
 
 - **Added 21 Nov 2026 (sixth pass, second version of the death section):** your Bufo ceremony, the channelling, the woman who asked you to co-lead, the memory returning, and your sister's last day (legs, "can I go to the light now?" the day before, "You are done", the "hit" in the kitchen). Your new account replaces the essays where they differ (the essays said she died on the day she asked, and in hospital). Please check: (1) "Bufo ceremony": I took your "buffalo" to mean Bufo, the toad medicine (5-MeO-DMT), as your essay "What I Know About Dying" says. Is that right, and do you want the medicine named in a book that people buy after a quiz? (2) "I was leading work in London": you said "one test", which I could not read. What was it? (3) I used your sister's first name, Anouk, once. Fine? I left out her husband's name and the wheelchair, and your brother. (4) I did not say how she died. Did she go before the doctor came, or did the medication come after? Tell me and I will word it exactly. (5) "I got a hit" is your wording. Keep it, or "I just knew"?
+
+- **Added 21 Nov 2026 (sixth pass):** new section "What opens when Touch is the door" (about 230 words), from your Conduit week Day 8 script (the 11:11 drum, the sarcophagus, the Tulum text). Please check: (1) her consent. Your own Notion page says to get her yes before her story or texts go public, and a book is more public than Instagram. (2) "her breath stopped, then her heart" is in your script as you tell it. A book is read more carefully than a reel. Do you want that exact wording, or something like "she went somewhere I could not follow, and then she came back"? (3) I used "half-day private session" for "half-day VIP intensive", because the book names no offers. (4) One thing I noticed in your Day 9 and Day 17 posts: you say the date rape memory came back at 44, at a workshop in San Francisco, 25 years after it happened. If so, the section "What my psyche kept for me" could say that, and "twenty-five years" would be exact. Your call. The book currently says only "for over twenty years", and I have not added San Francisco.
