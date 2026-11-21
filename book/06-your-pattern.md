@@ -52,6 +52,20 @@ After a while she noticed her jaw tighten when his name came up on her phone. A 
 
 She wrote to me afterwards. *"You have given me the biggest gift. I now understand the felt experience of using my body as a compass."*
 
+Then there is Katarina, a dermatologist. (Enough is changed here to protect her privacy. The pattern is not changed at all.) She knows more about the body, professionally, than almost anyone I have worked with. She can explain exactly what stress does to skin and to cortisol. She had never once been taught how to live inside her own.
+
+She had gone on and on, the way capable people do, for years, until her body could no longer hold the line and she had to take time off work. Completely.
+
+I asked her when she had last done anything with no purpose attached to it. Nothing to fix, nothing to optimise. She could not remember.
+
+The same vigilance that keeps a Holder scanning for what needs doing is the setting her body uses for Touch, for rest, for someone's hand landing on her with nothing attached. You do not run two systems, one for managing everything and one for receiving affection. You run one. Braced.
+
+What moved it for her was small enough to feel almost silly. She started standing in front of her own mirror, looking herself in the eyes, and saying it out loud: *"I love you."* Some mornings she wrote it across the glass in lipstick, so it was still there the next time she looked. Almost embarrassing, she told me, the first few times.
+
+Her body had spent years being told, in a thousand indirect ways, that it mattered only for what it could do next. A woman looking her own reflection in the eye and meaning it is a different instruction entirely. Her nervous system took it in the way it takes in anything repeated enough: as evidence.
+
+Weeks later, a hand landed on her shoulder and she did not catalogue what it was going to cost her. She let it stay there a moment longer than she would have a year ago.
+
 ## The Operator
 
 You fix things. You make decisions. You keep moving. When something needs handling, you handle it, and you are genuinely good at it.
