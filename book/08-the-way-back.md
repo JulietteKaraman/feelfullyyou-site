@@ -76,7 +76,7 @@ There are three walls.
 
 Touch Base is the anchor that sits alongside all three.
 
-I learned something about walls in an unexpected place. When I worked as a dominatrix, every single scene had a no built into it. Green, orange, red. A word that stopped everything, agreed before we started.
+I learned something about walls in an unexpected place. When I worked as a dominatrix, every single scene had a no built into it. Green, yellow, red. A word that stopped everything, agreed before we started.
 
 That no is what made it safe to go anywhere at all.
 
@@ -106,7 +106,7 @@ When you can feel your own no, it gets much easier to receive someone else's, an
 
 ## The conversation
 
-This structure is older than my work. The Dyad was originated by Ava Berner in the 1960s, and her husband Charles Berner built the Enlightenment Intensive around it. I came to know it as pulling withholds, and I needed it myself when my sister was dying.
+This structure is older than my work. The Dyad was originated by Ava Berner in the 1960s, and her husband Charles Berner built the Enlightenment Intensive around it. I needed it myself when my sister was dying.
 
 Here is the simple version.
 
@@ -124,7 +124,7 @@ The other one answers. The one who asked can say only three things.
 
 No fixing. No defending. No "but I only meant". Then you swap.
 
-When I teach this in a room, I ask afterwards, "How did it feel to be received like that? Not answered, not fixed, just held?" There is usually a silence first.
+When I teach this in a room, I ask afterwards, "How did it feel to be received like that? Held, with nothing to answer and nothing to fix?" There is usually a silence first.
 
 ## Two words
 

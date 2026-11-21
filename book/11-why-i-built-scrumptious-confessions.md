@@ -40,8 +40,6 @@ Two years ago I started Scrumptious Confessions. I recorded four or five episode
 
 This time I built the app with my own hands, by talking to Claude, one fussy change at a time. For a while my voice was silent on every iPhone. I still open it just to look at it.
 
-I lost half my body weight. Twice. Which means I put it back on.
-
 I also priced my work like a nice day out. For years. Lots of little things, a bit here and a bit there. People watched the reels, and they wanted it, and they bought it. Then hardly anyone did them.
 
 One Sunday I got an email. *I've paid for a PDF and I can't access it.* It was not a PDF. It was an app where I walk you through every step, and the email telling him how to get in was sitting in his junk folder. I got my laptop out on a Sunday to show him.
@@ -118,7 +116,7 @@ There is one more thing I need to tell you, because it is the reason I take your
 
 I was abused as a child, by family members. Later, in Spain, when I was eighteen, five men raped me.
 
-For twenty-five years I did not remember what happened in Spain. My psyche kept it hidden for me. It put it somewhere I could not reach, the way a body will keep something safe until there is enough ground under it to be handled. I was a high-functioning, giving woman with a body that braced, and no story to explain why.
+For over twenty-five years I did not remember what happened in Spain. My psyche kept it hidden for me. It put it somewhere I could not reach, the way a body will keep something safe until there is enough ground under it to be handled. I was a high-functioning, giving woman with a body that braced, and no story to explain why.
 
 I did not find out by thinking. I was 44, at a BDSM workshop in San Francisco, being flogged between the shoulders, and I knew something was about to pop. So I asked the facilitator and her assistant to both flog me, one with leather and one with suede, so that I could remember. My partner was not able to hold that, and I knew I needed people who could.
 
@@ -130,7 +128,7 @@ I am telling you this so you know where this work comes from. I am not asking yo
 
 ## I give until my body stops me
 
-You have met my core lesson in this book. I give until my body stops me.
+Here is my core lesson. I give until my body stops me.
 
 A little girl in Holland, drawing a picture for her grandmother to bring the light back into a room. A partner and all his children. Nine months of fainting in and out of hospital. Bacon at half six in the morning for a lunch nobody had asked for. Three podcast interviews on the day of my sister's anniversary, when I never do more than two.
 

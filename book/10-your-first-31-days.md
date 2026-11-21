@@ -36,7 +36,7 @@ Once a day, catch the half second. Something touches you. A hand, a cat, a doorf
 
 Keep Touch Base. Add a self-touch date, three minutes, three times this week. One hand, on your forearm or your wrist. Slowly. A timer. One question. *Is that a yes?*
 
-Write one word afterwards. If the word is "nothing", write "nothing". In four days you will have four words, and you will see the dial move.
+Write one word afterwards. If the word is "nothing", write "nothing". After a few days you will have a few words, and you will see the dial move.
 
 ## Week 3, days 15 to 21: ask
 

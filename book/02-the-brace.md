@@ -58,7 +58,7 @@ That is the half second. Your thought about the word came later. Your body moved
 
 It happens to me, too. It still can.
 
-Alex reached for my waist in the kitchen. I was cooking, in my own rhythm. His hand rested there. Normal. Familiar.
+Alex, my fiancé, reached for my waist in the kitchen. I was cooking, in my own rhythm. His hand rested there. Normal. Familiar.
 
 My body reacted before my mind did. Shoulders up. Breath caught. A tightening low in my belly.
 

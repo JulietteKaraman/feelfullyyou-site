@@ -48,7 +48,7 @@ When Touch arrives at the edge of a window narrowed to a slit, your body does th
 
 You know the signs, even without names for them.
 
-You brace a half second before the hand lands.
+You feel the hand land, and register it from a long way off.
 You leave your body during sex and plan tomorrow's list.
 You look relaxed at dinner while something in you stands guard.
 
@@ -62,7 +62,7 @@ First you make room.
 
 The weekend away. The lingerie. The big date night you are both secretly hoping will fix it.
 
-You are asking a body with a slit of a window to throw the doors open. It cannot. It braces harder, and you both go to bed quietly defeated, more certain than ever that something is wrong.
+You are asking a body with a slit of a window to throw the doors open. It cannot. It goes quieter still, and you both go to bed quietly defeated, more certain than ever that something is wrong.
 
 ## Love is not desire
 
@@ -114,7 +114,7 @@ Some bodies learned early that closeness arrives with intensity. A spike in the 
 
 So when the storm of the early months settles, and someone is calm, kind and still here, the body scans for the old charge, cannot find it, and calls the flatness the end of love.
 
-I know this from the inside. For decades I did not understand what my body was holding. After my two children were born I could not bring myself to have sex, or it took a great deal to get anywhere near it. I would cry afterwards, and neither of us knew why. My body was running a programme I could not see, and it did not care that Karim was a safe man.
+I know this from the inside. For decades I did not understand what my body was holding. After my children were born I could not bring myself to have sex, or it took a great deal to get anywhere near it. I would cry afterwards, and neither of us knew why. My body was running a programme I could not see, and it did not care that Karim was a safe man.
 
 The quiet months can be the first time a body has ever shared a room with someone safe, and had no idea what to do with that. Many of my clients find tolerating safety the hardest thing of all.
 

@@ -200,7 +200,7 @@ Zeinab, in Beirut, told me afterwards, "I'm no longer looking to others for the 
 
 ## Questions I get asked about The Reach
 
-**How do I ask for the touch I want?**
+**How do I ask for the Touch I want?**
 
 Adjust it while it is happening, in plain words. *A bit slower. A bit to the left.* Keep adjusting until it is just right. Asking is a skill, and it starts with saying yes out loud when something lands.
 
