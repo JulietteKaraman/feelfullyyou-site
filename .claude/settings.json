@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git status:*)",
+      "Bash(git log:*)",
+      "Bash(git diff:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push -q origin claude/gifted-cannon-a0v9wv)",
+      "Bash(git push -u origin claude/gifted-cannon-a0v9wv)",
+      "Bash(ls:*)",
+      "Bash(wc:*)",
+      "Bash(head:*)",
+      "Bash(grep:*)",
+      "Bash(cat:*)",
+      "Bash(python3 -I:*)",
+      "mcp__Notion__notion-fetch",
+      "mcp__Notion__notion-update-page",
+      "mcp__Notion__notion-create-pages"
+    ]
+  }
+}
