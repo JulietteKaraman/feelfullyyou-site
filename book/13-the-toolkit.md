@@ -89,7 +89,7 @@ Use one a day, or one each time you sit down. Answer out loud, and let the other
 8. What is the Touch you put up with, and what would you rather have instead?
 9. Tell me a win, an insight or a learning you have had about your own body.
 
-And three questions to ask yourself, one for each Pattern.
+Three more questions to ask yourself, one for each Pattern.
 
 10. What do I want when I stop tracking everyone else?
 11. What can I feel when I do not have to do anything with it?

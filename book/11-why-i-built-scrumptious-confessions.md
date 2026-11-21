@@ -58,7 +58,7 @@ I trained as a death doula. I did it because I wanted to be useful at the bigges
 
 When I was eighteen months old I walked into a moat. The algae on the surface looked like grass. I was wearing a little pink ski outfit. My sister pulled me out. I do not remember the rescue. What came back to me decades later, in a ceremony, was the tunnel and the light, and a feeling of complete belonging to everything.
 
-When I told my sister, she was already ill in hospital. She laughed and said, *"Yes. I pulled you out. You thought the algae was grass. Your little pink ski outfit."* Then she went quiet, and she asked me to tell her about the light again. And again. She was learning the route.
+When I told my sister, she was already ill in hospital. She laughed and said, *"Yes. I pulled you out. You thought the algae was grass. Your little pink ski outfit."* Then she went quiet, and she asked me to tell her about the light again. Then again. She was learning the route.
 
 On the day she died she looked at me and said, *"Biem, can I go to the light now?"*
 
