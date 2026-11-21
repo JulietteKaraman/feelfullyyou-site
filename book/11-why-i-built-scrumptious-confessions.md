@@ -54,15 +54,25 @@ Every one of those failures is in the work I do now. Not one was wasted.
 
 I need to tell you about the people I have sat beside at the end of their lives, because it is where I learned the most about Touch.
 
-I trained as a death doula. I did it because I wanted to be useful at the biggest threshold there is, and it turned out to be the best training in presence I have ever had.
+I trained as a death doula. I did it because I wanted to be useful at the biggest threshold there is, and it turned out to be the best training in presence I have ever had. But the story starts somewhere stranger.
 
-When I was eighteen months old I walked into a moat. The algae on the surface looked like grass. I was wearing a little pink ski outfit. My sister pulled me out. I do not remember the rescue. What came back to me decades later, in a ceremony, was the tunnel and the light, and a feeling of complete belonging to everything.
+A few years before my sister died, I went to a Bufo ceremony, the toad medicine, with two shamans on a beautiful farm. I had no idea why I was going. I was leading work in London at the time, and I do not walk away from that. But I remember standing at the gate of that property, knowing I had to do it.
 
-When I told my sister, she was already ill in hospital. She laughed and said, *"Yes. I pulled you out. You thought the algae was grass. Your little pink ski outfit."* Then she went quiet, and she asked me to tell her about the light again. Then again. She was learning the route.
+During the ceremony, one of the women completely freaked out. My body started to shake. I had not decided anything. The two shamans looked at me and said, "Oh, you're starting to channel." I looked back at them in complete surprise. That was when one of them started telling me about the Akashic records, and I thought: what are you even talking about?
 
-On the day she died she looked at me and said, *"Biem, can I go to the light now?"*
+My body was shaking and shivering so that she could stay grounded and not go off into the other worlds. It worked. She has asked me to co-lead with her ever since, for her friends and for the people she leads.
 
-I had an answer, because I had been there.
+Only after that did the memory come back. When I was eighteen months old I walked into a moat. The algae on the surface looked like grass. I was wearing a little pink ski outfit. My sister pulled me out. I did not remember the rescue. What came back was the tunnel, the light, and a feeling of complete belonging to everything.
+
+I phoned my sister, Anouk, and said, "What the f*king hell happened to me?" She laughed. "Yes. I pulled you out. You thought the algae was grass. Your little pink ski outfit." Then I told her what it had been like for me. She kept asking me, "Tell me again. Again. Again." She was learning the route.
+
+She was dying by then. Near the end, I was massaging her legs, and fluid was coming out of them, because her lymph nodes could no longer do their work. The medication that would let her go was in the house, waiting for the doctor to say it was enough. That is what Holland does.
+
+The day before she died she looked at me and asked, "Biem, can I go to the light now?"
+
+I had an answer, because I had been there. On the morning itself I said, "Of course you can go to the light. You are done."
+
+We were all in the kitchen, putting together flowers that had been brought for her. Her husband said he was going to fix something next door. I just got a hit. "No. She's gone. Check on her." She had wanted us out of the room so that she could go in peace.
 
 After she died we stayed with her for twenty-four hours. We washed her. We dressed her. I put a little make-up on her face, because she would have wanted to look like herself. We placed her in her casket ourselves. It was one of the most beautiful things I have ever done.
 
@@ -150,3 +160,5 @@ All of this is sacred. All of this is welcome.
 - **Added 21 Nov 2026 (sixth pass):** new section "What the dying taught me about Touch" (about 560 words), from your essays "What I Know About Dying" and "The Work". You said on 25 Oct you are completely okay about posting about euthanasia, so the mother scene stays. I used only what both essays agree on. Where they differ (the sister dying in hospital or at home, your father holding one hand or both) I left the detail out. I also left out the line where you straddled your mother on the bed, and the Duplication work and the spinal attunement. Please check: (1) is the section too heavy for a book people buy after a quiz, or is it the proof you want? (2) your brother's response, which your Notion notes left to you. (3) "Biem" is your own nickname from your sister, so it is left in as a quote.
 
 - **Added 21 Nov 2026 (sixth pass):** new section "What my psyche kept for me" (about 230 words), from your message: the abuse by your uncle and your brother, the date rape in Spain, and your psyche keeping it hidden. I used only what you told me, with no scenes, ages or detail. The reader is told nothing needs uncovering. This is the most exposed material in the book, so please check: (1) is this exactly how you want to say it, and do you want it in the book at all? (2) your uncle and brother are real people. Do you want them named by relationship (as now), or just "family members"? Your family could recognise themselves. (3) I wrote that the memory came back "through my body". Is that right? (4) "For over twenty years" is from your last message. Is that the right span?\n- **Decided by Juliette 21 Nov 2026:** the abusers are "family members", not named by relationship. Your brother's calls after your mother's death (video calling, asking to see that she was dead, you refusing) are NOT in the book. You have not said you want them in.
+
+- **Added 21 Nov 2026 (sixth pass, second version of the death section):** your Bufo ceremony, the channelling, the woman who asked you to co-lead, the memory returning, and your sister's last day (legs, "can I go to the light now?" the day before, "You are done", the "hit" in the kitchen). Your new account replaces the essays where they differ (the essays said she died on the day she asked, and in hospital). Please check: (1) "Bufo ceremony": I took your "buffalo" to mean Bufo, the toad medicine (5-MeO-DMT), as your essay "What I Know About Dying" says. Is that right, and do you want the medicine named in a book that people buy after a quiz? (2) "I was leading work in London": you said "one test", which I could not read. What was it? (3) I used your sister's first name, Anouk, once. Fine? I left out her husband's name and the wheelchair, and your brother. (4) I did not say how she died. Did she go before the doctor came, or did the medication come after? Tell me and I will word it exactly. (5) "I got a hit" is your wording. Keep it, or "I just knew"?
