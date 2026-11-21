@@ -571,14 +571,18 @@ var SCREENS={
   },
   13:function(){
     var p=buildPlan();
-    var h='<div class="offer"><div class="k">Scrumptious Confessions</div><h2 class="q" id="q" tabindex="-1">Start your <em>7 days free.</em></h2><div class="card"><ul class="terms">'+
-      '<li><span class="big">£111 a month</span> for the first 50 members, and you keep £111 for as long as you stay. After 50, the price goes up.</li>'+
-      '<li>Your free week comes with the Holiday Survival Kit, normally £17, and it’s yours to keep even if you stop.</li>'+
-      '<li>Your card goes in today. Nothing is charged for 7 days. Stop before day 8 and you pay nothing.</li>';
-    if(p.before)h+='<li>Doors open Monday 23 November. Your first £111 is on Monday 30 November.</li>';
+    var free=S.code==='FIRST50';
+    var h='<div class="offer"><div class="k">Scrumptious Confessions</div><h2 class="q" id="q" tabindex="-1">'+(free?'Your first <em>month, free.</em>':'Start your <em>7 days free.</em>')+'</h2><div class="card"><ul class="terms">';
+    if(free)h+='<li><span class="big">Your first month is on me.</span> You’re one of the first 50.</li>';
+    h+='<li><span class="big">£111 a month</span> for the first 50 members, and you keep £111 for as long as you stay. After 50, the price goes up.</li>'+
+      '<li>Your free week comes with the Holiday Survival Kit, normally £17, and it’s yours to keep even if you stop.</li>';
+    if(free)h+='<li>Your card goes in today. Nothing is charged for your 7 free days, and your first month after that is free too. Your first £111 comes about five weeks from today. Stop any time before then and you pay nothing.</li>';
+    else{h+='<li>Your card goes in today. Nothing is charged for 7 days. Stop before day 8 and you pay nothing.</li>';
+      if(p.before)h+='<li>Doors open Monday 23 November. Your first £111 is on Monday 30 November.</li>';}
     h+='<li>Women and men. Everything in my voice.</li></ul></div></div>';
-    var href=CHECKOUT+(S.email?'?email='+encodeURIComponent(S.email):'');
-    return {html:h,foot:{label:'Start my 7 days free',enabled:true,href:href,below:'<a class="sub-link" href="/scrumptious-confessions-membership">Questions first? Read the full page</a>'}};
+    var qs=[];if(S.email)qs.push('email='+encodeURIComponent(S.email));if(free)qs.push('code=FIRST50');
+    var href=CHECKOUT+(qs.length?'?'+qs.join('&'):'');
+    return {html:h,foot:{label:free?'Start my free month':'Start my 7 days free',enabled:true,href:href,below:'<a class="sub-link" href="/scrumptious-confessions-membership">Questions first? Read the full page</a>'}};
   }
 };
 
@@ -765,6 +769,8 @@ function bindMail(){
     if(w==='woman'||w==='man')S.who=w;
     var em=(q.get('email')||'').trim();
     if(em.length<=254&&/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em))S.email=em;
+    /* 21 Nov 2026: FIRST50 = the free first month for her groups (feelfullyyou.com/first50) */
+    if((q.get('code')||'').trim().toUpperCase()==='FIRST50')S.code='FIRST50';
   }catch(e){}
 })();
 history.replaceState({s:0},'',location.pathname);
