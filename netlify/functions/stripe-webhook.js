@@ -296,6 +296,7 @@ const PAYMENT_LINK_PRODUCTS = {
   'plink_1UavMcCCw18geY15Ook0CqRG': {
     tagId: 25769563,      // "Scrumptious Confessions: Member"
     sequenceId: 2968362,  // "Scrumptious Confessions: Welcome"
+    extraSequenceIds: [2981859], // "Your week, then Mondays": a daily email in week one, then Mondays (22 Nov 2026)
     label: 'Scrumptious Confessions £97/month'
   },
   // SCRUMPTIOUS CONFESSIONS £111 a month (16 Nov 2026, Juliette). Same tag and
@@ -303,6 +304,7 @@ const PAYMENT_LINK_PRODUCTS = {
   'plink_1UcVo0CCw18geY15ifq2MyD0': {
     tagId: 25769563,      // "Scrumptious Confessions: Member"
     sequenceId: 2968362,  // "Scrumptious Confessions: Welcome"
+    extraSequenceIds: [2981859], // "Your week, then Mondays": a daily email in week one, then Mondays (22 Nov 2026)
     label: 'Scrumptious Confessions £111/month'
   },
   // THE TOUCH MAP £197 (29 Oct 2026). Dashboard payment link, so the plink is
