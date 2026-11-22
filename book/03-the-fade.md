@@ -158,7 +158,9 @@ You already want it.
 
 Staying is the part nobody built.
 
-Chapter 8 builds it, and Chapter 11 turns it into your first 31 days. For now, you have three minutes.
+Are you being touched, or are you feeling it? In The Fade you are being touched, and the feeling comes and goes. Your question is how long you can stay.
+
+Chapter 8 builds it, and Chapter 12 turns it into your first 31 days. For now, you have three minutes.
 
 ---
 

@@ -178,7 +178,7 @@ You can do all of this on your own. It goes better with company.
 
 A structure that keeps turning up. A voice in your ear. Somewhere to take the questions that come up when you do it.
 
-That is why I built something. Chapter 9 tells you where this comes from. Chapter 10 is for him, and for the two of you. Chapter 11 gives you a plan, and Chapter 12 tells you why I built the app.
+That is why I built something. Chapter 9 tells you why I care, and Chapter 10 why I can stay. Chapter 11 is for him, and for the two of you. Chapter 12 gives you a plan, and Chapter 13 tells you why I built the app.
 
 ---
 

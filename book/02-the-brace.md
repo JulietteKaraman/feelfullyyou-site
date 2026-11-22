@@ -251,7 +251,9 @@ Your body braced because it learned something true, once, in a particular place,
 
 It can learn something else.
 
-Chapter 8 and Chapter 11 show you how, step by step, with a plan for your first 31 days. For now, you have the half second, a timer and a way to begin.
+Are you being touched, or are you feeling it? In The Brace, very little is arriving, and that is your starting point, not your verdict.
+
+Chapter 8 and Chapter 12 show you how, step by step, with a plan for your first 31 days. For now, you have the half second, a timer and a way to begin.
 
 If anything in this chapter stirred something big, stop and go to Touch Base. Do it somewhere you really are safe. There is no tiger here.
 

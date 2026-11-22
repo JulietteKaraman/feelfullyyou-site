@@ -133,9 +133,11 @@ Picture a blanket in a field, music playing, and your partner feeding you grapes
 
 Nothing here to repair.
 
+Are you being touched, or are you feeling it? In The Melt you are feeling it, and you want more. The question becomes how much of it you can take in.
+
 The question at your end is range, and range grows the same way everything in the body grows. In small steps, with a structure that holds.
 
-Chapter 6 shows you how you are wired. Chapter 8 shows you how to build, and Chapter 11 gives you the plan.
+Chapter 6 shows you how you are wired. Chapter 8 shows you how to build, and Chapter 12 gives you the plan.
 
 ---
 

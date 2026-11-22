@@ -82,6 +82,8 @@ You do not have to fix any of it. You do not have to decide what it means.
 
 Just notice what your body did with an ordinary day.
 
+Then ask the question this whole book comes back to. Of everything that touched you yesterday, were you being touched, or were you feeling it?
+
 ## How I learned to read a room
 
 I did not set out to be a Touch expert. I set out, at about four years old, to make a room feel better.

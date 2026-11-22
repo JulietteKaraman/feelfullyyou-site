@@ -1,4 +1,4 @@
-# Chapter 10: For Him, and For the Two of You
+# Chapter 11: For Him, and For the Two of You
 
 *Draft 1, 21 Nov 2026. Built from Juliette's site answers for men ("Why does she go quiet?", "She says she's fine"), her essay "How Do I Tell Her I Need Touch Without It Sounding Like I Want Sex?", her client results, and her Touch Date and Receive and Adjust practices. Review notes are at the bottom of this file and are not part of the book.*
 

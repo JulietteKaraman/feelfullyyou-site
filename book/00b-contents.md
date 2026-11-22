@@ -10,11 +10,12 @@ Before you start
 6. Your Pattern
 7. Your Pleasure Language and Your Desire Style
 8. The Way Back
-9. Where This Comes From
-10. For Him, and For the Two of You
-11. Your First 31 Days
-12. Why I Built Scrumptious Confessions
-13. What Comes Next
+9. Nobody Asked Me
+10. What the Edge Taught Me
+11. For Him, and For the Two of You
+12. Your First 31 Days
+13. Why I Built Scrumptious Confessions
+14. What Comes Next
 
 The Toolkit
 

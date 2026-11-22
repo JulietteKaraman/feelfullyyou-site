@@ -10,6 +10,8 @@ It will not hand you three lines to say in the kitchen tonight. It will not tell
 
 It asks one question. Where did the Touch go?
 
+Underneath it sits a quieter one, and it runs through every page. Are you being touched, or are you feeling it?
+
 Then it stays with your answer long enough for your body to start telling you the rest.
 
 ## Which one is you?
@@ -40,7 +42,7 @@ Read your chapter first. Then read the others in any order you like. Each one wi
 
 If you are single, nothing here is closed to you. Every practice has a version you can do on your own, and the parts about a partner show you what to ask for when someone arrives.
 
-If you are reading this for the person you love, or with them, Chapter 10 is written to him, and to the two of you.
+If you are reading this for the person you love, or with them, Chapter 11 is written to him, and to the two of you.
 
 A word about he and she. I write he and she because most of the people I work with are women and men. Change the words to fit you. The body works the same way.
 

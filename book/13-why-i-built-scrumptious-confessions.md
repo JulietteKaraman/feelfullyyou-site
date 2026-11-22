@@ -1,4 +1,4 @@
-# Chapter 12: Why I Built Scrumptious Confessions
+# Chapter 13: Why I Built Scrumptious Confessions
 
 *Draft 1, 21 Nov 2026. Built from the Confessions sales page, the Confessions launch thread (the stories Juliette confirmed for the book), her visibility challenge posts, and her confession scripts. Review notes are at the bottom of this file and are not part of the book.*
 

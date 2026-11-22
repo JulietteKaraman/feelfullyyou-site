@@ -1,4 +1,4 @@
-# Chapter 11: Your First 31 Days
+# Chapter 12: Your First 31 Days
 
 *Draft 1, 21 Nov 2026. A plan built from the practices in Chapters 2 to 8, the Touch Base 31-day rhythm Juliette described, and the Touch Date ladder in Canon (3, then 15, then 30 minutes). The week-by-week order is a proposal. Review notes are at the bottom of this file and are not part of the book.*
 

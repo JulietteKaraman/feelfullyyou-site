@@ -112,3 +112,7 @@ More of Juliette's own stories went into Chapters 2 to 8 (the kitchen, being tou
 ## Update, 22 Nov 2026 (sixth pass): new Chapter 9
 
 New numbering: 9 Where This Comes From (new: the moat, the ceremony, Anouk, her father and mother, the San Francisco memory, the drum story), 10 For Him, and For the Two of You, 11 Your First 31 Days, 12 Why I Built Scrumptious Confessions (now short), 13 What Comes Next. Then the Toolkit, About the author and Credits. Chapter 7 now has real practices for all five Pleasure Languages from the Touch Menu.
+
+## Update, 22 Nov 2026 (seventh pass): golden thread and chapter split
+
+The golden thread, agreed with Juliette's coach: *Are you being touched, or are you feeling it?* It appears in the letter, Chapter 1, the end of Chapters 2 to 5, Chapter 9 and the final chapter. Chapter 9 is now "Nobody Asked Me" (the why). Chapter 10 is new, "What the Edge Taught Me" (the death work, the ceremony, the drum story). New numbering: 11 For Him, 12 Your First 31 Days, 13 Why I Built Scrumptious Confessions, 14 What Comes Next, then the Toolkit (15), About the author and Credits. Her full story bank is `STORY-BANK.md`.

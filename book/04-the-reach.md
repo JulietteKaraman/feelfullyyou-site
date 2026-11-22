@@ -244,7 +244,9 @@ Then stop talking.
 
 Your body knows what it wants. It has been waiting to be asked.
 
-You have been closing the gap alone for a long time. Chapter 8 shows you how it becomes shared, and Chapter 11 gives you the plan.
+Are you being touched, or are you feeling it? In The Reach you are feeling it, and the question becomes whether anyone has ever asked you.
+
+You have been closing the gap alone for a long time. Chapter 8 shows you how it becomes shared, and Chapter 12 gives you the plan.
 
 ---
 
