@@ -40,9 +40,7 @@ I have sat with many women in exactly this place, and it is almost never either 
 
 Here is what nobody names.
 
-Your body has a window. A range it can stay present and feel inside. Stress, exhaustion and years of bracing all shrink that window, until there is barely any room left in it.
-
-Dan Siegel gave it a name, the window of tolerance, and in Somatic Experiencing it is the whole basis of how we build capacity.
+Your body has a window, a range it can stay present and feel inside. Dan Siegel calls it the window of tolerance. Stress, exhaustion and years of bracing shrink it, until there is barely any room left in it.
 
 When Touch arrives at the edge of a window narrowed to a slit, your body does the only intelligent thing left. It checks out. It goes numb, because feeling has become more than it can hold right now, even though nothing in you has gone.
 

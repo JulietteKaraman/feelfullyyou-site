@@ -36,11 +36,9 @@ Touchblind.
 
 It means losing contact with your own needs so completely that you genuinely do not know what you want. It happens to a body that spent years reading the room for everyone else's cues, until the wiring for its own went quiet.
 
-It usually starts young. A house where feelings got managed rather than met. Where saying no cost you warmth. A culture with unwritten rules about what good girls want, and how much of it they are allowed to say. A first experience where your real yes or your real no cost you the room's approval, so you learned to read everyone else's signal and let your own go quiet.
+It usually starts young: a house where feelings got managed and never met, a first experience where your real yes or your real no cost you the room's approval. None of that is a flaw in you. It is a body doing exactly what it was trained to do.
 
-None of that is a flaw in you. It is a body doing exactly what it was trained to do.
-
-Touchblind is a symptom, never a fact. It describes what a body did to survive. It says nothing about who you are.
+Touchblind is a symptom, never a fact.
 
 Under the blank is a body that still knows exactly what it wants. It stopped being asked.
 

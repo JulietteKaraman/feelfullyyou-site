@@ -90,15 +90,11 @@ Try it with a question. *May I?* Then wait for the answer.
 
 ## What changes
 
-A couple in London had done decades of personal development, and believed there was nothing left to learn. They came for four days. They were close to divorce. Afterwards they wrote, *"Not so much what she did that changed us, but her complete presence and acceptance of all our parts."*
-
 A woman who is a relationship coach herself did a VIP day with her husband. Afterwards she wrote to me, *"What have you done with my husband? This was the most beautiful time we have spent together. He was tender and strong all at once."*
 
 A couple wrote to me after trying a repair script on a Sunday morning, when they had barely spoken all week. *"We ended up holding hands, just like the old days."*
 
 A man who worked with me wrote, *"I wanted to create something meaningful, not just for her, but for us. Your guidance gave me confidence. I stopped second-guessing. For the first time in years, I knew what she needed. Watching her soften, open, and receive was everything."*
-
-Another couple put it simply. *"We don't require anything fancy to connect. Just intention, and the space Juliette created."*
 
 ## What one session could not do
 

@@ -216,7 +216,7 @@ More was never what was missing. What that couple needed was capacity: the abili
 
 ### What the wrong Touch looks like
 
-more pressure, more intensity, something bigger to hold you there. It does not work, because the leaving happens the moment sensation lands, however strong it is.
+More pressure, more intensity, something bigger to hold you there. It does not work, because the leaving happens the moment sensation lands, however strong it is.
 
 ### What the right Touch looks like
 

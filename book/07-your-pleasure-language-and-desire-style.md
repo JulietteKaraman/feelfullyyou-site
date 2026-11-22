@@ -284,9 +284,7 @@ None of these is better than the others. It can shift with age, stress or the le
 
 ## What the research says
 
-Rosemary Basson described a different model of women's desire in 2000. She worked from women's own reported experience, instead of the older straight-line model everyone had assumed applied to everybody.
-
-Emily Nagoski's *Come As You Are* later brought it to a wide audience. You will see figures quoted, such as 30% of women and 5% of men running mostly responsive. Nagoski herself says there are no good statistics on who has which style. What holds up is the idea. Responsive desire is common, and many people sit somewhere in between.
+Rosemary Basson described a different model of women's desire in 2000, working from women's own reported experience. Emily Nagoski's *Come As You Are* later brought it to a wide audience, and she is clear there are no good statistics on who has which style. What holds up is the idea: responsive desire is common, and many people sit somewhere in between.
 
 For years, the medical definitions of low desire assumed that wanting always comes first. A body that needed Touch or context first could end up labelled as having a disorder. The body was never malfunctioning. The definition was too small.
 
@@ -305,12 +303,6 @@ Set a timer for three minutes. Then start. Let the structure carry you into the 
 This is the whole reason a Touch Date has a start and an end. The structure comes first. Desire follows from being inside it.
 
 ## All three together
-
-Pattern is how you protect.
-
-Pleasure Language is what turns you on, once you are safe enough to want anything.
-
-Desire Style is the order the wanting arrives in.
 
 Get any one of the three wrong, and the advice you were given was never going to land. You are not too much, and you are not too little. Nobody had given you the whole picture.
 

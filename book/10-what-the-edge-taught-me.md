@@ -4,6 +4,8 @@
 
 ---
 
+The day before she died, my sister looked at me and asked, "Biem, can I go to the light now?"
+
 Chapter 9 is why I care. This chapter is why I can stay.
 
 ## The first crossing

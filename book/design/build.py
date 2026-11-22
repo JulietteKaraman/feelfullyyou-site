@@ -84,6 +84,13 @@ DIAMOND = ('<svg class="dia" viewBox="0 0 100 150" xmlns="http://www.w3.org/2000
            '<polygon points="50,55 68,75 50,95 32,75" fill="none" stroke="#A88538" stroke-width="1"/></svg>')
 
 
+CARDQ = {
+ 'What do I want when I stop tracking everyone else?': 'Tell me what you want when you stop tracking everyone else.',
+ 'What can I feel when I do not have to do anything with it?': 'Tell me what you can feel when you do not have to do anything with it.',
+ 'Can I feel this, and still be here?': 'Tell me: can you feel this, and still be there?',
+}
+
+
 def card(category, prompt, small=False):
     return (f'<div class="qcard{" sm" if small else ""}"><div class="dtop">{DIAMOND}</div>'
             f'<div class="cband">{esc(category)}</div>'
@@ -130,7 +137,8 @@ def cards_and_felt(body, f):
             mt = re.match(r'<h2 id="[^"]*">(.*?)</h2>', sec, re.S)
             title = re.sub(r'<[^>]+>', '', mt.group(1)).strip() if mt else ''
             def repl(m):
-                return '<div class="cards one">' + card(title, m.group(1), small=False) + '</div>'
+                q = CARDQ.get(re.sub(r'<[^>]+>', '', m.group(1)).strip(), m.group(1))
+                return '<div class="cards one">' + card(title, q, small=False) + '</div>'
             sec = re.sub(r'<p>The question to ask: <em>(.*?)</em></p>', repl, sec, flags=re.S)
             out.append(sec)
         body = ''.join(out)

@@ -146,13 +146,7 @@ That is what a container is.
 
 ## Two ways desire arrives
 
-There are two ways desire turns up.
-
-Some people feel it first. The wanting appears, out of nowhere, and then they act on it. That is spontaneous desire.
-
-Other people feel it second. The wanting arrives after the Touch begins, once they are relaxed and the stakes have dropped. That is responsive desire.
-
-Both are normal. Both are healthy.
+There are two ways desire turns up. Some people want first, and then it starts. Others start, and then they want. Both are normal. You will find which you are in Chapter 7.
 
 I once told a couple that it can take forty minutes for a woman's body to warm up. He said, "Oh yeah, I don't have time for that."
 

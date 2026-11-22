@@ -94,14 +94,14 @@ Use one a day, or one each time you sit down. Answer out loud, and let the other
 5. Tell me what pleasure means to you.
 6. Tell me what intimacy means to you.
 7. Tell me about a no you never said out loud.
-8. What is the Touch you put up with, and what would you rather have instead?
+8. Tell me about the Touch you put up with, and what you would rather have instead.
 9. Tell me a win, an insight or a learning you have had about your own body.
 
-Three more questions to ask yourself, one for each Pattern.
+Three more, one for each Pattern.
 
-10. What do I want when I stop tracking everyone else?
-11. What can I feel when I do not have to do anything with it?
-12. Can I feel this, and still be here?
+10. Tell me what you want when you stop tracking everyone else.
+11. Tell me what you can feel when you do not have to do anything with it.
+12. Tell me: can you feel this, and still be there?
 
 ## The Felt Sense
 

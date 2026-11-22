@@ -28,15 +28,9 @@ Every time a client needed something, I made something. Meditations. The practic
 
 ## Why I made the cards
 
-Long before there was an app, there were questions. I ran them with clients for years before they were ever printed.
+Long before there was an app, there were questions. I ran them with clients for years before they were ever printed: first with the SENCO kids who could not tell me what they needed, then with women who had lost their voice, then with couples who had stopped hearing each other. One question, one answer, and the other person allowed only three replies. *Thank you. Clarify that. Summarise that.*
 
-I started with children on the autism spectrum, the SENCO kids who could not tell me what they needed. After them came the women who had lost their voice completely, and the couples who loved each other and had stopped hearing each other. It was always the same structure. One question, one answer, and the other person allowed only three replies. *Thank you. Clarify that. Summarise that.* No fixing. No defending.
-
-About two years ago I printed them as the Intimacy and Communication Cards. Five separate decks, each in its own box, for family and friends, life, beliefs and emotions, and more, and then one big box to hold the lot. Printing alone got expensive, and I learned a great deal. In November 2025 I remade them as two much bigger decks, one for family and friends and one for couples. I made a Touch Languages deck too.
-
-Then Noor built my first app from the cards, and I built the rest myself.
-
-The questions on the cards in your Toolkit are the same ones I have asked in rooms for years.
+I printed them as the Intimacy and Communication Cards, and in November 2025 remade them as two much bigger decks. Then Noor built my first app from them, and I built the rest myself.
 
 ## Why scrumptious
 
@@ -70,8 +64,6 @@ Every time, my body knew first.
 
 So the lesson keeps coming back. Receive. Let someone else bring the light for once.
 
-I cannot make you do the work. What I can do is help with the questions that come up when you do it.
-
 ## What the first week looks like
 
 You start with the wrist.
@@ -80,17 +72,11 @@ The same wrist as in Chapter 4. A fingertip, slowly, and every time you feel it,
 
 Touch Base is there every day, in my voice, with a tracker for your first 31 days.
 
-On Mondays you get the confession. On Thursdays you get your answer.
-
 ## The little patterns
 
 My marriage ended in years of little patterns that nobody called out. You read about it in Chapter 1.
 
 So this is somewhere the little patterns get called out. Gently, with no name on them, before they become the years.
-
-Everything in this app, I learned in my own body first, and I am still learning.
-
-All of this is sacred. All of this is welcome.
 
 ---
 

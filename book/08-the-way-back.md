@@ -108,7 +108,9 @@ When you can feel your own no, it gets much easier to receive someone else's, an
 
 ## The conversation
 
-This structure is older than my work. The Dyad was originated by Ava Berner in the 1960s, and her husband Charles Berner built the Enlightenment Intensive around it. You may also hear it called pulling withholds. I learned it in many different organisations, and it is the same structure each time. After I had used it with hundreds of clients, I turned it into an app and a set of cards, so you could do it without me in the room. I needed it myself when my sister was dying.
+I needed this one myself when my sister was dying.
+
+The structure is older than my work. The Dyad was originated by Ava Berner in the 1960s, and her husband Charles Berner built the Enlightenment Intensive around it. You may also hear it called pulling withholds. I learned it in many different organisations, and it is the same structure each time. After I had used it with hundreds of clients, I turned it into an app and a set of cards, so you could do it without me in the room.
 
 Here is the simple version.
 

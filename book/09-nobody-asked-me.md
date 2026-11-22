@@ -4,7 +4,7 @@
 
 ---
 
-Everything in this book, I learned in my own body first. Before the practices and before the Touch Map, there were the years it took me to remember my own story. I owe you that, before I ask you to trust me with yours.
+Before the practices and before the Touch Map, there were the years it took me to remember my own story. I owe you that, before I ask you to trust me with yours.
 
 You met the first of it in Chapter 1. I was seven when my uncle touched me, and when I told my mother, she said, "Oh, that's just what men do." She said it because the same thing had been done to her.
 
