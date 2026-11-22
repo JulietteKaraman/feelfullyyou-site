@@ -146,7 +146,8 @@ try{if(localStorage.getItem('ffy-consent')==='yes')ffyLoadPixel();}catch(e){}
   <a href="https://feelfullyyou.com/scrumptious-confessions-membership" class="row gold">
     <img src="https://feelfullyyou.com/media/confessions/cover.jpg" alt="Scrumptious Confessions" style="object-position:center">
     <div class="rtext">
-      <div class="rtag">Opens Mon 23 Nov &middot; first 7 days free</div>
+      <div class="rtag" id="sc-tag">Opens Mon 23 Nov &middot; first 7 days free</div>
+      <script>if(Date.now()>=Date.UTC(2026,10,23,0,0,0))document.getElementById("sc-tag").textContent="Doors are open \u00b7 first 7 days free";</script>
       <div class="rtitle">Scrumptious Confessions</div>
       <div class="rdesc">My app. Everything I&rsquo;ve made, in one place. Then &pound;111 a month.</div>
     </div>
