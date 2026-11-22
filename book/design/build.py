@@ -120,7 +120,7 @@ def build():
     pages.append('''<section class="cover"><img class="coverimg" src="img/cover.jpg">
       <div class="covertxt"><img class="emblem" src="img/emblem.png">
       <h1>Where Did the<br>Touch Go?</h1>
-      <p class="sub">A 31-day guide back to feeling,<br>wanting and being touched</p>
+      <p class="sub">Why you stopped feeling it,<br>and the small, structured way back</p>
       <p class="by">Juliette Karaman</p></div></section>''')
     pages.append('<section class="halftitle"><h1>Where Did the Touch Go?</h1></section>')
     pages.append('''<section class="titlepage"><img class="emblem" src="img/emblem.png"><h1>Where Did the<br>Touch Go?</h1>
