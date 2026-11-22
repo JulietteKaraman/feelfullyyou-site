@@ -300,8 +300,10 @@ summary{color:#fefcfa}
   #final .gap,#final .final{max-width:440px;margin-left:auto!important;margin-right:0!important;text-align:left}
   /* 22 Nov 2026, Juliette: "the photo of me is too large". Photo sits on the left at portrait size, not stretched across the page. */
   #final{background:#070707}
-  #final>img.bg{right:auto!important;width:min(46%,620px)!important;object-position:50% 20%!important}
-  #final::after{background:linear-gradient(90deg,rgba(7,7,7,0) 0%,rgba(7,7,7,.1) 30%,rgba(7,7,7,.85) min(46%,620px),#070707 calc(min(46%,620px) + 40px))!important}
+  /* Photo on the RIGHT here, because Who I am has its photo on the left (Juliette, 22 Nov). */
+  #final>img.bg{left:auto!important;right:0!important;width:min(46%,620px)!important;object-position:50% 20%!important}
+  #final::after{background:linear-gradient(270deg,rgba(7,7,7,0) 0%,rgba(7,7,7,.1) 30%,rgba(7,7,7,.85) min(46%,620px),#070707 calc(min(46%,620px) + 40px))!important}
+  #final .gap,#final .final{margin-left:0!important;margin-right:auto!important}
 }
 @media (max-width:760px){
   #final{padding-top:62vh!important}
