@@ -32,6 +32,20 @@ The Beginning is for couples. A VIP day is a half day, in person or online, buil
 
 Men, you are welcome in Confessions, and the couples route is open to you.
 
+## Why I leave this behind
+
+People ask me why I have a podcast. Why I write on Substack. Why it matters so much to me to help.
+
+I think about my deathbed. I picture myself lying there, asking one question. If what I have done has helped just one person, is that enough?
+
+I have decided that it is. That is the ripple effect. One person feels a little more able to be touched. She holds her daughter differently, or her partner, and it goes on from there, further than I will ever see.
+
+I have asked myself whether it is ego. Here is what I notice instead. It is the message that arrives on Instagram, or Facebook, or in my inbox, from someone I have never met. *Your episode on this taught me exactly what to do, right there, and I have seen such a change.* It is the man who wrote to say that one prompt I gave away for free has completely changed how he and his wife talk to each other.
+
+If I lie there at the end and think, I gave people a little bit of light, then it was worth it.
+
+No wonder my nickname is Beam.
+
 ## One last thing
 
 I cannot make you do the work. What I can do is help with the questions that come up when you do it.
@@ -68,3 +82,5 @@ Juliette
 - **Updated 22 Nov 2026 (from the Notion page "Decided 20 to 21 Nov 2026"):** the weekly rhythm now lists every day (Monday confession, Tuesday and Saturday card, Wednesday poem, Thursday answers, Friday meditation, Touch Base daily). The free week includes the Holiday Survival Kit. No prices, Telegram, podcast or Substack are mentioned, as the page requires. I did not name the Touch Map price. The "one fussy change at a time" and "Claude" lines in Chapter 13 match your page.
 
 - **Updated 22 Nov 2026 (from Juliette):** the week counts for the Scrumptious Touch Reset (8) and The Beginning (12) are out of the book text, because you may change them. The four stages and "recorded modules, with live support" stay.
+
+- **Added 22 Nov 2026 (from Juliette's message):** the section "Why I leave this behind" (deathbed question, the ripple effect, the messages, the man and the free prompt, "my nickname is Beam"). It is built from what you told me in this chat. I could not find the Instagram post itself in Notion, so if you want its exact words, paste them and I will swap them in. Please check: (1) the spelling. In Chapter 10 your sister says "Biem", and here your message says "Beam". Which do you want in the book? (2) "further than I will ever see" is my line. (3) I did not name the podcast or Substack here, because Chapter 13 and the Toolkit already do. Say if you want them named.
