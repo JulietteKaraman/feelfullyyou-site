@@ -10,7 +10,7 @@
 
 :root { --green:#0D3535; --ochre:#A88538; --cream:#fefcfa; --ink:#1b1b1b; --sand:#f3ecdf; }
 
-@page { size: 6in 9in; margin: 0.8in 0.75in 0.9in 0.75in; background: #fefcfa;
+@page { size: 6in 9in; margin: 0.85in 0.9in 0.95in 0.9in; background: #fefcfa;
   @bottom-center { content: counter(page); font-family:'Poppins',sans-serif; font-size:7pt; letter-spacing:.2em; color:#A88538; }
 }
 @page :left  { @top-left  { content: "Where Did the Touch Go?"; font-family:'Poppins',sans-serif; font-size:6.2pt; letter-spacing:.28em; text-transform:uppercase; color:#A88538; } }
@@ -20,7 +20,7 @@
 @page opener { margin:0; background:#0D3535; @top-left{content:none} @top-right{content:none} @bottom-center{content:none} }
 @page back { margin:0; background:#0D3535; @top-left{content:none} @top-right{content:none} @bottom-center{content:none} }
 
-html { font-family:'Cormorant Garamond',Georgia,serif; font-weight:500; font-size:13.2pt; line-height:1.48; color:var(--ink); }
+html { font-family:'Cormorant Garamond',Georgia,serif; font-weight:500; font-size:13.4pt; line-height:1.58; color:var(--ink); }
 body { margin:0; }
 
 /* cover and front matter */
@@ -64,10 +64,10 @@ body { margin:0; }
 /* body */
 .chapter { string-set: chtitle attr(data-title); }
 .chapter > :first-child { margin-top:0; }
-.chapter p { margin:0 0 .55em 0; orphans:3; widows:3; hyphens:manual; text-align:left; }
+.chapter p { margin:0 0 .85em 0; orphans:3; widows:3; hyphens:manual; text-align:left; }
 .chapter > p:first-of-type { font-size:14pt; line-height:1.45; color:var(--green); }
 .chapter h2 { font-family:'Poppins',sans-serif; font-weight:600; font-size:7.6pt; letter-spacing:.26em; text-transform:uppercase; color:var(--ochre);
-  margin:.42in 0 .16in; padding-top:.14in; border-top:.5pt solid #d8c9a2; page-break-after:avoid; line-height:1.5; }
+  margin:.55in 0 .22in; padding-top:.16in; border-top:.5pt solid #d8c9a2; page-break-after:avoid; line-height:1.5; }
 .chapter h3 { font-style:italic; font-weight:600; font-size:15pt; color:var(--green); margin:.3in 0 .1in; page-break-after:avoid; }
 .chapter strong { font-weight:600; color:var(--green); }
 .chapter em { font-style:italic; }
@@ -80,7 +80,7 @@ body { margin:0; }
 .chapter td, .chapter th { border-bottom:.5pt solid #d8c9a2; padding:.04in .08in; text-align:left; }
 .practice { background:var(--sand); border-left:2.2pt solid var(--ochre); padding:.15in .22in .08in .22in; margin:.1in 0 .3in 0; font-size:12pt; }
 .practice p:last-child { margin-bottom:.1em; }
-.band { margin:.3in -.75in .3in -.75in; width:6in; height:1.95in; overflow:hidden; page-break-inside:avoid; }
+.band { margin:.35in -.9in .35in -.9in; width:6in; height:1.95in; overflow:hidden; page-break-inside:avoid; }
 .band img { width:6in; height:1.95in; object-fit:cover; display:block; }
 .qrrow { text-align:center; margin:.25in 0; page-break-inside:avoid; }
 .qrrow img { width:.95in; height:.95in; margin:0 .1in; vertical-align:middle; }
@@ -96,3 +96,28 @@ body { margin:0; }
 .chapter blockquote.pull p { margin:0; }
 
 .titlepage .desc { font-style:italic; font-size:13pt; line-height:1.4; color:#33433f; margin-top:.35in; }
+
+a.ul { color:#0D3535; text-decoration:none; border-bottom:.6pt solid #A88538; }
+.qrrow .tap { font-family:'Poppins',sans-serif; font-size:7.4pt; letter-spacing:.05em; color:#555; text-transform:none; line-height:2.1; margin-top:.12in; }
+.qrrow .tap span { color:#A88538; letter-spacing:.14em; text-transform:uppercase; font-size:6.6pt; }
+.qrrow a.btn { display:inline-block; margin:.05in .06in; padding:.05in .16in; border:.8pt solid #A88538; border-radius:.2in; color:#0D3535; text-decoration:none; font-size:7.6pt; letter-spacing:.06em; }
+.qrrow .tap a { color:#0D3535; text-decoration:none; border-bottom:.6pt solid #A88538; }
+
+/* question cards, after the Art of Scrumptious Living decks */
+.cards { orphans:1; widows:1; display:block; text-align:center; font-size:0; margin:.3in 0 .1in; }
+.cards.one { margin:.25in 0; }
+.qcard { display:inline-block; vertical-align:top; width:1.88in; height:2.6in; background:#fff; border:.5pt solid #d9d4c8; margin:0 .07in .16in .07in; font-size:12pt; position:relative; text-align:center; page-break-inside:avoid; box-shadow:0 .5pt 3pt rgba(0,0,0,.12); overflow:hidden; }
+.qcard .dtop { height:.42in; overflow:hidden; } .qcard .dtop svg { width:.5in; height:.6in; margin-top:-.02in; }
+.qcard .cband { background:#070707; color:#c9a85a; font-family:'Cormorant Garamond',serif; font-weight:600; text-transform:uppercase; letter-spacing:.14em; font-size:9.2pt; padding:.075in .06in; line-height:1.25; }
+.qcard .prompt { height:1.05in; display:flex; align-items:center; justify-content:center; padding:0 .16in; }
+.qcard .prompt p { margin:0; font-family:'Poppins',sans-serif; font-weight:600; text-transform:uppercase; font-size:7.2pt; letter-spacing:.05em; line-height:1.55; color:#070707; text-align:center; }
+.qcard .prompt p em { font-style:normal; }
+.qcard .url { font-family:'Poppins',sans-serif; font-weight:600; font-size:5.2pt; letter-spacing:.12em; color:#070707; margin-top:.02in; }
+.qcard .dbot { position:absolute; left:0; right:0; bottom:-.2in; height:.55in; overflow:hidden; } .qcard .dbot svg { width:.5in; height:.6in; margin-top:.07in; }
+.cards.one .qcard { width:2.2in; height:2.8in; }
+
+/* felt sense in columns */
+.felt { display:grid; grid-template-columns:1fr 1fr; column-gap:.3in; margin:.25in 0; }
+.fsb { break-inside:avoid; margin:0 0 .22in 0; padding:.14in .16in .1in; background:#f3ecdf; border-top:1.6pt solid #A88538; }
+.fsb h4 { font-family:'Poppins',sans-serif; font-weight:600; font-size:6.8pt; letter-spacing:.24em; text-transform:uppercase; color:#A88538; margin:0 0 .08in; }
+.fsb .words span { display:block; font-style:italic; font-size:13pt; line-height:1.35; color:#0D3535; }

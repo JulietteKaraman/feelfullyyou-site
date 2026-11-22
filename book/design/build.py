@@ -34,16 +34,17 @@ BANDS = {  # h2 text -> band image
  'Touch Base®': 'touchbase', 'What opening costs': 'melt',
 }
 PULLS = {
- '01-yesterday.md': 'If I gave something, the room got lighter. If the room got lighter, I was safe.',
- '03-the-fade.md': 'Love is not desire.',
- '04-the-reach.md': 'You do not have low desire. You have an unpaid receiving account.',
- '05-the-melt.md': 'A body can only hold so much openness at once.',
- '06-your-pattern.md': 'Calm does not have to keep moving to prove it is still there.',
- '07-your-pleasure-language-and-desire-style.md': 'Each language carries its own shame.',
- '08-the-way-back.md': 'That no is what made it safe to go anywhere at all.',
- '09-nobody-asked-me.md': 'That is how a nervous system changes its mind.',
- '10-what-the-edge-taught-me.md': 'A tool that cannot hold at the extremes is only theory.',
- '11-for-him-and-for-the-two-of-you.md': 'You do not need to say the right thing. Staying in it will do more than fixing it.',
+ '01-yesterday.md': ['If I gave something, the room got lighter. If the room got lighter, I was safe.', 'I divorced my husband without knowing why. My body knew.'],
+ '02-the-brace.md': ['Her body answered before she did.'],
+ '03-the-fade.md': ['Love is not desire.', 'Desire cannot move into a body that has no room.'],
+ '04-the-reach.md': ['You do not have low desire. You have an unpaid receiving account.'],
+ '05-the-melt.md': ['A body can only hold so much openness at once.'],
+ '06-your-pattern.md': ['Calm does not have to keep moving to prove it is still there.'],
+ '07-your-pleasure-language-and-desire-style.md': ['Each language carries its own shame.', 'Touch comes first. Wanting follows.'],
+ '08-the-way-back.md': ['That no is what made it safe to go anywhere at all.'],
+ '09-nobody-asked-me.md': ['That is how a nervous system changes its mind.'],
+ '10-what-the-edge-taught-me.md': ['A tool that cannot hold at the extremes is only theory.'],
+ '11-for-him-and-for-the-two-of-you.md': ['You do not need to say the right thing. Staying in it will do more than fixing it.'],
 }
 PRACTICE = ['A self-touch date', 'A Touch Date with a partner', 'What does move it', 'One small rep each',
             'Things to try in your language', 'Stay one breath longer', 'Yes, or nothing', 'Move it to the morning',
@@ -61,9 +62,9 @@ def md_to_html(path):
             continue
         if l.startswith('> **[Design note'):
             if 'scrumptious' in l.lower() and 'emblem' not in l.lower():
-                lines.append('<div class="qrrow"><img src="../assets/qr-scrumptious-confessions.png"><p>Scan to open<br>Scrumptious Confessions</p></div>')
+                lines.append('<div class="qrrow"><img src="../assets/qr-scrumptious-confessions.png"><p class="tap"><span>On your phone? Tap:</span> <a href="https://feelfullyyou.com/scrumptious-confessions?utm_source=book&utm_medium=link">feelfullyyou.com/scrumptious-confessions</a></p></div>')
             else:
-                lines.append('<div class="qrrow"><img class="emb" src="img/emblem.png"><img src="../assets/qr-touch-base.png"><img src="../assets/qr-touch-base-audio.png"></div>')
+                lines.append('<div class="qrrow"><img class="emb" src="img/emblem.png"><img src="../assets/qr-touch-base.png"><img src="../assets/qr-touch-base-audio.png"><p class="tap"><span>On your phone? Tap instead of scanning:</span><br><a class="btn" href="https://feelfullyyou.com/touch-base-experience?utm_source=book&utm_medium=link">Video, audio and tracker</a> <a class="btn" href="https://drive.google.com/file/d/17Rgpkk0VdZWwhvVZ0dXDmtwYfFJDe5_f/view">Listen to the audio</a></p></div>')
             continue
         lines.append(l)
     t = '\n'.join(lines)
@@ -76,6 +77,83 @@ def md_to_html(path):
 
 def esc(s):
     return html.escape(s, quote=False)
+
+
+
+DIAMOND = ('<svg class="dia" viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg"><polygon points="30,3 57,36 30,69 3,36" fill="none" stroke="#A88538" stroke-width="1.1"/>'
+           '<polygon points="30,26 40,36 30,46 20,36" fill="none" stroke="#A88538" stroke-width="1"/></svg>')
+
+
+def card(category, prompt, small=False):
+    return (f'<div class="qcard{" sm" if small else ""}"><div class="dtop">{DIAMOND}</div>'
+            f'<div class="cband">{esc(category)}</div>'
+            f'<div class="prompt"><p>{prompt}</p></div>'
+            f'<div class="url">FEELFULLYYOU.COM</div><div class="dbot">{DIAMOND}</div></div>')
+
+
+def cards_and_felt(body, f):
+    # Toolkit: conversation questions as cards
+    if f.startswith('15-'):
+        m = re.search(r'(<h2 id="questions-for-the-conversation">.*?</h2>)(.*?)(?=<h2 )', body, re.S)
+        if m:
+            sec = m.group(2)
+            items = re.findall(r'<li>(.*?)</li>', sec, re.S)
+            lead = re.findall(r'<p>.*?</p>', sec, re.S)
+            cs = []
+            for n, it in enumerate(items, 1):
+                text = re.sub(r'\s+', ' ', it).strip()
+                cat = 'The conversation' if n <= 9 else 'Your pattern'
+                cs.append(card(cat, text))
+            new = m.group(1) + (lead[0] if lead else '') + '<div class="cards">' + ''.join(cs) + '</div>'
+            body = body.replace(m.group(0), new)
+        # Felt sense in columns
+        m = re.search(r'(<h2 id="the-felt-sense">.*?</h2>)(.*?)(?=<h2 )', body, re.S)
+        if m:
+            sec = m.group(2)
+            ps = re.findall(r'<p>(.*?)</p>', sec, re.S)
+            intro = ps[0]
+            boxes = []
+            for ptxt in ps[1:]:
+                mm = re.match(r'<strong>(.*?)\.</strong>\s*(.*)', ptxt, re.S)
+                if not mm:
+                    continue
+                words = [w.strip().rstrip('.') for w in mm.group(2).split(',')]
+                spans = ''.join(f'<span>{esc(w)}</span>' for w in words if w)
+                boxes.append(f'<div class="fsb"><h4>{mm.group(1)}</h4><div class="words">{spans}</div></div>')
+            new = m.group(1) + '<p>' + intro + '</p><div class="felt">' + ''.join(boxes) + '</div>'
+            body = body.replace(m.group(0), new)
+    # Chapter 6: "The question to ask" as a small card
+    if f.startswith('06-'):
+        parts = re.split(r'(?=<h2 )', body)
+        out = [parts[0]]
+        for sec in parts[1:]:
+            mt = re.match(r'<h2 id="[^"]*">(.*?)</h2>', sec, re.S)
+            title = re.sub(r'<[^>]+>', '', mt.group(1)).strip() if mt else ''
+            def repl(m):
+                return '<div class="cards one">' + card(title, m.group(1), small=False) + '</div>'
+            sec = re.sub(r'<p>The question to ask: <em>(.*?)</em></p>', repl, sec, flags=re.S)
+            out.append(sec)
+        body = ''.join(out)
+    return body
+
+
+def linkify(body):
+    segs = re.split(r'(<[^>]+>)', body)
+    out = []
+    in_a = 0
+    pat = re.compile(r'\b((?:feelfullyyou\.com|juliettekaraman\.substack\.com)(?:/[A-Za-z0-9\-_/\.#?=&%]*[A-Za-z0-9/])?)')
+    for s in segs:
+        if s.startswith('<a ') or s.startswith('<a>'):
+            in_a += 1
+        elif s.startswith('</a'):
+            in_a = max(0, in_a - 1)
+        if s.startswith('<'):
+            out.append(s)
+        elif in_a:
+            out.append(s)
+        else:
+            out.append(pat.sub(lambda m: f'<a class="ul" href="https://{m.group(1)}">{m.group(1)}</a>', s))
+    return ''.join(out)
 
 
 def add_pull(body, quote):
@@ -140,8 +218,10 @@ def build():
     for f, n, title, op, ep in CH:
         cid = 'c_' + re.sub(r'\W', '', f)
         body = decorate(md_to_html(f))
-        if f in PULLS:
-            body = add_pull(body, PULLS[f])
+        for q in PULLS.get(f, []):
+            body = add_pull(body, q)
+        body = cards_and_felt(body, f)
+        body = linkify(body)
         num = f'<div class="chnum">{n}</div>' if n else '<div class="chnum small">&#10022;</div>'
         opener = f'''<section class="opener" id="{cid}" data-title="{esc(title)}">
           <img class="opimg" src="img/{op}.jpg">

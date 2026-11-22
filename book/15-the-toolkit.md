@@ -1,6 +1,6 @@
 # The Toolkit
 
-Everything in this book on one page, so you can find it again.
+Everything in this book on one page, so you can find it again. Reading on your phone? Tap any address.
 
 ## The practices at a glance
 
@@ -130,8 +130,8 @@ Ask yourself, *What is my body doing right now?* Sensation first. Then the close
 
 ## More from me
 
-- **What the Body Knows**, my Substack.
-- **The Scrumptious Woman**, my podcast.
+- **What the Body Knows**, my Substack: juliettekaraman.substack.com
+- **The Scrumptious Woman**, my podcast: feelfullyyou.com/podcast
 - **The questions people ask**, with my answers: feelfullyyou.com/questions
 - Six essays to start with:
   - The Body Does Not Open on Command: feelfullyyou.com/essays/the-body-does-not-open-on-command
