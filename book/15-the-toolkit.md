@@ -6,6 +6,7 @@ Everything in this book on one page, so you can find it again. Reading on your p
 
 Hear me guide you. Tap a button on your phone, or scan the code.
 
+- **Hear one Touch in your Pleasure Language.** Five short guided Touches, one for each language, so you can hear what it sounds like to be guided by me. Energetic, Sensual, Sexual, Kinky, Shapeshifter. feelfullyyou.com/touch-taster
 - **Touch Base, in the app.** Thumb to forefinger, in my voice. app.feelfullyyou.com/practice/touch-base
 - **Your 15-Minute Touch Date, on your own.** A guided practice on video. You do not need a partner. feelfullyyou.com/the-15-minute-touch-date
 - **Solo and together Touch Dates, guided, in the Touch Map.** My voice takes you through each date, alone or with a partner. feelfullyyou.com/touch-map
