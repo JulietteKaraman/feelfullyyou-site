@@ -110,7 +110,7 @@ Sensual Touch is the art of turning awareness into foreplay. It is not about aro
 
 This is the flavour most people misunderstand. It is not about pain or punishment, and it has little to do with 50 Shades. It is about precision, power and the thrill of the unexpected. A simple instruction, a light tap or a well-timed pause can carry more charge than anything else. What makes it potent is the intention behind it. It needs safety, clarity and presence. Done well, it can unlock parts of you that you did not know were there.
 
-If you are turned on by being told what to do, or by telling someone else what to do with care, this may be your doorway.
+If you are turned on by being told what to do, or by telling someone else what to do with care, this may be your doorway. I saw it once on television, with a woman who had been left cold by every gentle attempt. One slow instruction, "look down", and two words, "good girl", and she exploded. You will find the whole scene in Chapter 4.
 
 *Agree the words first.* Before anything else, agree on green, yellow and red. Green means keep going. Yellow means slow down. Red means stop. Ask your partner to rate each moment out loud. Notice whether speaking up was easy or hard. That in itself is the practice.
 

@@ -44,3 +44,7 @@ Kept 22 Nov 2026 from what Juliette told Claude in the book session, plus her ow
 ## The golden thread (22 Nov 2026, with her coach)
 
 *Are you being touched, or are you feeling it?* The question every talk and chapter answers. Brace: not letting it arrive. Fade: being touched and not feeling it. Reach: feeling it and unable to ask. Melt: feeling it and wanting more. Her own answer: nobody asked me, so now I teach people how to ask.
+
+## Added 22 Nov 2026: the ITV couple, the tea and the strawberry
+
+On television, with a celebrity couple (unnamed). She wanted more than "wham, bam"; he heard "rose petals" and her body collapsed. In the kitchen Juliette asked him to make her a very specific cup of tea. Before he could move, she made his, exactly as he had instructed. He said "Yeah. Not bad" and gave no feedback. Juliette asked him to feed her a strawberry with her eyes closed: a fiasco, smudged around her mouth, shoved at her face. Her wide eyes: "that was not sexy". Juliette showed him: slowly, "look down", a touch to her chest after the berry, "good girl". She exploded: "Oh my God, that was so sensational." Her point: it is not rocket science, it is seeing her pleasure language and how unwilling he was to try. The strawberry footage is this couple, never Alex. A clip exists. In the book: Chapter 4 (scene) and Chapter 7 (Kinky).

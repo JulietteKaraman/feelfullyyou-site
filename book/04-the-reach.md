@@ -148,7 +148,17 @@ Notice the flinch that rises as you ask for the small correction. For many women
 
 I once did this with a couple on national television. She wanted more than "wham, bam". He heard "rose petals", and her body collapsed. They could not agree on a single thing.
 
-So I took them to the kitchen, and asked him to make her a cup of tea. Extremely specific. Which cup, which tea, which milk, saucer or no saucer, stirred or not. He resisted. Then I offered to make him one, and I listened to exactly what he wanted, and said it back. He corrected me. I went out, and brought it back.
+So I took them to the kitchen, and I asked him to make her a cup of tea. Extremely specific. Which cup, which tea, which milk. Before he could move, she jumped in and made it for him, exactly the way he wanted it, exactly as he had instructed. When he received it, he said, "Yeah. Not bad." No feedback. Nothing about any of the instructions I had given him. He simply was not interested.
+
+She was involved, and she was happy to be. He was not. So I took it further. "What about you feed her?" I wanted him in it. I asked her whether she wanted to close her eyes, and she did.
+
+So he fed her a strawberry, and it was a fiasco. He pushed it at her, smudged it around her mouth and shoved it into her face. She opened her eyes and looked at me, wide, as if to say: that was not sexy.
+
+So I took a berry, and I showed him how it is done. Slowly. I told her to look down. After she had taken the berry into her mouth, I touched her chest, and I said, "Good girl."
+
+She exploded. "Oh my God, that was so sensational."
+
+It is not rocket science. It is seeing what her way into pleasure is, and seeing how unwilling he was to even try.
 
 That is the lesson. How conditioned we are about who gives and who receives. How we settle for "that is as good as it gets". How uncomfortable it is to ask for exactly what we want.
 
@@ -290,3 +300,5 @@ You have been closing the gap alone for a long time. Chapter 8 shows you how it 
 **Fact-check, 21 Nov 2026 (second pass):** I softened three lines in "A word about that word" after checking. (1) The first psychiatric manual (DSM-I, 1952) did not give frigidity its own diagnosis. It appeared as a supplementary term under a heading for the body reacting to the mind, and the 1980 manual (DSM-III) replaced it, so "listed next to male impotence" is not supported. (2) A German anatomist, Kobelt, drew the clitoris accurately in 1844, so "nobody had mapped it until 1998" overstates it. Helen O'Connell's 1998 dissection paper is real and important. The book now says it showed a structure far larger than most textbooks had drawn. Sources: PMC3549574 (the DSM history), and the Open University and Wikipedia accounts of O'Connell and Kobelt. Your Substack uses the stronger wording, so you may want to correct it there too.
 
 **Third pass, 21 Nov 2026:** the couple on national television (from your key proof stories, unnamed, and I left out the raspberry part), and a "Questions I get asked about The Reach" section from your site answers on asking for the Touch you want, and on knowing what is wrong and not acting. The strawberry story is yours, from the same page. **To confirm:** is it fine to tell the television story without naming the couple?
+
+- **Updated 22 Nov 2026 (from Juliette):** the television couple's kitchen scene is now the full version you told me (she makes his tea, "Yeah. Not bad", the strawberry fiasco, "that was not sexy", the slow berry, "look down", "good girl", "Oh my God, that was so sensational"). The couple stay unnamed, as before. Your Canon notes say this footage is the ITV celebrity couple, and never Alex. Please check: (1) your message said "do you want to close your eyes? Yeah, I want to close your eyes", which I read as you asking her to close her eyes and her saying yes. (2) I did not add that you had her agreement before you touched her chest. If the show or she gave it, one line saying so is worth adding. (3) The clip: the book cannot show it, but a QR code to it would suit this chapter. Do you want one?
