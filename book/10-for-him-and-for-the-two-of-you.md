@@ -16,6 +16,8 @@ No one moved. The men in the carriage sat very still and did nothing. A few othe
 
 When I wrote about it on Instagram, so many men replied. *We would have got beaten up, maybe. It is not our fight. I stepped in once and lost my job.*
 
+It was not the only time. On another morning, a man on the Underground put his hand up my dress. Respectable. Pinstripe. On his way into the city, a banker or something near it. A man with a mother, probably a sister, possibly a daughter. Men in good suits on the 8.15 who have decided, somewhere along the line, that this is a thing you may do to a woman on a Tuesday morning. Somebody raised them too.
+
 I understand the fear. I am not telling you this to shame you. I am telling you because it is the world she walks through, every day, in a body that learned to brace long before she met you. When she jumps as you reach for her, or comes home in a terrible mood, she may not be reacting to you at all. She is reacting to everything her body has had to carry, and it has nowhere to put it down except the one place that is safe.
 
 Somebody raises the men. I think about that a lot, because I raised two of them.
@@ -151,3 +153,5 @@ You will get it wrong. Stay anyway.
 **Third pass, 21 Nov 2026:** four more results, all public testimonials from your site, plus the "one sentence" from a man's testimonial on your Unspoken Distance page.
 
 - **Added 22 Nov 2026 (from Juliette):** the section "The man on the Tube" and the paragraph about translating women's bodies for men. Your Instagram post's wording for the men's replies is yours, so I kept it close. I did not name the line or the year. I wrote "a face like thunder" as my guess at what you meant by "such a bad mood". Please adjust.
+
+- **Added 22 Nov 2026:** the pinstripe man on the 8.15, from your essay "I Bought My Sons A Family Box Of Condoms". I rewrote your "These are not men in alleyways. These are men in good suits" as one positive sentence, to stay inside your "not x but y" rule. Say if you prefer the original.
