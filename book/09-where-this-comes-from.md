@@ -52,7 +52,7 @@ That is the same thing I offer in a bedroom, when someone braces and says "stay"
 
 ## The night of the fire
 
-When I was eleven, our garage burned down. The fire fighters were there all night. At six in the morning, the police woke me. They had come to arrest a member of my family.
+When I was eleven, our garage burned down. The fire fighters were there all night. At six in the morning, the police woke me. They had come to arrest a member of my family, who had set several other barns on fire as well.
 
 That was quite traumatic for an eleven-year-old. It was also not the first time he had been at the centre of my life. He was my first abuser. I did not know that playing doctor was wrong, and it went on for years, until he was sent to juvenile detention.
 
@@ -96,4 +96,4 @@ I am a conduit. I hold the wire in one hand and yours in the other, and I do not
 
 - **Added 22 Nov 2026 (from Juliette):** the short section "What I will not hand down". You asked for how your work means your daughters do not carry this and have not been raped. I did not write the second half, because it is a statement about your daughters that they have not agreed to, and it can be read as a promise. I wrote that they do not carry what you carried, and that you taught them to say so. If you want the stronger line, tell me the exact words. I kept "a long time to unlearn it" because I do not know the number.
 
-- **Added 22 Nov 2026 (from Juliette):** the new section "The night of the fire": the garage fire when you were 11, the police at 6am to arrest a member of your family, your first abuser, playing doctor that you did not know was wrong, and the years until he went to juvenile detention. I wrote "a member of my family" and "he", not "my brother", to keep your earlier decision that family members are not named by relationship. I did not say the fire was linked to the arrest, because I do not know. This puts childhood abuse on the page before the San Francisco section. Please check the closing paragraph ("a child who does not know it is wrong cannot know it is wrong") is yours in spirit. I wrote it to land the point. Cut it if it is not.
+- **Added 22 Nov 2026 (from Juliette):** the new section "The night of the fire": the garage fire when you were 11, the police at 6am to arrest a member of your family, your first abuser, playing doctor that you did not know was wrong, and the years until he went to juvenile detention. I wrote "a member of my family" and "he", not "my brother", to keep your earlier decision that family members are not named by relationship. Confirmed by Juliette 22 Nov: he had set several other barns on fire, so the fire is linked to the arrest, and the text now says so. This puts childhood abuse on the page before the San Francisco section. Please check the closing paragraph ("a child who does not know it is wrong cannot know it is wrong") is yours in spirit. I wrote it to land the point. Cut it if it is not.
