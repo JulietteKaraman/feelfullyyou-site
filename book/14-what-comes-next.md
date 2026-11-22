@@ -44,7 +44,9 @@ I have asked myself whether it is ego. Here is what I notice instead. It is the 
 
 If I lie there at the end and think, I gave people a little bit of light, then it was worth it.
 
-No wonder my nickname is Beam.
+My nickname is Biem. When I was about two, and people asked what I was called, that is what I said. My name is Juliette Caroline, and in Dutch and in French, Caroline sounds like *biem*. In English, that is beam: a beam of light, a ray of light.
+
+I had to laugh. The universe is not subtle.
 
 ## One last thing
 
@@ -84,3 +86,5 @@ Juliette
 - **Updated 22 Nov 2026 (from Juliette):** the week counts for the Scrumptious Touch Reset (8) and The Beginning (12) are out of the book text, because you may change them. The four stages and "recorded modules, with live support" stay.
 
 - **Added 22 Nov 2026 (from Juliette's message):** the section "Why I leave this behind" (deathbed question, the ripple effect, the messages, the man and the free prompt, "my nickname is Beam"). It is built from what you told me in this chat. I could not find the Instagram post itself in Notion, so if you want its exact words, paste them and I will swap them in. Please check: (1) the spelling. In Chapter 10 your sister says "Biem", and here your message says "Beam". Which do you want in the book? (2) "further than I will ever see" is my line. (3) I did not name the podcast or Substack here, because Chapter 13 and the Toolkit already do. Say if you want them named.
+
+- **Settled by Juliette 22 Nov 2026:** the nickname is spelled Biem, and the book now tells the story at the end of Chapter 14: you said it at about two, Caroline sounds like biem in Dutch and French, and in English it is beam. "The universe is not subtle" is your line. Chapter 10 now has a one-line teaser at the first use.

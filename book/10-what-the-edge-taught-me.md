@@ -6,6 +6,8 @@
 
 The day before she died, my sister looked at me and asked, "Biem, can I go to the light now?"
 
+Biem is my nickname. I will tell you why at the end of this book.
+
 Chapter 9 is why I care. This chapter is why I can stay.
 
 ## The first crossing
