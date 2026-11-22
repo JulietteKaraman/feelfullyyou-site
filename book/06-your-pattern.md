@@ -22,6 +22,46 @@ Your Pattern is the shape that takes in you.
 
 Everyone runs one of three, underneath everything else. Each is a strategy that worked once and is still running. None of them is a flaw to fix.
 
+## Three differences that tell them apart
+
+The quickest way to know which one you are. Three questions, and your answers tend to line up.
+
+**1. Where does your attention go when it gets close?**
+
+The Holder goes to him. His breathing, his mood, whether he is okay.
+
+The Operator goes to the task. The angle, the pace, the time, what needs doing next.
+
+The Wanderer goes away. Her body stays, and the rest of her is in tomorrow's list.
+
+**2. What do you do when it is not quite right?**
+
+The Holder holds it together, and says nothing.
+
+The Operator fixes it, and moves on.
+
+The Wanderer drifts somewhere else, and looks relaxed while she does.
+
+**3. What do you reach for when you want more?**
+
+The Holder gives more.
+
+The Operator does more.
+
+The Wanderer wants more intensity: a stronger touch, a bigger experience, something new.
+
+You may be reading this as him, or about him. The same three questions work for a partner. Watch where his attention goes, what he does when it is not right, and what he reaches for.
+
+**The quiz asks these very questions.** If you took it, you will recognise them.
+
+*When touch isn't quite right, you…* Hold it all together (Holder). Fix it and move on (Operator). Drift somewhere else (Wanderer).
+
+*Think about yesterday. What touch actually happened?* "Hands on me for a while, and my mind was somewhere else for most of it." That is the Wanderer's answer.
+
+*Your partner comes up behind you in the kitchen, grabs you and spins you round.* "I'd go along with it, waiting to see where it's heading." The Holder is watching him, and not herself.
+
+*Your partner kisses the back of your neck while you're doing something else.* "I notice it and carry on with what I'm doing." That is the Wanderer. "I turn round and kiss them back" is the Operator, who has already turned it into something to do.
+
 ## The Holder
 
 You pay attention to everyone else, first, always.
@@ -41,6 +81,10 @@ Your strength: you love deeply, and you really notice the person you are with.
 What is missing: staying with what you want while someone else is in the room.
 
 The question to ask: *What do I want when I stop tracking everyone else?*
+
+How you will know. You do something for him, he thanks you, and you say "of course" and you are already gone, already thinking about the next thing. The thank you bounced off before it arrived. You keep score quietly, because some part of you is counting what has gone out and noticing that nothing comes back. People call you generous, and you wonder why you feel so empty.
+
+What the right Touch looks like. He thanks you and holds your hand for a moment, or holds your gaze, and does not let you move yet. You stay. You do not minimise it. You let it arrive.
 
 You have already met some Holders. The woman in Chapter 3 who could not receive her husband's attention without turning it straight back onto him. The woman in Chapter 4 who could tell you exactly how everyone else took their tea.
 
@@ -100,6 +144,20 @@ One word. He never asked me to cook a thing.
 
 Strange, I know, for a Touch expert who spends all day teaching people to hear what is actually being asked.
 
+The moving is the tell. Something lands: a mood in the house, a form that needs signing, a silence at dinner that means somebody is upset. Before it has finished landing, you have turned it into a task with a next step.
+
+I had a list on the fridge in four colours, because two stopped being enough. Nothing got dropped. Everyone told me I was amazing, and I got praised for it the way this culture praises a woman who never seems to need catching. Fixing is the one version of a stress response the world will pay you for. Terry Real calls it an old stress response, promoted. It does not go away. It gets a promotion.
+
+Feeling a thing takes longer than fixing it. Fix it, and you are done by quarter past eight and out the door.
+
+How you will know. You are good in a crisis, and people call you first. When someone asks how you feel, you tell them what you did about it. Pleasure turns into something to do well. Rest does not come easily, and slowing down can feel like the dangerous thing. You have kept going long after your body asked you to stop, more than once.
+
+In bed, the Operator adjusts the angle, changes the pace, checks the time. I see it in men too, constantly: the one who cannot be next to his partner's silence without offering a solution inside the first minute. Same engine, different paint.
+
+Is that just being organised? I told myself so for eleven years. Organised is a woman who runs three calendars and never misses a pickup. It is also a woman who cannot remember the last time she let something stay unresolved for an hour without reaching for it. Calm does not have to keep moving to prove it is still there.
+
+What the right Touch looks like. Nothing is asked of you. No response is needed, there is nothing to fix and nowhere to be next. Just this hand, staying. For the first minute you will probably still be doing something with it, waiting for the cue to move on. If the cue does not come, something in your chest can stop bracing for the next task long enough to feel the hand that is there.
+
 Your strength: you are highly capable, and things get done because of you.
 
 What is missing: staying with what you feel instead of moving straight on to the next thing.
@@ -117,6 +175,22 @@ From the outside, you can look completely fine. Relaxed, even. From the inside, 
 Maybe, once, feeling everything all the way was too much for the room to hold. Too much for someone else's face to stay steady through. So you learned to leave while still appearing to stay.
 
 It worked. It is still working, which is exactly why it is still running.
+
+A couple came to me wanting more intimacy. They had tried plenty. From time to time she would ask him to put on the fire helmet. It made it really exciting, and it was great, for a while.
+
+Then life happened, and they turned away from each other. The next time, it was not just the helmet. "Can we put the fire jacket on as well?" Then tantra weekends. Then BDSM clubs. Each one worked for a while. Each time, the next one needed more just to register.
+
+"There still feels like something is missing," they told me. Then, almost in passing, the sentence that mattered most: "We can't always stay very present with things like that."
+
+That is how it looks from the outside: two people chasing the next thing. What I watched was different. The moment things intensified, they left. Their bodies stayed, and their attention went. They had all the intensity they could ask for, and they could not stay in it long enough to feel it land.
+
+More was never what was missing. What that couple needed was capacity: the ability to stay present inside the intensity they already had.
+
+How you will know. You love energetic spaces, a workshop, a ceremony, a dance floor, and you can go really high. Afterwards, you struggle to say what you actually felt. During sex your mind goes to tomorrow, to the list, to what he is thinking of you. You need it stronger or faster than last time to feel it at all. From the outside you look relaxed, and inside you have drifted somewhere else. If you caught yourself in three, you know.
+
+What the wrong Touch looks like: more pressure, more intensity, something bigger to hold you there. It does not work, because the leaving happens the moment sensation lands, however strong it is.
+
+What the right Touch looks like. Nothing escalates. The same touch, at the same pace, for longer than feels necessary, with no new stimulus to reach for. Just this, staying exactly as it is until there is nowhere else to go but into it. That is usually where her face changes: at more of the same, held. You will recognise the practice from Chapter 4, "Yes, or nothing". It is the same idea.
 
 Your strength: you want real depth, and you keep reaching for it, even now.
 
@@ -140,17 +214,17 @@ These get built the way anything gets built in the body. Small reps, a structure
 
 **If you are a Holder**
 
-Do the cup of tea from Chapter 4. Then, once this week, let him ask you first. Before you ask how he is, before you reach for the tea towel, ask yourself the question. *What do I want?* Say the answer out loud, even if the answer is small.
+Next time he thanks you, do not say "of course". Do not move. Let the thank you be about you for three seconds, and notice what your body wants to do instead. That impulse to deflect is the pattern running. You do not have to follow it. Then do the cup of tea from Chapter 4. Then, once this week, let him ask you first. Before you ask how he is, before you reach for the tea towel, ask yourself the question. *What do I want?* Say the answer out loud, even if the answer is small.
 
 **If you are an Operator**
 
-Ask for a Touch Date with a start and an end and nothing inside it to fix. Set a timer. Your only job is to receive. Notice how much of you wants to adjust the angle.
+Catch the moving: the moment you are halfway to the kitchen. Rate how you feel from one to ten, out loud. It takes two seconds, and it stops the conversion dead. Then ask for a Touch Date with a start and an end and nothing inside it to fix. Set a timer. Your only job is to receive. Notice how much of you wants to adjust the angle.
 
 After Touch Base, breathe out slowly, longer than you breathe in. That gives your body a brake that does not need you to do anything.
 
 **If you are a Wanderer**
 
-Agree a word with him for "that is a bit much, slow down", and say it before you leave, not after. Take small steps rather than the whole experience at once. When someone asks how it was, name one precise sensation instead of "fine".
+Agree a word with him for "that is a bit much, slow down", and say it before you leave, not after. Take small steps rather than the whole experience at once. When someone asks how it was, name one precise sensation instead of "fine". When you notice your attention has left the room, do not chase the feeling that made you leave. Just notice you are back, and stay. That noticing is the whole practice.
 
 ## The way back
 
@@ -181,3 +255,5 @@ Next comes the part that is much more fun. What actually turns you on, once your
 **Third pass, 21 Nov 2026:** the relationship coach who spent more than a quarter of a million pounds on personal development, from your key proof stories. The quote is hers, from your notes. She is not named, so please check that she has agreed.
 
 **Added 21 Nov 2026 (fifth pass):** Katarina the dermatologist, from your essay "Why do I feel guilty the second I..." (she is already anonymised there, and it says she is a Holder). CONFIRMED by Juliette 21 Nov 2026: happy for her to appear in print.
+
+- **Added 22 Nov 2026 (from Juliette: "the Holder has many more examples, the Operator and Wanderer feel watered down"):** a new section "Three differences that tell them apart" (attention, what you do when it is wrong, what you reach for), with four of the quiz's own questions and answers (pattern tags from `touch-languages-quiz.html`). I added to the Operator and Wanderer from your essays "The Capable Ones" (the four-colour fridge list, "the moving is the tell", Terry Real's "an old stress response, promoted", "calm does not have to keep moving") and "First It Was The Fire Helmet" (the whole couple, "We can't always stay very present", "more was never what was missing", the five signs). The recognise-yourself lists and the right-Touch paragraphs for all three come from your working notes "The Three Touch Patterns". I did NOT use "seven children across six schools", because your Canon of 20 Oct says the seven detail is never used. Please check: (1) the Holder, Operator and Wanderer are written as "she" in the first three differences and as "you" everywhere else. (2) The line about the same three questions working for him. (3) I wrote "the practice from Chapter 4, Yes, or nothing, is the same idea" as the yes stroke. Is that right?
