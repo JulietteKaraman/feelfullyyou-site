@@ -26,8 +26,7 @@ body { margin:0; }
 /* cover and front matter */
 .cover { page: cover; position:relative; width:6in; height:9in; page-break-after:always; overflow:hidden; }
 .cover .coverimg { position:absolute; left:0; top:0; width:6in; height:9in; object-fit:cover; }
-.cover .covertxt { position:absolute; left:0; top:0; width:6in; height:5.6in; padding-top:.8in; text-align:center;
-  background:linear-gradient(to bottom, rgba(5,15,15,.92) 0%, rgba(5,15,15,.82) 55%, rgba(5,15,15,0) 100%); }
+.cover .covertxt { position:absolute; left:0; top:0; width:6in; height:5.6in; padding-top:.8in; text-align:center; }
 .cover .emblem { width:.8in; height:.8in; margin-bottom:.25in; }
 .cover h1 { font-weight:600; font-size:42pt; line-height:1.02; color:#fefcfa; margin:0 0 .2in 0; letter-spacing:.01em; }
 .cover .sub { font-family:'Poppins',sans-serif; font-size:7.6pt; letter-spacing:.22em; text-transform:uppercase; color:#d9bf7d; line-height:1.9; margin:0; }

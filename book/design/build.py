@@ -277,7 +277,7 @@ def build():
     css = open('book-inline.css').read()
     pages = []
     # cover
-    pages.append('''<section class="cover"><img class="coverimg" src="img/cover.jpg">
+    pages.append('''<section class="cover"><img class="coverimg" src="img/cover_baked.jpg">
       <div class="covertxt"><img class="emblem" src="img/emblem.png">
       <h1>Where Did the<br>Touch Go?</h1>
       <p class="sub">Are you being touched,<br>or are you feeling it?</p>
