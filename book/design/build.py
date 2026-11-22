@@ -120,11 +120,11 @@ def build():
     pages.append('''<section class="cover"><img class="coverimg" src="img/cover.jpg">
       <div class="covertxt"><img class="emblem" src="img/emblem.png">
       <h1>Where Did the<br>Touch Go?</h1>
-      <p class="sub">Why you stopped feeling it,<br>and the small, structured way back</p>
+      <p class="sub">Are you being touched,<br>or are you feeling it?</p>
       <p class="by">Juliette Karaman</p></div></section>''')
     pages.append('<section class="halftitle"><h1>Where Did the Touch Go?</h1></section>')
     pages.append('''<section class="titlepage"><img class="emblem" src="img/emblem.png"><h1>Where Did the<br>Touch Go?</h1>
-      <p class="by">Juliette Karaman</p><p class="small">feelfullyyou.com</p></section>''')
+      <p class="by">Juliette Karaman</p><p class="desc">Why you stopped feeling it,<br>and the small, structured way back</p><p class="small">feelfullyyou.com</p></section>''')
     pages.append('''<section class="copyright"><p>&copy; 2026 Juliette Karaman. All rights reserved.</p>
       <p>Touch Base&reg; is a registered mark of Juliette Karaman.</p>
       <p>Reader copy, 22 November 2026. Not for sale or distribution.</p>
@@ -149,7 +149,7 @@ def build():
         pages.append(opener + f'<section class="chapter" data-title="{esc(title)}">{body}</section>')
     # back cover
     pages.append('''<section class="backcover"><img class="emblem" src="img/emblem.png">
-      <p class="q">Are you being touched,<br>or are you feeling it?</p>
+      <p class="q">Why you stopped feeling it,<br>and the small, structured way back</p>
       <p class="small">feelfullyyou.com</p></section>''')
     doc = f'<html lang="en-GB"><head><meta charset="utf-8"><title>Where Did the Touch Go?</title></head><body>{"".join(pages)}</body></html>'
     open('book.html', 'w').write(doc)

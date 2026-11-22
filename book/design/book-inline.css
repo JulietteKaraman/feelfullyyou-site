@@ -94,3 +94,5 @@ body { margin:0; }
 
 .chapter blockquote.pull { border:0; margin:.35in .15in; padding:.2in 0; text-align:center; font-style:italic; font-weight:500; font-size:19pt; line-height:1.22; color:#A88538; border-top:.6pt solid #d8c9a2; border-bottom:.6pt solid #d8c9a2; page-break-inside:avoid; }
 .chapter blockquote.pull p { margin:0; }
+
+.titlepage .desc { font-style:italic; font-size:13pt; line-height:1.4; color:#33433f; margin-top:.35in; }
