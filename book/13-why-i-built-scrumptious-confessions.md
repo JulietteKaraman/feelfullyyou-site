@@ -22,7 +22,7 @@ So I built them somewhere to ask. You write your question with no name on it. Ev
 
 People tell me they could listen to my voice for hours. So I built an app where you can.
 
-A confession on Mondays, in my voice. The things I do not say on Instagram. What people bring me, what I have noticed, and what I learned in my own body first. My answers on Thursdays. A meditation, a poem, and Touch Base every day.
+A confession on Mondays, in my voice. The things I do not say on Instagram. What people bring me, what I have noticed, and what I learned in my own body first. My answers on Thursdays. A card on Tuesdays and Saturdays, a poem on Wednesdays, a meditation on Fridays, and Touch Base every day.
 
 Every time a client needed something, I made something. Meditations. The practices. The Touch Map. For years they were scattered across the place. Now they live in one spot, and one of them opens each month you stay.
 

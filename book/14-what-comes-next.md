@@ -14,9 +14,9 @@ Thirty-one days of Touch Base. Then thirty more. It is the cheapest, quickest an
 
 Scrumptious Confessions is where all of this keeps happening, with company.
 
-Every Monday, a confession in my voice. Touch Base every day, with a tracker. Your questions answered every Thursday, with no name on them. A meditation, a poem, and a new place on your Touch Map each month you stay.
+Every Monday, a confession in my voice. Touch Base every day, with a tracker. A card on Tuesdays and Saturdays, a poem on Wednesdays, and your questions answered every Thursday, with no name on them. A meditation on Fridays, and a new place on your Touch Map each month you stay.
 
-It is open to women and men. The first seven days are free.
+It is open to women and men. The first seven days are free, and the Holiday Survival Kit is yours in that week, whatever you decide.
 
 > **[Design note, not book text]** QR code and link here to Scrumptious Confessions. File: `book/assets/qr-scrumptious-confessions.png` (opens feelfullyyou.com/scrumptious-confessions).
 
@@ -64,3 +64,5 @@ Juliette
 **Third pass, 21 Nov 2026:** renumbered (this is now Chapter 12).
 
 **Third pass, 21 Nov 2026:** I made the QR code (it opens feelfullyyou.com/scrumptious-confessions, the page your latest Notion posts use). One thing to check, which I could not see from here: the committed copy of that page in the repo still shows the old "free 23 November to 6 December" wording, while your Notion thread says 7 days free with the card going in. Please check the live page.
+
+- **Updated 22 Nov 2026 (from the Notion page "Decided 20 to 21 Nov 2026"):** the weekly rhythm now lists every day (Monday confession, Tuesday and Saturday card, Wednesday poem, Thursday answers, Friday meditation, Touch Base daily). The free week includes the Holiday Survival Kit. No prices, Telegram, podcast or Substack are mentioned, as the page requires. I did not name the Touch Map price. The "one fussy change at a time" and "Claude" lines in Chapter 13 match your page.
