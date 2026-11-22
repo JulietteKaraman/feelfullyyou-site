@@ -102,7 +102,7 @@ More of Juliette's own stories went into Chapters 2 to 8 (the kitchen, being tou
 
 ## Update, 21 Nov 2026 (fourth pass)
 
-- Front matter: `00a-title-and-forewords.md` (title, four subtitle options, and a request to send to coaches for forewords).
+- Front matter: `00a-title-and-subtitle.md` (title and four subtitle options). Forewords are handled by Juliette outside the book session.
 - Back matter: `13-the-toolkit.md` (every practice, phrases, 12 conversation questions, the Felt Sense lists, a weekly checklist, more from Juliette) and `14-about-the-author-and-credits.md`.
 - Assets in `book/assets`: gold Touch Base emblem, QR code for the Touch Base practice page, QR code for Scrumptious Confessions (PNG and SVG).
 - Touch Base now follows the real 31-Day Tracker: two three-minute practices a day, scored 1 to 10 before and after.
