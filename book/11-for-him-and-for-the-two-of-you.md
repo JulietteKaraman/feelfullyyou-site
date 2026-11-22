@@ -20,6 +20,8 @@ It was not the only time. On another morning, a man on the Underground put his h
 
 I understand the fear. I am not telling you this to shame you. I am telling you because it is the world she walks through, every day, in a body that learned to brace long before she met you. When she jumps as you reach for her, or comes home in a terrible mood, she may not be reacting to you at all. She is reacting to everything her body has had to carry, and it has nowhere to put it down except the one place that is safe.
 
+## Somebody raises the men
+
 Somebody raises the men. I think about that a lot, because I raised two of them.
 
 When my sons were coming of age, I bought them a family box of condoms and sat them down. I said: every girl you are going to be with has a brother, a sister, a father, a mother. How would you feel if you heard one of your friends talking about your sister like that? Or about me?

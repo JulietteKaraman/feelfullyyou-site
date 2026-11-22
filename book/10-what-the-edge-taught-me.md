@@ -12,15 +12,21 @@ I need to tell you about the people I have sat beside at the end of their lives,
 
 I trained as a death doula. I did it because I wanted to be useful at the biggest threshold there is, and it turned out to be the best training in presence I have ever had. But the story starts somewhere stranger.
 
+## The ceremony
+
 A few years before my sister died, I went to a Bufo ceremony, the toad medicine, with two shamans on a beautiful farm. I had no idea why I was going. I was leading work in London at the time, and I do not walk away from that. But I remember standing at the gate of that property, knowing I had to do it.
 
 During the ceremony, one of the women completely freaked out. My body started to shake. I had not decided anything. The two shamans looked at me and said, "Oh, you're starting to channel." I looked back at them in complete surprise. That was when one of them started telling me about the Akashic records, and I thought: what are you even talking about?
 
 My body was shaking and shivering so that she could stay grounded and not go off into the other worlds. It worked. She has asked me to co-lead with her ever since, for her friends and for the people she leads.
 
+## The moat
+
 Only after that did the memory come back. When I was eighteen months old I walked into a moat. The algae on the surface looked like grass. I was wearing a little pink ski outfit. My sister pulled me out. I did not remember the rescue. What came back was the tunnel, the light, and a feeling of complete belonging to everything.
 
 I phoned my sister, Anouk, and said, "What the f*king hell happened to me?" She laughed. "Yes. I pulled you out. You thought the algae was grass. Your little pink ski outfit." Then I told her what it had been like for me. She kept asking me, "Tell me again. Again. Again." She was learning the route.
+
+## Anouk
 
 She was dying by then. Near the end, I was massaging her legs, and fluid was coming out of them, because her lymph nodes could no longer do their work. The medication that would let her go was in the house, waiting for the doctor to say it was enough. That is what Holland does.
 
@@ -38,13 +44,19 @@ She had. She died while we were in the kitchen. She had wanted us out of the roo
 
 After she died we stayed with her for twenty-four hours. We washed her. We dressed her. I put a little make-up on her face, because she would have wanted to look like herself. We placed her in her casket ourselves. It was one of the most beautiful things I have ever done.
 
+## My father
+
 A year later it was my father, in Belgium. Dementia had taken most of him. But in the days before he died he came back to himself, clear and calm, and I told him what I had told my sister. The tunnel. The light. That the other side is not what we fear. He thanked me, and I had never seen him so peaceful.
+
+## My mother
 
 Six months after that my mother chose to stop living. In Belgium that is a long, careful process, and I spent months with her, giving her felt experiences, helping her say the goodbyes she needed to say. I taught her Touch Base: thumb to forefinger, slowly feel every ridge, remember you are safe.
 
 On the day itself she was terrified. I looked into her eyes and told her exactly what was going to happen. I sang her the lullaby she used to sing to us when we were small.
 
 She held my gaze, and she went.
+
+## What I took from all three
 
 Here is what I took from all three. At the end, nobody needs fixing. They need a body beside them that is not afraid. The nervous system does not tell one kind of terror from another. It only knows whether there is someone close who can stay.
 

@@ -88,9 +88,13 @@ Then ask the question this whole book comes back to. Of everything that touched 
 
 I did not set out to be a Touch expert. I set out, at about four years old, to make a room feel better.
 
+### Four years old
+
 I was a little girl in Holland, and I could feel the tension between the adults before anyone said a word. So I made my grandmother a drawing. I handed it over, and I watched the whole room lift.
 
 That is the first thing I ever learned about Touch, though I would not have called it that for fifty years. If I gave something, the room got lighter. If the room got lighter, I was safe.
+
+### Seven
 
 I was seven when my uncle touched me. I did what a seven-year-old does. I went to my mother.
 
@@ -100,6 +104,8 @@ She said it because an uncle had done it to her too, at about the same age. She 
 
 My mind filed it away. My body took it in as a rule. This is normal. This is what you put up with. Nothing in my body told me otherwise for a very long time.
 
+### Fourteen
+
 At fourteen, with no licence, I drove my mother to hospital. There was an empty bottle of sleeping pills beside her. They pumped her stomach. When she came round, she only had eyes for her lover. I somehow drove myself home.
 
 I did not call my father until the morning. He was away with family, who were trying to mend things. You will meet the rest of that night in Chapter 9.
@@ -107,6 +113,8 @@ I did not call my father until the morning. He was away with family, who were tr
 That was the moment I recognised that I needed to take care of a lot of people.
 
 I got very good at it.
+
+### Married, with four children
 
 Years later I was married, with four children, still taking care of everyone. One night our son asked whether he could at least try for boarding school, like his friends. I told him to ask his dad. His dad said, "That's not what I had in mind for you." I saw my son's face fall.
 

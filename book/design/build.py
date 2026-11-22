@@ -220,9 +220,10 @@ def practice_rows(body):
 
 
 
-def pcards(body):
+def pcards(body, lang=False):
     # wrap each practice (h4 + steps) in a small card; style language h3s as bands
-    body = re.sub(r'<h3 id="([^"]*)">(.*?)</h3>', r'<h3 class="lang" id="\1">\2</h3>', body)
+    if lang:
+        body = re.sub(r'<h3 id="([^"]*)">(.*?)</h3>', r'<h3 class="lang" id="\1">\2</h3>', body)
     def wrap(m):
         return '<div class="pcard">' + m.group(0) + '</div>'
     body = re.sub(r'<h4 id="[^"]*">.*?</h4>.*?(?=<h4 |<h3 |<h2 |$)', wrap, body, flags=re.S)
@@ -314,7 +315,7 @@ def build():
             body = add_pull(body, q)
         body = leads(body)
         if f.startswith('07-') or f.startswith('06-'):
-            body = pcards(body)
+            body = pcards(body, lang=f.startswith('07-'))
         body = cards_and_felt(body, f)
         if f.startswith('15-'):
             body = words_chips(body)

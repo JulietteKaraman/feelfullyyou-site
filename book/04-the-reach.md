@@ -116,7 +116,8 @@ You have to ask.
 
 ## Four small things to try
 
-**Same place, two ways**\
+### Same place, two ways
+
 Begin with Touch Base. Thumb to forefinger, slowly, every ridge, for two minutes. Say inwardly, *There is no tiger in the room, and no one here to hurt me.*
 
 Then choose one place on your own skin. Your forearm is a good start. Touch it one way, slow and barely there, for thirty seconds. Notice what happens. Does your breath change? Does your skin ask for more, or ask you to stop?
@@ -131,7 +132,8 @@ I use Scrumptious Stroking, and my How to Feel Like a Woman Again course, to wor
 
 It is also the way in. You start where you can feel, and move from there to the part that cannot yet, a little at a time. That is called titration.
 
-**The cup of tea**\
+### The cup of tea
+
 This one looks like play. It rehearses the exact muscle that asking for Touch draws on.
 
 Describe your ideal cup of tea in full detail. Skip the reasonable one and describe the one you actually want. The mug, the tea, how hot, how long the bag stays in.
@@ -145,6 +147,8 @@ If you are on your own, make it for yourself, and notice how unusual that feels.
 Before you drink, pause. Is it right? If it is slightly off, even when it is almost perfect, say so. "Thank you, I love this, and I would love it even more if the bag came out a touch sooner."
 
 Notice the flinch that rises as you ask for the small correction. For many women that flinch is the whole pattern, alive in a kitchen, over a cup of tea. It is a place to practise wanting something and saying so, where the sky does not fall.
+
+### The couple on television
 
 I once did this with a couple on national television. She wanted more than "wham, bam". He heard "rose petals", and her body collapsed. They could not agree on a single thing.
 
@@ -178,7 +182,8 @@ I asked one room, "Would you want to be on your deathbed and then find out you h
 
 Nobody laughed.
 
-**Receive and Adjust**\
+### Receive and Adjust
+
 This one is from 31 Touch Points, my month of daily practices. Move the tea into the body. Set a timer for three minutes. The timer is not decoration. A thing with a clear end is a thing a body will relax into.
 
 One of you touches the other somewhere completely unsexual. A forearm, the back of a hand, the scalp. Nowhere this is heading. For three minutes the receiver adjusts out loud, in real time. *Slower. Firmer. A little higher. Stay there. Lighter. Yes, like that.*
@@ -187,7 +192,8 @@ The giver says nothing and takes no offence. The giver follows. Then swap.
 
 On your own, do it on your own forearm. Do that first either way.
 
-**Say it out loud**\
+### Say it out loud
+
 I asked the room one question. *Tell me how you want to be touched.* Everyone answered at once, so nobody could hear anybody.
 
 Mouths opened and nothing came. To say how you want to be touched, you first have to let yourself know, and most of us were quietly taught not to.

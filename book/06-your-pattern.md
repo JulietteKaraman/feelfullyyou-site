@@ -82,9 +82,17 @@ What is missing: staying with what you want while someone else is in the room.
 
 The question to ask: *What do I want when I stop tracking everyone else?*
 
-How you will know. You do something for him, he thanks you, and you say "of course" and you are already gone, already thinking about the next thing. The thank you bounced off before it arrived. You keep score quietly, because some part of you is counting what has gone out and noticing that nothing comes back. People call you generous, and you wonder why you feel so empty.
+### How you will know
 
-What the right Touch looks like. He thanks you and holds your hand for a moment, or holds your gaze, and does not let you move yet. You stay. You do not minimise it. You let it arrive.
+- You do something for him, he thanks you, and you say "of course" and you are already gone, already thinking about the next thing.
+- The thank you bounced off before it arrived.
+- You keep score quietly, because some part of you is counting what has gone out and noticing that nothing comes back.
+- People call you generous, and you wonder why you feel so empty.
+
+
+### What the right Touch looks like
+
+He thanks you and holds your hand for a moment, or holds your gaze, and does not let you move yet. You stay. You do not minimise it. You let it arrive.
 
 You have already met some Holders. The woman in Chapter 3 who could not receive her husband's attention without turning it straight back onto him. The woman in Chapter 4 who could tell you exactly how everyone else took their tea.
 
@@ -150,13 +158,22 @@ I had a list on the fridge in four colours, because two stopped being enough. No
 
 Feeling a thing takes longer than fixing it. Fix it, and you are done by quarter past eight and out the door.
 
-How you will know. You are good in a crisis, and people call you first. When someone asks how you feel, you tell them what you did about it. Pleasure turns into something to do well. Rest does not come easily, and slowing down can feel like the dangerous thing. You have kept going long after your body asked you to stop, more than once.
+### How you will know
+
+- You are good in a crisis, and people call you first.
+- When someone asks how you feel, you tell them what you did about it.
+- Pleasure turns into something to do well.
+- Rest does not come easily, and slowing down can feel like the dangerous thing.
+- You have kept going long after your body asked you to stop, more than once.
+
 
 In bed, the Operator adjusts the angle, changes the pace, checks the time. I see it in men too, constantly: the one who cannot be next to his partner's silence without offering a solution inside the first minute. Same engine, different paint.
 
 Is that just being organised? I told myself so for eleven years. Organised is a woman who runs three calendars and never misses a pickup. It is also a woman who cannot remember the last time she let something stay unresolved for an hour without reaching for it. Calm does not have to keep moving to prove it is still there.
 
-What the right Touch looks like. Nothing is asked of you. No response is needed, there is nothing to fix and nowhere to be next. Just this hand, staying. For the first minute you will probably still be doing something with it, waiting for the cue to move on. If the cue does not come, something in your chest can stop bracing for the next task long enough to feel the hand that is there.
+### What the right Touch looks like
+
+Nothing is asked of you. No response is needed, there is nothing to fix and nowhere to be next. Just this hand, staying. For the first minute you will probably still be doing something with it, waiting for the cue to move on. If the cue does not come, something in your chest can stop bracing for the next task long enough to feel the hand that is there.
 
 Your strength: you are highly capable, and things get done because of you.
 
@@ -186,11 +203,24 @@ That is how it looks from the outside: two people chasing the next thing. What I
 
 More was never what was missing. What that couple needed was capacity: the ability to stay present inside the intensity they already had.
 
-How you will know. You love energetic spaces, a workshop, a ceremony, a dance floor, and you can go really high. Afterwards, you struggle to say what you actually felt. During sex your mind goes to tomorrow, to the list, to what he is thinking of you. You need it stronger or faster than last time to feel it at all. From the outside you look relaxed, and inside you have drifted somewhere else. If you caught yourself in three, you know.
+### How you will know
 
-What the wrong Touch looks like: more pressure, more intensity, something bigger to hold you there. It does not work, because the leaving happens the moment sensation lands, however strong it is.
+- You love energetic spaces, a workshop, a ceremony, a dance floor, and you can go really high.
+- Afterwards, you struggle to say what you actually felt.
+- During sex your mind goes to tomorrow, to the list, to what he is thinking of you.
+- You need it stronger or faster than last time to feel it at all.
+- From the outside you look relaxed, and inside you have drifted somewhere else.
 
-What the right Touch looks like. Nothing escalates. The same touch, at the same pace, for longer than feels necessary, with no new stimulus to reach for. Just this, staying exactly as it is until there is nowhere else to go but into it. That is usually where her face changes: at more of the same, held. You will recognise the practice from Chapter 4, "Yes, or nothing". It is the same idea.
+*If you caught yourself in three, you know.*
+
+
+### What the wrong Touch looks like
+
+more pressure, more intensity, something bigger to hold you there. It does not work, because the leaving happens the moment sensation lands, however strong it is.
+
+### What the right Touch looks like
+
+Nothing escalates. The same touch, at the same pace, for longer than feels necessary, with no new stimulus to reach for. Just this, staying exactly as it is until there is nowhere else to go but into it. That is usually where her face changes: at more of the same, held. You will recognise the practice from Chapter 4, "Yes, or nothing". It is the same idea.
 
 Your strength: you want real depth, and you keep reaching for it, even now.
 
