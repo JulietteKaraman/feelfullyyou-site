@@ -10,17 +10,17 @@ Everything in this book on one page, so you can find it again.
 
 **A self-touch date** (Chapters 2 and 3). Three minutes, a timer, one hand on your forearm or wrist. Nowhere for it to go.
 
-**Is that a yes?** (Chapters 4 and 10). Stroke the inside of your wrist, slowly. Every time you feel it, say yes. Leave the strokes you cannot feel. If you feel nothing, write "nothing".
+**Is that a yes?** (Chapters 4 and 11). Stroke the inside of your wrist, slowly. Every time you feel it, say yes. Leave the strokes you cannot feel. If you feel nothing, write "nothing".
 
 **Same place, two ways** (Chapter 4). One place on your skin. Slow and barely there for thirty seconds, then firmer for thirty seconds. Which landed more?
 
 **The cup of tea** (Chapter 4). Ask for it exactly as you want it. Have it said back before they move. Adjust it when it arrives.
 
-**Receive and Adjust** (Chapters 4 and 9). Three minutes, a timer. The receiver adjusts out loud.
+**Receive and Adjust** (Chapters 4 and 10). Three minutes, a timer. The receiver adjusts out loud.
 
 **Say it out loud** (Chapter 4). Tell an empty kitchen how you want to be touched, in detail.
 
-**A Touch Date with a partner** (Chapters 2 and 9). Three minutes. Nothing leads anywhere. Either of you can stop. One word each at the end. Then fifteen minutes, then thirty.
+**A Touch Date with a partner** (Chapters 2 and 10). Three minutes. Nothing leads anywhere. Either of you can stop. One word each at the end. Then fifteen minutes, then thirty.
 
 **Stay one breath longer** (Chapter 5). Wherever you would normally let go, stay one breath more.
 
@@ -30,11 +30,11 @@ Everything in this book on one page, so you can find it again.
 
 **You may** (Chapter 8). Permission, before the hand lands.
 
-**Before you reach** (Chapter 9). *Where are you right now, on a scale of braced to open?* One word back.
+**Before you reach** (Chapter 10). *Where are you right now, on a scale of braced to open?* One word back.
 
-**Hover your hands** (Chapter 9). The pause before contact. *May I?*
+**Hover your hands** (Chapter 10). The pause before contact. *May I?*
 
-**The Desire Check** (Chapter 7) and **your one-page map** (Chapter 10).
+**The Desire Check** (Chapter 7) and **your one-page map** (Chapter 11).
 
 ## Words to use
 

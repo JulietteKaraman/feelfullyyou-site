@@ -108,3 +108,7 @@ More of Juliette's own stories went into Chapters 2 to 8 (the kitchen, being tou
 - Touch Base now follows the real 31-Day Tracker: two three-minute practices a day, scored 1 to 10 before and after.
 - More results added in Chapters 2, 3, 7, 9 and 10 (all public testimonials or Juliette's own stories).
 - Read-through done: no em dashes, no stray "And" openings, no pound signs, Touch capitalised.
+
+## Update, 22 Nov 2026 (sixth pass): new Chapter 9
+
+New numbering: 9 Where This Comes From (new: the moat, the ceremony, Anouk, her father and mother, the San Francisco memory, the drum story), 10 For Him, and For the Two of You, 11 Your First 31 Days, 12 Why I Built Scrumptious Confessions (now short), 13 What Comes Next. Then the Toolkit, About the author and Credits. Chapter 7 now has real practices for all five Pleasure Languages from the Touch Menu.

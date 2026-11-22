@@ -40,7 +40,7 @@ Read your chapter first. Then read the others in any order you like. Each one wi
 
 If you are single, nothing here is closed to you. Every practice has a version you can do on your own, and the parts about a partner show you what to ask for when someone arrives.
 
-If you are reading this for the person you love, or with them, Chapter 9 is written to him, and to the two of you.
+If you are reading this for the person you love, or with them, Chapter 10 is written to him, and to the two of you.
 
 A word about he and she. I write he and she because most of the people I work with are women and men. Change the words to fit you. The body works the same way.
 

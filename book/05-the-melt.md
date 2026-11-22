@@ -135,7 +135,7 @@ Nothing here to repair.
 
 The question at your end is range, and range grows the same way everything in the body grows. In small steps, with a structure that holds.
 
-Chapter 6 shows you how you are wired. Chapter 8 shows you how to build, and Chapter 10 gives you the plan.
+Chapter 6 shows you how you are wired. Chapter 8 shows you how to build, and Chapter 11 gives you the plan.
 
 ---
 

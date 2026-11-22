@@ -251,7 +251,7 @@ Your body braced because it learned something true, once, in a particular place,
 
 It can learn something else.
 
-Chapter 8 and Chapter 10 show you how, step by step, with a plan for your first 31 days. For now, you have the half second, a timer and a way to begin.
+Chapter 8 and Chapter 11 show you how, step by step, with a plan for your first 31 days. For now, you have the half second, a timer and a way to begin.
 
 If anything in this chapter stirred something big, stop and go to Touch Base. Do it somewhere you really are safe. There is no tiger here.
 
