@@ -92,7 +92,11 @@ That is the first thing I ever learned about Touch, though I would not have call
 
 When I was seven, my mother said something that went in deeper than she knew. She said, about what a man had done: "Oh well, that's just what men do." My body took it in as a rule. This is normal. This is what you put up with. Nothing in my body told me otherwise for a very long time.
 
-As a teenager with no licence, I drove my mother to hospital to have her stomach pumped. An empty bottle of sleeping pills was on her bed. My father was not called until the next day. That was the moment I recognised that I needed to take care of a lot of people.
+As a teenager with no licence, I drove my mother to hospital. Her lover had come into the house and found the empty bottle of sleeping pills. I somehow got her into the car, and they pumped her stomach. When she came round, she only had eyes for him. I somehow drove myself home.
+
+I did not call my father until the morning. He was away skiing with family, who were trying to mend things.
+
+That was the moment I recognised that I needed to take care of a lot of people.
 
 I got very good at it.
 
@@ -136,3 +140,5 @@ There are four places your Touch can go. The next four chapters take them one at
 **Fifth pass, 21 Nov 2026:** added the red T-shirt, from your Day 9 post. I left out the harder things in that same post (the assault, the baby losses), because they are very heavy for this book. Say if you want any of them in.
 
 - **Added 22 Nov 2026 (from Juliette):** the seven-year-old and "Oh well, that's just what men do", and the sleeping pills and "my father was not called until the next day". Your message said "not calling my dad until the next day" without saying who did not call. I wrote it as "My father was not called until the next day." Tell me if it should be more specific. I wrote "about what a man had done" because I do not know what it was. Fill in if you want more.
+
+- **Updated 22 Nov 2026 (from Juliette):** your mother's attempt now has your full account: the lover who found the bottle, the drive with no licence, the stomach pumped, her only having eyes for him, you somehow driving home, and you not calling your father until the morning. Please check: (1) your message said "her liver came into the house". I took it as "her lover" and wrote that. (2) You said "he was skiing with my brother and his wife". I wrote "away skiing with family, who were trying to mend things", so the brother is not named near the abuse chapter. If you want him named, say so. (3) I left out the friend with the dog who "ended up having sex", because the sentence was unfinished and it is about other people. Tell me if it belongs.
