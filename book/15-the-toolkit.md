@@ -8,6 +8,7 @@ Hear me guide you. Tap a button on your phone, or scan the code.
 
 - **Touch Base, in the app.** Thumb to forefinger, in my voice. app.feelfullyyou.com/practice/touch-base
 - **Your 15-Minute Touch Date, on your own.** A guided practice on video. You do not need a partner. feelfullyyou.com/the-15-minute-touch-date
+- **Solo and together Touch Dates, guided, in the Touch Map.** My voice takes you through each date, alone or with a partner. feelfullyyou.com/touch-map
 - **Try one Touch Point free, in the app.** The Fruit: the recording, and the clip from television. app.feelfullyyou.com/taste/31-touch-points
 
 ## The practices at a glance
@@ -158,3 +159,5 @@ Ask yourself, *What is my body doing right now?* Sensation first. Then the close
 **Please check:** (1) the six essay links. I built them from your essay file names, and could not open the live site to test them. (2) Whether the Felt Sense lists should stay as they are in your notes. (3) Whether to add more of your tools, such as the Touch Map's wrist or other places, or a page for each Pleasure Language.
 
 - **Added 22 Nov 2026 (from Juliette):** the section "Play the instructions" with three links: Touch Base in the app (`app.feelfullyyou.com/practice/touch-base`, from your free-resources page), the 15-Minute Touch Date video (`feelfullyyou.com/the-15-minute-touch-date`, which says you do not need a partner), and the free Fruit taster in the app (`app.feelfullyyou.com/taste/31-touch-points`, which your site says has the same recording and ITV clip). I also put the taster link under the strawberry scene in Chapter 4. What I could NOT find: a public page for your guided instructions for a solo Touch Date AND a Touch Date together. Those are inside the app, behind the login. Please send me the exact address for each (or tell me which are free to open without a login) and I will add them with their own buttons and QR codes. Until then the three above are what readers can play.
+
+- **Added 22 Nov 2026:** the Touch Map row in "Play the instructions", because your solo and together Touch Date instructions live in the Touch Map app (from your Notion plan "The Touch Map app: the complete plan"). It links to the Touch Map page, because the app itself is behind a login. A decision for you, not a question: book buyers can hear the Touch Map only if they buy it, or if you give them access in the app's admin. If you want every book buyer to get a free taster, tell me and I will write that line and the link.

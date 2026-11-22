@@ -24,7 +24,7 @@ It is open to women and men. The first seven days are free, and the Holiday Surv
 
 The Scrumptious Touch Reset is for women. Recorded modules, with live support. It runs in four stages: Recognise, Discern, Discover, Ask and Receive. You have already taken the first steps of the first.
 
-I open it in January. If you want to know whether it is right for you, I will invite you to a Touch Reset call.
+I open it in January.
 
 ## If you are doing this together
 
@@ -88,3 +88,5 @@ Juliette
 - **Added 22 Nov 2026 (from Juliette's message):** the section "Why I leave this behind" (deathbed question, the ripple effect, the messages, the man and the free prompt, "my nickname is Beam"). It is built from what you told me in this chat. I could not find the Instagram post itself in Notion, so if you want its exact words, paste them and I will swap them in. Please check: (1) the spelling. In Chapter 10 your sister says "Biem", and here your message says "Beam". Which do you want in the book? (2) "further than I will ever see" is my line. (3) I did not name the podcast or Substack here, because Chapter 13 and the Toolkit already do. Say if you want them named.
 
 - **Settled by Juliette 22 Nov 2026:** the nickname is spelled Biem, and the book now tells the story at the end of Chapter 14: you said it at about two, Caroline sounds like biem in Dutch and French, and in English it is beam. "The universe is not subtle" is your line. Chapter 10 now has a one-line teaser at the first use.
+
+- **Settled by Juliette 22 Nov 2026:** no free call is offered any more, so the line about a Touch Reset call is out of the book.
