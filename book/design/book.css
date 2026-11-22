@@ -120,3 +120,35 @@ a.ul { color:#0D3535; text-decoration:none; border-bottom:.6pt solid #A88538; }
 .listen h4 { font-family:'Poppins',sans-serif; font-weight:600; font-size:7.4pt; letter-spacing:.16em; text-transform:uppercase; color:#A88538; margin:0 0 .04in; }
 .listen p { margin:0 0 .08in !important; font-size:11.5pt; line-height:1.4; }
 .listen a.btn { display:inline-block; padding:.045in .22in; border:.8pt solid #A88538; border-radius:.2in; color:#0D3535; text-decoration:none; font-family:'Poppins',sans-serif; font-size:7.6pt; letter-spacing:.08em; background:#fefcfa; }
+
+/* section leads, punch lines, bullets */
+.chapter p.lead { font-size:14.8pt; line-height:1.45; color:#0D3535; font-weight:500; }
+.chapter p.punch { font-size:15.5pt; font-style:italic; color:#0D3535; line-height:1.35; margin:.12in 0 .2in; }
+.chapter > p:first-of-type { font-size:15pt; }
+.practice p.lead, .practice p.punch { color:#0D3535; }
+.chapter ul { list-style:none; margin:.14in 0 .22in 0; padding:0; }
+.chapter ul li { position:relative; padding-left:.26in; margin:.09in 0; }
+.chapter ul li::before { content:"\25C6"; position:absolute; left:0; top:.02in; color:#A88538; font-family:'DejaVu Sans',sans-serif; font-size:6.5pt; }
+.chapter ol li::marker { color:#A88538; font-weight:600; }
+
+/* words to use as chips */
+.wgroups { margin:.2in 0; }
+.wgroup { margin:0 0 .3in 0; page-break-inside:avoid; }
+.wgroup h4 { font-family:'Poppins',sans-serif; font-weight:600; font-size:7.2pt; letter-spacing:.22em; text-transform:uppercase; color:#A88538; margin:0 0 .1in; }
+.chips { }
+.chip { display:inline-block; margin:.04in .08in .08in 0; padding:.07in .2in .08in; border-radius:.22in; font-style:italic; font-weight:600; font-size:15pt; line-height:1.2; }
+.chip.g { background:#0D3535; color:#fefcfa; }
+.chip.o { background:#A88538; color:#fefcfa; }
+.chip.k { background:#070707; color:#e8d9aa; }
+.chip.l { background:#fefcfa; color:#0D3535; border:1pt solid #A88538; }
+.chipnote { font-style:italic; color:#0D3535; font-size:13pt; margin:.08in 0 0 .05in !important; }
+
+.prs { margin:.15in 0; }
+.pr { margin:0 0 .17in 0; padding:0 0 .12in 0; border-bottom:.5pt solid #e1d6bb; page-break-inside:avoid; }
+.prh { margin:0 0 .03in; }
+.prn { font-style:italic; font-weight:600; font-size:15pt; color:#0D3535; }
+.prc { float:right; font-family:'Poppins',sans-serif; font-weight:600; font-size:6.4pt; letter-spacing:.16em; text-transform:uppercase; color:#fefcfa; background:#A88538; padding:.03in .1in; border-radius:.12in; margin-top:.05in; }
+.pr p { margin:0 !important; font-size:12.4pt; line-height:1.45; color:#2a2a2a; }
+.week { margin:.2in 0; }
+.wk { margin:.1in 0; font-size:13.4pt; }
+.wk .box { display:inline-block; width:.17in; height:.17in; border:1.2pt solid #A88538; border-radius:.03in; margin-right:.16in; vertical-align:-.02in; }

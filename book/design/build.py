@@ -98,7 +98,7 @@ def cards_and_felt(body, f):
         if m:
             sec = m.group(2)
             items = re.findall(r'<li>(.*?)</li>', sec, re.S)
-            lead = re.findall(r'<p>.*?</p>', sec, re.S)
+            lead = re.findall(r'<p[^>]*>.*?</p>', sec, re.S)
             cs = []
             for n, it in enumerate(items, 1):
                 text = re.sub(r'\s+', ' ', it).strip()
@@ -110,7 +110,7 @@ def cards_and_felt(body, f):
         m = re.search(r'(<h2 id="the-felt-sense">.*?</h2>)(.*?)(?=<h2 )', body, re.S)
         if m:
             sec = m.group(2)
-            ps = re.findall(r'<p>(.*?)</p>', sec, re.S)
+            ps = re.findall(r'<p[^>]*>(.*?)</p>', sec, re.S)
             intro = ps[0]
             boxes = []
             for ptxt in ps[1:]:
@@ -144,7 +144,7 @@ def listen_rows(body):
     if not m:
         return body
     sec = m.group(2)
-    lead = re.findall(r'<p>.*?</p>', sec, re.S)
+    lead = re.findall(r'<p[^>]*>.*?</p>', sec, re.S)
     items = re.findall(r'<li>(.*?)</li>', sec, re.S)
     rows = []
     for n, it in enumerate(items):
@@ -161,6 +161,62 @@ def listen_rows(body):
         rows.append(f'<div class="listen"><img src="{qr}"><div><h4>{title.rstrip(".")}</h4><p>{re.sub("<[^>]+>", "", desc).strip()}</p><a class="btn" href="{url}">Play</a></div></div>')
     new = m.group(1) + (lead[0] if lead else '') + '<div class="listens">' + ''.join(rows) + '</div>'
     return body.replace(m.group(0), new)
+
+
+
+def words_chips(body):
+    m = re.search(r'(<h2 id="words-to-use">.*?</h2>)(.*?)(?=<h2 )', body, re.S)
+    if not m:
+        return body
+    sec = m.group(2)
+    # groups: <p><strong>Label</strong></p> <ul>...</ul> [<p>note</p>]
+    groups = re.findall(r'<p><strong>(.*?)</strong></p>\s*<ul>(.*?)</ul>(\s*<p(?: class="[^"]*")?>[^<]*</p>)?', sec, re.S)
+    out = []
+    styles = ['g', 'o', 'k', 'l', 'g', 'o']
+    for i, (label, ul, note) in enumerate(groups):
+        items = re.findall(r'<li>(.*?)</li>', ul, re.S)
+        chips = ''.join(f'<span class="chip {styles[i % len(styles)]}">{re.sub(chr(10), " ", it).strip()}</span>' for it in items)
+        nt = ''
+        if note and note.strip():
+            nt = '<p class="chipnote">' + re.sub(r'<[^>]+>', '', note).strip() + '</p>'
+        out.append(f'<div class="wgroup"><h4>{label}</h4><div class="chips">{chips}</div>{nt}</div>')
+    new = m.group(1) + '<p class="lead">Say it simply. Say it out loud.</p><div class="wgroups">' + ''.join(out) + '</div>'
+    return body.replace(m.group(0), new)
+
+
+def leads(body):
+    # first paragraph after each h2 becomes a larger, coloured lead; very short paragraphs become punch lines
+    def lead(m):
+        txt = re.sub(r'<[^>]+>', '', m.group(2))
+        if len(txt) < 330 and 'class=' not in m.group(1):
+            return m.group(1) + '<p class="lead">' + m.group(2) + '</p>'
+        return m.group(0)
+    body = re.sub(r'(</h2>\s*)<p>(.*?)</p>', lead, body, flags=re.S)
+    body = re.sub(r'<p>([^<]{2,52})</p>', lambda m: '<p class="punch">' + m.group(1) + '</p>', body)
+    return body
+
+
+
+def practice_rows(body):
+    m = re.search(r'(<h2 id="the-practices-at-a-glance">.*?</h2>)(.*?)(?=<h2 )', body, re.S)
+    if m:
+        sec = m.group(2)
+        rows = []
+        for ptxt in re.findall(r'<p[^>]*>(.*?)</p>', sec, re.S):
+            mm = re.match(r'<strong>(.*?)</strong>\s*\((Chapters? [^)]*)\)\.?\s*(.*)', ptxt, re.S)
+            if mm:
+                rows.append(f'<div class="pr"><div class="prh"><span class="prn">{mm.group(1)}</span><span class="prc">{mm.group(2)}</span></div><p>{mm.group(3)}</p></div>')
+            else:
+                tt = re.sub(r'<[^>]+>', '', ptxt).strip()
+                if tt:
+                    rows.append(f'<div class="pr"><div class="prh"><span class="prn">{ptxt}</span></div></div>')
+        body = body.replace(m.group(0), m.group(1) + '<div class="prs">' + ''.join(rows) + '</div>')
+    m = re.search(r'(<h2 id="your-week-at-a-glance">.*?</h2>)\s*<ul>(.*?)</ul>', body, re.S)
+    if m:
+        items = re.findall(r'<li>(.*?)</li>', m.group(2), re.S)
+        rows = ''.join(f'<div class="wk"><span class="box"></span><span>{it}</span></div>' for it in items)
+        body = body.replace(m.group(0), m.group(1) + '<div class="week">' + rows + '</div>')
+    return body
 
 
 def linkify(body):
@@ -246,7 +302,11 @@ def build():
         body = decorate(md_to_html(f))
         for q in PULLS.get(f, []):
             body = add_pull(body, q)
+        body = leads(body)
         body = cards_and_felt(body, f)
+        if f.startswith('15-'):
+            body = words_chips(body)
+            body = practice_rows(body)
         if f.startswith('15-'):
             body = listen_rows(body)
         body = linkify(body)
