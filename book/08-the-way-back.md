@@ -12,7 +12,9 @@ So I teach them something. It takes ten seconds to explain.
 
 Thumb to forefinger.
 
-> **[Design note, not book text]** Place the Touch Base emblem here in gold, with a QR code beside it that opens the Touch Base practice page (the video, the audio guide and the 31-day tracker). Files: `book/assets/touch-base-emblem.png` and `book/assets/qr-touch-base.png` (opens feelfullyyou.com/touch-base-experience). Print the QR code black on off-white.
+> **[Design note, not book text]** Place the Touch Base emblem here in gold, with two QR codes beside it. The first opens the Touch Base practice page (the video, the audio guide and the 31-day tracker). The second plays the Touch Base audio only. Files: `book/assets/touch-base-emblem.png`, `book/assets/qr-touch-base.png` (opens feelfullyyou.com/touch-base-experience) and `book/assets/qr-touch-base-audio.png` (opens the audio guide file on Google Drive, the same file the practice page plays). Print the QR codes black or deep green on off-white.
+
+*Scan the first code for the video, the audio and the tracker. Scan the second to listen only.*
 
 Scan the code for the Touch Base practice page. There is a video, an audio and a 31-day tracker. It is a small taste of what it is like inside Scrumptious Confessions.
 

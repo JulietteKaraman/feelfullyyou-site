@@ -62,7 +62,9 @@ Do it somewhere that is actually safe. A room where you can close the door. A ch
 
 Then come back when you are ready. The book will still be here.
 
-> **[Design note, not book text]** Place the Touch Base emblem here in gold, with a QR code beside it that opens the Touch Base practice page (the video, the audio guide and the 31-day tracker). Files: `book/assets/touch-base-emblem.png` and `book/assets/qr-touch-base.png` (opens feelfullyyou.com/touch-base-experience). Print the QR code black on off-white.
+> **[Design note, not book text]** Place the Touch Base emblem here in gold, with two QR codes beside it. The first opens the Touch Base practice page (the video, the audio guide and the 31-day tracker). The second plays the Touch Base audio only. Files: `book/assets/touch-base-emblem.png`, `book/assets/qr-touch-base.png` (opens feelfullyyou.com/touch-base-experience) and `book/assets/qr-touch-base-audio.png` (opens the audio guide file on Google Drive, the same file the practice page plays). Print the QR codes black or deep green on off-white.
+
+*Scan the first code for the video, the audio and the tracker. Scan the second to listen only.*
 
 I am glad you are here.
 
@@ -94,3 +96,5 @@ Juliette
 **Third pass, 21 Nov 2026:** the QR code and gold emblem are now made and saved in the repo (`book/assets`). The QR opens your Touch Base Experience page, which has the practice video, the audio guide and the 31-Day Touch Base Tracker. I found all of this in your site and Notion.
 
 **Fifth pass, 21 Nov 2026:** added a short note on he and she, from your decision to use them. Is the wording right?
+
+- **Added 22 Nov 2026 (from Juliette):** a second QR code, for the Touch Base audio only. It opens the audio guide file on Google Drive (file id `17Rgpkk0VdZWwhvVZ0dXDmtwYfFJDe5_f`), the same file your Touch Base Experience page plays. It is also in Chapter 8. You said the audio is in Scrumptious Confessions and all your apps. I could not see the app from here, so I used the public audio from your practice page. If you prefer a link inside the app (a page that does not need a Google sign-in), send me the address and I will remake the code.
