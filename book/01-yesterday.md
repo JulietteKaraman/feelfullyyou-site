@@ -98,9 +98,9 @@ She said it because an uncle had done it to her too, at about the same age. She 
 
 My mind filed it away. My body took it in as a rule. This is normal. This is what you put up with. Nothing in my body told me otherwise for a very long time.
 
-As a teenager with no licence, I drove my mother to hospital. Her lover had come into the house and found the empty bottle of sleeping pills. I somehow got her into the car, and they pumped her stomach. When she came round, she only had eyes for him. I somehow drove myself home.
+At fourteen, with no licence, I drove my mother to hospital. There was an empty bottle of sleeping pills beside her. They pumped her stomach. When she came round, she only had eyes for her lover. I somehow drove myself home.
 
-I did not call my father until the morning. He was away skiing with family, who were trying to mend things.
+I did not call my father until the morning. He was away with family, who were trying to mend things. You will meet the rest of that night in Chapter 9.
 
 That was the moment I recognised that I needed to take care of a lot of people.
 

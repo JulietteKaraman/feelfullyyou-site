@@ -58,6 +58,22 @@ That was quite traumatic for an eleven-year-old. It was also not the first time 
 
 I tell you this because a child who does not know it is wrong cannot know it is wrong. Her body simply learns what to expect, and carries it into every room she walks into afterwards.
 
+## The night I was fourteen
+
+I was fourteen, maybe fifteen, when I found my mother on her bed, comatose, with a bottle of pills beside her. The phone was still in her hand. On the other end, a woman was asking, in Dutch, "What's happening? What's happening?" My mother had called an ambulance herself, then gone under before it arrived.
+
+I think I pulled her up by her hair. I got her into the car. I did not have a driver's licence, and you cannot legally drive in Holland until you are eighteen. Somehow I drove her to the hospital and parked without crashing. They rushed her in to have her stomach pumped.
+
+The man my mother was seeing came to the hospital. My father was living abroad at the time, and my mother had given this man a key to our house. He had gone there, found the pills gone, and started calling every hospital until he found us. He found me in the waiting room. We hugged. We cried. His daughter was a friend of mine, which is its own strange detail to carry.
+
+When my mother came to, she did not see me. She only had eyes for him. After a few minutes standing there I felt exactly what my fiancé Alex would call it now: "What am I, chopped liver?" So I left, and drove the car back to my parents' house alone.
+
+A friend was walking his dog past the house. He saw the lights on and knocked on the window. I burst into tears in his arms, and he held me. Being held, properly held, by someone who was asking nothing of me, undid something faster than words could have. Then it moved, the way held grief does. Physical touch became sexual touch, and I let it. For a while there was real relief in that, a kind I had not been offered anywhere else that night. Afterwards I felt empty. The shame arrived later, on schedule.
+
+I would call it a fourteen-year-old's nervous system finding the fastest road out of a night it had no other way to survive.
+
+I called my father at eight the next morning. He was abroad with family, and I had not wanted to bother anyone. That is what a third child does, sometimes. She does not bother anyone.
+
 ## What my psyche kept for me
 
 There is one more thing I need to tell you, because it is the reason I take your Touch so seriously.
@@ -97,3 +113,5 @@ I am a conduit. I hold the wire in one hand and yours in the other, and I do not
 - **Added 22 Nov 2026 (from Juliette):** the short section "What I will not hand down". You asked for how your work means your daughters do not carry this and have not been raped. I did not write the second half, because it is a statement about your daughters that they have not agreed to, and it can be read as a promise. I wrote that they do not carry what you carried, and that you taught them to say so. If you want the stronger line, tell me the exact words. I kept "a long time to unlearn it" because I do not know the number.
 
 - **Added 22 Nov 2026 (from Juliette):** the new section "The night of the fire": the garage fire when you were 11, the police at 6am to arrest a member of your family, your first abuser, playing doctor that you did not know was wrong, and the years until he went to juvenile detention. I wrote "a member of my family" and "he", not "my brother", to keep your earlier decision that family members are not named by relationship. Confirmed by Juliette 22 Nov: he had set several other barns on fire, so the fire is linked to the arrest, and the text now says so. This puts childhood abuse on the page before the San Francisco section. Please check the closing paragraph ("a child who does not know it is wrong cannot know it is wrong") is yours in spirit. I wrote it to land the point. Cut it if it is not.
+
+- **Added 22 Nov 2026 (from your Substack essay "Where Still Following The Breadcrumbs Comes From"):** the new section "The night I was fourteen". It follows your published essay closely. Please check: (1) the essay says you found your mother and called the ambulance had already been made by her, and that her lover came to the hospital and found you. Your message in this session said her lover "came into the house and found the empty bottle". I used the essay version here and kept Chapter 1 neutral. Which is right? (2) "Her liver" in your message was probably "chopped liver", your Alex line. I have used it. (3) The friend with the dog: the essay says "Physical touch became sexual touch, and I let it". You were fourteen. I kept your own wording and framing, but it is sexual contact with a child on the page, in a book people buy after a quiz. Do you want it in, softened ("held, and it moved into something else"), or out? (4) I wrote "Alex, my fiancé" as in your essay (not 'my partner').
