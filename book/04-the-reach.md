@@ -160,6 +160,8 @@ She exploded. "Oh my God, that was so sensational."
 
 It is not rocket science. It is seeing what her way into pleasure is, and seeing how unwilling he was to even try.
 
+You can watch the clip, and try the practice yourself, free: app.feelfullyyou.com/taste/31-touch-points
+
 That is the lesson. How conditioned we are about who gives and who receives. How we settle for "that is as good as it gets". How uncomfortable it is to ask for exactly what we want.
 
 Three things come up every time I run this.

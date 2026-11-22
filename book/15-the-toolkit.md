@@ -2,6 +2,14 @@
 
 Everything in this book on one page, so you can find it again. Reading on your phone? Tap any address.
 
+## Play the instructions
+
+Hear me guide you. Tap a button on your phone, or scan the code.
+
+- **Touch Base, in the app.** Thumb to forefinger, in my voice. app.feelfullyyou.com/practice/touch-base
+- **Your 15-Minute Touch Date, on your own.** A guided practice on video. You do not need a partner. feelfullyyou.com/the-15-minute-touch-date
+- **Try one Touch Point free, in the app.** The Fruit: the recording, and the clip from television. app.feelfullyyou.com/taste/31-touch-points
+
 ## The practices at a glance
 
 **Touch Base** (Chapter 8). Thumb to forefinger. Trace every ridge. Breathe out slowly. *There is no tiger in the room, and no one here to hurt me.* About two minutes once you know it. On the tracker, two three-minute practices a day, morning and evening, scored from 1 to 10 before and after, for 31 days. Then on to 60.
@@ -148,3 +156,5 @@ Ask yourself, *What is my body doing right now?* Sensation first. Then the close
 **This is the resource section you asked for.** It gathers every practice, the phrases, the conversation questions, your own Felt Sense word list (from your course notes) and a weekly checklist, so the reader has a lot to use. I took the questions only from your own materials.
 
 **Please check:** (1) the six essay links. I built them from your essay file names, and could not open the live site to test them. (2) Whether the Felt Sense lists should stay as they are in your notes. (3) Whether to add more of your tools, such as the Touch Map's wrist or other places, or a page for each Pleasure Language.
+
+- **Added 22 Nov 2026 (from Juliette):** the section "Play the instructions" with three links: Touch Base in the app (`app.feelfullyyou.com/practice/touch-base`, from your free-resources page), the 15-Minute Touch Date video (`feelfullyyou.com/the-15-minute-touch-date`, which says you do not need a partner), and the free Fruit taster in the app (`app.feelfullyyou.com/taste/31-touch-points`, which your site says has the same recording and ITV clip). I also put the taster link under the strawberry scene in Chapter 4. What I could NOT find: a public page for your guided instructions for a solo Touch Date AND a Touch Date together. Those are inside the app, behind the login. Please send me the exact address for each (or tell me which are free to open without a login) and I will add them with their own buttons and QR codes. Until then the three above are what readers can play.

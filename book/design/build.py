@@ -80,8 +80,8 @@ def esc(s):
 
 
 
-DIAMOND = ('<svg class="dia" viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg"><polygon points="30,3 57,36 30,69 3,36" fill="none" stroke="#A88538" stroke-width="1.1"/>'
-           '<polygon points="30,26 40,36 30,46 20,36" fill="none" stroke="#A88538" stroke-width="1"/></svg>')
+DIAMOND = ('<svg class="dia" viewBox="0 0 100 150" xmlns="http://www.w3.org/2000/svg"><polygon points="50,2 98,75 50,148 2,75" fill="none" stroke="#A88538" stroke-width="1.1"/>'
+           '<polygon points="50,55 68,75 50,95 32,75" fill="none" stroke="#A88538" stroke-width="1"/></svg>')
 
 
 def card(category, prompt, small=False):
@@ -137,11 +137,37 @@ def cards_and_felt(body, f):
     return body
 
 
+
+def listen_rows(body):
+    import segno
+    m = re.search(r'(<h2 id="play-the-instructions">.*?</h2>)(.*?)(?=<h2 )', body, re.S)
+    if not m:
+        return body
+    sec = m.group(2)
+    lead = re.findall(r'<p>.*?</p>', sec, re.S)
+    items = re.findall(r'<li>(.*?)</li>', sec, re.S)
+    rows = []
+    for n, it in enumerate(items):
+        mm = re.match(r'<strong>(.*?)</strong>\s*(.*?)\s*<a [^>]*href="([^"]+)"', it, re.S)
+        if not mm:
+            mm = re.match(r'<strong>(.*?)</strong>\s*(.*?)\s*((?:app\.)?feelfullyyou\.com[^\s<]*)', it, re.S)
+            if not mm:
+                continue
+        title, desc, url = mm.group(1), mm.group(2), mm.group(3)
+        if not url.startswith('http'):
+            url = 'https://' + url
+        qr = f'img/qr_listen_{n}.png'
+        segno.make(url, error='m').save(qr, scale=8, border=1, dark='#0D3535', light='#fefcfa')
+        rows.append(f'<div class="listen"><img src="{qr}"><div><h4>{title.rstrip(".")}</h4><p>{re.sub("<[^>]+>", "", desc).strip()}</p><a class="btn" href="{url}">Play</a></div></div>')
+    new = m.group(1) + (lead[0] if lead else '') + '<div class="listens">' + ''.join(rows) + '</div>'
+    return body.replace(m.group(0), new)
+
+
 def linkify(body):
     segs = re.split(r'(<[^>]+>)', body)
     out = []
     in_a = 0
-    pat = re.compile(r'\b((?:feelfullyyou\.com|juliettekaraman\.substack\.com)(?:/[A-Za-z0-9\-_/\.#?=&%]*[A-Za-z0-9/])?)')
+    pat = re.compile(r'\b((?:app\.feelfullyyou\.com|feelfullyyou\.com|juliettekaraman\.substack\.com)(?:/[A-Za-z0-9\-_/\.#?=&%]*[A-Za-z0-9/])?)')
     for s in segs:
         if s.startswith('<a ') or s.startswith('<a>'):
             in_a += 1
@@ -221,6 +247,8 @@ def build():
         for q in PULLS.get(f, []):
             body = add_pull(body, q)
         body = cards_and_felt(body, f)
+        if f.startswith('15-'):
+            body = listen_rows(body)
         body = linkify(body)
         num = f'<div class="chnum">{n}</div>' if n else '<div class="chnum small">&#10022;</div>'
         opener = f'''<section class="opener" id="{cid}" data-title="{esc(title)}">
