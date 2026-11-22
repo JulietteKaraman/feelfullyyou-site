@@ -76,7 +76,7 @@ I am telling you this so you know where this work comes from. I am not asking yo
 
 ## What I will not hand down
 
-When I was seven, my mother told me that what a man does is just what men do. That sentence taught my body that it was normal. It took me a long time to unlearn it.
+When I was seven, I told my mother what my uncle had done. She told me it was just what men do, because it had been done to her too. That sentence taught my body that it was normal. It took me a long time to unlearn it.
 
 I do this work so that my daughters do not carry what I carried. They grew up with a mother who knew that what is done to your body is never just what men do, and who taught them to say so. That is the work I am doing for them, and for every woman who reads this.
 

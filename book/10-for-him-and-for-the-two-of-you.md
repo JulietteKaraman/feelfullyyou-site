@@ -10,13 +10,19 @@ This chapter is.
 
 ## The man on the Tube
 
-I was on the Tube in London when a man squeezed my breasts.
+I was on a packed Tube in London when a man took hold of my breasts and smirked at me, daring me to say something.
 
 No one moved. The men in the carriage sat very still and did nothing. A few other women and I stood up to him. We told him he was a pervert. I told him I hoped his daughter was never treated like this by anyone.
 
 When I wrote about it on Instagram, so many men replied. *We would have got beaten up, maybe. It is not our fight. I stepped in once and lost my job.*
 
 I understand the fear. I am not telling you this to shame you. I am telling you because it is the world she walks through, every day, in a body that learned to brace long before she met you. When she jumps as you reach for her, or comes home in a terrible mood, she may not be reacting to you at all. She is reacting to everything her body has had to carry, and it has nowhere to put it down except the one place that is safe.
+
+Somebody raises the men. I think about that a lot, because I raised two of them.
+
+When my sons were coming of age, I bought them a family box of condoms and sat them down. I said: every girl you are going to be with has a brother, a sister, a father, a mother. How would you feel if you heard one of your friends talking about your sister like that? Or about me?
+
+*"We'd absolutely kill them."* Both of them, straight away. I am not condoning violence. I am condoning the flare underneath it, instant, before either of them had time to work out the right answer. I said: great. Then remember that, if you are ever about to brag about having been with someone. It took four minutes, and nobody ever had that conversation with the men who have put their hands on me.
 
 I translate what is happening in women's bodies for men who have no idea why their wife flinches every time he reaches out, or why she walks in with a face like thunder. In this chapter I will tell you what is going on, and what to do instead of guessing.
 

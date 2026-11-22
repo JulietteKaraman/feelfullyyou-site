@@ -90,7 +90,13 @@ I was a little girl in Holland, and I could feel the tension between the adults 
 
 That is the first thing I ever learned about Touch, though I would not have called it that for fifty years. If I gave something, the room got lighter. If the room got lighter, I was safe.
 
-When I was seven, my mother said something that went in deeper than she knew. She said, about what a man had done: "Oh well, that's just what men do." My body took it in as a rule. This is normal. This is what you put up with. Nothing in my body told me otherwise for a very long time.
+I was seven when my uncle touched me. I did what a seven-year-old does. I went to my mother.
+
+She said: "Oh, that's just what men do."
+
+She said it because an uncle had done it to her too, at about the same age. She did not protect me, and she was not being cruel. She handed me the only thing anybody had ever handed her.
+
+My mind filed it away. My body took it in as a rule. This is normal. This is what you put up with. Nothing in my body told me otherwise for a very long time.
 
 As a teenager with no licence, I drove my mother to hospital. Her lover had come into the house and found the empty bottle of sleeping pills. I somehow got her into the car, and they pumped her stomach. When she came round, she only had eyes for him. I somehow drove myself home.
 
@@ -142,3 +148,5 @@ There are four places your Touch can go. The next four chapters take them one at
 - **Added 22 Nov 2026 (from Juliette):** the seven-year-old and "Oh well, that's just what men do", and the sleeping pills and "my father was not called until the next day". Your message said "not calling my dad until the next day" without saying who did not call. I wrote it as "My father was not called until the next day." Tell me if it should be more specific. I wrote "about what a man had done" because I do not know what it was. Fill in if you want more.
 
 - **Updated 22 Nov 2026 (from Juliette):** your mother's attempt now has your full account: the lover who found the bottle, the drive with no licence, the stomach pumped, her only having eyes for him, you somehow driving home, and you not calling your father until the morning. Please check: (1) your message said "her liver came into the house". I took it as "her lover" and wrote that. (2) You said "he was skiing with my brother and his wife". I wrote "away skiing with family, who were trying to mend things", so the brother is not named near the abuse chapter. If you want him named, say so. (3) I left out the friend with the dog who "ended up having sex", because the sentence was unfinished and it is about other people. Tell me if it belongs.
+
+- **Updated 22 Nov 2026:** the seven-year-old story now follows your own published wording from "I Bought My Sons A Family Box Of Condoms" and your reintroduction post: your uncle touched you at seven, you went to your mother, she said "Oh, that's just what men do", because an uncle had done it to her too. I used "my uncle" here because you have said it publicly in those posts. Chapter 9 still says "family members" for the abuse list and "a member of my family" for the person who was arrested, as you decided. Your mother's own abuse stays in, as you decided on 7 Oct (it is in your Notion page).
