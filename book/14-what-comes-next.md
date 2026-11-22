@@ -22,13 +22,13 @@ It is open to women and men. The first seven days are free, and the Holiday Surv
 
 ## If you are a woman, and you want the whole of this held
 
-The Scrumptious Touch Reset is eight weeks, for women. Recorded modules, with live support. It runs in four stages: Recognise, Discern, Discover, Ask and Receive. You have already taken the first steps of the first.
+The Scrumptious Touch Reset is for women. Recorded modules, with live support. It runs in four stages: Recognise, Discern, Discover, Ask and Receive. You have already taken the first steps of the first.
 
 I open it in January. If you want to know whether it is right for you, I will invite you to a Touch Reset call.
 
 ## If you are doing this together
 
-The Beginning is twelve weeks, for couples. A VIP day is a half day, in person or online, built around the two of you.
+The Beginning is for couples. A VIP day is a half day, in person or online, built around the two of you.
 
 Men, you are welcome in Confessions, and the couples route is open to you.
 
@@ -66,3 +66,5 @@ Juliette
 **Third pass, 21 Nov 2026:** I made the QR code (it opens feelfullyyou.com/scrumptious-confessions, the page your latest Notion posts use). One thing to check, which I could not see from here: the committed copy of that page in the repo still shows the old "free 23 November to 6 December" wording, while your Notion thread says 7 days free with the card going in. Please check the live page.
 
 - **Updated 22 Nov 2026 (from the Notion page "Decided 20 to 21 Nov 2026"):** the weekly rhythm now lists every day (Monday confession, Tuesday and Saturday card, Wednesday poem, Thursday answers, Friday meditation, Touch Base daily). The free week includes the Holiday Survival Kit. No prices, Telegram, podcast or Substack are mentioned, as the page requires. I did not name the Touch Map price. The "one fussy change at a time" and "Claude" lines in Chapter 13 match your page.
+
+- **Updated 22 Nov 2026 (from Juliette):** the week counts for the Scrumptious Touch Reset (8) and The Beginning (12) are out of the book text, because you may change them. The four stages and "recorded modules, with live support" stay.

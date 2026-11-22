@@ -26,6 +26,18 @@ A confession on Mondays, in my voice. The things I do not say on Instagram. What
 
 Every time a client needed something, I made something. Meditations. The practices. The Touch Map. For years they were scattered across the place. Now they live in one spot, and one of them opens each month you stay.
 
+## Why I made the cards
+
+Long before there was an app, there were questions. I ran them with clients for years before they were ever printed.
+
+I started with children on the autism spectrum, the SENCO kids who could not tell me what they needed. After them came the women who had lost their voice completely, and the couples who loved each other and had stopped hearing each other. It was always the same structure. One question, one answer, and the other person allowed only three replies. *Thank you. Clarify that. Summarise that.* No fixing. No defending.
+
+About two years ago I printed them. Five separate decks, each in its own box, for family and friends, life, beliefs and emotions, and more, and then one big box to hold the lot. Printing alone got expensive, and I learned a great deal. In November 2025 I remade them as two much bigger decks, one for family and friends and one for couples. I made a Touch Languages deck too.
+
+Then Noor built my first app from the cards, and I built the rest myself.
+
+The questions on the cards in your Toolkit are the same ones I have asked in rooms for years.
+
 ## Why scrumptious
 
 Facebook and Instagram put me in jail for using the word *sensual*.
@@ -121,3 +133,5 @@ All of this is sacred. All of this is welcome.
 - **Updated 21 Nov 2026 (Juliette):** the memory that came back at the San Francisco BDSM workshop was the rape in Spain at 18, by five men. The section now says so plainly ("five men raped me", "at eighteen"), and names the workshop as a BDSM workshop, floggers kept. Those are your own words from your message. If you would rather not give the number or the age in a book, say so and I will take them out. Whether the childhood abuse was also remembered later is not stated in the book.
 
 - **Added 21 Nov 2026 (sixth pass):** a short bridge section "Where it all comes from" before the dying, the conduit and the psyche sections, so the chapter moves from the app into your life on purpose. Chapter 11 is now about 2,900 words, the longest back-of-book chapter. Tell me if you would rather this life material become its own chapter ("Where this comes from") with Confessions kept short, and I will renumber.
+
+- **Added 22 Nov 2026 (from Juliette):** the section "Why I made the cards", from your Notion notes "Decided 20 to 21 Nov" (the history of the cards, told 21 Nov) and your card posts (the SENCO kids, the women who had lost their voice, the couples who stopped hearing each other, the three replies). I left out the prices and the printing costs because the book names no prices, and I did not name the product (your Notion pages use both "Communication and Intimacy Cards" and "Intimacy and Communication Cards"). Please check: (1) "I started with children on the autism spectrum" (that is your SENCO work, and it began before the cards, so I wrote "started" as your history of the work, not the cards). (2) Noor is a real person. Is it fine to name her? (3) Do you want to say what the cards are for in one more line, or add a QR code to the cards page?
