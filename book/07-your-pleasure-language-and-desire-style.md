@@ -22,43 +22,43 @@ The five Pleasure Languages come from Jaiya's Erotic Blueprints. I am a certifie
 
 Read these like a menu. Notice which one you flinched at.
 
-**Energetic**
+### Energetic
 
 You feel everything, even in stillness. Your arousal lives in the invisible. The pause, the pulse, the moment before contact. You can feel lit up without Touch. What you need is space, presence and attunement. You are the blueprint of anticipation.
 
-What lights you up: the charge before a single Touch. Eye contact that says everything. Teasing, space, the delicious almost.
+**Lights you up:** the charge before a single Touch. Eye contact that says everything. Teasing, space, the delicious almost.
 
-The shadow: you feel every off-note too. The smallest misattunement makes you brace and disappear up into your head, right at the moment you most want to be reached.
+**The shadow:** you feel every off-note too. The smallest misattunement makes you brace and disappear up into your head, right at the moment you most want to be reached.
 
-**Sensual**
+### Sensual
 
 You absorb Touch. The flicker of candlelight, the smell of their skin, the texture of sheets against your thighs. Your body responds to beauty, to detail, to the slow unfolding of sensation. You want to be melted into, slowly.
 
-What lights you up: a slow build, with no rushing to the finish. Candlelight, scent, music, texture. Being savoured, as if you were being tasted.
+**Lights you up:** a slow build, with no rushing to the finish. Candlelight, scent, music, texture. Being savoured, as if you were being tasted.
 
-The shadow: you can need the conditions just right before you let go. When it is rushed or plain, you quietly close, and desire ends up waiting for a stage that rarely gets set.
+**The shadow:** you can need the conditions just right before you let go. When it is rushed or plain, you quietly close, and desire ends up waiting for a stage that rarely gets set.
 
-**Sexual**
+### Sexual
 
 Direct. Honest. No fluff, no performance. You do not need a long warm-up. You want to feel it now. You crave physical connection that does not apologise for its intensity, and you own what you want, out loud. You just want it met.
 
-What lights you up: directness, with no games. Skin on skin, now. Being wanted openly, and told so.
+**Lights you up:** directness, with no games. Skin on skin, now. Being wanted openly, and told so.
 
-The shadow: your directness can get read as too much. If your partner needs slow warmth first, you can take it as rejection, pull back and stop reaching altogether.
+**The shadow:** your directness can get read as too much. If your partner needs slow warmth first, you can take it as rejection, pull back and stop reaching altogether.
 
-**Kinky**
+### Kinky
 
 What turns you on is the dynamic underneath the act. Power, trust, tension, a little taboo. It is about permission. You come alive in the unknown, in the pause before the command. This wiring is devotional, and it lives inside a clear yes and a clear stop.
 
-What lights you up: power play, given or taken. Trust deep enough to hand over control. A little edge. Ritual, restraint, the charge of the unknown.
+**Lights you up:** power play, given or taken. Trust deep enough to hand over control. A little edge. Ritual, restraint, the charge of the unknown.
 
-The shadow: you can hide this whole part of yourself for fear of being judged, and settle for a version you never wanted. You end up quietly starving for a charge you never let yourself ask for.
+**The shadow:** you can hide this whole part of yourself for fear of being judged, and settle for a version you never wanted. You end up quietly starving for a charge you never let yourself ask for.
 
-**Shapeshifter**
+### Shapeshifter
 
 You are fluent in many languages of turn-on. You are layered, holding many at once. You want it all, and you can hold it. The tease, the tenderness, the rawness, the sacred, the unexpected. You do not want to choose. You want to be met in your full spectrum.
 
-The shadow: you thrive on variety, so a partner with only one way in can leave you starving. Because you can meet anyone's flavour, you can lose track of what you actually want, and end up unmet in the shuffle.
+**The shadow:** you thrive on variety, so a partner with only one way in can leave you starving. Because you can meet anyone's flavour, you can lose track of what you actually want, and end up unmet in the shuffle.
 
 ## How to find yours
 
@@ -80,71 +80,158 @@ Reading about a language only gets you so far. Your body will tell you more in f
 
 Mark each one as you go. **Yes** means I want this. **Maybe** means I am open to trying. **No** means not right for me right now. A No is a complete answer, and it is also useful information. Start with the ones marked alone. The partner ones are for when you are ready, and then you can compare notes.
 
-**If you are Energetic**
+### Energetic
 
 You are the one who flinches when a hug comes too fast, and who picks up on pace and unspoken signals long before anyone speaks. For you the missing piece was never more Touch. It was more precision, and more felt presence. So we begin with less.
 
-*The wrist, no contact.* Hover one hand about five inches above your other wrist. Do not touch. Can you feel heat, tingling, a subtle pressure? Take a slow breath with your hand there. Then bring it closer, inch by inch. Does your body want to lean in, or pull away? Can you stay with the sensation without rushing? Afterwards ask yourself one question: what did I notice in my body when Touch was suggested but not delivered?
+#### The wrist, no contact
 
-*Elbow to armpit.* Hover your fingertips above the soft inside of your elbow. Then let the Touch land, barely brushing the skin. Was there a change the moment it landed? Trace slowly towards the armpit. Try it with your non-dominant hand.
+1. Hover one hand about five inches above your other wrist. Do not touch. *Can you feel heat, tingling, a subtle pressure?*
+2. Take a slow breath with your hand there.
+3. Then bring it closer, inch by inch. *Does your body want to lean in, or pull away? Can you stay with the sensation without rushing? Afterwards ask yourself one question: what did I notice in my body when Touch was suggested but not delivered?*
 
-*With a partner: the approach.* One of you stands still. The other walks towards them, one step at a time. The still one signals stop, with a hand or a word, when the distance feels exactly right. Then they ask for one step back. Swap. Finish with a breath together. Many people discover they have never once been asked what distance feels right.
+#### Elbow to armpit
 
-*Breathing together.* Sit facing each other, close but not touching. Breathe in slowly through the nose, hold gently at the top, breathe out through the mouth. Keep going for two or three minutes until it turns into a rhythm. Do you feel more connected than when you started?
+1. Hover your fingertips above the soft inside of your elbow.
+2. Then let the Touch land, barely brushing the skin. *Was there a change the moment it landed?*
+3. Trace slowly towards the armpit.
+4. Try it with your non-dominant hand.
 
-**If you are Sensual**
+#### With a partner: the approach
+
+1. One of you stands still.
+2. The other walks towards them, one step at a time.
+3. The still one signals stop, with a hand or a word, when the distance feels exactly right.
+4. Then they ask for one step back. Swap.
+5. Finish with a breath together.
+6. Many people discover they have never once been asked what distance feels right.
+
+#### Breathing together
+
+1. Sit facing each other, close but not touching.
+2. Breathe in slowly through the nose, hold gently at the top, breathe out through the mouth.
+3. Keep going for two or three minutes until it turns into a rhythm. *Do you feel more connected than when you started?*
+
+### Sensual
 
 Sensual Touch is the art of turning awareness into foreplay. It is not about arousal. It is about attention: to texture, scent, sound, temperature, the way silk brushes your collarbone, or how a ripe piece of fruit stays on your lips a little longer than it should. It teaches you to let a moment linger, and it is often the forgotten doorway back into your body when you have gone a bit numb.
 
-*Texture.* Choose something with a clear feel, such as silk, a feather or a piece of fruit. Let it travel slowly over your skin. Can you feel the texture clearly? Do you get goosebumps, pleasure, irritation? What happens as the sensation disappears? Do you want more?
+#### Texture
 
-*Scent and taste.* Pick a scent you love. Does it make you feel grounded, sensual or activated? Trace it along your lips, then take a slow bite of something, if it is edible, and chew with full attention. How does eating this way change your state?
+1. Choose something with a clear feel, such as silk, a feather or a piece of fruit.
+2. Let it travel slowly over your skin. *Can you feel the texture clearly? Do you get goosebumps, pleasure, irritation? What happens as the sensation disappears? Do you want more?*
 
-*Hot and cold.* Try a cool object, then a warm cloth. Alternate slowly. Does the contrast sharpen the sensation, or make it uncomfortable? There is no right answer.
+#### Scent and taste
 
-*The mirror.* Stand in front of a mirror, fully clothed. Look at yourself as if you were your own lover. Slowly begin to undress, one piece at a time, letting each piece of clothing brush your skin on its way off. No rush, no agenda. Whisper something affectionate to your reflection. Then notice what arose in you.
+1. Pick a scent you love. *Does it make you feel grounded, sensual or activated?*
+2. Trace it along your lips, then take a slow bite of something, if it is edible, and chew with full attention. *How does eating this way change your state?*
 
-*Dance, then hug.* Put on a track and move. How does it feel to dance as if nobody is watching, and then as if somebody is? With a partner, try the sensual hug: it is not about holding tight, it is about holding true. Slow it down. Add breath. Try it with your eyes open, then closed.
+#### Hot and cold
 
-**If you are Kinky**
+1. Try a cool object, then a warm cloth. Alternate slowly. There is no right answer. *Does the contrast sharpen the sensation, or make it uncomfortable?*
+
+#### The mirror
+
+1. Stand in front of a mirror, fully clothed.
+2. Look at yourself as if you were your own lover.
+3. Slowly begin to undress, one piece at a time, letting each piece of clothing brush your skin on its way off. No rush, no agenda.
+4. Whisper something affectionate to your reflection.
+5. Then notice what arose in you.
+
+#### Dance, then hug
+
+1. Put on a track and move. *How does it feel to dance as if nobody is watching, and then as if somebody is?*
+2. With a partner, try the sensual hug: it is not about holding tight, it is about holding true. Slow it down. Add breath.
+3. Try it with your eyes open, then closed.
+
+### Kinky
 
 This is the flavour most people misunderstand. It is not about pain or punishment, and it has little to do with 50 Shades. It is about precision, power and the thrill of the unexpected. A simple instruction, a light tap or a well-timed pause can carry more charge than anything else. What makes it potent is the intention behind it. It needs safety, clarity and presence. Done well, it can unlock parts of you that you did not know were there.
 
 If you are turned on by being told what to do, or by telling someone else what to do with care, this may be your doorway. I saw it once on television, with a woman who had been left cold by every gentle attempt. One slow instruction, "look down", and two words, "good girl", and she exploded. You will find the whole scene in Chapter 4.
 
-*Agree the words first.* Before anything else, agree on green, yellow and red. Green means keep going. Yellow means slow down. Red means stop. Ask your partner to rate each moment out loud. Notice whether speaking up was easy or hard. That in itself is the practice.
+#### Agree the words first
 
-*One instruction.* Stand behind your partner and speak low and close to their ear. Say: "Look down." Does a clear instruction feel grounding, or confronting? Then swap roles and give the same instruction.
+1. Before anything else, agree on green, yellow and red. Green means keep going. Yellow means slow down. Red means stop.
+2. Ask your partner to rate each moment out loud.
+3. Notice whether speaking up was easy or hard.
+4. That in itself is the practice.
 
-*Eyes closed.* Ask your partner to close their eyes. Move slowly around them so they can hear your breathing, and do not touch yet. Then place one hand on their shoulder without warning, and hold it still. Does the not-seeing sharpen their awareness, or make them uneasy?
+#### One instruction
 
-*A light tap.* Alternate a light tap, a firmer tap and a pause. Try the same on the inside of the knee, then the top of the shoulder. Which place surprised you?
+1. Stand behind your partner and speak low and close to their ear. Say: "Look down." *Does a clear instruction feel grounding, or confronting?*
+2. Then swap roles and give the same instruction.
 
-*The scarf.* Lay a soft scarf beside your partner and do not touch them yet. What happens in their body just from seeing it? Then gently bring their wrists together and loop the scarf around them. Not tight, only enough to signal containment. Does being held bring comfort, resistance, something else? With their hands loosely tied, resting in their lap or above their head, hover your fingers over their forearm or collarbone without touching. Drag the scarf slowly along a shoulder, just enough to create friction. Then, if they want to, ask them to close their eyes and play with pausing, hovering, adding Touch in unexpected places.
+#### Eyes closed
+
+1. Ask your partner to close their eyes.
+2. Move slowly around them so they can hear your breathing, and do not touch yet.
+3. Then place one hand on their shoulder without warning, and hold it still. *Does the not-seeing sharpen their awareness, or make them uneasy?*
+
+#### A light tap
+
+1. Alternate a light tap, a firmer tap and a pause.
+2. Try the same on the inside of the knee, then the top of the shoulder. *Which place surprised you?*
+
+#### The scarf
+
+1. Lay a soft scarf beside your partner and do not touch them yet. *What happens in their body just from seeing it?*
+2. Then gently bring their wrists together and loop the scarf around them.
+3. Not tight, only enough to signal containment. *Does being held bring comfort, resistance, something else?*
+4. With their hands loosely tied, resting in their lap or above their head, hover your fingers over their forearm or collarbone without touching.
+5. Drag the scarf slowly along a shoulder, just enough to create friction.
+6. Then, if they want to, ask them to close their eyes and play with pausing, hovering, adding Touch in unexpected places.
 
 Keep your green, yellow and red words close, and untie them the moment they say yellow or red. Afterwards ask one question: when the scarf came off or your eyes opened, what did you feel first? Relief, longing, presence, something else?
 
-*Kiss only when told.* Make the waiting the point: "Now." "Stop." "Again." Ask for a kiss and be made to wait. Whisper what you want to do, and do not do it. In this world the real turn-on might not be the kiss. It might be the waiting.
+#### Kiss only when told
 
-**If you are Sexual**
+1. Make the waiting the point: "Now." "Stop." "Again."
+2. Ask for a kiss and be made to wait.
+3. Whisper what you want to do, and do not do it.
+4. In this world the real turn-on might not be the kiss.
+5. It might be the waiting.
+
+### Sexual
 
 Sexual Touch is the kind most people think of when they hear the word intimacy. Genitals, breasts, nakedness, the goal, the release, the thing that is supposed to "work". Here is what no one tells you. Sexual Touch goes well beyond the hot spots. It is presence, letting arousal build without urgency, and being seen, and touched, in the fullness of your desire.
 
 Eye contact that lingers. Words that turn you on. The weight of a palm over your pubic bone. A slow striptease in your favourite pyjamas. Sexual energy is allowed to be soft, too. Pleasure is a pulse, a whisper, a slow awakening, and it was never meant to be a performance.
 
-*Erotic presence.* Sit opposite your partner, fully clothed. Place one hand over your own heart and one over theirs. Hold eye contact for sixty seconds. Did the sexual energy build, even without Touch? Then say one thing you find erotic about this moment. Was that easy, or confronting? Close your eyes for ten seconds, then open them again, with no speaking. Did your body feel more open, or more guarded?
+#### Erotic presence
 
-*Speak it slowly.* Whisper one thing you would love to do to your partner, or have them do to you, in a voice that is slow and soft. Was it easy, or edgy, to say out loud? Now ask them to do the same. Then say yours again, slower the second time. When you speak your desires, do you soften, or brace?
+1. Sit opposite your partner, fully clothed.
+2. Place one hand over your own heart and one over theirs.
+3. Hold eye contact for sixty seconds. *Did the sexual energy build, even without Touch?*
+4. Then say one thing you find erotic about this moment. *Was that easy, or confronting?*
+5. Close your eyes for ten seconds, then open them again, with no speaking. *Did your body feel more open, or more guarded?*
 
-*The slow strip.* Choose an outfit you feel sexy, powerful or playful in. Stand or sit in front of your partner and remove one item at a time, keeping eye contact. Now slow it to half your usual speed. Did going slower feel more vulnerable, or more powerful?
+#### Speak it slowly
 
-*Directed Touch with breath.* Place one of your partner's hands on your body, not on your genitals, and guide them with your breath: inhale means pause, exhale means move. Then try the same with your own hand on your own body. What happens when you follow your breath instead of your brain?
+1. Whisper one thing you would love to do to your partner, or have them do to you, in a voice that is slow and soft. *Was it easy, or edgy, to say out loud?*
+2. Now ask them to do the same.
+3. Then say yours again, slower the second time. *When you speak your desires, do you soften, or brace?*
 
-*The turn-on scan, alone.* Somewhere private, let your hand rest on your body, over your clothes or under them. Is there a part of you that already feels awake, or wants attention? Explore the edges of your arousal. Does direct contact heighten it, or do you prefer a hovering hand first? Then say out loud what you would love to feel next, even if you do not give it to yourself yet. What shifts when you claim your desire without rushing to satisfy it?
+#### The slow strip
+
+1. Choose an outfit you feel sexy, powerful or playful in.
+2. Stand or sit in front of your partner and remove one item at a time, keeping eye contact.
+3. Now slow it to half your usual speed. *Did going slower feel more vulnerable, or more powerful?*
+
+#### Directed Touch with breath
+
+1. Place one of your partner's hands on your body, not on your genitals, and guide them with your breath: inhale means pause, exhale means move.
+2. Then try the same with your own hand on your own body. *What happens when you follow your breath instead of your brain?*
+
+#### The turn-on scan, alone
+
+1. Somewhere private, let your hand rest on your body, over your clothes or under them. *Is there a part of you that already feels awake, or wants attention?*
+2. Explore the edges of your arousal. *Does direct contact heighten it, or do you prefer a hovering hand first?*
+3. Then say out loud what you would love to feel next, even if you do not give it to yourself yet. *What shifts when you claim your desire without rushing to satisfy it?*
 
 If you want the three-minute version, the Touch Date in Chapter 8 will hold any of these. The timer gives you permission to stay in the build-up.
 
-**If you are a Shapeshifter**
+### Shapeshifter
 
 Some people do not fit one flavour of Touch. They want all of it: the slow sensual build, the raw intensity, the energetic charge before a finger even lands. Some days they crave tenderness. Other days it is all about power, speed, precision or depth.
 
@@ -152,11 +239,29 @@ If that is you, you are wired for variety, for the full spectrum of sensation, p
 
 Here is the shadow. When you are wired for everything, sometimes nothing satisfies. You chase sensation, you keep moving, and you start to wonder what is wrong with you. Your body wants meaning and attunement, the right thing at the right moment. This is your permission slip to ask for more nuance, more range, more real. You are finally ready to be fed.
 
-*The layered sensation ritual, alone.* Stand in front of a mirror, fully clothed or wrapped in something luxurious. What arises as you look at yourself? Close your eyes and hover your hands just above your skin, starting at your face and moving slowly down your body. Can you sense energy, tension, anticipation or numbness? Then layer in a sensual stroke with a soft fabric or a silk scarf across your chest, belly or hips. Add a playful tease: a light nail drag, a firmer squeeze, a hint of edge, just for a moment. Add a scent or a taste, a piece of fruit held close to your mouth, then a slow bite. Layer on breath, deepening your inhale, and let sound out if it wants to come. Then put a hand on your heart or belly and ask: what more do I want?
+#### The layered sensation ritual, alone
 
-*The receiving ritual, with a partner.* Your partner begins with non-Touch, hovering their hands over your arms and chest. Can you feel their presence before contact? Then soft, nurturing strokes with fingertips or fabric across your arms or thighs. Then one firm, grounding hold, palms on your thighs or shoulders, no movement, only pressure. Then a phrase of appreciation whispered in your ear. Then breathe in sync. What shifts when Touch is offered like a ceremony, layer by layer?
+1. Stand in front of a mirror, fully clothed or wrapped in something luxurious. *What arises as you look at yourself?*
+2. Close your eyes and hover your hands just above your skin, starting at your face and moving slowly down your body. *Can you sense energy, tension, anticipation or numbness?*
+3. Then layer in a sensual stroke with a soft fabric or a silk scarf across your chest, belly or hips.
+4. Add a playful tease: a light nail drag, a firmer squeeze, a hint of edge, just for a moment.
+5. Add a scent or a taste, a piece of fruit held close to your mouth, then a slow bite.
+6. Layer on breath, deepening your inhale, and let sound out if it wants to come. *Then put a hand on your heart or belly and ask: what more do I want?*
 
-*The pleasure tasting menu.* Begin with a short gaze and no words. One of you runs their nails lightly down the other's back or outer thigh. Then soft fabric or featherlight strokes on a different part of the body. Then a fruit or a food with a rich scent, held near their mouth, breathed in together, and a small bite fed to them. Then guide their breath with your own, deeper and slower, and let the moment linger. What happens when intimacy is built like a meal, course by course?
+#### The receiving ritual, with a partner
+
+1. Your partner begins with non-Touch, hovering their hands over your arms and chest. *Can you feel their presence before contact?*
+2. Then soft, nurturing strokes with fingertips or fabric across your arms or thighs.
+3. Then one firm, grounding hold, palms on your thighs or shoulders, no movement, only pressure.
+4. Then a phrase of appreciation whispered in your ear. Then breathe in sync. *What shifts when Touch is offered like a ceremony, layer by layer?*
+
+#### The pleasure tasting menu
+
+1. Begin with a short gaze and no words.
+2. One of you runs their nails lightly down the other's back or outer thigh.
+3. Then soft fabric or featherlight strokes on a different part of the body.
+4. Then a fruit or a food with a rich scent, held near their mouth, breathed in together, and a small bite fed to them.
+5. Then guide their breath with your own, deeper and slower, and let the moment linger. *What happens when intimacy is built like a meal, course by course?*
 
 ## The order the wanting arrives in
 

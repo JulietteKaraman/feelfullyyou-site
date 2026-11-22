@@ -159,3 +159,12 @@ a.ul { color:#0D3535; text-decoration:none; border-bottom:.6pt solid #A88538; }
 .week { margin:.2in 0; }
 .wk { margin:.1in 0; font-size:13.4pt; }
 .wk .box { display:inline-block; width:.17in; height:.17in; border:1.2pt solid #A88538; border-radius:.03in; margin-right:.16in; vertical-align:-.02in; }
+
+/* language bands, practice cards */
+.chapter h3.lang { font-family:'Cormorant Garamond',serif; font-style:normal; font-weight:600; font-size:14pt; letter-spacing:.2em; text-transform:uppercase; color:#c9a85a; background:#070707; padding:.09in .2in .08in; margin:.42in -.05in .2in; page-break-after:avoid; }
+.pcard { background:#f3ecdf; border-left:2.2pt solid #A88538; padding:.13in .22in .04in; margin:.18in 0 .26in; page-break-inside:avoid; }
+.pcard h4 { font-style:italic; font-weight:600; font-size:15.5pt; color:#0D3535; margin:0 0 .08in; line-height:1.2; }
+.pcard ol { margin:0 0 .08in .22in; padding:0; }
+.pcard ol li { margin:.07in 0; font-size:12.6pt; line-height:1.45; }
+.pcard ol li::marker { color:#A88538; font-weight:600; }
+.pcard ol li em { color:#33433f; }

@@ -47,7 +47,7 @@ PULLS = {
  '11-for-him-and-for-the-two-of-you.md': ['You do not need to say the right thing. Staying in it will do more than fixing it.'],
 }
 PRACTICE = ['A self-touch date', 'A Touch Date with a partner', 'What does move it', 'One small rep each',
-            'Things to try in your language', 'Stay one breath longer', 'Yes, or nothing', 'Move it to the morning',
+            'Stay one breath longer', 'Yes, or nothing', 'Move it to the morning',
             'Touch Base', 'Your first week']
 
 
@@ -219,6 +219,16 @@ def practice_rows(body):
     return body
 
 
+
+def pcards(body):
+    # wrap each practice (h4 + steps) in a small card; style language h3s as bands
+    body = re.sub(r'<h3 id="([^"]*)">(.*?)</h3>', r'<h3 class="lang" id="\1">\2</h3>', body)
+    def wrap(m):
+        return '<div class="pcard">' + m.group(0) + '</div>'
+    body = re.sub(r'<h4 id="[^"]*">.*?</h4>.*?(?=<h4 |<h3 |<h2 |$)', wrap, body, flags=re.S)
+    return body
+
+
 def linkify(body):
     segs = re.split(r'(<[^>]+>)', body)
     out = []
@@ -303,6 +313,8 @@ def build():
         for q in PULLS.get(f, []):
             body = add_pull(body, q)
         body = leads(body)
+        if f.startswith('07-') or f.startswith('06-'):
+            body = pcards(body)
         body = cards_and_felt(body, f)
         if f.startswith('15-'):
             body = words_chips(body)
