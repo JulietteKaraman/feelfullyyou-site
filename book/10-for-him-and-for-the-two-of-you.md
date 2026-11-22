@@ -8,6 +8,18 @@ If she gave you this book, or you found it on the table, thank you for reading i
 
 This chapter is.
 
+## The man on the Tube
+
+I was on the Tube in London when a man squeezed my breasts.
+
+No one moved. The men in the carriage sat very still and did nothing. A few other women and I stood up to him. We told him he was a pervert. I told him I hoped his daughter was never treated like this by anyone.
+
+When I wrote about it on Instagram, so many men replied. *We would have got beaten up, maybe. It is not our fight. I stepped in once and lost my job.*
+
+I understand the fear. I am not telling you this to shame you. I am telling you because it is the world she walks through, every day, in a body that learned to brace long before she met you. When she jumps as you reach for her, or comes home in a terrible mood, she may not be reacting to you at all. She is reacting to everything her body has had to carry, and it has nowhere to put it down except the one place that is safe.
+
+I translate what is happening in women's bodies for men who have no idea why their wife flinches every time he reaches out, or why she walks in with a face like thunder. In this chapter I will tell you what is going on, and what to do instead of guessing.
+
 ## Your presence is never neutral
 
 Your presence is either regulating her or activating her. There is no neutral.
@@ -131,3 +143,5 @@ You will get it wrong. Stay anyway.
 4. **"Hover your hands".** I used your testimonial wording exactly. Do you want to add how you teach it?
 
 **Third pass, 21 Nov 2026:** four more results, all public testimonials from your site, plus the "one sentence" from a man's testimonial on your Unspoken Distance page.
+
+- **Added 22 Nov 2026 (from Juliette):** the section "The man on the Tube" and the paragraph about translating women's bodies for men. Your Instagram post's wording for the men's replies is yours, so I kept it close. I did not name the line or the year. I wrote "a face like thunder" as my guess at what you meant by "such a bad mood". Please adjust.

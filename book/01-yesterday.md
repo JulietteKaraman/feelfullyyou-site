@@ -90,7 +90,9 @@ I was a little girl in Holland, and I could feel the tension between the adults 
 
 That is the first thing I ever learned about Touch, though I would not have called it that for fifty years. If I gave something, the room got lighter. If the room got lighter, I was safe.
 
-As a teenager with no licence, I drove my mother to hospital to have her stomach pumped. That was the moment I recognised that I needed to take care of a lot of people.
+When I was seven, my mother said something that went in deeper than she knew. She said, about what a man had done: "Oh well, that's just what men do." My body took it in as a rule. This is normal. This is what you put up with. Nothing in my body told me otherwise for a very long time.
+
+As a teenager with no licence, I drove my mother to hospital to have her stomach pumped. An empty bottle of sleeping pills was on her bed. My father was not called until the next day. That was the moment I recognised that I needed to take care of a lot of people.
 
 I got very good at it.
 
@@ -132,3 +134,5 @@ There are four places your Touch can go. The next four chapters take them one at
 **Update 21 Nov 2026 (second pass), from Juliette:** the new section "How I learned to read a room", with four of her origin stories: the drawing for her grandmother at about four, driving her mother to hospital as a teenager, the night of the boarding school and the divorce, and a pointer to the half landing in Chapter 6. Juliette said the son's name stays out. **To confirm:** (1) "Twenty kilos" is what you told me on 21 Nov. Your Day 17 post said "a hundred kilos". Which do you want? (2) The mother's hospital story is the heaviest thing in the book so far. Chapter 0 now has a short content note. Do you want a longer one? (3) "I drove my mother to hospital to have her stomach pumped" is as you said it. Your Day 9 carousel adds an empty bottle of sleeping pills, which I left out.
 
 **Fifth pass, 21 Nov 2026:** added the red T-shirt, from your Day 9 post. I left out the harder things in that same post (the assault, the baby losses), because they are very heavy for this book. Say if you want any of them in.
+
+- **Added 22 Nov 2026 (from Juliette):** the seven-year-old and "Oh well, that's just what men do", and the sleeping pills and "my father was not called until the next day". Your message said "not calling my dad until the next day" without saying who did not call. I wrote it as "My father was not called until the next day." Tell me if it should be more specific. I wrote "about what a man had done" because I do not know what it was. Fill in if you want more.
