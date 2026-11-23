@@ -111,6 +111,11 @@ html.open .before-open{display:none!important}
 .strip.dark>li{background:var(--green);border:1px solid var(--green);color:var(--cream)}
 .strip.dark q,.strip.dark cite{color:var(--cream)}
 .strip.dark .stars{color:var(--gold)}
+/* 23 Nov 2026 (Juliette): the testimonials are cream cards on the green so they stand out */
+.strip.cream>li{background:#fefcfa!important;border-color:#fefcfa!important;backdrop-filter:none!important}
+.strip.cream q{color:#070707!important}
+.strip.cream cite{color:#0D3535!important}
+.strip.cream cite span{color:rgba(7,7,7,.62)!important}
 .strip.dark cite span{color:rgba(254,252,250,.74)}
 
 /* ---------- 3. benefits ---------- */
@@ -371,14 +376,16 @@ if(Date.now()>=Date.UTC(2026,10,23,0,0,0))document.documentElement.classList.add
   </div>
 </header>
 
-<!-- 2. TESTIMONIALS, first row -->
+<!-- 2. TESTIMONIALS, one row of six (23 Nov 2026: Confessions proof only; other products' quotes live on their own pages) -->
 <section class="proof s-green" aria-labelledby="t1">
   <div class="head"><span class="eyebrow">In their words</span><h2 id="t1">A safe place to ask. <em>Then something shifts.</em></h2></div>
-  <ul class="strip g4">
-    <li><q>Thanks for sharing your experiences. Each point I relate to and your reasons for them are all valid on every level&hellip; You have inspired me to continue pursuing this journey.</q><cite>Andy<span>Therapist of 35 years, after my answers</span></cite></li>
-    <li><q>This is a safe space. You model it so well.</q><cite>A member<span>Women&rsquo;s group</span></cite></li>
-    <li><q>There is not one ounce of judgment in any bone in your body&hellip; Your permission to show up as we are.</q><cite>Sue Ann<span>Master Coach</span></cite></li>
+  <ul class="strip g3 cream">
+    <li><q>Thanks Juliette, wonderful and illuminating answers, really appreciate it.</q><cite>Jamie<span>After asking me his questions</span></cite></li>
     <li><q>You give language to emotions and feelings I do not have the words for. I feel both seen and safe.</q><cite>Natasha</cite></li>
+    <li><q>There is not one ounce of judgment in any bone in your body&hellip; Your permission to show up as we are.</q><cite>Sue Ann<span>Master Coach</span></cite></li>
+    <li><q>She&rsquo;s not teaching theory, she&rsquo;s giving a transmission of what being an embodied, sensual woman actually is&hellip; After some of the practices I was definitely turning heads in the local coffee shop, even in casual clothes and no makeup!</q><cite>Naomi<span>Google review</span></cite></li>
+    <li><q>I loved doing these with Tom for 2 weeks. Every day brought us closer with a simple to do ritual. We now make sure we physically touch every day, even if it is just for a minute. (Yes, it has led to so much more connection in the bedroom too!)</q><cite>Amanda<span>Touch rituals, with Tom</span></cite></li>
+    <li><q>Your one sentence &lsquo;Tell me what makes you feel most seen by me&rsquo; positively changed something in my wife.</q><cite>Obaid<span>Instagram message</span></cite></li>
   </ul>
 </section>
 
@@ -461,31 +468,6 @@ if(Date.now()>=Date.UTC(2026,10,23,0,0,0))document.documentElement.classList.add
   </div>
 </section>
 
-<!-- 5. TESTIMONIALS, second row -->
-<section class="proof s-cream" aria-labelledby="t2">
-  <div class="head"><span class="eyebrow">In their words</span><h2 id="t2">Then something <em>shifts.</em></h2></div>
-  <ul class="strip dark g3">
-    <li><q>She&rsquo;s not teaching theory, she&rsquo;s giving a transmission of what being an embodied, sensual woman actually is&hellip; After some of the practices I was definitely turning heads in the local coffee shop, even in casual clothes and no makeup!</q><cite>Naomi<span>Google review</span></cite></li>
-    <li><q>She&rsquo;s truly amazing at what she does and has given me so many valuable tools and insights that I can carry with me in everyday life.</q><cite>Yara<span>Google review</span></cite></li>
-    <li><q>Juliette&rsquo;s expertise is embodied from experience, not just certifications&hellip; After working with her for 6 years, I cannot commend her to you highly enough.</q><cite>Kate<span>Google review</span></cite></li>
-    <li><q>Thanks Juliette, wonderful and illuminating answers, really appreciate it.</q><cite>Jamie<span>After asking me his questions</span></cite></li>
-    <li><q>I learned how to feel it. I didn&rsquo;t defend it, argue it, or apologise for it. I simply stood in it.</q><cite>Paul, London<span>The Sacred No</span></cite></li>
-    <li><q>My body started speaking in ways I&rsquo;d never heard before. I stopped performing and started actually feeling.</q><cite>Denise, Edinburgh<span>The Sacred No</span></cite></li>
-    <li><q>It took a minute for him to come around and want to do these, but I&rsquo;m so happy we did. We&rsquo;re connecting in a new way.</q><cite>A client<span>31 Touch Points, with her husband</span></cite></li>
-    <li><q>I loved doing these with Tom for 2 weeks. Every day brought us closer with a simple to do ritual. We now make sure we physically touch every day, even if it is just for a minute. (Yes, it has led to so much more connection in the bedroom too!)</q><cite>Amanda<span>Touch rituals, with Tom</span></cite></li>
-    <li><q>Your one sentence &lsquo;Tell me what makes you feel most seen by me&rsquo; positively changed something in my wife.</q><cite>Obaid<span>Instagram message</span></cite></li>
-  </ul>
-</section>
-
-<section class="sec s-black" style="padding-block:56px">
-  <div class="wrap" style="max-width:1000px;margin:auto;padding-inline:20px">
-    <span class="eyebrow">Alex and me</span>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:16px;max-width:760px">
-      <img src="/media/confessions/photos/juliette-alex-birthday-garden.jpg" style="width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:18px" loading="lazy" alt="Juliette and Alex">
-      <img src="/media/confessions/photos/juliette-alex-sunglasses.jpg" style="width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:18px" loading="lazy" alt="Juliette and Alex">
-    </div>
-  </div>
-</section>
 <!-- 6. ASK ME ANYTHING, photo + glass cards -->
 <section class="photo sec s-black">
   <img class="bg" src="/media/confessions/photos/juliette-boudoir-hands-mouth.jpg" loading="lazy" alt="" style="object-position:70% 35%;filter:brightness(.75)">
@@ -543,6 +525,7 @@ if(Date.now()>=Date.UTC(2026,10,23,0,0,0))document.documentElement.classList.add
       <h2>I&rsquo;m <em>Juliette.</em></h2>
       <p>Intimacy and Touch Expert. I teach The Touch Reset: finding the patterns that close the door to Touch, aliveness and connection, and learning how to open it again.</p>
       <p style="font-family:var(--display);font-weight:600;color:var(--ochre)">Everything in this app, I learned in my own body first.</p>
+      <blockquote style="margin:18px 0 0;padding-left:16px;border-left:2px solid var(--ochre)"><p style="margin:0;font-style:italic">&ldquo;Juliette&rsquo;s expertise is embodied from experience, not just certifications&hellip; After working with her for 6 years, I cannot commend her to you highly enough.&rdquo;</p><p class="note" style="margin-top:6px">Kate, Google review</p></blockquote>
       <div class="press"><img src="/press/forbes.png" alt="Forbes" loading="lazy"><img src="/press/times.png" alt="The Times" loading="lazy"><img src="/press/marieclaire.png" alt="Marie Claire" loading="lazy"><img src="/press/itv.png" alt="ITV" loading="lazy"></div>
       <p class="note" style="margin-top:12px">Host of The Scrumptious Woman podcast, top 2.5% globally.</p>
     </div>
