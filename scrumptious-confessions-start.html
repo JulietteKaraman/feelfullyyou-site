@@ -387,7 +387,7 @@ function route(a){
     card:CARD[key],
     meditation:med,
     men:a.who==='man',
-    askLine:key==='merect'?'Anything more about erections: ask me on the questions wall, with no name on it. I answer every Thursday, in my voice.':(key==='mstress'?'Stress and tiredness: ask me on the questions wall, with no name on it. I answer every Thursday.':'')
+    askLine:key==='merect'?'Anything more about erections: ask me on the questions wall, anonymously. I answer every Thursday, in my voice.':(key==='mstress'?'Stress and tiredness: ask me on the questions wall, anonymously. I answer every Thursday.':'')
   };
 }
 
@@ -489,7 +489,7 @@ var SCREENS={
       foot:{label:'Continue',enabled:true}};
   },
   9:function(){
-    return {html:'<div class="apps"><div class="k">Scrumptious Confessions</div><h2 class="q" id="q" tabindex="-1">Ask me anything. <em>No name, ever.</em></h2><p class="sub">Your question goes on the wall with no name on it. Others tap Me too. I answer every Thursday, and my answers stay in your library.</p>'+mockHtml('phone-question.webp','The question box in the Scrumptious Confessions app, which sends your question with no name on it')+'</div>',
+    return {html:'<div class="apps"><div class="k">Scrumptious Confessions</div><h2 class="q" id="q" tabindex="-1">Ask me anything. <em>Anonymously, always.</em></h2><p class="sub">Your question goes on the wall anonymously. Others tap Me too. I answer every Thursday, and my answers stay in your library.</p>'+mockHtml('phone-question.webp','The question box in the Scrumptious Confessions app, which sends your question anonymously')+'</div>',
       foot:{label:'Continue',enabled:true}};
   },
   10:function(){
@@ -573,8 +573,8 @@ var SCREENS={
     var p=buildPlan();
     var free=S.code==='FIRST50';
     var h='<div class="offer"><div class="k">Scrumptious Confessions</div><h2 class="q" id="q" tabindex="-1">'+(free?'Your first <em>month, free.</em>':'Start your <em>7 days free.</em>')+'</h2><div class="card"><ul class="terms">';
-    if(free)h+='<li><span class="big">Your first month is on me.</span> You’re one of the first 50.</li>';
-    h+='<li><span class="big">£111 a month</span> for the first 50 members, and you keep £111 for as long as you stay. After 50, the price goes up.</li>'+
+    if(free)h+='<li><span class="big">Your first month is on me.</span></li>';
+    h+='<li><span class="big">£111 a month</span>, for you, or the two of you together. Your £111 never goes up while you stay.</li>'+
       '<li>Your free week comes with the Holiday Survival Kit, normally £17, and it’s yours to keep even if you stop.</li>';
     if(free)h+='<li>Your card goes in today. Nothing is charged for your 7 free days, and your first month after that is free too. Your first £111 comes about five weeks from today. Stop any time before then and you pay nothing.</li>';
     else{h+='<li>Your card goes in today. Nothing is charged for 7 days. Stop before day 8 and you pay nothing.</li>';
