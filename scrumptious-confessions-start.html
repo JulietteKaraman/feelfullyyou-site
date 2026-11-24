@@ -433,7 +433,7 @@ var PHOTO={
   13:['/touch-reset-quiz-bw.jpg','center',true]
 };
 var FACE='/sacred-no-quiz-face.jpg';
-var TASTER='/media/confessions/taster-tolerated-touch-v2.m4a';
+var TASTER='/media/confessions/taster-tolerated-touch-v3.m4a';
 
 function tapsHtml(list,key){
   var h='<div class="taps" role="radiogroup" aria-labelledby="q">';
@@ -453,7 +453,7 @@ var SCREENS={
   0:function(){
     return {html:'<div class="popcard"><div class="popph" style="background-image:url(/media/confessions/cover.jpg)" role="img" aria-label="Scrumptious Confessions cover: Juliette with red lips, in purple light"></div><div class="popin"><div class="k">Scrumptious Confessions · One minute</div><h1 id="q" tabindex="-1">Let me build<br><em>your first week.</em></h1><p class="sub">Five quick taps. About a minute. Then you’ll see exactly what opens for you, day by day.</p><div id="vp0"></div><div style="margin-top:20px"><button type="button" class="btn-g" id="cta">Begin</button></div></div></div>',
       foot:{label:'Begin',enabled:true,inline:true},
-      after:function(){voicePill($('vp0'),TASTER,'Hear me first','1:18');}};
+      after:function(){voicePill($('vp0'),TASTER,'Hear me first','1:20');}};
   },
   1:function(){
     return {html:qHead(1,'Who’s this <em>for?</em>')+tapsHtml(WHO,'who'),foot:{label:'Continue',enabled:!!S.who}};
