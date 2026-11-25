@@ -257,8 +257,9 @@ var STATES=[
   ['reaching','I feel it, and I can’t ask for what I want'],
   ['melted','All of it reaches me. I want more']
 ];
-var BODY=[['meno','Menopause, or perimenopause'],['baby','After having a baby'],['mlow','Just not so turned on anymore'],['none','Nothing like that']];
-var BODY_MAN=[['stress','Stress, or exhaustion'],['erect','Erection worries'],['mlow','Just not so turned on anymore'],['meno','She’s in menopause, or perimenopause'],['baby','We’ve had a baby'],['none','Nothing like that']];
+// 25 Nov 2026 (Juliette): pick as many as are true, and sore hips/knees/aches is its own answer.
+var BODY=[['meno','Menopause, or perimenopause'],['ache','Sore hips or knees, a body that aches'],['baby','After having a baby'],['mlow','Just not so turned on anymore'],['none','Nothing like that']];
+var BODY_MAN=[['stress','Stress, or exhaustion'],['erect','Erection worries'],['ache','Sore hips or knees, a body that aches'],['mlow','Just not so turned on anymore'],['meno','She’s in menopause, or perimenopause'],['baby','We’ve had a baby'],['none','Nothing like that']];
 var COMPANY=[['own','On my own'],['together','With my partner'],['stopped','My partner has stopped reaching for me']];
 var WANT=[['feel','To really feel it'],['stay','To stay with it'],['ask','To know what I want, and say it'],['more','More of it']];
 
@@ -375,11 +376,15 @@ function addMonths(ts,n){
 }
 
 /* ---------- routing ---------- */
-function route(a){
+function route(a0){
+  // Several body answers can be true (25 Nov 2026): route on the strongest one.
+  var bs=(a0.body||'').split(','),pr=['stress','erect','meno','baby','mlow','ache','none'],b='';
+  for(var i=0;i<pr.length;i++){if(bs.indexOf(pr[i])>-1){b=pr[i];break;}}
+  var a={who:a0.who,state:a0.state,body:b};
   // Men's own body: stress and erections (Juliette 21 Nov 2026).
   var key=(a.who==='man'&&a.body==='stress')?'mstress':((a.who==='man'&&a.body==='erect')?'merect':((a.body==='mlow')?'mlow':(a.body==='meno'?(a.who==='man'?'mmeno':'meno'):(a.who==='man'?'man':(a.body==='baby'?'baby':a.state)))));
   var door=DOOR[key];
-  var med=(a.body==='meno'||a.body==='baby')?MED.bodyfirst:(key==='mlow'?'Pleasure Boost':MED[a.state]);
+  var med=(a.body==='meno'||a.body==='baby'||a.body==='ache')?MED.bodyfirst:(key==='mlow'?'Pleasure Boost':MED[a.state]);
   return {
     key:key,
     doorName:door[0],
@@ -435,10 +440,13 @@ var PHOTO={
 var FACE='/sacred-no-quiz-face.jpg';
 var TASTER='/media/confessions/taster-tolerated-touch-v3.m4a';
 
+var MULTI={body:1};
 function tapsHtml(list,key){
-  var h='<div class="taps" role="radiogroup" aria-labelledby="q">';
+  var m=!!MULTI[key],cur=(S[key]||'').split(',');
+  var h=(m?'<p class="tap-hint" style="margin:0 0 10px;font-size:14px;opacity:.7">Pick as many as are true.</p>':'')+'<div class="taps" role="'+(m?'group':'radiogroup')+'" aria-labelledby="q">';
   list.forEach(function(o){
-    h+='<button type="button" class="tap" role="radio" data-key="'+key+'" data-val="'+o[0]+'" aria-checked="'+(S[key]===o[0]?'true':'false')+'">'+esc(o[1])+'</button>';
+    var on=m?cur.indexOf(o[0])>-1:S[key]===o[0];
+    h+='<button type="button" class="tap" role="'+(m?'checkbox':'radio')+'" data-key="'+key+'" data-val="'+o[0]+'" aria-checked="'+(on?'true':'false')+'">'+esc(o[1])+'</button>';
   });
   return h+'</div>';
 }
@@ -656,9 +664,18 @@ function render(){
   /* answers */
   [].forEach.call(screenEl.querySelectorAll('.tap'),function(btn){
     btn.addEventListener('click',function(){
-      S[btn.getAttribute('data-key')]=btn.getAttribute('data-val');
-      [].forEach.call(screenEl.querySelectorAll('.tap'),function(o){o.setAttribute('aria-checked',o===btn?'true':'false');});
-      var c=$('cta');if(c)c.disabled=false;
+      var k=btn.getAttribute('data-key'),v=btn.getAttribute('data-val');
+      if(MULTI[k]){
+        var cur=(S[k]||'').split(',').filter(Boolean),i=cur.indexOf(v);
+        if(i>-1)cur.splice(i,1);else{cur.push(v);cur=v==='none'?['none']:cur.filter(function(x){return x!=='none';});}
+        S[k]=cur.join(',');
+        [].forEach.call(screenEl.querySelectorAll('.tap'),function(o){o.setAttribute('aria-checked',cur.indexOf(o.getAttribute('data-val'))>-1?'true':'false');});
+        var c=$('cta');if(c)c.disabled=!cur.length;
+      }else{
+        S[k]=v;
+        [].forEach.call(screenEl.querySelectorAll('.tap'),function(o){o.setAttribute('aria-checked',o===btn?'true':'false');});
+        var c=$('cta');if(c)c.disabled=false;
+      }
     });
   });
   var cta=$('cta');
