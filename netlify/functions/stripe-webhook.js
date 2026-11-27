@@ -283,6 +283,15 @@ const PAYMENT_LINK_PRODUCTS = {
     sequenceId: 2980393,  // "45-Minute Connection Ritual buyers: welcome"
     label: '45-Minute Connection Ritual £27 (own checkout)'
   },
+  // THE FULL STOP £9 (27 Nov 2026, Juliette: "ok make the page" / "set it up"). Sales page
+  // feelfullyyou.com/full-stop, a way in for trial reels. The product is the open app page
+  // (app.feelfullyyou.com/practice/the-full-stop), so delivery is the welcome email with the link.
+  // Same link Miles's men's funnel uses as order bump 1.
+  'plink_1UL6BACCw18geY15073bPLvO': {
+    tagId: 26496928,      // "The Full Stop buyer"
+    sequenceId: 2989237,  // "The Full Stop buyers: welcome"
+    label: 'The Full Stop £9'
+  },
   'plink_1Udy8MCCw18geY155vpQ03Qe': {
     tagId: 26237029,      // "The Trace buyer"
     sequenceId: 2980389,  // "The Trace buyers: welcome"
