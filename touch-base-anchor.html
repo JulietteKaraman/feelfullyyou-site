@@ -97,6 +97,7 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SY8NKELMNZ"></script>
 <script>
+/* 28 Nov 2026: this form only TAGS the person. The Kit automation "Free gift welcome: ..." starts the welcome emails, one welcome at a time. Do not add sequenceIds back here. */
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
@@ -197,7 +198,7 @@ function handleTb(e){
   fetch('/.netlify/functions/subscribe',{
     method:'POST',
     headers:{'Content-Type':'application/json'},
-    body:JSON.stringify({email:email,firstName:name,website:document.getElementById('tb_hp').value,tagIds:[20896290],sequenceId:2825130 /* "Touch Base Anchor — Welcome" sequence, built 13 Jul, all 4 emails published and live (verified via Kit API 5 Sep 2026 — the old "DRAFT" note here was stale). Thank-you page self-delivers the real Touch Base video. */})
+    body:JSON.stringify({email:email,firstName:name,website:document.getElementById('tb_hp').value,tagIds:[20896290]})
   }).finally(function(){window.location.href='/thankyou-touch-base';});
 }
 </script>

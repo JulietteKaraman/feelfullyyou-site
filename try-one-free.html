@@ -46,7 +46,8 @@
   .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SY8NKELMNZ"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SY8NKELMNZ');</script>
+<script>
+/* 28 Nov 2026: this form only TAGS the person. The Kit automation "Free gift welcome: ..." starts the welcome emails, one welcome at a time. Do not add sequenceIds back here. */window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SY8NKELMNZ');</script>
 </head>
 <body>
 <div class="top"><a href="/">Feel Fully <b>You</b></a></div>
@@ -73,7 +74,7 @@ document.getElementById('f').addEventListener('submit',function(ev){
   if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){m.textContent='Pop in a full email address and try again.';m.hidden=false;return;}
   b.disabled=true;b.textContent='Sending...';
   fetch('/.netlify/functions/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},
-    body:JSON.stringify({email:email,firstName:name,hp_field:document.getElementById('hp').value,tagIds:[26235735],sequenceIds:[2949146]})})
+    body:JSON.stringify({email:email,firstName:name,hp_field:document.getElementById('hp').value,tagIds:[26235735]})})
   .then(function(r){if(!r.ok)throw new Error(r.status);
     if(typeof gtag==='function')gtag('event','generate_lead',{form:'try-one-free'});
     window.location.href='https://app.feelfullyyou.com/taste/31-touch-points';})
