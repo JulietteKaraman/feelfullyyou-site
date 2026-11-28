@@ -37,7 +37,7 @@ const KEYWORDS = [
   { match: 'INTENSIVE', dm: 'Here are the intensives. You can book your day straight from the page: https://feelfullyyou.com/private-sessions. Want to talk first? Start with the Touch Audit. Three minutes, and it comes straight to me: https://feelfullyyou.com/touch-audit' },
   { match: 'BEGINNING', dm: 'Here is The Beginning: https://feelfullyyou.com/the-beginning. Eight private weeks, both of you, each with your own space inside it.' },
   // must stay LAST — longer phrases above (TOUCH BASE, ONE TOUCH) match first
-  { match: 'TOUCH', dm: 'Here are the 10 Touch Rituals: https://feelfullyyou.com/10-touch-rituals. £7, instant access, start tonight. One ritual is all it takes to begin.' }
+  { match: 'TOUCH', dm: 'Here is your first Touch Point, free: https://feelfullyyou.com/try-one-free. Three minutes, a strawberry, and my voice walking you both through it.' }
 ];
 
 function findKeyword(text) {

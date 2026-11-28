@@ -150,7 +150,7 @@ https://shop.feelfullyyou.com/*  https://feelfullyyou.com/my-cards/  301!
 /the-scrumptious--and-pleasure-candles /the-scrumptious-and-pleasure-candles.html 200
 /landing                        /landing.html                   200
 /trip-wire-between-touches      /                               301!
-/free-10-rituals                 https://couplecards.netlify.app/api/touch-rituals-checkout?promo=FREERITUALS 301
+/free-10-rituals                 /try-one-free                   301!
 /summit-pleasure                 /summit-pleasure.html           200
 /thankyou-summit-pleasure        /thankyou-summit-pleasure.html  200
 /pattern-session                /pattern-session.html           200
@@ -221,7 +221,9 @@ https://shop.feelfullyyou.com/*  https://feelfullyyou.com/my-cards/  301!
 /pleasure-languages             /pleasure-languages.html        200
 /apply                          /touch-audit.html               200
 /touch-audit                    /touch-audit.html               200
-/touch-rituals                  /touch-rituals.html             200
+# 28 Nov 2026, Juliette: "we dont sell it any longer". The Touch Rituals page is off; its old addresses go to 31 Touch Points.
+/touch-rituals                  /31-touch-points                301!
+/touch-rituals.html             /31-touch-points                301!
 # TOUCH MAP CLOSED TO THE PUBLIC 15 Oct 2026. Juliette: "The Touch Map should
 # never be fucking free like this. It is part of The Touch Map: 197." The page
 # was giving away the five pleasure languages, the A/B method, the stoplight and
